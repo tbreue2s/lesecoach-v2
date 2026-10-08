@@ -1,7 +1,7 @@
 # Work Package 03: State-Management & Lese-Stufen
 
 **ID:** `WP03`  
-**Status:** `spec`  
+**Status:** `merged`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 
 ---

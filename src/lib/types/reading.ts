@@ -1,0 +1,64 @@
+export type ReadingPhaseId = 'phase_a' | 'phase_b' | 'phase_c';
+
+export type ReadingLevelNumber = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+
+export type TokenRole = 'app' | 'child';
+
+export type TokenStatus = 'pending' | 'active' | 'success';
+
+export interface ReadingPhase {
+  id: ReadingPhaseId;
+  title: string;
+  subtitle: string;
+  badgeEmoji: string;
+  levels: ReadingLevelNumber[];
+}
+
+export interface ReadingLevelInfo {
+  level: ReadingLevelNumber;
+  phaseId: ReadingPhaseId;
+  title: string;
+  description: string;
+  targetChildWordsPerSentence?: number;
+  isRepeatedReadingEnabled: boolean;
+}
+
+export interface WordToken {
+  id: string;
+  word: string;
+  cleanWord: string;
+  role: TokenRole;
+  status: TokenStatus;
+  sentenceIndex: number;
+  wordIndexInSentence: number;
+}
+
+export interface SentenceToken {
+  id: string;
+  sentenceIndex: number;
+  rawText: string;
+  words: WordToken[];
+  role: 'app' | 'child' | 'mixed';
+  requiresRepeatedReading: boolean;
+  isCompleted: boolean;
+}
+
+export interface StoryData {
+  id: string;
+  title: string;
+  coverEmoji: string;
+  levelSuitability: ReadingLevelNumber[];
+  text: string;
+}
+
+export interface ReadingSessionState {
+  storyId: string;
+  storyTitle: string;
+  level: ReadingLevelNumber;
+  sentences: SentenceToken[];
+  activeSentenceIndex: number;
+  activeWordTokenId: string | null;
+  isSessionComplete: boolean;
+  completedSentencesCount: number;
+  starsEarned: number;
+}

@@ -1,22 +1,49 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { profileStore } from '../../stores/profileStore';
   import { routerStore } from '../../stores/routerStore';
-  import { speakText } from '../../utils/speech';
+  import { levelStore } from '../../stores/levelStore';
+  import { readingSessionStore } from '../../stores/readingSessionStore';
+  import { SAMPLE_STORIES } from '../../data/sampleStories';
+  import LevelSelector from '../LevelSelector.svelte';
+  import ReadingSessionView from '../ReadingSessionView.svelte';
+  import MockReadingControls from '../MockReadingControls.svelte';
 
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
   ) || $profileStore.companions[0];
 
-  $: childName = $profileStore.childName || 'Lese-Held';
+  let showLevelSelector = false;
 
-  // Sample story sentence for reader layout scaffold
-  const sampleSentence = `Der kleine Hund ${activeCompanion.customName} läuft fröhlich über die grüne Wiese.`;
+  function initStory(lvl = $levelStore) {
+    const currentStory = SAMPLE_STORIES.find((s) => s.id === $readingSessionStore.storyId) || SAMPLE_STORIES[0];
+    readingSessionStore.loadStory(
+      currentStory,
+      lvl,
+      activeCompanion.customName
+    );
+  }
 
-  let isReading = false;
+  onMount(() => {
+    initStory();
+  });
 
-  function handleReadAloud() {
-    isReading = true;
-    speakText(sampleSentence);
+  function handleLevelChange(newLevel: number) {
+    initStory(newLevel as any);
+  }
+
+  function handlePrevLevel() {
+    if ($levelStore > 1) {
+      levelStore.prevLevel();
+      initStory($levelStore);
+    }
+  }
+
+  function handleNextLevel() {
+    if ($levelStore < 9) {
+      levelStore.nextLevel();
+      initStory($levelStore);
+    }
   }
 </script>
 
@@ -34,55 +61,77 @@
 
     <div class="reader-companion-pill">
       <span class="companion-emoji" aria-hidden="true">{activeCompanion.icon}</span>
-      <span class="companion-title">{activeCompanion.customName} liest mit</span>
+      <span class="companion-title">{activeCompanion.customName}</span>
     </div>
   </header>
+
+  <!-- Level Stepper Bar (Leichtere Stufe | Stufe X | Nächste Stufe) -->
+  <nav class="level-stepper-bar" aria-label="Stufen-Navigation">
+    <button
+      type="button"
+      id="prev-level-btn"
+      class="btn-step"
+      disabled={$levelStore <= 1}
+      on:click={handlePrevLevel}
+    >
+      ◀ Leichtere Stufe
+    </button>
+
+    <button
+      type="button"
+      id="toggle-level-btn"
+      class="btn-current-level"
+      on:click={() => (showLevelSelector = !showLevelSelector)}
+    >
+      🎯 Stufe {$levelStore} {showLevelSelector ? '▲' : '▼'}
+    </button>
+
+    <button
+      type="button"
+      id="next-level-btn"
+      class="btn-step"
+      disabled={$levelStore >= 9}
+      on:click={handleNextLevel}
+    >
+      Nächste Stufe ▶
+    </button>
+  </nav>
+
+  <!-- Level Selector Modal / Accordion -->
+  {#if showLevelSelector}
+    <LevelSelector onLevelChange={handleLevelChange} />
+  {/if}
 
   <!-- Centered Book-Page Reading Container -->
   <main class="book-container">
     <div class="book-page">
       <div class="story-meta">
-        <span class="level-tag">Klasse 1 & 2 • Fibel-Lesestufe</span>
-        <h1 class="story-title">🐾 Ein schöner Tag im Park</h1>
+        <h1 class="story-title">🐾 {$readingSessionStore.storyTitle || SAMPLE_STORIES[0].title}</h1>
       </div>
 
-      <!-- Reader Text with Primer Font (Andika / Lexend), 28px+, 1.8 Line Height -->
-      <article class="reader-content-box" aria-label="Lesetext">
-        <p class="reader-text">
-          {sampleSentence}
-        </p>
-      </article>
+      <!-- Tokenized Reading Session View -->
+      <ReadingSessionView />
 
-      <!-- Reader Interaction Bar -->
-      <footer class="reader-controls">
-        <button
-          type="button"
-          id="reader-speak-btn"
-          class="btn-read-aloud"
-          on:click={handleReadAloud}
-        >
-          <span class="btn-icon" aria-hidden="true">🔊</span>
-          <span class="btn-label">Satz vorlesen</span>
-        </button>
-      </footer>
+      <!-- Interactive Mock Controls Bar -->
+      <MockReadingControls />
     </div>
   </main>
 </div>
 
 <style>
   .reader-screen {
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .reader-nav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.25rem;
   }
 
   .btn-back {
@@ -105,7 +154,7 @@
   .reader-companion-pill {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     background: var(--color-surface-card, #F5EFE6);
     border: 1.5px solid var(--color-border, #E2D9CC);
     padding: 0.4rem 0.85rem;
@@ -116,7 +165,60 @@
   }
 
   .companion-emoji {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+  }
+
+  /* Level Stepper Bar */
+  .level-stepper-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-surface-card, #F5EFE6);
+    border: 2px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-md, 0.875rem);
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .btn-step {
+    background: var(--color-page-bg, #FBF9F5);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    color: var(--color-text-main, #2D3748);
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--radius-sm, 0.5rem);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-step:hover:not(:disabled) {
+    background: var(--color-primary-soft, #EBF2FA);
+    border-color: var(--color-primary, #2B6CB0);
+    color: var(--color-primary, #2B6CB0);
+  }
+
+  .btn-step:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .btn-current-level {
+    background: var(--color-primary, #2B6CB0);
+    border: none;
+    color: var(--color-page-bg, #FBF9F5);
+    padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-sm, 0.5rem);
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(43, 108, 176, 0.25);
+    transition: all 0.2s ease;
+  }
+
+  .btn-current-level:hover {
+    background: var(--color-primary-hover, #23568B);
+    transform: translateY(-1px);
   }
 
   .book-container {
@@ -134,19 +236,7 @@
 
   .story-meta {
     text-align: center;
-    margin-bottom: 1.75rem;
-  }
-
-  .level-tag {
-    display: inline-block;
-    background: var(--color-surface-soft, #EDE5D8);
-    color: var(--color-primary, #2B6CB0);
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 0.3rem 0.75rem;
-    border-radius: 9999px;
-    margin-bottom: 0.5rem;
-    border: 1px solid var(--color-border, #E2D9CC);
+    margin-bottom: 1.5rem;
   }
 
   .story-title {
@@ -154,62 +244,5 @@
     font-size: 1.75rem;
     font-weight: 800;
     color: var(--color-text-main, #2D3748);
-  }
-
-  .reader-content-box {
-    background: var(--color-page-bg, #FBF9F5);
-    border: 2px solid var(--color-border, #E2D9CC);
-    border-radius: var(--radius-md, 0.875rem);
-    padding: 2rem 1.75rem;
-    margin: 1.5rem 0;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
-  }
-
-  /* Elementary Grade 1-2 Primer Typography: Andika/Lexend, 28px, 1.8 line height */
-  .reader-text {
-    font-family: 'Andika', 'Lexend', sans-serif;
-    font-size: 1.75rem;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-    color: var(--color-text-main, #2D3748);
-    font-weight: 600;
-    margin: 0;
-    text-align: left;
-  }
-
-  .reader-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-
-  .btn-read-aloud {
-    background: var(--color-primary, #2B6CB0);
-    color: var(--color-page-bg, #FBF9F5);
-    border: none;
-    padding: 1rem 1.75rem;
-    font-size: 1.25rem;
-    font-weight: 800;
-    border-radius: var(--radius-md, 0.875rem);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    box-shadow: 0 4px 14px rgba(43, 108, 176, 0.3);
-    transition: all 0.2s ease;
-  }
-
-  .btn-read-aloud:hover {
-    background: var(--color-primary-hover, #23568B);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(43, 108, 176, 0.4);
-  }
-
-  .btn-read-aloud:active {
-    transform: translateY(0);
-  }
-
-  .btn-icon {
-    font-size: 1.5rem;
   }
 </style>
