@@ -51,6 +51,14 @@ export interface StoryData {
   text: string;
 }
 
+export type TurnState =
+  | 'IDLE'
+  | 'APP_TURN'
+  | 'CHILD_TURN'
+  | 'REPEATED_READING'
+  | 'PAUSED'
+  | 'COMPLETED';
+
 export interface ReadingSessionState {
   storyId: string;
   storyTitle: string;
@@ -58,7 +66,11 @@ export interface ReadingSessionState {
   sentences: SentenceToken[];
   activeSentenceIndex: number;
   activeWordTokenId: string | null;
+  karaokeWordTokenId: string | null;
+  turnState: TurnState;
+  isSpeaking: boolean;
   isSessionComplete: boolean;
   completedSentencesCount: number;
   starsEarned: number;
 }
+

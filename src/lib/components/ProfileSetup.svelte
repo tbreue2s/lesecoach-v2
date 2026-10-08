@@ -81,7 +81,7 @@
   }
 
   $: currentFeedbackMessage = childError || companionError;
-  $: feedbackType = currentFeedbackMessage ? 'error' : isSavedSuccess ? 'success' : 'idle';
+  $: feedbackType = (currentFeedbackMessage ? 'error' : isSavedSuccess ? 'success' : 'idle') as 'success' | 'error' | 'idle';
 </script>
 
 <div class="profile-card">

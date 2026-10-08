@@ -17,8 +17,8 @@ Willkommen in der Spezifikations- und Aufgabensteuerung für das Projekt **Lese-
 | **WP02** | PWA-Basisgerüst & Routing | `merged` | [WP02-pwa-basisgeruest-routing.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP02-pwa-basisgeruest-routing.md) |
 | **WP03** | State-Management & Lese-Stufen (9-Stufen-Matrix) | `merged` | [WP03-state-management-lesestufen.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP03-state-management-lesestufen.md) |
 | **WP04** | Themen- und Charakter-Auswahl für Geschichten | `merged` | [WP04-themen-charakter-auswahl-geschichten.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP04-themen-charakter-auswahl-geschichten.md) |
-| **WP05** | Audio-Sync & Karaoke-Highlighting im DOM | `plan` | [WP05-audio-sync-karaoke-highlighting.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP05-audio-sync-karaoke-highlighting.md) |
-| **WP06** | Lückentext & Echtzeit-Spracherkennung | `spec` | [WP06-lueckentext-echtzeit-spracherkennung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP06-lueckentext-echtzeit-spracherkennung.md) |
+| **WP05** | Audio-Sync & Karaoke-Highlighting im DOM | `merged` | [WP05-audio-sync-karaoke-highlighting.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP05-audio-sync-karaoke-highlighting.md) |
+| **WP06** | Lückentext & Echtzeit-Spracherkennung | `plan` | [WP06-lueckentext-echtzeit-spracherkennung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP06-lueckentext-echtzeit-spracherkennung.md) |
 
 ---
 

@@ -19,6 +19,28 @@
     </div>
   </div>
 
+  <!-- Turn State Banner -->
+  {#if !session.isSessionComplete && session.sentences.length > 0}
+    <div class="turn-banner turn-{session.turnState.toLowerCase()}">
+      {#if session.turnState === 'APP_TURN'}
+        <span class="turn-icon" aria-hidden="true">🔊</span>
+        <span class="turn-text">Dein Begleiter liest vor...</span>
+      {:else if session.turnState === 'CHILD_TURN'}
+        <span class="turn-icon" aria-hidden="true">🌟</span>
+        <span class="turn-text"><strong>Du bist dran!</strong> Lies das markierte Wort laut vor.</span>
+      {:else if session.turnState === 'REPEATED_READING'}
+        <span class="turn-icon" aria-hidden="true">🔄</span>
+        <span class="turn-text"><strong>Repeated Reading:</strong> Hör dir den ganzen Satz noch einmal an!</span>
+      {:else if session.turnState === 'PAUSED'}
+        <span class="turn-icon" aria-hidden="true">⏸️</span>
+        <span class="turn-text">Pausiert</span>
+      {:else}
+        <span class="turn-icon" aria-hidden="true">📖</span>
+        <span class="turn-text">Klicke auf "Vorlesen" oder lies selbst los!</span>
+      {/if}
+    </div>
+  {/if}
+
   {#if session.isSessionComplete}
     <!-- Session Complete Celebration -->
     <div class="session-complete-card">
@@ -51,14 +73,16 @@
         <p class="sentence-text">
           {#each sentence.words as token (token.id)}
             <span
+              id={`token-${token.id}`}
               class="word-token"
               class:role-child={token.role === 'child'}
               class:role-app={token.role === 'app'}
-              class:status-active={token.status === 'active' && sIndex === session.activeSentenceIndex}
-              class:status-success={token.status === 'success'}
+              class:status-active={token.id === session.activeWordTokenId && session.turnState === 'CHILD_TURN'}
+              class:karaoke-active={token.id === session.karaokeWordTokenId}
+              class:status-success={token.role === 'child' && token.status === 'success'}
             >
               {token.word}
-              {#if token.status === 'success' && token.role === 'child'}
+              {#if token.role === 'child' && token.status === 'success'}
                 <span class="check-indicator" aria-hidden="true">✓</span>
               {/if}
             </span>{' '}
@@ -108,6 +132,41 @@
 
   .star-icon {
     font-size: 1.15rem;
+  }
+
+  /* Turn State Banner */
+  .turn-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-md, 0.875rem);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    background: #FFFDF9;
+  }
+
+  .turn-banner.turn-app_turn {
+    background: #EBF8FF;
+    border-color: #bee3f8;
+    color: #2b6cb0;
+  }
+
+  .turn-banner.turn-child_turn {
+    background: #FFFAF0;
+    border-color: #feebc8;
+    color: #c05621;
+  }
+
+  .turn-banner.turn-repeated_reading {
+    background: #FAF5FF;
+    border-color: #E9D8FD;
+    color: #6B46C1;
+  }
+
+  .turn-icon {
+    font-size: 1.25rem;
   }
 
   .session-complete-card {
@@ -196,7 +255,7 @@
     transition: all 0.2s ease;
   }
 
-  /* Role Child Token: Highlighted badge style */
+  /* Role Child Token: Highlighted dashed badge style */
   .word-token.role-child {
     background: var(--color-surface-soft, #EDE5D8);
     border: 2px dashed var(--color-accent-gold, #C05621);
@@ -204,7 +263,7 @@
     font-weight: 700;
   }
 
-  /* Active Word Token */
+  /* Active Child Word Token */
   .word-token.status-active {
     background: #FEFCBF;
     border: 2.5px solid var(--color-accent-gold, #C05621);
@@ -213,8 +272,20 @@
     animation: pulseActive 1.8s infinite ease-in-out;
   }
 
-  /* Success Word Token */
-  .word-token.status-success {
+  /* Karaoke Active Highlight: TTS reading (Instant highlighting with no lag) */
+  .word-token.karaoke-active {
+    background-color: #FDE047 !important;
+    color: #1A202C !important;
+    border-radius: 0.35rem;
+    box-shadow: 0 0 0 3px #FACC15 !important;
+    font-weight: 700;
+    transform: scale(1.06);
+    transition: none !important;
+    z-index: 2;
+  }
+
+  /* Success Word Token (Only child words become green upon completion) */
+  .word-token.role-child.status-success {
     background: #C6F6D5;
     border: 2px solid var(--color-accent-green, #276749);
     color: #22543D;
