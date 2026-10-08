@@ -30,25 +30,24 @@ Der **Lese-Coach** ist eine hochgradig interaktive, didaktisch fundierte Progres
 
 ---
 
-## 3. Governance & Spec-Kitty State Machine
+## 3. Governance, Git-Strategie & Spec-Kitty State Machine
 
-Jedes Work Package (WP) durchläuft einen deterministischen Lebenszyklus. Kein Code wird ohne Spezifikation und Plan geschrieben, kein Merge erfolgt ohne technische Nachweise.
+Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`master`. Jedes Work Package (WP) durchläuft einen deterministischen Lebenszyklus. Der Code verbleibt während der Arbeitsphase uncommitted, bis Tests und Nachweise erbracht wurden und die finale Freigabe erfolgt.
 
 ```
 [ spec ] ➔ [ plan ] ➔ [ tasks ] ➔ [ in_review ] ➔ [ accept ] ➔ [ merge ]
-                                        │
-                                        ▼
-                             Technical Evidence Pflicht
-                             (Tests, Logs, Screenshots/DOM-Dumps)
+                                        │               │          │
+                                   Unit-Tests &       User      Atomarer
+                                 Evidence-Ablage    Freigabe   Trunk-Commit
 ```
 
 ### Phasen-Definitionen:
 1. **`spec`:** Fachliche und technische Definition der Anforderungen, Akzeptanzkriterien und Grenzfälle.
 2. **`plan`:** Detaillierter Architektur- und Implementierungsplan (Komponenten, Stores, Schnittstellen).
-3. **`tasks`:** Ausführung der atomaren Programmier- und Testaufgaben.
-4. **`in_review`:** Bereitstellung von technischen Nachweisen (Evidence) in `kitty-specs/evidence/<WP_ID>/`.
+3. **`tasks`:** Ausführung der atomaren Programmier- und Testaufgaben (lokal im Working Tree).
+4. **`in_review`:** Bereitstellung von technischen Nachweisen (Evidence) in `kitty-specs/evidence/<WP_ID>/` (Unit-Tests, Build-Logs, Snapshots).
 5. **`accept`:** Formale Prüfung und Abnahme durch den User/Lead.
-6. **`merge`:** Integration in den Hauptentwicklungszweig.
+6. **`merge`:** Erstellung von genau **1 atomaren Git-Commit** auf dem Trunk (`main`), der das gesamte Work Package abschließt.
 
 ---
 
