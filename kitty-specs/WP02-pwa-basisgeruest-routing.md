@@ -1,7 +1,7 @@
 # Work Package 02: PWA-Basisgerüst & Routing
 
 **ID:** `WP02`  
-**Status:** `spec`  
+**Status:** `merged`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 
 ---

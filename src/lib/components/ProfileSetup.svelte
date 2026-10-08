@@ -1,7 +1,10 @@
 <script lang="ts">
   import { profileStore } from '../stores/profileStore';
+  import { routerStore } from '../stores/routerStore';
   import { validateName } from '../utils/validation';
   import OtterFeedback from './OtterFeedback.svelte';
+
+  export let showBackButton = false;
 
   let rawChildName = $profileStore.childName;
   let childError: string | null = null;
@@ -70,6 +73,10 @@
       isSavedSuccess = true;
       childError = null;
       companionError = null;
+      // Navigate to Home screen on save
+      setTimeout(() => {
+        routerStore.goHome();
+      }, 500);
     }
   }
 
@@ -78,12 +85,24 @@
 </script>
 
 <div class="profile-card">
+  {#if showBackButton}
+    <div class="top-nav">
+      <button
+        type="button"
+        class="back-btn"
+        on:click={() => routerStore.goHome()}
+      >
+        ← Zurück zur Übersicht
+      </button>
+    </div>
+  {/if}
+
   <header class="card-header">
     <h1 class="title">✨ Wer liest heute mit? ✨</h1>
     <p class="subtitle">Richte dein persönliches Lese-Profil ein</p>
   </header>
 
-  <!-- Otter feedback with head-shake on error -->
+  <!-- Otter feedback with head-shake on error & speech playback -->
   <OtterFeedback message={currentFeedbackMessage} type={feedbackType} />
 
   <!-- Child Name Section -->
@@ -163,7 +182,7 @@
       class="save-btn"
       on:click={handleSaveProfile}
     >
-      🚀 Los geht's – Ab ins Lese-Abenteuer!
+      🚀 Los geht's – Profil speichern!
     </button>
   </footer>
 </div>
@@ -172,11 +191,31 @@
   .profile-card {
     max-width: 640px;
     margin: 0 auto;
-    background: #ffffff;
-    border-radius: 1.5rem;
+    background: var(--color-surface-card, #F5EFE6);
+    border-radius: var(--radius-lg, 1.25rem);
     padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 3px solid #e0e7ff;
+    box-shadow: var(--shadow-warm-lg, 0 10px 25px rgba(74, 85, 104, 0.12));
+    border: 2px solid var(--color-border, #E2D9CC);
+  }
+
+  .top-nav {
+    margin-bottom: 1rem;
+  }
+
+  .back-btn {
+    background: var(--color-page-bg, #FBF9F5);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    color: var(--color-primary, #2B6CB0);
+    padding: 0.5rem 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm, 0.5rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .back-btn:hover {
+    background: var(--color-surface-soft, #EDE5D8);
   }
 
   .card-header {
@@ -187,13 +226,13 @@
   .title {
     font-size: 1.85rem;
     font-weight: 800;
-    color: #312e81;
+    color: var(--color-text-main, #2D3748);
     margin: 0 0 0.5rem 0;
   }
 
   .subtitle {
     font-size: 1.05rem;
-    color: #64748b;
+    color: var(--color-text-muted, #4A5568);
     margin: 0;
   }
 
@@ -205,7 +244,7 @@
     display: block;
     font-size: 1.15rem;
     font-weight: 700;
-    color: #1e1b4b;
+    color: var(--color-text-main, #2D3748);
     margin-bottom: 0.6rem;
   }
 
@@ -219,23 +258,23 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding: 0.85rem 1.15rem;
-    border: 2.5px solid #cbd5e1;
-    border-radius: 0.875rem;
+    border: 2px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-md, 0.875rem);
     outline: none;
-    background: #f8fafc;
-    color: #0f172a;
+    background: var(--color-page-bg, #FBF9F5);
+    color: var(--color-text-main, #2D3748);
     transition: all 0.2s ease;
   }
 
   .text-input:focus {
-    border-color: #6366f1;
-    background: #ffffff;
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    border-color: var(--color-primary, #2B6CB0);
+    background: var(--color-surface-highlight, #FAF7F0);
+    box-shadow: 0 0 0 4px rgba(43, 108, 176, 0.15);
   }
 
   .text-input.input-error {
-    border-color: #ef4444;
-    background: #fff5f5;
+    border-color: var(--color-accent-red, #9B2C2C);
+    background: #FFF5F5;
   }
 
   .companion-grid {
@@ -262,9 +301,9 @@
     align-items: center;
     justify-content: center;
     padding: 1rem 0.5rem;
-    background: #f8fafc;
-    border: 2px solid #e2e8f0;
-    border-radius: 1rem;
+    background: var(--color-page-bg, #FBF9F5);
+    border: 2px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-md, 0.875rem);
     cursor: pointer;
     position: relative;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -272,14 +311,14 @@
 
   .companion-tile:hover {
     transform: translateY(-2px);
-    border-color: #a5b4fc;
-    background: #f1f5f9;
+    border-color: var(--color-primary, #2B6CB0);
+    background: var(--color-surface-highlight, #FAF7F0);
   }
 
   .companion-tile.selected {
-    border-color: #4f46e5;
-    background: #eef2ff;
-    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.2);
+    border-color: var(--color-primary, #2B6CB0);
+    background: var(--color-primary-soft, #EBF2FA);
+    box-shadow: 0 4px 14px rgba(43, 108, 176, 0.2);
     transform: scale(1.02);
   }
 
@@ -291,7 +330,7 @@
   .companion-default-label {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #334155;
+    color: var(--color-text-main, #2D3748);
   }
 
   .selected-badge {
@@ -300,17 +339,17 @@
     right: 6px;
     font-size: 0.7rem;
     font-weight: 800;
-    background: #4f46e5;
-    color: #ffffff;
+    background: var(--color-primary, #2B6CB0);
+    color: var(--color-page-bg, #FBF9F5);
     padding: 2px 6px;
     border-radius: 6px;
   }
 
   .companion-custom-section {
-    background: #f8fafc;
+    background: var(--color-surface-soft, #EDE5D8);
     padding: 1.25rem;
-    border-radius: 1rem;
-    border: 1.5px dashed #cbd5e1;
+    border-radius: var(--radius-md, 0.875rem);
+    border: 1.5px dashed var(--color-border, #E2D9CC);
   }
 
   .action-footer {
@@ -320,21 +359,22 @@
 
   .save-btn {
     width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1.25rem;
+    padding: 1.15rem 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
-    color: #ffffff;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: var(--color-page-bg, #FBF9F5);
+    background: var(--color-primary, #2B6CB0);
     border: none;
-    border-radius: 1rem;
+    border-radius: var(--radius-md, 0.875rem);
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 18px rgba(43, 108, 176, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   .save-btn:hover {
+    background: var(--color-primary-hover, #23568B);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45);
+    box-shadow: 0 8px 22px rgba(43, 108, 176, 0.4);
   }
 
   .save-btn:active {

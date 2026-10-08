@@ -73,10 +73,10 @@
     align-items: center;
     gap: 0.85rem;
     padding: 1rem 1.25rem;
-    background: #ffffff;
-    border-radius: 1.25rem;
-    border: 2.5px solid #e2e8f0;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    background: var(--color-surface-card, #F5EFE6);
+    border-radius: var(--radius-lg, 1.25rem);
+    border: 2px solid var(--color-border, #E2D9CC);
+    box-shadow: var(--shadow-warm, 0 4px 14px rgba(74, 85, 104, 0.08));
     margin-bottom: 1.5rem;
     transition: border-color 0.3s ease, background-color 0.3s ease;
   }
@@ -95,22 +95,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    background: #f1f5f9;
-    border: 2px solid #cbd5e1;
+    font-size: 1.4rem;
+    background: var(--color-page-bg, #FBF9F5);
+    border: 1.5px solid var(--color-border, #E2D9CC);
     border-radius: 50%;
     width: 2.75rem;
     height: 2.75rem;
     cursor: pointer;
     flex-shrink: 0;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(74, 85, 104, 0.08);
   }
 
   .speaker-btn:hover {
-    background: #e2e8f0;
+    background: var(--color-surface-soft, #EDE5D8);
     transform: scale(1.1);
-    border-color: #6366f1;
+    border-color: var(--color-primary, #2B6CB0);
   }
 
   .speaker-btn:active {
@@ -119,11 +119,11 @@
 
   .speech-bubble {
     flex: 1;
-    background: #f8fafc;
-    border-radius: 0.875rem;
+    background: var(--color-page-bg, #FBF9F5);
+    border-radius: var(--radius-md, 0.875rem);
     padding: 0.75rem 1rem;
     position: relative;
-    border: 1.5px solid #cbd5e1;
+    border: 1.5px solid var(--color-border, #E2D9CC);
   }
 
   .speech-bubble::before {
@@ -136,64 +136,64 @@
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-right: 8px solid #cbd5e1;
+    border-right: 8px solid var(--color-border, #E2D9CC);
   }
 
   .bubble-text {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--color-text-main, #2D3748);
     line-height: 1.4;
   }
 
   /* Error state with head shaking animation */
   .otter-container.shake {
-    border-color: #ef4444;
-    background: #fef2f2;
+    border-color: var(--color-accent-red, #9B2C2C);
+    background: #FFF5F5;
     animation: headShake 0.6s ease-in-out;
   }
 
   .otter-container.shake .speaker-btn {
-    border-color: #fca5a5;
-    background: #fee2e2;
+    border-color: #FEB2B2;
+    background: #FED7D7;
   }
 
   .otter-container.shake .speech-bubble {
-    background: #fee2e2;
-    border-color: #fca5a5;
+    background: #FED7D7;
+    border-color: #FEB2B2;
   }
 
   .otter-container.shake .speech-bubble::before {
-    border-right-color: #fca5a5;
+    border-right-color: #FEB2B2;
   }
 
   .otter-container.shake .bubble-text {
-    color: #991b1b;
+    color: #9B2C2C;
   }
 
   /* Success state */
   .otter-container.success {
-    border-color: #10b981;
-    background: #ecfdf5;
+    border-color: var(--color-accent-green, #276749);
+    background: #F0FFF4;
   }
 
   .otter-container.success .speaker-btn {
-    border-color: #6ee7b7;
-    background: #d1fae5;
+    border-color: #9AE6B4;
+    background: #C6F6D5;
   }
 
   .otter-container.success .speech-bubble {
-    background: #d1fae5;
-    border-color: #6ee7b7;
+    background: #C6F6D5;
+    border-color: #9AE6B4;
   }
 
   .otter-container.success .speech-bubble::before {
-    border-right-color: #6ee7b7;
+    border-right-color: #9AE6B4;
   }
 
   .otter-container.success .bubble-text {
-    color: #065f46;
+    color: #22543D;
   }
 
   @keyframes headShake {
