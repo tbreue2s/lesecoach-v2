@@ -3,6 +3,7 @@
   import { profileStore } from '../../stores/profileStore';
   import { routerStore } from '../../stores/routerStore';
   import { levelStore } from '../../stores/levelStore';
+  import { storyConfigStore } from '../../stores/storyConfigStore';
   import { readingSessionStore } from '../../stores/readingSessionStore';
   import { SAMPLE_STORIES } from '../../data/sampleStories';
   import LevelSelector from '../LevelSelector.svelte';
@@ -16,7 +17,20 @@
   let showLevelSelector = false;
 
   function initStory(lvl = $levelStore) {
-    const currentStory = SAMPLE_STORIES.find((s) => s.id === $readingSessionStore.storyId) || SAMPLE_STORIES[0];
+    if ($readingSessionStore.sentences.length > 0) {
+      // Story is already loaded, only re-tokenize if level changed
+      if ($readingSessionStore.level !== lvl) {
+        const currentStory = $storyConfigStore.activeStory || SAMPLE_STORIES.find((s) => s.id === $readingSessionStore.storyId) || SAMPLE_STORIES[0];
+        readingSessionStore.loadStory(
+          currentStory,
+          lvl,
+          activeCompanion.customName
+        );
+      }
+      return;
+    }
+
+    const currentStory = $storyConfigStore.activeStory || SAMPLE_STORIES[0];
     readingSessionStore.loadStory(
       currentStory,
       lvl,
@@ -29,7 +43,12 @@
   });
 
   function handleLevelChange(newLevel: number) {
-    initStory(newLevel as any);
+    const currentStory = $storyConfigStore.activeStory || SAMPLE_STORIES.find((s) => s.id === $readingSessionStore.storyId) || SAMPLE_STORIES[0];
+    readingSessionStore.loadStory(
+      currentStory,
+      newLevel as any,
+      activeCompanion.customName
+    );
   }
 
   function handlePrevLevel() {

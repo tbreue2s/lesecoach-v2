@@ -55,8 +55,9 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 
 | WP-ID | Titel | Status | Fokus |
 |---|---|---|---|
-| **WP01** | Sichere Profil- und Begleiter-Verwaltung | `spec` | Svelte Store, 1-Wort-Regex, Bad-Word-Filter, Avatar-Wahl |
-| **WP02** | PWA-Basisgerüst & Routing | `spec` | Vite + Svelte Setup, `vite-plugin-pwa`, Manifest, View-Router |
-| **WP03** | State-Management & Lese-Stufen | `spec` | Didaktische Stufen (Solo, Tandem), Text-Datenmodell, Progress-Store |
-| **WP04** | Audio-Sync & Karaoke-Highlighting | `spec` | Web Speech TTS, Boundary Events, 60fps DOM Word Highlighting |
-| **WP05** | Lückentext & Echtzeit-Spracherkennung | `spec` | Web Speech STT, Audio-Pause, Aussprache-Validierung, Feedback |
+| **WP01** | Sichere Profil- und Begleiter-Verwaltung | `merged` | Svelte Store, 1-Wort-Regex, Bad-Word-Filter, Avatar-Wahl |
+| **WP02** | PWA-Basisgerüst & Routing | `merged` | Vite + Svelte Setup, `vite-plugin-pwa`, Manifest, View-Router |
+| **WP03** | State-Management & Lese-Stufen | `merged` | Didaktische 9-Stufen-Matrix, Story-Tokenisierung, Progress-Store |
+| **WP04** | Themen- und Charakter-Auswahl | `spec` | 10 Themen-Kacheln, Payload-Bündelung, lokaler Mock-Generator |
+| **WP05** | Audio-Sync & Karaoke-Highlighting | `spec` | Web Speech TTS, Boundary Events, 60fps DOM Word Highlighting |
+| **WP06** | Lückentext & Echtzeit-Spracherkennung | `spec` | Web Speech STT, Audio-Pause, Aussprache-Validierung, Feedback |

@@ -1,4 +1,4 @@
-export type AppScreen = 'home' | 'settings' | 'reader';
+export type AppScreen = 'home' | 'adventure-setup' | 'settings' | 'reader';
 
 export interface RouterState {
   currentScreen: AppScreen;

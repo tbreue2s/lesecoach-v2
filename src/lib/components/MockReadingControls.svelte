@@ -26,10 +26,7 @@
   }
 
   function handleNextStory() {
-    readingSessionStore.loadNextStory(
-      $levelStore,
-      activeCompanion.customName
-    );
+    routerStore.goToAdventureSetup();
   }
 </script>
 

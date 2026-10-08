@@ -36,6 +36,14 @@ function createRouterStore() {
     goToSettings: () => {
       update((state) => ({ previousScreen: state.currentScreen, currentScreen: 'settings' }));
     },
+    goToAdventureSetup: () => {
+      const profile = get(profileStore);
+      if (!profile.isConfigured) {
+        update((state) => ({ ...state, currentScreen: 'settings' }));
+        return;
+      }
+      update((state) => ({ previousScreen: state.currentScreen, currentScreen: 'adventure-setup' }));
+    },
     goToReader: () => {
       const profile = get(profileStore);
       if (!profile.isConfigured) {

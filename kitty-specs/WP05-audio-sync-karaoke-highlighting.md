@@ -1,6 +1,6 @@
-# Work Package 04: Audio-Sync & Karaoke-Highlighting im DOM
+# Work Package 05: Audio-Sync & Karaoke-Highlighting im DOM
 
-**ID:** `WP04`  
+**ID:** `WP05`  
 **Status:** `spec`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 

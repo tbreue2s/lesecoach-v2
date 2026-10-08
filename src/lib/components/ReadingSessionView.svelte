@@ -221,12 +221,6 @@
     font-weight: 700;
   }
 
-  .child-indicator {
-    font-size: 0.75rem;
-    vertical-align: super;
-    margin-left: 2px;
-  }
-
   .check-indicator {
     font-size: 0.85rem;
     font-weight: 800;

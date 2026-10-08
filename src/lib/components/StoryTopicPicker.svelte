@@ -1,23 +1,21 @@
 <script lang="ts">
-  import { profileStore } from '../../stores/profileStore';
-  import { storyConfigStore } from '../../stores/storyConfigStore';
-  import { levelStore } from '../../stores/levelStore';
-  import { routerStore } from '../../stores/routerStore';
-  import { STORY_THEMES } from '../../data/storyThemes';
-  import { READING_LEVEL_INFOS } from '../../data/readingLevels';
-  import OtterFeedback from '../OtterFeedback.svelte';
-  import LevelSelector from '../LevelSelector.svelte';
+  import { storyConfigStore } from '../stores/storyConfigStore';
+  import { profileStore } from '../stores/profileStore';
+  import { levelStore } from '../stores/levelStore';
+  import { routerStore } from '../stores/routerStore';
+  import { STORY_THEMES } from '../data/storyThemes';
+  import { READING_LEVEL_INFOS } from '../data/readingLevels';
+  import LevelSelector from './LevelSelector.svelte';
 
-  $: childName = $profileStore.childName || 'kleiner Lese-Held';
+  let showLevelSelector = false;
+
+  $: childName = $profileStore.childName || 'Lese-Held';
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
   ) || $profileStore.companions[0];
 
-  $: welcomeMessage = `Hallo ${childName}! Dein Lese-Begleiter ${activeCompanion.icon} ${activeCompanion.customName} ist bereit!`;
   $: currentTheme = STORY_THEMES.find((t) => t.id === $storyConfigStore.selectedThemeId) || STORY_THEMES[0];
   $: levelInfo = READING_LEVEL_INFOS[$levelStore];
-
-  let showLevelSelector = false;
 
   function handleSelectTheme(themeId: string) {
     storyConfigStore.selectTheme(themeId);
@@ -29,49 +27,38 @@
   }
 </script>
 
-<div class="home-screen-container">
-  <!-- 1. Top Otter Greeting -->
-  <header class="home-header">
-    <OtterFeedback message={welcomeMessage} type="idle" />
-  </header>
-
-  <!-- 2. Child & Companion Hero Card with Quick Edit -->
-  <section class="hero-card" aria-label="Profilübersicht">
-    <div class="hero-companion-badge">
-      <span class="hero-icon" aria-hidden="true">{activeCompanion.icon}</span>
-      <div class="hero-info">
-        <h2 class="hero-companion-name">{activeCompanion.customName}</h2>
-        <span class="hero-companion-type">Dein Lese-Begleiter</span>
-      </div>
-    </div>
-
-    <div class="hero-right-group">
-      <div class="child-badge">
-        <span class="child-label">Lese-Profi:</span>
-        <span class="child-name">⭐ {childName}</span>
-      </div>
+<div class="adventure-setup-card">
+  <header class="setup-header">
+    <div class="header-top-row">
       <button
         type="button"
-        id="goto-settings-btn"
-        class="btn-edit-profile"
-        title="Profil oder Begleiter ändern"
-        on:click={() => routerStore.goToSettings()}
+        class="back-btn"
+        on:click={() => routerStore.goHome()}
       >
-        ⚙️ Ändern
+        ← Zurück
       </button>
+      <div class="character-preview-pill">
+        <span>⭐ <strong>{childName}</strong></span>
+        {#if $storyConfigStore.includeCompanion}
+          <span>& {activeCompanion.icon} <strong>{activeCompanion.customName}</strong></span>
+        {/if}
+      </div>
     </div>
-  </section>
 
-  <!-- 3. Level Selection Bar -->
-  <section class="level-bar-section" aria-labelledby="home-level-heading">
+    <h1 class="setup-title">✨ Neues Lese-Abenteuer ✨</h1>
+    <p class="setup-subtitle">Worüber möchtest du heute eine Geschichte lesen?</p>
+  </header>
+
+  <!-- Level Quick Stepper Bar -->
+  <section class="level-bar-section" aria-labelledby="level-heading">
     <div class="level-bar-header">
-      <span id="home-level-heading" class="section-label">🎯 Lese-Stufe:</span>
+      <span id="level-heading" class="section-label">Lese-Stufe:</span>
       <button
         type="button"
         class="level-toggle-btn"
         on:click={() => (showLevelSelector = !showLevelSelector)}
       >
-        Stufe {$levelStore}: {levelInfo.title} {showLevelSelector ? '▲' : '▼'}
+        🎯 Stufe {$levelStore}: {levelInfo.title} {showLevelSelector ? '▲' : '▼'}
       </button>
     </div>
 
@@ -82,9 +69,9 @@
     {/if}
   </section>
 
-  <!-- 4. 10 Theme Tiles Grid -->
-  <section class="themes-section" aria-labelledby="home-themes-heading">
-    <h2 id="home-themes-heading" class="section-label">📚 Wähle dein Geschichten-Thema:</h2>
+  <!-- 10 Theme Tiles Grid -->
+  <section class="themes-section" aria-labelledby="themes-heading">
+    <h2 id="themes-heading" class="section-label">1. Wähle dein Thema:</h2>
 
     <div class="themes-grid" role="radiogroup" aria-label="Geschichten-Themen Auswahl">
       {#each STORY_THEMES as theme (theme.id)}
@@ -106,12 +93,27 @@
     </div>
   </section>
 
-  <!-- 5. Big Start Adventure Action Button -->
-  <footer class="action-footer">
+  <!-- Companion inclusion toggle -->
+  <section class="companion-toggle-section">
+    <label class="toggle-label">
+      <input
+        type="checkbox"
+        class="toggle-checkbox"
+        checked={$storyConfigStore.includeCompanion}
+        on:change={(e) => storyConfigStore.setIncludeCompanion(e.currentTarget.checked)}
+      />
+      <span class="toggle-text">
+        {activeCompanion.icon} <strong>{activeCompanion.customName}</strong> soll mit in der Geschichte mitspielen!
+      </span>
+    </label>
+  </section>
+
+  <!-- Action Start Button -->
+  <footer class="setup-footer">
     <button
       type="button"
-      id="start-reading-btn"
-      class="btn-primary-large"
+      id="start-adventure-btn"
+      class="btn-start-adventure"
       on:click={handleStartAdventure}
     >
       <span class="btn-icon" aria-hidden="true">{currentTheme.icon}</span>
@@ -122,112 +124,74 @@
 </div>
 
 <style>
-  .home-screen-container {
+  .adventure-setup-card {
     max-width: 720px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .hero-card {
     background: var(--color-surface-card, #F5EFE6);
     border: 2px solid var(--color-border, #E2D9CC);
     border-radius: var(--radius-lg, 1.25rem);
-    padding: 1.25rem 1.5rem;
-    box-shadow: var(--shadow-warm, 0 4px 14px rgba(74, 85, 104, 0.08));
+    padding: 1.75rem 2rem;
+    box-shadow: var(--shadow-warm-lg, 0 10px 25px rgba(74, 85, 104, 0.12));
+  }
+
+  .setup-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-bottom: 0.85rem;
   }
 
-  .hero-companion-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-  }
-
-  .hero-icon {
-    font-size: 2.75rem;
-    line-height: 1;
+  .back-btn {
     background: var(--color-page-bg, #FBF9F5);
-    border: 2px solid var(--color-border, #E2D9CC);
-    border-radius: 0.875rem;
-    padding: 0.4rem;
-  }
-
-  .hero-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-companion-name {
-    margin: 0;
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: var(--color-text-main, #2D3748);
-  }
-
-  .hero-companion-type {
-    font-size: 0.9rem;
-    font-weight: 600;
+    border: 1.5px solid var(--color-border, #E2D9CC);
     color: var(--color-primary, #2B6CB0);
-  }
-
-  .hero-right-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .child-badge {
-    background: var(--color-page-bg, #FBF9F5);
-    border: 1.5px solid var(--color-border, #E2D9CC);
-    padding: 0.45rem 0.85rem;
-    border-radius: var(--radius-md, 0.875rem);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .child-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-subtle, #718096);
-  }
-
-  .child-name {
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--color-text-main, #2D3748);
-  }
-
-  .btn-edit-profile {
-    background: var(--color-surface-soft, #EDE5D8);
-    border: 1.5px solid var(--color-border, #E2D9CC);
-    color: var(--color-text-main, #2D3748);
-    padding: 0.55rem 0.85rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.95rem;
     font-weight: 700;
     border-radius: var(--radius-sm, 0.5rem);
     cursor: pointer;
     transition: all 0.2s ease;
   }
 
-  .btn-edit-profile:hover {
-    background: var(--color-primary-soft, #EBF2FA);
-    border-color: var(--color-primary, #2B6CB0);
-    color: var(--color-primary, #2B6CB0);
+  .back-btn:hover {
+    background: var(--color-surface-soft, #EDE5D8);
   }
 
-  /* Level Bar Section */
+  .character-preview-pill {
+    background: var(--color-page-bg, #FBF9F5);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    color: var(--color-text-main, #2D3748);
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .setup-title {
+    margin: 0 0 0.35rem 0;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .setup-subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text-muted, #4A5568);
+  }
+
   .level-bar-section {
-    background: var(--color-surface-card, #F5EFE6);
-    border: 2px solid var(--color-border, #E2D9CC);
+    background: var(--color-page-bg, #FBF9F5);
+    border: 1.5px solid var(--color-border, #E2D9CC);
     border-radius: var(--radius-md, 0.875rem);
     padding: 0.85rem 1.15rem;
+    margin-bottom: 1.5rem;
   }
 
   .level-bar-header {
@@ -243,7 +207,7 @@
     font-weight: 800;
     color: var(--color-text-main, #2D3748);
     display: block;
-    margin: 0;
+    margin-bottom: 0.6rem;
   }
 
   .level-toggle-btn {
@@ -261,22 +225,14 @@
     margin-top: 1rem;
   }
 
-  /* Themes Section */
   .themes-section {
-    background: var(--color-surface-card, #F5EFE6);
-    border: 2px solid var(--color-border, #E2D9CC);
-    border-radius: var(--radius-lg, 1.25rem);
-    padding: 1.25rem 1.5rem;
-  }
-
-  .themes-section h2 {
-    margin-bottom: 0.85rem;
+    margin-bottom: 1.5rem;
   }
 
   .themes-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.75rem;
+    gap: 0.85rem;
   }
 
   @media (max-width: 680px) {
@@ -295,7 +251,7 @@
     background: var(--color-page-bg, #FBF9F5);
     border: 2px solid var(--color-border, #E2D9CC);
     border-radius: var(--radius-md, 0.875rem);
-    padding: 0.85rem 0.35rem;
+    padding: 1rem 0.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -319,12 +275,12 @@
   }
 
   .theme-icon {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+    font-size: 2.35rem;
+    margin-bottom: 0.35rem;
   }
 
   .theme-name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--color-text-main, #2D3748);
     text-align: center;
@@ -332,27 +288,55 @@
 
   .selected-badge {
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 5px;
+    right: 5px;
     font-size: 0.65rem;
     font-weight: 800;
     background: var(--color-primary, #2B6CB0);
     color: var(--color-page-bg, #FBF9F5);
-    padding: 1px 4px;
+    padding: 2px 5px;
     border-radius: 4px;
   }
 
-  .action-footer {
-    margin-top: 0.5rem;
+  .companion-toggle-section {
+    background: var(--color-surface-soft, #EDE5D8);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-md, 0.875rem);
+    padding: 0.85rem 1.15rem;
+    margin-bottom: 1.75rem;
   }
 
-  .btn-primary-large {
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+  }
+
+  .toggle-checkbox {
+    width: 1.35rem;
+    height: 1.35rem;
+    accent-color: var(--color-primary, #2B6CB0);
+    cursor: pointer;
+  }
+
+  .toggle-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .setup-footer {
+    text-align: center;
+  }
+
+  .btn-start-adventure {
     width: 100%;
     background: var(--color-primary, #2B6CB0);
     color: var(--color-page-bg, #FBF9F5);
     border: none;
-    border-radius: 1.25rem;
-    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-md, 0.875rem);
+    padding: 1.25rem 1.75rem;
     font-size: 1.35rem;
     font-weight: 800;
     cursor: pointer;
@@ -361,29 +345,29 @@
     justify-content: center;
     gap: 0.85rem;
     box-shadow: 0 6px 18px rgba(43, 108, 176, 0.3);
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.2s ease;
   }
 
-  .btn-primary-large:hover {
-    background-color: var(--color-primary-hover, #23568B);
+  .btn-start-adventure:hover {
+    background: var(--color-primary-hover, #23568B);
     transform: translateY(-2px);
     box-shadow: 0 8px 22px rgba(43, 108, 176, 0.4);
   }
 
-  .btn-primary-large:active {
+  .btn-start-adventure:active {
     transform: translateY(0);
   }
 
   .btn-icon {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
   }
 
   .btn-arrow {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     transition: transform 0.2s ease;
   }
 
-  .btn-primary-large:hover .btn-arrow {
+  .btn-start-adventure:hover .btn-arrow {
     transform: translateX(4px);
   }
 </style>

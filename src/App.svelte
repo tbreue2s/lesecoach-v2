@@ -3,12 +3,15 @@
   import HomeScreen from './lib/components/screens/HomeScreen.svelte';
   import SettingsScreen from './lib/components/screens/SettingsScreen.svelte';
   import ReaderScreen from './lib/components/screens/ReaderScreen.svelte';
+  import StoryAdventureScreen from './lib/components/screens/StoryAdventureScreen.svelte';
 </script>
 
 <div class="app-viewport">
   <main class="main-content">
     {#if $routerStore.currentScreen === 'home'}
       <HomeScreen />
+    {:else if $routerStore.currentScreen === 'adventure-setup'}
+      <StoryAdventureScreen />
     {:else if $routerStore.currentScreen === 'reader'}
       <ReaderScreen />
     {:else}
@@ -29,6 +32,6 @@
 
   .main-content {
     width: 100%;
-    max-width: 760px;
+    max-width: 780px;
   }
 </style>
