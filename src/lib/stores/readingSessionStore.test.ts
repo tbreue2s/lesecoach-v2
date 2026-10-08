@@ -130,6 +130,21 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
     expect(repeatedSpokenText.length).toBeGreaterThan(0);
   });
 
+  it('activates intervention flag on active token when triggerIntervention is called', () => {
+    readingSessionStore.loadStory(SAMPLE_STORIES[0], 5, 'Bello');
+    readingSessionStore.startSentenceReading();
+
+    let state = get(readingSessionStore);
+    if (state.activeWordTokenId) {
+      readingSessionStore.triggerIntervention();
+      state = get(readingSessionStore);
+      const activeToken = state.sentences[state.activeSentenceIndex].words.find(
+        (w) => w.id === state.activeWordTokenId
+      );
+      expect(activeToken?.hasInterventionActive).toBe(true);
+    }
+  });
+
   it('cycles through stories via loadNextStory', () => {
     readingSessionStore.loadStory(SAMPLE_STORIES[0], 1, 'Bello');
     expect(get(readingSessionStore).storyId).toBe(SAMPLE_STORIES[0].id);

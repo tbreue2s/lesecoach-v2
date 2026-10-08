@@ -2,9 +2,30 @@
   import { readingSessionStore } from '../stores/readingSessionStore';
   import { levelStore } from '../stores/levelStore';
   import { READING_LEVEL_INFOS } from '../data/readingLevels';
+  import type { WordToken } from '../types/reading';
 
   $: session = $readingSessionStore;
   $: levelInfo = READING_LEVEL_INFOS[session.level || $levelStore];
+
+  // Phase A has default syllable coloring enabled for child words
+  $: isPhaseA = (session.level || $levelStore) <= 3;
+
+  function shouldShowSyllables(token: WordToken): boolean {
+    if (token.role !== 'child') return false;
+    return isPhaseA || !!token.hasInterventionActive;
+  }
+
+  function handleWordClick(token: WordToken) {
+    if (token.role === 'child' && session.turnState === 'CHILD_TURN' && token.id === session.activeWordTokenId) {
+      readingSessionStore.advanceWordSuccess();
+    }
+  }
+
+  function handleHelpClick(token: WordToken) {
+    if (token.role === 'child') {
+      readingSessionStore.triggerIntervention(token.id);
+    }
+  }
 </script>
 
 <div class="reading-session-view">
@@ -92,20 +113,54 @@
 
         <!-- Word Tokens Container -->
         <p class="sentence-text">
-          {#each sentence.words as token (token.id)}
+          {#each sentence.words as token, wIndex (token.id)}
             <span
               id={`token-${token.id}`}
               class="word-token"
               class:role-child={token.role === 'child'}
               class:role-app={token.role === 'app'}
+              class:is-pair-start={token.role === 'child' && wIndex < sentence.words.length - 1 && sentence.words[wIndex + 1].role === 'child' && (wIndex === 0 || sentence.words[wIndex - 1].role !== 'child')}
+              class:is-pair-end={token.role === 'child' && wIndex > 0 && sentence.words[wIndex - 1].role === 'child' && (wIndex === sentence.words.length - 1 || sentence.words[wIndex + 1].role !== 'child')}
+              class:is-pair-middle={token.role === 'child' && wIndex > 0 && sentence.words[wIndex - 1].role === 'child' && wIndex < sentence.words.length - 1 && sentence.words[wIndex + 1].role === 'child'}
               class:status-active={token.id === session.activeWordTokenId && session.turnState === 'CHILD_TURN'}
               class:flash-success={token.id === session.isSuccessFlashingTokenId}
               class:karaoke-active={token.id === session.karaokeWordTokenId}
               class:status-success={token.role === 'child' && token.status === 'success'}
+              class:has-syllables={shouldShowSyllables(token)}
+              on:click={() => handleWordClick(token)}
+              role="button"
+              tabindex="0"
+              on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleWordClick(token)}
             >
-              {token.word}
+              {#if shouldShowSyllables(token)}
+                {#if token.syllables && token.syllables.length > 1}
+                  {#each token.syllables as syl, sylIdx}
+                    <span
+                      class="syllable-part"
+                      class:syl-blue={sylIdx % 2 === 0}
+                      class:syl-red={sylIdx % 2 === 1}
+                    >{syl}</span>
+                  {/each}
+                {:else}
+                  <span class="syllable-part syl-blue">{token.word}</span>
+                {/if}
+              {:else}
+                {token.word}
+              {/if}
+
               {#if token.role === 'child' && token.status === 'success'}
                 <span class="check-indicator" aria-hidden="true">✓</span>
+              {/if}
+
+              {#if token.role === 'child' && token.id === session.activeWordTokenId && session.turnState === 'CHILD_TURN' && !isPhaseA && !token.hasInterventionActive}
+                <button
+                  type="button"
+                  class="btn-inline-help"
+                  title="Silben-Hilfe aktivieren"
+                  on:click|stopPropagation={() => handleHelpClick(token)}
+                >
+                  💡
+                </button>
               {/if}
             </span>{' '}
           {/each}
@@ -345,6 +400,7 @@
     border-radius: var(--radius-sm, 0.5rem);
     position: relative;
     transition: all 0.2s ease;
+    cursor: default;
   }
 
   /* Role Child Token: Highlighted dashed badge style */
@@ -353,6 +409,34 @@
     border: 2px dashed var(--color-accent-gold, #C05621);
     color: var(--color-text-main, #2D3748);
     font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* Connected Word Pair (Level 2 Box) */
+  .word-token.role-child.is-pair-start {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0.2rem;
+  }
+
+  .word-token.role-child.is-pair-end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0.2rem;
+  }
+
+  .word-token.role-child.is-pair-middle {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 
   /* Active Child Word Token: Soft warm pulsing glow */
@@ -364,6 +448,27 @@
     animation: pulseActive 1.6s infinite ease-in-out;
   }
 
+  /* Syllable Colors */
+  .syllable-part.syl-blue {
+    color: #2B6CB0 !important;
+    font-weight: 800;
+  }
+
+  .syllable-part.syl-red {
+    color: #C53030 !important;
+    font-weight: 800;
+  }
+
+  .btn-inline-help {
+    font-size: 0.75rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 2px;
+    padding: 0;
+    vertical-align: super;
+  }
+
   /* Instant Flash Success Animation */
   .word-token.flash-success {
     background: #48BB78 !important;
@@ -372,6 +477,10 @@
     box-shadow: 0 0 20px #48BB78 !important;
     transform: scale(1.15) !important;
     transition: all 0.15s ease-out !important;
+  }
+
+  .word-token.flash-success .syllable-part {
+    color: #FFFFFF !important;
   }
 
   /* Karaoke Active Highlight: TTS reading */
@@ -392,6 +501,10 @@
     border: 2px solid var(--color-accent-green, #276749);
     color: #22543D;
     font-weight: 700;
+  }
+
+  .word-token.role-child.status-success .syllable-part {
+    color: #22543D !important;
   }
 
   .check-indicator {

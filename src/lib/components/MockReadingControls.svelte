@@ -39,6 +39,10 @@
     readingSessionStore.triggerRepeatedReading();
   }
 
+  function handleTriggerIntervention() {
+    readingSessionStore.triggerIntervention();
+  }
+
   function handleRestartStory() {
     const currentStory = SAMPLE_STORIES.find((s) => s.id === session.storyId) || SAMPLE_STORIES[0];
     readingSessionStore.loadStory(
@@ -114,6 +118,16 @@
       on:click={handleTriggerRepeatedReading}
     >
       🔄 Repeated Reading
+    </button>
+
+    <button
+      type="button"
+      id="mock-syllable-help-btn"
+      class="btn-mock btn-syllables"
+      title="Aktiviert dynamische Silben-Färbung (Hänger-Hilfe)"
+      on:click={handleTriggerIntervention}
+    >
+      💡 Silben-Hilfe
     </button>
 
     <button
@@ -266,6 +280,17 @@
 
   .btn-repeat:hover {
     background: #E9D8FD;
+    transform: translateY(-2px);
+  }
+
+  .btn-syllables {
+    background: #EBF8FF;
+    color: #2B6CB0;
+    border-color: #90CDF4;
+  }
+
+  .btn-syllables:hover {
+    background: #BEE3F8;
     transform: translateY(-2px);
   }
 

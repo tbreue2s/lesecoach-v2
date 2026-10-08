@@ -12,6 +12,27 @@ export interface ReadingPhase {
   subtitle: string;
   badgeEmoji: string;
   levels: ReadingLevelNumber[];
+  defaultSyllableColoring: boolean;
+}
+
+export type SentenceDistribution =
+  | 'target_word'
+  | 'word_pair'
+  | 'half_sentence'
+  | 'every_3rd_sentence'
+  | 'alternating'
+  | 'full_child';
+
+export interface ReadingLevelConstraints {
+  maxWordsPerSentenceChild: number;
+  maxSyllablesPerWord: number;
+  maxCombinedSyllablesChild?: number;
+  allowComplexClusters: boolean;
+  sentenceDistribution: SentenceDistribution;
+  requiresRepeatedReading: boolean;
+  totalStoryWordsMin?: number;
+  totalStoryWordsMax?: number;
+  totalSentencesMax?: number;
 }
 
 export interface ReadingLevelInfo {
@@ -19,6 +40,7 @@ export interface ReadingLevelInfo {
   phaseId: ReadingPhaseId;
   title: string;
   description: string;
+  constraints: ReadingLevelConstraints;
   targetChildWordsPerSentence?: number;
   isRepeatedReadingEnabled: boolean;
 }
@@ -27,10 +49,12 @@ export interface WordToken {
   id: string;
   word: string;
   cleanWord: string;
+  syllables: string[];
   role: TokenRole;
   status: TokenStatus;
   sentenceIndex: number;
   wordIndexInSentence: number;
+  hasInterventionActive?: boolean;
 }
 
 export interface SentenceToken {
@@ -77,4 +101,3 @@ export interface ReadingSessionState {
   completedSentencesCount: number;
   starsEarned: number;
 }
-

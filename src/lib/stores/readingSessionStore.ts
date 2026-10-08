@@ -656,6 +656,22 @@ function createReadingSessionStore() {
       }));
     },
 
+    triggerIntervention: (wordTokenId?: string) => {
+      update((state) => {
+        const targetId = wordTokenId || state.activeWordTokenId;
+        if (!targetId) return state;
+
+        const currentSentence = state.sentences[state.activeSentenceIndex];
+        if (currentSentence) {
+          const targetToken = currentSentence.words.find((w) => w.id === targetId);
+          if (targetToken) {
+            targetToken.hasInterventionActive = true;
+          }
+        }
+        return { ...state };
+      });
+    },
+
     resetSession: () => {
       clearSyncTimer();
       clearAutoAdvance();

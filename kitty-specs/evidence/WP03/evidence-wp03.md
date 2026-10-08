@@ -1,95 +1,81 @@
-# Technical Evidence: Work Package 03 (State-Management & Didaktische 9-Stufen-Matrix)
+# Evidence: Work Package 03 – State-Management & Didaktische Lese-Stufen (9-Stufen-Matrix)
 
-**WP-ID:** `WP03`  
+**Work Package:** `WP03`  
 **Datum:** 2026-10-08  
 **Status:** `in_review`  
-**Ziel:** Nachweis des didaktischen 9-Stufen-State-Managements, der Satz- und Wort-Tokenisierung, der visuellen Rollen-Differenzierung (`app` vs. `child`) und der Test-Mock-Controls.
+**Test-Ergebnis:** 13 Test-Suites, 90 Tests erfolgreich bestanden (100% grün).
 
 ---
 
-## 1. Nachweis: Exakte Zielwort-Zuweisung (Level 1 & Level 2)
+## 1. Übersicht der umgesetzten Architektur & Didaktischen Regeln
 
-Auszug aus den Unit-Tests in `src/lib/utils/tokenizer.test.ts`:
+### 1.1 Level 1 – Einzelwort-Regeln (`role: 'child'`)
+- Genau 1 Zielwort pro Satz fürs Kind.
+- **Wortart:** Ausschließlich Nomen (Großgeschrieben) oder finite Vollverben.
+- **Strikte Verbote:**
+  - Keine isolierten Verbzusätze / Partikeln (z. B. *"her"*, *"hin"*, *"auf"*, *"mit"*, *"ab"*).
+  - Keine Genitiv-Formen (z. B. *"Pferdes"*, *"des"*).
+  - Keine Wörter mit Dehnungs-h (*"Mähne"*, *"Zahn"*, *"Kuh"*) oder komplexen Anfangsclustern (*"Pferd"*, *"Schaf"*, *"Straße"*).
+  - Maximal 2 Silben pro Wort.
 
-### 1.1 Level 1 (Genau 1 Zielwort pro Satz fürs Kind)
-```typescript
-it('LEVEL 1: sets EXACTLY 1 word per sentence to role: "child"', () => {
-  const sentences = tokenizeStory(sampleText, 1, 'Bello');
-  for (const sentence of sentences) {
-    const childWords = sentence.words.filter((w) => w.role === 'child');
-    expect(childWords.length).toBe(1);
+### 1.2 Level 2 – Wortpaar-Regeln (`role: 'child'`)
+- Genau 2 Wörter pro Satz.
+- **Harte Adjazenz-Pflicht:** Die beiden Wörter folgen im Satz immer unmittelbar aufeinander (Indizes $i$ und $i+1$).
+- **Harte Phrasen-Pflicht:** Ausschließlich grammatikalische Nomen-Phrasen:
+  - `[Artikel + Nomen]` (z. B. *"die Wiese"*, *"ein Apfel"*, *"den Pfad"*)
+  - `[Adjektiv + Nomen]` (z. B. *"grüne Wiese"*, *"roten Apfel"*, *"rotes Auto"*)
+- **Silben-Budget:** Maximal 4 Silben in Summe, kein Einzelwort mit $\ge 3$ Silben.
+- **UI-Darstellung:** Wortpaare werden optisch in einer zusammenhängenden, einheitlichen Box gerendert (durchgehendes Border-Radius- und Rand-Styling).
 
-    const appWords = sentence.words.filter((w) => w.role === 'app');
-    expect(appWords.length).toBe(sentence.words.length - 1);
-  }
-});
-```
-
-### 1.2 Level 2 (Genau 2 Zielwörter pro Satz fürs Kind)
-```typescript
-it('LEVEL 2: sets EXACTLY 2 words per sentence to role: "child"', () => {
-  const sentences = tokenizeStory(sampleText, 2, 'Bello');
-  for (const sentence of sentences) {
-    const childWords = sentence.words.filter((w) => w.role === 'child');
-    expect(childWords.length).toBe(2);
-
-    const appWords = sentence.words.filter((w) => w.role === 'app');
-    expect(appWords.length).toBe(sentence.words.length - 2);
-  }
-});
-```
-
-### 1.3 Phase B: Repeated Reading Flag (`requiresRepeatedReading: true`)
-```typescript
-it('LEVEL 4, 5, 6: sets requiresRepeatedReading = true on all sentences', () => {
-  for (const lvl of [4, 5, 6] as const) {
-    const sentences = tokenizeStory(sampleText, lvl, 'Bello');
-    for (const sentence of sentences) {
-      expect(sentence.requiresRepeatedReading).toBe(true);
-    }
-  }
-});
-```
+### 1.3 Phasen-Matrix Übersicht
+- **Phase A (Level 1–3):** Zweifarbiges Silben-Scaffolding (#2B6CB0 blau, #C53030 rot, Einsilber blau). Striktes Verbot von $\ge 4$-Silbern.
+- **Phase B (Level 4–6):** Standardmäßig Buchtext, dynamische Silbenhilfe auf Abruf/Hänger; Repeated Reading aktiv bei Level 5 & 6.
+- **Phase C (Level 7–9):** Freies Lesen zusammenhängender Geschichten (25–150+ Wörter).
 
 ---
 
-## 2. Vitest Testsuite-Ergebnis (28/28 Tests grün)
+## 2. Testprotokoll (Vitest Suite)
 
-```text
-✓ src/lib/stores/profileStore.test.ts (5 tests)
-✓ src/lib/stores/readingSessionStore.test.ts (3 tests)
-  ✓ loads story and activates the first child token
-  ✓ advances word success and awards stars
-  ✓ completes sentence immediately via completeCurrentSentence
-✓ src/lib/stores/routerStore.test.ts (2 tests)
-✓ src/lib/utils/speech.test.ts (3 tests)
-✓ src/lib/utils/tokenizer.test.ts (9 tests)
-  ✓ splits text into correct sentences and cleans punctuation
-  ✓ Phase A (Wort-Entdecker): Exact Target Word Counts
-    ✓ LEVEL 1: sets EXACTLY 1 word per sentence to role: "child"
-    ✓ LEVEL 2: sets EXACTLY 2 words per sentence to role: "child"
-    ✓ LEVEL 3: sets 3 to 4 words (half-sentence) per sentence to role: "child"
-  ✓ Phase B (Satz-Pionier): Repeated Reading & Sentence Roles
-    ✓ LEVEL 4, 5, 6: sets requiresRepeatedReading = true on all sentences
-    ✓ LEVEL 1-3 & LEVEL 7-9: sets requiresRepeatedReading = false
-    ✓ LEVEL 5 (Lese-Tandem): alternates sentences between App (even) and Child (odd)
-    ✓ LEVEL 6: sets all sentences and words to role: "child"
-  ✓ Phase C (Lese-Kapitän): Free Reading
-    ✓ LEVEL 7, 8, 9: sets all words to role: "child" for free reading
-✓ src/lib/utils/validation.test.ts (6 tests)
+```
+ RUN  v2.1.9 /home/thomas/projects/lesecoach-v2
 
-Test Files  6 passed (6)
-Tests       28 passed (28)
+ ✓ src/lib/utils/tokenizer.test.ts (14)
+ ✓ src/lib/utils/levelValidator.test.ts (9)
+ ✓ src/lib/stores/readingSessionStore.test.ts (7)
+ ✓ src/lib/services/speechRecognitionService.test.ts (8)
+ ✓ src/lib/stores/profileStore.test.ts (5)
+ ✓ src/lib/stores/routerStore.test.ts (2)
+ ✓ src/lib/stores/storyConfigStore.test.ts (3)
+ ✓ src/lib/utils/charMapper.test.ts (6)
+ ✓ src/lib/utils/mockStoryGenerator.test.ts (3)
+ ✓ src/lib/utils/speech.test.ts (3)
+ ✓ src/lib/utils/spokenWordMatcher.test.ts (19)
+ ✓ src/lib/utils/syllableSplitter.test.ts (5)
+ ✓ src/lib/utils/validation.test.ts (6)
+
+ Test Files  13 passed (13)
+      Tests  90 passed (90)
 ```
 
 ---
 
-## 3. UI-Komponenten & Test-Controls
-1. **[LevelSelector.svelte](file:///home/thomas/projects/lesecoach-v2/src/lib/components/LevelSelector.svelte):** 9 Stufen übersichtlich gegliedert nach den 3 didaktischen Phasen (Wort-Entdecker, Satz-Pionier, Lese-Kapitän).
-2. **[ReadingSessionView.svelte](file:///home/thomas/projects/lesecoach-v2/src/lib/components/ReadingSessionView.svelte):** Visuelle Rollen-Kennzeichnung:
-   - App-Wörter: Normaler Fließtext.
-   - Kind-Wörter: Umrahmte Badges (`role-child`) mit Kennzeichnung (`👶`).
-   - Aktives Wort: Warm-gelber Fokus-Puls (`status-active`).
-   - Richtig gelesene Wörter: Sanftes Grün mit Häkchen (`status-success`).
-   - Repeated-Reading-Tag bei Stufen 4–6.
-3. **[MockReadingControls.svelte](file:///home/thomas/projects/lesecoach-v2/src/lib/components/MockReadingControls.svelte):** Interaktive Testleiste zum Simulieren von Wort-Erfolgen, Satz-Abschlüssen und Stufenwechseln.
+## 3. Production Build Nachweis
+
+```
+> lesecoach-v2@0.1.0 build
+> vite build
+
+vite v5.4.21 building for production...
+✓ 151 modules transformed.
+dist/registerSW.js                0.13 kB
+dist/manifest.webmanifest         0.42 kB
+dist/index.html                   1.13 kB │ gzip:  0.59 kB
+dist/assets/index-CO_xV2Mn.css   32.51 kB │ gzip:  5.45 kB
+dist/assets/index-BGBXbnv7.js   111.02 kB │ gzip: 38.01 kB
+✓ built in 690ms
+```
+
+---
+
+## 4. Fazit
+Die didaktischen Vorgaben für Level 1 & 2 wurden vollständig korrigiert, validiert und testtechnisch nachgewiesen.
