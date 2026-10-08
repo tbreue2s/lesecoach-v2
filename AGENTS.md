@@ -5,6 +5,7 @@
 - **Code Comments & Docstrings:** English only.
 - **Git Commits:** All git commit messages, branch names, and PR titles/descriptions must be in English (e.g., following Conventional Commits). Commits must NOT be made automatically after raw code generation; they should only be made after tests pass, technical evidence is gathered, and the user gives approval (during the `accept` / `merge` stage) to keep the git history clean.
 - **Communication:** Conversations with the user can take place in German (or the user's preferred language), but all code artifacts, internal documentation within code, commit messages, and technical specs written in code must strictly remain in English.
+- **Question-First Directive:** When the user asks a question, ALWAYS provide only the direct answer first without jumping into unrequested implementations or unsolicited code changes.
 
 ## 2. Architecture & Stack
 - **Framework:** Svelte + Vite (TypeScript)

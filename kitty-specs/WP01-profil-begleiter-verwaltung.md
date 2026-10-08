@@ -1,7 +1,7 @@
 # Work Package 01: Sichere Profil- und Begleiter-Verwaltung
 
 **ID:** `WP01`  
-**Status:** `spec`  
+**Status:** `merged`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 
 ---
