@@ -69,6 +69,10 @@ export interface ReadingSessionState {
   karaokeWordTokenId: string | null;
   turnState: TurnState;
   isSpeaking: boolean;
+  isListening: boolean;
+  lastSpokenTranscript: string | null;
+  micError: string | null;
+  isSuccessFlashingTokenId: string | null;
   isSessionComplete: boolean;
   completedSentencesCount: number;
   starsEarned: number;

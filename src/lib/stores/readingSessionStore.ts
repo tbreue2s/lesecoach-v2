@@ -19,6 +19,12 @@ import {
   pauseSpeech,
   resumeSpeech,
 } from '../services/speechService';
+import {
+  startListening,
+  stopListening,
+} from '../services/speechRecognitionService';
+import { validateSpokenWord } from '../utils/spokenWordMatcher';
+import { playSuccessChime } from '../utils/soundEffects';
 
 const SPEECH_RATE = 0.78;
 
@@ -32,6 +38,10 @@ const initialSessionState: ReadingSessionState = {
   karaokeWordTokenId: null,
   turnState: 'IDLE',
   isSpeaking: false,
+  isListening: false,
+  lastSpokenTranscript: null,
+  micError: null,
+  isSuccessFlashingTokenId: null,
   isSessionComplete: false,
   completedSentencesCount: 0,
   starsEarned: 0,
@@ -39,6 +49,7 @@ const initialSessionState: ReadingSessionState = {
 
 let syncTimerInterval: ReturnType<typeof setInterval> | null = null;
 let autoAdvanceTimeout: ReturnType<typeof setTimeout> | null = null;
+let flashSuccessTimeout: ReturnType<typeof setTimeout> | null = null;
 
 function clearSyncTimer() {
   if (syncTimerInterval !== null) {
@@ -54,13 +65,20 @@ function clearAutoAdvance() {
   }
 }
 
+function clearFlashSuccessTimeout() {
+  if (flashSuccessTimeout !== null) {
+    clearTimeout(flashSuccessTimeout);
+    flashSuccessTimeout = null;
+  }
+}
+
 function createReadingSessionStore() {
   const store = writable<ReadingSessionState>(initialSessionState);
   const { subscribe, set, update } = store;
 
   /**
    * Helper: Plays speech for an app segment with real-time hybrid Karaoke Highlighting.
-   * Highlighting begins strictly when the audio actually starts (via onStart).
+   * Enforces microphone hygiene: stops speech recognition prior to TTS playback.
    */
   function speakAppSegment(tokensToSpeak: WordToken[], onFinished: () => void) {
     if (tokensToSpeak.length === 0) {
@@ -69,6 +87,7 @@ function createReadingSessionStore() {
     }
 
     clearSyncTimer();
+    stopListening(); // Mute mic immediately before TTS to prevent echo feedback
 
     const { spokenText, spans } = buildSpokenSpans(tokensToSpeak);
     const { estimates } = calculateTokenTimeEstimates(tokensToSpeak, SPEECH_RATE);
@@ -77,8 +96,9 @@ function createReadingSessionStore() {
       ...state,
       turnState: 'APP_TURN',
       isSpeaking: true,
+      isListening: false,
       activeWordTokenId: null,
-      karaokeWordTokenId: null, // Will be set on actual audio start
+      karaokeWordTokenId: null,
     }));
 
     let startTime = 0;
@@ -108,7 +128,6 @@ function createReadingSessionStore() {
       }, 20);
     };
 
-    // Safety fallback: if onStart takes longer than 150ms in non-standard environments
     const startFallbackTimeout = setTimeout(() => {
       startTimer();
     }, 150);
@@ -183,6 +202,106 @@ function createReadingSessionStore() {
   }
 
   /**
+   * Starts Speech-to-Text listening for the child with microphone hygiene & error handling.
+   */
+  function startListeningForChild(childToken: WordToken) {
+    startListening({
+      lang: 'de-DE',
+      interimResults: true,
+      onStart: () => {
+        update((s) => ({ ...s, isListening: true, micError: null }));
+      },
+      onResult: (transcript: string) => {
+        const validation = validateSpokenWord(transcript, childToken.cleanWord);
+        update((s) => ({ ...s, lastSpokenTranscript: transcript }));
+
+        if (validation.isValid) {
+          handleChildWordSuccess(childToken);
+        }
+      },
+      onError: (errorCode) => {
+        if (errorCode === 'not-allowed') {
+          update((s) => ({
+            ...s,
+            micError: 'Mikrofonzugriff nicht erlaubt. Bitte erlaube den Mikrofonzugriff im Browser.',
+            isListening: false,
+          }));
+        } else if (errorCode !== 'no-speech' && errorCode !== 'aborted') {
+          update((s) => ({
+            ...s,
+            micError: `Mikrofon-Hinweis: ${errorCode}`,
+          }));
+        }
+      },
+      onEnd: () => {
+        update((s) => {
+          if (s.turnState === 'CHILD_TURN' && !s.isSuccessFlashingTokenId && !s.isSpeaking) {
+            return { ...s, isListening: false };
+          }
+          return s;
+        });
+      },
+    });
+  }
+
+  /**
+   * Activates child turn listening during CHILD_TURN.
+   */
+  function startChildTurnListening(childToken: WordToken) {
+    stopSpeech();
+
+    update((s) => ({
+      ...s,
+      turnState: 'CHILD_TURN',
+      activeWordTokenId: childToken.id,
+      karaokeWordTokenId: null,
+      isSpeaking: false,
+      isListening: true,
+      micError: null,
+      lastSpokenTranscript: null,
+      isSuccessFlashingTokenId: null,
+    }));
+
+    // Initialize Speech Recognition with de-DE locale
+    startListeningForChild(childToken);
+  }
+
+  /**
+   * Handles successful word recognition or manual dev click:
+   * - Mutes microphone immediately (microphone hygiene).
+   * - Plays friendly chime sound.
+   * - Flashes word green.
+   * - Advances state and continues tandem reading.
+   */
+  function handleChildWordSuccess(childToken: WordToken) {
+    stopListening(); // Mute microphone immediately
+
+    playSuccessChime();
+
+    // Trigger visual green flash
+    update((s) => ({
+      ...s,
+      isListening: false,
+      isSuccessFlashingTokenId: childToken.id,
+    }));
+
+    clearFlashSuccessTimeout();
+    flashSuccessTimeout = setTimeout(() => {
+      update((s) => {
+        childToken.status = 'success';
+        return {
+          ...s,
+          starsEarned: s.starsEarned + 1,
+          activeWordTokenId: null,
+          isSuccessFlashingTokenId: null,
+        };
+      });
+
+      stepTandemEngine();
+    }, 280);
+  }
+
+  /**
    * Tandem Orchestrator: Reads next chunk, stops before child word, or advances to next sentence.
    */
   function stepTandemEngine() {
@@ -224,16 +343,8 @@ function createReadingSessionStore() {
       });
     } else {
       const childToken = unreadTokens[0];
-      update((s) => {
-        childToken.status = 'active';
-        return {
-          ...s,
-          turnState: 'CHILD_TURN',
-          activeWordTokenId: childToken.id,
-          karaokeWordTokenId: null,
-          isSpeaking: false,
-        };
-      });
+      childToken.status = 'active';
+      startChildTurnListening(childToken);
     }
   }
 
@@ -246,6 +357,7 @@ function createReadingSessionStore() {
     if (!currentSentence) return;
 
     clearSyncTimer();
+    stopListening(); // Mute mic prior to full sentence TTS
 
     const { spokenText, spans } = buildSpokenSpans(currentSentence.words);
     const { estimates } = calculateTokenTimeEstimates(currentSentence.words, SPEECH_RATE);
@@ -254,6 +366,7 @@ function createReadingSessionStore() {
       ...s,
       turnState: 'REPEATED_READING',
       isSpeaking: true,
+      isListening: false,
       activeWordTokenId: null,
       karaokeWordTokenId: null,
     }));
@@ -355,6 +468,8 @@ function createReadingSessionStore() {
    */
   function finishSentence() {
     clearSyncTimer();
+    stopListening();
+
     update((state) => {
       if (state.sentences.length === 0) return state;
 
@@ -378,6 +493,7 @@ function createReadingSessionStore() {
         karaokeWordTokenId: null,
         turnState: isFinished ? 'COMPLETED' : 'IDLE',
         isSpeaking: false,
+        isListening: false,
         isSessionComplete: isFinished,
         completedSentencesCount: state.completedSentencesCount + 1,
         starsEarned: state.starsEarned + 2,
@@ -395,7 +511,9 @@ function createReadingSessionStore() {
     ) => {
       clearSyncTimer();
       clearAutoAdvance();
+      clearFlashSuccessTimeout();
       stopSpeech();
+      stopListening();
       const sentences = tokenizeStory(story.text, level, companionName);
 
       set({
@@ -408,6 +526,10 @@ function createReadingSessionStore() {
         karaokeWordTokenId: null,
         turnState: 'IDLE',
         isSpeaking: false,
+        isListening: false,
+        lastSpokenTranscript: null,
+        micError: null,
+        isSuccessFlashingTokenId: null,
         isSessionComplete: false,
         completedSentencesCount: 0,
         starsEarned: 0,
@@ -420,7 +542,9 @@ function createReadingSessionStore() {
     ) => {
       clearSyncTimer();
       clearAutoAdvance();
+      clearFlashSuccessTimeout();
       stopSpeech();
+      stopListening();
       update((state) => {
         const currentIndex = SAMPLE_STORIES.findIndex((s) => s.id === state.storyId);
         const nextIndex = (currentIndex + 1) % SAMPLE_STORIES.length;
@@ -437,6 +561,10 @@ function createReadingSessionStore() {
           karaokeWordTokenId: null,
           turnState: 'IDLE',
           isSpeaking: false,
+          isListening: false,
+          lastSpokenTranscript: null,
+          micError: null,
+          isSuccessFlashingTokenId: null,
           isSessionComplete: false,
           completedSentencesCount: 0,
           starsEarned: 0,
@@ -451,6 +579,8 @@ function createReadingSessionStore() {
 
     advanceWordSuccess: () => {
       clearAutoAdvance();
+      stopListening();
+
       const state = get(store);
       if (state.isSessionComplete || state.sentences.length === 0) return;
 
@@ -459,16 +589,30 @@ function createReadingSessionStore() {
 
       const activeWord = currentSentence.words.find((w) => w.id === state.activeWordTokenId);
       if (activeWord) {
-        activeWord.status = 'success';
+        handleChildWordSuccess(activeWord);
+      } else {
+        stepTandemEngine();
       }
+    },
 
-      update((s) => ({
-        ...s,
-        starsEarned: s.starsEarned + 1,
-        activeWordTokenId: null,
-      }));
+    simulateSpokenWord: (spokenWord?: string) => {
+      const state = get(store);
+      if (state.turnState !== 'CHILD_TURN' || !state.activeWordTokenId) return;
 
-      stepTandemEngine();
+      const currentSentence = state.sentences[state.activeSentenceIndex];
+      if (!currentSentence) return;
+
+      const activeWord = currentSentence.words.find((w) => w.id === state.activeWordTokenId);
+      if (!activeWord) return;
+
+      const textToValidate = spokenWord ?? activeWord.cleanWord;
+      const result = validateSpokenWord(textToValidate, activeWord.cleanWord);
+
+      update((s) => ({ ...s, lastSpokenTranscript: textToValidate }));
+
+      if (result.isValid) {
+        handleChildWordSuccess(activeWord);
+      }
     },
 
     triggerRepeatedReading: () => {
@@ -480,6 +624,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       stopSpeech();
+      stopListening();
       finishSentence();
     },
 
@@ -487,7 +632,8 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       pauseSpeech();
-      update((s) => ({ ...s, turnState: 'PAUSED', isSpeaking: false }));
+      stopListening();
+      update((s) => ({ ...s, turnState: 'PAUSED', isSpeaking: false, isListening: false }));
     },
 
     resumeAudio: () => {
@@ -500,10 +646,12 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       stopSpeech();
+      stopListening();
       update((s) => ({
         ...s,
         karaokeWordTokenId: null,
         isSpeaking: false,
+        isListening: false,
         turnState: 'IDLE',
       }));
     },
@@ -511,7 +659,9 @@ function createReadingSessionStore() {
     resetSession: () => {
       clearSyncTimer();
       clearAutoAdvance();
+      clearFlashSuccessTimeout();
       stopSpeech();
+      stopListening();
       set(initialSessionState);
     },
   };

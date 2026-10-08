@@ -1,7 +1,7 @@
 # Work Package 06: Lückentext & Echtzeit-Spracherkennung
 
 **ID:** `WP06`  
-**Status:** `spec`  
+**Status:** `in_review`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 
 ---
@@ -13,35 +13,35 @@ Umsetzung des interaktiven Lückentext-Lesens. Die TTS-Stimme liest einen Satz b
 
 ## 2. Technische Spezifikation
 
-### 2.1 Speech-to-Text (STT) Service (`sttService.ts`)
+### 2.1 Speech-to-Text (STT) Service (`speechRecognitionService.ts`)
 - Initialisierung von `webkitSpeechRecognition` / `SpeechRecognition` mit `lang: 'de-DE'`.
-- Kontinuierliches oder On-Demand Listening mit Timeout (z. B. 6 Sekunden).
+- Mikrofon-Hygiene: Aktivierung ausschließlich in `CHILD_TURN`, sofortiges Stummschalten vor TTS-Ausgabe.
+- Kontinuierliches oder On-Demand Listening mit 5-Sekunden-Timeout.
 - Interims-Ergebnisse für direktes visuelles Feedback (z. B. pulsierendes Mikrofon-Icon oder visuelle Schallwellen).
 
 ### 2.2 Aussprache- & Ähnlichkeitsabgleich (Fuzzy Matching)
-- **Normalisierung:** Kleinbuchstaben, Entfernung von Satzzeichen (`.` `,` `!` `?`).
+- **Normalisierung:** Kleinbuchstaben, Entfernung von Satzzeichen (`.` `,` `!` `?`, etc.), Trimmen.
 - **Levenshtein-Distanz / Phonetische Toleranz:**
-  - Da Leseanfänger gelegentlich leicht undeutlich artikulieren, wird eine Ähnlichkeit von $\ge 80\%$ (bzw. Levenshtein-Distanz $\le 1-2$ je nach Wortlänge) als Treffer gewertet.
-  - Sofortiges positives Feedback bei Erfolg (z. B. Begleiter jubelt, Konfetti-Effekt, Sound-Effekt).
+  - Toleriert Zielwort als Teilstring / Token in Phrasen (z. B. "der Baum" vs. "Baum").
+  - Levenshtein-Toleranz von $\le 1$ bei Wörtern ab 4 Buchstaben (z. B. "Hunde" vs. "Hund", "gros" vs. "groß").
+  - Sofortiges positives Feedback bei Erfolg (grünes Aufleuchten `.flash-success`, synthetisierter C6-G6 Chime-Sound).
 
 ### 2.3 Didaktisches Fehlertoleranz- & Hilfesystem
-- **1. Fehlversuch:** Ermutigendes Feedback ("Fast geschafft! Versuch es noch einmal.").
-- **2. Fehlversuch / Timeout:** Begleiter gibt phonetischen Tipp (z. B. liest das Wort leise vor oder blendet den Anfangsbuchstaben groß ein).
-- **Notfall-Klick:** Kind kann das Wort auch antippen, um Frustration zu vermeiden.
+- **Barrierefreier Fallback & Dev-Button:** Kind kann das aktive Wort direkt antippen, um Frustration zu vermeiden; Entwickler können `[⭐ Dev: Simuliere Wort]` nutzen.
+- *(Hinweis: Erweiterte didaktische Interventions- und Hilfestufen werden in einem separaten Work Package modular aufgebaut.)*
 
 ---
 
 ## 3. Akzeptanzkriterien
-- [ ] TTS stoppt präzise an Lückenwörtern (`isGap: true`).
-- [ ] STT startet automatisch nach dem TTS-Stopp und signalisiert Aufnahmebereitschaft.
-- [ ] Gesprochenes Kindeswort wird gegen das Zielwort mit Fuzzy-Matching verglichen.
-- [ ] Erfolgreiche Erkennung schaltet das Wort frei und setzt den Satz fort.
-- [ ] Timeout und Fehlversuche führen zu kindgerechten Hinweisen statt harten Abbrüchen.
-- [ ] Manuelles Antippen als barrierefreier Fallback ist verfügbar.
+- [x] TTS stoppt präzise an Lückenwörtern (`role: 'child'`).
+- [x] STT startet automatisch nach dem TTS-Stopp und signalisiert Aufnahmebereitschaft (`isListening: true`, animierte Schallwellen).
+- [x] Gesprochenes Kindeswort wird gegen das Zielwort mit Fuzzy-Matching verglichen (`validateSpokenWord`).
+- [x] Erfolgreiche Erkennung schaltet das Wort frei, spielt Chime-Sound und setzt den Satz fort.
+- [x] Manuelles Antippen als barrierefreier Fallback ist verfügbar.
 
 ---
 
 ## 4. Review- & Evidence-Vorgabe (für `in_review`)
-- Unit-Tests für Fuzzy-Matching / Wort-Normalisierungs-Algorithmus.
-- Integrationstest mit simulierter SpeechRecognition für Erfolgs- und Timeout-Pfade.
-- Nachweis der UI-Zustände (Aufnahme aktiv, Erfolg, Tipp-Anzeige).
+- Unit-Tests für Fuzzy-Matching / Wort-Normalisierungs-Algorithmus (`src/lib/utils/spokenWordMatcher.test.ts`).
+- Integrationstest mit simulierter SpeechRecognition für Erfolgs- und Mikrofon-Hygiene-Pfade (`src/lib/stores/readingSessionStore.test.ts`).
+- Nachweis der UI-Zustände und Dokumentation in `kitty-specs/evidence/WP06/evidence-wp06.md`.

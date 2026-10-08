@@ -26,8 +26,29 @@
         <span class="turn-icon" aria-hidden="true">🔊</span>
         <span class="turn-text">Dein Begleiter liest vor...</span>
       {:else if session.turnState === 'CHILD_TURN'}
-        <span class="turn-icon" aria-hidden="true">🌟</span>
-        <span class="turn-text"><strong>Du bist dran!</strong> Lies das markierte Wort laut vor.</span>
+        <div class="child-turn-content">
+          <div class="mic-listening-header">
+            <span class="listening-otter" aria-hidden="true">🦦👂</span>
+            <div class="listening-waves" aria-hidden="true">
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+            </div>
+            <span class="turn-text"><strong>Ich höre dir zu!</strong> Lies das gelbe Wort laut vor.</span>
+          </div>
+
+          {#if session.lastSpokenTranscript}
+            <div class="transcript-preview">
+              <span class="preview-label">Gehört:</span> „{session.lastSpokenTranscript}“
+            </div>
+          {/if}
+
+          {#if session.micError}
+            <div class="mic-hint-badge" role="alert">
+              <span>ℹ️ {session.micError}</span>
+            </div>
+          {/if}
+        </div>
       {:else if session.turnState === 'REPEATED_READING'}
         <span class="turn-icon" aria-hidden="true">🔄</span>
         <span class="turn-text"><strong>Repeated Reading:</strong> Hör dir den ganzen Satz noch einmal an!</span>
@@ -78,6 +99,7 @@
               class:role-child={token.role === 'child'}
               class:role-app={token.role === 'app'}
               class:status-active={token.id === session.activeWordTokenId && session.turnState === 'CHILD_TURN'}
+              class:flash-success={token.id === session.isSuccessFlashingTokenId}
               class:karaoke-active={token.id === session.karaokeWordTokenId}
               class:status-success={token.role === 'child' && token.status === 'success'}
             >
@@ -139,12 +161,13 @@
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 0.65rem 1rem;
+    padding: 0.75rem 1rem;
     border-radius: var(--radius-md, 0.875rem);
     font-size: 0.95rem;
     font-weight: 600;
     border: 1.5px solid var(--color-border, #E2D9CC);
     background: #FFFDF9;
+    transition: all 0.25s ease;
   }
 
   .turn-banner.turn-app_turn {
@@ -155,8 +178,77 @@
 
   .turn-banner.turn-child_turn {
     background: #FFFAF0;
-    border-color: #feebc8;
-    color: #c05621;
+    border-color: #FBD38D;
+    color: #9C4221;
+    box-shadow: 0 4px 12px rgba(192, 86, 33, 0.12);
+  }
+
+  .child-turn-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .mic-listening-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .listening-otter {
+    font-size: 1.4rem;
+    display: inline-flex;
+    animation: gentleWiggle 2s infinite ease-in-out;
+  }
+
+  /* Pulsating Audio Waves */
+  .listening-waves {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    height: 18px;
+  }
+
+  .wave-bar {
+    width: 3.5px;
+    height: 8px;
+    background: #DD6B20;
+    border-radius: 3px;
+    animation: wavePulse 1s infinite ease-in-out;
+  }
+
+  .wave-bar:nth-child(2) {
+    animation-delay: 0.2s;
+    height: 14px;
+  }
+
+  .wave-bar:nth-child(3) {
+    animation-delay: 0.4s;
+    height: 10px;
+  }
+
+  .transcript-preview {
+    font-size: 0.85rem;
+    color: #744210;
+    background: #FEFCBF;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm, 0.5rem);
+    border: 1px dashed #D69E2E;
+    align-self: flex-start;
+  }
+
+  .preview-label {
+    font-weight: 700;
+  }
+
+  .mic-hint-badge {
+    font-size: 0.8rem;
+    color: #718096;
+    background: var(--color-surface-soft, #EDE5D8);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
   }
 
   .turn-banner.turn-repeated_reading {
@@ -263,16 +355,26 @@
     font-weight: 700;
   }
 
-  /* Active Child Word Token */
+  /* Active Child Word Token: Soft warm pulsing glow */
   .word-token.status-active {
     background: #FEFCBF;
     border: 2.5px solid var(--color-accent-gold, #C05621);
-    box-shadow: 0 0 12px rgba(192, 86, 33, 0.35);
+    box-shadow: 0 0 14px rgba(192, 86, 33, 0.4);
     transform: scale(1.06);
-    animation: pulseActive 1.8s infinite ease-in-out;
+    animation: pulseActive 1.6s infinite ease-in-out;
   }
 
-  /* Karaoke Active Highlight: TTS reading (Instant highlighting with no lag) */
+  /* Instant Flash Success Animation */
+  .word-token.flash-success {
+    background: #48BB78 !important;
+    color: #FFFFFF !important;
+    border-color: #2F855A !important;
+    box-shadow: 0 0 20px #48BB78 !important;
+    transform: scale(1.15) !important;
+    transition: all 0.15s ease-out !important;
+  }
+
+  /* Karaoke Active Highlight: TTS reading */
   .word-token.karaoke-active {
     background-color: #FDE047 !important;
     color: #1A202C !important;
@@ -284,7 +386,7 @@
     z-index: 2;
   }
 
-  /* Success Word Token (Only child words become green upon completion) */
+  /* Success Word Token */
   .word-token.role-child.status-success {
     background: #C6F6D5;
     border: 2px solid var(--color-accent-green, #276749);
@@ -304,7 +406,30 @@
       box-shadow: 0 0 6px rgba(192, 86, 33, 0.25);
     }
     50% {
-      box-shadow: 0 0 14px rgba(192, 86, 33, 0.5);
+      box-shadow: 0 0 16px rgba(192, 86, 33, 0.55);
+    }
+  }
+
+  @keyframes wavePulse {
+    0%, 100% {
+      transform: scaleY(0.6);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scaleY(1.3);
+      opacity: 1;
+    }
+  }
+
+  @keyframes gentleWiggle {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    75% {
+      transform: rotate(5deg);
     }
   }
 </style>

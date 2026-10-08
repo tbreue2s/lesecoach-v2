@@ -27,6 +27,10 @@
     readingSessionStore.advanceWordSuccess();
   }
 
+  function handleSimulateCorrectWord() {
+    readingSessionStore.simulateSpokenWord();
+  }
+
   function handleSentenceComplete() {
     readingSessionStore.completeCurrentSentence();
   }
@@ -51,7 +55,16 @@
 
 <div class="mock-controls-card">
   <div class="controls-header">
-    <span class="controls-badge">🧪 Audio-Sync & Test-Leiste</span>
+    <span class="controls-badge">🧪 STT-Listener & Dev-Testleiste (WP06)</span>
+    <div class="status-pills">
+      {#if session.isListening}
+        <span class="pill pill-mic-active">🎙️ STT Aktiv (de-DE)</span>
+      {:else if session.isSpeaking}
+        <span class="pill pill-tts-active">🔊 TTS Aktiv (Stumm)</span>
+      {:else}
+        <span class="pill pill-idle">⏸️ Bereit</span>
+      {/if}
+    </div>
   </div>
 
   <div class="buttons-row">
@@ -77,11 +90,21 @@
 
     <button
       type="button"
-      id="mock-word-success-btn"
+      id="mock-simulate-correct-word-btn"
       class="btn-mock btn-word"
+      title="Simuliert die korrekte Spracherkennung des Zielworts"
+      on:click={handleSimulateCorrectWord}
+    >
+      ⭐ [Dev: Simuliere Wort]
+    </button>
+
+    <button
+      type="button"
+      id="mock-word-success-btn"
+      class="btn-mock btn-advance"
       on:click={handleWordSuccess}
     >
-      ⭐ Kind hat gelesen
+      👉 Direkt weiter
     </button>
 
     <button
@@ -90,7 +113,7 @@
       class="btn-mock btn-repeat"
       on:click={handleTriggerRepeatedReading}
     >
-      🔄 Satz wiederholen
+      🔄 Repeated Reading
     </button>
 
     <button
@@ -132,8 +155,12 @@
   }
 
   .controls-header {
-    margin-bottom: 0.75rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
   }
 
   .controls-badge {
@@ -144,21 +171,52 @@
     letter-spacing: 0.05em;
   }
 
-  .buttons-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
+  .status-pills {
+    display: flex;
+    gap: 0.4rem;
   }
 
-  @media (max-width: 600px) {
+  .pill {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+  }
+
+  .pill-mic-active {
+    background: #FED7D7;
+    color: #9B2C2C;
+    border: 1px solid #FEB2B2;
+    animation: blinkGlow 1.2s infinite ease-in-out;
+  }
+
+  .pill-tts-active {
+    background: #EBF8FF;
+    color: #2B6CB0;
+    border: 1px solid #90CDF4;
+  }
+
+  .pill-idle {
+    background: #EDF2F7;
+    color: #4A5568;
+    border: 1px solid #CBD5E0;
+  }
+
+  .buttons-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 700px) {
     .buttons-row {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   .btn-mock {
-    padding: 0.75rem 0.5rem;
-    font-size: 0.95rem;
+    padding: 0.65rem 0.4rem;
+    font-size: 0.85rem;
     font-weight: 800;
     border-radius: var(--radius-sm, 0.5rem);
     cursor: pointer;
@@ -186,6 +244,17 @@
 
   .btn-word:hover {
     background: #FAF089;
+    transform: translateY(-2px);
+  }
+
+  .btn-advance {
+    background: #EDF2F7;
+    color: #2D3748;
+    border-color: #CBD5E0;
+  }
+
+  .btn-advance:hover {
+    background: #E2E8F0;
     transform: translateY(-2px);
   }
 
@@ -230,5 +299,15 @@
   .btn-story:hover {
     background: var(--color-primary-hover, #23568B);
     transform: translateY(-2px);
+  }
+
+  @keyframes blinkGlow {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+      box-shadow: 0 0 8px rgba(229, 62, 62, 0.4);
+    }
   }
 </style>

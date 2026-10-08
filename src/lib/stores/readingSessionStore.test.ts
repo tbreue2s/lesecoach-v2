@@ -1,14 +1,20 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { readingSessionStore } from './readingSessionStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 import * as speechService from '../services/speechService';
+import * as speechRecognitionService from '../services/speechRecognitionService';
 import type { ReadingSessionState } from '../types/reading';
 
-describe('Reading Session Store & Tandem Engine (WP05 Evidence)', () => {
+describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
   beforeEach(() => {
+    vi.useFakeTimers();
     vi.restoreAllMocks();
     readingSessionStore.resetSession();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   it('loads story and initializes turnState to IDLE', () => {
@@ -23,7 +29,9 @@ describe('Reading Session Store & Tandem Engine (WP05 Evidence)', () => {
     expect(state.isSpeaking).toBe(false);
   });
 
-  it('stops TTS before child word and transitions to CHILD_TURN', () => {
+  it('stops TTS before child word and transitions to CHILD_TURN with microphone active', () => {
+    const startListeningSpy = vi.spyOn(speechRecognitionService, 'startListening').mockReturnValue(true);
+
     readingSessionStore.loadStory(SAMPLE_STORIES[0], 1, 'Bello');
 
     let capturedOptions: speechService.SpeakOptions | null = null;
@@ -42,10 +50,45 @@ describe('Reading Session Store & Tandem Engine (WP05 Evidence)', () => {
     expect((capturedOptions as speechService.SpeakOptions | null)?.text).toBeTruthy();
     expect(state.turnState).toBe('CHILD_TURN');
     expect(state.activeWordTokenId).toBeTruthy();
+    expect(state.isListening).toBe(true);
 
+    // Microphone started for CHILD_TURN with German locale
+    expect(startListeningSpy).toHaveBeenCalled();
     const activeToken = state.sentences[0].words.find((w) => w.id === state.activeWordTokenId);
     expect(activeToken?.role).toBe('child');
     expect(activeToken?.status).toBe('active');
+  });
+
+  it('handles simulated spoken word recognition with fuzzy tolerance and mutes microphone immediately', () => {
+    const stopListeningSpy = vi.spyOn(speechRecognitionService, 'stopListening');
+    vi.spyOn(speechRecognitionService, 'startListening').mockReturnValue(true);
+
+    readingSessionStore.loadStory(SAMPLE_STORIES[0], 1, 'Bello');
+
+    vi.spyOn(speechService, 'speakSentence').mockImplementation((options: speechService.SpeakOptions) => {
+      options.onEnd?.({} as SpeechSynthesisEvent);
+      return true;
+    });
+
+    readingSessionStore.startSentenceReading();
+
+    let state = get(readingSessionStore);
+    expect(state.turnState).toBe('CHILD_TURN');
+
+    const activeToken = state.sentences[0].words.find((w) => w.id === state.activeWordTokenId);
+    expect(activeToken).toBeDefined();
+
+    // Simulate child saying phrase containing the target word (e.g. "ein Wiese" or "die Wiese")
+    readingSessionStore.simulateSpokenWord(`ich sehe die ${activeToken?.cleanWord}`);
+
+    // Muted microphone immediately (microphone hygiene)
+    expect(stopListeningSpy).toHaveBeenCalled();
+
+    // Fast-forward flash delay
+    vi.advanceTimersByTime(300);
+
+    state = get(readingSessionStore);
+    expect(state.starsEarned).toBeGreaterThan(0);
   });
 
   it('resumes TTS after child finishes word and triggers Repeated Reading for Level 4', () => {
@@ -63,6 +106,7 @@ describe('Reading Session Store & Tandem Engine (WP05 Evidence)', () => {
     let state: ReadingSessionState = get(readingSessionStore);
     if (state.turnState === 'CHILD_TURN') {
       readingSessionStore.advanceWordSuccess();
+      vi.advanceTimersByTime(300);
       state = get(readingSessionStore);
     }
 
