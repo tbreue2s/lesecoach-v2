@@ -60,4 +60,4 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP03** | State-Management & Lese-Stufen | `merged` | Didaktische 9-Stufen-Matrix, Story-Tokenisierung, Progress-Store |
 | **WP04** | Themen- und Charakter-Auswahl | `spec` | 10 Themen-Kacheln, Payload-Bündelung, lokaler Mock-Generator |
 | **WP05** | Audio-Sync & Karaoke-Highlighting | `spec` | Web Speech TTS, Boundary Events, 60fps DOM Word Highlighting |
-| **WP06** | Lückentext & Echtzeit-Spracherkennung | `spec` | Web Speech STT, Audio-Pause, Aussprache-Validierung, Feedback |
+| **WP06** | Lückentext & Echtzeit-Spracherkennung | `accepted` | Web Speech STT, Audio-Pause, Aussprache-Validierung, Feedback |

@@ -1,7 +1,7 @@
 # Work Package 06: Lückentext & Echtzeit-Spracherkennung
 
 **ID:** `WP06`  
-**Status:** `in_review`  
+**Status:** `accepted`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 
 ---

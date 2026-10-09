@@ -12,6 +12,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@tsconfig/svelte": "^5.0.4",
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
     "jsdom": "^25.0.0",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
