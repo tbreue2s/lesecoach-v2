@@ -121,6 +121,104 @@ export function isGenitiveForm(cleanWord: string): boolean {
 }
 
 /**
+ * German base nouns (lowercased) that commonly form compound nouns in elementary stories.
+ */
+export const GERMAN_BASE_NOUNS = new Set([
+  'sand', 'burg', 'haus', 'baum', 'wald', 'sonne', 'licht', 'stern', 'sterne',
+  'himmel', 'nacht', 'tag', 'kiste', 'holz', 'gold', 'schatz', 'karte', 'stein',
+  'steine', 'schiff', 'boot', 'insel', 'palme', 'palmen', 'rad', 'steuer', 'bogen',
+  'regen', 'mann', 'schnee', 'vogel', 'ball', 'fuß', 'fuss', 'tür', 'topf',
+  'blume', 'blumen', 'tasche', 'schule', 'zimmer', 'klasse', 'zahn', 'bürste',
+  'platz', 'spiel', 'sport', 'weg', 'wasser', 'fall', 'tier', 'tiere', 'park',
+  'zeit', 'horn', 'katze', 'kater', 'muschel', 'fisch', 'fische', 'delfin',
+  'meer', 'strand', 'see', 'berg', 'höhle', 'fels', 'felsen', 'deckel', 'fund',
+  'wind', 'wiese', 'gras', 'buch', 'auto', 'zug', 'eis', 'schaf', 'kuh', 'pferd',
+  'pferde', 'hund', 'hunde', 'kind', 'kinder', 'freund', 'freunde', 'könig',
+  'schloss', 'zauber', 'stab', 'kraft', 'umhang', 'held', 'helden', 'puppe',
+  'bär', 'wolf', 'fuchs', 'hase', 'igel', 'maus', 'ente', 'gans', 'drache',
+  'dino', 'riese', 'zwerg', 'mond', 'feuer', 'erde', 'luft', 'uhr', 'hand',
+  'kopf', 'auge', 'augen', 'arm', 'bein', 'beine', 'hut', 'schuh', 'schuhe',
+  'socke', 'socken', 'hose', 'hemd', 'kleid', 'rock', 'bett', 'tisch', 'stuhl',
+  'schrank', 'fenster', 'dach', 'garten', 'tor', 'zaun', 'pfad', 'busch',
+  'bach', 'fluss', 'teich', 'wolke', 'wolken', 'blitz', 'donner', 'sturm',
+  'brot', 'milch', 'apfel', 'birne', 'kuchen', 'suppe', 'salat', 'fleisch',
+  'käse', 'ei', 'nuss', 'beere', 'beeren', 'kirsche', 'pflanze', 'pflanzen',
+  'blatt', 'blätter', 'ast', 'zweig', 'stamm', 'wurzel', 'rabe', 'eule',
+  'spatz', 'meise', 'taube', 'frosch', 'kröte', 'schnecke', 'wurm', 'spinne',
+  'biene', 'wespe', 'fliege', 'mücke', 'käfer', 'hirsch', 'reh', 'löwe',
+  'tiger', 'elefant', 'affe', 'kamel', 'krokodil', 'zebra', 'giraffe',
+  'pinguin', 'wal', 'hai', 'haifisch', 'krabbe', 'krebs', 'robbe', 'seehund',
+  'dachs', 'biber', 'otter', 'marder', 'wiesel', 'herz', 'planet', 'rakete',
+  'ritter', 'turm', 'mauer', 'graben', 'schwert', 'schild', 'rüstung',
+  'pfeil', 'lanze', 'prinz', 'prinzessin', 'königin', 'krone', 'thron',
+  'pirat', 'kapitän', 'anker', 'segel', 'flagge', 'kompass', 'kanone',
+  'ozean', 'welle', 'wellen', 'hafen', 'stadt', 'dorf', 'land', 'straße',
+  'brücke', 'gasse', 'kirche', 'halle', 'küche', 'keller', 'stube',
+  'kammer', 'saal', 'flur', 'gang', 'treppe', 'wand', 'wände', 'boden', 'decke'
+]);
+
+/**
+ * Checks if a word is a compound noun (Kompositum) formed from two nouns.
+ * Strict didactic rule for Phase A (Levels 1-3).
+ */
+export function isCompoundNoun(cleanWord: string): boolean {
+  if (!cleanWord || cleanWord.length < 5) return false;
+  if (!isNoun(cleanWord)) return false;
+
+  // Words with hyphens joining components, e.g. Helden-Umhang
+  if (cleanWord.includes('-')) {
+    const parts = cleanWord.split('-');
+    if (parts.length >= 2 && parts.every((p) => p.length >= 2)) {
+      return true;
+    }
+  }
+
+  const lower = cleanWord.toLowerCase();
+
+  // Try splitting into two base nouns: part1 + [fugen] + part2
+  // Fugen elements in German compound nouns: '', 's', 'es', 'en', 'n', 'e', 'er'
+  const fugenList = ['', 's', 'es', 'en', 'n', 'e', 'er'];
+
+  for (let i = 3; i <= lower.length - 3; i++) {
+    const part1 = lower.slice(0, i);
+    if (!GERMAN_BASE_NOUNS.has(part1)) continue;
+
+    for (const fugen of fugenList) {
+      if (lower.startsWith(part1 + fugen)) {
+        const part2 = lower.slice(part1.length + fugen.length);
+        if (part2.length >= 3 && GERMAN_BASE_NOUNS.has(part2)) {
+          return true;
+        }
+      }
+    }
+  }
+
+  return false;
+}
+
+/**
+ * Checks whether a word is the configured child name or companion name (including genitive 's').
+ */
+export function isProtectedName(
+  word: string,
+  companionName?: string,
+  childName?: string
+): boolean {
+  const clean = cleanPunctuation(word).toLowerCase();
+  if (!clean) return false;
+
+  const namesToCheck = [companionName, childName].filter(Boolean) as string[];
+  for (const name of namesToCheck) {
+    const n = cleanPunctuation(name).toLowerCase();
+    if (!n) continue;
+    if (clean === n || clean === n + 's') {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
  * Strict phonetic and orthographic validation filter for didactic reading levels (WP03).
  *
  * 1. Level 1 – Harte Blacklist (role: 'child'):
@@ -128,13 +226,17 @@ export function isGenitiveForm(cleanWord: string): boolean {
  *    - Enthält Sonderzeichen oder seltene Buchstaben: [ß, ä, ö, ü, c, v, w, x, y, q] (groß/klein)
  *    - Enthält Diphthonge / Zwielaute: (ei|au|eu|äu|ie)
  *    - Enthält Konsonanten-Verbindungen: (sch|ch|ck|tz|sp|st|pf|str|qu)
+ *    - Enthält Lautgruppen "nk" oder "ng" (z. B. "Trank", "funkeln")
  *    - Enthält Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
  *    - Dehnungs-h: (z. B. Mähne, Reh, Zahn, Ohr)
+ *    - Silben-Struktur: Nur offene oder einfache geschlossene Silben. Keine Konsonantenhäufungen am Silbenende (wie "-nd", "-rg", "-nk").
+ *    - Komposita-Verbot (Phase A): Keine aus zwei Nomen zusammengesetzten Wörter (z. B. "Sandburg").
  *    - Silben-Constraint: Maximal 2 Silben
  *    - Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen")
  *
  * 2. Level 2 – Filter (role: 'child'):
  *    - 'ß' und Doppelkonsonanten ((\w)\1) sowie 'ck'/'tz' bleiben strikt VERBOTEN.
+ *    - Komposita-Verbot (Phase A): Keine aus zwei Nomen zusammengesetzten Wörter.
  *    - Erlaubt: 'ei', 'au', 'ie', einfache Umlaute und 'sch'/'ch'. Max 2 Silben pro Wort.
  */
 export function isPhoneticallyValidForLevel(
@@ -152,6 +254,11 @@ export function isPhoneticallyValidForLevel(
     return false;
   }
 
+  // Phase A Komposita-Verbot (Levels 1-3): Child target must never be a compound noun
+  if (level <= 3 && isCompoundNoun(clean)) {
+    return false;
+  }
+
   if (level === 1) {
     // 1. Sonderzeichen oder seltene Buchstaben: [ß, ä, ö, ü, c, v, w, x, y, q]
     if (/[ßäöücvwxyq]/i.test(clean)) {
@@ -164,11 +271,17 @@ export function isPhoneticallyValidForLevel(
     }
 
     // 3. Konsonanten-Verbindungen: (sch|ch|ck|tz|sp|st|pf|str|qu)
+    // Prompt mentions Pfad, so pf is strictly forbidden here as well.
     if (/(sch|ch|ck|tz|sp|st|pf|str|qu)/i.test(clean)) {
       return false;
     }
 
-    // 4. Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
+    // 4. Lautgruppen-Ausschluss: Wörter mit "nk" oder "ng" (z. B. "Trank", "funkeln")
+    if (/(nk|ng)/i.test(clean)) {
+      return false;
+    }
+
+    // 5. Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
     if (/([a-zA-ZäöüÄÖÜ])\1/i.test(clean)) {
       return false;
     }
@@ -178,12 +291,21 @@ export function isPhoneticallyValidForLevel(
       return false;
     }
 
-    // 5. Silben-Constraint: Maximal 2 Silben
+    // 6. Silben-Struktur in Level 1: Es sind nur offene oder einfache geschlossene Silben erlaubt.
+    // Keine Konsonantenhäufungen am Silbenende (wie "-nd", "-rg", "-nk").
+    if (/[bcdfghjklmnpqrstvwxyz]{2,}$/i.test(clean)) {
+      return false;
+    }
+    if (syllables.some((syl) => /[bcdfghjklmnpqrstvwxyz]{2,}$/i.test(syl))) {
+      return false;
+    }
+
+    // 7. Silben-Constraint: Maximal 2 Silben
     if (syllables.length > 2) {
       return false;
     }
 
-    // 6. Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen", keine Partikel/Artikel)
+    // 8. Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen", keine Partikel/Artikel)
     if (FORBIDDEN_LEVEL1_PARTICLES.has(lower) || isArticle(lower) || isGenitiveForm(clean)) {
       return false;
     }
@@ -257,17 +379,36 @@ export interface WordMeta {
  * - Level 2: Genau 2 aufeinanderfolgende Wörter (beide validiert für Level 2, sum <= 4 Silben).
  * - Level 3: 3 bis 4 aufeinanderfolgende Wörter mit sum(syllables) <= 7, kein Wort >= 4 Silben.
  */
-export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3): Set<number> {
+export function selectPhaseAChildIndices(
+  rawWords: WordMeta[],
+  level: 1 | 2 | 3,
+  usedChildNames?: Set<string>,
+  companionName?: string,
+  childName?: string
+): Set<number> {
   const n = rawWords.length;
   if (n === 0) return new Set();
 
   const selected = new Set<number>();
 
+  const isNameBlocked = (cleanWord: string): boolean => {
+    if (!usedChildNames) return false;
+    if (isProtectedName(cleanWord, companionName, childName)) {
+      const lower = cleanPunctuation(cleanWord).toLowerCase();
+      return usedChildNames.has(lower);
+    }
+    return false;
+  };
+
   if (level === 1) {
-    // 1. Suche bevorzugt ein Nomen, das isPhoneticallyValidForLevel(clean, 1) erfüllt
+    // 1. Suche bevorzugt ein Nomen, das isPhoneticallyValidForLevel(clean, 1) erfüllt und kein bereits vergebener Name ist
     for (let i = rawWords.length - 1; i >= 0; i--) {
       const w = rawWords[i];
-      if (isPhoneticallyValidForLevel(w.cleanWord, 1) && isNoun(w.cleanWord)) {
+      if (
+        isPhoneticallyValidForLevel(w.cleanWord, 1) &&
+        isNoun(w.cleanWord) &&
+        !isNameBlocked(w.cleanWord)
+      ) {
         selected.add(i);
         return selected;
       }
@@ -276,7 +417,10 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
     // 2. Ansonsten beliebiges anderes phonetisch valides Wort (z. B. finites Verb)
     for (let i = rawWords.length - 1; i >= 0; i--) {
       const w = rawWords[i];
-      if (isPhoneticallyValidForLevel(w.cleanWord, 1)) {
+      if (
+        isPhoneticallyValidForLevel(w.cleanWord, 1) &&
+        !isNameBlocked(w.cleanWord)
+      ) {
         selected.add(i);
         return selected;
       }
@@ -302,6 +446,8 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       if (
         isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
         isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
+        !isNameBlocked(w1.cleanWord) &&
+        !isNameBlocked(w2.cleanWord) &&
         (isArticle(w1.cleanWord) || isAdjective(w1.cleanWord)) &&
         isNoun(w2.cleanWord) &&
         syl1 <= 2 &&
@@ -324,6 +470,8 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       if (
         isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
         isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
+        !isNameBlocked(w1.cleanWord) &&
+        !isNameBlocked(w2.cleanWord) &&
         !FORBIDDEN_LEVEL1_PARTICLES.has(w2.cleanWord.toLowerCase()) &&
         syl1 <= 2 &&
         syl2 <= 2 &&
@@ -345,6 +493,8 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       if (
         isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
         isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
+        !isNameBlocked(w1.cleanWord) &&
+        !isNameBlocked(w2.cleanWord) &&
         syl1 <= 2 &&
         syl2 <= 2
       ) {
@@ -430,12 +580,17 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
 export function tokenizeStory(
   rawText: string,
   level: ReadingLevelNumber,
-  companionName: string = 'Bello'
+  companionName: string = 'Bello',
+  childName?: string
 ): SentenceToken[] {
   const preparedText = injectCompanionName(rawText, companionName);
   const sentenceStrings = splitIntoSentences(preparedText);
 
   const isRepeatedReadingLevel = level === 5 || level === 6;
+
+  // Track protected names that have received role: 'child' in this story
+  // Requirement: Child name and companion name may receive role: 'child' AT MOST ONCE per story!
+  const usedChildNames = new Set<string>();
 
   const sentences: SentenceToken[] = sentenceStrings.map((sentenceStr, sentenceIndex) => {
     const rawWords = sentenceStr.split(/\s+/).filter((w) => w.length > 0);
@@ -464,7 +619,7 @@ export function tokenizeStory(
 
     const phaseAChildIndices =
       sentenceRole === 'mixed' && (level === 1 || level === 2 || level === 3)
-        ? selectPhaseAChildIndices(wordMetas, level)
+        ? selectPhaseAChildIndices(wordMetas, level, usedChildNames, companionName, childName)
         : new Set<number>();
 
     const words: WordToken[] = wordMetas.map((meta, wordIndex) => {
@@ -478,6 +633,19 @@ export function tokenizeStory(
         role = 'app';
       } else {
         role = phaseAChildIndices.has(wordIndex) ? 'child' : 'app';
+      }
+
+      // Eigennamen-Beschränkung:
+      // Der konfigurierte Name des Kindes und der Begleiter-Name dürfen INNERHALB EINER GESCHICHTE
+      // maximal EIN EINZIGES MAL das Attribut role: 'child' erhalten.
+      // Bei allen weiteren Vorkommen im Text erhalten sie zwingend role: 'app'.
+      if (level <= 5 && role === 'child' && isProtectedName(meta.cleanWord, companionName, childName)) {
+        const lower = cleanPunctuation(meta.cleanWord).toLowerCase();
+        if (usedChildNames.has(lower)) {
+          role = 'app';
+        } else {
+          usedChildNames.add(lower);
+        }
       }
 
       return {

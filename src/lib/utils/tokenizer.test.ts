@@ -57,8 +57,8 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
 
     it('LEVEL 1 Selector Fallback: App reads entire sentence if no word passes filter, child gets word in next valid sentence', () => {
       // Sentence 1 has no valid Level 1 words -> app reads it
-      // Sentence 2 has "Hund" (valid Level 1 word) -> child gets "Hund"
-      const story = 'Auf der weißen Koppel grasen Pferde. Hier bellt ein Hund laut.';
+      // Sentence 2 has "Hut" (valid Level 1 word) -> child gets "Hut"
+      const story = 'Auf der weißen Koppel grasen Pferde. Hier liegt ein roter Hut.';
       const sentences = tokenizeStory(story, 1, 'Bello');
 
       expect(sentences.length).toBe(2);
@@ -68,10 +68,10 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
       expect(s1ChildWords.length).toBe(0);
       expect(sentences[0].role).toBe('app');
 
-      // Sentence 2: valid word "Hund" is selected for child
+      // Sentence 2: valid word "Hut" is selected for child
       const s2ChildWords = sentences[1].words.filter((w) => w.role === 'child');
       expect(s2ChildWords.length).toBe(1);
-      expect(s2ChildWords[0].cleanWord).toBe('Hund');
+      expect(s2ChildWords[0].cleanWord).toBe('Hut');
     });
 
     it('LEVEL 2 Filter: forbids "ß", double consonants, and "ck"/"tz"; allows "ei", "au", "ie", Umlaute, "sch"/"ch"', () => {
@@ -159,7 +159,7 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
   describe('Phase A Hard Phonetic Constraints & Syllable Limits', () => {
     it('LEVEL 1: exactly 1 word per valid sentence, never >= 3 syllables, prefers no clusters', () => {
       const storyWithValidWords =
-        'Ein treuer Hund rennt im Park. Eine rote Rose blüht schön. Hier steht ein Tor.';
+        'Ein roter Bus fährt an dem Tor. Eine rote Rose blüht schön. Hier liegt ein Hut.';
       const sentences = tokenizeStory(storyWithValidWords, 1, 'Bello');
 
       for (const sentence of sentences) {

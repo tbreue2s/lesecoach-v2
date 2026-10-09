@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
   import { profileStore } from '../stores/profileStore';
   import { routerStore } from '../stores/routerStore';
   import { validateName } from '../utils/validation';
@@ -11,6 +12,28 @@
   let companionError: string | null = null;
   let isSavedSuccess = false;
 
+  let childDebounceTimer: ReturnType<typeof setTimeout> | null = null;
+  let companionDebounceTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function clearChildDebounce() {
+    if (childDebounceTimer !== null) {
+      clearTimeout(childDebounceTimer);
+      childDebounceTimer = null;
+    }
+  }
+
+  function clearCompanionDebounce() {
+    if (companionDebounceTimer !== null) {
+      clearTimeout(companionDebounceTimer);
+      companionDebounceTimer = null;
+    }
+  }
+
+  onDestroy(() => {
+    clearChildDebounce();
+    clearCompanionDebounce();
+  });
+
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
   ) || $profileStore.companions[0];
@@ -19,14 +42,33 @@
     const target = event.target as HTMLInputElement;
     rawChildName = target.value;
     profileStore.setChildName(rawChildName);
+    isSavedSuccess = false;
 
-    if (rawChildName.length > 0) {
+    clearChildDebounce();
+
+    if (rawChildName.trim().length === 0) {
+      childError = null;
+      return;
+    }
+
+    const validation = validateName(rawChildName);
+    if (validation.isValid) {
+      childError = null;
+    } else {
+      // 1500ms debounce: do not pop up error message immediately while typing
+      childDebounceTimer = setTimeout(() => {
+        const freshValidation = validateName(rawChildName);
+        childError = freshValidation.isValid ? null : freshValidation.errorMessage;
+      }, 1500);
+    }
+  }
+
+  function handleChildNameBlur() {
+    clearChildDebounce();
+    if (rawChildName.trim().length > 0) {
       const validation = validateName(rawChildName);
       childError = validation.isValid ? null : validation.errorMessage;
-    } else {
-      childError = null;
     }
-    isSavedSuccess = false;
   }
 
   function handleSelectCompanion(id: string) {
@@ -43,17 +85,41 @@
     const target = event.target as HTMLInputElement;
     const value = target.value;
     profileStore.updateCompanionName(id, value);
-
-    if (value.length > 0) {
-      const validation = validateName(value);
-      companionError = validation.isValid ? null : validation.errorMessage;
-    } else {
-      companionError = null;
-    }
     isSavedSuccess = false;
+
+    clearCompanionDebounce();
+
+    if (value.trim().length === 0) {
+      companionError = null;
+      return;
+    }
+
+    const validation = validateName(value);
+    if (validation.isValid) {
+      companionError = null;
+    } else {
+      companionDebounceTimer = setTimeout(() => {
+        const comp = $profileStore.companions.find((c) => c.id === id);
+        const curVal = comp ? comp.customName : value;
+        const freshVal = validateName(curVal);
+        companionError = freshVal.isValid ? null : freshVal.errorMessage;
+      }, 1500);
+    }
+  }
+
+  function handleCompanionNameBlur(id: string) {
+    clearCompanionDebounce();
+    const comp = $profileStore.companions.find((c) => c.id === id);
+    if (comp && comp.customName.trim().length > 0) {
+      const validation = validateName(comp.customName);
+      companionError = validation.isValid ? null : validation.errorMessage;
+    }
   }
 
   function handleSaveProfile() {
+    clearChildDebounce();
+    clearCompanionDebounce();
+
     const childVal = validateName(rawChildName);
     if (!childVal.isValid) {
       childError = childVal.errorMessage;
@@ -119,6 +185,7 @@
         placeholder="z. B. Anna oder Jonas"
         value={rawChildName}
         on:input={handleChildNameInput}
+        on:blur={handleChildNameBlur}
         maxlength={16}
         autocomplete="off"
         spellcheck="false"
@@ -166,6 +233,7 @@
           placeholder="Wie soll dein Begleiter heißen?"
           value={activeCompanion.customName}
           on:input={(e) => handleCompanionNameInput(activeCompanion.id, e)}
+          on:blur={() => handleCompanionNameBlur(activeCompanion.id)}
           maxlength={16}
           autocomplete="off"
           spellcheck="false"

@@ -8,10 +8,10 @@ import type { ReadingSessionState, StoryData } from '../types/reading';
 
 const testStoryL1: StoryData = {
   id: 'test-story-l1',
-  title: 'Hund im Park',
-  coverEmoji: '🐕',
+  title: 'Bus am Tor',
+  coverEmoji: '🚌',
   levelSuitability: [1, 2, 3],
-  text: 'Der Hund rennt in den Park. Eine Rose blüht schön.',
+  text: 'Der rote Bus hält an dem Tor. Eine Rose blüht schön.',
 };
 
 describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
@@ -28,7 +28,7 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
   it('exports isPhoneticallyValidForLevel from store module', () => {
     expect(typeof isPhoneticallyValidForLevel).toBe('function');
     expect(isPhoneticallyValidForLevel('weißen', 1)).toBe(false);
-    expect(isPhoneticallyValidForLevel('Hund', 1)).toBe(true);
+    expect(isPhoneticallyValidForLevel('Hut', 1)).toBe(true);
   });
 
   it('loads story and initializes turnState to IDLE', () => {

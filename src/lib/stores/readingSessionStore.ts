@@ -5,8 +5,9 @@ import type {
   StoryData,
   WordToken,
 } from '../types/reading';
-import { tokenizeStory, isPhoneticallyValidForLevel } from '../utils/tokenizer';
-export { isPhoneticallyValidForLevel };
+import { tokenizeStory, isPhoneticallyValidForLevel, isCompoundNoun, isProtectedName } from '../utils/tokenizer';
+export { isPhoneticallyValidForLevel, isCompoundNoun, isProtectedName };
+import { profileStore } from './profileStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 import {
   buildSpokenSpans,
@@ -508,14 +509,16 @@ function createReadingSessionStore() {
     loadStory: (
       story: StoryData = SAMPLE_STORIES[0],
       level: ReadingLevelNumber = 1,
-      companionName: string = 'Bello'
+      companionName: string = 'Bello',
+      childName?: string
     ) => {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
       stopSpeech();
       stopListening();
-      const sentences = tokenizeStory(story.text, level, companionName);
+      const effectiveChildName = childName ?? get(profileStore)?.childName;
+      const sentences = tokenizeStory(story.text, level, companionName, effectiveChildName);
 
       set({
         storyId: story.id,
@@ -539,7 +542,8 @@ function createReadingSessionStore() {
 
     loadNextStory: (
       level: ReadingLevelNumber = 1,
-      companionName: string = 'Bello'
+      companionName: string = 'Bello',
+      childName?: string
     ) => {
       clearSyncTimer();
       clearAutoAdvance();
@@ -550,7 +554,8 @@ function createReadingSessionStore() {
         const currentIndex = SAMPLE_STORIES.findIndex((s) => s.id === state.storyId);
         const nextIndex = (currentIndex + 1) % SAMPLE_STORIES.length;
         const nextStory = SAMPLE_STORIES[nextIndex >= 0 ? nextIndex : 0];
-        const sentences = tokenizeStory(nextStory.text, level, companionName);
+        const effectiveChildName = childName ?? get(profileStore)?.childName;
+        const sentences = tokenizeStory(nextStory.text, level, companionName, effectiveChildName);
 
         return {
           storyId: nextStory.id,

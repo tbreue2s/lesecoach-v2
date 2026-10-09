@@ -31,7 +31,7 @@ describe('Level Validator Engine (WP03)', () => {
 
   describe('isPhoneticallyValidForLevel & validateWordForLevel', () => {
     it('Level 1: accepts 1- or 2-syllable phonetically regular words without clusters, diphthongs, or rare letters', () => {
-      expect(validateWordForLevel('Hund', ['Hund'], 1).isValid).toBe(true);
+      expect(validateWordForLevel('Hut', ['Hut'], 1).isValid).toBe(true);
       expect(validateWordForLevel('Rose', ['Ro', 'se'], 1).isValid).toBe(true);
       expect(validateWordForLevel('Tor', ['Tor'], 1).isValid).toBe(true);
     });
@@ -73,12 +73,12 @@ describe('Level Validator Engine (WP03)', () => {
       const sentence1Child: SentenceToken = {
         id: 's1',
         sentenceIndex: 0,
-        rawText: 'Hier ist ein Hund.',
+        rawText: 'Hier ist ein Hut.',
         words: [
           { id: 'w1', word: 'Hier', cleanWord: 'Hier', syllables: ['Hier'], role: 'app', status: 'pending', sentenceIndex: 0, wordIndexInSentence: 0 },
           { id: 'w2', word: 'ist', cleanWord: 'ist', syllables: ['ist'], role: 'app', status: 'pending', sentenceIndex: 0, wordIndexInSentence: 1 },
           { id: 'w3', word: 'ein', cleanWord: 'ein', syllables: ['ein'], role: 'app', status: 'pending', sentenceIndex: 0, wordIndexInSentence: 2 },
-          { id: 'w4', word: 'Hund.', cleanWord: 'Hund', syllables: ['Hund'], role: 'child', status: 'pending', sentenceIndex: 0, wordIndexInSentence: 3 },
+          { id: 'w4', word: 'Hut.', cleanWord: 'Hut', syllables: ['Hut'], role: 'child', status: 'pending', sentenceIndex: 0, wordIndexInSentence: 3 },
         ],
         role: 'mixed',
         requiresRepeatedReading: false,
