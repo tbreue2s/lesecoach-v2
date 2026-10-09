@@ -5,7 +5,8 @@ import type {
   StoryData,
   WordToken,
 } from '../types/reading';
-import { tokenizeStory } from '../utils/tokenizer';
+import { tokenizeStory, isPhoneticallyValidForLevel } from '../utils/tokenizer';
+export { isPhoneticallyValidForLevel };
 import { SAMPLE_STORIES } from '../data/sampleStories';
 import {
   buildSpokenSpans,

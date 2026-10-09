@@ -120,6 +120,129 @@ export function isGenitiveForm(cleanWord: string): boolean {
   return false;
 }
 
+/**
+ * Strict phonetic and orthographic validation filter for didactic reading levels (WP03).
+ *
+ * 1. Level 1 – Harte Blacklist (role: 'child'):
+ *    Verworfen wenn:
+ *    - Enthält Sonderzeichen oder seltene Buchstaben: [ß, ä, ö, ü, c, v, w, x, y, q] (groß/klein)
+ *    - Enthält Diphthonge / Zwielaute: (ei|au|eu|äu|ie)
+ *    - Enthält Konsonanten-Verbindungen: (sch|ch|ck|tz|sp|st|pf|str|qu)
+ *    - Enthält Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
+ *    - Dehnungs-h: (z. B. Mähne, Reh, Zahn, Ohr)
+ *    - Silben-Constraint: Maximal 2 Silben
+ *    - Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen")
+ *
+ * 2. Level 2 – Filter (role: 'child'):
+ *    - 'ß' und Doppelkonsonanten ((\w)\1) sowie 'ck'/'tz' bleiben strikt VERBOTEN.
+ *    - Erlaubt: 'ei', 'au', 'ie', einfache Umlaute und 'sch'/'ch'. Max 2 Silben pro Wort.
+ */
+export function isPhoneticallyValidForLevel(
+  word: string,
+  level: ReadingLevelNumber
+): boolean {
+  const clean = cleanPunctuation(word);
+  if (!clean || clean.length === 0) return false;
+
+  const lower = clean.toLowerCase();
+  const syllables = splitSyllables(clean);
+
+  // Phase A strict rule: Child words must NEVER have >= 4 syllables
+  if (level <= 3 && syllables.length >= 4) {
+    return false;
+  }
+
+  if (level === 1) {
+    // 1. Sonderzeichen oder seltene Buchstaben: [ß, ä, ö, ü, c, v, w, x, y, q]
+    if (/[ßäöücvwxyq]/i.test(clean)) {
+      return false;
+    }
+
+    // 2. Diphthonge / Zwielaute: (ei|au|eu|äu|ie)
+    if (/(ei|au|eu|äu|ie)/i.test(clean)) {
+      return false;
+    }
+
+    // 3. Konsonanten-Verbindungen: (sch|ch|ck|tz|sp|st|pf|str|qu)
+    if (/(sch|ch|ck|tz|sp|st|pf|str|qu)/i.test(clean)) {
+      return false;
+    }
+
+    // 4. Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
+    if (/([a-zA-ZäöüÄÖÜ])\1/i.test(clean)) {
+      return false;
+    }
+
+    // Dehnungs-h (z. B. Mähne, Reh, Zahn, Ohr)
+    if (hasDehnungsH(clean)) {
+      return false;
+    }
+
+    // 5. Silben-Constraint: Maximal 2 Silben
+    if (syllables.length > 2) {
+      return false;
+    }
+
+    // 6. Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen", keine Partikel/Artikel)
+    if (FORBIDDEN_LEVEL1_PARTICLES.has(lower) || isArticle(lower) || isGenitiveForm(clean)) {
+      return false;
+    }
+
+    const isNounWord = isNoun(clean);
+    if (!isNounWord) {
+      if (isAdjective(clean)) {
+        return false;
+      }
+      if (['er', 'sie', 'es', 'wir', 'ihr', 'du', 'ich', 'mir', 'dir', 'ihm', 'ihr', 'uns', 'euch', 'ihnen', 'man'].includes(lower)) {
+        return false;
+      }
+      // Adjektiv-Flexionsendungen
+      if (/(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower)) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  if (level === 2) {
+    // 1. 'ß' ist strikt VERBOTEN
+    if (/ß/i.test(clean)) {
+      return false;
+    }
+
+    // 2. Doppelkonsonanten ((\w)\1) sind strikt VERBOTEN (z. B. "pp" in Koppel, "ll", "ss", etc.)
+    if (/([a-zA-ZäöüÄÖÜ])\1/i.test(clean)) {
+      return false;
+    }
+
+    // 3. 'ck' / 'tz' bleiben strikt VERBOTEN
+    if (/(ck|tz)/i.test(clean)) {
+      return false;
+    }
+
+    // 4. Silben-Constraint: Im Level-2-Paar darf kein Einzelwort >= 3 Silben haben
+    if (syllables.length >= 3) {
+      return false;
+    }
+
+    // Non-article particles or genitive forbidden
+    if ((FORBIDDEN_LEVEL1_PARTICLES.has(lower) && !isArticle(lower)) || isGenitiveForm(clean)) {
+      return false;
+    }
+
+    // Erlaubt sind: 'ei', 'au', 'ie', einfache Umlaute und 'sch'/'ch'
+    return true;
+  }
+
+  if (level === 3) {
+    if (syllables.length >= 4) return false;
+    return true;
+  }
+
+  return true;
+}
+
 export interface WordMeta {
   word: string;
   cleanWord: string;
@@ -128,10 +251,11 @@ export interface WordMeta {
 
 /**
  * Intelligent selector for Phase A (Levels 1, 2, 3) enforcing strict phonetic and syntactic constraints:
- * - Level 1: Exactly 1 noun or finite verb (max 2 syllables, no particles, no Genitive, no Dehnungs-h, no initial clusters).
- * - Level 2: Exactly 2 consecutive words forming a valid [Article/Adj + Noun] phrase (sum <= 4 syllables, strictly <= 2 syllables per word).
- * - Level 3: 3 to 4 consecutive words with sum(syllables) <= 7, no word >= 4 syllables.
- * - Strict Phase A Rule: No word with >= 4 syllables is ever selected for the child.
+ * - Level 1: Genau 1 Zielwort pro Satz, gefiltert über isPhoneticallyValidForLevel(clean, 1).
+ *   Fällt ein Satz durch den Filter (kein Wort erfüllt Kriterien), gibt der Selector ein leeres Set zurück
+ *   (die App liest den gesamten Satz vor).
+ * - Level 2: Genau 2 aufeinanderfolgende Wörter (beide validiert für Level 2, sum <= 4 Silben).
+ * - Level 3: 3 bis 4 aufeinanderfolgende Wörter mit sum(syllables) <= 7, kein Wort >= 4 Silben.
  */
 export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3): Set<number> {
   const n = rawWords.length;
@@ -139,180 +263,107 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
 
   const selected = new Set<number>();
 
-  // In Phase A, child words must strictly have < 4 syllables
-  const validIndices = rawWords
-    .map((w, idx) => idx)
-    .filter((idx) => rawWords[idx].syllables.length < 4);
-
-  const availableIndices = validIndices.length > 0 ? validIndices : [0];
-
   if (level === 1) {
-    // 1. Noun or finite verb with <= 2 syllables and no complex clusters, no particles, no genitive, no dehnungs-h
-    for (let i = availableIndices.length - 1; i >= 0; i--) {
-      const idx = availableIndices[i];
-      const w = rawWords[idx];
-      const clean = w.cleanWord;
-      const sylCount = w.syllables.length;
-
-      if (
-        sylCount <= 2 &&
-        !FORBIDDEN_LEVEL1_PARTICLES.has(clean.toLowerCase()) &&
-        !isGenitiveForm(clean) &&
-        !hasDehnungsH(clean) &&
-        !hasInitialComplexCluster(clean) &&
-        !hasComplexClusters(clean) &&
-        (isNoun(clean) || idx > 0)
-      ) {
-        selected.add(idx);
+    // 1. Suche bevorzugt ein Nomen, das isPhoneticallyValidForLevel(clean, 1) erfüllt
+    for (let i = rawWords.length - 1; i >= 0; i--) {
+      const w = rawWords[i];
+      if (isPhoneticallyValidForLevel(w.cleanWord, 1) && isNoun(w.cleanWord)) {
+        selected.add(i);
         return selected;
       }
     }
 
-    // 2. Any word in availableIndices with <= 2 syllables, no particle, no genitive, no dehnungs-h, no initial cluster
-    for (let i = availableIndices.length - 1; i >= 0; i--) {
-      const idx = availableIndices[i];
-      const w = rawWords[idx];
-      const clean = w.cleanWord;
-      const sylCount = w.syllables.length;
-
-      if (
-        sylCount <= 2 &&
-        !FORBIDDEN_LEVEL1_PARTICLES.has(clean.toLowerCase()) &&
-        !isGenitiveForm(clean) &&
-        !hasDehnungsH(clean) &&
-        !hasInitialComplexCluster(clean)
-      ) {
-        selected.add(idx);
+    // 2. Ansonsten beliebiges anderes phonetisch valides Wort (z. B. finites Verb)
+    for (let i = rawWords.length - 1; i >= 0; i--) {
+      const w = rawWords[i];
+      if (isPhoneticallyValidForLevel(w.cleanWord, 1)) {
+        selected.add(i);
         return selected;
       }
     }
 
-    // 3. Any word in availableIndices with <= 2 syllables, not a particle, not genitive
-    for (let i = availableIndices.length - 1; i >= 0; i--) {
-      const idx = availableIndices[i];
-      const w = rawWords[idx];
-      const clean = w.cleanWord;
-      const sylCount = w.syllables.length;
-
-      if (
-        sylCount <= 2 &&
-        !FORBIDDEN_LEVEL1_PARTICLES.has(clean.toLowerCase()) &&
-        !isGenitiveForm(clean)
-      ) {
-        selected.add(idx);
-        return selected;
-      }
-    }
-
-    // 4. Any non-particle word in availableIndices
-    for (let i = availableIndices.length - 1; i >= 0; i--) {
-      const idx = availableIndices[i];
-      const w = rawWords[idx];
-      if (!FORBIDDEN_LEVEL1_PARTICLES.has(w.cleanWord.toLowerCase())) {
-        selected.add(idx);
-        return selected;
-      }
-    }
-
-    // Absolute fallback in availableIndices
-    selected.add(availableIndices[availableIndices.length - 1]);
+    // 3. Selector-Fallback: Fällt ein Satz durch den Filter (kein Wort erfüllt Kriterien),
+    // liest die App den gesamten Satz vor -> leeres Set zurückgeben!
     return selected;
   }
 
   if (level === 2) {
     if (n < 2) {
-      selected.add(availableIndices[0]);
       return selected;
     }
 
-    // Tier 1: Perfect [Article/Adj + Noun] where both words are in validIndices, syl1 <= 2, syl2 <= 2, sum <= 4
+    // Tier 1: [Article/Adj + Noun], beide Wörter erfüllen Level 2 Kriterien, syl1 <= 2, syl2 <= 2, sum <= 4
     for (let i = n - 2; i >= 0; i--) {
-      if (validIndices.includes(i) && validIndices.includes(i + 1)) {
-        const w1 = rawWords[i];
-        const w2 = rawWords[i + 1];
-        const syl1 = w1.syllables.length;
-        const syl2 = w2.syllables.length;
+      const w1 = rawWords[i];
+      const w2 = rawWords[i + 1];
+      const syl1 = w1.syllables.length;
+      const syl2 = w2.syllables.length;
 
-        const isFirstArticleOrAdj = isArticle(w1.cleanWord) || isAdjective(w1.cleanWord);
-        const isSecondNoun = isNoun(w2.cleanWord);
-
-        if (isFirstArticleOrAdj && isSecondNoun && syl1 <= 2 && syl2 <= 2 && syl1 + syl2 <= 4) {
-          selected.add(i);
-          selected.add(i + 1);
-          return selected;
-        }
+      if (
+        isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
+        isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
+        (isArticle(w1.cleanWord) || isAdjective(w1.cleanWord)) &&
+        isNoun(w2.cleanWord) &&
+        syl1 <= 2 &&
+        syl2 <= 2 &&
+        syl1 + syl2 <= 4
+      ) {
+        selected.add(i);
+        selected.add(i + 1);
+        return selected;
       }
     }
 
-    // Tier 2: Any consecutive pair in validIndices with syl1 <= 2, syl2 <= 2, sum <= 4, no particle at end
+    // Tier 2: Beliebiges konsekutives Paar, beide Wörter erfüllen Level 2 Kriterien, sum <= 4, kein Partikel am Ende
     for (let i = n - 2; i >= 0; i--) {
-      if (validIndices.includes(i) && validIndices.includes(i + 1)) {
-        const w1 = rawWords[i];
-        const w2 = rawWords[i + 1];
-        const syl1 = w1.syllables.length;
-        const syl2 = w2.syllables.length;
+      const w1 = rawWords[i];
+      const w2 = rawWords[i + 1];
+      const syl1 = w1.syllables.length;
+      const syl2 = w2.syllables.length;
 
-        if (
-          !FORBIDDEN_LEVEL1_PARTICLES.has(w2.cleanWord.toLowerCase()) &&
-          syl1 <= 2 &&
-          syl2 <= 2 &&
-          syl1 + syl2 <= 4
-        ) {
-          selected.add(i);
-          selected.add(i + 1);
-          return selected;
-        }
+      if (
+        isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
+        isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
+        !FORBIDDEN_LEVEL1_PARTICLES.has(w2.cleanWord.toLowerCase()) &&
+        syl1 <= 2 &&
+        syl2 <= 2 &&
+        syl1 + syl2 <= 4
+      ) {
+        selected.add(i);
+        selected.add(i + 1);
+        return selected;
       }
     }
 
-    // Tier 3: Any consecutive pair in validIndices with syl1 <= 2, syl2 <= 2
+    // Tier 3: Beliebiges konsekutives Paar, beide Wörter erfüllen Level 2 Kriterien, syl1 <= 2, syl2 <= 2
     for (let i = n - 2; i >= 0; i--) {
-      if (validIndices.includes(i) && validIndices.includes(i + 1)) {
-        const syl1 = rawWords[i].syllables.length;
-        const syl2 = rawWords[i + 1].syllables.length;
+      const w1 = rawWords[i];
+      const w2 = rawWords[i + 1];
+      const syl1 = w1.syllables.length;
+      const syl2 = w2.syllables.length;
 
-        if (syl1 <= 2 && syl2 <= 2) {
-          selected.add(i);
-          selected.add(i + 1);
-          return selected;
-        }
+      if (
+        isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
+        isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
+        syl1 <= 2 &&
+        syl2 <= 2
+      ) {
+        selected.add(i);
+        selected.add(i + 1);
+        return selected;
       }
     }
 
-    // Fallback 1: Best consecutive pair in validIndices
-    let bestPair: [number, number] | null = null;
-    let minSum = 999;
-
-    for (let i = n - 2; i >= 0; i--) {
-      if (validIndices.includes(i) && validIndices.includes(i + 1)) {
-        const syl1 = rawWords[i].syllables.length;
-        const syl2 = rawWords[i + 1].syllables.length;
-        const penalty = (syl1 >= 3 ? 50 : 0) + (syl2 >= 3 ? 50 : 0) + (FORBIDDEN_LEVEL1_PARTICLES.has(rawWords[i + 1].cleanWord.toLowerCase()) ? 20 : 0);
-        const sum = syl1 + syl2 + penalty;
-
-        if (sum < minSum) {
-          minSum = sum;
-          bestPair = [i, i + 1];
-        }
-      }
-    }
-
-    if (bestPair) {
-      selected.add(bestPair[0]);
-      selected.add(bestPair[1]);
-      return selected;
-    }
-
-    // Fallback 2: Any 2 indices from availableIndices
-    const idx2 = availableIndices[availableIndices.length - 1];
-    const idx1 = availableIndices.length > 1 ? availableIndices[availableIndices.length - 2] : idx2;
-    selected.add(idx1);
-    selected.add(idx2);
+    // Kein valides Paar gefunden -> App liest vor (leeres Set)
     return selected;
   }
 
   if (level === 3) {
-    // 1. Try 4-word consecutive window where all words are in validIndices and sum <= 7
+    const validIndices = rawWords
+      .map((w, idx) => idx)
+      .filter((idx) => rawWords[idx].syllables.length < 4);
+
+    // 1. 4-Wort-Fenster mit sum <= 7
     for (let i = n - 4; i >= 0; i--) {
       const window = [i, i + 1, i + 2, i + 3];
       if (window.every((idx) => validIndices.includes(idx))) {
@@ -324,7 +375,7 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       }
     }
 
-    // 2. Try 3-word consecutive window where all words are in validIndices and sum <= 7
+    // 2. 3-Wort-Fenster mit sum <= 7
     for (let i = n - 3; i >= 0; i--) {
       const window = [i, i + 1, i + 2];
       if (window.every((idx) => validIndices.includes(idx))) {
@@ -336,7 +387,7 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       }
     }
 
-    // 3. Fallback: 3 consecutive words in validIndices with lowest sum
+    // 3. Fallback: 3 Wörter mit kleinster Summe
     let best3Window: number[] | null = null;
     let min3Sum = 999;
 
@@ -356,7 +407,7 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       return selected;
     }
 
-    // 4. Fallback: 2 consecutive words in validIndices
+    // 4. Fallback: 2 Wörter
     for (let i = n - 2; i >= 0; i--) {
       const window = [i, i + 1];
       if (window.every((idx) => validIndices.includes(idx))) {
@@ -365,6 +416,7 @@ export function selectPhaseAChildIndices(rawWords: WordMeta[], level: 1 | 2 | 3)
       }
     }
 
+    const availableIndices = validIndices.length > 0 ? validIndices : [0];
     availableIndices.slice(-3).forEach((idx) => selected.add(idx));
     return selected;
   }
@@ -410,8 +462,6 @@ export function tokenizeStory(
       sentenceRole = 'mixed';
     }
 
-    const requiresRepeatedReading = isRepeatedReadingLevel && sentenceRole === 'child';
-
     const phaseAChildIndices =
       sentenceRole === 'mixed' && (level === 1 || level === 2 || level === 3)
         ? selectPhaseAChildIndices(wordMetas, level)
@@ -443,12 +493,18 @@ export function tokenizeStory(
       };
     });
 
+    const hasAnyChildWord = words.some((w) => w.role === 'child');
+    const actualSentenceRole =
+      sentenceRole === 'mixed' && !hasAnyChildWord ? 'app' : sentenceRole;
+
+    const requiresRepeatedReading = isRepeatedReadingLevel && actualSentenceRole === 'child';
+
     return {
       id: `sentence_${sentenceIndex}`,
       sentenceIndex,
       rawText: sentenceStr,
       words,
-      role: sentenceRole,
+      role: actualSentenceRole,
       requiresRepeatedReading,
       isCompleted: false,
     };

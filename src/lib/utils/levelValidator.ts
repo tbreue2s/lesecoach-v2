@@ -11,11 +11,12 @@ import {
   hasDehnungsH,
   hasInitialComplexCluster,
   isGenitiveForm,
+  isPhoneticallyValidForLevel,
   FORBIDDEN_LEVEL1_PARTICLES,
 } from './tokenizer';
 import { splitSyllables } from './syllableSplitter';
 
-export { hasComplexClusters };
+export { hasComplexClusters, isPhoneticallyValidForLevel };
 
 export interface ValidationResult {
   isValid: boolean;
@@ -45,46 +46,14 @@ export function validateWordForLevel(
     };
   }
 
-  // Level 1 strict phonetic constraints:
-  if (level === 1) {
-    if (syllables.length > 2) {
+  // Level 1 & Level 2: Strict phonetic/orthographic filter
+  if (level === 1 || level === 2) {
+    if (!isPhoneticallyValidForLevel(clean, level)) {
       return {
         isValid: false,
-        reason: `Wort "${word}" hat ${syllables.length} Silben (maximal 2 erlaubt für Level 1).`,
+        reason: `Wort "${word}" erfüllt die phonetisch-orthografischen Kriterien für Level ${level} nicht.`,
       };
     }
-    if (FORBIDDEN_LEVEL1_PARTICLES.has(clean.toLowerCase())) {
-      return {
-        isValid: false,
-        reason: `Isolierte Verbpartikel/Präposition "${word}" ist als Level-1-Zielwort unzulässig.`,
-      };
-    }
-    if (isGenitiveForm(clean)) {
-      return {
-        isValid: false,
-        reason: `Genitiv-Form "${word}" ist für Level 1 unzulässig.`,
-      };
-    }
-    if (hasDehnungsH(clean)) {
-      return {
-        isValid: false,
-        reason: `Wort "${word}" enthält Dehnungs-h und ist für Level 1 ungeeignet.`,
-      };
-    }
-    if (hasInitialComplexCluster(clean) || hasComplexClusters(clean)) {
-      return {
-        isValid: false,
-        reason: `Wort "${word}" enthält unzulässige Konsonanten-Cluster für Level 1.`,
-      };
-    }
-  }
-
-  // Level 2 strict word-level constraint: No word in a pair may have >= 3 syllables
-  if (level === 2 && syllables.length >= 3) {
-    return {
-      isValid: false,
-      reason: `Wort "${word}" hat ${syllables.length} Silben (Wörter >= 3 Silben sind im Level-2-Wortpaar verboten).`,
-    };
   }
 
   // Check general syllable length against level constraint
@@ -127,38 +96,40 @@ export function validateSentenceForLevel(
   const combinedSyllables = childTokens.reduce((sum, token) => sum + token.syllables.length, 0);
 
   if (level === 1) {
-    if (childWordCount !== 1) {
+    if (childWordCount > 1) {
       return {
         isValid: false,
-        reason: `Level 1 erfordert genau 1 Zielwort pro Satz (gefunden: ${childWordCount}).`,
+        reason: `Level 1 erlaubt maximal 1 Zielwort pro Satz (gefunden: ${childWordCount}).`,
       };
     }
   } else if (level === 2) {
-    if (childWordCount !== 2) {
+    if (childWordCount !== 2 && childWordCount !== 0) {
       return {
         isValid: false,
-        reason: `Level 2 erfordert genau 2 Zielwörter pro Satz (gefunden: ${childWordCount}).`,
+        reason: `Level 2 erfordert genau 2 Zielwörter pro Satz oder 0 wenn die App vorliest (gefunden: ${childWordCount}).`,
       };
     }
-    // Check adjacency (consecutive indices i and i+1)
-    if (childIndices[1] !== childIndices[0] + 1) {
-      return {
-        isValid: false,
-        reason: `Level 2 Wortpaar muss unmittelbar aufeinander folgen (Indizes: ${childIndices.join(', ')}).`,
-      };
-    }
-    if (combinedSyllables > 4) {
-      return {
-        isValid: false,
-        reason: `Level 2 Wortpaar darf zusammen maximal 4 Silben haben (gefunden: ${combinedSyllables} Silben).`,
-      };
-    }
-    for (const token of childTokens) {
-      if (token.syllables.length >= 3) {
+    if (childWordCount === 2) {
+      // Check adjacency (consecutive indices i and i+1)
+      if (childIndices[1] !== childIndices[0] + 1) {
         return {
           isValid: false,
-          reason: `Wort "${token.cleanWord}" hat ${token.syllables.length} Silben (>= 3 Silben im Level 2 Paar verboten).`,
+          reason: `Level 2 Wortpaar muss unmittelbar aufeinander folgen (Indizes: ${childIndices.join(', ')}).`,
         };
+      }
+      if (combinedSyllables > 4) {
+        return {
+          isValid: false,
+          reason: `Level 2 Wortpaar darf zusammen maximal 4 Silben haben (gefunden: ${combinedSyllables} Silben).`,
+        };
+      }
+      for (const token of childTokens) {
+        if (token.syllables.length >= 3) {
+          return {
+            isValid: false,
+            reason: `Wort "${token.cleanWord}" hat ${token.syllables.length} Silben (>= 3 Silben im Level 2 Paar verboten).`,
+          };
+        }
       }
     }
   } else if (level === 3) {

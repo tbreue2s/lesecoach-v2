@@ -4,6 +4,7 @@ import {
   validateWordForLevel,
   validateSentenceForLevel,
   validateStoryForLevel,
+  isPhoneticallyValidForLevel,
 } from './levelValidator';
 import type { SentenceToken } from '../types/reading';
 
@@ -28,30 +29,47 @@ describe('Level Validator Engine (WP03)', () => {
     });
   });
 
-  describe('validateWordForLevel', () => {
-    it('Level 1: accepts 1- or 2-syllable phonetically regular words without clusters', () => {
+  describe('isPhoneticallyValidForLevel & validateWordForLevel', () => {
+    it('Level 1: accepts 1- or 2-syllable phonetically regular words without clusters, diphthongs, or rare letters', () => {
       expect(validateWordForLevel('Hund', ['Hund'], 1).isValid).toBe(true);
-      expect(validateWordForLevel('Auto', ['Au', 'to'], 1).isValid).toBe(true);
       expect(validateWordForLevel('Rose', ['Ro', 'se'], 1).isValid).toBe(true);
+      expect(validateWordForLevel('Tor', ['Tor'], 1).isValid).toBe(true);
     });
 
-    it('Level 1: rejects words with complex clusters or >2 syllables', () => {
+    it('Level 1: rejects words with diphthongs, rare letters, or clusters', () => {
+      expect(validateWordForLevel('Auto', ['Au', 'to'], 1).isValid).toBe(false); // au
       expect(validateWordForLevel('Schaf', ['Schaf'], 1).isValid).toBe(false);
       expect(validateWordForLevel('Stein', ['Stein'], 1).isValid).toBe(false);
       expect(validateWordForLevel('Tomate', ['To', 'ma', 'te'], 1).isValid).toBe(false);
     });
 
+    it('Evidence: Level 1 rejects "weißen", "Koppel", "Mähne", "Pfad", and "fröhlich"', () => {
+      expect(isPhoneticallyValidForLevel('weißen', 1)).toBe(false);
+      expect(isPhoneticallyValidForLevel('Koppel', 1)).toBe(false);
+      expect(isPhoneticallyValidForLevel('Mähne', 1)).toBe(false);
+      expect(isPhoneticallyValidForLevel('Pfad', 1)).toBe(false);
+      expect(isPhoneticallyValidForLevel('fröhlich', 1)).toBe(false);
+    });
+
     it('Level 2: allows up to 2 syllables per word in pair and rejects words >= 3 syllables', () => {
+      expect(validateWordForLevel('Auto', ['Au', 'to'], 2).isValid).toBe(true);
       expect(validateWordForLevel('Schaf', ['Schaf'], 2).isValid).toBe(true);
       expect(validateWordForLevel('Wiese', ['Wie', 'se'], 2).isValid).toBe(true);
       expect(validateWordForLevel('Tomate', ['To', 'ma', 'te'], 2).isValid).toBe(false);
       expect(validateWordForLevel('Schmetterling', ['Schmet', 'ter', 'ling'], 2).isValid).toBe(false);
       expect(validateWordForLevel('Lokomotive', ['Lo', 'ko', 'mo', 'ti', 've'], 2).isValid).toBe(false);
     });
+
+    it('Level 2: strictly forbids "ß", double consonants, and "ck"/"tz"', () => {
+      expect(isPhoneticallyValidForLevel('weißen', 2)).toBe(false);
+      expect(isPhoneticallyValidForLevel('Koppel', 2)).toBe(false);
+      expect(isPhoneticallyValidForLevel('Katze', 2)).toBe(false);
+      expect(isPhoneticallyValidForLevel('Sack', 2)).toBe(false);
+    });
   });
 
   describe('validateSentenceForLevel', () => {
-    it('validates Level 1 sentence requires exactly 1 child word', () => {
+    it('validates Level 1 sentence requires at most 1 child word', () => {
       const sentence1Child: SentenceToken = {
         id: 's1',
         sentenceIndex: 0,
