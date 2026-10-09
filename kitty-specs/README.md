@@ -19,7 +19,8 @@ Willkommen in der Spezifikations- und Aufgabensteuerung für das Projekt **Lese-
 | **WP04** | Themen- und Charakter-Auswahl für Geschichten | `merged` | [WP04-themen-charakter-auswahl-geschichten.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP04-themen-charakter-auswahl-geschichten.md) |
 | **WP05** | Audio-Sync & Karaoke-Highlighting im DOM | `merged` | [WP05-audio-sync-karaoke-highlighting.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP05-audio-sync-karaoke-highlighting.md) |
 | **WP06** | Lückentext & Echtzeit-Spracherkennung | `accepted` | [WP06-lueckentext-echtzeit-spracherkennung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP06-lueckentext-echtzeit-spracherkennung.md) |
-
+| **WP07** | Tokenizer Refactoring (Didaktischer Schiedsrichter) | `spec` | [WP07-tokenizer-refactor.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP07-tokenizer-refactor.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP07-tasks.md) |
+| **WP08** | Level-basierte Text-Generierung & Prompt-Templates | `spec` | [WP08-story-gen.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP08-story-gen.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP08-tasks.md) |
 ---
 
 ## 🔄 Lifecycle-Phasen
