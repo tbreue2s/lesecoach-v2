@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { get } from 'svelte/store';
-import { readingSessionStore, isPhoneticallyValidForLevel } from './readingSessionStore';
+import { readingSessionStore, calculateWordComplexity } from './readingSessionStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 import * as speechService from '../services/speechService';
 import * as speechRecognitionService from '../services/speechRecognitionService';
@@ -25,10 +25,10 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
     vi.useRealTimers();
   });
 
-  it('exports isPhoneticallyValidForLevel from store module', () => {
-    expect(typeof isPhoneticallyValidForLevel).toBe('function');
-    expect(isPhoneticallyValidForLevel('weißen', 1)).toBe(false);
-    expect(isPhoneticallyValidForLevel('Hut', 1)).toBe(true);
+  it('exports calculateWordComplexity from store module', () => {
+    expect(typeof calculateWordComplexity).toBe('function');
+    expect(calculateWordComplexity('weißen')).toBeGreaterThanOrEqual(10);
+    expect(calculateWordComplexity('Hut')).toBe(0);
   });
 
   it('loads story and initializes turnState to IDLE', () => {

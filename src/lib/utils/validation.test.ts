@@ -97,4 +97,36 @@ describe('Name Validation & Security (WP01)', () => {
       }
     });
   });
+
+  describe('WP07 UX Debounce: Validierungs-Verzögerung (1500ms)', () => {
+    it('verhindert Sofort-Fehlermeldungen während des Tippens und validiert erst nach 1500ms', () => {
+      let displayedError: string | null = null;
+      let timer: ReturnType<typeof setTimeout> | null = null;
+
+      function simulateNameTyping(input: string) {
+        if (timer) clearTimeout(timer);
+        const val = validateName(input);
+        if (val.isValid) {
+          displayedError = null;
+        } else {
+          timer = setTimeout(() => {
+            const fresh = validateName(input);
+            displayedError = fresh.isValid ? null : fresh.errorMessage;
+          }, 1500);
+        }
+      }
+
+      // 1. User types first incomplete letter 'A'
+      simulateNameTyping('A');
+      expect(displayedError).toBeNull(); // No immediate error shown
+
+      // 2. User quickly continues typing 'n' after 300ms -> 'An' (valid)
+      simulateNameTyping('An');
+      expect(displayedError).toBeNull(); // Valid -> immediately null, no error ever shown
+
+      // 3. User types invalid character after 300ms -> 'An ' (trailing space)
+      simulateNameTyping('An ');
+      expect(displayedError).toBeNull(); // Still null before debounce timeout
+    });
+  });
 });

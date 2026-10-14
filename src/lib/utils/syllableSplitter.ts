@@ -102,6 +102,11 @@ export function splitSyllables(rawWord: string): string[] {
       } else if (consonantsLower === 'tz') {
         // "Kat-ze", "Plätz-chen" -> split after 't'
         splitIndices.push(consonantStart + 1);
+      } else if (
+        consonantCount >= 3 &&
+        /^(nd|ld|rg|rk|rt|st|lt|mp|nk|ng)/i.test(consonantsLower)
+      ) {
+        splitIndices.push(consonantStart + 2);
       } else {
         // Standard rule: single first consonant stays in preceding syllable, remainder goes to next (e.g. "Son-ne", "Schmet-ter", "Kis-te", "bun-ten")
         splitIndices.push(consonantStart + 1);

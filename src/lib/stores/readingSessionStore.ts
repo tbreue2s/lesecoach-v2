@@ -5,8 +5,8 @@ import type {
   StoryData,
   WordToken,
 } from '../types/reading';
-import { tokenizeStory, isPhoneticallyValidForLevel, isCompoundNoun, isProtectedName } from '../utils/tokenizer';
-export { isPhoneticallyValidForLevel, isCompoundNoun, isProtectedName };
+import { tokenizeStory, isProtectedName, calculateWordComplexity } from '../utils/tokenizer';
+export { isProtectedName, calculateWordComplexity };
 import { profileStore } from './profileStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 import {

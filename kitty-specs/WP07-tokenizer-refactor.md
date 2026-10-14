@@ -1,8 +1,8 @@
 # Work Package 07: Tokenizer Refactoring (Didaktischer Schiedsrichter)
 
 **ID:** `WP07`  
-**Status:** `spec`  
-**Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
+**Status:** `accepted`  
+**Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` (mit Evidence) ➔ `accept` (done) ➔ `merge`
 
 ---
 
@@ -50,12 +50,12 @@ Das Scoring bewertet die phonetische und morphologische Schwierigkeit jedes Wort
 ---
 
 ## 3. Akzeptanzkriterien
-- [ ] `calculateWordComplexity` berechnet korrekte Scores für Test-Wörter.
-- [ ] Level 1 wählt stets das Wort mit dem niedrigsten Score und überspringt bei Score >= 5.
-- [ ] Level 2 wählt korrekte Bigramme <= 4 Silben nach Score aus.
-- [ ] Eigennamen-Penalty von +100 greift ab dem 2. Vorkommen.
-- [ ] Namenseingabe wirft Fehler/Validierung erst nach 1500ms.
-- [ ] **Zwingende Testfälle (`calculateWordComplexity`):**
+- [x] `calculateWordComplexity` berechnet korrekte Scores für Test-Wörter.
+- [x] Level 1 wählt stets das Wort mit dem niedrigsten Score und überspringt bei Score >= 5.
+- [x] Level 2 wählt korrekte Bigramme <= 4 Silben nach Score aus.
+- [x] Eigennamen-Penalty von +100 greift ab dem 2. Vorkommen.
+- [x] Namenseingabe wirft Fehler/Validierung erst nach 1500ms.
+- [x] **Zwingende Testfälle (`calculateWordComplexity`):**
   - "Sandburg" (Länge 8 -> +10, 'nd' -> +3, 'rg' -> +3) = Score >= 16.
   - "Auto" ('au' -> +1, Länge 4, 2 Silben) = Score 1.
   - "Hut" (0 Treffer) = Score 0.

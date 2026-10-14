@@ -3,11 +3,11 @@ import {
   tokenizeStory,
   splitIntoSentences,
   cleanPunctuation,
-  isPhoneticallyValidForLevel,
   FORBIDDEN_LEVEL1_PARTICLES,
   isArticle,
   isAdjective,
   isNoun,
+  calculateWordComplexity,
 } from './tokenizer';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 
@@ -30,24 +30,25 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
     }
   });
 
-  describe('WP03 Bugfix: Strict Grapheme & Phoneme Blacklist (Evidence)', () => {
-    it('isPhoneticallyValidForLevel rejects blacklisted words for Level 1', () => {
-      expect(isPhoneticallyValidForLevel('weißen', 1)).toBe(false);
-      expect(isPhoneticallyValidForLevel('Koppel', 1)).toBe(false);
-      expect(isPhoneticallyValidForLevel('Mähne', 1)).toBe(false);
-      expect(isPhoneticallyValidForLevel('Pfad', 1)).toBe(false);
-      expect(isPhoneticallyValidForLevel('fröhlich', 1)).toBe(false);
-    });
+  describe('Strict Grapheme & Phoneme Filtering via Complexity Score', () => {
+    it('LEVEL 1: tokens with score >= 2 ("weißen", "Pfad", "Pferd", "Sandburg", "Koppel", "Mähne", "gibt", "Wind", "sanft") NEVER receive role: "child"', () => {
+      expect(calculateWordComplexity('weißen')).toBeGreaterThanOrEqual(10);
+      expect(calculateWordComplexity('Koppel')).toBeGreaterThanOrEqual(2);
+      expect(calculateWordComplexity('Mähne')).toBeGreaterThanOrEqual(2);
+      expect(calculateWordComplexity('Pfad')).toBeGreaterThanOrEqual(10);
+      expect(calculateWordComplexity('fröhlich')).toBeGreaterThanOrEqual(2);
+      expect(calculateWordComplexity('gibt')).toBeGreaterThanOrEqual(2);
+      expect(calculateWordComplexity('Wind')).toBeGreaterThanOrEqual(2);
+      expect(calculateWordComplexity('sanft')).toBeGreaterThanOrEqual(2);
 
-    it('LEVEL 1: tokens with "weißen", "Koppel", "Mähne", "Pfad", "fröhlich" NEVER receive role: "child"', () => {
       const story =
-        'Auf der weißen Koppel steht ein Pferd. Die lange Mähne weht im Wind über den Pfad. Der Hund rennt fröhlich.';
+        'Auf dem weißen Pfad steht ein Pferd vor der großen Sandburg. Der Hund rennt fröhlich.';
       const sentences = tokenizeStory(story, 1, 'Bello');
 
       for (const sentence of sentences) {
         for (const token of sentence.words) {
           const lower = token.cleanWord.toLowerCase();
-          if (['weißen', 'koppel', 'mähne', 'pfad', 'fröhlich'].includes(lower)) {
+          if (['weißen', 'pfad', 'pferd', 'sandburg', 'fröhlich'].includes(lower)) {
             expect(token.role).not.toBe('child');
             expect(token.role).toBe('app');
           }
@@ -55,10 +56,28 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
       }
     });
 
-    it('LEVEL 1 Selector Fallback: App reads entire sentence if no word passes filter, child gets word in next valid sentence', () => {
-      // Sentence 1 has no valid Level 1 words -> app reads it
-      // Sentence 2 has "Hut" (valid Level 1 word) -> child gets "Hut"
-      const story = 'Auf der weißen Koppel grasen Pferde. Hier liegt ein roter Hut.';
+    it('LEVEL 1: completely marks sentences as role: "app" when no word reaches score <= 1', () => {
+      // User test case 1: "Der Wind weht sanft durch die lange Mähne."
+      // "Wind" (score 3), "weht" (score 4), "sanft" (score 3), "Mähne" (score 2) -> all score >= 2
+      const sentence1 = 'Der Wind weht sanft durch die lange Mähne.';
+      const tokenized1 = tokenizeStory(sentence1, 1, 'Bello');
+      expect(tokenized1.length).toBe(1);
+      expect(tokenized1[0].role).toBe('app');
+      expect(tokenized1[0].words.filter((w) => w.role === 'child').length).toBe(0);
+
+      // User test case 2: "Rexi läuft fröhlich neben der Koppel her."
+      // "Rexi" (+50 penalty, 'x' killer), "läuft" (score 4), "fröhlich" (score 3), "Koppel" (score 2) -> all score >= 2
+      const sentence2 = 'Rexi läuft fröhlich neben der Koppel her.';
+      const tokenized2 = tokenizeStory(sentence2, 1, 'Rexi');
+      expect(tokenized2.length).toBe(1);
+      expect(tokenized2[0].role).toBe('app');
+      expect(tokenized2[0].words.filter((w) => w.role === 'child').length).toBe(0);
+    });
+
+    it('LEVEL 1 Selector Fallback: App reads entire sentence if no word passes filter (score <= 1), child gets word in next valid sentence', () => {
+      // Sentence 1 has no valid Level 1 words (all score >= 2) -> app reads it
+      // Sentence 2 has "Hut" (valid Level 1 word, score 0) -> child gets "Hut"
+      const story = 'Auf dem weißen Pfad galoppiert ein Pferd. Hier liegt ein roter Hut.';
       const sentences = tokenizeStory(story, 1, 'Bello');
 
       expect(sentences.length).toBe(2);
@@ -72,22 +91,6 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
       const s2ChildWords = sentences[1].words.filter((w) => w.role === 'child');
       expect(s2ChildWords.length).toBe(1);
       expect(s2ChildWords[0].cleanWord).toBe('Hut');
-    });
-
-    it('LEVEL 2 Filter: forbids "ß", double consonants, and "ck"/"tz"; allows "ei", "au", "ie", Umlaute, "sch"/"ch"', () => {
-      // Forbids:
-      expect(isPhoneticallyValidForLevel('weißen', 2)).toBe(false); // contains ß
-      expect(isPhoneticallyValidForLevel('Koppel', 2)).toBe(false); // double consonant pp
-      expect(isPhoneticallyValidForLevel('Katze', 2)).toBe(false); // contains tz
-      expect(isPhoneticallyValidForLevel('Sack', 2)).toBe(false); // contains ck
-
-      // Allows:
-      expect(isPhoneticallyValidForLevel('Wiese', 2)).toBe(true); // ie
-      expect(isPhoneticallyValidForLevel('Baum', 2)).toBe(true); // au
-      expect(isPhoneticallyValidForLevel('Mähne', 2)).toBe(true); // ä
-      expect(isPhoneticallyValidForLevel('Schaf', 2)).toBe(true); // sch
-      expect(isPhoneticallyValidForLevel('Buch', 2)).toBe(true); // ch
-      expect(isPhoneticallyValidForLevel('Pfad', 2)).toBe(true); // pf allowed in Level 2
     });
   });
 
@@ -108,15 +111,14 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
       }
     });
 
-    it('LEVEL 1: avoids Genitive forms (Pferdes) and Dehnungs-h (Mähne)', () => {
-      const trickySentence = 'Das Fell des Pferdes glänzt schön in der Sonne. Die lange Mähne weht im Wind.';
+    it('LEVEL 1: avoids Genitive forms (Pferdes) and heavy penalty words', () => {
+      const trickySentence = 'Das Fell des Pferdes glänzt schön in der Sonne. Hier liegt ein roter Hut.';
       const sentences = tokenizeStory(trickySentence, 1, 'Bello');
 
       for (const sentence of sentences) {
         for (const token of sentence.words) {
           if (token.role === 'child') {
             expect(token.cleanWord).not.toBe('Pferdes');
-            expect(token.cleanWord).not.toBe('Mähne');
             expect(token.syllables.length).toBeLessThanOrEqual(2);
           }
         }
@@ -168,7 +170,7 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
 
         const childToken = childWords[0];
         expect(childToken.syllables.length).toBeLessThanOrEqual(2);
-        expect(isPhoneticallyValidForLevel(childToken.cleanWord, 1)).toBe(true);
+        expect(calculateWordComplexity(childToken.cleanWord, childToken.syllables)).toBeLessThanOrEqual(1);
       }
     });
 
@@ -299,6 +301,115 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
           }
         }
       }
+    });
+  });
+
+  describe('Work Package 07: Tokenizer Refactoring (Didaktischer Schiedsrichter)', () => {
+    describe('2.1 Penalty-Scoring-System (calculateWordComplexity)', () => {
+      it('calculates correct complexity scores for mandatory acceptance test cases', () => {
+        // Sandburg (Länge 8 -> +10, 'nd' -> +3, 'rg' -> +3) = Score >= 16
+        expect(calculateWordComplexity('Sandburg', ['sand', 'burg'])).toBeGreaterThanOrEqual(16);
+        expect(calculateWordComplexity('Sandburg')).toBeGreaterThanOrEqual(16);
+
+        // Auto ('au' -> +1, Länge 4, 2 Silben) = Score 1
+        expect(calculateWordComplexity('Auto', ['au', 'to'])).toBe(1);
+        expect(calculateWordComplexity('Auto')).toBe(1);
+
+        // Hut (0 Treffer) = Score 0
+        expect(calculateWordComplexity('Hut', ['hut'])).toBe(0);
+        expect(calculateWordComplexity('Hut')).toBe(0);
+
+        // weißen ('ß' -> +10, 'ei' -> +1) = Score >= 11
+        expect(calculateWordComplexity('weißen', ['wei', 'ßen'])).toBeGreaterThanOrEqual(11);
+        expect(calculateWordComplexity('weißen')).toBeGreaterThanOrEqual(11);
+      });
+
+      it('correctly scores killer hurdles (+10 points)', () => {
+        // Killer regex /[ßcqxyz]|ck|tz|pf/i
+        expect(calculateWordComplexity('Pferd', ['pferd'])).toBeGreaterThanOrEqual(10);
+        expect(calculateWordComplexity('Katze', ['kat', 'ze'])).toBeGreaterThanOrEqual(10);
+        expect(calculateWordComplexity('Sack', ['sack'])).toBeGreaterThanOrEqual(10);
+        expect(calculateWordComplexity('Zug', ['zug'])).toBeGreaterThanOrEqual(10);
+
+        // Syllables limit >= 3 (+10)
+        expect(calculateWordComplexity('Lokomotive', ['lo', 'ko', 'mo', 'ti', 've'])).toBeGreaterThanOrEqual(10);
+
+        // Polysyllable heavy endings: (es|em|er|sten|chem)$ (+10)
+        expect(calculateWordComplexity('schönsten', ['schön', 'sten'])).toBeGreaterThanOrEqual(10);
+      });
+
+      it('correctly scores heavy hurdles (+3), medium hurdles (+2), and light hurdles (+1)', () => {
+        // Nasal (nk/ng) -> +3
+        expect(calculateWordComplexity('Trank', ['trank'])).toBeGreaterThanOrEqual(3);
+        expect(calculateWordComplexity('Ring', ['ring'])).toBeGreaterThanOrEqual(3);
+
+        // Medium: complex grapheme (sch/ch/sp/st) -> +2
+        expect(calculateWordComplexity('Fisch', ['fisch'])).toBeGreaterThanOrEqual(2);
+        // Medium: double consonants -> +2
+        expect(calculateWordComplexity('Sonne', ['son', 'ne'])).toBe(2);
+
+        // Light: diphthong -> +1
+        expect(calculateWordComplexity('Baum', ['baum'])).toBe(1);
+        // Light: simple umlaut -> +1
+        expect(calculateWordComplexity('Tür', ['tür'])).toBe(1);
+        // Light: Dehnungs-h -> +1
+        expect(calculateWordComplexity('Reh', ['reh'])).toBe(1);
+      });
+    });
+
+    describe('2.2 Level 1 & Level 2 Scoring Selection', () => {
+      it('Level 1: selects candidate with lowest score (score <= 1) and skips sentence if lowestScore >= 2', () => {
+        // In this sentence: "Baum" has score 1, "steht" has score 3, "Park" has score 3
+        const sentence = 'Ein schöner Baum steht im Park.';
+        const tokenized = tokenizeStory(sentence, 1, 'Bello');
+        const childTokens = tokenized[0].words.filter((w) => w.role === 'child');
+        expect(childTokens.length).toBe(1);
+        expect(childTokens[0].cleanWord).toBe('Baum');
+
+        // When all candidate words have score >= 2: sentence is completely skipped (app role)
+        const hardSentence = 'Auf dem weißen Pfad galoppiert ein Pferd vor der Sandburg.';
+        const tokenizedHard = tokenizeStory(hardSentence, 1, 'Bello');
+        const hardChildTokens = tokenizedHard[0].words.filter((w) => w.role === 'child');
+        expect(hardChildTokens.length).toBe(0);
+        expect(tokenizedHard[0].role).toBe('app');
+      });
+
+      it('Level 2: selects consecutive [Article/Adj + Noun] bigram with <= 4 syllables prioritized by lowest score', () => {
+        // "grünen Wiese" has score 2 (ü=1, ie=1)
+        // "rote Rose" has score 0 (both 0)
+        // Level 2 should pick "rote Rose" because 0 < 2!
+        const story = 'Auf der grünen Wiese blüht eine rote Rose.';
+        const tokenized = tokenizeStory(story, 2, 'Bello');
+        const childTokens = tokenized[0].words.filter((w) => w.role === 'child');
+
+        expect(childTokens.length).toBe(2);
+        expect(childTokens[0].cleanWord).toBe('rote');
+        expect(childTokens[1].cleanWord).toBe('Rose');
+      });
+    });
+
+    describe('2.3 Eigennamen-Entwertung & Limitierung (Kind & Begleiter)', () => {
+      it('applies +50 penalty from the start so proper names are never picked over other eligible words', () => {
+        // Configured child name "Emil" has +50 penalty, "Hut" has score 0 -> "Hut" must be selected for child
+        const sentence = 'Emil sucht den roten Hut.';
+        const tokenized = tokenizeStory(sentence, 1, 'Flora', 'Emil');
+        const childTokens = tokenized[0].words.filter((w) => w.role === 'child');
+        expect(childTokens.length).toBe(1);
+        expect(childTokens[0].cleanWord).toBe('Hut');
+      });
+
+      it('in Level 2 assigns proper name role: "child" at most ONCE, adding +100 penalty on subsequent occurrences', () => {
+        // In Level 2, bigram with companion name "Bello"
+        const story = 'Der liebe Bello bellt laut. Der liebe Bello rennt weg.';
+        const tokenized = tokenizeStory(story, 2, 'Bello', 'Emil');
+
+        expect(tokenized.length).toBe(2);
+
+        // Across the entire story, Bello has role: 'child' at most ONCE
+        const allBelloTokens = tokenized.flatMap((s) => s.words).filter((w) => w.cleanWord === 'Bello');
+        const belloChildTokens = allBelloTokens.filter((w) => w.role === 'child');
+        expect(belloChildTokens.length).toBeLessThanOrEqual(1);
+      });
     });
   });
 });

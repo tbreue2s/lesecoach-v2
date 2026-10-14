@@ -59,11 +59,28 @@ export const FORBIDDEN_LEVEL1_PARTICLES = new Set([
   'herein', 'hinab', 'hinauf', 'dran', 'drauf', 'drum', 'mit', 'gar', 'nur', 'so',
 ]);
 
+// German pronouns and non-noun sentence starters
+export const GERMAN_PRONOUNS = new Set([
+  'er', 'sie', 'es', 'wir', 'ihr', 'du', 'ich', 'mir', 'dir', 'ihm', 'uns', 'euch', 'ihnen', 'man',
+  'ihre', 'ihren', 'ihrem', 'ihres', 'seine', 'seinen', 'seinem', 'seines',
+  'meine', 'meinen', 'meinem', 'meines', 'deine', 'deinen', 'deinem', 'deines',
+  'alle', 'allen', 'allem', 'alles', 'jede', 'jeder', 'jedes', 'jemand', 'niemand',
+  'wer', 'was', 'wie', 'wo', 'wann', 'warum', 'welche', 'welcher', 'welches',
+]);
+
 /**
- * Checks if a word is a German noun (capitalized in orthography).
+ * Checks if a word is a German noun (capitalized in orthography, not a pronoun/article/particle).
  */
 export function isNoun(cleanWord: string): boolean {
   if (!cleanWord || cleanWord.length === 0) return false;
+  const lower = cleanWord.toLowerCase();
+  if (
+    isArticle(lower) ||
+    FORBIDDEN_LEVEL1_PARTICLES.has(lower) ||
+    GERMAN_PRONOUNS.has(lower)
+  ) {
+    return false;
+  }
   const firstChar = cleanWord[0];
   return firstChar === firstChar.toUpperCase() && firstChar !== firstChar.toLowerCase();
 }
@@ -120,81 +137,7 @@ export function isGenitiveForm(cleanWord: string): boolean {
   return false;
 }
 
-/**
- * German base nouns (lowercased) that commonly form compound nouns in elementary stories.
- */
-export const GERMAN_BASE_NOUNS = new Set([
-  'sand', 'burg', 'haus', 'baum', 'wald', 'sonne', 'licht', 'stern', 'sterne',
-  'himmel', 'nacht', 'tag', 'kiste', 'holz', 'gold', 'schatz', 'karte', 'stein',
-  'steine', 'schiff', 'boot', 'insel', 'palme', 'palmen', 'rad', 'steuer', 'bogen',
-  'regen', 'mann', 'schnee', 'vogel', 'ball', 'fuß', 'fuss', 'tür', 'topf',
-  'blume', 'blumen', 'tasche', 'schule', 'zimmer', 'klasse', 'zahn', 'bürste',
-  'platz', 'spiel', 'sport', 'weg', 'wasser', 'fall', 'tier', 'tiere', 'park',
-  'zeit', 'horn', 'katze', 'kater', 'muschel', 'fisch', 'fische', 'delfin',
-  'meer', 'strand', 'see', 'berg', 'höhle', 'fels', 'felsen', 'deckel', 'fund',
-  'wind', 'wiese', 'gras', 'buch', 'auto', 'zug', 'eis', 'schaf', 'kuh', 'pferd',
-  'pferde', 'hund', 'hunde', 'kind', 'kinder', 'freund', 'freunde', 'könig',
-  'schloss', 'zauber', 'stab', 'kraft', 'umhang', 'held', 'helden', 'puppe',
-  'bär', 'wolf', 'fuchs', 'hase', 'igel', 'maus', 'ente', 'gans', 'drache',
-  'dino', 'riese', 'zwerg', 'mond', 'feuer', 'erde', 'luft', 'uhr', 'hand',
-  'kopf', 'auge', 'augen', 'arm', 'bein', 'beine', 'hut', 'schuh', 'schuhe',
-  'socke', 'socken', 'hose', 'hemd', 'kleid', 'rock', 'bett', 'tisch', 'stuhl',
-  'schrank', 'fenster', 'dach', 'garten', 'tor', 'zaun', 'pfad', 'busch',
-  'bach', 'fluss', 'teich', 'wolke', 'wolken', 'blitz', 'donner', 'sturm',
-  'brot', 'milch', 'apfel', 'birne', 'kuchen', 'suppe', 'salat', 'fleisch',
-  'käse', 'ei', 'nuss', 'beere', 'beeren', 'kirsche', 'pflanze', 'pflanzen',
-  'blatt', 'blätter', 'ast', 'zweig', 'stamm', 'wurzel', 'rabe', 'eule',
-  'spatz', 'meise', 'taube', 'frosch', 'kröte', 'schnecke', 'wurm', 'spinne',
-  'biene', 'wespe', 'fliege', 'mücke', 'käfer', 'hirsch', 'reh', 'löwe',
-  'tiger', 'elefant', 'affe', 'kamel', 'krokodil', 'zebra', 'giraffe',
-  'pinguin', 'wal', 'hai', 'haifisch', 'krabbe', 'krebs', 'robbe', 'seehund',
-  'dachs', 'biber', 'otter', 'marder', 'wiesel', 'herz', 'planet', 'rakete',
-  'ritter', 'turm', 'mauer', 'graben', 'schwert', 'schild', 'rüstung',
-  'pfeil', 'lanze', 'prinz', 'prinzessin', 'königin', 'krone', 'thron',
-  'pirat', 'kapitän', 'anker', 'segel', 'flagge', 'kompass', 'kanone',
-  'ozean', 'welle', 'wellen', 'hafen', 'stadt', 'dorf', 'land', 'straße',
-  'brücke', 'gasse', 'kirche', 'halle', 'küche', 'keller', 'stube',
-  'kammer', 'saal', 'flur', 'gang', 'treppe', 'wand', 'wände', 'boden', 'decke'
-]);
 
-/**
- * Checks if a word is a compound noun (Kompositum) formed from two nouns.
- * Strict didactic rule for Phase A (Levels 1-3).
- */
-export function isCompoundNoun(cleanWord: string): boolean {
-  if (!cleanWord || cleanWord.length < 5) return false;
-  if (!isNoun(cleanWord)) return false;
-
-  // Words with hyphens joining components, e.g. Helden-Umhang
-  if (cleanWord.includes('-')) {
-    const parts = cleanWord.split('-');
-    if (parts.length >= 2 && parts.every((p) => p.length >= 2)) {
-      return true;
-    }
-  }
-
-  const lower = cleanWord.toLowerCase();
-
-  // Try splitting into two base nouns: part1 + [fugen] + part2
-  // Fugen elements in German compound nouns: '', 's', 'es', 'en', 'n', 'e', 'er'
-  const fugenList = ['', 's', 'es', 'en', 'n', 'e', 'er'];
-
-  for (let i = 3; i <= lower.length - 3; i++) {
-    const part1 = lower.slice(0, i);
-    if (!GERMAN_BASE_NOUNS.has(part1)) continue;
-
-    for (const fugen of fugenList) {
-      if (lower.startsWith(part1 + fugen)) {
-        const part2 = lower.slice(part1.length + fugen.length);
-        if (part2.length >= 3 && GERMAN_BASE_NOUNS.has(part2)) {
-          return true;
-        }
-      }
-    }
-  }
-
-  return false;
-}
 
 /**
  * Checks whether a word is the configured child name or companion name (including genitive 's').
@@ -219,149 +162,117 @@ export function isProtectedName(
 }
 
 /**
- * Strict phonetic and orthographic validation filter for didactic reading levels (WP03).
+ * Calculates didactic complexity penalty score for a word (WP07).
  *
- * 1. Level 1 – Harte Blacklist (role: 'child'):
- *    Verworfen wenn:
- *    - Enthält Sonderzeichen oder seltene Buchstaben: [ß, ä, ö, ü, c, v, w, x, y, q] (groß/klein)
- *    - Enthält Diphthonge / Zwielaute: (ei|au|eu|äu|ie)
- *    - Enthält Konsonanten-Verbindungen: (sch|ch|ck|tz|sp|st|pf|str|qu)
- *    - Enthält Lautgruppen "nk" oder "ng" (z. B. "Trank", "funkeln")
- *    - Enthält Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
- *    - Dehnungs-h: (z. B. Mähne, Reh, Zahn, Ohr)
- *    - Silben-Struktur: Nur offene oder einfache geschlossene Silben. Keine Konsonantenhäufungen am Silbenende (wie "-nd", "-rg", "-nk").
- *    - Komposita-Verbot (Phase A): Keine aus zwei Nomen zusammengesetzten Wörter (z. B. "Sandburg").
- *    - Silben-Constraint: Maximal 2 Silben
- *    - Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen")
+ * Scoring Rules:
+ * 1. +10 Points (Red light / Killer):
+ *    - Regex-Match: /[ßcqxyz]|ck|tz|pf/i.test(word)
+ *    - Syllables limit: syllables.length >= 3
+ *    - Compound protection (Length): word.length >= 8
+ *    - Heavy endings in polysyllables: /(es|em|er|sten|chem)$/i.test(word) && syllables.length > 1
  *
- * 2. Level 2 – Filter (role: 'child'):
- *    - 'ß' und Doppelkonsonanten ((\w)\1) sowie 'ck'/'tz' bleiben strikt VERBOTEN.
- *    - Komposita-Verbot (Phase A): Keine aus zwei Nomen zusammengesetzten Wörter.
- *    - Erlaubt: 'ei', 'au', 'ie', einfache Umlaute und 'sch'/'ch'. Max 2 Silben pro Wort.
+ * 2. +3 Points (Heavy hurdles):
+ *    - Nasals: /(nk|ng)/i.test(word)
+ *    - Consonant clusters at syllable or word end (>= 2 consecutive consonants): /[bcdfghjklmnpqrstvwxyzß]{2,}$/i
+ *
+ * 3. +2 Points (Medium hurdles):
+ *    - Complex graphemes: /(sch|ch|sp|st)/i.test(word)
+ *    - Double letters (incl. umlauts): /([a-zäöü])\1/i.test(word)
+ *
+ * 4. +1 Point (Light hurdles):
+ *    - Diphthongs: /(ei|au|eu|äu|ie)/i.test(word)
+ *    - Simple umlauts: /[äöü]/i.test(word)
+ *    - Dehnungs-h: /[aeiouäöü]h/i.test(word)
  */
-export function isPhoneticallyValidForLevel(
+export function calculateWordComplexity(
   word: string,
-  level: ReadingLevelNumber
-): boolean {
-  const clean = cleanPunctuation(word);
-  if (!clean || clean.length === 0) return false;
+  syllables?: string[]
+): number {
+  const clean = cleanPunctuation(word).toLowerCase();
+  if (!clean) return 0;
 
-  const lower = clean.toLowerCase();
-  const syllables = splitSyllables(clean);
+  let score = 0;
 
-  // Phase A strict rule: Child words must NEVER have >= 4 syllables
-  if (level <= 3 && syllables.length >= 4) {
+  const sylList =
+    syllables && syllables.length > 0 ? syllables : splitSyllables(clean);
+  const effSyllables = sylList.length > 0 ? sylList : [clean];
+
+  // 1. +10 Punkte (Rote Ampel / Killer)
+  if (/[ßcqxyz]|ck|tz|pf/i.test(clean)) {
+    score += 10;
+  }
+  if (effSyllables.length >= 3) {
+    score += 10;
+  }
+  if (clean.length >= 8) {
+    score += 10;
+  }
+  if (/(es|em|er|sten|chem)$/i.test(clean) && effSyllables.length > 1) {
+    score += 10;
+  }
+
+  // 2. +3 Punkte (Schwere Hürden)
+  if (/(nk|ng)/i.test(clean)) {
+    score += 3;
+  }
+  const CONSONANT_CLUSTER_END = /[bcdfghjklmnpqrstvwxyzß]{2,}$/i;
+  let hasWordEndCluster = false;
+  if (CONSONANT_CLUSTER_END.test(clean)) {
+    score += 3;
+    hasWordEndCluster = true;
+  }
+  effSyllables.forEach((syl, idx) => {
+    const cleanSyl = cleanPunctuation(syl).toLowerCase();
+    const isLast = idx === effSyllables.length - 1;
+    if (CONSONANT_CLUSTER_END.test(cleanSyl)) {
+      if (!isLast || !hasWordEndCluster) {
+        score += 3;
+      }
+    }
+  });
+
+  // 3. +2 Punkte (Mittlere Hürden)
+  if (/(sch|ch|sp|st)/i.test(clean)) {
+    score += 2;
+  }
+  if (/([a-zäöü])\1/i.test(clean)) {
+    score += 2;
+  }
+
+  // 4. +1 Punkt (Leichte Hürden)
+  if (/(ei|au|eu|äu|ie)/i.test(clean)) {
+    score += 1;
+  }
+  if (/[äöü]/i.test(clean)) {
+    score += 1;
+  }
+  if (/[aeiouäöü]h/i.test(clean)) {
+    score += 1;
+  }
+
+  return score;
+}
+
+/**
+ * Checks whether a word is eligible as a Level 1 reading candidate (Noun or finite full verb).
+ */
+export function isLevel1EligibleWord(cleanWord: string): boolean {
+  if (!cleanWord || cleanWord.length === 0) return false;
+  const lower = cleanWord.toLowerCase();
+  if (FORBIDDEN_LEVEL1_PARTICLES.has(lower)) return false;
+  if (isArticle(lower)) return false;
+  if (isGenitiveForm(cleanWord)) return false;
+  if (GERMAN_PRONOUNS.has(lower)) return false;
+
+  if (isNoun(cleanWord)) {
+    return true;
+  }
+
+  // Vollverben or other candidate words: exclude pronouns and inflected adjectives
+  if (isAdjective(cleanWord)) return false;
+  if (/(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower)) {
     return false;
   }
-
-  // Phase A Komposita-Verbot (Levels 1-3): Child target must never be a compound noun
-  if (level <= 3 && isCompoundNoun(clean)) {
-    return false;
-  }
-
-  if (level === 1) {
-    // 1. Sonderzeichen oder seltene Buchstaben: [ß, ä, ö, ü, c, v, w, x, y, q]
-    if (/[ßäöücvwxyq]/i.test(clean)) {
-      return false;
-    }
-
-    // 2. Diphthonge / Zwielaute: (ei|au|eu|äu|ie)
-    if (/(ei|au|eu|äu|ie)/i.test(clean)) {
-      return false;
-    }
-
-    // 3. Konsonanten-Verbindungen: (sch|ch|ck|tz|sp|st|pf|str|qu)
-    // Prompt mentions Pfad, so pf is strictly forbidden here as well.
-    if (/(sch|ch|ck|tz|sp|st|pf|str|qu)/i.test(clean)) {
-      return false;
-    }
-
-    // 4. Lautgruppen-Ausschluss: Wörter mit "nk" oder "ng" (z. B. "Trank", "funkeln")
-    if (/(nk|ng)/i.test(clean)) {
-      return false;
-    }
-
-    // 5. Doppelkonsonanten: /(\w)\1/i (z. B. "pp" in Koppel, "ll", "ss", "mm", "tt", "ff", "nn")
-    if (/([a-zA-ZäöüÄÖÜ])\1/i.test(clean)) {
-      return false;
-    }
-
-    // Dehnungs-h (z. B. Mähne, Reh, Zahn, Ohr)
-    if (hasDehnungsH(clean)) {
-      return false;
-    }
-
-    // 6. Silben-Struktur in Level 1: Es sind nur offene oder einfache geschlossene Silben erlaubt.
-    // Keine Konsonantenhäufungen am Silbenende (wie "-nd", "-rg", "-nk").
-    if (/[bcdfghjklmnpqrstvwxyz]{2,}$/i.test(clean)) {
-      return false;
-    }
-    if (syllables.some((syl) => /[bcdfghjklmnpqrstvwxyz]{2,}$/i.test(syl))) {
-      return false;
-    }
-
-    // 7. Silben-Constraint: Maximal 2 Silben
-    if (syllables.length > 2) {
-      return false;
-    }
-
-    // 8. Wortart: Nur Nomen oder finite Vollverben (keine gebeugten Adjektive wie "weißen", keine Partikel/Artikel)
-    if (FORBIDDEN_LEVEL1_PARTICLES.has(lower) || isArticle(lower) || isGenitiveForm(clean)) {
-      return false;
-    }
-
-    const isNounWord = isNoun(clean);
-    if (!isNounWord) {
-      if (isAdjective(clean)) {
-        return false;
-      }
-      if (['er', 'sie', 'es', 'wir', 'ihr', 'du', 'ich', 'mir', 'dir', 'ihm', 'ihr', 'uns', 'euch', 'ihnen', 'man'].includes(lower)) {
-        return false;
-      }
-      // Adjektiv-Flexionsendungen
-      if (/(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower)) {
-        return false;
-      }
-    }
-
-    return true;
-  }
-
-  if (level === 2) {
-    // 1. 'ß' ist strikt VERBOTEN
-    if (/ß/i.test(clean)) {
-      return false;
-    }
-
-    // 2. Doppelkonsonanten ((\w)\1) sind strikt VERBOTEN (z. B. "pp" in Koppel, "ll", "ss", etc.)
-    if (/([a-zA-ZäöüÄÖÜ])\1/i.test(clean)) {
-      return false;
-    }
-
-    // 3. 'ck' / 'tz' bleiben strikt VERBOTEN
-    if (/(ck|tz)/i.test(clean)) {
-      return false;
-    }
-
-    // 4. Silben-Constraint: Im Level-2-Paar darf kein Einzelwort >= 3 Silben haben
-    if (syllables.length >= 3) {
-      return false;
-    }
-
-    // Non-article particles or genitive forbidden
-    if ((FORBIDDEN_LEVEL1_PARTICLES.has(lower) && !isArticle(lower)) || isGenitiveForm(clean)) {
-      return false;
-    }
-
-    // Erlaubt sind: 'ei', 'au', 'ie', einfache Umlaute und 'sch'/'ch'
-    return true;
-  }
-
-  if (level === 3) {
-    if (syllables.length >= 4) return false;
-    return true;
-  }
-
   return true;
 }
 
@@ -372,11 +283,9 @@ export interface WordMeta {
 }
 
 /**
- * Intelligent selector for Phase A (Levels 1, 2, 3) enforcing strict phonetic and syntactic constraints:
- * - Level 1: Genau 1 Zielwort pro Satz, gefiltert über isPhoneticallyValidForLevel(clean, 1).
- *   Fällt ein Satz durch den Filter (kein Wort erfüllt Kriterien), gibt der Selector ein leeres Set zurück
- *   (die App liest den gesamten Satz vor).
- * - Level 2: Genau 2 aufeinanderfolgende Wörter (beide validiert für Level 2, sum <= 4 Silben).
+ * Intelligent selector for Phase A (Levels 1, 2, 3) enforcing didactic scoring (WP07):
+ * - Level 1: Wählt das Nomen/Vollverb mit dem niedrigsten Score (Score <= 1). Überspringt bei Score >= 2 (role: 'app').
+ * - Level 2: Strikte Adjazenz [Artikel/Adjektiv + Nomen], sum(syllables) <= 4, priorisiert nach niedrigstem Score.
  * - Level 3: 3 bis 4 aufeinanderfolgende Wörter mit sum(syllables) <= 7, kein Wort >= 4 Silben.
  */
 export function selectPhaseAChildIndices(
@@ -391,43 +300,48 @@ export function selectPhaseAChildIndices(
 
   const selected = new Set<number>();
 
-  const isNameBlocked = (cleanWord: string): boolean => {
-    if (!usedChildNames) return false;
-    if (isProtectedName(cleanWord, companionName, childName)) {
-      const lower = cleanPunctuation(cleanWord).toLowerCase();
-      return usedChildNames.has(lower);
-    }
-    return false;
-  };
-
   if (level === 1) {
-    // 1. Suche bevorzugt ein Nomen, das isPhoneticallyValidForLevel(clean, 1) erfüllt und kein bereits vergebener Name ist
-    for (let i = rawWords.length - 1; i >= 0; i--) {
+    let bestIndex: number | null = null;
+    let lowestScore = Infinity;
+    let isBestNoun = false;
+
+    for (let i = 0; i < rawWords.length; i++) {
       const w = rawWords[i];
+      if (!isLevel1EligibleWord(w.cleanWord)) continue;
+
+      let score = calculateWordComplexity(w.cleanWord, w.syllables);
+
+      // Eigennamen-Entwertung:
+      // Konfigurierte Eigennamen des Kindes und des Begleiters erhalten von Grund auf +50 Penalty,
+      // damit sie niemals primär gewählt werden, wenn andere Nomen/Verben im Satz existieren.
+      // Nach dem 1. Vorkommen in der Geschichte erhalten sie weiterhin +100.
+      if (isProtectedName(w.cleanWord, companionName, childName)) {
+        score += 50;
+        const lower = cleanPunctuation(w.cleanWord).toLowerCase();
+        if (usedChildNames?.has(lower)) {
+          score += 100;
+        }
+      }
+
+      const isCurrentNoun = isNoun(w.cleanWord);
+
       if (
-        isPhoneticallyValidForLevel(w.cleanWord, 1) &&
-        isNoun(w.cleanWord) &&
-        !isNameBlocked(w.cleanWord)
+        score < lowestScore ||
+        (score === lowestScore && isCurrentNoun && !isBestNoun)
       ) {
-        selected.add(i);
-        return selected;
+        lowestScore = score;
+        bestIndex = i;
+        isBestNoun = isCurrentNoun;
       }
     }
 
-    // 2. Ansonsten beliebiges anderes phonetisch valides Wort (z. B. finites Verb)
-    for (let i = rawWords.length - 1; i >= 0; i--) {
-      const w = rawWords[i];
-      if (
-        isPhoneticallyValidForLevel(w.cleanWord, 1) &&
-        !isNameBlocked(w.cleanWord)
-      ) {
-        selected.add(i);
-        return selected;
-      }
+    // In Level 1 (Einzelwort-Entdecker) darf ein Wort für role: 'child' MAXIMAL einen Complexity-Score von 1 besitzen.
+    // Wörter mit Score >= 2 sind strikt zu schwer.
+    // Wenn das am leichtesten bewertete Nomen/Verb im Satz einen Score >= 2 hat: Weise den gesamten Satz der App zu (role: 'app').
+    if (bestIndex !== null && lowestScore <= 1) {
+      selected.add(bestIndex);
     }
 
-    // 3. Selector-Fallback: Fällt ein Satz durch den Filter (kein Wort erfüllt Kriterien),
-    // liest die App den gesamten Satz vor -> leeres Set zurückgeben!
     return selected;
   }
 
@@ -436,81 +350,94 @@ export function selectPhaseAChildIndices(
       return selected;
     }
 
-    // Tier 1: [Article/Adj + Noun], beide Wörter erfüllen Level 2 Kriterien, syl1 <= 2, syl2 <= 2, sum <= 4
-    for (let i = n - 2; i >= 0; i--) {
+    let bestPair: [number, number] | null = null;
+    let lowestScore = Infinity;
+
+    // Tier 1: Strikte Adjazenz für [Artikel + Nomen] oder [Adjektiv + Nomen], Summe der Silben <= 4
+    for (let i = 0; i < n - 1; i++) {
       const w1 = rawWords[i];
       const w2 = rawWords[i + 1];
+
+      const isFirstArticleOrAdj = isArticle(w1.cleanWord) || isAdjective(w1.cleanWord);
+      const isSecondNoun = isNoun(w2.cleanWord);
+
+      if (!isFirstArticleOrAdj || !isSecondNoun) continue;
+
       const syl1 = w1.syllables.length;
       const syl2 = w2.syllables.length;
+      if (syl1 + syl2 > 4) continue;
 
-      if (
-        isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
-        isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
-        !isNameBlocked(w1.cleanWord) &&
-        !isNameBlocked(w2.cleanWord) &&
-        (isArticle(w1.cleanWord) || isAdjective(w1.cleanWord)) &&
-        isNoun(w2.cleanWord) &&
-        syl1 <= 2 &&
-        syl2 <= 2 &&
-        syl1 + syl2 <= 4
-      ) {
-        selected.add(i);
-        selected.add(i + 1);
-        return selected;
+      let score1 = calculateWordComplexity(w1.cleanWord, w1.syllables);
+      let score2 = calculateWordComplexity(w2.cleanWord, w2.syllables);
+
+      if (isProtectedName(w1.cleanWord, companionName, childName)) {
+        score1 += 50;
+        const lower = cleanPunctuation(w1.cleanWord).toLowerCase();
+        if (usedChildNames?.has(lower)) score1 += 100;
+      }
+      if (isProtectedName(w2.cleanWord, companionName, childName)) {
+        score2 += 50;
+        const lower = cleanPunctuation(w2.cleanWord).toLowerCase();
+        if (usedChildNames?.has(lower)) score2 += 100;
+      }
+
+      const totalScore = score1 + score2;
+      if (totalScore < lowestScore) {
+        lowestScore = totalScore;
+        bestPair = [i, i + 1];
       }
     }
 
-    // Tier 2: Beliebiges konsekutives Paar, beide Wörter erfüllen Level 2 Kriterien, sum <= 4, kein Partikel am Ende
-    for (let i = n - 2; i >= 0; i--) {
+    if (bestPair) {
+      selected.add(bestPair[0]);
+      selected.add(bestPair[1]);
+      return selected;
+    }
+
+    // Tier 2 Fallback: Konsekutives Paar mit Summe <= 4 ohne verbotenen Partikel am Ende
+    for (let i = 0; i < n - 1; i++) {
       const w1 = rawWords[i];
       const w2 = rawWords[i + 1];
+
+      if (FORBIDDEN_LEVEL1_PARTICLES.has(w2.cleanWord.toLowerCase())) continue;
+
       const syl1 = w1.syllables.length;
       const syl2 = w2.syllables.length;
+      if (syl1 + syl2 > 4) continue;
 
-      if (
-        isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
-        isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
-        !isNameBlocked(w1.cleanWord) &&
-        !isNameBlocked(w2.cleanWord) &&
-        !FORBIDDEN_LEVEL1_PARTICLES.has(w2.cleanWord.toLowerCase()) &&
-        syl1 <= 2 &&
-        syl2 <= 2 &&
-        syl1 + syl2 <= 4
-      ) {
-        selected.add(i);
-        selected.add(i + 1);
-        return selected;
+      let score1 = calculateWordComplexity(w1.cleanWord, w1.syllables);
+      let score2 = calculateWordComplexity(w2.cleanWord, w2.syllables);
+
+      if (isProtectedName(w1.cleanWord, companionName, childName)) {
+        score1 += 50;
+        const lower = cleanPunctuation(w1.cleanWord).toLowerCase();
+        if (usedChildNames?.has(lower)) score1 += 100;
+      }
+      if (isProtectedName(w2.cleanWord, companionName, childName)) {
+        score2 += 50;
+        const lower = cleanPunctuation(w2.cleanWord).toLowerCase();
+        if (usedChildNames?.has(lower)) score2 += 100;
+      }
+
+      const totalScore = score1 + score2;
+      if (totalScore < lowestScore) {
+        lowestScore = totalScore;
+        bestPair = [i, i + 1];
       }
     }
 
-    // Tier 3: Beliebiges konsekutives Paar, beide Wörter erfüllen Level 2 Kriterien, syl1 <= 2, syl2 <= 2
-    for (let i = n - 2; i >= 0; i--) {
-      const w1 = rawWords[i];
-      const w2 = rawWords[i + 1];
-      const syl1 = w1.syllables.length;
-      const syl2 = w2.syllables.length;
-
-      if (
-        isPhoneticallyValidForLevel(w1.cleanWord, 2) &&
-        isPhoneticallyValidForLevel(w2.cleanWord, 2) &&
-        !isNameBlocked(w1.cleanWord) &&
-        !isNameBlocked(w2.cleanWord) &&
-        syl1 <= 2 &&
-        syl2 <= 2
-      ) {
-        selected.add(i);
-        selected.add(i + 1);
-        return selected;
-      }
+    if (bestPair) {
+      selected.add(bestPair[0]);
+      selected.add(bestPair[1]);
+      return selected;
     }
 
-    // Kein valides Paar gefunden -> App liest vor (leeres Set)
     return selected;
   }
 
   if (level === 3) {
     const validIndices = rawWords
-      .map((w, idx) => idx)
+      .map((_, idx) => idx)
       .filter((idx) => rawWords[idx].syllables.length < 4);
 
     // 1. 4-Wort-Fenster mit sum <= 7

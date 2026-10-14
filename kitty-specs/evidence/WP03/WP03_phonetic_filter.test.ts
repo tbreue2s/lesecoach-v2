@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { tokenizeStory, isPhoneticallyValidForLevel, isCompoundNoun } from '../../../src/lib/utils/tokenizer';
+import { tokenizeStory, calculateWordComplexity } from '../../../src/lib/utils/tokenizer';
 
 describe('WP03 - Graphem-Blacklist, Komposita, Lautgruppen & Eigennamen für Level 1 & Level 2', () => {
   it('sollte didaktisch ungeeignete Wörter in Level 1 nicht mit role: "child" versehen', () => {
@@ -39,13 +39,10 @@ describe('WP03 - Graphem-Blacklist, Komposita, Lautgruppen & Eigennamen für Lev
   });
 
   it('"Sandburg", "Trank" und "funkeln" dürfen für Level 1 nicht als role: "child" ausgewählt werden', () => {
-    // 1. Direct validation check
-    expect(isPhoneticallyValidForLevel('Sandburg', 1)).toBe(false);
-    expect(isPhoneticallyValidForLevel('Trank', 1)).toBe(false);
-    expect(isPhoneticallyValidForLevel('funkeln', 1)).toBe(false);
-
-    // Also verify Komposita detection in Phase A
-    expect(isCompoundNoun('Sandburg')).toBe(true);
+    // 1. Direct validation check via complexity score (score >= 2 is forbidden in Level 1)
+    expect(calculateWordComplexity('Sandburg')).toBeGreaterThanOrEqual(16);
+    expect(calculateWordComplexity('Trank')).toBeGreaterThanOrEqual(3);
+    expect(calculateWordComplexity('funkeln')).toBeGreaterThanOrEqual(3);
 
     // 2. Tokenizer test: in a story with these words, none may receive role: 'child'
     const story = 'Am warmen Strand steht eine große Sandburg. Der alte Zauberer trinkt den roten Trank. Am dunklen Himmel funkeln viele Sterne.';

@@ -8,15 +8,11 @@ import {
   splitIntoSentences,
   cleanPunctuation,
   hasComplexClusters,
-  hasDehnungsH,
-  hasInitialComplexCluster,
-  isGenitiveForm,
-  isPhoneticallyValidForLevel,
-  FORBIDDEN_LEVEL1_PARTICLES,
+  calculateWordComplexity,
 } from './tokenizer';
 import { splitSyllables } from './syllableSplitter';
 
-export { hasComplexClusters, isPhoneticallyValidForLevel };
+export { hasComplexClusters, calculateWordComplexity };
 
 export interface ValidationResult {
   isValid: boolean;
@@ -46,12 +42,27 @@ export function validateWordForLevel(
     };
   }
 
-  // Level 1 & Level 2: Strict phonetic/orthographic filter
-  if (level === 1 || level === 2) {
-    if (!isPhoneticallyValidForLevel(clean, level)) {
+  // Level 1: Strict didactic complexity score threshold (score <= 1)
+  if (level === 1) {
+    if (calculateWordComplexity(clean, syllables) > 1) {
       return {
         isValid: false,
-        reason: `Wort "${word}" erfüllt die phonetisch-orthografischen Kriterien für Level ${level} nicht.`,
+        reason: `Wort "${word}" hat eine zu hohe Komplexität für Level 1 (Score > 1).`,
+      };
+    }
+  }
+
+  // Level 2: Strict rules forbidding ß, double consonants, and ck/tz, max 2 syllables
+  if (level === 2) {
+    if (
+      /ß/i.test(clean) ||
+      /([a-zA-ZäöüÄÖÜ])\1/i.test(clean) ||
+      /(ck|tz)/i.test(clean) ||
+      syllables.length >= 3
+    ) {
+      return {
+        isValid: false,
+        reason: `Wort "${word}" erfüllt die Kriterien für Level 2 nicht.`,
       };
     }
   }

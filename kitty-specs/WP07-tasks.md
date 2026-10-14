@@ -2,7 +2,7 @@
 
 **ID:** `WP07-TASKS`  
 **Parent Spec:** [WP07-tokenizer-refactor.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP07-tokenizer-refactor.md)  
-**Lifecycle Status:** `spec` ➔ `plan` ➔ `tasks`
+**Lifecycle Status:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` (mit Evidence) ➔ `accept` (done) ➔ `merge`
 
 ---
 
