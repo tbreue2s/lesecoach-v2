@@ -184,96 +184,55 @@ export function isProtectedName(
  *    - Simple umlauts: /[äöü]/i.test(word)
  *    - Dehnungs-h: /[aeiouäöü]h/i.test(word)
  */
-export function calculateWordComplexity(
-  word: string,
-  syllables?: string[]
-): number {
+export function isLevel1EligibleWord(cleanWord: string): boolean {
+  if (!cleanWord || cleanWord.length === 0) return false;
+  const lower = cleanWord.toLowerCase();
+  if (
+    FORBIDDEN_LEVEL1_PARTICLES.has(lower) ||
+    isArticle(lower) ||
+    GERMAN_PRONOUNS.has(lower) ||
+    isGenitiveForm(cleanWord) ||
+    isAdjective(cleanWord)
+  )
+    return false;
+  if (/(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower)) return false;
+  return true;
+}
+
+export function calculateWordComplexity(word: string, syllables: string[] = []): number {
   const clean = cleanPunctuation(word).toLowerCase();
   if (!clean) return 0;
 
   let score = 0;
+  const effSyllables = syllables && syllables.length > 0 ? syllables : splitSyllables(clean);
 
-  const sylList =
-    syllables && syllables.length > 0 ? syllables : splitSyllables(clean);
-  const effSyllables = sylList.length > 0 ? sylList : [clean];
-
-  // 1. +10 Punkte (Rote Ampel / Killer)
-  if (/[ßcqxyz]|ck|tz|pf/i.test(clean)) {
-    score += 10;
-  }
-  if (effSyllables.length >= 3) {
-    score += 10;
-  }
-  if (clean.length >= 8) {
-    score += 10;
-  }
-  if (/(es|em|er|sten|chem)$/i.test(clean) && effSyllables.length > 1) {
-    score += 10;
-  }
+  // 1. +10 Punkte (Killer-Hürden)
+  if (/[ßcqxyz]|ck|tz|pf/i.test(clean)) score += 10;
+  if (effSyllables.length >= 3) score += 10;
+  if (clean.length >= 8) score += 10; // Komposita-Schutz
+  if (/(es|em|er|sten|chem)$/i.test(clean) && effSyllables.length > 1) score += 10;
 
   // 2. +3 Punkte (Schwere Hürden)
-  if (/(nk|ng)/i.test(clean)) {
-    score += 3;
-  }
-  const CONSONANT_CLUSTER_END = /[bcdfghjklmnpqrstvwxyzß]{2,}$/i;
-  let hasWordEndCluster = false;
-  if (CONSONANT_CLUSTER_END.test(clean)) {
-    score += 3;
-    hasWordEndCluster = true;
-  }
+  if (/(nk|ng)/i.test(clean)) score += 3;
+  const CONSONANT_CLUSTER_END = /[bdfghjklmnpqrstvwxyz]{2,}$/i;
+  if (CONSONANT_CLUSTER_END.test(clean)) score += 3; // Konsonantencluster am Ende (z.B. -nd, -bt)
   effSyllables.forEach((syl, idx) => {
     const cleanSyl = cleanPunctuation(syl).toLowerCase();
-    const isLast = idx === effSyllables.length - 1;
-    if (CONSONANT_CLUSTER_END.test(cleanSyl)) {
-      if (!isLast || !hasWordEndCluster) {
-        score += 3;
-      }
+    if (idx < effSyllables.length - 1 && CONSONANT_CLUSTER_END.test(cleanSyl)) {
+      score += 3;
     }
   });
 
   // 3. +2 Punkte (Mittlere Hürden)
-  if (/(sch|ch|sp|st)/i.test(clean)) {
-    score += 2;
-  }
-  if (/([a-zäöü])\1/i.test(clean)) {
-    score += 2;
-  }
+  if (/(sch|ch|sp|st)/i.test(clean)) score += 2;
+  if (/([a-zäöü])\1/i.test(clean)) score += 2; // Doppelkonsonanten (pp, ll)
 
   // 4. +1 Punkt (Leichte Hürden)
-  if (/(ei|au|eu|äu|ie)/i.test(clean)) {
-    score += 1;
-  }
-  if (/[äöü]/i.test(clean)) {
-    score += 1;
-  }
-  if (/[aeiouäöü]h/i.test(clean)) {
-    score += 1;
-  }
+  if (/(ei|au|eu|äu|ie)/i.test(clean)) score += 1;
+  if (/[äöü]/i.test(clean)) score += 1;
+  if (/[aeiouäöü]h/i.test(clean)) score += 1; // Dehnungs-h
 
   return score;
-}
-
-/**
- * Checks whether a word is eligible as a Level 1 reading candidate (Noun or finite full verb).
- */
-export function isLevel1EligibleWord(cleanWord: string): boolean {
-  if (!cleanWord || cleanWord.length === 0) return false;
-  const lower = cleanWord.toLowerCase();
-  if (FORBIDDEN_LEVEL1_PARTICLES.has(lower)) return false;
-  if (isArticle(lower)) return false;
-  if (isGenitiveForm(cleanWord)) return false;
-  if (GERMAN_PRONOUNS.has(lower)) return false;
-
-  if (isNoun(cleanWord)) {
-    return true;
-  }
-
-  // Vollverben or other candidate words: exclude pronouns and inflected adjectives
-  if (isAdjective(cleanWord)) return false;
-  if (/(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower)) {
-    return false;
-  }
-  return true;
 }
 
 export interface WordMeta {
@@ -289,21 +248,19 @@ export interface WordMeta {
  * - Level 3: 3 bis 4 aufeinanderfolgende Wörter mit sum(syllables) <= 7, kein Wort >= 4 Silben.
  */
 export function selectPhaseAChildIndices(
-  rawWords: WordMeta[],
+  rawWords: { cleanWord: string; syllables: string[] }[],
   level: 1 | 2 | 3,
   usedChildNames?: Set<string>,
   companionName?: string,
   childName?: string
 ): Set<number> {
   const n = rawWords.length;
-  if (n === 0) return new Set();
-
   const selected = new Set<number>();
+  if (n === 0) return selected;
 
   if (level === 1) {
     let bestIndex: number | null = null;
     let lowestScore = Infinity;
-    let isBestNoun = false;
 
     for (let i = 0; i < rawWords.length; i++) {
       const w = rawWords[i];
@@ -311,49 +268,28 @@ export function selectPhaseAChildIndices(
 
       let score = calculateWordComplexity(w.cleanWord, w.syllables);
 
-      // Eigennamen-Entwertung:
-      // Konfigurierte Eigennamen des Kindes und des Begleiters erhalten von Grund auf +50 Penalty,
-      // damit sie niemals primär gewählt werden, wenn andere Nomen/Verben im Satz existieren.
-      // Nach dem 1. Vorkommen in der Geschichte erhalten sie weiterhin +100.
       if (isProtectedName(w.cleanWord, companionName, childName)) {
-        score += 50;
         const lower = cleanPunctuation(w.cleanWord).toLowerCase();
-        if (usedChildNames?.has(lower)) {
-          score += 100;
-        }
+        score += usedChildNames?.has(lower) ? 100 : 50; 
       }
 
-      const isCurrentNoun = isNoun(w.cleanWord);
-
-      if (
-        score < lowestScore ||
-        (score === lowestScore && isCurrentNoun && !isBestNoun)
-      ) {
+      if (score < lowestScore) {
         lowestScore = score;
         bestIndex = i;
-        isBestNoun = isCurrentNoun;
       }
     }
 
-    // In Level 1 (Einzelwort-Entdecker) darf ein Wort für role: 'child' MAXIMAL einen Complexity-Score von 1 besitzen.
-    // Wörter mit Score >= 2 sind strikt zu schwer.
-    // Wenn das am leichtesten bewertete Nomen/Verb im Satz einen Score >= 2 hat: Weise den gesamten Satz der App zu (role: 'app').
+    // HARTER CUTOFF: Level 1 darf maximal Score 1 haben!
     if (bestIndex !== null && lowestScore <= 1) {
       selected.add(bestIndex);
     }
-
     return selected;
   }
 
   if (level === 2) {
-    if (n < 2) {
-      return selected;
-    }
-
     let bestPair: [number, number] | null = null;
     let lowestScore = Infinity;
 
-    // Tier 1: Strikte Adjazenz für [Artikel + Nomen] oder [Adjektiv + Nomen], Summe der Silben <= 4
     for (let i = 0; i < n - 1; i++) {
       const w1 = rawWords[i];
       const w2 = rawWords[i + 1];
@@ -370,16 +306,8 @@ export function selectPhaseAChildIndices(
       let score1 = calculateWordComplexity(w1.cleanWord, w1.syllables);
       let score2 = calculateWordComplexity(w2.cleanWord, w2.syllables);
 
-      if (isProtectedName(w1.cleanWord, companionName, childName)) {
-        score1 += 50;
-        const lower = cleanPunctuation(w1.cleanWord).toLowerCase();
-        if (usedChildNames?.has(lower)) score1 += 100;
-      }
-      if (isProtectedName(w2.cleanWord, companionName, childName)) {
-        score2 += 50;
-        const lower = cleanPunctuation(w2.cleanWord).toLowerCase();
-        if (usedChildNames?.has(lower)) score2 += 100;
-      }
+      if (isProtectedName(w1.cleanWord, companionName, childName)) score1 += 50;
+      if (isProtectedName(w2.cleanWord, companionName, childName)) score2 += 50;
 
       const totalScore = score1 + score2;
       if (totalScore < lowestScore) {
@@ -391,47 +319,7 @@ export function selectPhaseAChildIndices(
     if (bestPair) {
       selected.add(bestPair[0]);
       selected.add(bestPair[1]);
-      return selected;
     }
-
-    // Tier 2 Fallback: Konsekutives Paar mit Summe <= 4 ohne verbotenen Partikel am Ende
-    for (let i = 0; i < n - 1; i++) {
-      const w1 = rawWords[i];
-      const w2 = rawWords[i + 1];
-
-      if (FORBIDDEN_LEVEL1_PARTICLES.has(w2.cleanWord.toLowerCase())) continue;
-
-      const syl1 = w1.syllables.length;
-      const syl2 = w2.syllables.length;
-      if (syl1 + syl2 > 4) continue;
-
-      let score1 = calculateWordComplexity(w1.cleanWord, w1.syllables);
-      let score2 = calculateWordComplexity(w2.cleanWord, w2.syllables);
-
-      if (isProtectedName(w1.cleanWord, companionName, childName)) {
-        score1 += 50;
-        const lower = cleanPunctuation(w1.cleanWord).toLowerCase();
-        if (usedChildNames?.has(lower)) score1 += 100;
-      }
-      if (isProtectedName(w2.cleanWord, companionName, childName)) {
-        score2 += 50;
-        const lower = cleanPunctuation(w2.cleanWord).toLowerCase();
-        if (usedChildNames?.has(lower)) score2 += 100;
-      }
-
-      const totalScore = score1 + score2;
-      if (totalScore < lowestScore) {
-        lowestScore = totalScore;
-        bestPair = [i, i + 1];
-      }
-    }
-
-    if (bestPair) {
-      selected.add(bestPair[0]);
-      selected.add(bestPair[1]);
-      return selected;
-    }
-
     return selected;
   }
 

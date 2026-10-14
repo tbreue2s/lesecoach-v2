@@ -161,7 +161,7 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
   describe('Phase A Hard Phonetic Constraints & Syllable Limits', () => {
     it('LEVEL 1: exactly 1 word per valid sentence, never >= 3 syllables, prefers no clusters', () => {
       const storyWithValidWords =
-        'Ein roter Bus fährt an dem Tor. Eine rote Rose blüht schön. Hier liegt ein Hut.';
+        'Ein roter Bus fährt an dem Tor. Auf dem Weg liegt ein Rad. Hier liegt ein Hut.';
       const sentences = tokenizeStory(storyWithValidWords, 1, 'Bello');
 
       for (const sentence of sentences) {

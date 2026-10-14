@@ -96,10 +96,10 @@ const LEVEL_1_TEMPLATES: Record<string, (child: string, comp?: string) => string
     `${child} füttert den Dino.`,
   ],
   theme_space: (child, comp) => [
-    `${child} fliegt zum Mond.`,
-    `Der Mond leuchtet gelb.`,
-    comp ? `${comp} fliegt gern mit.` : `Ein Hund fliegt mit.`,
-    `${child} winkt zur Erde.`,
+    `${child} sieht ein Ufo.`,
+    `Das Ufo hat Gas.`,
+    comp ? `${comp} geht zum Ufo.` : `Ein Mann geht zum Ufo.`,
+    `${child} malt das Ufo.`,
   ],
 };
 
