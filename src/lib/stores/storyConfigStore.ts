@@ -98,11 +98,12 @@ function createStoryConfigStore() {
 
       const story = generateStoryFromConfig(freshPayload);
 
-      // Load story into readingSessionStore with companion name
+      // Load story into readingSessionStore with companion name and child name
       readingSessionStore.loadStory(
         story,
         freshPayload.level,
-        freshPayload.companion?.name || ''
+        freshPayload.companion?.name || '',
+        freshPayload.childName
       );
 
       update((s) => ({ ...s, generatedPayload: freshPayload, activeStory: story }));

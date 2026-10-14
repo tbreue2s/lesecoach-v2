@@ -518,7 +518,13 @@ function createReadingSessionStore() {
       stopSpeech();
       stopListening();
       const effectiveChildName = childName ?? get(profileStore)?.childName;
-      const sentences = tokenizeStory(story.text, level, companionName, effectiveChildName);
+      const sentences = tokenizeStory(
+        story.text,
+        level,
+        companionName,
+        effectiveChildName,
+        story.structuredOutput
+      );
 
       set({
         storyId: story.id,

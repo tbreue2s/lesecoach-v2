@@ -62,4 +62,4 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP05** | Audio-Sync & Karaoke-Highlighting | `spec` | Web Speech TTS, Boundary Events, 60fps DOM Word Highlighting |
 | **WP06** | Lückentext & Echtzeit-Spracherkennung | `accepted` | Web Speech STT, Audio-Pause, Aussprache-Validierung, Feedback |
 | **WP07** | Tokenizer Refactoring (Didaktischer Schiedsrichter) | `accepted` | Penalty-Scoring, Level 1 & 2 Scoring, Eigennamen-Limitierung |
-| **WP08** | Level-basierte Text-Generierung | `spec` | LLM-Prompt-Templates, Didaktische Stufen-Generierung |
+| **WP08** | Level-basierte Text-Generierung | `accepted` | LLM-Prompt-Templates, Didaktische Stufen-Generierung |

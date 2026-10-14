@@ -1,8 +1,8 @@
 # Work Package 08: Level-basierte Text-Generierung & Prompt-Templates (WP-StoryGen)
 
 **ID:** `WP08`  
-**Status:** `spec`  
-**Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
+**Status:** `accepted`  
+**Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` (mit Evidence) ➔ `accept` (done) ➔ `merge`
 
 ---
 
@@ -61,8 +61,8 @@ Um komplexe Wörter wie "Zauberschule" oder "Seifenblasen" zu verhindern, erhalt
 ---
 
 ## 3. Akzeptanzkriterien
-- [ ] LLM-Generator (oder Mock) liefert ausschließlich valides JSON nach dem vorgegebenen Schema (inkl. vorab separierter `syllables`).
-- [ ] Prompt-Templates enthalten harte Wortschatz-Restriktionen (z.B. Verbot von `ß/ck/tz/pf` in Level 1).
-- [ ] Das Theme- & Charakter-Picker UI ist implementiert und verwendbar.
-- [ ] Die Parameter aus dem UI (Thema, Level, Namen) werden korrekt in das Generator-Objekt übergeben.
-- [ ] Generierte Texte der Templates halten sich strikt an die vorgegebenen Längen- und Strukturvorgaben pro Level.
+- [x] LLM-Generator (oder Mock) liefert ausschließlich valides JSON nach dem vorgegebenen Schema (inkl. vorab separierter `syllables`).
+- [x] Prompt-Templates enthalten harte Wortschatz-Restriktionen (z.B. Verbot von `ß/ck/tz/pf` in Level 1).
+- [x] Das Theme- & Charakter-Picker UI ist implementiert und verwendbar.
+- [x] Die Parameter aus dem UI (Thema, Level, Namen) werden korrekt in das Generator-Objekt übergeben.
+- [x] Generierte Texte der Templates halten sich strikt an die vorgegebenen Längen- und Strukturvorgaben pro Level.

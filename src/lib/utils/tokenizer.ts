@@ -508,7 +508,8 @@ export function tokenizeStory(
   rawText: string,
   level: ReadingLevelNumber,
   companionName: string = 'Bello',
-  childName?: string
+  childName?: string,
+  structuredOutput?: import('../types/reading').GeneratedStoryOutput
 ): SentenceToken[] {
   const preparedText = injectCompanionName(rawText, companionName);
   const sentenceStrings = splitIntoSentences(preparedText);
@@ -522,9 +523,14 @@ export function tokenizeStory(
   const sentences: SentenceToken[] = sentenceStrings.map((sentenceStr, sentenceIndex) => {
     const rawWords = sentenceStr.split(/\s+/).filter((w) => w.length > 0);
 
-    const wordMetas: WordMeta[] = rawWords.map((word) => {
+    const wordMetas: WordMeta[] = rawWords.map((word, wordIndex) => {
       const clean = cleanPunctuation(word);
-      const syllables = splitSyllables(clean.length > 0 ? clean : word);
+      const preStructuredWord = structuredOutput?.sentences?.[sentenceIndex]?.words?.[wordIndex];
+      const syllables =
+        preStructuredWord?.syllables && preStructuredWord.syllables.length > 0
+          ? preStructuredWord.syllables
+          : splitSyllables(clean.length > 0 ? clean : word);
+
       return {
         word,
         cleanWord: clean,

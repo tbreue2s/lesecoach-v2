@@ -67,12 +67,27 @@ export interface SentenceToken {
   isCompleted: boolean;
 }
 
+export interface GeneratedWord {
+  clean: string;
+  syllables: string[];
+}
+
+export interface GeneratedSentence {
+  text: string;
+  words: GeneratedWord[];
+}
+
+export interface GeneratedStoryOutput {
+  sentences: GeneratedSentence[];
+}
+
 export interface StoryData {
   id: string;
   title: string;
   coverEmoji: string;
   levelSuitability: ReadingLevelNumber[];
   text: string;
+  structuredOutput?: GeneratedStoryOutput;
 }
 
 export type TurnState =

@@ -2,7 +2,7 @@
 
 **ID:** `WP08-TASKS`  
 **Parent Spec:** [WP08-story-gen.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP08-story-gen.md)  
-**Lifecycle Status:** `spec` ➔ `plan` ➔ `tasks`
+**Lifecycle Status:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` (mit Evidence) ➔ `accept` (done) ➔ `merge`
 
 ---
 
