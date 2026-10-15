@@ -2,7 +2,7 @@
 
 **ID:** `WP12-TASKS`  
 **Parent Spec:** [WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md)  
-**Lifecycle Status:** `tasks`
+**Lifecycle Status:** `merged`
 
 ---
 

@@ -317,8 +317,89 @@ const LEVEL_4_5_TEMPLATES: Record<string, (child: string, comp?: string) => stri
   ],
 };
 
-// Level 6 templates: 5-6 sentences, full child reading with repeated reading
-const LEVEL_6_TEMPLATES = LEVEL_4_5_TEMPLATES;
+// Level 6 templates: 6 sentences, full child reading (5-7 words per sentence)
+const LEVEL_6_TEMPLATES: Record<string, (child: string, comp?: string) => string[]> = {
+  theme_forest: (child, comp) => [
+    `${child} wandert früh in den großen Zauberwald.`,
+    comp ? `${comp} läuft fröhlich über das grüne Moos.` : `Ein kleiner Vogel singt ein schönes Lied.`,
+    `Überall rascheln bunte Blätter im kühlen Wind.`,
+    `${child} entdeckt einen geheimen Pfad aus Stein.`,
+    `Am Ende des Pfades sprudelt eine Quelle.`,
+    `Gemeinsam lauschen sie dem klaren Wasser.`,
+  ],
+  theme_wizard: (child, comp) => [
+    `${child} betritt den hohen Turm der Zauberschule.`,
+    comp ? `${comp} staunt über das leuchtende Licht.` : `Auf dem Tisch liegt ein uraltes Zauberbuch.`,
+    `Ein kleiner Zauberspruch lässt bunte Sterne tanzen.`,
+    `${child} rührt vorsichtig im silbernen Kessel um.`,
+    `Blauer Rauch steigt langsam zur Decke auf.`,
+    `Alle freuen sich über den gelungenen Trick.`,
+  ],
+  theme_horse: (child, comp) => [
+    `${child} öffnet das große Tor der Koppel.`,
+    comp ? `${comp} rennt vergnügt über die grüne Wiese.` : `Das weiße Pferd wiehert laut zur Begrüßung.`,
+    `In der Morgensonne glänzt das seidige Fell.`,
+    `${child} gibt dem lieben Tier einen Apfel.`,
+    `Gemeinsam reiten sie bis an den Bach.`,
+    `Der schöne Tag vergeht wie im Flug.`,
+  ],
+  theme_unicorn: (child, comp) => [
+    `${child} folgt den funkelnden Sternen im Tal.`,
+    comp ? `${comp} begleitet das Kind auf jedem Schritt.` : `Ein zarter Duft liegt in der Luft.`,
+    `Am klaren See steht das weiße Einhorn.`,
+    `Sein goldenes Horn leuchtet warm im Licht.`,
+    `${child} streichelt sanft den schönen weißen Hals.`,
+    `Ein Gefühl von großer Freude erfüllt alle.`,
+  ],
+  theme_superhero: (child, comp) => [
+    `${child} zieht den leuchtenden roten Umhang an.`,
+    comp ? `${comp} springt mutig als treuer Begleiter mit.` : `Ein lauter Notruf ertönt im Stadtpark.`,
+    `Mit schnellen Schritten eilt die Hilfe herbei.`,
+    `${child} rettet ein kleines Kätzchen vom Baum.`,
+    `Die dankbaren Menschen klatschen begeistert in die Hände.`,
+    `Das mutige Helden-Team hat die Stadt gerettet.`,
+  ],
+  theme_ocean: (child, comp) => [
+    `${child} läuft barfuß an den weiten Sandstrand.`,
+    comp ? `${comp} springt fröhlich über die kleinen Wellen.` : `Kleine Krebse krabbeln im feuchten Sand.`,
+    `Eine bunte Muschel glänzt in der Sonne.`,
+    `${child} baut eine stolze Burg aus Sand.`,
+    `In der Ferne springt ein lustiger Delfin.`,
+    `Der Wind trägt den salzigen Meeresduft heran.`,
+  ],
+  theme_treasure: (child, comp) => [
+    `${child} betrachtet die geheimnisvolle alte Landkarte genau.`,
+    comp ? `${comp} schnuppert neugierig an einem großen Felsen.` : `Ein schmaler Pfad führt in die Höhle.`,
+    `Hinter dichten Wurzeln liegt eine schwere Truhe.`,
+    `${child} dreht den rostigen Schlüssel im Schloss.`,
+    `Im Inneren funkeln unzählige glänzende goldene Münzen.`,
+    `Der große Schatz ist endlich sicher gehoben.`,
+  ],
+  theme_pirate: (child, comp) => [
+    `${child} betritt das Deck des stolzen Segelschiffs.`,
+    comp ? `${comp} hält als treuer Ausguck Ausschau.` : `Der bunte Papagei ruft laut vom Mast.`,
+    `Die frische Brise bläst in das Segel.`,
+    `${child} steuert das hölzerne Rad nach Süden.`,
+    `Am Horizont taucht eine grüne Insel auf.`,
+    `Voller Tatendrang setzt das Schiff die Fahrt fort.`,
+  ],
+  theme_dino: (child, comp) => [
+    `${child} wandert durch den uralten grünen Dschungel.`,
+    comp ? `${comp} staunt über eine riesige Fußspur im Boden.` : `Mächtige Baumriesen spenden kühlen Schatten vor Sonne.`,
+    `Ein friedlicher Urzeitriese kaut an frischen Zweigen.`,
+    `${child} füttert das freundliche Tier mit Palmwedeln.`,
+    `Der kleine Baby-Dino piepst fröhlich im Nest.`,
+    `Das spannende Abenteuer bleibt für immer unvergessen.`,
+  ],
+  theme_space: (child, comp) => [
+    `${child} schaut durch die Scheibe der Raumkapsel.`,
+    comp ? `${comp} schwebt federleicht durch den gemütlichen Raum.` : `Draußen kreisen viele silberne Sterne im Kosmos.`,
+    `Die blaue Erde funkelt im dunklen All.`,
+    `${child} bedient die Schalter mit ruhiger Hand.`,
+    `Ein heller Komet zieht seine leuchtende Bahn.`,
+    `Die faszinierende Weltraummission ist ein voller Erfolg.`,
+  ],
+};
 
 // Phase C (Level 7-9) templates: Longer passages
 const LEVEL_7_TEMPLATES: Record<string, (child: string, comp?: string) => string[]> = {

@@ -170,5 +170,32 @@ describe('Level Validator Engine (WP03)', () => {
       const res = validateStoryForLevel(storyWithoutPunctuation, 8);
       expect(res.issues.some((i) => i.includes('Satzzeichen'))).toBe(true);
     });
+
+    it('WP12: Level 1 allows complex narrative words for app reading as long as each sentence has a score-0 child word', () => {
+      // In this story: complex words like "prächtige", "Schloss", "zauberhaften", "Schlüsselloch" are read by the app.
+      // Score-0 words for the child: "Tor", "Hut", "Ruf", "Mut".
+      const storyWithComplexAppWords = [
+        'Emil geht durch das prächtige Tor.',
+        'Der kleine Hund schnuppert am alten Hut.',
+        'Im tiefen Wald hallt ein lauter Ruf.',
+        'Der tapfere Junge hat viel Mut.',
+      ].join(' ');
+
+      const res = validateStoryForLevel(storyWithComplexAppWords, 1);
+      expect(res.isSuitable).toBe(true);
+      expect(res.issues).toHaveLength(0);
+    });
+
+    it('WP12: Level 1 flags story if a sentence has no suitable score-0 target word for the child', () => {
+      // Sentence 1 has "Tor" (score 0), but Sentence 2 has only complex words (no score 0 word)
+      const storyMissingChildWord = [
+        'Emil geht durch das Tor.',
+        'Auf dem weißen Pfad galoppiert ein prächtiges Pferd vor der Sandburg.',
+      ].join(' ');
+
+      const res = validateStoryForLevel(storyMissingChildWord, 1);
+      expect(res.isSuitable).toBe(false);
+      expect(res.issues.some((i) => i.includes('kein geeignetes einfaches Zielwort'))).toBe(true);
+    });
   });
 });

@@ -1,7 +1,7 @@
 # Work Package 12: Stufengerechte & Skalierende Geschichten-Generierung (WP-StoryScaling)
 
 **ID:** `WP12`  
-**Status:** `spec`  
+**Status:** `merged`  
 **Lifecycle:** `spec` ➔ `plan` ➔ `tasks` ➔ `in_review` ➔ `accept` ➔ `merge`
 
 ---
@@ -62,12 +62,12 @@ Currently, story generation and templates (introduced in WP08) use a rigid, rela
 
 ## 3. Acceptance Criteria
 
-- [ ] Geschichten für Stufen 1 bis 9 weisen einen konsistenten Längenzuwachs auf (Stufe 1 ~20-25 Wörter, Stufe 9 150-200+ Wörter).
-- [ ] In Stufe 1 enthält jeder Satz mindestens ein Kind-Zielwort mit Komplexitäts-Score 0; Vorlese-Wörter dürfen reichhaltiger sein.
-- [ ] `validateStoryForLevel` validiert erfolgreich Geschichten, in denen die App anspruchsvollere Vorlesewörter nutzt, solange die Kind-Wörter stufenkonform sind.
-- [ ] Der Mock-Generator erzeugt für jedes Thema stufengerechte, längere und lebendigere Geschichten.
-- [ ] Die Prompt-Templates spiegeln die neuen Längenvorgaben und die Differenzierung zwischen Vorlese- und Kind-Wortschatz wider.
-- [ ] Sämtliche Vitest-Tests und Typisierungsprüfungen (`npm test`, `npm run build`) sind grün.
+- [x] Geschichten für Stufen 1 bis 9 weisen einen konsistenten Längenzuwachs auf (Stufe 1 ~20-25 Wörter, Stufe 9 150-200+ Wörter).
+- [x] In Stufe 1 enthält jeder Satz mindestens ein Kind-Zielwort mit Komplexitäts-Score 0; Vorlese-Wörter dürfen reichhaltiger sein.
+- [x] `validateStoryForLevel` validiert erfolgreich Geschichten, in denen die App anspruchsvollere Vorlesewörter nutzt, solange die Kind-Wörter stufenkonform sind.
+- [x] Der Mock-Generator erzeugt für jedes Thema stufengerechte, längere und lebendigere Geschichten.
+- [x] Die Prompt-Templates spiegeln die neuen Längenvorgaben und die Differenzierung zwischen Vorlese- und Kind-Wortschatz wider.
+- [x] Sämtliche Vitest-Tests und Typisierungsprüfungen (`npm test`, `npm run build`) sind grün.
 
 ---
 

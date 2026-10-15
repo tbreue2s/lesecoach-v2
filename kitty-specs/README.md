@@ -24,7 +24,7 @@ Willkommen in der Spezifikations- und Aufgabensteuerung für das Projekt **Lese-
 | **WP09** | Didaktische Phonem-Gewichtung (Dauerlaute vs. Plosive) | `merged` | [WP09-phoneme-scoring-refinement.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP09-phoneme-scoring-refinement.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP09-tasks.md) |
 | **WP10** | Name-Längenbegrenzung (20 Zeichen) & Prompt Injection Guard | `merged` | [WP10-name-length-limit-prompt-injection-guard.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP10-name-length-limit-prompt-injection-guard.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP10-tasks.md) |
 | **WP11** | Stufe 1 Didaktische Komplexitätsgrenze (Score = 0) | `merged` | [WP11-stufe-1-didaktische-komplexitaet-score-null.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP11-stufe-1-didaktische-komplexitaet-score-null.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP11-tasks.md) |
-| **WP12** | Stufengerechte & Skalierende Geschichten-Generierung | `tasks` | [WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-tasks.md) |
+| **WP12** | Stufengerechte & Skalierende Geschichten-Generierung | `merged` | [WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-tasks.md) |
 ---
 
 ## 🔄 Lifecycle-Phasen

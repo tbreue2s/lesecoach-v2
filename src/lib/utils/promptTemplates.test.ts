@@ -93,6 +93,16 @@ describe('Prompt Templates & JSON Output Mandate (WP08)', () => {
       expect(prompt).toContain('Thema: Zauberwald');
       expect(prompt).toContain('Hauptperson (Kind): "Tim"');
     });
+
+    it('WP12: includes vocabulary differentiation instructions (app reading vs child target words)', () => {
+      const promptLvl1 = generateStoryPrompt(1, sampleTheme, 'Lina');
+      expect(promptLvl1).toContain('Didaktische Differenzierung (Vorlese- vs. Kind-Wortschatz)');
+      expect(promptLvl1).toContain('Komplexität 0');
+
+      const promptLvl2 = generateStoryPrompt(2, sampleTheme, 'Lina');
+      expect(promptLvl2).toContain('Didaktische Differenzierung');
+      expect(promptLvl2).toContain('Begleitende Vorlesewörter der App dürfen reichhaltiger sein');
+    });
   });
 
   describe('parseGeneratedStoryJson', () => {

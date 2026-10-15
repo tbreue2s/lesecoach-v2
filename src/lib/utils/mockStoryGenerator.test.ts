@@ -150,6 +150,38 @@ describe('Level-based Story Generation & Structured Output (WP08)', () => {
       expect(tokens[2].role).toBe('app');
       expect(tokens[3].role).toBe('child');
     });
+
+    it('Level 6: generates dedicated 6-sentence story with 5-7 words per sentence and full child reading role', () => {
+      const payload: StoryConfigPayload = {
+        level: 6,
+        childName: 'Felix',
+        companion: {
+          id: 'dog',
+          name: 'Bello',
+          type: 'dog',
+          icon: '🐶',
+        },
+        theme: STORY_THEMES[0],
+      };
+      const story = generateStoryFromConfig(payload);
+      const sentences = story.text.split('\n').filter((s) => s.trim().length > 0);
+      expect(sentences).toHaveLength(6);
+
+      const tokens = tokenizeStory(
+        story.text,
+        6,
+        payload.companion?.name || '',
+        payload.childName,
+        story.structuredOutput
+      );
+      expect(tokens).toHaveLength(6);
+      // All sentences in Level 6 are role: 'child'
+      for (const sentToken of tokens) {
+        expect(sentToken.role).toBe('child');
+        expect(sentToken.words.length).toBeGreaterThanOrEqual(5);
+        expect(sentToken.words.length).toBeLessThanOrEqual(8);
+      }
+    });
   });
 
   describe('Phase C (Level 7-9) Passage Length Scaling', () => {

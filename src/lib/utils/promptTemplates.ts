@@ -24,7 +24,8 @@ export function getLevelPromptRules(level: ReadingLevelNumber): string {
   * KEINE Wörter mit 'ß', 'ck', 'tz' oder 'pf'.
   * KEINE Konsonanten-Cluster ('sch', 'sp', 'st').
 - Bevorzugte Phonetik: Priorisiere Dauerlaute (m, l, s, n, f, r) und offene Silben (z. B. Mama, Oma, Limo, Ruf, Nase, Fee, Name, See).
-- Erlaubte Basis-Nomen (Beispiele): Hund, Hut, Ball, See, Bus, Baum, Haus, Kind, Tag, Reh, Tier, Boot, Tor, Bild.`;
+- Erlaubte Basis-Nomen (Beispiele): Hund, Hut, Ball, See, Bus, Baum, Haus, Kind, Tag, Reh, Tier, Boot, Tor, Bild.
+- Didaktische Differenzierung (Vorlese- vs. Kind-Wortschatz): Die App liest den Hauptteil des Satzes flüssig vor. Im Satz dürfen atmosphärische Wörter vorkommen, solange für das Kind mindestens 1 absolut einfaches Zielwort mit Komplexität 0 (Dauerlaute/reguläre Laute) vorhanden ist.`;
 
     case 2:
       return `Lese-Stufe 2 (Wortpaar-Pioniere):
@@ -32,21 +33,24 @@ export function getLevelPromptRules(level: ReadingLevelNumber): string {
 - Syntax: Einbau einfacher Nomen-Phrasen mit Adjektiven oder Artikeln (z.B. "der rote Ball", "ein lieber Hund").
 - Wortschatz-Restriktion: Maximal 3 Silben pro Wort.
 - Nomen-Phrasen: In Summe maximal 4 Silben für die 2 zusammengehörigen Wörter.
-- Einfache Komposita erlaubt, jedoch ohne schwere Konsonantenhäufungen.`;
+- Einfache Komposita erlaubt, jedoch ohne schwere Konsonantenhäufungen.
+- Didaktische Differenzierung: Begleitende Vorlesewörter der App dürfen reichhaltiger sein, solange in jedem Satz ein für das Kind lösbares Wortpaar vorkommt.`;
 
     case 3:
       return `Lese-Stufe 3 (Mini-Phrasen-Meister):
 - Länge: 4-6 Sätze.
 - Satzlänge: Maximal 5-6 Wörter pro Satz.
 - Syntax: Kurze Sätze mit 2- bis 3-Wort-Phrasen.
-- Wortschatz: Maximal 3 Silben pro Wort, klare Handlungen und motivierende Satzrhythmen.`;
+- Wortschatz: Maximal 3 Silben pro Wort, klare Handlungen und motivierende Satzrhythmen.
+- Didaktische Differenzierung: Lebendige Handlung mit Begleiter; Kind liest Halbsätze von 3 bis 4 Wörtern (max. 7 Silben), App unterstützt beim Vorlesen.`;
 
     case 4:
       return `Lese-Stufe 4 (Tandem-Starter):
 - Struktur: Tandem-Lesen zwischen App und Kind. Das Kind liest jeden 3. Satz (Satz 2, 5, etc.).
 - Kind-Sätze: Kurz (3-5 Wörter), strikt nach einfachen Regeln (1-2 Silben, keine schwierigen Lautgruppen).
 - App-Sätze: Länger (6-8 Wörter), natürlicherer und reichhaltigerer Erzähl-Wortschatz erlaubt.
-- Gesamtlänge: 5-6 Sätze.`;
+- Gesamtlänge: 5-6 Sätze.
+- Didaktik: Geschichten werden schrittweise länger und erzählen ein zusammenhängendes Erlebnis.`;
 
     case 5:
       return `Lese-Stufe 5 (Tandem-Profi):
@@ -54,29 +58,29 @@ export function getLevelPromptRules(level: ReadingLevelNumber): string {
 - Kind-Sätze: Kurz (3-5 Wörter), didaktisch altersgerecht.
 - App-Sätze: 6-8 Wörter, spannend erzählt.
 - Gesamtlänge: 6 Sätze.
-- Didaktik: Bereitet auf flüssiges Wiederholungslesen vor.`;
+- Didaktik: Bereitet auf flüssiges Wiederholungslesen vor. Flüssige Interaktion zwischen App und Kind.`;
 
     case 6:
       return `Lese-Stufe 6 (Satz-Held):
 - Struktur: Alle Sätze werden vom Kind gelesen, gefolgt von Vorlese-Bestätigung zur Satzmelodie.
 - Länge: 5-6 Sätze.
 - Satzlänge: 5-7 Wörter pro Satz.
-- Didaktik: Fokus auf vollständige Satzstrukturen und flüssige Phrasierung.`;
+- Didaktik: Fokus auf vollständige Satzstrukturen und flüssige Phrasierung. Harmonische, motivierende Handlung.`;
 
     case 7:
       return `Lese-Stufe 7 (Flüssig-Leser I - Phase C):
 - Längen-Skalierung: Zusammenhängender Text mit ca. 30 Wörtern (~5-7 Sätze).
-- Didaktik: Flüssiges Lesen zusammenhängender Sinnabschnitte, abwechslungsreicher Wortschatz.`;
+- Didaktik: Flüssiges Lesen zusammenhängender Sinnabschnitte, abwechslungsreicher Wortschatz und spannende Abenteuer.`;
 
     case 8:
       return `Lese-Stufe 8 (Flüssig-Leser II - Phase C):
 - Längen-Skalierung: Zusammenhängender Text mit ca. 60 Wörtern (~8-12 Sätze).
-- Didaktik: Erhöhte Lesegeschwindigkeit und Textverständnis bei längeren Geschichten.`;
+- Didaktik: Erhöhte Lesegeschwindigkeit und Textverständnis bei längeren Geschichten mit wörtlicher Rede und Ausrufen (?, !).`;
 
     case 9:
       return `Lese-Stufe 9 (Lese-Champion - Phase C):
 - Längen-Skalierung: Vollständige Mini-Geschichte mit 100+ Wörtern.
-- Didaktik: Freies, flüssiges Lesen mit Dialogen und lebendiger Erzählstruktur.`;
+- Didaktik: Freies, flüssiges Lesen mit Dialogen, lebendiger Erzählstruktur und befriedigendem Höhepunkt.`;
   }
 }
 

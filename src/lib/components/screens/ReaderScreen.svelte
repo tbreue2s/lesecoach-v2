@@ -17,25 +17,11 @@
   let showLevelSelector = false;
 
   function initStory(lvl = $levelStore) {
-    if ($readingSessionStore.sentences.length > 0) {
-      // Story is already loaded, only re-tokenize if level changed
-      if ($readingSessionStore.level !== lvl) {
-        const currentStory = $storyConfigStore.activeStory || SAMPLE_STORIES.find((s) => s.id === $readingSessionStore.storyId) || SAMPLE_STORIES[0];
-        readingSessionStore.loadStory(
-          currentStory,
-          lvl,
-          activeCompanion.customName
-        );
-      }
+    if ($readingSessionStore.sentences.length > 0 && $readingSessionStore.level === lvl) {
       return;
     }
-
-    const currentStory = $storyConfigStore.activeStory || SAMPLE_STORIES[0];
-    readingSessionStore.loadStory(
-      currentStory,
-      lvl,
-      activeCompanion.customName
-    );
+    storyConfigStore.setLevel(lvl as any);
+    storyConfigStore.startAdventure();
   }
 
   onMount(() => {
@@ -43,25 +29,21 @@
   });
 
   function handleLevelChange(newLevel: number) {
-    const currentStory = $storyConfigStore.activeStory || SAMPLE_STORIES.find((s) => s.id === $readingSessionStore.storyId) || SAMPLE_STORIES[0];
-    readingSessionStore.loadStory(
-      currentStory,
-      newLevel as any,
-      activeCompanion.customName
-    );
+    storyConfigStore.setLevel(newLevel as any);
+    storyConfigStore.startAdventure();
   }
 
   function handlePrevLevel() {
     if ($levelStore > 1) {
-      levelStore.prevLevel();
-      initStory($levelStore);
+      storyConfigStore.setLevel(($levelStore - 1) as any);
+      storyConfigStore.startAdventure();
     }
   }
 
   function handleNextLevel() {
     if ($levelStore < 9) {
-      levelStore.nextLevel();
-      initStory($levelStore);
+      storyConfigStore.setLevel(($levelStore + 1) as any);
+      storyConfigStore.startAdventure();
     }
   }
 </script>

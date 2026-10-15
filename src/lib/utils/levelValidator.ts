@@ -9,6 +9,7 @@ import {
   cleanPunctuation,
   hasComplexClusters,
   calculateWordComplexity,
+  tokenizeStory,
 } from './tokenizer';
 import { splitSyllables } from './syllableSplitter';
 
@@ -224,16 +225,44 @@ export function validateStoryForLevel(
     );
   }
 
-  // Level 1 specific phonological checks
+  // Didactic word suitability:
+  // Complex or richer narrative words may be read aloud by the app,
+  // as long as sufficient suitable simple target words are present for the child.
   if (level === 1) {
-    for (const w of words) {
-      const clean = cleanPunctuation(w);
-      const syl = splitSyllables(clean);
-      const val = validateWordForLevel(clean, syl, 1);
-      if (!val.isValid) {
-        issues.push(val.reason || `Ungültiges Wort: ${clean}`);
+    const tokenized = tokenizeStory(storyText, 1);
+    tokenized.forEach((sent, idx) => {
+      const childWords = sent.words.filter((w) => w.role === 'child');
+      if (childWords.length === 0) {
+        issues.push(
+          `Satz ${idx + 1} enthält kein geeignetes einfaches Zielwort (Score 0) für das Kind.`
+        );
+      } else {
+        for (const token of childWords) {
+          const val = validateWordForLevel(token.cleanWord, token.syllables, 1);
+          if (!val.isValid) {
+            issues.push(
+              val.reason || `Ungültiges Kind-Zielwort in Satz ${idx + 1}: ${token.cleanWord}`
+            );
+          }
+        }
       }
-    }
+    });
+  } else if (level === 2) {
+    const tokenized = tokenizeStory(storyText, 2);
+    tokenized.forEach((sent, idx) => {
+      const childWords = sent.words.filter((w) => w.role === 'child');
+      if (childWords.length > 0 && childWords.length !== 2) {
+        issues.push(`Satz ${idx + 1} enthält kein passendes Wortpaar (2 Wörter) für das Kind.`);
+      }
+    });
+  } else if (level === 3) {
+    const tokenized = tokenizeStory(storyText, 3);
+    tokenized.forEach((sent, idx) => {
+      const childWords = sent.words.filter((w) => w.role === 'child');
+      if (childWords.length > 0 && (childWords.length < 3 || childWords.length > 4)) {
+        issues.push(`Satz ${idx + 1} enthält keine passende Phrase (3-4 Wörter) für das Kind.`);
+      }
+    });
   }
 
   // Level 8 checks for expressive punctuation (?, !)
