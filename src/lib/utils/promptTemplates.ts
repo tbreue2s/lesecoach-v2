@@ -23,6 +23,7 @@ export function getLevelPromptRules(level: ReadingLevelNumber): string {
   * KEINE Komposita (keine zusammengesetzten Nomen wie "Sandburg", "Zauberschule" oder "Seifenblasen").
   * KEINE Wörter mit 'ß', 'ck', 'tz' oder 'pf'.
   * KEINE Konsonanten-Cluster ('sch', 'sp', 'st').
+- Bevorzugte Phonetik: Priorisiere Dauerlaute (m, l, s, n, f, r) und offene Silben (z. B. Mama, Oma, Limo, Ruf, Nase, Fee, Name, See).
 - Erlaubte Basis-Nomen (Beispiele): Hund, Hut, Ball, See, Bus, Baum, Haus, Kind, Tag, Reh, Tier, Boot, Tor, Bild.`;
 
     case 2:

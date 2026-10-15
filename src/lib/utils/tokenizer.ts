@@ -235,6 +235,17 @@ export function calculateWordComplexity(word: string, syllables: string[] = []):
   return score;
 }
 
+/**
+ * Calculates didactic phoneme tiebreaker score for word selection (WP09).
+ * Continuous consonants (m, l, s, n, f, r) and vowels allow smooth phonetic blending for early readers.
+ * Plosive stop consonants (p, t, k, b, d, g) cause airflow interruption and receive a minor +0.1 selection penalty.
+ */
+export function calculatePhonemeTiebreaker(cleanWord: string): number {
+  if (!cleanWord) return 0;
+  const plosiveMatches = cleanWord.toLowerCase().match(/[ptkbdg]/g);
+  return plosiveMatches ? plosiveMatches.length * 0.1 : 0;
+}
+
 export interface WordMeta {
   word: string;
   cleanWord: string;
@@ -242,9 +253,13 @@ export interface WordMeta {
 }
 
 /**
- * Intelligent selector for Phase A (Levels 1, 2, 3) enforcing didactic scoring (WP07):
- * - Level 1: Wählt das Nomen/Vollverb mit dem niedrigsten Score (Score <= 1). Überspringt bei Score >= 2 (role: 'app').
- * - Level 2: Strikte Adjazenz [Artikel/Adjektiv + Nomen], sum(syllables) <= 4, priorisiert nach niedrigstem Score.
+ * Intelligent selector for Phase A (Levels 1, 2, 3) enforcing didactic scoring (WP07 & WP09):
+ * - Level 1: Wählt das Nomen/Vollverb mit dem niedrigsten Score (Score <= 1).
+ *            Priorisiert bei gleichem Basisscore Wörter mit Dauerlauten (m, l, s, n, f, r)
+ *            vor Wörtern mit Verschlusslauten/Plosiven (p, t, k, b, d, g) via calculatePhonemeTiebreaker.
+ *            Überspringt bei Score >= 2 (role: 'app').
+ * - Level 2: Strikte Adjazenz [Artikel/Adjektiv + Nomen], sum(syllables) <= 4, priorisiert nach niedrigstem Score
+ *            und Dauerlaut-Tiebreaker.
  * - Level 3: 3 bis 4 aufeinanderfolgende Wörter mit sum(syllables) <= 7, kein Wort >= 4 Silben.
  */
 export function selectPhaseAChildIndices(
@@ -260,27 +275,32 @@ export function selectPhaseAChildIndices(
 
   if (level === 1) {
     let bestIndex: number | null = null;
-    let lowestScore = Infinity;
+    let lowestSelectionScore = Infinity;
+    let bestBaseScore = Infinity;
 
     for (let i = 0; i < rawWords.length; i++) {
       const w = rawWords[i];
       if (!isLevel1EligibleWord(w.cleanWord)) continue;
 
-      let score = calculateWordComplexity(w.cleanWord, w.syllables);
+      const baseScore = calculateWordComplexity(w.cleanWord, w.syllables);
+      if (baseScore > 1) continue;
+
+      let selectionScore = baseScore + calculatePhonemeTiebreaker(w.cleanWord);
 
       if (isProtectedName(w.cleanWord, companionName, childName)) {
         const lower = cleanPunctuation(w.cleanWord).toLowerCase();
-        score += usedChildNames?.has(lower) ? 100 : 50; 
+        selectionScore += usedChildNames?.has(lower) ? 100 : 50; 
       }
 
-      if (score < lowestScore) {
-        lowestScore = score;
+      if (selectionScore < lowestSelectionScore) {
+        lowestSelectionScore = selectionScore;
+        bestBaseScore = baseScore;
         bestIndex = i;
       }
     }
 
-    // HARTER CUTOFF: Level 1 darf maximal Score 1 haben!
-    if (bestIndex !== null && lowestScore <= 1) {
+    // HARTER CUTOFF: Level 1 darf maximal baseScore 1 haben und keine disqualifizierten Eigennamen
+    if (bestIndex !== null && bestBaseScore <= 1 && lowestSelectionScore < 50) {
       selected.add(bestIndex);
     }
     return selected;
@@ -309,7 +329,8 @@ export function selectPhaseAChildIndices(
       if (isProtectedName(w1.cleanWord, companionName, childName)) score1 += 50;
       if (isProtectedName(w2.cleanWord, companionName, childName)) score2 += 50;
 
-      const totalScore = score1 + score2;
+      const tiebreaker = calculatePhonemeTiebreaker(w1.cleanWord) + calculatePhonemeTiebreaker(w2.cleanWord);
+      const totalScore = score1 + score2 + tiebreaker;
       if (totalScore < lowestScore) {
         lowestScore = totalScore;
         bestPair = [i, i + 1];

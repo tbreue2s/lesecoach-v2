@@ -63,3 +63,4 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP06** | Lückentext & Echtzeit-Spracherkennung | `accepted` | Web Speech STT, Audio-Pause, Aussprache-Validierung, Feedback |
 | **WP07** | Tokenizer Refactoring (Didaktischer Schiedsrichter) | `accepted` | Penalty-Scoring, Level 1 & 2 Scoring, Eigennamen-Limitierung |
 | **WP08** | Level-basierte Text-Generierung | `accepted` | LLM-Prompt-Templates, Didaktische Stufen-Generierung |
+| **WP09** | Didaktische Phonem-Gewichtung | `merged` | Dauerlaute vs. Plosive Tiebreaker, Level 1 & 2 Selektion |

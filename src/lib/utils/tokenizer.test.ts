@@ -8,6 +8,7 @@ import {
   isAdjective,
   isNoun,
   calculateWordComplexity,
+  calculatePhonemeTiebreaker,
 } from './tokenizer';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 
@@ -409,6 +410,63 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
         const allBelloTokens = tokenized.flatMap((s) => s.words).filter((w) => w.cleanWord === 'Bello');
         const belloChildTokens = allBelloTokens.filter((w) => w.role === 'child');
         expect(belloChildTokens.length).toBeLessThanOrEqual(1);
+      });
+    });
+
+    describe('WP09: Didaktische Phonem-Gewichtung (Dauerlaute vs. Plosive)', () => {
+      it('calculates 0 tiebreaker for words composed purely of vowels and continuous consonants', () => {
+        expect(calculatePhonemeTiebreaker('Mama')).toBe(0);
+        expect(calculatePhonemeTiebreaker('Oma')).toBe(0);
+        expect(calculatePhonemeTiebreaker('Limo')).toBe(0);
+        expect(calculatePhonemeTiebreaker('Ruf')).toBe(0);
+        expect(calculatePhonemeTiebreaker('Fee')).toBe(0);
+        expect(calculatePhonemeTiebreaker('Nase')).toBe(0);
+      });
+
+      it('adds +0.1 for each plosive stop consonant (p, t, k, b, d, g)', () => {
+        // "Hut" has 1 plosive ('t') -> 0.1
+        expect(calculatePhonemeTiebreaker('Hut')).toBeCloseTo(0.1);
+        // "Tor" has 1 plosive ('t') -> 0.1
+        expect(calculatePhonemeTiebreaker('Tor')).toBeCloseTo(0.1);
+        // "Bad" has 2 plosives ('b', 'd') -> 0.2
+        expect(calculatePhonemeTiebreaker('Bad')).toBeCloseTo(0.2);
+        // "Paket" has 2 plosives ('p', 'k', 't' -> 3) -> 0.3
+        expect(calculatePhonemeTiebreaker('Paket')).toBeCloseTo(0.3);
+      });
+
+      it('LEVEL 1: prioritizes continuous sound words ("Oma") over plosive words ("Tor") regardless of sentence order', () => {
+        // Test case 1: "Tor" comes first, "Oma" comes second
+        const sentence1 = 'Am Tor steht Oma.';
+        const tokenized1 = tokenizeStory(sentence1, 1, 'Bello');
+        const childWords1 = tokenized1[0].words.filter((w) => w.role === 'child');
+        expect(childWords1.length).toBe(1);
+        expect(childWords1[0].cleanWord).toBe('Oma');
+
+        // Test case 2: "Oma" comes first, "Tor" comes second
+        const sentence2 = 'Oma steht am Tor.';
+        const tokenized2 = tokenizeStory(sentence2, 1, 'Bello');
+        const childWords2 = tokenized2[0].words.filter((w) => w.role === 'child');
+        expect(childWords2.length).toBe(1);
+        expect(childWords2[0].cleanWord).toBe('Oma');
+      });
+
+      it('LEVEL 1: still reliably selects valid plosive words when no continuous-only words exist', () => {
+        // Sentence only has "Hut" (score 0, tiebreaker 0.1) as valid target
+        const sentence = 'Hier liegt ein roter Hut.';
+        const tokenized = tokenizeStory(sentence, 1, 'Bello');
+        const childWords = tokenized[0].words.filter((w) => w.role === 'child');
+        expect(childWords.length).toBe(1);
+        expect(childWords[0].cleanWord).toBe('Hut');
+      });
+
+      it('LEVEL 2: prefers pairs with continuous consonants when complexity base score is equal', () => {
+        // "eine Limo" (tiebreaker 0) vs "ein Bad" (tiebreaker 0.2)
+        const story = 'Hier ist eine Limo und ein Bad.';
+        const tokenized = tokenizeStory(story, 2, 'Bello');
+        const childWords = tokenized[0].words.filter((w) => w.role === 'child');
+        expect(childWords.length).toBe(2);
+        expect(childWords[0].cleanWord).toBe('eine');
+        expect(childWords[1].cleanWord).toBe('Limo');
       });
     });
   });
