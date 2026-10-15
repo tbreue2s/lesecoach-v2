@@ -65,3 +65,6 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP08** | Level-basierte Text-Generierung | `accepted` | LLM-Prompt-Templates, Didaktische Stufen-Generierung |
 | **WP09** | Didaktische Phonem-Gewichtung | `merged` | Dauerlaute vs. Plosive Tiebreaker, Level 1 & 2 Selektion |
 | **WP10** | Name-Längenbegrenzung & Injection Guard | `merged` | 20-Zeichen-Limit für Kind & Begleiter, Prompt Injection Guard |
+| **WP11** | Stufe 1 Didaktische Komplexitätsgrenze | `merged` | Striktes Score = 0 Limit für Kind-Zielwörter in Stufe 1 |
+| **WP12** | Stufengerechte & Skalierende Geschichten | `tasks` | Längere Geschichten je Stufe, Trennung Vorlese- vs. Kind-Wortschatz |
+

@@ -42,12 +42,12 @@ export function validateWordForLevel(
     };
   }
 
-  // Level 1: Strict didactic complexity score threshold (score <= 1)
+  // Level 1: Strict didactic complexity score threshold (score === 0)
   if (level === 1) {
-    if (calculateWordComplexity(clean, syllables) > 1) {
+    if (calculateWordComplexity(clean, syllables) > 0) {
       return {
         isValid: false,
-        reason: `Wort "${word}" hat eine zu hohe Komplexität für Level 1 (Score > 1).`,
+        reason: `Wort "${word}" hat eine zu hohe Komplexität für Level 1 (Score > 0).`,
       };
     }
   }

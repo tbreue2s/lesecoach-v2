@@ -29,11 +29,12 @@ describe('Level Validator Engine (WP03)', () => {
   });
 
   describe('validateWordForLevel', () => {
-    it('Level 1: accepts 1- or 2-syllable phonetically regular words with complexity score <= 1', () => {
+    it('Level 1: accepts 1- or 2-syllable phonetically regular words with complexity score === 0', () => {
       expect(validateWordForLevel('Hut', ['Hut'], 1).isValid).toBe(true);
       expect(validateWordForLevel('Rose', ['Ro', 'se'], 1).isValid).toBe(true);
       expect(validateWordForLevel('Tor', ['Tor'], 1).isValid).toBe(true);
-      expect(validateWordForLevel('Auto', ['Au', 'to'], 1).isValid).toBe(true);
+      // 'Auto' has diphthong (score 1) and must be rejected in Level 1 under score = 0 rule
+      expect(validateWordForLevel('Auto', ['Au', 'to'], 1).isValid).toBe(false);
     });
 
     it('Level 1: rejects words with complexity score >= 2 (clusters, 3+ syllables, double consonants)', () => {

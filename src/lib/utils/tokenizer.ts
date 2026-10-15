@@ -283,7 +283,7 @@ export function selectPhaseAChildIndices(
       if (!isLevel1EligibleWord(w.cleanWord)) continue;
 
       const baseScore = calculateWordComplexity(w.cleanWord, w.syllables);
-      if (baseScore > 1) continue;
+      if (baseScore > 0) continue;
 
       let selectionScore = baseScore + calculatePhonemeTiebreaker(w.cleanWord);
 
@@ -299,8 +299,8 @@ export function selectPhaseAChildIndices(
       }
     }
 
-    // HARTER CUTOFF: Level 1 darf maximal baseScore 1 haben und keine disqualifizierten Eigennamen
-    if (bestIndex !== null && bestBaseScore <= 1 && lowestSelectionScore < 50) {
+    // HARTER CUTOFF: Level 1 darf maximal baseScore 0 haben und keine disqualifizierten Eigennamen
+    if (bestIndex !== null && bestBaseScore === 0 && lowestSelectionScore < 50) {
       selected.add(bestIndex);
     }
     return selected;
