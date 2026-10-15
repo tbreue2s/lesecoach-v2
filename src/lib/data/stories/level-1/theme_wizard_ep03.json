@@ -1,0 +1,164 @@
+{
+  "themeId": "theme_wizard",
+  "level": 1,
+  "episode": 3,
+  "disturberWord": "Roboter",
+  "title": "Roboter am Besen",
+  "sentences": [
+    {
+      "text": "Ein Roboter steht am Besen.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Roboter",
+          "syllables": [
+            "Ro",
+            "bo",
+            "ter"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Besen",
+          "syllables": [
+            "Be",
+            "sen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Regen ruft laut im Wind.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Regen",
+          "syllables": [
+            "Re",
+            "gen"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Nadel eilt schnell herbei.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Nadel",
+          "syllables": [
+            "Na",
+            "del"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle laufen froh zum Foto.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "laufen",
+          "syllables": [
+            "lau",
+            "fen"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Foto",
+          "syllables": [
+            "Fo",
+            "to"
+          ]
+        }
+      ]
+    }
+  ]
+}

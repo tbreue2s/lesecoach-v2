@@ -1,0 +1,161 @@
+{
+  "themeId": "theme_dino",
+  "level": 1,
+  "episode": 2,
+  "disturberWord": "Zelt",
+  "title": "Zelt am Paket",
+  "sentences": [
+    {
+      "text": "Ein Zelt steht am Paket.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Zelt",
+          "syllables": [
+            "Zelt"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Paket",
+          "syllables": [
+            "Pa",
+            "ket"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Igel ruft laut im Wind.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Igel",
+          "syllables": [
+            "I",
+            "gel"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Glas eilt schnell herbei.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Glas",
+          "syllables": [
+            "Glas"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle laufen froh zum Falke.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "laufen",
+          "syllables": [
+            "lau",
+            "fen"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Falke",
+          "syllables": [
+            "Fal",
+            "ke"
+          ]
+        }
+      ]
+    }
+  ]
+}

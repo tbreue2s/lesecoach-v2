@@ -1,0 +1,162 @@
+{
+  "themeId": "theme_treasure",
+  "level": 1,
+  "episode": 2,
+  "disturberWord": "Tuba",
+  "title": "Tuba am Dieb",
+  "sentences": [
+    {
+      "text": "Ein Tuba steht am Dieb.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Tuba",
+          "syllables": [
+            "Tu",
+            "ba"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Dieb",
+          "syllables": [
+            "Dieb"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Regen ruft laut im Wind.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Regen",
+          "syllables": [
+            "Re",
+            "gen"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Limo eilt schnell herbei.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle laufen froh zum Feder.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "laufen",
+          "syllables": [
+            "lau",
+            "fen"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Feder",
+          "syllables": [
+            "Fe",
+            "der"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "themeId": "theme_dino",
+  "level": 6,
+  "episode": 1,
+  "disturberWord": "Fernseher",
+  "title": "Kino im Urwald",
+  "sentences": [
+    {
+      "text": "Ein riesiger Dinosaurier stapft durch den Urwald.",
+      "words": [
+        { "clean": "Ein", "syllables": ["Ein"] },
+        { "clean": "riesiger", "syllables": ["rie", "si", "ger"] },
+        { "clean": "Dinosaurier", "syllables": ["Di", "no", "sau", "rier"] },
+        { "clean": "stapft", "syllables": ["stapft"] },
+        { "clean": "durch", "syllables": ["durch"] },
+        { "clean": "den", "syllables": ["den"] },
+        { "clean": "Urwald", "syllables": ["Ur", "wald"] }
+      ]
+    },
+    {
+      "text": "Plötzlich entdeckt er einen alten, flimmernden Fernseher.",
+      "words": [
+        { "clean": "Plötzlich", "syllables": ["Plötz", "lich"] },
+        { "clean": "entdeckt", "syllables": ["ent", "deckt"] },
+        { "clean": "er", "syllables": ["er"] },
+        { "clean": "einen", "syllables": ["ei", "nen"] },
+        { "clean": "alten", "syllables": ["al", "ten"] },
+        { "clean": "flimmernden", "syllables": ["flim", "mern", "den"] },
+        { "clean": "Fernseher", "syllables": ["Fern", "se", "her"] }
+      ]
+    },
+    {
+      "text": "Der Dino tippt neugierig auf den roten Knopf.",
+      "words": [
+        { "clean": "Der", "syllables": ["Der"] },
+        { "clean": "Dino", "syllables": ["Di", "no"] },
+        { "clean": "tippt", "syllables": ["tippt"] },
+        { "clean": "neugierig", "syllables": ["neu", "gie", "rig"] },
+        { "clean": "auf", "syllables": ["auf"] },
+        { "clean": "den", "syllables": ["den"] },
+        { "clean": "roten", "syllables": ["ro", "ten"] },
+        { "clean": "Knopf", "syllables": ["Knopf"] }
+      ]
+    },
+    {
+      "text": "Bunte Bilder leuchten hell im Urwald auf.",
+      "words": [
+        { "clean": "Bunte", "syllables": ["Bun", "te"] },
+        { "clean": "Bilder", "syllables": ["Bil", "der"] },
+        { "clean": "leuchten", "syllables": ["leuch", "ten"] },
+        { "clean": "hell", "syllables": ["hell"] },
+        { "clean": "im", "syllables": ["im"] },
+        { "clean": "Urwald", "syllables": ["Ur", "wald"] },
+        { "clean": "auf", "syllables": ["auf"] }
+      ]
+    },
+    {
+      "text": "Fröhlich tanzt der Riese über die Lichtung.",
+      "words": [
+        { "clean": "Fröhlich", "syllables": ["Fröh", "lich"] },
+        { "clean": "tanzt", "syllables": ["tanzt"] },
+        { "clean": "der", "syllables": ["der"] },
+        { "clean": "Riese", "syllables": ["Rie", "se"] },
+        { "clean": "über", "syllables": ["ü", "ber"] },
+        { "clean": "die", "syllables": ["die"] },
+        { "clean": "Lichtung", "syllables": ["Lich", "tung"] }
+      ]
+    }
+  ]
+}

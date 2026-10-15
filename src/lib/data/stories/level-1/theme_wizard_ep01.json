@@ -1,0 +1,159 @@
+{
+  "themeId": "theme_wizard",
+  "level": 1,
+  "episode": 1,
+  "disturberWord": "Brille",
+  "title": "Brille am Tal",
+  "sentences": [
+    {
+      "text": "Ein Brille steht am Tal.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Brille",
+          "syllables": [
+            "Bril",
+            "le"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Stein ruft laut im Wind.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Stein",
+          "syllables": [
+            "Stein"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Hut eilt schnell herbei.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle laufen froh zum Lied.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "laufen",
+          "syllables": [
+            "lau",
+            "fen"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Lied",
+          "syllables": [
+            "Lied"
+          ]
+        }
+      ]
+    }
+  ]
+}

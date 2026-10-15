@@ -1,0 +1,163 @@
+{
+  "themeId": "theme_pirate",
+  "level": 1,
+  "episode": 4,
+  "disturberWord": "Ananas",
+  "title": "Ananas am Hose",
+  "sentences": [
+    {
+      "text": "Ein Ananas steht am Hose.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Ananas",
+          "syllables": [
+            "A",
+            "na",
+            "nas"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Hose",
+          "syllables": [
+            "Ho",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Lama ruft laut im Wind.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Lama",
+          "syllables": [
+            "La",
+            "ma"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Boden eilt schnell herbei.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Boden",
+          "syllables": [
+            "Bo",
+            "den"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle laufen froh zum Bus.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "laufen",
+          "syllables": [
+            "lau",
+            "fen"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Bus",
+          "syllables": [
+            "Bus"
+          ]
+        }
+      ]
+    }
+  ]
+}

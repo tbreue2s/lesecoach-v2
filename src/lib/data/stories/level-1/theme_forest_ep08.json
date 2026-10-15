@@ -1,0 +1,175 @@
+{
+  "themeId": "theme_forest",
+  "level": 1,
+  "episode": 8,
+  "disturberWord": "Trampolin",
+  "title": "Trampolin beim Tor",
+  "sentences": [
+    {
+      "text": "Ein Trampolin steht am Tor.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Trampolin",
+          "syllables": [
+            "Tram",
+            "po",
+            "lin"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die Tafel sieht froh zum Hut.",
+      "words": [
+        {
+          "clean": "Die",
+          "syllables": [
+            "Die"
+          ]
+        },
+        {
+          "clean": "Tafel",
+          "syllables": [
+            "Ta",
+            "fel"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Dino eilt mit Kabel umher.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "Kabel",
+          "syllables": [
+            "Ka",
+            "bel"
+          ]
+        },
+        {
+          "clean": "umher",
+          "syllables": [
+            "um",
+            "her"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Papa ruft nach Bruder am Rad.",
+      "words": [
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "Bruder",
+          "syllables": [
+            "Bru",
+            "der"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Rad",
+          "syllables": [
+            "Rad"
+          ]
+        }
+      ]
+    }
+  ]
+}

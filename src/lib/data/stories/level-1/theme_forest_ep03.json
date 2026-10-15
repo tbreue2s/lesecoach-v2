@@ -1,0 +1,175 @@
+{
+  "themeId": "theme_forest",
+  "level": 1,
+  "episode": 3,
+  "disturberWord": "Ananas",
+  "title": "Ananas beim Tor",
+  "sentences": [
+    {
+      "text": "Ein Ananas steht am Tor.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Ananas",
+          "syllables": [
+            "A",
+            "na",
+            "nas"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die Nadel sieht froh zum Hut.",
+      "words": [
+        {
+          "clean": "Die",
+          "syllables": [
+            "Die"
+          ]
+        },
+        {
+          "clean": "Nadel",
+          "syllables": [
+            "Na",
+            "del"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Dino eilt mit Boden umher.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "Boden",
+          "syllables": [
+            "Bo",
+            "den"
+          ]
+        },
+        {
+          "clean": "umher",
+          "syllables": [
+            "um",
+            "her"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Papa ruft nach Pirat am Rad.",
+      "words": [
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "Pirat",
+          "syllables": [
+            "Pi",
+            "rat"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Rad",
+          "syllables": [
+            "Rad"
+          ]
+        }
+      ]
+    }
+  ]
+}

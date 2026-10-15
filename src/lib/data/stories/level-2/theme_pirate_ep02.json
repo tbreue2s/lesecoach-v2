@@ -1,0 +1,170 @@
+{
+  "themeId": "theme_pirate",
+  "level": 2,
+  "episode": 2,
+  "disturberWord": "Schatzkiste",
+  "title": "Das lustige Schatzkiste",
+  "sentences": [
+    {
+      "text": "Der rote Schatzkiste liegt im Gras.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "rote",
+          "syllables": [
+            "ro",
+            "te"
+          ]
+        },
+        {
+          "clean": "Schatzkiste",
+          "syllables": [
+            "Schat",
+            "zkis",
+            "te"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Hund sieht den Fund.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Hund",
+          "syllables": [
+            "Hund"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Fund",
+          "syllables": [
+            "Fund"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das liebe Tier bellt leise.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "liebe",
+          "syllables": [
+            "lie",
+            "be"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "bellt",
+          "syllables": [
+            "bellt"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der alte Baum spendet Schatten.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "alte",
+          "syllables": [
+            "al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Baum",
+          "syllables": [
+            "Baum"
+          ]
+        },
+        {
+          "clean": "spendet",
+          "syllables": [
+            "spen",
+            "det"
+          ]
+        },
+        {
+          "clean": "Schatten",
+          "syllables": [
+            "Schat",
+            "ten"
+          ]
+        }
+      ]
+    }
+  ]
+}

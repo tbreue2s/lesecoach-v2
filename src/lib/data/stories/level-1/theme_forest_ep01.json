@@ -1,0 +1,168 @@
+{
+  "themeId": "theme_forest",
+  "level": 1,
+  "episode": 1,
+  "disturberWord": "Wecker",
+  "title": "Dino und der Wecker",
+  "sentences": [
+    {
+      "text": "Ein Dino geht zum Tor.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "geht",
+          "syllables": [
+            "geht"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Dino sieht einen Wecker.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Wecker",
+          "syllables": [
+            "We",
+            "cker"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Dino schaut den Wecker an.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Wecker",
+          "syllables": [
+            "We",
+            "cker"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ruft der Dino am Tor.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    }
+  ]
+}

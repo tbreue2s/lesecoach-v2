@@ -1,0 +1,52 @@
+{
+  "themeId": "theme_dino",
+  "level": 1,
+  "episode": 1,
+  "disturberWord": "Fernseher",
+  "title": "Der Dino und der Fernseher",
+  "sentences": [
+    {
+      "text": "Ein Dino stapft durch das Tal.",
+      "words": [
+        { "clean": "Ein", "syllables": ["Ein"] },
+        { "clean": "Dino", "syllables": ["Di", "no"] },
+        { "clean": "stapft", "syllables": ["stapft"] },
+        { "clean": "durch", "syllables": ["durch"] },
+        { "clean": "das", "syllables": ["das"] },
+        { "clean": "Tal", "syllables": ["Tal"] }
+      ]
+    },
+    {
+      "text": "Im Gras flimmert ein Fernseher.",
+      "words": [
+        { "clean": "Im", "syllables": ["Im"] },
+        { "clean": "Gras", "syllables": ["Gras"] },
+        { "clean": "flimmert", "syllables": ["flim", "mert"] },
+        { "clean": "ein", "syllables": ["ein"] },
+        { "clean": "Fernseher", "syllables": ["Fern", "se", "her"] }
+      ]
+    },
+    {
+      "text": "Der Dino drückt auf das Kabel.",
+      "words": [
+        { "clean": "Der", "syllables": ["Der"] },
+        { "clean": "Dino", "syllables": ["Di", "no"] },
+        { "clean": "drückt", "syllables": ["drückt"] },
+        { "clean": "auf", "syllables": ["auf"] },
+        { "clean": "das", "syllables": ["das"] },
+        { "clean": "Kabel", "syllables": ["Ka", "bel"] }
+      ]
+    },
+    {
+      "text": "Auf dem Glas tanzt eine Maus.",
+      "words": [
+        { "clean": "Auf", "syllables": ["Auf"] },
+        { "clean": "dem", "syllables": ["dem"] },
+        { "clean": "Glas", "syllables": ["Glas"] },
+        { "clean": "tanzt", "syllables": ["tanzt"] },
+        { "clean": "eine", "syllables": ["ei", "ne"] },
+        { "clean": "Maus", "syllables": ["Maus"] }
+      ]
+    }
+  ]
+}

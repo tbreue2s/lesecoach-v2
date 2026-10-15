@@ -1,0 +1,174 @@
+{
+  "themeId": "theme_forest",
+  "level": 1,
+  "episode": 10,
+  "disturberWord": "Luftballon",
+  "title": "Luftballon beim Tor",
+  "sentences": [
+    {
+      "text": "Ein Luftballon steht am Tor.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Luftballon",
+          "syllables": [
+            "Luf",
+            "tbal",
+            "lon"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das Auto sieht froh zum Hut.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "Auto",
+          "syllables": [
+            "Au",
+            "to"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Dino eilt mit Hafen umher.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        },
+        {
+          "clean": "umher",
+          "syllables": [
+            "um",
+            "her"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Papa ruft nach Dieb am Rad.",
+      "words": [
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "Dieb",
+          "syllables": [
+            "Dieb"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Rad",
+          "syllables": [
+            "Rad"
+          ]
+        }
+      ]
+    }
+  ]
+}

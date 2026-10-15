@@ -1,0 +1,221 @@
+{
+  "themeId": "theme_wizard",
+  "level": 3,
+  "episode": 4,
+  "disturberWord": "Taschenlampe",
+  "title": "Abenteuer mit dem Taschenlampe",
+  "sentences": [
+    {
+      "text": "Heute ist ein schöner Tag im Zauberer.",
+      "words": [
+        {
+          "clean": "Heute",
+          "syllables": [
+            "Heu",
+            "te"
+          ]
+        },
+        {
+          "clean": "ist",
+          "syllables": [
+            "ist"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "schöner",
+          "syllables": [
+            "schö",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Tag",
+          "syllables": [
+            "Tag"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Zauberer",
+          "syllables": [
+            "Zau",
+            "be",
+            "rer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich rollt ein Taschenlampe herbei.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plöt",
+            "zlich"
+          ]
+        },
+        {
+          "clean": "rollt",
+          "syllables": [
+            "rollt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Taschenlampe",
+          "syllables": [
+            "Ta",
+            "schen",
+            "lam",
+            "pe"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle schauen ganz erstaunt hin.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "schauen",
+          "syllables": [
+            "schau",
+            "en"
+          ]
+        },
+        {
+          "clean": "ganz",
+          "syllables": [
+            "ganz"
+          ]
+        },
+        {
+          "clean": "erstaunt",
+          "syllables": [
+            "er",
+            "staunt"
+          ]
+        },
+        {
+          "clean": "hin",
+          "syllables": [
+            "hin"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das Taschenlampe macht lustige Geräusche.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "Taschenlampe",
+          "syllables": [
+            "Ta",
+            "schen",
+            "lam",
+            "pe"
+          ]
+        },
+        {
+          "clean": "macht",
+          "syllables": [
+            "macht"
+          ]
+        },
+        {
+          "clean": "lustige",
+          "syllables": [
+            "lus",
+            "ti",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Geräusche",
+          "syllables": [
+            "Ge",
+            "räu",
+            "sche"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zusammen lachen sie herzlich darüber.",
+      "words": [
+        {
+          "clean": "Zusammen",
+          "syllables": [
+            "Zu",
+            "sam",
+            "men"
+          ]
+        },
+        {
+          "clean": "lachen",
+          "syllables": [
+            "la",
+            "chen"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "herzlich",
+          "syllables": [
+            "her",
+            "zlich"
+          ]
+        },
+        {
+          "clean": "darüber",
+          "syllables": [
+            "da",
+            "rü",
+            "ber"
+          ]
+        }
+      ]
+    }
+  ]
+}

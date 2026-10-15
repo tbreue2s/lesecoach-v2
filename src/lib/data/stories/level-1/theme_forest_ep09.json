@@ -1,0 +1,174 @@
+{
+  "themeId": "theme_forest",
+  "level": 1,
+  "episode": 9,
+  "disturberWord": "Känguru",
+  "title": "Känguru beim Tor",
+  "sentences": [
+    {
+      "text": "Ein Känguru steht am Tor.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Känguru",
+          "syllables": [
+            "Kän",
+            "gu",
+            "ru"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die Feder sieht froh zum Hut.",
+      "words": [
+        {
+          "clean": "Die",
+          "syllables": [
+            "Die"
+          ]
+        },
+        {
+          "clean": "Feder",
+          "syllables": [
+            "Fe",
+            "der"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Dino eilt mit Oma umher.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "eilt",
+          "syllables": [
+            "eilt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "Oma",
+          "syllables": [
+            "O",
+            "ma"
+          ]
+        },
+        {
+          "clean": "umher",
+          "syllables": [
+            "um",
+            "her"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Papa ruft nach Rad am Rad.",
+      "words": [
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "Rad",
+          "syllables": [
+            "Rad"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Rad",
+          "syllables": [
+            "Rad"
+          ]
+        }
+      ]
+    }
+  ]
+}
