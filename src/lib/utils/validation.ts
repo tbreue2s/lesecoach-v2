@@ -7,7 +7,7 @@ import type { ValidationResult } from '../types/profile';
 export const STRICT_NAME_REGEX = /^[a-zA-ZäöüÄÖÜß]+$/;
 
 export const MIN_NAME_LENGTH = 2;
-export const MAX_NAME_LENGTH = 16;
+export const MAX_NAME_LENGTH = 20;
 
 /**
  * Validates a child or companion name against strict security and decency rules.

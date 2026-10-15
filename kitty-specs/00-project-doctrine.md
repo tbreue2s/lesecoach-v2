@@ -64,3 +64,4 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP07** | Tokenizer Refactoring (Didaktischer Schiedsrichter) | `accepted` | Penalty-Scoring, Level 1 & 2 Scoring, Eigennamen-Limitierung |
 | **WP08** | Level-basierte Text-Generierung | `accepted` | LLM-Prompt-Templates, Didaktische Stufen-Generierung |
 | **WP09** | Didaktische Phonem-Gewichtung | `merged` | Dauerlaute vs. Plosive Tiebreaker, Level 1 & 2 Selektion |
+| **WP10** | Name-Längenbegrenzung & Injection Guard | `merged` | 20-Zeichen-Limit für Kind & Begleiter, Prompt Injection Guard |

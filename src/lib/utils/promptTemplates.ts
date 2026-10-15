@@ -87,12 +87,17 @@ export function getLevelPromptRules(level: ReadingLevelNumber): string {
 export function buildStoryPrompt(options: PromptTemplateOptions): string {
   const { level, theme, childName, companionName } = options;
 
+  const safeChildName = (childName || 'Lese-Held').trim().replace(/[\r\n\t"]/g, '').slice(0, 20) || 'Lese-Held';
+  const safeCompanionName = companionName
+    ? companionName.trim().replace(/[\r\n\t"]/g, '').slice(0, 20)
+    : undefined;
+
   const themeLabel = typeof theme === 'string' ? theme : theme.label;
   const themeDescription = typeof theme === 'string' ? '' : theme.description || '';
 
-  const companionInstruction = companionName
-    ? `Begleiter des Kindes: "${companionName}". Der Begleiter soll als treuer Freund in der Geschichte mitwirken.`
-    : `Kein Begleiter ausgewählt. Das Kind ${childName} erlebt das Abenteuer allein oder mit anderen Nebenfiguren.`;
+  const companionInstruction = safeCompanionName
+    ? `Begleiter des Kindes: "${safeCompanionName}". Der Begleiter soll als treuer Freund in der Geschichte mitwirken.`
+    : `Kein Begleiter ausgewählt. Das Kind ${safeChildName} erlebt das Abenteuer allein oder mit anderen Nebenfiguren.`;
 
   const levelRules = getLevelPromptRules(level);
 
@@ -101,7 +106,7 @@ Deine Aufgabe ist es, eine kurze, motivierende Geschichte passend zu den didakti
 
 KONTEXT & PARAMETER:
 - Thema: ${themeLabel} (${themeDescription})
-- Hauptperson (Kind): "${childName}"
+- Hauptperson (Kind): "${safeChildName}"
 - ${companionInstruction}
 - Didaktische Stufe: ${level}
 
@@ -115,9 +120,9 @@ Die Antwort MUSS ein einziges, valides JSON-Objekt sein, das für jedes Wort die
 {
   "sentences": [
     {
-      "text": "${childName} sieht einen Hund.",
+      "text": "${safeChildName} sieht einen Hund.",
       "words": [
-        { "clean": "${childName}", "syllables": ["${childName}"] },
+        { "clean": "${safeChildName}", "syllables": ["${safeChildName}"] },
         { "clean": "sieht", "syllables": ["sieht"] },
         { "clean": "einen", "syllables": ["ei", "nen"] },
         { "clean": "Hund", "syllables": ["Hund"] }

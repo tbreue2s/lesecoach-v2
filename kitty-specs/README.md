@@ -22,6 +22,7 @@ Willkommen in der Spezifikations- und Aufgabensteuerung für das Projekt **Lese-
 | **WP07** | Tokenizer Refactoring (Didaktischer Schiedsrichter) | `accepted` | [WP07-tokenizer-refactor.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP07-tokenizer-refactor.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP07-tasks.md) |
 | **WP08** | Level-basierte Text-Generierung & Prompt-Templates | `accepted` | [WP08-story-gen.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP08-story-gen.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP08-tasks.md) |
 | **WP09** | Didaktische Phonem-Gewichtung (Dauerlaute vs. Plosive) | `merged` | [WP09-phoneme-scoring-refinement.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP09-phoneme-scoring-refinement.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP09-tasks.md) |
+| **WP10** | Name-Längenbegrenzung (20 Zeichen) & Prompt Injection Guard | `merged` | [WP10-name-length-limit-prompt-injection-guard.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP10-name-length-limit-prompt-injection-guard.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP10-tasks.md) |
 ---
 
 ## 🔄 Lifecycle-Phasen

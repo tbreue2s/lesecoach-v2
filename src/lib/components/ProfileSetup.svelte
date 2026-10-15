@@ -186,7 +186,7 @@
         value={rawChildName}
         on:input={handleChildNameInput}
         on:blur={handleChildNameBlur}
-        maxlength={16}
+        maxlength={20}
         autocomplete="off"
         spellcheck="false"
       />
@@ -234,7 +234,7 @@
           value={activeCompanion.customName}
           on:input={(e) => handleCompanionNameInput(activeCompanion.id, e)}
           on:blur={() => handleCompanionNameBlur(activeCompanion.id)}
-          maxlength={16}
+          maxlength={20}
           autocomplete="off"
           spellcheck="false"
         />
