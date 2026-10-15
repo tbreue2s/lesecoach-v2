@@ -2,114 +2,194 @@
   "themeId": "theme_superhero",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Dino",
-  "title": "Abenteuer mit dem Dino",
+  "disturberWord": "Ufo",
+  "title": "Abenteuer auf dem hohen Turm",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Superhelden.",
+      "text": "Ein abenteuerlustiger Tiger streift aufmerksam auf dem hohen Turm.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "abenteuerlustiger",
           "syllables": [
-            "ist"
+            "a",
+            "ben",
+            "teu",
+            "er",
+            "lus",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Tiger",
           "syllables": [
-            "ein"
+            "Ti",
+            "ger"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "streift",
           "syllables": [
-            "schö",
-            "ner"
+            "streift"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "aufmerksam",
           "syllables": [
-            "Tag"
+            "auf",
+            "merk",
+            "sam"
           ]
         },
         {
-          "clean": "im",
+          "clean": "auf",
           "syllables": [
-            "im"
+            "auf"
           ]
         },
         {
-          "clean": "Superhelden",
+          "clean": "dem",
           "syllables": [
-            "Su",
-            "per",
-            "hel",
-            "den"
+            "dem"
+          ]
+        },
+        {
+          "clean": "hohen",
+          "syllables": [
+            "ho",
+            "hen"
+          ]
+        },
+        {
+          "clean": "Turm",
+          "syllables": [
+            "Turm"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Dino herbei.",
+      "text": "Unter einem dichten Busch liegt plötzlich Ein Ufo verborgen.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Unter",
           "syllables": [
-            "Plöt",
+            "Un",
+            "ter"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "dichten",
+          "syllables": [
+            "dic",
+            "hten"
+          ]
+        },
+        {
+          "clean": "Busch",
+          "syllables": [
+            "Busch"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "Ein",
           "syllables": [
-            "rollt"
+            "Ein"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Ufo",
           "syllables": [
-            "ein"
+            "U",
+            "fo"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "verborgen",
           "syllables": [
-            "Di",
-            "no"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
+            "ver",
+            "bor",
+            "gen"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Das",
           "syllables": [
-            "Al",
-            "le"
+            "Das"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "neugierige",
           "syllables": [
-            "schau",
-            "en"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "untersucht",
+          "syllables": [
+            "un",
+            "ter",
+            "sucht"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "seltsame",
+          "syllables": [
+            "selt",
+            "sa",
+            "me"
+          ]
+        },
+        {
+          "clean": "Ding",
+          "syllables": [
+            "Ding"
           ]
         },
         {
@@ -119,97 +199,78 @@
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "genau",
           "syllables": [
-            "er",
-            "staunt"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
+            "ge",
+            "nau"
           ]
         }
       ]
     },
     {
-      "text": "Das Dino macht lustige Geräusche.",
+      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Voller",
           "syllables": [
-            "Das"
+            "Vol",
+            "ler"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Stolz",
           "syllables": [
-            "Di",
-            "no"
+            "Stolz"
           ]
         },
         {
-          "clean": "macht",
+          "clean": "präsentiert",
           "syllables": [
-            "macht"
+            "prä",
+            "sen",
+            "tiert"
           ]
         },
         {
-          "clean": "lustige",
+          "clean": "er",
           "syllables": [
-            "lus",
-            "ti",
-            "ge"
+            "er"
           ]
         },
         {
-          "clean": "Geräusche",
+          "clean": "den",
           "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "den"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "spektakulären",
           "syllables": [
-            "la",
-            "chen"
+            "spek",
+            "ta",
+            "ku",
+            "lä",
+            "ren"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "Fund",
           "syllables": [
-            "sie"
+            "Fund"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "allen",
           "syllables": [
-            "her",
-            "zlich"
+            "al",
+            "len"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freunden",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freun",
+            "den"
           ]
         }
       ]

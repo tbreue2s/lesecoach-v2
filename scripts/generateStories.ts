@@ -339,6 +339,24 @@ function getAccDefinite(word: string): string {
   return `den ${word}`;
 }
 
+interface ThemeFlavor {
+  protagonist: string;
+  settingDesc: string;
+}
+
+const THEME_FLAVORS: Record<string, ThemeFlavor> = {
+  theme_forest: { protagonist: 'Igel', settingDesc: 'im grünen Wald' },
+  theme_wizard: { protagonist: 'Kater', settingDesc: 'in der Zauberburg' },
+  theme_horse: { protagonist: 'Pony', settingDesc: 'auf der weiten Wiese' },
+  theme_unicorn: { protagonist: 'Lama', settingDesc: 'am bunten Regenbogen' },
+  theme_superhero: { protagonist: 'Tiger', settingDesc: 'auf dem hohen Turm' },
+  theme_ocean: { protagonist: 'Wal', settingDesc: 'im weiten Meer' },
+  theme_treasure: { protagonist: 'Biber', settingDesc: 'in der tiefen Höhle' },
+  theme_pirate: { protagonist: 'Pirat', settingDesc: 'auf dem großen Schiff' },
+  theme_dino: { protagonist: 'Dino', settingDesc: 'im tiefen Urwald' },
+  theme_space: { protagonist: 'Pilot', settingDesc: 'mitten im Weltall' },
+};
+
 /**
  * Deterministic fallback generator for offline testing or when no GEMINI_API_KEY is configured.
  */
@@ -351,41 +369,132 @@ export function generateFallbackStory(
 ): GeneratedStoryFile {
   let title = '';
   let rawSentences: string[] = [];
+  const flavor = THEME_FLAVORS[theme.id] || { protagonist: 'Dino', settingDesc: `im ${theme.label}` };
+
+  const defArtDisturber =
+    FEMININE_DISTURBERS.has(disturberWord) || FEMININE_NOUNS.has(disturberWord)
+      ? 'die'
+      : NEUTER_DISTURBERS.has(disturberWord) || NEUTER_NOUNS.has(disturberWord)
+      ? 'das'
+      : 'der';
 
   if (level === 1) {
-    const PROTAGONISTS = [
-      'Dino', 'Lama', 'Puma', 'Igel', 'Kater', 'Biber', 'Esel', 'Tiger', 'Opa', 'Papa', 'Wal',
-    ];
-    const protagonist = selectedNouns.find((n) => PROTAGONISTS.includes(n)) || 'Dino';
-    const otherNouns = selectedNouns.filter((n) => n !== protagonist);
-    const nLoc = otherNouns.find((n) => ['Tor', 'Haus', 'Tal', 'Baum', 'Hof'].includes(n)) || 'Tor';
+    // Preserve our special curated story if Dino + Fernseher
+    if (theme.id === 'theme_dino' && disturberWord === 'Fernseher') {
+      title = 'Der Dino und der Fernseher';
+      rawSentences = [
+        'Ein Dino stapft durch das Tal.',
+        'Im Gras flimmert ein Fernseher.',
+        'Der Dino drückt auf das Kabel.',
+        'Auf dem Glas tanzt eine Maus.',
+      ];
+    } else {
+      const PROTAGONISTS = [
+        'Dino', 'Lama', 'Puma', 'Igel', 'Kater', 'Biber', 'Esel', 'Tiger', 'Opa', 'Papa', 'Wal',
+      ];
+      const protagonist = selectedNouns.find((n) => PROTAGONISTS.includes(n)) || flavor.protagonist;
+      const otherNouns = selectedNouns.filter((n) => n !== protagonist);
+      const nLoc = otherNouns.find((n) => ['Tor', 'Haus', 'Tal', 'Baum', 'Hof'].includes(n)) || 'Tor';
+      const defArtProtagonist = FEMININE_NOUNS.has(protagonist) ? 'die' : NEUTER_NOUNS.has(protagonist) ? 'das' : 'der';
 
-    const defArtDisturber = FEMININE_DISTURBERS.has(disturberWord) || FEMININE_NOUNS.has(disturberWord) ? 'die' : NEUTER_DISTURBERS.has(disturberWord) || NEUTER_NOUNS.has(disturberWord) ? 'das' : 'der';
-    const defArtProtagonist = FEMININE_NOUNS.has(protagonist) ? 'die' : NEUTER_NOUNS.has(protagonist) ? 'das' : 'der';
-
-    title = `${protagonist} und ${defArtDisturber} ${disturberWord}`;
-    rawSentences = [
-      `${getNomIndefinite(protagonist)} geht zum ${nLoc}.`,
-      `${getNomDefinite(protagonist)} sieht ${getAccIndefinite(disturberWord)}.`,
-      `${getNomDefinite(protagonist)} schaut ${getAccDefinite(disturberWord)} an.`,
-      `Froh ruft ${defArtProtagonist} ${protagonist} am ${nLoc}.`,
-    ];
+      title = `${protagonist} und ${defArtDisturber} ${disturberWord}`;
+      rawSentences = [
+        `${getNomIndefinite(protagonist)} geht zum ${nLoc}.`,
+        `${getNomDefinite(protagonist)} sieht ${getAccIndefinite(disturberWord)}.`,
+        `${getNomDefinite(protagonist)} schaut ${getAccDefinite(disturberWord)} an.`,
+        `Froh ruft ${defArtProtagonist} ${protagonist} am ${nLoc}.`,
+      ];
+    }
   } else if (level === 2) {
-    title = `Das lustige ${disturberWord}`;
+    title = `Das bunte ${disturberWord}`;
     rawSentences = [
       `Ein kleiner Hund geht umher.`,
       `Mitten im Gras liegt ${getAccIndefinite(disturberWord)}.`,
-      `Das liebe Tier bellt leise.`,
+      `Das liebe Tier staunt sehr.`,
       `Der alte Baum spendet Schatten.`,
     ];
-  } else {
-    title = `Abenteuer mit dem ${disturberWord}`;
+  } else if (level === 3) {
+    title = `${flavor.protagonist} und ${defArtDisturber} ${disturberWord}`;
     rawSentences = [
-      `Heute erlebt die Gruppe ein Abenteuer im ${theme.label}.`,
-      `Plötzlich rollt ${getAccIndefinite(disturberWord)} herbei.`,
-      `Alle schauen ganz erstaunt hin.`,
-      `Das ${disturberWord} macht ein lustiges Geräusch.`,
-      `Zusammen lachen sie herzlich darüber.`,
+      `Der ${flavor.protagonist} läuft schnell zum Tor.`,
+      `Da entdeckt er plötzlich ${getAccIndefinite(disturberWord)}.`,
+      `Das neugierige Tier schaut genau hin.`,
+      `Gemeinsam jubeln alle vor Freude.`,
+    ];
+  } else if (level === 4) {
+    title = `Ein Fund ${flavor.settingDesc}`;
+    rawSentences = [
+      `Ein fröhlicher Tag beginnt ${flavor.settingDesc}.`,
+      `Der ${flavor.protagonist} läuft über die Wiese.`,
+      `Ganz plötzlich taucht ${getNomIndefinite(disturberWord)} auf dem Pfad auf.`,
+      `Er staunt über den Fund.`,
+      `Lachend nehmen sie das neue Abenteuer an.`,
+    ];
+  } else if (level === 5) {
+    title = `Das Geheimnis ${flavor.settingDesc}`;
+    rawSentences = [
+      `Die Sonne scheint warm über der Landschaft.`,
+      `Der ${flavor.protagonist} sucht einen Pfad.`,
+      `Plötzlich versperrt ${getNomIndefinite(disturberWord)} den schmalen Weg.`,
+      `Mutig geht er heran.`,
+      `Zusammen rollen sie den Gegenstand zur Seite.`,
+      `Alle klatschen laut Beifall.`,
+    ];
+  } else if (level === 6) {
+    if (theme.id === 'theme_dino' && disturberWord === 'Fernseher') {
+      title = 'Kino im Urwald';
+      rawSentences = [
+        'Ein riesiger Dinosaurier stapft durch den Urwald.',
+        'Plötzlich entdeckt er einen alten, flimmernden Fernseher.',
+        'Der Dino tippt neugierig auf den roten Knopf.',
+        'Bunte Bilder leuchten hell im Urwald auf.',
+        'Fröhlich tanzt der Riese über die Lichtung.',
+      ];
+    } else {
+      title = `${flavor.protagonist} und ${defArtDisturber} ${disturberWord}`;
+      rawSentences = [
+        `Ein mutiger ${flavor.protagonist} wandert fröhlich ${flavor.settingDesc}.`,
+        `Plötzlich entdeckt er ${getAccIndefinite(disturberWord)} am Wegesrand.`,
+        `Neugierig tippt das Tier auf den Gegenstand.`,
+        `Wunderbare Töne erklingen sanft in der Luft.`,
+        `Begeistert tanzen alle Freunde im Kreis herum.`,
+      ];
+    }
+  } else if (level === 7) {
+    title = `Abenteuer ${flavor.settingDesc}`;
+    rawSentences = [
+      `Ein abenteuerlustiger ${flavor.protagonist} streift aufmerksam ${flavor.settingDesc}.`,
+      `Unter einem dichten Busch liegt plötzlich ${getNomIndefinite(disturberWord)} verborgen.`,
+      `Das neugierige Tier untersucht das seltsame Ding ganz genau.`,
+      `Voller Stolz präsentiert er den spektakulären Fund allen Freunden.`,
+    ];
+  } else if (level === 8) {
+    title = `Aufregung ${flavor.settingDesc}`;
+    rawSentences = [
+      `Was für ein herrlicher und sonniger Morgen!`,
+      `Der ${flavor.protagonist} spaziert vergnügt ${flavor.settingDesc}.`,
+      `Doch was glitzert da drüben so hell im Sonnenlicht?`,
+      `Es ist ${getNomIndefinite(disturberWord)}, das mitten auf dem Moos steht!`,
+      `„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.`,
+      `Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.`,
+      `So einen aufregenden Tag werden sie sicher niemals vergessen!`,
+    ];
+  } else {
+    // Level 9: Master reader, 100+ words
+    title = `Das Meister-Abenteuer ${flavor.settingDesc}`;
+    rawSentences = [
+      `Tief ${flavor.settingDesc} herrschte an diesem friedlichen Morgen eine zauberhafte Stille.`,
+      `Die ersten Sonnenstrahlen brachen durch das Blätterdach und tauchten die weite Landschaft in goldenes Licht.`,
+      `Der weise ${flavor.protagonist} war schon früh auf den Beinen, um die geheimen Pfade der Umgebung zu erkunden.`,
+      `Plötzlich bemerkte er etwas völlig Ungewöhnliches, das keineswegs hierher zu gehören schien.`,
+      `Mitten im weichen Moos stand ${getNomIndefinite(disturberWord)} und zog alle Blicke magisch an.`,
+      `Wie konnte dieser sonderbare Gegenstand nur an einen so abgelegenen Ort gelangen?`,
+      `Schritt für Schritt näherte sich der neugierige Wanderer dem glänzenden Fundstück.`,
+      `Vorsichtig berührte er die Oberfläche und lauschte gebannt auf die leisen Geräusche im Inneren.`,
+      `Im nächsten Moment strömten Tiere aus allen Richtungen herbei und bestaunten das Schauspiel.`,
+      `Ein freudiges Lachen hallte weit über das Tal, und eine spontane Feier begann.`,
+      `Bis tief in die Dämmerung hinein tanzten sie ausgelassen um das neue Wunderwerk herum.`,
+      `Dieses unvergessliche Abenteuer wird den Bewohnern noch lange Zeit ein Lächeln schenken.`,
     ];
   }
 

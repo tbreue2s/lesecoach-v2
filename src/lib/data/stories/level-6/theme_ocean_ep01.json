@@ -2,42 +2,44 @@
   "themeId": "theme_ocean",
   "level": 6,
   "episode": 1,
-  "disturberWord": "Drachen",
-  "title": "Abenteuer mit dem Drachen",
+  "disturberWord": "Känguru",
+  "title": "Wal und der Känguru",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Wasser & Meer.",
+      "text": "Ein mutiger Wal wandert fröhlich im weiten Meer.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "mutiger",
           "syllables": [
-            "ist"
+            "mu",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Wal",
           "syllables": [
-            "ein"
+            "Wal"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "wandert",
           "syllables": [
-            "schö",
-            "ner"
+            "wan",
+            "dert"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "fröhlich",
           "syllables": [
-            "Tag"
+            "fröh",
+            "lich"
           ]
         },
         {
@@ -47,16 +49,10 @@
           ]
         },
         {
-          "clean": "Wasser",
+          "clean": "weiten",
           "syllables": [
-            "Was",
-            "ser"
-          ]
-        },
-        {
-          "clean": "&",
-          "syllables": [
-            "&"
+            "wei",
+            "ten"
           ]
         },
         {
@@ -69,7 +65,7 @@
       ]
     },
     {
-      "text": "Plötzlich rollt ein Drachen herbei.",
+      "text": "Plötzlich entdeckt er einen Känguru am Wegesrand.",
       "words": [
         {
           "clean": "Plötzlich",
@@ -79,148 +75,202 @@
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "entdeckt",
           "syllables": [
-            "rollt"
+            "en",
+            "tdeckt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "er",
           "syllables": [
-            "ein"
+            "er"
           ]
         },
         {
-          "clean": "Drachen",
+          "clean": "einen",
           "syllables": [
-            "Dra",
-            "chen"
+            "ei",
+            "nen"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Känguru",
           "syllables": [
-            "her",
-            "bei"
+            "Kän",
+            "gu",
+            "ru"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Wegesrand",
+          "syllables": [
+            "We",
+            "ges",
+            "rand"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Neugierig tippt das Tier auf den Gegenstand.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Neugierig",
           "syllables": [
-            "Al",
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "tippt",
+          "syllables": [
+            "tippt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Gegenstand",
+          "syllables": [
+            "Ge",
+            "gen",
+            "stand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Wunderbare Töne erklingen sanft in der Luft.",
+      "words": [
+        {
+          "clean": "Wunderbare",
+          "syllables": [
+            "Wun",
+            "der",
+            "ba",
+            "re"
+          ]
+        },
+        {
+          "clean": "Töne",
+          "syllables": [
+            "Tö",
+            "ne"
+          ]
+        },
+        {
+          "clean": "erklingen",
+          "syllables": [
+            "erk",
+            "lin",
+            "gen"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Luft",
+          "syllables": [
+            "Luft"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Begeistert tanzen alle Freunde im Kreis herum.",
+      "words": [
+        {
+          "clean": "Begeistert",
+          "syllables": [
+            "Be",
+            "geis",
+            "tert"
+          ]
+        },
+        {
+          "clean": "tanzen",
+          "syllables": [
+            "tan",
+            "zen"
+          ]
+        },
+        {
+          "clean": "alle",
+          "syllables": [
+            "al",
             "le"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "Freunde",
           "syllables": [
-            "schau",
-            "en"
+            "Freun",
+            "de"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "im",
           "syllables": [
-            "ganz"
+            "im"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "Kreis",
           "syllables": [
-            "er",
-            "staunt"
+            "Kreis"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "herum",
           "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das Drachen macht lustige Geräusche.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Drachen",
-          "syllables": [
-            "Dra",
-            "chen"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
-          ]
-        },
-        {
-          "clean": "lachen",
-          "syllables": [
-            "la",
-            "chen"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "herzlich",
-          "syllables": [
-            "her",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "darüber",
-          "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "he",
+            "rum"
           ]
         }
       ]

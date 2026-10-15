@@ -2,73 +2,98 @@
   "themeId": "theme_forest",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Sofa",
-  "title": "Abenteuer mit dem Sofa",
+  "disturberWord": "Schatzkiste",
+  "title": "Das Geheimnis im grünen Wald",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Wald & Bäume.",
+      "text": "Die Sonne scheint warm über der Landschaft.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Die",
           "syllables": [
-            "Heu",
-            "te"
+            "Die"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "Sonne",
           "syllables": [
-            "ist"
+            "Son",
+            "ne"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "scheint",
           "syllables": [
-            "ein"
+            "scheint"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "warm",
           "syllables": [
-            "schö",
-            "ner"
+            "warm"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "über",
           "syllables": [
-            "Tag"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "im",
+          "clean": "der",
           "syllables": [
-            "im"
+            "der"
           ]
         },
         {
-          "clean": "Wald",
+          "clean": "Landschaft",
           "syllables": [
-            "Wald"
-          ]
-        },
-        {
-          "clean": "&",
-          "syllables": [
-            "&"
-          ]
-        },
-        {
-          "clean": "Bäume",
-          "syllables": [
-            "Bäu",
-            "me"
+            "Land",
+            "schaft"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Sofa herbei.",
+      "text": "Der Igel sucht einen Pfad.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Igel",
+          "syllables": [
+            "I",
+            "gel"
+          ]
+        },
+        {
+          "clean": "sucht",
+          "syllables": [
+            "sucht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich versperrt Ein Schatzkiste den schmalen Weg.",
       "words": [
         {
           "clean": "Plötzlich",
@@ -78,113 +103,80 @@
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "versperrt",
           "syllables": [
-            "rollt"
+            "ver",
+            "sperrt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Ein",
           "syllables": [
-            "ein"
+            "Ein"
           ]
         },
         {
-          "clean": "Sofa",
+          "clean": "Schatzkiste",
           "syllables": [
-            "So",
-            "fa"
+            "Schat",
+            "zkis",
+            "te"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "den",
           "syllables": [
-            "her",
-            "bei"
+            "den"
+          ]
+        },
+        {
+          "clean": "schmalen",
+          "syllables": [
+            "schma",
+            "len"
+          ]
+        },
+        {
+          "clean": "Weg",
+          "syllables": [
+            "Weg"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Mutig geht er heran.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Mutig",
           "syllables": [
-            "Al",
-            "le"
+            "Mu",
+            "tig"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "geht",
           "syllables": [
-            "schau",
-            "en"
+            "geht"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "er",
           "syllables": [
-            "ganz"
+            "er"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "heran",
           "syllables": [
-            "er",
-            "staunt"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
+            "he",
+            "ran"
           ]
         }
       ]
     },
     {
-      "text": "Das Sofa macht lustige Geräusche.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Sofa",
-          "syllables": [
-            "So",
-            "fa"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
+      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
       "words": [
         {
           "clean": "Zusammen",
@@ -195,10 +187,10 @@
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "rollen",
           "syllables": [
-            "la",
-            "chen"
+            "rol",
+            "len"
           ]
         },
         {
@@ -208,18 +200,62 @@
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "den",
           "syllables": [
-            "her",
-            "zlich"
+            "den"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Gegenstand",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Ge",
+            "gen",
+            "stand"
+          ]
+        },
+        {
+          "clean": "zur",
+          "syllables": [
+            "zur"
+          ]
+        },
+        {
+          "clean": "Seite",
+          "syllables": [
+            "Sei",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle klatschen laut Beifall.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "klatschen",
+          "syllables": [
+            "klat",
+            "schen"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "Beifall",
+          "syllables": [
+            "Bei",
+            "fall"
           ]
         }
       ]

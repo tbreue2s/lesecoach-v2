@@ -2,127 +2,131 @@
   "themeId": "theme_superhero",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Kaktus",
-  "title": "Abenteuer mit dem Kaktus",
+  "disturberWord": "Wecker",
+  "title": "Tiger und der Wecker",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Superhelden.",
+      "text": "Der Tiger läuft schnell zum Tor.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Der",
           "syllables": [
-            "Heu",
-            "te"
+            "Der"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "Tiger",
           "syllables": [
-            "ist"
+            "Ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "läuft",
           "syllables": [
-            "ein"
+            "läuft"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "schnell",
           "syllables": [
-            "schö",
-            "ner"
+            "schnell"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "zum",
           "syllables": [
-            "Tag"
+            "zum"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Tor",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Superhelden",
-          "syllables": [
-            "Su",
-            "per",
-            "hel",
-            "den"
+            "Tor"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Kaktus herbei.",
+      "text": "Da entdeckt er plötzlich einen Wecker.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Da",
           "syllables": [
-            "Plöt",
+            "Da"
+          ]
+        },
+        {
+          "clean": "entdeckt",
+          "syllables": [
+            "en",
+            "tdeckt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "einen",
           "syllables": [
-            "rollt"
+            "ei",
+            "nen"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Wecker",
           "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Kaktus",
-          "syllables": [
-            "Kak",
-            "tus"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
+            "We",
+            "cker"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Das neugierige Tier schaut genau hin.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Das",
           "syllables": [
-            "Al",
-            "le"
+            "Das"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "neugierige",
           "syllables": [
-            "schau",
-            "en"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "Tier",
           "syllables": [
-            "ganz"
+            "Tier"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "schaut",
           "syllables": [
-            "er",
-            "staunt"
+            "schaut"
+          ]
+        },
+        {
+          "clean": "genau",
+          "syllables": [
+            "ge",
+            "nau"
           ]
         },
         {
@@ -134,82 +138,41 @@
       ]
     },
     {
-      "text": "Das Kaktus macht lustige Geräusche.",
+      "text": "Gemeinsam jubeln alle vor Freude.",
       "words": [
         {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Kaktus",
-          "syllables": [
-            "Kak",
-            "tus"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
+          "clean": "Gemeinsam",
           "syllables": [
             "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "mein",
+            "sam"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "jubeln",
           "syllables": [
-            "la",
-            "chen"
+            "ju",
+            "beln"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "alle",
           "syllables": [
-            "sie"
+            "al",
+            "le"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "vor",
           "syllables": [
-            "her",
-            "zlich"
+            "vor"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freude",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freu",
+            "de"
           ]
         }
       ]

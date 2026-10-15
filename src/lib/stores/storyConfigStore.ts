@@ -7,6 +7,7 @@ import { levelStore } from './levelStore';
 import { readingSessionStore } from './readingSessionStore';
 import { routerStore } from './routerStore';
 import { generateStoryFromConfig } from '../utils/mockStoryGenerator';
+import { loadPrecomputedStory } from '../services/precomputedStoryLoader';
 
 const initialConfigState: StoryConfigState = {
   selectedThemeId: 'theme_forest',
@@ -96,7 +97,14 @@ function createStoryConfigStore() {
           })()
         : payload;
 
-      const story = generateStoryFromConfig(freshPayload);
+      const precomputed = loadPrecomputedStory(
+        freshPayload.theme.id,
+        freshPayload.level,
+        freshPayload.theme,
+        1,
+        freshPayload.childName
+      );
+      const story = precomputed || generateStoryFromConfig(freshPayload);
 
       // Load story into readingSessionStore with companion name and child name
       readingSessionStore.loadStory(

@@ -2,11 +2,11 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Sofa",
-  "title": "Sofa am Tiger",
+  "disturberWord": "Gitarre",
+  "title": "Puma und die Gitarre",
   "sentences": [
     {
-      "text": "Ein Sofa steht am Tiger.",
+      "text": "Ein Puma geht zum Tor.",
       "words": [
         {
           "clean": "Ein",
@@ -15,132 +15,16 @@
           ]
         },
         {
-          "clean": "Sofa",
+          "clean": "Puma",
           "syllables": [
-            "So",
-            "fa"
+            "Pu",
+            "ma"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "geht",
           "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Tiger",
-          "syllables": [
-            "Ti",
-            "ger"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Rad ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Rad",
-          "syllables": [
-            "Rad"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Dino eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Dino",
-          "syllables": [
-            "Di",
-            "no"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Faden.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
+            "geht"
           ]
         },
         {
@@ -150,10 +34,134 @@
           ]
         },
         {
-          "clean": "Faden",
+          "clean": "Tor",
           "syllables": [
-            "Fa",
-            "den"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Puma sieht eine Gitarre.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Puma",
+          "syllables": [
+            "Pu",
+            "ma"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Gitarre",
+          "syllables": [
+            "Gi",
+            "tar",
+            "re"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Puma schaut die Gitarre an.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Puma",
+          "syllables": [
+            "Pu",
+            "ma"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Gitarre",
+          "syllables": [
+            "Gi",
+            "tar",
+            "re"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ruft der Puma am Tor.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Puma",
+          "syllables": [
+            "Pu",
+            "ma"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

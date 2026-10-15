@@ -2,62 +2,77 @@
   "themeId": "theme_treasure",
   "level": 6,
   "episode": 1,
-  "disturberWord": "Trampolin",
-  "title": "Abenteuer mit dem Trampolin",
+  "disturberWord": "Drachen",
+  "title": "Biber und der Drachen",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Schatzsuche.",
+      "text": "Ein mutiger Biber wandert fröhlich in der tiefen Höhle.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "mutiger",
           "syllables": [
-            "ist"
+            "mu",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Biber",
           "syllables": [
-            "ein"
+            "Bi",
+            "ber"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "wandert",
           "syllables": [
-            "schö",
-            "ner"
+            "wan",
+            "dert"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "fröhlich",
           "syllables": [
-            "Tag"
+            "fröh",
+            "lich"
           ]
         },
         {
-          "clean": "im",
+          "clean": "in",
           "syllables": [
-            "im"
+            "in"
           ]
         },
         {
-          "clean": "Schatzsuche",
+          "clean": "der",
           "syllables": [
-            "Schat",
-            "zsu",
-            "che"
+            "der"
+          ]
+        },
+        {
+          "clean": "tiefen",
+          "syllables": [
+            "tie",
+            "fen"
+          ]
+        },
+        {
+          "clean": "Höhle",
+          "syllables": [
+            "Höh",
+            "le"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Trampolin herbei.",
+      "text": "Plötzlich entdeckt er einen Drachen am Wegesrand.",
       "words": [
         {
           "clean": "Plötzlich",
@@ -67,150 +82,201 @@
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "entdeckt",
           "syllables": [
-            "rollt"
+            "en",
+            "tdeckt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "er",
           "syllables": [
-            "ein"
+            "er"
           ]
         },
         {
-          "clean": "Trampolin",
+          "clean": "einen",
           "syllables": [
-            "Tram",
-            "po",
-            "lin"
+            "ei",
+            "nen"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Drachen",
           "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle schauen ganz erstaunt hin.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "schauen",
-          "syllables": [
-            "schau",
-            "en"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "erstaunt",
-          "syllables": [
-            "er",
-            "staunt"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das Trampolin macht lustige Geräusche.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Trampolin",
-          "syllables": [
-            "Tram",
-            "po",
-            "lin"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
-          ]
-        },
-        {
-          "clean": "lachen",
-          "syllables": [
-            "la",
+            "Dra",
             "chen"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "am",
           "syllables": [
-            "sie"
+            "am"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "Wegesrand",
           "syllables": [
-            "her",
-            "zlich"
+            "We",
+            "ges",
+            "rand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neugierig tippt das Tier auf den Gegenstand.",
+      "words": [
+        {
+          "clean": "Neugierig",
+          "syllables": [
+            "Neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "tippt",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "tippt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Gegenstand",
+          "syllables": [
+            "Ge",
+            "gen",
+            "stand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Wunderbare Töne erklingen sanft in der Luft.",
+      "words": [
+        {
+          "clean": "Wunderbare",
+          "syllables": [
+            "Wun",
+            "der",
+            "ba",
+            "re"
+          ]
+        },
+        {
+          "clean": "Töne",
+          "syllables": [
+            "Tö",
+            "ne"
+          ]
+        },
+        {
+          "clean": "erklingen",
+          "syllables": [
+            "erk",
+            "lin",
+            "gen"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Luft",
+          "syllables": [
+            "Luft"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Begeistert tanzen alle Freunde im Kreis herum.",
+      "words": [
+        {
+          "clean": "Begeistert",
+          "syllables": [
+            "Be",
+            "geis",
+            "tert"
+          ]
+        },
+        {
+          "clean": "tanzen",
+          "syllables": [
+            "tan",
+            "zen"
+          ]
+        },
+        {
+          "clean": "alle",
+          "syllables": [
+            "al",
+            "le"
+          ]
+        },
+        {
+          "clean": "Freunde",
+          "syllables": [
+            "Freun",
+            "de"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Kreis",
+          "syllables": [
+            "Kreis"
+          ]
+        },
+        {
+          "clean": "herum",
+          "syllables": [
+            "he",
+            "rum"
           ]
         }
       ]

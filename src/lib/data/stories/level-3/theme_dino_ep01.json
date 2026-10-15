@@ -2,128 +2,132 @@
   "themeId": "theme_dino",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Roboter",
-  "title": "Abenteuer mit dem Roboter",
+  "disturberWord": "Känguru",
+  "title": "Dino und der Känguru",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Dinosaurier.",
+      "text": "Der Dino läuft schnell zum Tor.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Der",
           "syllables": [
-            "Heu",
-            "te"
+            "Der"
           ]
         },
         {
-          "clean": "ist",
-          "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "schöner",
-          "syllables": [
-            "schö",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Dinosaurier",
+          "clean": "Dino",
           "syllables": [
             "Di",
-            "no",
-            "sau",
-            "rier"
+            "no"
+          ]
+        },
+        {
+          "clean": "läuft",
+          "syllables": [
+            "läuft"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Roboter herbei.",
+      "text": "Da entdeckt er plötzlich einen Känguru.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Da",
           "syllables": [
-            "Plöt",
+            "Da"
+          ]
+        },
+        {
+          "clean": "entdeckt",
+          "syllables": [
+            "en",
+            "tdeckt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "einen",
           "syllables": [
-            "rollt"
+            "ei",
+            "nen"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Känguru",
           "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Roboter",
-          "syllables": [
-            "Ro",
-            "bo",
-            "ter"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
+            "Kän",
+            "gu",
+            "ru"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Das neugierige Tier schaut genau hin.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Das",
           "syllables": [
-            "Al",
-            "le"
+            "Das"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "neugierige",
           "syllables": [
-            "schau",
-            "en"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "Tier",
           "syllables": [
-            "ganz"
+            "Tier"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "schaut",
           "syllables": [
-            "er",
-            "staunt"
+            "schaut"
+          ]
+        },
+        {
+          "clean": "genau",
+          "syllables": [
+            "ge",
+            "nau"
           ]
         },
         {
@@ -135,83 +139,41 @@
       ]
     },
     {
-      "text": "Das Roboter macht lustige Geräusche.",
+      "text": "Gemeinsam jubeln alle vor Freude.",
       "words": [
         {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Roboter",
-          "syllables": [
-            "Ro",
-            "bo",
-            "ter"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
+          "clean": "Gemeinsam",
           "syllables": [
             "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "mein",
+            "sam"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "jubeln",
           "syllables": [
-            "la",
-            "chen"
+            "ju",
+            "beln"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "alle",
           "syllables": [
-            "sie"
+            "al",
+            "le"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "vor",
           "syllables": [
-            "her",
-            "zlich"
+            "vor"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freude",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freu",
+            "de"
           ]
         }
       ]

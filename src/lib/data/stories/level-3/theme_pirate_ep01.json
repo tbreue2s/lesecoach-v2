@@ -2,126 +2,131 @@
   "themeId": "theme_pirate",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Sofa",
-  "title": "Abenteuer mit dem Sofa",
+  "disturberWord": "Schlitten",
+  "title": "Pirat und der Schlitten",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Piraten.",
+      "text": "Der Pirat läuft schnell zum Tor.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Der",
           "syllables": [
-            "Heu",
-            "te"
+            "Der"
           ]
         },
         {
-          "clean": "ist",
-          "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "schöner",
-          "syllables": [
-            "schö",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Piraten",
+          "clean": "Pirat",
           "syllables": [
             "Pi",
-            "ra",
+            "rat"
+          ]
+        },
+        {
+          "clean": "läuft",
+          "syllables": [
+            "läuft"
+          ]
+        },
+        {
+          "clean": "schnell",
+          "syllables": [
+            "schnell"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da entdeckt er plötzlich einen Schlitten.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "entdeckt",
+          "syllables": [
+            "en",
+            "tdeckt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
+            "zlich"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Schlitten",
+          "syllables": [
+            "Schlit",
             "ten"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Sofa herbei.",
+      "text": "Das neugierige Tier schaut genau hin.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Das",
           "syllables": [
-            "Plöt",
-            "zlich"
+            "Das"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "neugierige",
           "syllables": [
-            "rollt"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Tier",
           "syllables": [
-            "ein"
+            "Tier"
           ]
         },
         {
-          "clean": "Sofa",
+          "clean": "schaut",
           "syllables": [
-            "So",
-            "fa"
+            "schaut"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "genau",
           "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle schauen ganz erstaunt hin.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "schauen",
-          "syllables": [
-            "schau",
-            "en"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "erstaunt",
-          "syllables": [
-            "er",
-            "staunt"
+            "ge",
+            "nau"
           ]
         },
         {
@@ -133,82 +138,41 @@
       ]
     },
     {
-      "text": "Das Sofa macht lustige Geräusche.",
+      "text": "Gemeinsam jubeln alle vor Freude.",
       "words": [
         {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Sofa",
-          "syllables": [
-            "So",
-            "fa"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
+          "clean": "Gemeinsam",
           "syllables": [
             "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "mein",
+            "sam"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "jubeln",
           "syllables": [
-            "la",
-            "chen"
+            "ju",
+            "beln"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "alle",
           "syllables": [
-            "sie"
+            "al",
+            "le"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "vor",
           "syllables": [
-            "her",
-            "zlich"
+            "vor"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freude",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freu",
+            "de"
           ]
         }
       ]

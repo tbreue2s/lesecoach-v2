@@ -2,62 +2,73 @@
   "themeId": "theme_unicorn",
   "level": 6,
   "episode": 1,
-  "disturberWord": "Luftballon",
-  "title": "Abenteuer mit dem Luftballon",
+  "disturberWord": "Taschenlampe",
+  "title": "Lama und die Taschenlampe",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Einhörner.",
+      "text": "Ein mutiger Lama wandert fröhlich am bunten Regenbogen.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "mutiger",
           "syllables": [
-            "ist"
+            "mu",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Lama",
           "syllables": [
-            "ein"
+            "La",
+            "ma"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "wandert",
           "syllables": [
-            "schö",
-            "ner"
+            "wan",
+            "dert"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "fröhlich",
           "syllables": [
-            "Tag"
+            "fröh",
+            "lich"
           ]
         },
         {
-          "clean": "im",
+          "clean": "am",
           "syllables": [
-            "im"
+            "am"
           ]
         },
         {
-          "clean": "Einhörner",
+          "clean": "bunten",
           "syllables": [
-            "Ein",
-            "hör",
-            "ner"
+            "bun",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Regenbogen",
+          "syllables": [
+            "Re",
+            "gen",
+            "bo",
+            "gen"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Luftballon herbei.",
+      "text": "Plötzlich entdeckt er eine Taschenlampe am Wegesrand.",
       "words": [
         {
           "clean": "Plötzlich",
@@ -67,150 +78,203 @@
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "entdeckt",
           "syllables": [
-            "rollt"
+            "en",
+            "tdeckt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "er",
           "syllables": [
-            "ein"
+            "er"
           ]
         },
         {
-          "clean": "Luftballon",
+          "clean": "eine",
           "syllables": [
-            "Luf",
-            "tbal",
-            "lon"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Taschenlampe",
           "syllables": [
-            "her",
-            "bei"
+            "Ta",
+            "schen",
+            "lam",
+            "pe"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Wegesrand",
+          "syllables": [
+            "We",
+            "ges",
+            "rand"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Neugierig tippt das Tier auf den Gegenstand.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Neugierig",
           "syllables": [
-            "Al",
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "tippt",
+          "syllables": [
+            "tippt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Gegenstand",
+          "syllables": [
+            "Ge",
+            "gen",
+            "stand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Wunderbare Töne erklingen sanft in der Luft.",
+      "words": [
+        {
+          "clean": "Wunderbare",
+          "syllables": [
+            "Wun",
+            "der",
+            "ba",
+            "re"
+          ]
+        },
+        {
+          "clean": "Töne",
+          "syllables": [
+            "Tö",
+            "ne"
+          ]
+        },
+        {
+          "clean": "erklingen",
+          "syllables": [
+            "erk",
+            "lin",
+            "gen"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Luft",
+          "syllables": [
+            "Luft"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Begeistert tanzen alle Freunde im Kreis herum.",
+      "words": [
+        {
+          "clean": "Begeistert",
+          "syllables": [
+            "Be",
+            "geis",
+            "tert"
+          ]
+        },
+        {
+          "clean": "tanzen",
+          "syllables": [
+            "tan",
+            "zen"
+          ]
+        },
+        {
+          "clean": "alle",
+          "syllables": [
+            "al",
             "le"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "Freunde",
           "syllables": [
-            "schau",
-            "en"
+            "Freun",
+            "de"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "im",
           "syllables": [
-            "ganz"
+            "im"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "Kreis",
           "syllables": [
-            "er",
-            "staunt"
+            "Kreis"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "herum",
           "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das Luftballon macht lustige Geräusche.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Luftballon",
-          "syllables": [
-            "Luf",
-            "tbal",
-            "lon"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
-          ]
-        },
-        {
-          "clean": "lachen",
-          "syllables": [
-            "la",
-            "chen"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "herzlich",
-          "syllables": [
-            "her",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "darüber",
-          "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "he",
+            "rum"
           ]
         }
       ]

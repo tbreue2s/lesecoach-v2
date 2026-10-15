@@ -2,11 +2,11 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Rucksack",
-  "title": "Rucksack am Kater",
+  "disturberWord": "Dino",
+  "title": "Pirat und der Dino",
   "sentences": [
     {
-      "text": "Ein Rucksack steht am Kater.",
+      "text": "Ein Pirat geht zum Tor.",
       "words": [
         {
           "clean": "Ein",
@@ -15,133 +15,16 @@
           ]
         },
         {
-          "clean": "Rucksack",
+          "clean": "Pirat",
           "syllables": [
-            "Ruc",
-            "ksack"
+            "Pi",
+            "rat"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "geht",
           "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Kater",
-          "syllables": [
-            "Ka",
-            "ter"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Foto ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Foto",
-          "syllables": [
-            "Fo",
-            "to"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Vase eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Vase",
-          "syllables": [
-            "Va",
-            "se"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Kabel.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
+            "geht"
           ]
         },
         {
@@ -151,10 +34,132 @@
           ]
         },
         {
-          "clean": "Kabel",
+          "clean": "Tor",
           "syllables": [
-            "Ka",
-            "bel"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Pirat sieht einen Dino.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Pirat",
+          "syllables": [
+            "Pi",
+            "rat"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Pirat schaut den Dino an.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Pirat",
+          "syllables": [
+            "Pi",
+            "rat"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ruft der Pirat am Tor.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Pirat",
+          "syllables": [
+            "Pi",
+            "rat"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

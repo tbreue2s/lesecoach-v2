@@ -2,126 +2,131 @@
   "themeId": "theme_unicorn",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Tuba",
-  "title": "Abenteuer mit dem Tuba",
+  "disturberWord": "Pinguin",
+  "title": "Lama und der Pinguin",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Einhörner.",
+      "text": "Der Lama läuft schnell zum Tor.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Der",
           "syllables": [
-            "Heu",
-            "te"
+            "Der"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "Lama",
           "syllables": [
-            "ist"
+            "La",
+            "ma"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "läuft",
           "syllables": [
-            "ein"
+            "läuft"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "schnell",
           "syllables": [
-            "schö",
-            "ner"
+            "schnell"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "zum",
           "syllables": [
-            "Tag"
+            "zum"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Tor",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Einhörner",
-          "syllables": [
-            "Ein",
-            "hör",
-            "ner"
+            "Tor"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Tuba herbei.",
+      "text": "Da entdeckt er plötzlich einen Pinguin.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Da",
           "syllables": [
-            "Plöt",
+            "Da"
+          ]
+        },
+        {
+          "clean": "entdeckt",
+          "syllables": [
+            "en",
+            "tdeckt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "einen",
           "syllables": [
-            "rollt"
+            "ei",
+            "nen"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Pinguin",
           "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Tuba",
-          "syllables": [
-            "Tu",
-            "ba"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
+            "Pin",
+            "guin"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Das neugierige Tier schaut genau hin.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Das",
           "syllables": [
-            "Al",
-            "le"
+            "Das"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "neugierige",
           "syllables": [
-            "schau",
-            "en"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "Tier",
           "syllables": [
-            "ganz"
+            "Tier"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "schaut",
           "syllables": [
-            "er",
-            "staunt"
+            "schaut"
+          ]
+        },
+        {
+          "clean": "genau",
+          "syllables": [
+            "ge",
+            "nau"
           ]
         },
         {
@@ -133,82 +138,41 @@
       ]
     },
     {
-      "text": "Das Tuba macht lustige Geräusche.",
+      "text": "Gemeinsam jubeln alle vor Freude.",
       "words": [
         {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Tuba",
-          "syllables": [
-            "Tu",
-            "ba"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
+          "clean": "Gemeinsam",
           "syllables": [
             "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "mein",
+            "sam"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "jubeln",
           "syllables": [
-            "la",
-            "chen"
+            "ju",
+            "beln"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "alle",
           "syllables": [
-            "sie"
+            "al",
+            "le"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "vor",
           "syllables": [
-            "her",
-            "zlich"
+            "vor"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freude",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freu",
+            "de"
           ]
         }
       ]

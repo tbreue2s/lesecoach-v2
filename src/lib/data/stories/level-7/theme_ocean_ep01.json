@@ -2,42 +2,48 @@
   "themeId": "theme_ocean",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Brille",
-  "title": "Abenteuer mit dem Brille",
+  "disturberWord": "Pinguin",
+  "title": "Abenteuer im weiten Meer",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Wasser & Meer.",
+      "text": "Ein abenteuerlustiger Wal streift aufmerksam im weiten Meer.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "abenteuerlustiger",
           "syllables": [
-            "ist"
+            "a",
+            "ben",
+            "teu",
+            "er",
+            "lus",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Wal",
           "syllables": [
-            "ein"
+            "Wal"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "streift",
           "syllables": [
-            "schö",
-            "ner"
+            "streift"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "aufmerksam",
           "syllables": [
-            "Tag"
+            "auf",
+            "merk",
+            "sam"
           ]
         },
         {
@@ -47,16 +53,10 @@
           ]
         },
         {
-          "clean": "Wasser",
+          "clean": "weiten",
           "syllables": [
-            "Was",
-            "ser"
-          ]
-        },
-        {
-          "clean": "&",
-          "syllables": [
-            "&"
+            "wei",
+            "ten"
           ]
         },
         {
@@ -69,58 +69,121 @@
       ]
     },
     {
-      "text": "Plötzlich rollt ein Brille herbei.",
+      "text": "Unter einem dichten Busch liegt plötzlich Ein Pinguin verborgen.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Unter",
           "syllables": [
-            "Plöt",
+            "Un",
+            "ter"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "dichten",
+          "syllables": [
+            "dic",
+            "hten"
+          ]
+        },
+        {
+          "clean": "Busch",
+          "syllables": [
+            "Busch"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "Ein",
           "syllables": [
-            "rollt"
+            "Ein"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Pinguin",
           "syllables": [
-            "ein"
+            "Pin",
+            "guin"
           ]
         },
         {
-          "clean": "Brille",
+          "clean": "verborgen",
           "syllables": [
-            "Bril",
-            "le"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
+            "ver",
+            "bor",
+            "gen"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Das",
           "syllables": [
-            "Al",
-            "le"
+            "Das"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "neugierige",
           "syllables": [
-            "schau",
-            "en"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "untersucht",
+          "syllables": [
+            "un",
+            "ter",
+            "sucht"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "seltsame",
+          "syllables": [
+            "selt",
+            "sa",
+            "me"
+          ]
+        },
+        {
+          "clean": "Ding",
+          "syllables": [
+            "Ding"
           ]
         },
         {
@@ -130,97 +193,78 @@
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "genau",
           "syllables": [
-            "er",
-            "staunt"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
+            "ge",
+            "nau"
           ]
         }
       ]
     },
     {
-      "text": "Das Brille macht lustige Geräusche.",
+      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Voller",
           "syllables": [
-            "Das"
+            "Vol",
+            "ler"
           ]
         },
         {
-          "clean": "Brille",
+          "clean": "Stolz",
           "syllables": [
-            "Bril",
-            "le"
+            "Stolz"
           ]
         },
         {
-          "clean": "macht",
+          "clean": "präsentiert",
           "syllables": [
-            "macht"
+            "prä",
+            "sen",
+            "tiert"
           ]
         },
         {
-          "clean": "lustige",
+          "clean": "er",
           "syllables": [
-            "lus",
-            "ti",
-            "ge"
+            "er"
           ]
         },
         {
-          "clean": "Geräusche",
+          "clean": "den",
           "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "den"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "spektakulären",
           "syllables": [
-            "la",
-            "chen"
+            "spek",
+            "ta",
+            "ku",
+            "lä",
+            "ren"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "Fund",
           "syllables": [
-            "sie"
+            "Fund"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "allen",
           "syllables": [
-            "her",
-            "zlich"
+            "al",
+            "len"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freunden",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freun",
+            "den"
           ]
         }
       ]

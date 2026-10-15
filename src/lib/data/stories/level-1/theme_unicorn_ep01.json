@@ -2,11 +2,11 @@
   "themeId": "theme_unicorn",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Banane",
-  "title": "Banane am Kabel",
+  "disturberWord": "Kaktus",
+  "title": "Papa und der Kaktus",
   "sentences": [
     {
-      "text": "Ein Banane steht am Kabel.",
+      "text": "Ein Papa geht zum Tor.",
       "words": [
         {
           "clean": "Ein",
@@ -15,134 +15,16 @@
           ]
         },
         {
-          "clean": "Banane",
+          "clean": "Papa",
           "syllables": [
-            "Ba",
-            "na",
-            "ne"
+            "Pa",
+            "pa"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "geht",
           "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Kabel",
-          "syllables": [
-            "Ka",
-            "bel"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Blume ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Blume",
-          "syllables": [
-            "Blu",
-            "me"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Dose eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Dose",
-          "syllables": [
-            "Do",
-            "se"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Note.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
+            "geht"
           ]
         },
         {
@@ -152,10 +34,132 @@
           ]
         },
         {
-          "clean": "Note",
+          "clean": "Tor",
           "syllables": [
-            "No",
-            "te"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Papa sieht einen Kaktus.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Kaktus",
+          "syllables": [
+            "Kak",
+            "tus"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Papa schaut den Kaktus an.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Kaktus",
+          "syllables": [
+            "Kak",
+            "tus"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ruft der Papa am Tor.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Papa",
+          "syllables": [
+            "Pa",
+            "pa"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

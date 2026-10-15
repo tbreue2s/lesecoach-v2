@@ -2,23 +2,22 @@
   "themeId": "theme_ocean",
   "level": 8,
   "episode": 1,
-  "disturberWord": "Brille",
-  "title": "Abenteuer mit dem Brille",
+  "disturberWord": "Zauberhut",
+  "title": "Aufregung im weiten Meer",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Wasser & Meer.",
+      "text": "Was für ein herrlicher und sonniger Morgen!",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Was",
           "syllables": [
-            "Heu",
-            "te"
+            "Was"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "für",
           "syllables": [
-            "ist"
+            "für"
           ]
         },
         {
@@ -28,16 +27,63 @@
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "herrlicher",
           "syllables": [
-            "schö",
-            "ner"
+            "her",
+            "rli",
+            "cher"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "und",
           "syllables": [
-            "Tag"
+            "und"
+          ]
+        },
+        {
+          "clean": "sonniger",
+          "syllables": [
+            "son",
+            "ni",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Morgen",
+          "syllables": [
+            "Mor",
+            "gen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Wal spaziert vergnügt im weiten Meer.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Wal",
+          "syllables": [
+            "Wal"
+          ]
+        },
+        {
+          "clean": "spaziert",
+          "syllables": [
+            "spa",
+            "ziert"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
           ]
         },
         {
@@ -47,16 +93,10 @@
           ]
         },
         {
-          "clean": "Wasser",
+          "clean": "weiten",
           "syllables": [
-            "Was",
-            "ser"
-          ]
-        },
-        {
-          "clean": "&",
-          "syllables": [
-            "&"
+            "wei",
+            "ten"
           ]
         },
         {
@@ -69,137 +109,305 @@
       ]
     },
     {
-      "text": "Plötzlich rollt ein Brille herbei.",
+      "text": "Doch was glitzert da drüben so hell im Sonnenlicht?",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Doch",
           "syllables": [
-            "Plöt",
-            "zlich"
+            "Doch"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "was",
           "syllables": [
-            "rollt"
+            "was"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "glitzert",
           "syllables": [
-            "ein"
+            "glit",
+            "zert"
           ]
         },
         {
-          "clean": "Brille",
+          "clean": "da",
           "syllables": [
-            "Bril",
-            "le"
+            "da"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "drüben",
           "syllables": [
-            "her",
-            "bei"
+            "drü",
+            "ben"
+          ]
+        },
+        {
+          "clean": "so",
+          "syllables": [
+            "so"
+          ]
+        },
+        {
+          "clean": "hell",
+          "syllables": [
+            "hell"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Sonnenlicht",
+          "syllables": [
+            "Son",
+            "nen",
+            "licht"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Es ist Ein Zauberhut, das mitten auf dem Moos steht!",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Es",
           "syllables": [
-            "Al",
-            "le"
+            "Es"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "ist",
           "syllables": [
-            "schau",
-            "en"
+            "ist"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "Ein",
           "syllables": [
-            "ganz"
+            "Ein"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "Zauberhut",
           "syllables": [
-            "er",
-            "staunt"
+            "Zau",
+            "ber",
+            "hut"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "das",
           "syllables": [
-            "hin"
+            "das"
+          ]
+        },
+        {
+          "clean": "mitten",
+          "syllables": [
+            "mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Mo",
+            "os"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
           ]
         }
       ]
     },
     {
-      "text": "Das Brille macht lustige Geräusche.",
+      "text": "„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Komm",
           "syllables": [
-            "Das"
+            "Komm"
           ]
         },
         {
-          "clean": "Brille",
+          "clean": "schnell",
           "syllables": [
-            "Bril",
-            "le"
+            "schnell"
           ]
         },
         {
-          "clean": "macht",
+          "clean": "her",
           "syllables": [
-            "macht"
+            "her"
           ]
         },
         {
-          "clean": "lustige",
+          "clean": "ruft",
           "syllables": [
-            "lus",
-            "ti",
-            "ge"
+            "ruft"
           ]
         },
         {
-          "clean": "Geräusche",
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "aufgeregt",
+          "syllables": [
+            "auf",
+            "ge",
+            "regt"
+          ]
+        },
+        {
+          "clean": "seinem",
+          "syllables": [
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "besten",
+          "syllables": [
+            "bes",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Freund",
+          "syllables": [
+            "Freund"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.",
+      "words": [
+        {
+          "clean": "Gemeinsam",
           "syllables": [
             "Ge",
-            "räu",
-            "sche"
+            "mein",
+            "sam"
+          ]
+        },
+        {
+          "clean": "bewundern",
+          "syllables": [
+            "be",
+            "wun",
+            "dern"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "beiden",
+          "syllables": [
+            "bei",
+            "den"
+          ]
+        },
+        {
+          "clean": "Tiere",
+          "syllables": [
+            "Tie",
+            "re"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "sonderbare",
+          "syllables": [
+            "son",
+            "der",
+            "ba",
+            "re"
+          ]
+        },
+        {
+          "clean": "Schauspiel",
+          "syllables": [
+            "Schaus",
+            "piel"
           ]
         }
       ]
     },
     {
-      "text": "Zusammen lachen sie herzlich darüber.",
+      "text": "So einen aufregenden Tag werden sie sicher niemals vergessen!",
       "words": [
         {
-          "clean": "Zusammen",
+          "clean": "So",
           "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "So"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "einen",
           "syllables": [
-            "la",
-            "chen"
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "aufregenden",
+          "syllables": [
+            "auf",
+            "re",
+            "gen",
+            "den"
+          ]
+        },
+        {
+          "clean": "Tag",
+          "syllables": [
+            "Tag"
+          ]
+        },
+        {
+          "clean": "werden",
+          "syllables": [
+            "wer",
+            "den"
           ]
         },
         {
@@ -209,18 +417,25 @@
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "sicher",
           "syllables": [
-            "her",
-            "zlich"
+            "si",
+            "cher"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "niemals",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "nie",
+            "mals"
+          ]
+        },
+        {
+          "clean": "vergessen",
+          "syllables": [
+            "ver",
+            "ges",
+            "sen"
           ]
         }
       ]

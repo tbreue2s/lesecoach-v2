@@ -2,55 +2,11 @@
   "themeId": "theme_wizard",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Ananas",
-  "title": "Das lustige Ananas",
+  "disturberWord": "Papagei",
+  "title": "Das bunte Papagei",
   "sentences": [
     {
-      "text": "Der rote Ananas liegt im Gras.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "rote",
-          "syllables": [
-            "ro",
-            "te"
-          ]
-        },
-        {
-          "clean": "Ananas",
-          "syllables": [
-            "A",
-            "na",
-            "nas"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Ein kleiner Hund geht umher.",
       "words": [
         {
           "clean": "Ein",
@@ -72,27 +28,67 @@
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "geht",
           "syllables": [
-            "sieht"
+            "geht"
           ]
         },
         {
-          "clean": "den",
+          "clean": "umher",
           "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
+            "um",
+            "her"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Mitten im Gras liegt einen Papagei.",
+      "words": [
+        {
+          "clean": "Mitten",
+          "syllables": [
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Papagei",
+          "syllables": [
+            "Pa",
+            "pa",
+            "gei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das liebe Tier staunt sehr.",
       "words": [
         {
           "clean": "Das",
@@ -114,16 +110,15 @@
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "staunt",
           "syllables": [
-            "bellt"
+            "staunt"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "sehr",
           "syllables": [
-            "lei",
-            "se"
+            "sehr"
           ]
         }
       ]

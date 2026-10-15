@@ -2,11 +2,11 @@
   "themeId": "theme_forest",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Wecker",
-  "title": "Dino und der Wecker",
+  "disturberWord": "Zauberhut",
+  "title": "Kater und der Zauberhut",
   "sentences": [
     {
-      "text": "Ein Dino geht zum Tor.",
+      "text": "Ein Kater geht zum Tor.",
       "words": [
         {
           "clean": "Ein",
@@ -15,10 +15,10 @@
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Kater",
           "syllables": [
-            "Di",
-            "no"
+            "Ka",
+            "ter"
           ]
         },
         {
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "text": "Der Dino sieht einen Wecker.",
+      "text": "Der Kater sieht einen Zauberhut.",
       "words": [
         {
           "clean": "Der",
@@ -51,10 +51,10 @@
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Kater",
           "syllables": [
-            "Di",
-            "no"
+            "Ka",
+            "ter"
           ]
         },
         {
@@ -71,16 +71,17 @@
           ]
         },
         {
-          "clean": "Wecker",
+          "clean": "Zauberhut",
           "syllables": [
-            "We",
-            "cker"
+            "Zau",
+            "ber",
+            "hut"
           ]
         }
       ]
     },
     {
-      "text": "Der Dino schaut den Wecker an.",
+      "text": "Der Kater schaut den Zauberhut an.",
       "words": [
         {
           "clean": "Der",
@@ -89,10 +90,10 @@
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Kater",
           "syllables": [
-            "Di",
-            "no"
+            "Ka",
+            "ter"
           ]
         },
         {
@@ -108,10 +109,11 @@
           ]
         },
         {
-          "clean": "Wecker",
+          "clean": "Zauberhut",
           "syllables": [
-            "We",
-            "cker"
+            "Zau",
+            "ber",
+            "hut"
           ]
         },
         {
@@ -123,7 +125,7 @@
       ]
     },
     {
-      "text": "Froh ruft der Dino am Tor.",
+      "text": "Froh ruft der Kater am Tor.",
       "words": [
         {
           "clean": "Froh",
@@ -144,10 +146,10 @@
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Kater",
           "syllables": [
-            "Di",
-            "no"
+            "Ka",
+            "ter"
           ]
         },
         {

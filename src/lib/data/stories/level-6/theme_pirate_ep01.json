@@ -2,62 +2,76 @@
   "themeId": "theme_pirate",
   "level": 6,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Abenteuer mit dem Regenschirm",
+  "disturberWord": "Banane",
+  "title": "Pirat und die Banane",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Piraten.",
+      "text": "Ein mutiger Pirat wandert fröhlich auf dem großen Schiff.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "mutiger",
           "syllables": [
-            "ist"
+            "mu",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "schöner",
-          "syllables": [
-            "schö",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Piraten",
+          "clean": "Pirat",
           "syllables": [
             "Pi",
-            "ra",
-            "ten"
+            "rat"
+          ]
+        },
+        {
+          "clean": "wandert",
+          "syllables": [
+            "wan",
+            "dert"
+          ]
+        },
+        {
+          "clean": "fröhlich",
+          "syllables": [
+            "fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "großen",
+          "syllables": [
+            "gro",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Schiff",
+          "syllables": [
+            "Schiff"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Regenschirm herbei.",
+      "text": "Plötzlich entdeckt er eine Banane am Wegesrand.",
       "words": [
         {
           "clean": "Plötzlich",
@@ -67,150 +81,202 @@
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "entdeckt",
           "syllables": [
-            "rollt"
+            "en",
+            "tdeckt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "er",
           "syllables": [
-            "ein"
+            "er"
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "eine",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Banane",
           "syllables": [
-            "her",
-            "bei"
+            "Ba",
+            "na",
+            "ne"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Wegesrand",
+          "syllables": [
+            "We",
+            "ges",
+            "rand"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Neugierig tippt das Tier auf den Gegenstand.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Neugierig",
           "syllables": [
-            "Al",
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "tippt",
+          "syllables": [
+            "tippt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Gegenstand",
+          "syllables": [
+            "Ge",
+            "gen",
+            "stand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Wunderbare Töne erklingen sanft in der Luft.",
+      "words": [
+        {
+          "clean": "Wunderbare",
+          "syllables": [
+            "Wun",
+            "der",
+            "ba",
+            "re"
+          ]
+        },
+        {
+          "clean": "Töne",
+          "syllables": [
+            "Tö",
+            "ne"
+          ]
+        },
+        {
+          "clean": "erklingen",
+          "syllables": [
+            "erk",
+            "lin",
+            "gen"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Luft",
+          "syllables": [
+            "Luft"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Begeistert tanzen alle Freunde im Kreis herum.",
+      "words": [
+        {
+          "clean": "Begeistert",
+          "syllables": [
+            "Be",
+            "geis",
+            "tert"
+          ]
+        },
+        {
+          "clean": "tanzen",
+          "syllables": [
+            "tan",
+            "zen"
+          ]
+        },
+        {
+          "clean": "alle",
+          "syllables": [
+            "al",
             "le"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "Freunde",
           "syllables": [
-            "schau",
-            "en"
+            "Freun",
+            "de"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "im",
           "syllables": [
-            "ganz"
+            "im"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "Kreis",
           "syllables": [
-            "er",
-            "staunt"
+            "Kreis"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "herum",
           "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das Regenschirm macht lustige Geräusche.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Regenschirm",
-          "syllables": [
-            "Re",
-            "gen",
-            "schirm"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
-          ]
-        },
-        {
-          "clean": "lachen",
-          "syllables": [
-            "la",
-            "chen"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "herzlich",
-          "syllables": [
-            "her",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "darüber",
-          "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "he",
+            "rum"
           ]
         }
       ]

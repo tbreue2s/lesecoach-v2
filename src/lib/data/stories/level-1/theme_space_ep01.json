@@ -2,11 +2,11 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Ufo",
-  "title": "Ufo am Gras",
+  "disturberWord": "Pinguin",
+  "title": "Pilot und der Pinguin",
   "sentences": [
     {
-      "text": "Ein Ufo steht am Gras.",
+      "text": "Ein Pilot geht zum Tor.",
       "words": [
         {
           "clean": "Ein",
@@ -15,132 +15,16 @@
           ]
         },
         {
-          "clean": "Ufo",
+          "clean": "Pilot",
           "syllables": [
-            "U",
-            "fo"
+            "Pi",
+            "lot"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "geht",
           "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Bote ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Bote",
-          "syllables": [
-            "Bo",
-            "te"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Vater eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Vater",
-          "syllables": [
-            "Va",
-            "ter"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Hose.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
+            "geht"
           ]
         },
         {
@@ -150,10 +34,132 @@
           ]
         },
         {
-          "clean": "Hose",
+          "clean": "Tor",
           "syllables": [
-            "Ho",
-            "se"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Pilot sieht einen Pinguin.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Pinguin",
+          "syllables": [
+            "Pin",
+            "guin"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Pilot schaut den Pinguin an.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Pinguin",
+          "syllables": [
+            "Pin",
+            "guin"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ruft der Pilot am Tor.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

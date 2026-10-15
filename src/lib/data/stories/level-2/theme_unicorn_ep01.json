@@ -2,54 +2,11 @@
   "themeId": "theme_unicorn",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Kaktus",
-  "title": "Das lustige Kaktus",
+  "disturberWord": "Luftballon",
+  "title": "Das bunte Luftballon",
   "sentences": [
     {
-      "text": "Der rote Kaktus liegt im Gras.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "rote",
-          "syllables": [
-            "ro",
-            "te"
-          ]
-        },
-        {
-          "clean": "Kaktus",
-          "syllables": [
-            "Kak",
-            "tus"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Ein kleiner Hund geht umher.",
       "words": [
         {
           "clean": "Ein",
@@ -71,27 +28,67 @@
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "geht",
           "syllables": [
-            "sieht"
+            "geht"
           ]
         },
         {
-          "clean": "den",
+          "clean": "umher",
           "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
+            "um",
+            "her"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Mitten im Gras liegt einen Luftballon.",
+      "words": [
+        {
+          "clean": "Mitten",
+          "syllables": [
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Luftballon",
+          "syllables": [
+            "Luf",
+            "tbal",
+            "lon"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das liebe Tier staunt sehr.",
       "words": [
         {
           "clean": "Das",
@@ -113,16 +110,15 @@
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "staunt",
           "syllables": [
-            "bellt"
+            "staunt"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "sehr",
           "syllables": [
-            "lei",
-            "se"
+            "sehr"
           ]
         }
       ]

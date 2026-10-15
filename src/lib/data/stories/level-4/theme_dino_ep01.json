@@ -2,36 +2,24 @@
   "themeId": "theme_dino",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Dino",
-  "title": "Abenteuer mit dem Dino",
+  "disturberWord": "Koffer",
+  "title": "Ein Fund im tiefen Urwald",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Dinosaurier.",
+      "text": "Ein fröhlicher Tag beginnt im tiefen Urwald.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "fröhlicher",
           "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "schöner",
-          "syllables": [
-            "schö",
-            "ner"
+            "fröh",
+            "li",
+            "cher"
           ]
         },
         {
@@ -41,154 +29,190 @@
           ]
         },
         {
+          "clean": "beginnt",
+          "syllables": [
+            "be",
+            "ginnt"
+          ]
+        },
+        {
           "clean": "im",
           "syllables": [
             "im"
           ]
         },
         {
-          "clean": "Dinosaurier",
+          "clean": "tiefen",
           "syllables": [
-            "Di",
-            "no",
-            "sau",
-            "rier"
+            "tie",
+            "fen"
+          ]
+        },
+        {
+          "clean": "Urwald",
+          "syllables": [
+            "Ur",
+            "wald"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Dino herbei.",
+      "text": "Der Dino läuft über die Wiese.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Der",
           "syllables": [
-            "Plöt",
+            "Der"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "läuft",
+          "syllables": [
+            "läuft"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Wiese",
+          "syllables": [
+            "Wie",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ganz plötzlich taucht Ein Koffer auf dem Pfad auf.",
+      "words": [
+        {
+          "clean": "Ganz",
+          "syllables": [
+            "Ganz"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "taucht",
           "syllables": [
-            "rollt"
+            "taucht"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Ein",
           "syllables": [
-            "ein"
+            "Ein"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Koffer",
           "syllables": [
-            "Di",
-            "no"
+            "Kof",
+            "fer"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "auf",
           "syllables": [
-            "her",
-            "bei"
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Er staunt über den Fund.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Er",
           "syllables": [
-            "Al",
-            "le"
+            "Er"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "staunt",
           "syllables": [
-            "schau",
-            "en"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "erstaunt",
-          "syllables": [
-            "er",
             "staunt"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "über",
           "syllables": [
-            "hin"
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Fund",
+          "syllables": [
+            "Fund"
           ]
         }
       ]
     },
     {
-      "text": "Das Dino macht lustige Geräusche.",
+      "text": "Lachend nehmen sie das neue Abenteuer an.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Lachend",
           "syllables": [
-            "Das"
+            "La",
+            "chend"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "nehmen",
           "syllables": [
-            "Di",
-            "no"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
+            "neh",
             "men"
-          ]
-        },
-        {
-          "clean": "lachen",
-          "syllables": [
-            "la",
-            "chen"
           ]
         },
         {
@@ -198,18 +222,31 @@
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "das",
           "syllables": [
-            "her",
-            "zlich"
+            "das"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "neue",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "neu",
+            "e"
+          ]
+        },
+        {
+          "clean": "Abenteuer",
+          "syllables": [
+            "A",
+            "ben",
+            "teu",
+            "er"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
           ]
         }
       ]

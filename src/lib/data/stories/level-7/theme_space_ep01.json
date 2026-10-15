@@ -2,42 +2,56 @@
   "themeId": "theme_space",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Schatzkiste",
-  "title": "Abenteuer mit dem Schatzkiste",
+  "disturberWord": "Taschenlampe",
+  "title": "Abenteuer mitten im Weltall",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Weltall & Sterne.",
+      "text": "Ein abenteuerlustiger Pilot streift aufmerksam mitten im Weltall.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Ein",
           "syllables": [
-            "Heu",
-            "te"
+            "Ein"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "abenteuerlustiger",
           "syllables": [
-            "ist"
+            "a",
+            "ben",
+            "teu",
+            "er",
+            "lus",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Pilot",
           "syllables": [
-            "ein"
+            "Pi",
+            "lot"
           ]
         },
         {
-          "clean": "schöner",
+          "clean": "streift",
           "syllables": [
-            "schö",
-            "ner"
+            "streift"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "aufmerksam",
           "syllables": [
-            "Tag"
+            "auf",
+            "merk",
+            "sam"
+          ]
+        },
+        {
+          "clean": "mitten",
+          "syllables": [
+            "mit",
+            "ten"
           ]
         },
         {
@@ -52,76 +66,127 @@
             "Wel",
             "tall"
           ]
-        },
-        {
-          "clean": "&",
-          "syllables": [
-            "&"
-          ]
-        },
-        {
-          "clean": "Sterne",
-          "syllables": [
-            "Ster",
-            "ne"
-          ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Schatzkiste herbei.",
+      "text": "Unter einem dichten Busch liegt plötzlich Ein Taschenlampe verborgen.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Unter",
           "syllables": [
-            "Plöt",
+            "Un",
+            "ter"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "dichten",
+          "syllables": [
+            "dic",
+            "hten"
+          ]
+        },
+        {
+          "clean": "Busch",
+          "syllables": [
+            "Busch"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plöt",
             "zlich"
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "Ein",
           "syllables": [
-            "rollt"
+            "Ein"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Taschenlampe",
           "syllables": [
-            "ein"
+            "Ta",
+            "schen",
+            "lam",
+            "pe"
           ]
         },
         {
-          "clean": "Schatzkiste",
+          "clean": "verborgen",
           "syllables": [
-            "Schat",
-            "zkis",
-            "te"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
+            "ver",
+            "bor",
+            "gen"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Das",
           "syllables": [
-            "Al",
-            "le"
+            "Das"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "neugierige",
           "syllables": [
-            "schau",
-            "en"
+            "neu",
+            "gie",
+            "ri",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "untersucht",
+          "syllables": [
+            "un",
+            "ter",
+            "sucht"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "seltsame",
+          "syllables": [
+            "selt",
+            "sa",
+            "me"
+          ]
+        },
+        {
+          "clean": "Ding",
+          "syllables": [
+            "Ding"
           ]
         },
         {
@@ -131,98 +196,78 @@
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "genau",
           "syllables": [
-            "er",
-            "staunt"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
+            "ge",
+            "nau"
           ]
         }
       ]
     },
     {
-      "text": "Das Schatzkiste macht lustige Geräusche.",
+      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Voller",
           "syllables": [
-            "Das"
+            "Vol",
+            "ler"
           ]
         },
         {
-          "clean": "Schatzkiste",
+          "clean": "Stolz",
           "syllables": [
-            "Schat",
-            "zkis",
-            "te"
+            "Stolz"
           ]
         },
         {
-          "clean": "macht",
+          "clean": "präsentiert",
           "syllables": [
-            "macht"
+            "prä",
+            "sen",
+            "tiert"
           ]
         },
         {
-          "clean": "lustige",
+          "clean": "er",
           "syllables": [
-            "lus",
-            "ti",
-            "ge"
+            "er"
           ]
         },
         {
-          "clean": "Geräusche",
+          "clean": "den",
           "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "den"
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "spektakulären",
           "syllables": [
-            "la",
-            "chen"
+            "spek",
+            "ta",
+            "ku",
+            "lä",
+            "ren"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "Fund",
           "syllables": [
-            "sie"
+            "Fund"
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "allen",
           "syllables": [
-            "her",
-            "zlich"
+            "al",
+            "len"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Freunden",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Freun",
+            "den"
           ]
         }
       ]

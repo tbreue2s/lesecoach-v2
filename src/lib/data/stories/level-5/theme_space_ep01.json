@@ -2,74 +2,98 @@
   "themeId": "theme_space",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Abenteuer mit dem Regenschirm",
+  "disturberWord": "Dino",
+  "title": "Das Geheimnis mitten im Weltall",
   "sentences": [
     {
-      "text": "Heute ist ein schöner Tag im Weltall & Sterne.",
+      "text": "Die Sonne scheint warm über der Landschaft.",
       "words": [
         {
-          "clean": "Heute",
+          "clean": "Die",
           "syllables": [
-            "Heu",
-            "te"
+            "Die"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "Sonne",
           "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "schöner",
-          "syllables": [
-            "schö",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Weltall",
-          "syllables": [
-            "Wel",
-            "tall"
-          ]
-        },
-        {
-          "clean": "&",
-          "syllables": [
-            "&"
-          ]
-        },
-        {
-          "clean": "Sterne",
-          "syllables": [
-            "Ster",
+            "Son",
             "ne"
+          ]
+        },
+        {
+          "clean": "scheint",
+          "syllables": [
+            "scheint"
+          ]
+        },
+        {
+          "clean": "warm",
+          "syllables": [
+            "warm"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Landschaft",
+          "syllables": [
+            "Land",
+            "schaft"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich rollt ein Regenschirm herbei.",
+      "text": "Der Pilot sucht einen Pfad.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        },
+        {
+          "clean": "sucht",
+          "syllables": [
+            "sucht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich versperrt Ein Dino den schmalen Weg.",
       "words": [
         {
           "clean": "Plötzlich",
@@ -79,115 +103,79 @@
           ]
         },
         {
-          "clean": "rollt",
+          "clean": "versperrt",
           "syllables": [
-            "rollt"
+            "ver",
+            "sperrt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Ein",
           "syllables": [
-            "ein"
+            "Ein"
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "Dino",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
+            "Di",
+            "no"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "den",
           "syllables": [
-            "her",
-            "bei"
+            "den"
+          ]
+        },
+        {
+          "clean": "schmalen",
+          "syllables": [
+            "schma",
+            "len"
+          ]
+        },
+        {
+          "clean": "Weg",
+          "syllables": [
+            "Weg"
           ]
         }
       ]
     },
     {
-      "text": "Alle schauen ganz erstaunt hin.",
+      "text": "Mutig geht er heran.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Mutig",
           "syllables": [
-            "Al",
-            "le"
+            "Mu",
+            "tig"
           ]
         },
         {
-          "clean": "schauen",
+          "clean": "geht",
           "syllables": [
-            "schau",
-            "en"
+            "geht"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "er",
           "syllables": [
-            "ganz"
+            "er"
           ]
         },
         {
-          "clean": "erstaunt",
+          "clean": "heran",
           "syllables": [
-            "er",
-            "staunt"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
+            "he",
+            "ran"
           ]
         }
       ]
     },
     {
-      "text": "Das Regenschirm macht lustige Geräusche.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "Regenschirm",
-          "syllables": [
-            "Re",
-            "gen",
-            "schirm"
-          ]
-        },
-        {
-          "clean": "macht",
-          "syllables": [
-            "macht"
-          ]
-        },
-        {
-          "clean": "lustige",
-          "syllables": [
-            "lus",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Geräusche",
-          "syllables": [
-            "Ge",
-            "räu",
-            "sche"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen lachen sie herzlich darüber.",
+      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
       "words": [
         {
           "clean": "Zusammen",
@@ -198,10 +186,10 @@
           ]
         },
         {
-          "clean": "lachen",
+          "clean": "rollen",
           "syllables": [
-            "la",
-            "chen"
+            "rol",
+            "len"
           ]
         },
         {
@@ -211,18 +199,62 @@
           ]
         },
         {
-          "clean": "herzlich",
+          "clean": "den",
           "syllables": [
-            "her",
-            "zlich"
+            "den"
           ]
         },
         {
-          "clean": "darüber",
+          "clean": "Gegenstand",
           "syllables": [
-            "da",
-            "rü",
-            "ber"
+            "Ge",
+            "gen",
+            "stand"
+          ]
+        },
+        {
+          "clean": "zur",
+          "syllables": [
+            "zur"
+          ]
+        },
+        {
+          "clean": "Seite",
+          "syllables": [
+            "Sei",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alle klatschen laut Beifall.",
+      "words": [
+        {
+          "clean": "Alle",
+          "syllables": [
+            "Al",
+            "le"
+          ]
+        },
+        {
+          "clean": "klatschen",
+          "syllables": [
+            "klat",
+            "schen"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "Beifall",
+          "syllables": [
+            "Bei",
+            "fall"
           ]
         }
       ]

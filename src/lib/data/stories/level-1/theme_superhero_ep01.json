@@ -2,11 +2,11 @@
   "themeId": "theme_superhero",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Banane",
-  "title": "Banane am Hafen",
+  "disturberWord": "Trampolin",
+  "title": "Tiger und das Trampolin",
   "sentences": [
     {
-      "text": "Ein Banane steht am Hafen.",
+      "text": "Ein Tiger geht zum Tor.",
       "words": [
         {
           "clean": "Ein",
@@ -15,132 +15,16 @@
           ]
         },
         {
-          "clean": "Banane",
+          "clean": "Tiger",
           "syllables": [
-            "Ba",
-            "na",
-            "ne"
+            "Ti",
+            "ger"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "geht",
           "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Hafen",
-          "syllables": [
-            "Ha",
-            "fen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Bein ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Bein",
-          "syllables": [
-            "Bein"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Haus eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Haus",
-          "syllables": [
-            "Haus"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Salat.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
+            "geht"
           ]
         },
         {
@@ -150,10 +34,133 @@
           ]
         },
         {
-          "clean": "Salat",
+          "clean": "Tor",
           "syllables": [
-            "Sa",
-            "lat"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Tiger sieht ein Trampolin.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Tiger",
+          "syllables": [
+            "Ti",
+            "ger"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Trampolin",
+          "syllables": [
+            "Tram",
+            "po",
+            "lin"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Tiger schaut das Trampolin an.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Tiger",
+          "syllables": [
+            "Ti",
+            "ger"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Trampolin",
+          "syllables": [
+            "Tram",
+            "po",
+            "lin"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ruft der Tiger am Tor.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ruft",
+          "syllables": [
+            "ruft"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Tiger",
+          "syllables": [
+            "Ti",
+            "ger"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

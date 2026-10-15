@@ -2,55 +2,11 @@
   "themeId": "theme_treasure",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Schatzkiste",
-  "title": "Das lustige Schatzkiste",
+  "disturberWord": "Trompete",
+  "title": "Das bunte Trompete",
   "sentences": [
     {
-      "text": "Der rote Schatzkiste liegt im Gras.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "rote",
-          "syllables": [
-            "ro",
-            "te"
-          ]
-        },
-        {
-          "clean": "Schatzkiste",
-          "syllables": [
-            "Schat",
-            "zkis",
-            "te"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Ein kleiner Hund geht umher.",
       "words": [
         {
           "clean": "Ein",
@@ -72,27 +28,67 @@
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "geht",
           "syllables": [
-            "sieht"
+            "geht"
           ]
         },
         {
-          "clean": "den",
+          "clean": "umher",
           "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
+            "um",
+            "her"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Mitten im Gras liegt eine Trompete.",
+      "words": [
+        {
+          "clean": "Mitten",
+          "syllables": [
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Trompete",
+          "syllables": [
+            "Trom",
+            "pe",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das liebe Tier staunt sehr.",
       "words": [
         {
           "clean": "Das",
@@ -114,16 +110,15 @@
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "staunt",
           "syllables": [
-            "bellt"
+            "staunt"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "sehr",
           "syllables": [
-            "lei",
-            "se"
+            "sehr"
           ]
         }
       ]
