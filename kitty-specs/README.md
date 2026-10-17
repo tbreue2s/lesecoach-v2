@@ -26,6 +26,7 @@ Willkommen in der Spezifikations- und Aufgabensteuerung für das Projekt **Lese-
 | **WP11** | Stufe 1 Didaktische Komplexitätsgrenze (Score = 0) | `merged` | [WP11-stufe-1-didaktische-komplexitaet-score-null.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP11-stufe-1-didaktische-komplexitaet-score-null.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP11-tasks.md) |
 | **WP12** | Stufengerechte & Skalierende Geschichten-Generierung | `merged` | [WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-tasks.md) |
 | **WP13** | Hybride Content-Pipeline zur Massengenerierung | `merged` | [WP13-Content-Pipeline.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP13-Content-Pipeline.md) |
+| **WP14** | Ergonomisches Kinder-UI & Lesefluss-Redesign | `merged` | [WP14-ergonomisches-kinder-ui-redesign.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP14-ergonomisches-kinder-ui-redesign.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP14-tasks.md) |
 ---
 
 ## 🔄 Lifecycle-Phasen

@@ -67,6 +67,8 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP10** | Name-Längenbegrenzung & Injection Guard | `merged` | 20-Zeichen-Limit für Kind & Begleiter, Prompt Injection Guard |
 | **WP11** | Stufe 1 Didaktische Komplexitätsgrenze | `merged` | Striktes Score = 0 Limit für Kind-Zielwörter in Stufe 1 |
 | **WP12** | Stufengerechte & Skalierende Geschichten | `merged` | Längere Geschichten je Stufe, Trennung Vorlese- vs. Kind-Wortschatz |
-| **WP13** | Hybride Content-Pipeline zur Massengenerierung | `plan` | 2-Schritt-Pipeline (LLM), 10 Störwörter pro Thema, JSON-Export |
+| **WP13** | Hybride Content-Pipeline zur Massengenerierung | `merged` | 2-Schritt-Pipeline (LLM), 10 Störwörter pro Thema, JSON-Export |
+| **WP14** | Ergonomisches Kinder-UI & Lesefluss-Redesign | `merged` | 3-Screen-Konsolidierung, Sticky 3-Button-Dock, Teleprompter Auto-Scroll |
+
 
 

@@ -50,4 +50,17 @@ describe('Screen-Routing & Route Guard (WP02)', () => {
     expect(state.currentScreen).toBe('home');
     expect(state.previousScreen).toBe('settings');
   });
+
+  it('consolidates adventure-setup route seamlessly into home screen (WP14)', () => {
+    profileStore.setChildName('Lukas');
+    profileStore.saveProfile();
+
+    // Invoking goToAdventureSetup routes directly to home
+    routerStore.goToAdventureSetup();
+    expect(get(routerStore).currentScreen).toBe('home');
+
+    // Invoking navigate('adventure-setup') also routes directly to home
+    routerStore.navigate('adventure-setup');
+    expect(get(routerStore).currentScreen).toBe('home');
+  });
 });

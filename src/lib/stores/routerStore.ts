@@ -18,7 +18,9 @@ function createRouterStore() {
     navigate: (target: AppScreen) => {
       const profile = get(profileStore);
       // Route Guard: If profile is not configured and user tries to navigate elsewhere, force settings
-      const resolvedScreen = !profile.isConfigured && target !== 'settings' ? 'settings' : target;
+      const guardResolved = !profile.isConfigured && target !== 'settings' ? 'settings' : target;
+      // Screen consolidation: adventure-setup is consolidated into home
+      const resolvedScreen = guardResolved === 'adventure-setup' ? 'home' : guardResolved;
 
       update((state) => ({
         previousScreen: state.currentScreen,
@@ -42,7 +44,8 @@ function createRouterStore() {
         update((state) => ({ ...state, currentScreen: 'settings' }));
         return;
       }
-      update((state) => ({ previousScreen: state.currentScreen, currentScreen: 'adventure-setup' }));
+      // Route directly to home (adventure deck)
+      update((state) => ({ previousScreen: state.currentScreen, currentScreen: 'home' }));
     },
     goToReader: () => {
       const profile = get(profileStore);

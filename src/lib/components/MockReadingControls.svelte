@@ -11,6 +11,8 @@
 
   $: session = $readingSessionStore;
 
+  let showDevTools = false;
+
   function handleStartAudio() {
     if (session.turnState === 'PAUSED') {
       readingSessionStore.resumeAudio();
@@ -57,282 +59,557 @@
   }
 </script>
 
-<div class="mock-controls-card">
-  <div class="controls-header">
-    <span class="controls-badge">🧪 STT-Listener & Dev-Testleiste (WP06)</span>
-    <div class="status-pills">
-      {#if session.isListening}
-        <span class="pill pill-mic-active">🎙️ STT Aktiv (de-DE)</span>
-      {:else if session.isSpeaking}
-        <span class="pill pill-tts-active">🔊 TTS Aktiv (Stumm)</span>
-      {:else}
-        <span class="pill pill-idle">⏸️ Bereit</span>
-      {/if}
-    </div>
+<div class="dock-container">
+  <!-- Turn State & Microphone Feedback Pill -->
+  <div class="turn-status-banner turn-{session.turnState.toLowerCase()}">
+    {#if session.isSessionComplete}
+      <div class="status-message">
+        <span class="status-icon" aria-hidden="true">🏆</span>
+        <span class="status-text"><strong>Fantastisch!</strong> Geschichte abgeschlossen!</span>
+      </div>
+    {:else if session.turnState === 'CHILD_TURN'}
+      <div class="child-turn-status">
+        <div class="mic-wave-group" aria-hidden="true">
+          <span class="otter-ear">🦦👂</span>
+          <span class="wave w1"></span>
+          <span class="wave w2"></span>
+          <span class="wave w3"></span>
+        </div>
+        <div class="turn-desc">
+          <span class="highlight-prompt"><strong>Ich höre dir zu!</strong> Lies das gelbe Wort laut.</span>
+          {#if session.lastSpokenTranscript}
+            <span class="heard-badge">Gehört: „{session.lastSpokenTranscript}“</span>
+          {/if}
+        </div>
+      </div>
+    {:else if session.turnState === 'APP_TURN'}
+      <div class="status-message">
+        <span class="status-icon speaking-pulse" aria-hidden="true">🔊</span>
+        <span class="status-text"><strong>{activeCompanion.customName}</strong> liest vor...</span>
+      </div>
+    {:else if session.turnState === 'REPEATED_READING'}
+      <div class="status-message">
+        <span class="status-icon" aria-hidden="true">🔄</span>
+        <span class="status-text"><strong>Gemeinsam-Satz:</strong> Hör noch einmal entspannt zu!</span>
+      </div>
+    {:else if session.turnState === 'PAUSED'}
+      <div class="status-message">
+        <span class="status-icon" aria-hidden="true">⏸️</span>
+        <span class="status-text">Lesepause – tippe auf Weiterlesen</span>
+      </div>
+    {:else}
+      <div class="status-message">
+        <span class="status-icon" aria-hidden="true">📖</span>
+        <span class="status-text">Tippe auf <strong>Vorlesen</strong> oder lies selbst laut los!</span>
+      </div>
+    {/if}
+
+    {#if session.micError}
+      <div class="mic-error-pill" role="alert">
+        <span>ℹ️ {session.micError}</span>
+      </div>
+    {/if}
   </div>
 
-  <div class="buttons-row">
-    {#if session.isSpeaking}
+  <!-- Primary 3-Button Child Ergonomics Dock -->
+  <div class="primary-buttons-dock">
+    {#if session.isSessionComplete}
+      <!-- Celebration buttons when story is complete -->
       <button
         type="button"
-        id="mock-pause-audio-btn"
-        class="btn-mock btn-audio"
-        on:click={handlePauseAudio}
+        id="mock-next-story-btn"
+        class="btn-dock-action btn-next-big"
+        on:click={handleNextStory}
       >
-        ⏸️ Pause
+        <span class="btn-symbol" aria-hidden="true">✨</span>
+        <span class="btn-label">Nächstes Abenteuer</span>
+        <span class="btn-symbol" aria-hidden="true">➔</span>
+      </button>
+
+      <button
+        type="button"
+        id="mock-restart-btn"
+        class="btn-dock-action btn-restart-soft"
+        on:click={handleRestartStory}
+      >
+        <span class="btn-symbol" aria-hidden="true">🔄</span>
+        <span class="btn-label">Nochmal lesen</span>
       </button>
     {:else}
+      <!-- 1. Play / Pause Button -->
+      {#if session.isSpeaking}
+        <button
+          type="button"
+          id="mock-pause-audio-btn"
+          class="btn-dock-action btn-audio-pause"
+          on:click={handlePauseAudio}
+          title="Vorlesen anhalten"
+        >
+          <span class="btn-symbol" aria-hidden="true">⏸️</span>
+          <span class="btn-label">Pause</span>
+        </button>
+      {:else}
+        <button
+          type="button"
+          id="mock-start-audio-btn"
+          class="btn-dock-action btn-audio-play"
+          on:click={handleStartAudio}
+          title="Vorlesen starten"
+        >
+          <span class="btn-symbol" aria-hidden="true">🔊</span>
+          <span class="btn-label">{session.turnState === 'PAUSED' ? 'Weiter' : 'Vorlesen'}</span>
+        </button>
+      {/if}
+
+      <!-- 2. Silben-Hilfe Button -->
       <button
         type="button"
-        id="mock-start-audio-btn"
-        class="btn-mock btn-audio"
-        on:click={handleStartAudio}
+        id="mock-syllable-help-btn"
+        class="btn-dock-action btn-syllable-help"
+        class:highlight-help={session.turnState === 'CHILD_TURN'}
+        on:click={handleTriggerIntervention}
+        title="Silben-Hilfe einschalten"
       >
-        🔊 Vorlesen
+        <span class="btn-symbol" aria-hidden="true">💡</span>
+        <span class="btn-label">Silben-Hilfe</span>
+      </button>
+
+      <!-- 3. Wort weiter Button (Fallback if speech recognition doesn't catch child word) -->
+      <button
+        type="button"
+        id="mock-word-success-btn"
+        class="btn-dock-action btn-word-next"
+        on:click={handleWordSuccess}
+        title="Wort als geschafft abhaken"
+      >
+        <span class="btn-symbol" aria-hidden="true">👉</span>
+        <span class="btn-label">Wort weiter</span>
       </button>
     {/if}
 
+    <!-- Discreet Dev / Parent Tools Toggle -->
     <button
       type="button"
-      id="mock-simulate-correct-word-btn"
-      class="btn-mock btn-word"
-      title="Simuliert die korrekte Spracherkennung des Zielworts"
-      on:click={handleSimulateCorrectWord}
+      class="btn-dev-toggle"
+      class:active={showDevTools}
+      on:click={() => (showDevTools = !showDevTools)}
+      title="Entwickler- & Testleiste umschalten"
+      aria-label="Entwickler-Werkzeuge"
     >
-      ⭐ [Dev: Simuliere Wort]
+      🛠️
     </button>
+  </div>
 
-    <button
-      type="button"
-      id="mock-word-success-btn"
-      class="btn-mock btn-advance"
-      on:click={handleWordSuccess}
-    >
-      👉 Direkt weiter
-    </button>
+  <!-- Collapsible Dev & Test Leiste (Preserves all automated testing IDs in DOM) -->
+  <div class="dev-tools-drawer" class:collapsed={!showDevTools}>
+    <div class="dev-drawer-header">
+      <span class="dev-title">🧪 Entwickler- & Test-Werkzeuge</span>
+      <div class="dev-pills">
+        {#if session.isListening}
+          <span class="dev-pill mic-on">🎙️ STT Aktiv</span>
+        {:else if session.isSpeaking}
+          <span class="dev-pill tts-on">🔊 TTS Aktiv</span>
+        {:else}
+          <span class="dev-pill idle">Bereit</span>
+        {/if}
+      </div>
+    </div>
 
-    <button
-      type="button"
-      id="mock-repeat-btn"
-      class="btn-mock btn-repeat"
-      on:click={handleTriggerRepeatedReading}
-    >
-      🔄 Repeated Reading
-    </button>
+    <div class="dev-buttons-grid">
+      <button
+        type="button"
+        id="mock-simulate-correct-word-btn"
+        class="btn-dev-item"
+        on:click={handleSimulateCorrectWord}
+      >
+        ⭐ [Simuliere Wort]
+      </button>
 
-    <button
-      type="button"
-      id="mock-syllable-help-btn"
-      class="btn-mock btn-syllables"
-      title="Aktiviert dynamische Silben-Färbung (Hänger-Hilfe)"
-      on:click={handleTriggerIntervention}
-    >
-      💡 Silben-Hilfe
-    </button>
+      <button
+        type="button"
+        id="mock-repeat-btn"
+        class="btn-dev-item"
+        on:click={handleTriggerRepeatedReading}
+      >
+        🔄 Repeated Reading
+      </button>
 
-    <button
-      type="button"
-      id="mock-sentence-success-btn"
-      class="btn-mock btn-sentence"
-      on:click={handleSentenceComplete}
-    >
-      ✅ Satz geschafft
-    </button>
+      <button
+        type="button"
+        id="mock-sentence-success-btn"
+        class="btn-dev-item"
+        on:click={handleSentenceComplete}
+      >
+        ✅ Satz geschafft
+      </button>
 
-    <button
-      type="button"
-      id="mock-restart-btn"
-      class="btn-mock btn-restart"
-      on:click={handleRestartStory}
-    >
-      🔄 Neustart
-    </button>
+      {#if !session.isSessionComplete}
+        <button
+          type="button"
+          id="mock-restart-btn"
+          class="btn-dev-item"
+          on:click={handleRestartStory}
+        >
+          🔄 Neustart
+        </button>
 
-    <button
-      type="button"
-      id="mock-next-story-btn"
-      class="btn-mock btn-story"
-      on:click={handleNextStory}
-    >
-      ✨ Neues Abenteuer
-    </button>
+        <button
+          type="button"
+          id="mock-next-story-btn"
+          class="btn-dev-item"
+          on:click={handleNextStory}
+        >
+          ✨ Neues Thema
+        </button>
+      {/if}
+    </div>
   </div>
 </div>
 
 <style>
-  .mock-controls-card {
-    background: var(--color-surface-soft, #EDE5D8);
-    border: 2px dashed var(--color-primary, #2B6CB0);
-    border-radius: var(--radius-md, 0.875rem);
-    padding: 1rem 1.25rem;
-    margin-top: 1.5rem;
+  .dock-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--color-surface-card, #F5EFE6);
+    border-top: 2px solid var(--color-border, #E2D9CC);
+    padding: 0.65rem 1rem 0.85rem;
+    box-shadow: 0 -4px 16px rgba(74, 85, 104, 0.08);
   }
 
-  .controls-header {
+  /* Compact Turn State Banner */
+  .turn-status-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--radius-md, 0.875rem);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    background: #FFFDF9;
+    font-size: 0.95rem;
+    min-height: 2.3rem;
+    transition: all 0.2s ease;
+  }
+
+  .status-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .turn-status-banner.turn-app_turn {
+    background: #EBF8FF;
+    border-color: #BEE3F8;
+    color: #2B6CB0;
+  }
+
+  .speaking-pulse {
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+
+  .turn-status-banner.turn-child_turn {
+    background: #FFFAF0;
+    border-color: #FBD38D;
+    box-shadow: 0 2px 10px rgba(192, 86, 33, 0.12);
+  }
+
+  .child-turn-status {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .mic-wave-group {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .otter-ear {
+    font-size: 1.25rem;
+  }
+
+  .wave {
+    width: 3px;
+    height: 8px;
+    background: #DD6B20;
+    border-radius: 2px;
+    animation: waveBar 0.9s infinite ease-in-out;
+  }
+
+  .wave.w2 {
+    animation-delay: 0.2s;
+    height: 14px;
+  }
+
+  .wave.w3 {
+    animation-delay: 0.4s;
+    height: 10px;
+  }
+
+  .turn-desc {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .highlight-prompt {
+    color: #9C4221;
+    font-size: 0.95rem;
+  }
+
+  .heard-badge {
+    background: #FEFCBF;
+    border: 1px dashed #D69E2E;
+    color: #744210;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .turn-status-banner.turn-repeated_reading {
+    background: #FAF5FF;
+    border-color: #E9D8FD;
+    color: #6B46C1;
+  }
+
+  .mic-error-pill {
+    font-size: 0.8rem;
+    color: #C53030;
+    background: #FFF5F5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  /* Primary 3-Button Child Ergonomics Dock */
+  .primary-buttons-dock {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .btn-dock-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0.6rem;
+    border-radius: var(--radius-md, 0.875rem);
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    border: 2px solid var(--color-border, #E2D9CC);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 3px 8px rgba(74, 85, 104, 0.08);
+  }
+
+  .btn-dock-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(74, 85, 104, 0.14);
+  }
+
+  .btn-dock-action:active {
+    transform: translateY(0);
+  }
+
+  /* Play / Pause styling */
+  .btn-audio-play {
+    background: var(--color-primary, #2B6CB0);
+    border-color: var(--color-primary-hover, #23568B);
+    color: #FFFFFF;
+    flex: 1.25;
+  }
+
+  .btn-audio-play:hover {
+    background: var(--color-primary-hover, #23568B);
+  }
+
+  .btn-audio-pause {
+    background: #ED8936;
+    border-color: #DD6B20;
+    color: #FFFFFF;
+    flex: 1.25;
+  }
+
+  .btn-audio-pause:hover {
+    background: #DD6B20;
+  }
+
+  /* Help styling */
+  .btn-syllable-help {
+    background: var(--color-page-bg, #FBF9F5);
+    border-color: #CBD5E0;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .btn-syllable-help:hover {
+    background: #FEFCBF;
+    border-color: #D69E2E;
+    color: #744210;
+  }
+
+  .btn-syllable-help.highlight-help {
+    border-color: #D69E2E;
+    background: #FFFFF0;
+    color: #744210;
+    animation: gentleGlow 2s infinite ease-in-out;
+  }
+
+  /* Next Word styling */
+  .btn-word-next {
+    background: var(--color-surface-soft, #EDE5D8);
+    border-color: var(--color-border, #E2D9CC);
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .btn-word-next:hover {
+    background: #C6F6D5;
+    border-color: #38A169;
+    color: #22543D;
+  }
+
+  /* Celebration styling */
+  .btn-next-big {
+    background: var(--color-primary, #2B6CB0);
+    color: #FFFFFF;
+    border-color: var(--color-primary-hover, #23568B);
+    flex: 1.6;
+    padding: 0.85rem 1rem;
+    font-size: 1.15rem;
+  }
+
+  .btn-restart-soft {
+    background: var(--color-surface-soft, #EDE5D8);
+    border-color: var(--color-border, #E2D9CC);
+    color: var(--color-text-main, #2D3748);
+    flex: 1;
+  }
+
+  .btn-symbol {
+    font-size: 1.25rem;
+  }
+
+  /* Dev toggle button */
+  .btn-dev-toggle {
+    background: var(--color-surface-soft, #EDE5D8);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-sm, 0.5rem);
+    padding: 0.75rem 0.6rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .btn-dev-toggle:hover,
+  .btn-dev-toggle.active {
+    background: #E2E8F0;
+    border-color: #A0AEC0;
+  }
+
+  /* Collapsible Dev Drawer */
+  .dev-tools-drawer {
+    margin-top: 0.25rem;
+    padding: 0.65rem 0.85rem;
+    background: #FAF7F0;
+    border: 1.5px dashed var(--color-primary, #2B6CB0);
+    border-radius: var(--radius-md, 0.875rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: max-height 0.25s ease, opacity 0.25s ease;
+  }
+
+  .dev-tools-drawer.collapsed {
+    display: none;
+  }
+
+  .dev-drawer-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 0.85rem;
   }
 
-  .controls-badge {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: var(--color-primary, #2B6CB0);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .status-pills {
-    display: flex;
-    gap: 0.4rem;
-  }
-
-  .pill {
+  .dev-title {
     font-size: 0.75rem;
     font-weight: 800;
-    padding: 0.2rem 0.6rem;
+    text-transform: uppercase;
+    color: var(--color-primary, #2B6CB0);
+    letter-spacing: 0.04em;
+  }
+
+  .dev-pills {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .dev-pill {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.15rem 0.45rem;
     border-radius: 9999px;
   }
 
-  .pill-mic-active {
+  .dev-pill.mic-on {
     background: #FED7D7;
     color: #9B2C2C;
-    border: 1px solid #FEB2B2;
-    animation: blinkGlow 1.2s infinite ease-in-out;
   }
 
-  .pill-tts-active {
+  .dev-pill.tts-on {
     background: #EBF8FF;
     color: #2B6CB0;
-    border: 1px solid #90CDF4;
   }
 
-  .pill-idle {
+  .dev-pill.idle {
     background: #EDF2F7;
-    color: #4A5568;
-    border: 1px solid #CBD5E0;
+    color: #718096;
   }
 
-  .buttons-row {
+  .dev-buttons-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
   }
 
-  @media (max-width: 700px) {
-    .buttons-row {
+  @media (max-width: 600px) {
+    .dev-buttons-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  .btn-mock {
-    padding: 0.65rem 0.4rem;
-    font-size: 0.85rem;
-    font-weight: 800;
-    border-radius: var(--radius-sm, 0.5rem);
-    cursor: pointer;
-    border: 1.5px solid var(--color-border, #E2D9CC);
-    transition: all 0.2s ease;
-    text-align: center;
-  }
-
-  .btn-audio {
-    background: #EBF8FF;
-    color: #2B6CB0;
-    border-color: #90CDF4;
-  }
-
-  .btn-audio:hover {
-    background: #BEE3F8;
-    transform: translateY(-2px);
-  }
-
-  .btn-word {
-    background: #FEFCBF;
-    color: #744210;
-    border-color: #D69E2E;
-  }
-
-  .btn-word:hover {
-    background: #FAF089;
-    transform: translateY(-2px);
-  }
-
-  .btn-advance {
-    background: #EDF2F7;
-    color: #2D3748;
-    border-color: #CBD5E0;
-  }
-
-  .btn-advance:hover {
-    background: #E2E8F0;
-    transform: translateY(-2px);
-  }
-
-  .btn-repeat {
-    background: #FAF5FF;
-    color: #6B46C1;
-    border-color: #D6BCFA;
-  }
-
-  .btn-repeat:hover {
-    background: #E9D8FD;
-    transform: translateY(-2px);
-  }
-
-  .btn-syllables {
-    background: #EBF8FF;
-    color: #2B6CB0;
-    border-color: #90CDF4;
-  }
-
-  .btn-syllables:hover {
-    background: #BEE3F8;
-    transform: translateY(-2px);
-  }
-
-  .btn-sentence {
-    background: #C6F6D5;
-    color: #22543D;
-    border-color: #38A169;
-  }
-
-  .btn-sentence:hover {
-    background: #9AE6B4;
-    transform: translateY(-2px);
-  }
-
-  .btn-restart {
-    background: var(--color-surface-card, #F5EFE6);
-    color: var(--color-text-main, #2D3748);
-  }
-
-  .btn-restart:hover {
+  .btn-dev-item {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.3rem;
+    border: 1px solid var(--color-border, #E2D9CC);
+    border-radius: 4px;
     background: var(--color-page-bg, #FBF9F5);
-    transform: translateY(-2px);
+    color: var(--color-text-main, #2D3748);
+    cursor: pointer;
   }
 
-  .btn-story {
-    background: var(--color-primary, #2B6CB0);
-    color: var(--color-page-bg, #FBF9F5);
-    border-color: var(--color-primary-hover, #23568B);
+  .btn-dev-item:hover {
+    background: #E2E8F0;
   }
 
-  .btn-story:hover {
-    background: var(--color-primary-hover, #23568B);
-    transform: translateY(-2px);
+  @keyframes waveBar {
+    0%, 100% { transform: scaleY(0.6); opacity: 0.7; }
+    50% { transform: scaleY(1.3); opacity: 1; }
   }
 
-  @keyframes blinkGlow {
-    0%, 100% {
-      opacity: 0.8;
-    }
-    50% {
-      opacity: 1;
-      box-shadow: 0 0 8px rgba(229, 62, 62, 0.4);
-    }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.15); }
+  }
+
+  @keyframes gentleGlow {
+    0%, 100% { box-shadow: 0 0 0 rgba(214, 158, 46, 0); }
+    50% { box-shadow: 0 0 10px rgba(214, 158, 46, 0.4); }
   }
 </style>

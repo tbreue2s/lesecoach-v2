@@ -5,7 +5,7 @@
   import { routerStore } from '../../stores/routerStore';
   import { STORY_THEMES } from '../../data/storyThemes';
   import { READING_LEVEL_INFOS } from '../../data/readingLevels';
-  import OtterFeedback from '../OtterFeedback.svelte';
+  import { speakText } from '../../utils/speech';
   import LevelSelector from '../LevelSelector.svelte';
 
   $: childName = $profileStore.childName || 'kleiner Lese-Held';
@@ -27,64 +27,74 @@
     storyConfigStore.buildPayload();
     storyConfigStore.startAdventure();
   }
+
+  function playGreeting() {
+    speakText(welcomeMessage);
+  }
 </script>
 
 <div class="home-screen-container">
-  <!-- 1. Top Otter Greeting -->
-  <header class="home-header">
-    <OtterFeedback message={welcomeMessage} type="idle" />
-  </header>
-
-  <!-- 2. Child & Companion Hero Card with Quick Edit -->
-  <section class="hero-card" aria-label="Profilübersicht">
-    <div class="hero-companion-badge">
-      <span class="hero-icon" aria-hidden="true">{activeCompanion.icon}</span>
-      <div class="hero-info">
-        <h2 class="hero-companion-name">{activeCompanion.customName}</h2>
-        <span class="hero-companion-type">Dein Lese-Begleiter</span>
+  <!-- Unified Compact Top Header: Companion + Child + Level + Settings -->
+  <header class="home-compact-header" aria-label="Profil und Lese-Stufe">
+    <div class="header-left">
+      <div class="companion-avatar" aria-hidden="true">
+        {activeCompanion.icon}
+      </div>
+      <div class="header-info">
+        <div class="greeting-row">
+          <span class="child-hero-name">⭐ {childName} & {activeCompanion.customName}</span>
+          <button
+            type="button"
+            class="btn-speak-greeting"
+            title="Begrüßung vorlesen"
+            aria-label="Begrüßung vorlesen"
+            on:click={playGreeting}
+          >
+            🔊
+          </button>
+        </div>
+        <span class="greeting-subtitle">Bereit für dein nächstes Lese-Abenteuer?</span>
       </div>
     </div>
 
-    <div class="hero-right-group">
-      <div class="child-badge">
-        <span class="child-label">Lese-Profi:</span>
-        <span class="child-name">⭐ {childName}</span>
+    <div class="header-right">
+      <div class="level-control-wrapper">
+        <span id="home-level-heading" class="visually-hidden">🎯 Lese-Stufe:</span>
+        <button
+          type="button"
+          class="level-toggle-btn"
+          title="Lese-Stufe ändern"
+          on:click={() => (showLevelSelector = !showLevelSelector)}
+        >
+          🎯 Stufe {$levelStore} {showLevelSelector ? '▲' : '▼'}
+        </button>
       </div>
+
       <button
         type="button"
         id="goto-settings-btn"
-        class="btn-edit-profile"
+        class="btn-settings-icon"
         title="Profil oder Begleiter ändern"
+        aria-label="Profil oder Begleiter ändern"
         on:click={() => routerStore.goToSettings()}
       >
-        ⚙️ Ändern
+        ⚙️
       </button>
     </div>
-  </section>
+  </header>
 
-  <!-- 3. Level Selection Bar -->
-  <section class="level-bar-section" aria-labelledby="home-level-heading">
-    <div class="level-bar-header">
-      <span id="home-level-heading" class="section-label">🎯 Lese-Stufe:</span>
-      <button
-        type="button"
-        class="level-toggle-btn"
-        on:click={() => (showLevelSelector = !showLevelSelector)}
-      >
-        Stufe {$levelStore}: {levelInfo.title} {showLevelSelector ? '▲' : '▼'}
-      </button>
+  {#if showLevelSelector}
+    <div class="level-dropdown-card">
+      <LevelSelector onLevelChange={() => (showLevelSelector = false)} />
     </div>
+  {/if}
 
-    {#if showLevelSelector}
-      <div class="level-dropdown-wrapper">
-        <LevelSelector onLevelChange={() => (showLevelSelector = false)} />
-      </div>
-    {/if}
-  </section>
-
-  <!-- 4. 10 Theme Tiles Grid -->
+  <!-- 10 Theme Tiles Grid -->
   <section class="themes-section" aria-labelledby="home-themes-heading">
-    <h2 id="home-themes-heading" class="section-label">📚 Wähle dein Geschichten-Thema:</h2>
+    <div class="themes-header-row">
+      <h2 id="home-themes-heading" class="themes-title">📚 Wähle dein Thema:</h2>
+      <span class="chosen-theme-tag">{currentTheme.icon} {currentTheme.label}</span>
+    </div>
 
     <div class="themes-grid" role="radiogroup" aria-label="Geschichten-Themen Auswahl">
       {#each STORY_THEMES as theme (theme.id)}
@@ -106,8 +116,8 @@
     </div>
   </section>
 
-  <!-- 5. Big Start Adventure Action Button -->
-  <footer class="action-footer">
+  <!-- Sticky Bottom Action Dock -->
+  <footer class="sticky-action-dock">
     <button
       type="button"
       id="start-reading-btn"
@@ -123,127 +133,99 @@
 
 <style>
   .home-screen-container {
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
+    padding-bottom: 1rem;
   }
 
-  .hero-card {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  /* Unified Compact Header */
+  .home-compact-header {
     background: var(--color-surface-card, #F5EFE6);
     border: 2px solid var(--color-border, #E2D9CC);
     border-radius: var(--radius-lg, 1.25rem);
-    padding: 1.25rem 1.5rem;
+    padding: 0.85rem 1.15rem;
     box-shadow: var(--shadow-warm, 0 4px 14px rgba(74, 85, 104, 0.08));
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    gap: 1rem;
   }
 
-  .hero-companion-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-  }
-
-  .hero-icon {
-    font-size: 2.75rem;
-    line-height: 1;
-    background: var(--color-page-bg, #FBF9F5);
-    border: 2px solid var(--color-border, #E2D9CC);
-    border-radius: 0.875rem;
-    padding: 0.4rem;
-  }
-
-  .hero-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-companion-name {
-    margin: 0;
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: var(--color-text-main, #2D3748);
-  }
-
-  .hero-companion-type {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-primary, #2B6CB0);
-  }
-
-  .hero-right-group {
+  .header-left {
     display: flex;
     align-items: center;
     gap: 0.75rem;
   }
 
-  .child-badge {
+  .companion-avatar {
+    font-size: 2.25rem;
+    line-height: 1;
     background: var(--color-page-bg, #FBF9F5);
-    border: 1.5px solid var(--color-border, #E2D9CC);
-    padding: 0.45rem 0.85rem;
-    border-radius: var(--radius-md, 0.875rem);
+    border: 2px solid var(--color-border, #E2D9CC);
+    border-radius: 0.75rem;
+    padding: 0.25rem 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .header-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
   }
 
-  .child-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-subtle, #718096);
-  }
-
-  .child-name {
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--color-text-main, #2D3748);
-  }
-
-  .btn-edit-profile {
-    background: var(--color-surface-soft, #EDE5D8);
-    border: 1.5px solid var(--color-border, #E2D9CC);
-    color: var(--color-text-main, #2D3748);
-    padding: 0.55rem 0.85rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    border-radius: var(--radius-sm, 0.5rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .btn-edit-profile:hover {
-    background: var(--color-primary-soft, #EBF2FA);
-    border-color: var(--color-primary, #2B6CB0);
-    color: var(--color-primary, #2B6CB0);
-  }
-
-  /* Level Bar Section */
-  .level-bar-section {
-    background: var(--color-surface-card, #F5EFE6);
-    border: 2px solid var(--color-border, #E2D9CC);
-    border-radius: var(--radius-md, 0.875rem);
-    padding: 0.85rem 1.15rem;
-  }
-
-  .level-bar-header {
+  .greeting-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
 
-  .section-label {
-    font-size: 1.1rem;
+  .child-hero-name {
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--color-text-main, #2D3748);
-    display: block;
-    margin: 0;
+  }
+
+  .btn-speak-greeting {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    transition: transform 0.15s ease;
+  }
+
+  .btn-speak-greeting:hover {
+    transform: scale(1.2);
+  }
+
+  .greeting-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #4A5568);
+    font-weight: 600;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
   }
 
   .level-toggle-btn {
@@ -255,10 +237,31 @@
     font-weight: 800;
     font-size: 0.95rem;
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
-  .level-dropdown-wrapper {
-    margin-top: 1rem;
+  .level-toggle-btn:hover {
+    background: #D9EAFB;
+  }
+
+  .btn-settings-icon {
+    background: var(--color-surface-soft, #EDE5D8);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    color: var(--color-text-main, #2D3748);
+    padding: 0.45rem 0.65rem;
+    font-size: 1.05rem;
+    border-radius: var(--radius-sm, 0.5rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-settings-icon:hover {
+    background: var(--color-primary-soft, #EBF2FA);
+    border-color: var(--color-primary, #2B6CB0);
+  }
+
+  .level-dropdown-card {
+    animation: fadeIn 0.2s ease;
   }
 
   /* Themes Section */
@@ -266,11 +269,32 @@
     background: var(--color-surface-card, #F5EFE6);
     border: 2px solid var(--color-border, #E2D9CC);
     border-radius: var(--radius-lg, 1.25rem);
-    padding: 1.25rem 1.5rem;
+    padding: 1.15rem 1.35rem;
+    box-shadow: var(--shadow-warm, 0 4px 14px rgba(74, 85, 104, 0.08));
   }
 
-  .themes-section h2 {
+  .themes-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.85rem;
+  }
+
+  .themes-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .chosen-theme-tag {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-primary, #2B6CB0);
+    background: var(--color-primary-soft, #EBF2FA);
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border, #E2D9CC);
   }
 
   .themes-grid {
@@ -295,7 +319,7 @@
     background: var(--color-page-bg, #FBF9F5);
     border: 2px solid var(--color-border, #E2D9CC);
     border-radius: var(--radius-md, 0.875rem);
-    padding: 0.85rem 0.35rem;
+    padding: 0.75rem 0.35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,7 +344,7 @@
 
   .theme-icon {
     font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
   }
 
   .theme-name {
@@ -342,8 +366,12 @@
     border-radius: 4px;
   }
 
-  .action-footer {
-    margin-top: 0.5rem;
+  /* Sticky Bottom Action Dock */
+  .sticky-action-dock {
+    position: sticky;
+    bottom: 0.5rem;
+    z-index: 10;
+    margin-top: 0.25rem;
   }
 
   .btn-primary-large {
@@ -352,22 +380,22 @@
     color: var(--color-page-bg, #FBF9F5);
     border: none;
     border-radius: 1.25rem;
-    padding: 1.25rem 1.5rem;
-    font-size: 1.35rem;
+    padding: 1.15rem 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.85rem;
-    box-shadow: 0 6px 18px rgba(43, 108, 176, 0.3);
+    box-shadow: 0 6px 18px rgba(43, 108, 176, 0.35);
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   .btn-primary-large:hover {
     background-color: var(--color-primary-hover, #23568B);
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(43, 108, 176, 0.4);
+    box-shadow: 0 8px 22px rgba(43, 108, 176, 0.45);
   }
 
   .btn-primary-large:active {
@@ -375,7 +403,7 @@
   }
 
   .btn-icon {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .btn-arrow {
@@ -385,5 +413,10 @@
 
   .btn-primary-large:hover .btn-arrow {
     transform: translateX(4px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>

@@ -305,7 +305,7 @@
   }
 
   .section {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   .label {
@@ -421,7 +421,10 @@
   }
 
   .action-footer {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    position: sticky;
+    bottom: 0.75rem;
+    z-index: 10;
     text-align: center;
   }
 
