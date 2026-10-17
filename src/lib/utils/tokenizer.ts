@@ -51,12 +51,23 @@ export const GERMAN_ARTICLES = new Set([
   'sein', 'seine', 'seinen', 'seinem', 'seiner',
 ]);
 
-// Isolated verb prefixes and particles strictly forbidden as standalone targets in Level 1
+// Isolated verb prefixes, particles, adverbs, and interjections strictly forbidden as standalone targets in Level 1
 export const FORBIDDEN_LEVEL1_PARTICLES = new Set([
   'her', 'hin', 'auf', 'ab', 'an', 'aus', 'bei', 'mit', 'nach', 'von', 'vor',
   'zu', 'ein', 'weg', 'los', 'um', 'durch', 'über', 'unter', 'hinter', 'neben',
   'da', 'dort', 'hier', 'fort', 'zurück', 'empor', 'entlang', 'hinein', 'heraus',
-  'herein', 'hinab', 'hinauf', 'dran', 'drauf', 'drum', 'mit', 'gar', 'nur', 'so',
+  'herein', 'hinab', 'hinauf', 'dran', 'drauf', 'drum', 'gar', 'nur', 'so',
+  'hui', 'oha', 'aha', 'nanu', 'hoppla', 'plumps', 'schwupps', 'plopp', 'platsch',
+  'klatsch', 'rums', 'rumms', 'bumm', 'boing', 'tröt', 'trööt', 'puff', 'paff',
+  'zack', 'huch', 'oh', 'ach', 'na', 'ja', 'nein', 'doch', 'mal', 'schon', 'noch',
+  'bald', 'fast', 'sehr', 'ganz', 'gern', 'gerne', 'heute', 'morgen', 'gestern',
+  'immer', 'wieder', 'oft', 'nie', 'nun', 'jetzt', 'dann', 'oben', 'unten',
+  'vorne', 'hinten', 'innen', 'außen', 'drinnen', 'draußen', 'drüben', 'mitten',
+  'rundum', 'umher', 'herbei', 'heran', 'voraus', 'vorbei', 'voran', 'zusammen',
+  'gemeinsam', 'allein', 'alleine', 'plötzlich', 'vielleicht', 'bestimmt', 'sicher',
+  'wirklich', 'endlich', 'gleich', 'sofort', 'zuerst', 'zuletzt', 'ohne', 'gegen',
+  'zwischen', 'während', 'wegen', 'trotz', 'und', 'oder', 'aber', 'denn', 'weil',
+  'wenn', 'als', 'bis', 'seit', 'für',
 ]);
 
 // German pronouns and non-noun sentence starters
@@ -66,10 +77,25 @@ export const GERMAN_PRONOUNS = new Set([
   'meine', 'meinen', 'meinem', 'meines', 'deine', 'deinen', 'deinem', 'deines',
   'alle', 'allen', 'allem', 'alles', 'jede', 'jeder', 'jedes', 'jemand', 'niemand',
   'wer', 'was', 'wie', 'wo', 'wann', 'warum', 'welche', 'welcher', 'welches',
+  'viele', 'vielen', 'beide', 'beiden', 'einige', 'manche', 'solche', 'dieser', 'diese', 'dieses',
 ]);
 
+const ADJECTIVE_STEM_REGEX =
+  /^(rot|blau|grün|gelb|bunt|groß|klein|alt|jung|neu|warm|kalt|lieb|wild|süß|laut|nah|rund|dick|dünn|hell|kurz|lang|froh|klug|müd|gut|schön|fein|still|leis|schnell|langsam|hoch|hoh|tief|weit|voll|leer|nett|frisch|sanft|stark|weich|hart|glatt|nass|trocken|dunkel|dunkl|sauber|echt|frech|zart|stolz|wach|satt|klar|rein|fremd|offen|golden|silbern|geheim|mutig|lustig|traurig|hungrig|durstig|fertig|wichtig|richtig)(e|er|en|es|em)?$/i;
+
 /**
- * Checks if a word is a German noun (capitalized in orthography, not a pronoun/article/particle).
+ * Checks if a word is a known German adjective stem or inflected form.
+ */
+function isKnownAdjectiveForm(lower: string): boolean {
+  return ADJECTIVE_REGEX_CHECK(lower);
+}
+
+function ADJECTIVE_REGEX_CHECK(lower: string): boolean {
+  return ADJECTIVE_STEM_REGEX.test(lower);
+}
+
+/**
+ * Checks if a word is a German noun (capitalized in orthography, not a pronoun/article/particle/adjective).
  */
 export function isNoun(cleanWord: string): boolean {
   if (!cleanWord || cleanWord.length === 0) return false;
@@ -77,7 +103,8 @@ export function isNoun(cleanWord: string): boolean {
   if (
     isArticle(lower) ||
     FORBIDDEN_LEVEL1_PARTICLES.has(lower) ||
-    GERMAN_PRONOUNS.has(lower)
+    GERMAN_PRONOUNS.has(lower) ||
+    isKnownAdjectiveForm(lower)
   ) {
     return false;
   }
@@ -98,8 +125,9 @@ export function isArticle(cleanWord: string): boolean {
 export function isAdjective(cleanWord: string): boolean {
   const lower = cleanWord.toLowerCase();
   if (isArticle(lower) || FORBIDDEN_LEVEL1_PARTICLES.has(lower)) return false;
-  return /(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower) ||
-    ['rot', 'blau', 'grün', 'gelb', 'bunt', 'groß', 'klein', 'alt', 'jung', 'neu', 'warm', 'kalt', 'lieb', 'wild', 'süß', 'laut', 'nah', 'rund', 'dick', 'dünn', 'hell', 'kurz', 'lang', 'froh', 'klug', 'müde'].includes(lower);
+  if (isKnownAdjectiveForm(lower)) return true;
+  if (isNoun(cleanWord)) return false;
+  return /(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower);
 }
 
 /**
@@ -137,10 +165,13 @@ export function isGenitiveForm(cleanWord: string): boolean {
   return false;
 }
 
-
+const DEFAULT_STORY_CHARACTER_NAMES = new Set([
+  'lilly', 'paul', 'kalle', 'finja', 'bello', 'poldi', 'krümel', 'max', 'finn', 'anton',
+  'flora', 'mimi', 'rexi', 'koko', 'lumi',
+]);
 
 /**
- * Checks whether a word is the configured child name or companion name (including genitive 's').
+ * Checks whether a word is the configured child name, companion name, or default protagonist name (including genitive 's').
  */
 export function isProtectedName(
   word: string,
@@ -149,6 +180,7 @@ export function isProtectedName(
 ): boolean {
   const clean = cleanPunctuation(word).toLowerCase();
   if (!clean) return false;
+  if (DEFAULT_STORY_CHARACTER_NAMES.has(clean)) return true;
 
   const namesToCheck = [companionName, childName].filter(Boolean) as string[];
   for (const name of namesToCheck) {
@@ -162,27 +194,9 @@ export function isProtectedName(
 }
 
 /**
- * Calculates didactic complexity penalty score for a word (WP07).
- *
- * Scoring Rules:
- * 1. +10 Points (Red light / Killer):
- *    - Regex-Match: /[ßcqxyz]|ck|tz|pf/i.test(word)
- *    - Syllables limit: syllables.length >= 3
- *    - Compound protection (Length): word.length >= 8
- *    - Heavy endings in polysyllables: /(es|em|er|sten|chem)$/i.test(word) && syllables.length > 1
- *
- * 2. +3 Points (Heavy hurdles):
- *    - Nasals: /(nk|ng)/i.test(word)
- *    - Consonant clusters at syllable or word end (>= 2 consecutive consonants): /[bcdfghjklmnpqrstvwxyzß]{2,}$/i
- *
- * 3. +2 Points (Medium hurdles):
- *    - Complex graphemes: /(sch|ch|sp|st)/i.test(word)
- *    - Double letters (incl. umlauts): /([a-zäöü])\1/i.test(word)
- *
- * 4. +1 Point (Light hurdles):
- *    - Diphthongs: /(ei|au|eu|äu|ie)/i.test(word)
- *    - Simple umlauts: /[äöü]/i.test(word)
- *    - Dehnungs-h: /[aeiouäöü]h/i.test(word)
+ * Checks whether a word is eligible as a Level 1 child target word.
+ * Capitalized 1- to 2-syllable nouns (including open/reduction endings like -e, -el, -en, -er)
+ * are eligible unless they carry complex derivational suffixes.
  */
 export function isLevel1EligibleWord(cleanWord: string): boolean {
   if (!cleanWord || cleanWord.length === 0) return false;
@@ -195,12 +209,40 @@ export function isLevel1EligibleWord(cleanWord: string): boolean {
     isAdjective(cleanWord)
   )
     return false;
+  if (isNoun(cleanWord)) {
+    if (/(ig|lich|isch|bar|sam|haft|sten|chem|chen|lein|ung|heit|keit)$/i.test(lower)) return false;
+    return true;
+  }
   if (/(e|er|en|es|em|el|ig|lich|isch|bar|sam|haft)$/i.test(lower)) return false;
   return true;
 }
 
+/**
+ * Calculates didactic complexity penalty score for a word (WP07).
+ *
+ * Scoring Rules:
+ * 1. +10 Points (Red light / Killer):
+ *    - Regex-Match: /[ßcqxyz]|ck|tz|pf/i.test(word)
+ *    - Syllables limit: syllables.length >= 3
+ *    - Compound protection (Length): word.length >= 8
+ *    - Heavy endings in polysyllables: /(es|em|er|sten|chem)$/i.test(word) && syllables.length > 1 (for non-nouns on -er)
+ *
+ * 2. +3 Points (Heavy hurdles):
+ *    - Nasals: /(nk|ng)/i.test(word)
+ *    - Consonant clusters at syllable or word end (>= 2 consecutive consonants): /[bcdfghjklmnpqrstvwxyzß]{2,}$/i
+ *
+ * 3. +2 Points (Medium hurdles):
+ *    - Complex graphemes: /(sch|ch|sp|st)/i.test(word)
+ *    - Double consonants: /([bcdfghjklmnpqrstvwxyz])\1/i.test(word)
+ *
+ * 4. +1 Point (Light hurdles):
+ *    - Diphthongs: /(ei|au|eu|äu|ie)/i.test(word)
+ *    - Simple umlauts: /[äöü]/i.test(word)
+ *    - Dehnungs-h: /[aeiouäöü]h/i.test(word)
+ */
 export function calculateWordComplexity(word: string, syllables: string[] = []): number {
-  const clean = cleanPunctuation(word).toLowerCase();
+  const stripped = cleanPunctuation(word);
+  const clean = stripped.toLowerCase();
   if (!clean) return 0;
 
   let score = 0;
@@ -210,7 +252,12 @@ export function calculateWordComplexity(word: string, syllables: string[] = []):
   if (/[ßcqxyz]|ck|tz|pf/i.test(clean)) score += 10;
   if (effSyllables.length >= 3) score += 10;
   if (clean.length >= 8) score += 10; // Komposita-Schutz
-  if (/(es|em|er|sten|chem)$/i.test(clean) && effSyllables.length > 1) score += 10;
+  if (
+    (/(es|em|sten|chem)$/i.test(clean) || (/er$/i.test(clean) && !isNoun(stripped))) &&
+    effSyllables.length > 1
+  ) {
+    score += 10;
+  }
 
   // 2. +3 Punkte (Schwere Hürden)
   if (/(nk|ng)/i.test(clean)) score += 3;
@@ -225,7 +272,7 @@ export function calculateWordComplexity(word: string, syllables: string[] = []):
 
   // 3. +2 Punkte (Mittlere Hürden)
   if (/(sch|ch|sp|st)/i.test(clean)) score += 2;
-  if (/([a-zäöü])\1/i.test(clean)) score += 2; // Doppelkonsonanten (pp, ll)
+  if (/([bcdfghjklmnpqrstvwxyz])\1/i.test(clean)) score += 2; // Doppelkonsonanten (pp, ll, nn, tt)
 
   // 4. +1 Punkt (Leichte Hürden)
   if (/(ei|au|eu|äu|ie)/i.test(clean)) score += 1;
@@ -254,10 +301,11 @@ export interface WordMeta {
 
 /**
  * Intelligent selector for Phase A (Levels 1, 2, 3) enforcing didactic scoring (WP07 & WP09):
- * - Level 1: Wählt das Nomen/Vollverb mit dem niedrigsten Score (Score <= 1).
+ * - Level 1: Wählt das Nomen/Vollverb mit dem niedrigsten Score (Score === 0).
  *            Priorisiert bei gleichem Basisscore Wörter mit Dauerlauten (m, l, s, n, f, r)
- *            vor Wörtern mit Verschlusslauten/Plosiven (p, t, k, b, d, g) via calculatePhonemeTiebreaker.
- *            Überspringt bei Score >= 2 (role: 'app').
+ *            vor Wörtern mit Verschlusslauten/Plosiven (p, t, k, b, d, g) via calculatePhonemeTiebreaker,
+ *            sowie noch nicht gelesene Zielwörter (Abwechslung) vor Wiederholungen.
+ *            Überspringt bei Score >= 1 (role: 'app').
  * - Level 2: Strikte Adjazenz [Artikel/Adjektiv + Nomen], sum(syllables) <= 4, priorisiert nach niedrigstem Score
  *            und Dauerlaut-Tiebreaker.
  * - Level 3: 3 bis 4 aufeinanderfolgende Wörter mit sum(syllables) <= 7, kein Wort >= 4 Silben.
@@ -267,7 +315,8 @@ export function selectPhaseAChildIndices(
   level: 1 | 2 | 3,
   usedChildNames?: Set<string>,
   companionName?: string,
-  childName?: string
+  childName?: string,
+  usedChildWords?: Set<string>
 ): Set<number> {
   const n = rawWords.length;
   const selected = new Set<number>();
@@ -285,11 +334,21 @@ export function selectPhaseAChildIndices(
       const baseScore = calculateWordComplexity(w.cleanWord, w.syllables);
       if (baseScore > 0) continue;
 
+      const lower = cleanPunctuation(w.cleanWord).toLowerCase();
       let selectionScore = baseScore + calculatePhonemeTiebreaker(w.cleanWord);
 
+      // Prefer nouns over lowercase verbs when both have baseScore 0
+      if (!isNoun(w.cleanWord)) {
+        selectionScore += 0.5;
+      }
+
+      // Encourage word variety across sentences without disqualifying if no alternative exists
+      if (usedChildWords?.has(lower)) {
+        selectionScore += 5;
+      }
+
       if (isProtectedName(w.cleanWord, companionName, childName)) {
-        const lower = cleanPunctuation(w.cleanWord).toLowerCase();
-        selectionScore += usedChildNames?.has(lower) ? 100 : 50; 
+        selectionScore += usedChildNames?.has(lower) ? 100 : 50;
       }
 
       if (selectionScore < lowestSelectionScore) {
@@ -321,16 +380,32 @@ export function selectPhaseAChildIndices(
 
       const syl1 = w1.syllables.length;
       const syl2 = w2.syllables.length;
-      if (syl1 + syl2 > 4) continue;
+      if (syl1 + syl2 > 4 || syl1 >= 3 || syl2 >= 3) continue;
 
       let score1 = calculateWordComplexity(w1.cleanWord, w1.syllables);
       let score2 = calculateWordComplexity(w2.cleanWord, w2.syllables);
 
+      // In Level 2, 2-syllable adjectives with standard inflection (-er, -es, -em like "kleiner", "blauer", "rundes")
+      // are desired target modifiers and should not suffer the Level 1 +10 inflection penalty
+      if (isAdjective(w1.cleanWord) && syl1 === 2 && /(er|es|em)$/i.test(w1.cleanWord)) {
+        score1 = Math.max(0, score1 - 10);
+      }
+
+      // Slightly prefer descriptive [Adjective + Noun] pairs over [Preposition/Article + Noun] when phonetically clean
+      const adjBonus = isAdjective(w1.cleanWord) ? -1.5 : 0;
+
+      const LEVEL2_FORBIDDEN = /ß|ck|tz|([bcdfghjklmnpqrstvwxyz])\1/i;
+      if (LEVEL2_FORBIDDEN.test(w1.cleanWord)) score1 += 25;
+      if (LEVEL2_FORBIDDEN.test(w2.cleanWord)) score2 += 25;
+
       if (isProtectedName(w1.cleanWord, companionName, childName)) score1 += 50;
       if (isProtectedName(w2.cleanWord, companionName, childName)) score2 += 50;
 
+      const lowerNoun = cleanPunctuation(w2.cleanWord).toLowerCase();
+      const repeatPenalty = usedChildWords?.has(lowerNoun) ? 5 : 0;
+
       const tiebreaker = calculatePhonemeTiebreaker(w1.cleanWord) + calculatePhonemeTiebreaker(w2.cleanWord);
-      const totalScore = score1 + score2 + tiebreaker;
+      const totalScore = score1 + score2 + tiebreaker + repeatPenalty + adjBonus;
       if (totalScore < lowestScore) {
         lowestScore = totalScore;
         bestPair = [i, i + 1];
@@ -428,6 +503,7 @@ export function tokenizeStory(
   // Track protected names that have received role: 'child' in this story
   // Requirement: Child name and companion name may receive role: 'child' AT MOST ONCE per story!
   const usedChildNames = new Set<string>();
+  const usedChildWords = new Set<string>();
 
   const sentences: SentenceToken[] = sentenceStrings.map((sentenceStr, sentenceIndex) => {
     const rawWords = sentenceStr.split(/\s+/).filter((w) => w.length > 0);
@@ -461,7 +537,14 @@ export function tokenizeStory(
 
     const phaseAChildIndices =
       sentenceRole === 'mixed' && (level === 1 || level === 2 || level === 3)
-        ? selectPhaseAChildIndices(wordMetas, level, usedChildNames, companionName, childName)
+        ? selectPhaseAChildIndices(
+            wordMetas,
+            level,
+            usedChildNames,
+            companionName,
+            childName,
+            usedChildWords
+          )
         : new Set<number>();
 
     const words: WordToken[] = wordMetas.map((meta, wordIndex) => {
@@ -488,6 +571,10 @@ export function tokenizeStory(
         } else {
           usedChildNames.add(lower);
         }
+      }
+
+      if (role === 'child' && meta.cleanWord) {
+        usedChildWords.add(meta.cleanWord.toLowerCase());
       }
 
       return {

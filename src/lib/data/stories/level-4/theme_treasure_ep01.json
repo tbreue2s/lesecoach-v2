@@ -2,11 +2,50 @@
   "themeId": "theme_treasure",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Ein Fund in der tiefen Höhle",
+  "disturberWord": "Schlafdrache",
+  "title": "Der schlafende Schatz",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt in der tiefen Höhle.",
+      "text": "Mia hält eine alte Karte.",
+      "words": [
+        {
+          "clean": "Mia",
+          "syllables": [
+            "Mi",
+            "a"
+          ]
+        },
+        {
+          "clean": "hält",
+          "syllables": [
+            "hält"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "alte",
+          "syllables": [
+            "al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Karte",
+          "syllables": [
+            "Kar",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein goldener Schlüssel funkelt im weichen Moos.",
       "words": [
         {
           "clean": "Ein",
@@ -15,162 +54,141 @@
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "goldener",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
+            "gol",
+            "de",
+            "ner"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "Schlüssel",
           "syllables": [
-            "Tag"
+            "Schlüs",
+            "sel"
           ]
         },
         {
-          "clean": "beginnt",
+          "clean": "funkelt",
           "syllables": [
-            "be",
-            "ginnt"
+            "fun",
+            "kelt"
           ]
         },
         {
-          "clean": "in",
+          "clean": "im",
           "syllables": [
-            "in"
+            "im"
           ]
         },
         {
-          "clean": "der",
+          "clean": "weichen",
           "syllables": [
-            "der"
+            "wei",
+            "chen"
           ]
         },
         {
-          "clean": "tiefen",
+          "clean": "Moos",
           "syllables": [
-            "tie",
-            "fen"
-          ]
-        },
-        {
-          "clean": "Höhle",
-          "syllables": [
-            "Höh",
-            "le"
+            "Moos"
           ]
         }
       ]
     },
     {
-      "text": "Der Biber läuft über die Wiese.",
+      "text": "Das Schloss springt leise auf.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Das",
           "syllables": [
-            "Der"
+            "Das"
           ]
         },
         {
-          "clean": "Biber",
+          "clean": "Schloss",
           "syllables": [
-            "Bi",
-            "ber"
+            "Schloss"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "springt",
           "syllables": [
-            "läuft"
+            "springt"
           ]
         },
         {
-          "clean": "über",
+          "clean": "leise",
           "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
+            "lei",
             "se"
           ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Regenschirm auf dem Pfad auf.",
+      "text": "Neben einer Perle schläft ein winziger Babydrache.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Neben",
           "syllables": [
-            "Ganz"
+            "Ne",
+            "ben"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "einer",
           "syllables": [
-            "plöt",
-            "zlich"
+            "ei",
+            "ner"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "Perle",
           "syllables": [
-            "taucht"
+            "Per",
+            "le"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "schläft",
           "syllables": [
-            "Ein"
+            "schläft"
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "ein",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
+            "ein"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "winziger",
           "syllables": [
-            "auf"
+            "win",
+            "zi",
+            "ger"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "Babydrache",
           "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
+            "Ba",
+            "byd",
+            "ra",
+            "che"
           ]
         }
       ]
     },
     {
-      "text": "Er staunt über den Fund.",
+      "text": "Er schnarcht ganz leise.",
       "words": [
         {
           "clean": "Er",
@@ -179,16 +197,48 @@
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "schnarcht",
           "syllables": [
-            "staunt"
+            "schnarcht"
           ]
         },
         {
-          "clean": "über",
+          "clean": "ganz",
           "syllables": [
-            "ü",
-            "ber"
+            "ganz"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Vorsichtig deckt Mia den kleinen Schatz zu.",
+      "words": [
+        {
+          "clean": "Vorsichtig",
+          "syllables": [
+            "Vor",
+            "sich",
+            "tig"
+          ]
+        },
+        {
+          "clean": "deckt",
+          "syllables": [
+            "deckt"
+          ]
+        },
+        {
+          "clean": "Mia",
+          "syllables": [
+            "Mi",
+            "a"
           ]
         },
         {
@@ -198,62 +248,22 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "kleinen",
           "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
+            "klei",
+            "nen"
           ]
         },
         {
-          "clean": "nehmen",
+          "clean": "Schatz",
           "syllables": [
-            "neh",
-            "men"
+            "Schatz"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "zu",
           "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "neue",
-          "syllables": [
-            "neu",
-            "e"
-          ]
-        },
-        {
-          "clean": "Abenteuer",
-          "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
+            "zu"
           ]
         }
       ]

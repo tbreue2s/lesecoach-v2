@@ -1,12 +1,37 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFile, execFileSync } from 'node:child_process';
+import { promisify } from 'node:util';
 import { STORY_THEMES } from '../src/lib/data/storyThemes';
 import type { StoryTheme } from '../src/lib/types/storyConfig';
 import type { ReadingLevelNumber } from '../src/lib/types/reading';
-import { cleanPunctuation } from '../src/lib/utils/tokenizer';
+import { cleanPunctuation, tokenizeStory } from '../src/lib/utils/tokenizer';
 import { splitSyllables } from '../src/lib/utils/syllableSplitter';
 import { validateStoryForLevel } from '../src/lib/utils/levelValidator';
+import {
+  FULL_LEVEL1_WHITELIST,
+  THEME_LEVEL1_ANCHOR_WORDS,
+  THEME_SURPRISE_SEEDS,
+  LEVEL_1_2_DISTURBER_WORDS,
+  getThemeLevel1Anchors,
+  getEpisodeSurpriseSeed,
+  buildDraftingPrompt,
+  buildTranslationPrompt,
+  buildBatchThemePrompt,
+} from '../src/lib/utils/promptTemplates';
+
+export {
+  FULL_LEVEL1_WHITELIST,
+  THEME_LEVEL1_ANCHOR_WORDS,
+  THEME_SURPRISE_SEEDS,
+  LEVEL_1_2_DISTURBER_WORDS,
+  getThemeLevel1Anchors,
+  getEpisodeSurpriseSeed,
+  buildDraftingPrompt,
+  buildTranslationPrompt,
+  buildBatchThemePrompt,
+};
 
 // Get repository root directory
 const __filename = fileURLToPath(import.meta.url);
@@ -14,7 +39,7 @@ const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 /**
- * 30 Absurd, humorous disturber words ("Störwörter") to break narrative stereotypes.
+ * 30 surprise/disturber tags for backward-compatible exports.
  */
 export const DISTURBER_WORDS: readonly string[] = Object.freeze([
   'Ufo',
@@ -49,18 +74,9 @@ export const DISTURBER_WORDS: readonly string[] = Object.freeze([
   'Drachen',
 ]);
 
-/**
- * Strict Level 1 positive list of 70 didactically compliant nouns from WP13 spec.
- */
-export const LEVEL_1_NOUN_WHITELIST: readonly string[] = Object.freeze([
-  'Dino', 'Lama', 'Puma', 'Wal', 'Igel', 'Vogel', 'Kater', 'Biber', 'Esel', 'Rabe',
-  'Falke', 'Kamel', 'Tiger', 'Oma', 'Opa', 'Mama', 'Papa', 'Pirat', 'Pilot', 'Bruder',
-  'Vater', 'Bote', 'Maler', 'Hut', 'Tor', 'Sofa', 'Dose', 'Hose', 'Vase', 'Lupe',
-  'Gabel', 'Kabel', 'Tafel', 'Nadel', 'Feder', 'Faden', 'Boden', 'Besen', 'Laden', 'Bogen',
-  'Paket', 'Note', 'Glas', 'Ufo', 'Bus', 'Rad', 'Lok', 'Motor', 'Foto', 'Kino',
-  'Gras', 'Tal', 'Blume', 'Regen', 'Hafen', 'Ufer', 'Planet', 'Brot', 'Salat', 'Limo',
-  'Auto', 'Baum', 'Haus', 'Maus', 'Bein', 'Stein', 'Tier', 'Lied', 'Brief', 'Dieb',
-]);
+// Backward-compatible alias
+export const LEVEL_1_NOUN_WHITELIST = FULL_LEVEL1_WHITELIST;
+export const LEVEL_1_TARGET_NOUNS = FULL_LEVEL1_WHITELIST;
 
 export interface GeneratedStoryWord {
   clean: string;
@@ -90,6 +106,38 @@ export interface CliOptions {
   outDir: string;
   dryRun: boolean;
   verbose: boolean;
+  offline?: boolean;
+  skipExisting?: boolean;
+}
+
+const execFileAsync = promisify(execFile);
+
+/**
+ * Checks whether the Antigravity CLI ('agy') is installed and accessible in PATH.
+ */
+export function isAgyAvailable(): boolean {
+  try {
+    execFileSync('agy', ['--help'], { stdio: 'ignore' });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Executes a prompt via the Antigravity CLI (agy -p) using high reasoning effort.
+ */
+export async function callAgy(prompt: string, model?: string): Promise<string> {
+  const directPrompt = `SYSTEM-HINWEIS: Verwende KEINE Tools, lies KEINE Dateien und führe KEINE Befehle aus. Antworte sofort und ausschließlich mit dem angeforderten Text bzw. JSON.\n\n${prompt}`;
+  const args = ['-p', directPrompt, '--output-format', 'text', '--disable-slash-commands', '--effort', 'high'];
+  if (model && !model.startsWith('gemini-2.5')) {
+    args.push('--model', model);
+  }
+  const { stdout } = await execFileAsync('agy', args, {
+    cwd: '/tmp',
+    maxBuffer: 20 * 1024 * 1024,
+  });
+  return stdout.trim();
 }
 
 /**
@@ -98,7 +146,7 @@ export interface CliOptions {
 export function parseArgs(rawArgs: string[] = process.argv): CliOptions {
   const options: CliOptions = {
     count: 10,
-    model: 'gemini-2.5-flash',
+    model: 'gemini-2.5-pro',
     outDir: path.resolve(REPO_ROOT, 'src/lib/data/stories'),
     dryRun: false,
     verbose: false,
@@ -126,6 +174,10 @@ export function parseArgs(rawArgs: string[] = process.argv): CliOptions {
       options.dryRun = true;
     } else if (arg === '--verbose' || arg === '-v') {
       options.verbose = true;
+    } else if (arg === '--offline') {
+      options.offline = true;
+    } else if (arg === '--skip-existing' || arg === '--skipExisting') {
+      options.skipExisting = true;
     }
   }
 
@@ -155,7 +207,7 @@ export function sampleRandom<T>(items: readonly T[], count: number): T[] {
 export async function callGemini(
   prompt: string,
   apiKey: string,
-  model: string = 'gemini-2.5-flash',
+  model: string = 'gemini-2.5-pro',
   jsonMode: boolean = false
 ): Promise<string> {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
@@ -164,7 +216,12 @@ export async function callGemini(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: jsonMode ? { responseMimeType: 'application/json' } : {},
+      generationConfig: {
+        ...(jsonMode ? { responseMimeType: 'application/json' } : {}),
+        thinkingConfig: {
+          thinkingBudget: 2048,
+        },
+      },
     }),
   });
 
@@ -181,110 +238,6 @@ export async function callGemini(
     throw new Error('Gemini API returned an empty or invalid content part.');
   }
   return text;
-}
-
-/**
- * Builds the Step 1 (Drafting) prompt for narrative creativity and disturber collision.
- */
-export function buildDraftingPrompt(
-  theme: StoryTheme,
-  disturberWord: string,
-  level: ReadingLevelNumber
-): string {
-  return `Du bist ein humorvoller Kinderbuch-Autor für Erstleser.
-Erfinde einen originellen, kindgerechten Mini-Plot für eine Geschichte.
-
-Thema: ${theme.label} (${theme.description})
-Kreatives Störwort: "${disturberWord}"
-Ziel-Lesestufe: Level ${level}
-
-Aufgabe:
-Schreibe einen kurzen Handlungsbogen mit 4 Schritten:
-1. Start: Eine typische, friedliche Szene zum Thema "${theme.label}".
-2. Konflikt/Überraschung: Das Störwort "${disturberWord}" taucht plötzlich und unerwartet auf.
-3. Aktion: Eine lustige, überraschende oder mutige Interaktion mit dem Störwort.
-4. Ende: Ein fröhliches, rundes Ende.
-
-Umfang: Genau 4 bis 6 Sätze auf Deutsch.
-Schreibe NUR den reinen Handlungstext, ohne Erklärungen oder Formatierungen.`;
-}
-
-/**
- * Builds the Step 2 (Translation & JSON) prompt with strict level didactic constraints.
- */
-export function buildTranslationPrompt(
-  theme: StoryTheme,
-  disturberWord: string,
-  level: ReadingLevelNumber,
-  episode: number,
-  plotDraft: string,
-  selectedNouns: string[]
-): string {
-  let levelRules = '';
-
-  if (level === 1) {
-    levelRules = `DIDAKTISCHE LEVEL-1-REGELN (Whitelist-Fokus):
-- Exakt 4 Sätze.
-- Maximal 5 bis 6 Wörter pro Satz.
-- Das Störwort "${disturberWord}" MUSS in der Geschichte vorkommen.
-- ZWINGENDE POSITIVLISTE: Du MUSST in JEDEM der 4 Sätze mindestens ein Nomen aus dieser gezogenen Liste verwenden:
-  ${selectedNouns.map((n) => `  * ${n}`).join('\n')}
-  Jeder Satz MUSS mindestens eines dieser Wörter (${selectedNouns.join(', ')}) enthalten!
-- Die Sätze dürfen für den Vorleser atmosphärisch sein, aber das Kind liest das einfache Kernwort.`;
-  } else if (level === 2) {
-    levelRules = `DIDAKTISCHE LEVEL-2-REGELN (Wortpaar-Pioniere):
-- 4 bis 5 Sätze.
-- Verbindlicher Einbau einfacher Nomen-Phrasen (Adjektiv + Nomen oder Artikel + Nomen).
-- Maximal 3 Silben pro Wort; Nomen-Phrasen maximal 4 Silben in Summe.
-- Das Störwort "${disturberWord}" MUSS in der Geschichte vorkommen.`;
-  } else if (level <= 5) {
-    levelRules = `DIDAKTISCHE LEVEL-${level}-REGELN (Tandem-Lesen):
-- 5 bis 6 Sätze im Wechsel aus kurzen Kind-Sätzen (3-5 Wörter) und lebendigen App-Sätzen (6-8 Wörter).
-- Das Störwort "${disturberWord}" MUSS in der Geschichte vorkommen.`;
-  } else {
-    const wordCountDesc =
-      level === 7 ? 'ca. 30 Wörter (5-7 Sätze)' : level === 8 ? 'ca. 60 Wörter (8-12 Sätze mit Dialogen, ?, !)' : '100+ Wörter (12-18 Sätze)';
-    levelRules = `DIDAKTISCHE LEVEL-${level}-REGELN (Phase C - Lesefluss):
-- Längenskalierung: ${wordCountDesc}.
-- Lebendige Handlung, das Störwort "${disturberWord}" MUSS in der Geschichte vorkommen.`;
-  }
-
-  return `Du bist ein didaktischer Lese-Experte für Grundschulkinder und ein präziser JSON-Generator.
-Übersetze den folgenden Rohentwurf in eine didaktisch optimierte Geschichte für Level ${level}.
-
-Handlungs-Rohentwurf:
-${plotDraft}
-
-${levelRules}
-
-NARRATIVER ZUSAMMENHANG & ROTER FADEN (HÖCHSTE PRIORITÄT):
-Die Sätze dürfen KEINESFALLS wie eine zusammenhangslose Liste wirken! Sie MÜSSEN eine sinnvolle, zusammenhängende und logische Mini-Geschichte erzählen:
-1. Satz (Ausgangssituation): Ein Protagonist (z. B. Tier oder Figur) wird an einem passenden Ort eingeführt.
-2. Satz (Kollision): Das Störwort "${disturberWord}" taucht überraschend an diesem Ort auf.
-3. Satz (Reaktion/Aktion): Der Protagonist interagiert direkt und logisch mit dem Störwort.
-4. Satz (Auflösung): Fröhlicher, befriedigender und logischer Abschluss der Szene.
-
-SILBENTRENNUNG:
-Zerlege jedes Wort im Satz in ein Array seiner Silben (z. B. "Ufo" -> ["U", "fo"], "landet" -> ["lan", "det"], "Tor" -> ["Tor"]).
-
-WICHTIG - STRIKTES JSON-OUTPUT-MANDAT:
-Gib AUSSCHLIESSLICH ein gültiges JSON-Objekt zurück. Kein Markdown, keine Backticks (\`\`\`json), keine Vorbemerkungen.
-Schema:
-{
-  "themeId": "${theme.id}",
-  "level": ${level},
-  "episode": ${episode},
-  "disturberWord": "${disturberWord}",
-  "title": "Kurzer, lustiger Titel",
-  "sentences": [
-    {
-      "text": "Satztext hier.",
-      "words": [
-        { "clean": "BereinigtesWort", "syllables": ["Si", "lbe"] }
-      ]
-    }
-  ]
-}`;
 }
 
 const FEMININE_NOUNS = new Set([
@@ -365,11 +318,12 @@ export function generateFallbackStory(
   disturberWord: string,
   level: ReadingLevelNumber,
   episode: number,
-  selectedNouns: string[]
+  selectedNouns: string[] = []
 ): GeneratedStoryFile {
   let title = '';
   let rawSentences: string[] = [];
   const flavor = THEME_FLAVORS[theme.id] || { protagonist: 'Dino', settingDesc: `im ${theme.label}` };
+  const anchors = getThemeLevel1Anchors(theme);
 
   const defArtDisturber =
     FEMININE_DISTURBERS.has(disturberWord) || FEMININE_NOUNS.has(disturberWord)
@@ -379,7 +333,7 @@ export function generateFallbackStory(
       : 'der';
 
   if (level === 1) {
-    // Preserve our special curated story if Dino + Fernseher
+    // Preserve curated story if Dino + Fernseher
     if (theme.id === 'theme_dino' && disturberWord === 'Fernseher') {
       title = 'Der Dino und der Fernseher';
       rawSentences = [
@@ -389,29 +343,26 @@ export function generateFallbackStory(
         'Auf dem Glas tanzt eine Maus.',
       ];
     } else {
-      const PROTAGONISTS = [
-        'Dino', 'Lama', 'Puma', 'Igel', 'Kater', 'Biber', 'Esel', 'Tiger', 'Opa', 'Papa', 'Wal',
-      ];
-      const protagonist = selectedNouns.find((n) => PROTAGONISTS.includes(n)) || flavor.protagonist;
-      const otherNouns = selectedNouns.filter((n) => n !== protagonist);
-      const nLoc = otherNouns.find((n) => ['Tor', 'Haus', 'Tal', 'Baum', 'Hof'].includes(n)) || 'Tor';
-      const defArtProtagonist = FEMININE_NOUNS.has(protagonist) ? 'die' : NEUTER_NOUNS.has(protagonist) ? 'das' : 'der';
+      const pool = selectedNouns.length >= 4 ? selectedNouns : [...anchors];
+      const n1 = pool[0] || 'Vogel';
+      const n2 = pool[1] || 'Dino';
+      const n3 = pool[2] || 'Tor';
 
-      title = `${protagonist} und ${defArtDisturber} ${disturberWord}`;
+      title = `Überraschung am ${n3}`;
       rawSentences = [
-        `${getNomIndefinite(protagonist)} geht zum ${nLoc}.`,
-        `${getNomDefinite(protagonist)} sieht ${getAccIndefinite(disturberWord)}.`,
-        `${getNomDefinite(protagonist)} schaut ${getAccDefinite(disturberWord)} an.`,
-        `Froh ruft ${defArtProtagonist} ${protagonist} am ${nLoc}.`,
+        `Ein kleiner ${n1} fliegt fröhlich durch das Tal.`,
+        `Plötzlich glitzert ${getNomIndefinite(disturberWord)} im weichen Moos.`,
+        `Neugierig staunt der ${n2} am alten ${n3}.`,
+        `Vergnügt winken alle am Abend am See.`,
       ];
     }
   } else if (level === 2) {
-    title = `Das bunte ${disturberWord}`;
+    title = `Das Wunder am See`;
     rawSentences = [
-      `Ein kleiner Hund geht umher.`,
-      `Mitten im Gras liegt ${getAccIndefinite(disturberWord)}.`,
-      `Das liebe Tier staunt sehr.`,
-      `Der alte Baum spendet Schatten.`,
+      `Lilly rudert heute vergnügt über den blauen See.`,
+      `Am flachen Ufer wartet plötzlich ${getNomIndefinite(disturberWord)}.`,
+      `Ein bunter Vogel singt dazu ein schönes Lied.`,
+      `Im grünen Moos feiern alle ein warmes Fest.`,
     ];
   } else if (level === 3) {
     title = `${flavor.protagonist} und ${defArtDisturber} ${disturberWord}`;
@@ -474,7 +425,7 @@ export function generateFallbackStory(
       `Was für ein herrlicher und sonniger Morgen!`,
       `Der ${flavor.protagonist} spaziert vergnügt ${flavor.settingDesc}.`,
       `Doch was glitzert da drüben so hell im Sonnenlicht?`,
-      `Es ist ${getNomIndefinite(disturberWord)}, das mitten auf dem Moos steht!`,
+      `Es ist ${getNomIndefinite(disturberWord)}, das mitten auf dem Moos wartet!`,
       `„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.`,
       `Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.`,
       `So einen aufregenden Tag werden sie sicher niemals vergessen!`,
@@ -533,22 +484,17 @@ export function generateFallbackStory(
 export function refineAndValidateStory(
   story: GeneratedStoryFile,
   level: ReadingLevelNumber,
-  selectedNouns: string[]
+  _legacyNouns: string[] = []
 ): { story: GeneratedStoryFile; isValid: boolean; issues: string[] } {
   const issues: string[] = [];
 
-  // Guarantee syllables for every word using our German syllable splitter
-  story.sentences = story.sentences.map((sent) => {
+  // Guarantee syllables for every word using our deterministic German syllable splitter
+  story.sentences = (story.sentences || []).map((sent) => {
     const rawWords = sent.text.split(/\s+/).filter((w) => w.length > 0);
-    const words: GeneratedStoryWord[] = rawWords.map((w, idx) => {
+    const words: GeneratedStoryWord[] = rawWords.map((w) => {
       const clean = cleanPunctuation(w);
       const effective = clean.length > 0 ? clean : w;
-      // If LLM returned syllables, verify or populate with deterministic splitter
-      const existingWord = sent.words?.[idx];
-      const syllables =
-        existingWord && Array.isArray(existingWord.syllables) && existingWord.syllables.length > 0
-          ? existingWord.syllables
-          : splitSyllables(effective);
+      const syllables = splitSyllables(effective);
 
       return {
         clean: effective,
@@ -562,30 +508,14 @@ export function refineAndValidateStory(
     };
   });
 
-  // Verify Level 1 whitelist mandate
-  if (level === 1) {
-    if (story.sentences.length !== 4) {
-      issues.push(`Level 1 erfordert genau 4 Sätze (gefunden: ${story.sentences.length}).`);
+  // Verify sentence count for Level 1 and Level 2 (4 to 5 sentences)
+  if (level === 1 || level === 2) {
+    if (story.sentences.length < 4 || story.sentences.length > 5) {
+      issues.push(`Level ${level} erfordert 4 bis 5 Sätze (gefunden: ${story.sentences.length}).`);
     }
-
-    story.sentences.forEach((sent, idx) => {
-      const sentenceWords = sent.words.map((w) => w.clean.toLowerCase());
-      const hasDrawnNoun = selectedNouns.some((n) =>
-        sentenceWords.includes(n.toLowerCase())
-      );
-      const hasAnyWhitelistNoun = LEVEL_1_NOUN_WHITELIST.some((n) =>
-        sentenceWords.includes(n.toLowerCase())
-      );
-
-      if (!hasDrawnNoun && !hasAnyWhitelistNoun) {
-        issues.push(
-          `Satz ${idx + 1} ("${sent.text}") enthält kein Nomen aus der gezogenen Positivliste.`
-        );
-      }
-    });
   }
 
-  // Validate entire story text against level constraints
+  // Validate entire story text against level constraints (including child word eligibility)
   const fullText = story.sentences.map((s) => s.text).join(' ');
   const levelValidation = validateStoryForLevel(fullText, level);
   if (!levelValidation.isSuitable) {
@@ -599,8 +529,21 @@ export function refineAndValidateStory(
   };
 }
 
+function extractJsonBlock(raw: string): string {
+  const jsonMatch = raw.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+  if (jsonMatch) {
+    return jsonMatch[1].trim();
+  }
+  const startIdx = raw.indexOf('{');
+  const endIdx = raw.lastIndexOf('}');
+  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
+    return raw.substring(startIdx, endIdx + 1).trim();
+  }
+  return raw.trim();
+}
+
 /**
- * Generates a single story episode using the two-step pipeline.
+ * Generates a single story episode using the two-step pipeline + automatic validation repair.
  */
 export async function generateSingleStory(
   theme: StoryTheme,
@@ -609,61 +552,199 @@ export async function generateSingleStory(
   disturberWord: string,
   options: CliOptions
 ): Promise<GeneratedStoryFile> {
-  const selectedNouns = level === 1 ? sampleRandom(LEVEL_1_NOUN_WHITELIST, 4) : [];
+  const useGeminiApi = Boolean(options.apiKey);
+  const useAgy = !useGeminiApi && !options.offline && isAgyAvailable();
 
-  if (!options.apiKey) {
+  if (!useGeminiApi && !useAgy) {
     if (options.verbose) {
-      console.log(`[Offline Mode] Generating episode ${episode} for ${theme.id} (Level ${level})`);
+      console.log(`[Offline Fallback Mode] Generating episode ${episode} for ${theme.id} (Level ${level})`);
     }
-    const fallback = generateFallbackStory(theme, disturberWord, level, episode, selectedNouns);
-    const validated = refineAndValidateStory(fallback, level, selectedNouns);
+    const fallback = generateFallbackStory(theme, disturberWord, level, episode);
+    const validated = refineAndValidateStory(fallback, level);
     return validated.story;
   }
 
+  const queryLlm = async (prompt: string, jsonMode: boolean): Promise<string> => {
+    if (useGeminiApi) {
+      return callGemini(prompt, options.apiKey!, options.model, jsonMode);
+    }
+    return callAgy(prompt);
+  };
+
   // --- Step 1: Drafting (Creativity & Plot) ---
   if (options.verbose) {
-    console.log(`[Step 1: Drafting] Theme="${theme.label}", Disturber="${disturberWord}", Level=${level}`);
+    const provider = useGeminiApi ? `Gemini API (${options.model})` : 'Google AI Subscription via agy CLI (Thinking: high)';
+    console.log(`[Step 1: Drafting via ${provider}] Theme="${theme.label}", Surprise="${disturberWord}", Level=${level}, Ep=${episode}`);
   }
-  const draftPrompt = buildDraftingPrompt(theme, disturberWord, level);
-  const plotDraft = await callGemini(draftPrompt, options.apiKey, options.model, false);
-
-  // --- Step 2: Translation & JSON ---
-  if (options.verbose) {
-    console.log(`[Step 2: Translation] Translating plot to didactic JSON...`);
-  }
-  const translationPrompt = buildTranslationPrompt(
-    theme,
-    disturberWord,
-    level,
-    episode,
-    plotDraft,
-    selectedNouns
-  );
-  const jsonResponse = await callGemini(translationPrompt, options.apiKey, options.model, true);
-
-  // Parse JSON response
-  let parsed: GeneratedStoryFile;
+  let plotDraft = '';
   try {
-    const cleaned = jsonResponse.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
-    parsed = JSON.parse(cleaned);
-  } catch (err) {
-    console.warn(`[Warning] Failed to parse LLM JSON for episode ${episode}. Retrying via fallback refinement...`);
-    parsed = generateFallbackStory(theme, disturberWord, level, episode, selectedNouns);
+    const draftPrompt = buildDraftingPrompt(theme, disturberWord, level, episode);
+    plotDraft = await queryLlm(draftPrompt, false);
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.warn(`[Warning] Drafting failed for ep ${episode} (${msg}). Using fallback refinement...`);
+    const fallback = generateFallbackStory(theme, disturberWord, level, episode);
+    return refineAndValidateStory(fallback, level).story;
   }
 
-  // Ensure metadata fields
-  parsed.themeId = theme.id;
-  parsed.level = level;
-  parsed.episode = episode;
-  parsed.disturberWord = disturberWord;
+  // --- Step 2: Translation & Validation Repair Loop ---
+  let validationIssues: string[] = [];
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    if (options.verbose) {
+      console.log(`[Step 2: Translation (Attempt ${attempt})] Translating plot to didactic JSON...`);
+    }
+    try {
+      const translationPrompt = buildTranslationPrompt(
+        theme,
+        disturberWord,
+        level,
+        episode,
+        plotDraft,
+        validationIssues
+      );
+      const jsonResponse = await queryLlm(translationPrompt, true);
+      const cleaned = extractJsonBlock(jsonResponse);
+      const parsed: GeneratedStoryFile = JSON.parse(cleaned);
 
-  // Validate and guarantee syllable accuracy
-  const { story, isValid, issues } = refineAndValidateStory(parsed, level, selectedNouns);
-  if (!isValid && options.verbose) {
-    console.warn(`[Validation Issues for ep ${episode}]:`, issues);
+      parsed.themeId = theme.id;
+      parsed.level = level;
+      parsed.episode = episode;
+      parsed.disturberWord = disturberWord;
+
+      const { story, isValid, issues } = refineAndValidateStory(parsed, level);
+      if (isValid) {
+        return story;
+      }
+
+      validationIssues = issues;
+      plotDraft = story.sentences.map((s) => s.text).join('\n');
+      if (options.verbose) {
+        console.warn(`[Validation Issues on Attempt ${attempt} for ep ${episode}]:`, issues);
+      }
+      if (attempt === 2) {
+        return story;
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`[Warning] Translation attempt ${attempt} failed for ep ${episode} (${msg}).`);
+    }
   }
 
-  return story;
+  const fallback = generateFallbackStory(theme, disturberWord, level, episode);
+  return refineAndValidateStory(fallback, level).story;
+}
+
+/**
+ * Generates multiple episodes for a single theme + level in one cohesive batch call,
+ * then validates each episode and performs targeted repair if any sentence fails level constraints.
+ */
+export async function generateThemeBatch(
+  theme: StoryTheme,
+  level: ReadingLevelNumber,
+  count: number,
+  options: CliOptions
+): Promise<GeneratedStoryFile[]> {
+  const useGeminiApi = Boolean(options.apiKey);
+  const useAgy = !useGeminiApi && !options.offline && isAgyAvailable();
+
+  if (!useGeminiApi && !useAgy) {
+    const results: GeneratedStoryFile[] = [];
+    for (let ep = 1; ep <= count; ep++) {
+      const surprise = getEpisodeSurpriseSeed(theme, ep);
+      const fb = generateFallbackStory(theme, surprise.tag, level, ep);
+      results.push(refineAndValidateStory(fb, level).story);
+    }
+    return results;
+  }
+
+  const queryLlm = async (prompt: string, jsonMode: boolean): Promise<string> => {
+    if (useGeminiApi) {
+      return callGemini(prompt, options.apiKey!, options.model, jsonMode);
+    }
+    return callAgy(prompt);
+  };
+
+  try {
+    const batchPrompt = buildBatchThemePrompt(theme, level, count);
+    const rawBatch = await queryLlm(batchPrompt, true);
+    const cleaned = extractJsonBlock(rawBatch);
+    const parsedBatch = JSON.parse(cleaned) as {
+      episodes?: Array<{
+        episode?: number;
+        disturberWord?: string;
+        title?: string;
+        sentences?: Array<{ text: string; words?: GeneratedStoryWord[] }>;
+      }>;
+    };
+
+    if (!parsedBatch.episodes || !Array.isArray(parsedBatch.episodes)) {
+      throw new Error('Missing "episodes" array in batch JSON response');
+    }
+
+    const stories: GeneratedStoryFile[] = [];
+    for (let ep = 1; ep <= count; ep++) {
+      const rawEp = parsedBatch.episodes[ep - 1];
+      const surprise = getEpisodeSurpriseSeed(theme, ep);
+      if (!rawEp || !Array.isArray(rawEp.sentences) || rawEp.sentences.length === 0) {
+        const single = await generateSingleStory(theme, level, ep, surprise.tag, options);
+        stories.push(single);
+        continue;
+      }
+
+      const candidate: GeneratedStoryFile = {
+        themeId: theme.id,
+        level,
+        episode: ep,
+        disturberWord: rawEp.disturberWord || surprise.tag,
+        title: rawEp.title || `${theme.label} – Episode ${ep}`,
+        sentences: rawEp.sentences.map((s) => ({
+          text: s.text,
+          words: s.words || [],
+        })),
+      };
+
+      const validated = refineAndValidateStory(candidate, level);
+      if (validated.isValid) {
+        stories.push(validated.story);
+      } else {
+        if (options.verbose) {
+          console.warn(`  [Batch Repair] Ep ${ep} had validation issues (${validated.issues.join('; ')}). Running targeted repair...`);
+        }
+        try {
+          const repairPrompt = buildTranslationPrompt(
+            theme,
+            candidate.disturberWord,
+            level,
+            ep,
+            candidate.sentences.map((s) => s.text).join('\n'),
+            validated.issues
+          );
+          const repairedJson = await queryLlm(repairPrompt, true);
+          const repairedParsed = JSON.parse(extractJsonBlock(repairedJson)) as GeneratedStoryFile;
+          repairedParsed.themeId = theme.id;
+          repairedParsed.level = level;
+          repairedParsed.episode = ep;
+          repairedParsed.disturberWord = candidate.disturberWord;
+          const revalidated = refineAndValidateStory(repairedParsed, level);
+          stories.push(revalidated.story);
+        } catch {
+          stories.push(validated.story);
+        }
+      }
+    }
+
+    return stories;
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.warn(`[Warning] Batch generation failed for ${theme.id} Level ${level} (${msg}). Falling back to per-episode generation...`);
+    const results: GeneratedStoryFile[] = [];
+    for (let ep = 1; ep <= count; ep++) {
+      const surprise = getEpisodeSurpriseSeed(theme, ep);
+      const story = await generateSingleStory(theme, level, ep, surprise.tag, options);
+      results.push(story);
+    }
+    return results;
+  }
 }
 
 /**
@@ -674,8 +755,14 @@ export async function main() {
 
   console.log('='.repeat(70));
   console.log('📚 Lesecoach Content Generation Pipeline (WP13)');
+  const providerLabel = options.apiKey
+    ? `Gemini API (${options.model})`
+    : !options.offline && isAgyAvailable()
+    ? 'Google AI Subscription via Antigravity CLI (agy --effort high)'
+    : 'Simulated Offline Fallback';
+
   console.log(`Target: Level ${options.level ?? '1-9'}, Theme: ${options.themeId ?? 'All 10'}, Count: ${options.count}`);
-  console.log(`Provider: ${options.apiKey ? `Gemini API (${options.model})` : 'Simulated Offline Fallback'}`);
+  console.log(`Provider: ${providerLabel}`);
   console.log(`Output Directory: ${options.outDir}`);
   console.log('='.repeat(70));
 
@@ -701,23 +788,41 @@ export async function main() {
     }
 
     for (const theme of targetThemes) {
+      if (options.skipExisting) {
+        let allExist = true;
+        for (let ep = 1; ep <= options.count; ep++) {
+          const fn = `${theme.id}_ep${String(ep).padStart(2, '0')}.json`;
+          const fp = path.join(levelDir, fn);
+          if (!fs.existsSync(fp)) {
+            allExist = false;
+            break;
+          }
+        }
+        if (allExist) {
+          console.log(`\n⏭ Skipping Level ${level} | Theme: ${theme.label} (${theme.id}) - all ${options.count} episodes already exist.`);
+          continue;
+        }
+      }
+
       console.log(`\n▶ Generating Level ${level} | Theme: ${theme.label} (${theme.id}) [${options.count} episodes]`);
 
-      // Draw unique disturber words for the episodes
-      const disturbers = sampleRandom(DISTURBER_WORDS, options.count);
+      const stories = await generateThemeBatch(theme, level, options.count, options);
 
-      for (let ep = 1; ep <= options.count; ep++) {
-        const disturber = disturbers[ep - 1] || DISTURBER_WORDS[ep % DISTURBER_WORDS.length];
-        const story = await generateSingleStory(theme, level, ep, disturber, options);
-
+      for (const story of stories) {
+        const ep = story.episode;
         const fileName = `${theme.id}_ep${String(ep).padStart(2, '0')}.json`;
         const filePath = path.join(levelDir, fileName);
 
+        if (options.skipExisting && fs.existsSync(filePath)) {
+          console.log(`  [Preserved existing] Episode ${ep} ➔ ${fileName}`);
+          continue;
+        }
+
         if (!options.dryRun) {
           fs.writeFileSync(filePath, JSON.stringify(story, null, 2), 'utf-8');
-          console.log(`  ✓ Episode ${ep}/${options.count}: "${story.title}" [Störwort: ${disturber}] ➔ ${fileName}`);
+          console.log(`  ✓ Episode ${ep}/${options.count}: "${story.title}" [Überraschung: ${story.disturberWord}] ➔ ${fileName}`);
         } else {
-          console.log(`  [Dry Run] Episode ${ep}: "${story.title}" [Störwort: ${disturber}]`);
+          console.log(`  [Dry Run] Episode ${ep}: "${story.title}" [Überraschung: ${story.disturberWord}]`);
         }
 
         totalGenerated++;

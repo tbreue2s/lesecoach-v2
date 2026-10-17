@@ -2,29 +2,43 @@
   "themeId": "theme_superhero",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Trampolin",
-  "title": "Tiger und das Trampolin",
+  "disturberWord": "Kater-Held",
+  "title": "Hilfe am Hafen",
   "sentences": [
     {
-      "text": "Ein Tiger geht zum Tor.",
+      "text": "Finn fliegt mit flatterndem Umhang zum Hafen.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Finn",
           "syllables": [
-            "Ein"
+            "Finn"
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "fliegt",
           "syllables": [
-            "Ti",
-            "ger"
+            "fliegt"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "mit",
           "syllables": [
-            "geht"
+            "mit"
+          ]
+        },
+        {
+          "clean": "flatterndem",
+          "syllables": [
+            "flat",
+            "ter",
+            "ndem"
+          ]
+        },
+        {
+          "clean": "Umhang",
+          "syllables": [
+            "Um",
+            "hang"
           ]
         },
         {
@@ -34,33 +48,42 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Hafen",
           "syllables": [
-            "Tor"
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Der Tiger sieht ein Trampolin.",
+      "text": "Dort drüben ertönt plötzlich ein lauter Ruf.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dort",
           "syllables": [
-            "Der"
+            "Dort"
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "drüben",
           "syllables": [
-            "Ti",
-            "ger"
+            "drü",
+            "ben"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "ertönt",
           "syllables": [
-            "sieht"
+            "er",
+            "tönt"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plötz",
+            "lich"
           ]
         },
         {
@@ -70,97 +93,120 @@
           ]
         },
         {
-          "clean": "Trampolin",
+          "clean": "lauter",
           "syllables": [
-            "Tram",
-            "po",
-            "lin"
+            "lau",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Ruf",
+          "syllables": [
+            "Ruf"
           ]
         }
       ]
     },
     {
-      "text": "Der Tiger schaut das Trampolin an.",
+      "text": "Mit kleinem rotem Umhang hilft ein Kater.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Mit",
           "syllables": [
-            "Der"
+            "Mit"
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "kleinem",
           "syllables": [
-            "Ti",
-            "ger"
+            "klei",
+            "nem"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "rotem",
           "syllables": [
-            "schaut"
+            "ro",
+            "tem"
           ]
         },
         {
-          "clean": "das",
+          "clean": "Umhang",
           "syllables": [
-            "das"
+            "Um",
+            "hang"
           ]
         },
         {
-          "clean": "Trampolin",
+          "clean": "hilft",
           "syllables": [
-            "Tram",
-            "po",
-            "lin"
+            "hilft"
           ]
         },
         {
-          "clean": "an",
+          "clean": "ein",
           "syllables": [
-            "an"
+            "ein"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
           ]
         }
       ]
     },
     {
-      "text": "Froh ruft der Tiger am Tor.",
+      "text": "Beide Helden beweisen heute richtig viel Mut.",
       "words": [
         {
-          "clean": "Froh",
+          "clean": "Beide",
           "syllables": [
-            "Froh"
+            "Bei",
+            "de"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Helden",
           "syllables": [
-            "ruft"
+            "Hel",
+            "den"
           ]
         },
         {
-          "clean": "der",
+          "clean": "beweisen",
           "syllables": [
-            "der"
+            "be",
+            "wei",
+            "sen"
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "heute",
           "syllables": [
-            "Ti",
-            "ger"
+            "heu",
+            "te"
           ]
         },
         {
-          "clean": "am",
+          "clean": "richtig",
           "syllables": [
-            "am"
+            "rich",
+            "tig"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "viel",
           "syllables": [
-            "Tor"
+            "viel"
+          ]
+        },
+        {
+          "clean": "Mut",
+          "syllables": [
+            "Mut"
           ]
         }
       ]

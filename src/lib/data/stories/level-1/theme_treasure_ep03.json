@@ -2,47 +2,63 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Zelt",
-  "title": "Zelt am Paket",
+  "disturberWord": "Krake",
+  "title": "Der hilfsbereite Krake",
   "sentences": [
     {
-      "text": "Ein Zelt steht am Paket.",
+      "text": "Lilly paddelt mit Finn zur einsamen Insel.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Lilly",
           "syllables": [
-            "Ein"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "Zelt",
+          "clean": "paddelt",
           "syllables": [
-            "Zelt"
+            "pad",
+            "delt"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "mit",
           "syllables": [
-            "steht"
+            "mit"
           ]
         },
         {
-          "clean": "am",
+          "clean": "Finn",
           "syllables": [
-            "am"
+            "Finn"
           ]
         },
         {
-          "clean": "Paket",
+          "clean": "zur",
           "syllables": [
-            "Pa",
-            "ket"
+            "zur"
+          ]
+        },
+        {
+          "clean": "einsamen",
+          "syllables": [
+            "ein",
+            "sa",
+            "men"
+          ]
+        },
+        {
+          "clean": "Insel",
+          "syllables": [
+            "In",
+            "sel"
           ]
         }
       ]
     },
     {
-      "text": "Der Nadel ruft laut im Wind.",
+      "text": "Der rostige Schlüssel versank tief im See.",
       "words": [
         {
           "clean": "Der",
@@ -51,22 +67,31 @@
           ]
         },
         {
-          "clean": "Nadel",
+          "clean": "rostige",
           "syllables": [
-            "Na",
-            "del"
+            "ros",
+            "ti",
+            "ge"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Schlüssel",
           "syllables": [
-            "ruft"
+            "Schlüs",
+            "sel"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "versank",
           "syllables": [
-            "laut"
+            "ver",
+            "sank"
+          ]
+        },
+        {
+          "clean": "tief",
+          "syllables": [
+            "tief"
           ]
         },
         {
@@ -76,15 +101,15 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "See",
           "syllables": [
-            "Wind"
+            "See"
           ]
         }
       ]
     },
     {
-      "text": "Ein Falke eilt schnell herbei.",
+      "text": "Ein hilfsbereiter Krake reicht ihn ins Boot.",
       "words": [
         {
           "clean": "Ein",
@@ -93,54 +118,79 @@
           ]
         },
         {
-          "clean": "Falke",
+          "clean": "hilfsbereiter",
           "syllables": [
-            "Fal",
+            "hil",
+            "fsbe",
+            "rei",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Krake",
+          "syllables": [
+            "Kra",
             "ke"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "reicht",
           "syllables": [
-            "eilt"
+            "reicht"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "ihn",
           "syllables": [
-            "schnell"
+            "ihn"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "ins",
           "syllables": [
-            "her",
-            "bei"
+            "ins"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Blume.",
+      "text": "Mit acht Armen winkt er zum Ufer.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Mit",
           "syllables": [
-            "Al",
-            "le"
+            "Mit"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "acht",
           "syllables": [
-            "lau",
-            "fen"
+            "acht"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "Armen",
           "syllables": [
-            "froh"
+            "Ar",
+            "men"
+          ]
+        },
+        {
+          "clean": "winkt",
+          "syllables": [
+            "winkt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
           ]
         },
         {
@@ -150,10 +200,10 @@
           ]
         },
         {
-          "clean": "Blume",
+          "clean": "Ufer",
           "syllables": [
-            "Blu",
-            "me"
+            "U",
+            "fer"
           ]
         }
       ]

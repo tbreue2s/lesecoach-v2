@@ -2,29 +2,29 @@
   "themeId": "theme_treasure",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Zelt",
-  "title": "Das lustige Zelt",
+  "disturberWord": "Krake",
+  "title": "Der Retter im See",
   "sentences": [
     {
-      "text": "Der rote Zelt liegt im Gras.",
+      "text": "Vor der Insel liegt ein blauer See.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Vor",
           "syllables": [
-            "Der"
+            "Vor"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "der",
           "syllables": [
-            "ro",
-            "te"
+            "der"
           ]
         },
         {
-          "clean": "Zelt",
+          "clean": "Insel",
           "syllables": [
-            "Zelt"
+            "In",
+            "sel"
           ]
         },
         {
@@ -34,87 +34,40 @@
           ]
         },
         {
-          "clean": "im",
+          "clean": "ein",
           "syllables": [
-            "im"
+            "ein"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "blauer",
           "syllables": [
-            "Gras"
+            "blau",
+            "er"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort schaukelt leise ihr rotes Boot.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dort",
           "syllables": [
-            "Ein"
+            "Dort"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "schaukelt",
           "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Hund",
-          "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
+            "schau",
+            "kelt"
           ]
         },
         {
@@ -123,11 +76,30 @@
             "lei",
             "se"
           ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "rotes",
+          "syllables": [
+            "ro",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Der rostige Schlüssel sank in grünes Moos.",
       "words": [
         {
           "clean": "Der",
@@ -136,30 +108,141 @@
           ]
         },
         {
-          "clean": "alte",
+          "clean": "rostige",
           "syllables": [
-            "al",
-            "te"
+            "ros",
+            "ti",
+            "ge"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "Schlüssel",
           "syllables": [
-            "Baum"
+            "Schlüs",
+            "sel"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "sank",
           "syllables": [
-            "spen",
-            "det"
+            "sank"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "in",
           "syllables": [
-            "Schat",
-            "ten"
+            "in"
+          ]
+        },
+        {
+          "clean": "grünes",
+          "syllables": [
+            "grü",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kluger Krake reicht ihn ins Boot.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "kluger",
+          "syllables": [
+            "klu",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Krake",
+          "syllables": [
+            "Kra",
+            "ke"
+          ]
+        },
+        {
+          "clean": "reicht",
+          "syllables": [
+            "reicht"
+          ]
+        },
+        {
+          "clean": "ihn",
+          "syllables": [
+            "ihn"
+          ]
+        },
+        {
+          "clean": "ins",
+          "syllables": [
+            "ins"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er wird für immer ein guter Freund.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "wird",
+          "syllables": [
+            "wird"
+          ]
+        },
+        {
+          "clean": "für",
+          "syllables": [
+            "für"
+          ]
+        },
+        {
+          "clean": "immer",
+          "syllables": [
+            "im",
+            "mer"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "guter",
+          "syllables": [
+            "gu",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Freund",
+          "syllables": [
+            "Freund"
           ]
         }
       ]

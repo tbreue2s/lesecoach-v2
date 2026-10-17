@@ -2,47 +2,63 @@
   "themeId": "theme_wizard",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Roller",
-  "title": "Puma und der Roller",
+  "disturberWord": "Sprechhut",
+  "title": "Der kichernde Zauberhut",
   "sentences": [
     {
-      "text": "Ein Puma geht zum Tor.",
+      "text": "Zauberer Anton greift nach seinem spitzen Hut.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Zauberer",
           "syllables": [
-            "Ein"
+            "Zau",
+            "be",
+            "rer"
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "Anton",
           "syllables": [
-            "Pu",
-            "ma"
+            "An",
+            "ton"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "greift",
           "syllables": [
-            "geht"
+            "greift"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "nach",
           "syllables": [
-            "zum"
+            "nach"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "seinem",
           "syllables": [
-            "Tor"
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "spitzen",
+          "syllables": [
+            "spit",
+            "zen"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]
     },
     {
-      "text": "Der Puma sieht einen Roller.",
+      "text": "Der Stoff kichert bei jedem lauten Ruf.",
       "words": [
         {
           "clean": "Der",
@@ -51,90 +67,60 @@
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "Stoff",
           "syllables": [
-            "Pu",
-            "ma"
+            "Stoff"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "kichert",
           "syllables": [
-            "sieht"
+            "ki",
+            "chert"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "bei",
           "syllables": [
-            "ei",
-            "nen"
+            "bei"
           ]
         },
         {
-          "clean": "Roller",
+          "clean": "jedem",
           "syllables": [
-            "Rol",
-            "ler"
+            "je",
+            "dem"
+          ]
+        },
+        {
+          "clean": "lauten",
+          "syllables": [
+            "lau",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Ruf",
+          "syllables": [
+            "Ruf"
           ]
         }
       ]
     },
     {
-      "text": "Der Puma schaut den Roller an.",
+      "text": "Eilig hüpft der Ausreißer durch den Saal.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Eilig",
           "syllables": [
-            "Der"
+            "Ei",
+            "lig"
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "hüpft",
           "syllables": [
-            "Pu",
-            "ma"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Roller",
-          "syllables": [
-            "Rol",
-            "ler"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Froh ruft der Puma am Tor.",
-      "words": [
-        {
-          "clean": "Froh",
-          "syllables": [
-            "Froh"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
+            "hüpft"
           ]
         },
         {
@@ -144,22 +130,81 @@
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "Ausreißer",
           "syllables": [
-            "Pu",
-            "ma"
+            "Aus",
+            "rei",
+            "ßer"
           ]
         },
         {
-          "clean": "am",
+          "clean": "durch",
           "syllables": [
-            "am"
+            "durch"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "den",
           "syllables": [
-            "Tor"
+            "den"
+          ]
+        },
+        {
+          "clean": "Saal",
+          "syllables": [
+            "Saal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Erschöpft landet das Zauberstück auf dem Sofa.",
+      "words": [
+        {
+          "clean": "Erschöpft",
+          "syllables": [
+            "Er",
+            "schöpft"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Zauberstück",
+          "syllables": [
+            "Zau",
+            "ber",
+            "stück"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
           ]
         }
       ]

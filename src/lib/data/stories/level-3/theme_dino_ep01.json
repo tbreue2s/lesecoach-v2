@@ -2,144 +2,217 @@
   "themeId": "theme_dino",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Känguru",
-  "title": "Dino und der Känguru",
+  "disturberWord": "Ufo",
+  "title": "Spuren im Moos",
   "sentences": [
     {
-      "text": "Der Dino läuft schnell zum Tor.",
+      "text": "Tino stapft durchs Tal.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Tino",
           "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Dino",
-          "syllables": [
-            "Di",
+            "Ti",
             "no"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "stapft",
           "syllables": [
-            "läuft"
+            "stapft"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "durchs",
           "syllables": [
-            "schnell"
+            "durchs"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "Tal",
           "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "Tal"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich einen Känguru.",
+      "text": "Sein riesiger Fuß hinterlässt eine tiefe Spur.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Sein",
           "syllables": [
-            "Da"
+            "Sein"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "riesiger",
           "syllables": [
-            "en",
-            "tdeckt"
+            "rie",
+            "si",
+            "ger"
           ]
         },
         {
-          "clean": "er",
+          "clean": "Fuß",
           "syllables": [
-            "er"
+            "Fuß"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "hinterlässt",
           "syllables": [
-            "plöt",
-            "zlich"
+            "hin",
+            "ter",
+            "lässt"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "eine",
           "syllables": [
             "ei",
-            "nen"
+            "ne"
           ]
         },
         {
-          "clean": "Känguru",
+          "clean": "tiefe",
           "syllables": [
-            "Kän",
-            "gu",
-            "ru"
+            "tie",
+            "fe"
+          ]
+        },
+        {
+          "clean": "Spur",
+          "syllables": [
+            "Spur"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier schaut genau hin.",
+      "text": "Ein kleines Ufo landet.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Ein",
           "syllables": [
-            "Das"
+            "Ein"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "kleines",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Drei winzige Beinchen tippen Punkte in den Matsch.",
+      "words": [
+        {
+          "clean": "Drei",
+          "syllables": [
+            "Drei"
+          ]
+        },
+        {
+          "clean": "winzige",
+          "syllables": [
+            "win",
+            "zi",
             "ge"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Beinchen",
           "syllables": [
-            "Tier"
+            "Bein",
+            "chen"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "tippen",
           "syllables": [
-            "schaut"
+            "tip",
+            "pen"
           ]
         },
         {
-          "clean": "genau",
+          "clean": "Punkte",
           "syllables": [
-            "ge",
-            "nau"
+            "Punk",
+            "te"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "in",
           "syllables": [
-            "hin"
+            "in"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Matsch",
+          "syllables": [
+            "Matsch"
           ]
         }
       ]
     },
     {
-      "text": "Gemeinsam jubeln alle vor Freude.",
+      "text": "Beide staunen sehr darüber.",
+      "words": [
+        {
+          "clean": "Beide",
+          "syllables": [
+            "Bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "staunen",
+          "syllables": [
+            "stau",
+            "nen"
+          ]
+        },
+        {
+          "clean": "sehr",
+          "syllables": [
+            "sehr"
+          ]
+        },
+        {
+          "clean": "darüber",
+          "syllables": [
+            "da",
+            "rü",
+            "ber"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Gemeinsam kichern sie über das bunte Muster.",
       "words": [
         {
           "clean": "Gemeinsam",
@@ -150,30 +223,43 @@
           ]
         },
         {
-          "clean": "jubeln",
+          "clean": "kichern",
           "syllables": [
-            "ju",
-            "beln"
+            "ki",
+            "chern"
           ]
         },
         {
-          "clean": "alle",
+          "clean": "sie",
           "syllables": [
-            "al",
-            "le"
+            "sie"
           ]
         },
         {
-          "clean": "vor",
+          "clean": "über",
           "syllables": [
-            "vor"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "das",
           "syllables": [
-            "Freu",
-            "de"
+            "das"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Muster",
+          "syllables": [
+            "Mus",
+            "ter"
           ]
         }
       ]

@@ -2,35 +2,74 @@
   "themeId": "theme_horse",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Papagei",
-  "title": "Das Geheimnis auf der weiten Wiese",
+  "disturberWord": "Einhorn",
+  "title": "Besuch im Morgennebel",
   "sentences": [
     {
-      "text": "Die Sonne scheint warm über der Landschaft.",
+      "text": "Pony Sam grast im Klee.",
       "words": [
         {
-          "clean": "Die",
+          "clean": "Pony",
           "syllables": [
-            "Die"
+            "Po",
+            "ny"
           ]
         },
         {
-          "clean": "Sonne",
+          "clean": "Sam",
           "syllables": [
-            "Son",
-            "ne"
+            "Sam"
           ]
         },
         {
-          "clean": "scheint",
+          "clean": "grast",
           "syllables": [
-            "scheint"
+            "grast"
           ]
         },
         {
-          "clean": "warm",
+          "clean": "im",
           "syllables": [
-            "warm"
+            "im"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Weißer Morgennebel wallt sanft über die Wiese.",
+      "words": [
+        {
+          "clean": "Weißer",
+          "syllables": [
+            "Wei",
+            "ßer"
+          ]
+        },
+        {
+          "clean": "Morgennebel",
+          "syllables": [
+            "Mor",
+            "gen",
+            "ne",
+            "bel"
+          ]
+        },
+        {
+          "clean": "wallt",
+          "syllables": [
+            "wallt"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
           ]
         },
         {
@@ -41,27 +80,95 @@
           ]
         },
         {
-          "clean": "der",
+          "clean": "die",
           "syllables": [
-            "der"
+            "die"
           ]
         },
         {
-          "clean": "Landschaft",
+          "clean": "Wiese",
           "syllables": [
-            "Land",
-            "schaft"
+            "Wie",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Der Pony sucht einen Pfad.",
+      "text": "Am Hoftor steht ein Einhorn.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Am",
           "syllables": [
-            "Der"
+            "Am"
+          ]
+        },
+        {
+          "clean": "Hoftor",
+          "syllables": [
+            "Hof",
+            "tor"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Einhorn",
+          "syllables": [
+            "Ein",
+            "horn"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Es schnaubt leise und nickt dem Pony zu.",
+      "words": [
+        {
+          "clean": "Es",
+          "syllables": [
+            "Es"
+          ]
+        },
+        {
+          "clean": "schnaubt",
+          "syllables": [
+            "schnaubt"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "nickt",
+          "syllables": [
+            "nickt"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
           ]
         },
         {
@@ -72,190 +179,103 @@
           ]
         },
         {
-          "clean": "sucht",
+          "clean": "zu",
           "syllables": [
-            "sucht"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
+            "zu"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich versperrt Ein Papagei den schmalen Weg.",
+      "text": "Sam teilt sein Frühstück gern.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Sam",
           "syllables": [
-            "Plöt",
-            "zlich"
+            "Sam"
           ]
         },
         {
-          "clean": "versperrt",
+          "clean": "teilt",
           "syllables": [
-            "ver",
-            "sperrt"
+            "teilt"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "sein",
           "syllables": [
-            "Ein"
+            "sein"
           ]
         },
         {
-          "clean": "Papagei",
+          "clean": "Frühstück",
           "syllables": [
-            "Pa",
-            "pa",
-            "gei"
+            "Früh",
+            "stück"
           ]
         },
         {
-          "clean": "den",
+          "clean": "gern",
           "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "schmalen",
-          "syllables": [
-            "schma",
-            "len"
-          ]
-        },
-        {
-          "clean": "Weg",
-          "syllables": [
-            "Weg"
+            "gern"
           ]
         }
       ]
     },
     {
-      "text": "Mutig geht er heran.",
+      "text": "Einhorn und Pony kauen fröhlich um die Wette.",
       "words": [
         {
-          "clean": "Mutig",
+          "clean": "Einhorn",
           "syllables": [
-            "Mu",
-            "tig"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "und",
           "syllables": [
-            "geht"
+            "und"
           ]
         },
         {
-          "clean": "er",
+          "clean": "Pony",
           "syllables": [
-            "er"
+            "Po",
+            "ny"
           ]
         },
         {
-          "clean": "heran",
+          "clean": "kauen",
           "syllables": [
-            "he",
-            "ran"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "kau",
+            "en"
           ]
         },
         {
-          "clean": "rollen",
+          "clean": "fröhlich",
           "syllables": [
-            "rol",
-            "len"
+            "fröh",
+            "lich"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "um",
           "syllables": [
-            "sie"
+            "um"
           ]
         },
         {
-          "clean": "den",
+          "clean": "die",
           "syllables": [
-            "den"
+            "die"
           ]
         },
         {
-          "clean": "Gegenstand",
+          "clean": "Wette",
           "syllables": [
-            "Ge",
-            "gen",
-            "stand"
-          ]
-        },
-        {
-          "clean": "zur",
-          "syllables": [
-            "zur"
-          ]
-        },
-        {
-          "clean": "Seite",
-          "syllables": [
-            "Sei",
+            "Wet",
             "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle klatschen laut Beifall.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "klatschen",
-          "syllables": [
-            "klat",
-            "schen"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "Beifall",
-          "syllables": [
-            "Bei",
-            "fall"
           ]
         }
       ]

@@ -2,55 +2,99 @@
   "themeId": "theme_space",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Trampolin",
-  "title": "Das lustige Trampolin",
+  "disturberWord": "Mond-Sofa",
+  "title": "Das rote Sofa",
   "sentences": [
     {
-      "text": "Der rote Trampolin liegt im Gras.",
+      "text": "Mimi landet auf dem hohen Berg.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Mimi",
           "syllables": [
-            "Der"
+            "Mi",
+            "mi"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "landet",
           "syllables": [
-            "ro",
-            "te"
+            "lan",
+            "det"
           ]
         },
         {
-          "clean": "Trampolin",
+          "clean": "auf",
           "syllables": [
-            "Tram",
-            "po",
-            "lin"
+            "auf"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "dem",
           "syllables": [
-            "liegt"
+            "dem"
           ]
         },
         {
-          "clean": "im",
+          "clean": "hohen",
           "syllables": [
-            "im"
+            "ho",
+            "hen"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Berg",
           "syllables": [
-            "Gras"
+            "Berg"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort steht bereit ein rotes Sofa.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "bereit",
+          "syllables": [
+            "be",
+            "reit"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "rotes",
+          "syllables": [
+            "ro",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein grüner Bote winkt ihr zu.",
       "words": [
         {
           "clean": "Ein",
@@ -59,109 +103,124 @@
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "grüner",
           "syllables": [
-            "klei",
+            "grü",
             "ner"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Bote",
           "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
+            "Bo",
             "te"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "winkt",
           "syllables": [
-            "Baum"
+            "winkt"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "ihr",
           "syllables": [
-            "spen",
-            "det"
+            "ihr"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "zu",
           "syllables": [
-            "Schat",
-            "ten"
+            "zu"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er serviert ihr nun feinen Tee.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "serviert",
+          "syllables": [
+            "ser",
+            "viert"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "nun",
+          "syllables": [
+            "nun"
+          ]
+        },
+        {
+          "clean": "feinen",
+          "syllables": [
+            "fei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Tee",
+          "syllables": [
+            "Tee"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mimi lächelt über diesen lieben Freund.",
+      "words": [
+        {
+          "clean": "Mimi",
+          "syllables": [
+            "Mi",
+            "mi"
+          ]
+        },
+        {
+          "clean": "lächelt",
+          "syllables": [
+            "lä",
+            "chelt"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "diesen",
+          "syllables": [
+            "die",
+            "sen"
+          ]
+        },
+        {
+          "clean": "lieben",
+          "syllables": [
+            "lie",
+            "ben"
+          ]
+        },
+        {
+          "clean": "Freund",
+          "syllables": [
+            "Freund"
           ]
         }
       ]

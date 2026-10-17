@@ -2,11 +2,42 @@
   "themeId": "theme_superhero",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Trampolin",
-  "title": "Ein Fund auf dem hohen Turm",
+  "disturberWord": "Kater-Held",
+  "title": "Helden am Hafen",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt auf dem hohen Turm.",
+      "text": "Leo fliegt zum Hafen.",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "fliegt",
+          "syllables": [
+            "fliegt"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleines Fischerboot treibt auf das Meer.",
       "words": [
         {
           "clean": "Ein",
@@ -15,216 +46,30 @@
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "kleines",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
+            "klei",
+            "nes"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "Fischerboot",
           "syllables": [
-            "Tag"
+            "Fi",
+            "scher",
+            "boot"
           ]
         },
         {
-          "clean": "beginnt",
+          "clean": "treibt",
           "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "hohen",
-          "syllables": [
-            "ho",
-            "hen"
-          ]
-        },
-        {
-          "clean": "Turm",
-          "syllables": [
-            "Turm"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Tiger läuft über die Wiese.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Tiger",
-          "syllables": [
-            "Ti",
-            "ger"
-          ]
-        },
-        {
-          "clean": "läuft",
-          "syllables": [
-            "läuft"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ganz plötzlich taucht Ein Trampolin auf dem Pfad auf.",
-      "words": [
-        {
-          "clean": "Ganz",
-          "syllables": [
-            "Ganz"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "taucht",
-          "syllables": [
-            "taucht"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Trampolin",
-          "syllables": [
-            "Tram",
-            "po",
-            "lin"
+            "treibt"
           ]
         },
         {
           "clean": "auf",
           "syllables": [
             "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Er staunt über den Fund.",
-      "words": [
-        {
-          "clean": "Er",
-          "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
           ]
         },
         {
@@ -234,25 +79,176 @@
           ]
         },
         {
-          "clean": "neue",
+          "clean": "Meer",
           "syllables": [
-            "neu",
-            "e"
+            "Meer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leo packt das Seil.",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "Abenteuer",
+          "clean": "packt",
           "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
+            "packt"
           ]
         },
         {
-          "clean": "an",
+          "clean": "das",
           "syllables": [
-            "an"
+            "das"
+          ]
+        },
+        {
+          "clean": "Seil",
+          "syllables": [
+            "Seil"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Kater mit kleinem rotem Umhang hilft.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "kleinem",
+          "syllables": [
+            "klei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "rotem",
+          "syllables": [
+            "ro",
+            "tem"
+          ]
+        },
+        {
+          "clean": "Umhang",
+          "syllables": [
+            "Um",
+            "hang"
+          ]
+        },
+        {
+          "clean": "hilft",
+          "syllables": [
+            "hilft"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beide ziehen ganz fest.",
+      "words": [
+        {
+          "clean": "Beide",
+          "syllables": [
+            "Bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "ziehen",
+          "syllables": [
+            "zie",
+            "hen"
+          ]
+        },
+        {
+          "clean": "ganz",
+          "syllables": [
+            "ganz"
+          ]
+        },
+        {
+          "clean": "fest",
+          "syllables": [
+            "fest"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Stolz leckt sich der kleine Held die Pfote.",
+      "words": [
+        {
+          "clean": "Stolz",
+          "syllables": [
+            "Stolz"
+          ]
+        },
+        {
+          "clean": "leckt",
+          "syllables": [
+            "leckt"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "kleine",
+          "syllables": [
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Held",
+          "syllables": [
+            "Held"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Pfote",
+          "syllables": [
+            "Pfo",
+            "te"
           ]
         }
       ]

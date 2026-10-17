@@ -2,16 +2,214 @@
   "themeId": "theme_wizard",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Rakete",
-  "title": "Das lustige Rakete",
+  "disturberWord": "Riesentorte",
+  "title": "Das vertauschte Zauberwort",
   "sentences": [
     {
-      "text": "Der rote Rakete liegt im Gras.",
+      "text": "Auf dem Tisch liegt ein grauer Stein.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Auf",
           "syllables": [
-            "Der"
+            "Auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "grauer",
+          "syllables": [
+            "grau",
+            "er"
+          ]
+        },
+        {
+          "clean": "Stein",
+          "syllables": [
+            "Stein"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dazu schwingt er einen feinen Stab.",
+      "words": [
+        {
+          "clean": "Dazu",
+          "syllables": [
+            "Da",
+            "zu"
+          ]
+        },
+        {
+          "clean": "schwingt",
+          "syllables": [
+            "schwingt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "feinen",
+          "syllables": [
+            "fei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Stab",
+          "syllables": [
+            "Stab"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Doch er spricht ein falsches Wort.",
+      "words": [
+        {
+          "clean": "Doch",
+          "syllables": [
+            "Doch"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "spricht",
+          "syllables": [
+            "spricht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "falsches",
+          "syllables": [
+            "fal",
+            "sches"
+          ]
+        },
+        {
+          "clean": "Wort",
+          "syllables": [
+            "Wort"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da steht plötzlich eine hohe Torte.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "hohe",
+          "syllables": [
+            "ho",
+            "he"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Vergnügt nascht er die rote Beere.",
+      "words": [
+        {
+          "clean": "Vergnügt",
+          "syllables": [
+            "Verg",
+            "nügt"
+          ]
+        },
+        {
+          "clean": "nascht",
+          "syllables": [
+            "nascht"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
           ]
         },
         {
@@ -22,146 +220,10 @@
           ]
         },
         {
-          "clean": "Rakete",
+          "clean": "Beere",
           "syllables": [
-            "Ra",
-            "ke",
-            "te"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "kleiner",
-          "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Hund",
-          "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Bee",
+            "re"
           ]
         }
       ]

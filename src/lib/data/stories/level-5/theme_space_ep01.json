@@ -2,11 +2,41 @@
   "themeId": "theme_space",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Dino",
-  "title": "Das Geheimnis mitten im Weltall",
+  "disturberWord": "Sternenwal",
+  "title": "Besuch im Sternenmeer",
   "sentences": [
     {
-      "text": "Die Sonne scheint warm über der Landschaft.",
+      "text": "Leo schaut ins All.",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "schaut",
+          "syllables": [
+            "schaut"
+          ]
+        },
+        {
+          "clean": "ins",
+          "syllables": [
+            "ins"
+          ]
+        },
+        {
+          "clean": "All",
+          "syllables": [
+            "All"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die silberne Rakete saust durch das weite Sternenmeer.",
       "words": [
         {
           "clean": "Die",
@@ -15,100 +45,90 @@
           ]
         },
         {
-          "clean": "Sonne",
+          "clean": "silberne",
           "syllables": [
-            "Son",
+            "sil",
+            "ber",
             "ne"
           ]
         },
         {
-          "clean": "scheint",
+          "clean": "Rakete",
           "syllables": [
-            "scheint"
+            "Ra",
+            "ke",
+            "te"
           ]
         },
         {
-          "clean": "warm",
+          "clean": "saust",
           "syllables": [
-            "warm"
+            "saust"
           ]
         },
         {
-          "clean": "über",
+          "clean": "durch",
           "syllables": [
-            "ü",
-            "ber"
+            "durch"
           ]
         },
         {
-          "clean": "der",
+          "clean": "das",
           "syllables": [
-            "der"
+            "das"
           ]
         },
         {
-          "clean": "Landschaft",
+          "clean": "weite",
           "syllables": [
-            "Land",
-            "schaft"
+            "wei",
+            "te"
+          ]
+        },
+        {
+          "clean": "Sternenmeer",
+          "syllables": [
+            "Ster",
+            "nen",
+            "meer"
           ]
         }
       ]
     },
     {
-      "text": "Der Pilot sucht einen Pfad.",
+      "text": "Was glitzert da draußen?",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Was",
           "syllables": [
-            "Der"
+            "Was"
           ]
         },
         {
-          "clean": "Pilot",
+          "clean": "glitzert",
           "syllables": [
-            "Pi",
-            "lot"
+            "glit",
+            "zert"
           ]
         },
         {
-          "clean": "sucht",
+          "clean": "da",
           "syllables": [
-            "sucht"
+            "da"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "draußen",
           "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
+            "drau",
+            "ßen"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich versperrt Ein Dino den schmalen Weg.",
+      "text": "Ein riesiger Sternenwal gleitet sanft am Fenster vorbei.",
       "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "versperrt",
-          "syllables": [
-            "ver",
-            "sperrt"
-          ]
-        },
         {
           "clean": "Ein",
           "syllables": [
@@ -116,145 +136,140 @@
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "riesiger",
           "syllables": [
-            "Di",
-            "no"
+            "rie",
+            "si",
+            "ger"
           ]
         },
         {
-          "clean": "den",
+          "clean": "Sternenwal",
           "syllables": [
+            "Ster",
+            "nen",
+            "wal"
+          ]
+        },
+        {
+          "clean": "gleitet",
+          "syllables": [
+            "glei",
+            "tet"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Fenster",
+          "syllables": [
+            "Fen",
+            "ster"
+          ]
+        },
+        {
+          "clean": "vorbei",
+          "syllables": [
+            "vor",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er zwinkert Leo zu.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "zwinkert",
+          "syllables": [
+            "zwin",
+            "kert"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leo lacht und winkt mit beiden Händen zurück.",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "lacht",
+          "syllables": [
+            "lacht"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "winkt",
+          "syllables": [
+            "winkt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "beiden",
+          "syllables": [
+            "bei",
             "den"
           ]
         },
         {
-          "clean": "schmalen",
+          "clean": "Händen",
           "syllables": [
-            "schma",
-            "len"
-          ]
-        },
-        {
-          "clean": "Weg",
-          "syllables": [
-            "Weg"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mutig geht er heran.",
-      "words": [
-        {
-          "clean": "Mutig",
-          "syllables": [
-            "Mu",
-            "tig"
-          ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "heran",
-          "syllables": [
-            "he",
-            "ran"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
-          ]
-        },
-        {
-          "clean": "rollen",
-          "syllables": [
-            "rol",
-            "len"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
+            "Hän",
             "den"
           ]
         },
         {
-          "clean": "Gegenstand",
+          "clean": "zurück",
           "syllables": [
-            "Ge",
-            "gen",
-            "stand"
-          ]
-        },
-        {
-          "clean": "zur",
-          "syllables": [
-            "zur"
-          ]
-        },
-        {
-          "clean": "Seite",
-          "syllables": [
-            "Sei",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle klatschen laut Beifall.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "klatschen",
-          "syllables": [
-            "klat",
-            "schen"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "Beifall",
-          "syllables": [
-            "Bei",
-            "fall"
+            "zu",
+            "rück"
           ]
         }
       ]

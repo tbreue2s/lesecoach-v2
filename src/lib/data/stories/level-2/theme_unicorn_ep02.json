@@ -2,167 +2,210 @@
   "themeId": "theme_unicorn",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Skateboard",
-  "title": "Das lustige Skateboard",
+  "disturberWord": "Klavier",
+  "title": "Fila und das Klavier",
   "sentences": [
     {
-      "text": "Der rote Skateboard liegt im Gras.",
+      "text": "Fila fliegt durch die blaue Luft.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Fila",
           "syllables": [
-            "Der"
+            "Fi",
+            "la"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "fliegt",
           "syllables": [
-            "ro",
-            "te"
+            "fliegt"
           ]
         },
         {
-          "clean": "Skateboard",
+          "clean": "durch",
           "syllables": [
-            "Ska",
-            "te",
-            "bo",
-            "ard"
+            "durch"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "die",
           "syllables": [
-            "liegt"
+            "die"
           ]
         },
         {
-          "clean": "im",
+          "clean": "blaue",
           "syllables": [
-            "im"
+            "blau",
+            "e"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Luft",
           "syllables": [
-            "Gras"
+            "Luft"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Sie findet eine weiche Wolke.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Sie",
           "syllables": [
-            "Ein"
+            "Sie"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "findet",
           "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Hund",
-          "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
+            "fin",
             "det"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "eine",
           "syllables": [
-            "Schat",
-            "ten"
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "weiche",
+          "syllables": [
+            "wei",
+            "che"
+          ]
+        },
+        {
+          "clean": "Wolke",
+          "syllables": [
+            "Wol",
+            "ke"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort oben steht ein Klavier.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "oben",
+          "syllables": [
+            "o",
+            "ben"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Klavier",
+          "syllables": [
+            "Kla",
+            "vier"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fila berührt es mit dem Horn.",
+      "words": [
+        {
+          "clean": "Fila",
+          "syllables": [
+            "Fi",
+            "la"
+          ]
+        },
+        {
+          "clean": "berührt",
+          "syllables": [
+            "be",
+            "rührt"
+          ]
+        },
+        {
+          "clean": "es",
+          "syllables": [
+            "es"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Horn",
+          "syllables": [
+            "Horn"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Nun schwebt ein bunter Stern empor.",
+      "words": [
+        {
+          "clean": "Nun",
+          "syllables": [
+            "Nun"
+          ]
+        },
+        {
+          "clean": "schwebt",
+          "syllables": [
+            "schwebt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "bunter",
+          "syllables": [
+            "bun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Stern",
+          "syllables": [
+            "Stern"
+          ]
+        },
+        {
+          "clean": "empor",
+          "syllables": [
+            "em",
+            "por"
           ]
         }
       ]

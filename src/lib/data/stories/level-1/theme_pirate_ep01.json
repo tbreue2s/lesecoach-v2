@@ -2,29 +2,166 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Dino",
-  "title": "Pirat und der Dino",
+  "disturberWord": "Nixe",
+  "title": "Der Weg durch den Nebel",
   "sentences": [
     {
-      "text": "Ein Pirat geht zum Tor.",
+      "text": "Finn hält ganz fest das Ruder.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Finn",
           "syllables": [
-            "Ein"
+            "Finn"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "hält",
           "syllables": [
-            "Pi",
-            "rat"
+            "hält"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "ganz",
           "syllables": [
-            "geht"
+            "ganz"
+          ]
+        },
+        {
+          "clean": "fest",
+          "syllables": [
+            "fest"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ruder",
+          "syllables": [
+            "Ru",
+            "der"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dichter Nebel umgibt sein kleines Boot.",
+      "words": [
+        {
+          "clean": "Dichter",
+          "syllables": [
+            "Dich",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Nebel",
+          "syllables": [
+            "Ne",
+            "bel"
+          ]
+        },
+        {
+          "clean": "umgibt",
+          "syllables": [
+            "um",
+            "gibt"
+          ]
+        },
+        {
+          "clean": "sein",
+          "syllables": [
+            "sein"
+          ]
+        },
+        {
+          "clean": "kleines",
+          "syllables": [
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Eine fröhliche Nixe schenkt ihm Mut.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "fröhliche",
+          "syllables": [
+            "fröh",
+            "li",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "schenkt",
+          "syllables": [
+            "schenkt"
+          ]
+        },
+        {
+          "clean": "ihm",
+          "syllables": [
+            "ihm"
+          ]
+        },
+        {
+          "clean": "Mut",
+          "syllables": [
+            "Mut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie führt sein Schiff zum Hafen.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "führt",
+          "syllables": [
+            "führt"
+          ]
+        },
+        {
+          "clean": "sein",
+          "syllables": [
+            "sein"
+          ]
+        },
+        {
+          "clean": "Schiff",
+          "syllables": [
+            "Schiff"
           ]
         },
         {
@@ -34,107 +171,27 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Hafen",
           "syllables": [
-            "Tor"
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Der Pirat sieht einen Dino.",
+      "text": "Dort lacht der stolze kleine Pirat.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dort",
           "syllables": [
-            "Der"
+            "Dort"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "lacht",
           "syllables": [
-            "Pi",
-            "rat"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Dino",
-          "syllables": [
-            "Di",
-            "no"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Pirat schaut den Dino an.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Pirat",
-          "syllables": [
-            "Pi",
-            "rat"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Dino",
-          "syllables": [
-            "Di",
-            "no"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Froh ruft der Pirat am Tor.",
-      "words": [
-        {
-          "clean": "Froh",
-          "syllables": [
-            "Froh"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
+            "lacht"
           ]
         },
         {
@@ -144,22 +201,24 @@
           ]
         },
         {
+          "clean": "stolze",
+          "syllables": [
+            "stol",
+            "ze"
+          ]
+        },
+        {
+          "clean": "kleine",
+          "syllables": [
+            "klei",
+            "ne"
+          ]
+        },
+        {
           "clean": "Pirat",
           "syllables": [
             "Pi",
             "rat"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
           ]
         }
       ]

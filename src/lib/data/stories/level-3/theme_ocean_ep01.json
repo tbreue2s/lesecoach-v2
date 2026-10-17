@@ -2,52 +2,100 @@
   "themeId": "theme_ocean",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Tuba",
-  "title": "Wal und die Tuba",
+  "disturberWord": "Nixe",
+  "title": "Die funkelnde Perle",
   "sentences": [
     {
-      "text": "Der Wal läuft schnell zum Tor.",
+      "text": "Leo rudert auf dem See.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Leo",
           "syllables": [
-            "Der"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "Wal",
+          "clean": "rudert",
           "syllables": [
-            "Wal"
+            "ru",
+            "dert"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "auf",
           "syllables": [
-            "läuft"
+            "auf"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "dem",
           "syllables": [
-            "schnell"
+            "dem"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "See",
           "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "See"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich eine Tuba.",
+      "text": "Das klare Wasser glitzert warm im Sonnenlicht.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "klare",
+          "syllables": [
+            "kla",
+            "re"
+          ]
+        },
+        {
+          "clean": "Wasser",
+          "syllables": [
+            "Was",
+            "ser"
+          ]
+        },
+        {
+          "clean": "glitzert",
+          "syllables": [
+            "glit",
+            "zert"
+          ]
+        },
+        {
+          "clean": "warm",
+          "syllables": [
+            "warm"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Sonnenlicht",
+          "syllables": [
+            "Son",
+            "nen",
+            "licht"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da taucht eine Nixe auf.",
       "words": [
         {
           "clean": "Da",
@@ -56,23 +104,9 @@
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "taucht",
           "syllables": [
-            "en",
-            "tdeckt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
+            "taucht"
           ]
         },
         {
@@ -83,95 +117,167 @@
           ]
         },
         {
-          "clean": "Tuba",
+          "clean": "Nixe",
           "syllables": [
-            "Tu",
-            "ba"
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier schaut genau hin.",
+      "text": "Sie lächelt freundlich und winkt Leo leise zu.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Sie",
           "syllables": [
-            "Das"
+            "Sie"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "lächelt",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "lä",
+            "chelt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "freundlich",
           "syllables": [
-            "Tier"
+            "freund",
+            "lich"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "und",
           "syllables": [
-            "schaut"
+            "und"
           ]
         },
         {
-          "clean": "genau",
+          "clean": "winkt",
           "syllables": [
-            "ge",
-            "nau"
+            "winkt"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "Leo",
           "syllables": [
-            "hin"
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
           ]
         }
       ]
     },
     {
-      "text": "Gemeinsam jubeln alle vor Freude.",
+      "text": "Sie zeigt eine helle Perle.",
       "words": [
         {
-          "clean": "Gemeinsam",
+          "clean": "Sie",
           "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "Sie"
           ]
         },
         {
-          "clean": "jubeln",
+          "clean": "zeigt",
           "syllables": [
-            "ju",
-            "beln"
+            "zeigt"
           ]
         },
         {
-          "clean": "alle",
+          "clean": "eine",
           "syllables": [
-            "al",
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "helle",
+          "syllables": [
+            "hel",
             "le"
           ]
         },
         {
-          "clean": "vor",
+          "clean": "Perle",
           "syllables": [
-            "vor"
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der runde Schatz funkelt wie ein lieber Gruß.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "runde",
           "syllables": [
-            "Freu",
+            "run",
             "de"
+          ]
+        },
+        {
+          "clean": "Schatz",
+          "syllables": [
+            "Schatz"
+          ]
+        },
+        {
+          "clean": "funkelt",
+          "syllables": [
+            "fun",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "lieber",
+          "syllables": [
+            "lie",
+            "ber"
+          ]
+        },
+        {
+          "clean": "Gruß",
+          "syllables": [
+            "Gruß"
           ]
         }
       ]

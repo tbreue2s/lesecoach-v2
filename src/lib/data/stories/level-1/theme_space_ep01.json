@@ -2,16 +2,52 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Pinguin",
-  "title": "Pilot und der Pinguin",
+  "disturberWord": "Sternenwal",
+  "title": "Der sanfte Sternenwal",
   "sentences": [
     {
-      "text": "Ein Pilot geht zum Tor.",
+      "text": "Anton steuert die silberne Rakete als Pilot.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Anton",
           "syllables": [
-            "Ein"
+            "An",
+            "ton"
+          ]
+        },
+        {
+          "clean": "steuert",
+          "syllables": [
+            "steu",
+            "ert"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "silberne",
+          "syllables": [
+            "sil",
+            "ber",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Rakete",
+          "syllables": [
+            "Ra",
+            "ke",
+            "te"
+          ]
+        },
+        {
+          "clean": "als",
+          "syllables": [
+            "als"
           ]
         },
         {
@@ -20,121 +56,35 @@
             "Pi",
             "lot"
           ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
-          ]
         }
       ]
     },
     {
-      "text": "Der Pilot sieht einen Pinguin.",
+      "text": "Leise brummt im Heck der warme Motor.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Leise",
           "syllables": [
-            "Der"
+            "Lei",
+            "se"
           ]
         },
         {
-          "clean": "Pilot",
+          "clean": "brummt",
           "syllables": [
-            "Pi",
-            "lot"
+            "brummt"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "im",
           "syllables": [
-            "sieht"
+            "im"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "Heck",
           "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Pinguin",
-          "syllables": [
-            "Pin",
-            "guin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Pilot schaut den Pinguin an.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Pilot",
-          "syllables": [
-            "Pi",
-            "lot"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Pinguin",
-          "syllables": [
-            "Pin",
-            "guin"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Froh ruft der Pilot am Tor.",
-      "words": [
-        {
-          "clean": "Froh",
-          "syllables": [
-            "Froh"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
+            "Heck"
           ]
         },
         {
@@ -144,10 +94,57 @@
           ]
         },
         {
-          "clean": "Pilot",
+          "clean": "warme",
           "syllables": [
-            "Pi",
-            "lot"
+            "war",
+            "me"
+          ]
+        },
+        {
+          "clean": "Motor",
+          "syllables": [
+            "Mo",
+            "tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich schwebt ein riesiger Sternenwal am Glas.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "schwebt",
+          "syllables": [
+            "schwebt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "riesiger",
+          "syllables": [
+            "rie",
+            "si",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Sternenwal",
+          "syllables": [
+            "Ster",
+            "nen",
+            "wal"
           ]
         },
         {
@@ -157,9 +154,105 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Glas",
           "syllables": [
-            "Tor"
+            "Glas"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das sanfte Tier leuchtet wie eine Kugel.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "sanfte",
+          "syllables": [
+            "san",
+            "fte"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "leuchtet",
+          "syllables": [
+            "leuch",
+            "tet"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Kugel",
+          "syllables": [
+            "Ku",
+            "gel"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Glücklich knipst Anton davon ein Foto.",
+      "words": [
+        {
+          "clean": "Glücklich",
+          "syllables": [
+            "Glück",
+            "lich"
+          ]
+        },
+        {
+          "clean": "knipst",
+          "syllables": [
+            "knipst"
+          ]
+        },
+        {
+          "clean": "Anton",
+          "syllables": [
+            "An",
+            "ton"
+          ]
+        },
+        {
+          "clean": "davon",
+          "syllables": [
+            "da",
+            "von"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Foto",
+          "syllables": [
+            "Fo",
+            "to"
           ]
         }
       ]

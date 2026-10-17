@@ -2,79 +2,108 @@
   "themeId": "theme_pirate",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Schatzkiste",
-  "title": "Das lustige Schatzkiste",
+  "disturberWord": "Pinguin",
+  "title": "Der Pinguin im Ausguck",
   "sentences": [
     {
-      "text": "Der rote Schatzkiste liegt im Gras.",
+      "text": "Hoch oben steht der Mast.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Hoch",
           "syllables": [
-            "Der"
+            "Hoch"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "oben",
           "syllables": [
-            "ro",
-            "te"
+            "o",
+            "ben"
           ]
         },
         {
-          "clean": "Schatzkiste",
+          "clean": "steht",
           "syllables": [
-            "Schat",
-            "zkis",
-            "te"
+            "steht"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "der",
           "syllables": [
-            "liegt"
+            "der"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Mast",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
+            "Mast"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort oben sitzt nun ein Pinguin.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dort",
           "syllables": [
-            "Ein"
+            "Dort"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "oben",
           "syllables": [
-            "klei",
-            "ner"
+            "o",
+            "ben"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "sitzt",
           "syllables": [
-            "Hund"
+            "sitzt"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "nun",
           "syllables": [
-            "sieht"
+            "nun"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Pinguin",
+          "syllables": [
+            "Pin",
+            "guin"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fröhlich trägt er den Hut.",
+      "words": [
+        {
+          "clean": "Fröhlich",
+          "syllables": [
+            "Fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "trägt",
+          "syllables": [
+            "trägt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
           ]
         },
         {
@@ -84,84 +113,94 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Hut",
           "syllables": [
-            "Fund"
+            "Hut"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Er reiste weit über das Eis.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Er",
           "syllables": [
-            "Das"
+            "Er"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "reiste",
           "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
+            "reis",
             "te"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "weit",
           "syllables": [
-            "Baum"
+            "weit"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "über",
           "syllables": [
-            "spen",
-            "det"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "das",
           "syllables": [
-            "Schat",
-            "ten"
+            "das"
+          ]
+        },
+        {
+          "clean": "Eis",
+          "syllables": [
+            "Eis"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Nun ist er ihr neuer Freund.",
+      "words": [
+        {
+          "clean": "Nun",
+          "syllables": [
+            "Nun"
+          ]
+        },
+        {
+          "clean": "ist",
+          "syllables": [
+            "ist"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "neuer",
+          "syllables": [
+            "neu",
+            "er"
+          ]
+        },
+        {
+          "clean": "Freund",
+          "syllables": [
+            "Freund"
           ]
         }
       ]

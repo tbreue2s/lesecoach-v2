@@ -2,36 +2,16 @@
   "themeId": "theme_forest",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Sofa",
-  "title": "Das lustige Sofa",
+  "disturberWord": "Waldfee",
+  "title": "Das Licht am See",
   "sentences": [
     {
-      "text": "Der rote Sofa liegt im Gras.",
+      "text": "Tief im Wald liegt ein blauer See.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Tief",
           "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "rote",
-          "syllables": [
-            "ro",
-            "te"
-          ]
-        },
-        {
-          "clean": "Sofa",
-          "syllables": [
-            "So",
-            "fa"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
+            "Tief"
           ]
         },
         {
@@ -41,126 +21,211 @@
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Wald",
           "syllables": [
-            "Gras"
+            "Wald"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "blauer",
+          "syllables": [
+            "blau",
+            "er"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Am Ufer steht eine schöne Waldfee.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Am",
           "syllables": [
-            "Ein"
+            "Am"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "Ufer",
           "syllables": [
-            "klei",
-            "ner"
+            "U",
+            "fer"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "steht",
           "syllables": [
-            "Hund"
+            "steht"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "eine",
           "syllables": [
-            "sieht"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "den",
+          "clean": "schöne",
           "syllables": [
-            "den"
+            "schö",
+            "ne"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Waldfee",
           "syllables": [
-            "Fund"
+            "Wald",
+            "fee"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Sie schenkt ihnen nun feines Licht.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Sie",
           "syllables": [
-            "Das"
+            "Sie"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "schenkt",
           "syllables": [
-            "lie",
-            "be"
+            "schenkt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "ihnen",
           "syllables": [
-            "Tier"
+            "ih",
+            "nen"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "nun",
           "syllables": [
-            "bellt"
+            "nun"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "feines",
           "syllables": [
-            "lei",
-            "se"
+            "fei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Licht",
+          "syllables": [
+            "Licht"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Eine schlaue Eule schaut staunend zu.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Eine",
           "syllables": [
-            "Der"
+            "Ei",
+            "ne"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "schlaue",
           "syllables": [
-            "al",
-            "te"
+            "schlau",
+            "e"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "Eule",
           "syllables": [
-            "Baum"
+            "Eu",
+            "le"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "schaut",
           "syllables": [
-            "spen",
-            "det"
+            "schaut"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "staunend",
           "syllables": [
-            "Schat",
-            "ten"
+            "stau",
+            "nend"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Eine graue Maus tanzt ganz vergnügt.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "graue",
+          "syllables": [
+            "grau",
+            "e"
+          ]
+        },
+        {
+          "clean": "Maus",
+          "syllables": [
+            "Maus"
+          ]
+        },
+        {
+          "clean": "tanzt",
+          "syllables": [
+            "tanzt"
+          ]
+        },
+        {
+          "clean": "ganz",
+          "syllables": [
+            "ganz"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
           ]
         }
       ]

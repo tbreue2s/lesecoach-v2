@@ -2,11 +2,106 @@
   "themeId": "theme_forest",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Roller",
-  "title": "Roller beim Tor",
+  "disturberWord": "Ufo",
+  "title": "Besuch im Gras",
   "sentences": [
     {
-      "text": "Ein Roller steht am Tor.",
+      "text": "Finja sitzt ruhig im weichen Gras.",
+      "words": [
+        {
+          "clean": "Finja",
+          "syllables": [
+            "Fin",
+            "ja"
+          ]
+        },
+        {
+          "clean": "sitzt",
+          "syllables": [
+            "sitzt"
+          ]
+        },
+        {
+          "clean": "ruhig",
+          "syllables": [
+            "ru",
+            "hig"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Aus den Wolken sinkt ein silbernes Ufo.",
+      "words": [
+        {
+          "clean": "Aus",
+          "syllables": [
+            "Aus"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Wolken",
+          "syllables": [
+            "Wol",
+            "ken"
+          ]
+        },
+        {
+          "clean": "sinkt",
+          "syllables": [
+            "sinkt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "silbernes",
+          "syllables": [
+            "sil",
+            "ber",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein grünes Wesen schwenkt einen bunten Hut.",
       "words": [
         {
           "clean": "Ein",
@@ -15,64 +110,37 @@
           ]
         },
         {
-          "clean": "Roller",
+          "clean": "grünes",
           "syllables": [
-            "Rol",
-            "ler"
+            "grü",
+            "nes"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "Wesen",
           "syllables": [
-            "steht"
+            "We",
+            "sen"
           ]
         },
         {
-          "clean": "am",
+          "clean": "schwenkt",
           "syllables": [
-            "am"
+            "schwenkt"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "einen",
           "syllables": [
-            "Tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das Paket sieht froh zum Hut.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "ei",
+            "nen"
           ]
         },
         {
-          "clean": "Paket",
+          "clean": "bunten",
           "syllables": [
-            "Pa",
-            "ket"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
+            "bun",
+            "ten"
           ]
         },
         {
@@ -84,87 +152,101 @@
       ]
     },
     {
-      "text": "Ein Dino eilt mit Lok umher.",
+      "text": "Verwundert schaut aus dem Gebüsch ein Hase.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Verwundert",
           "syllables": [
-            "Ein"
+            "Ver",
+            "wun",
+            "dert"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "schaut",
           "syllables": [
-            "Di",
-            "no"
+            "schaut"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "aus",
           "syllables": [
-            "eilt"
+            "aus"
           ]
         },
         {
-          "clean": "mit",
+          "clean": "dem",
           "syllables": [
-            "mit"
+            "dem"
           ]
         },
         {
-          "clean": "Lok",
+          "clean": "Gebüsch",
           "syllables": [
-            "Lok"
+            "Ge",
+            "büsch"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "ein",
           "syllables": [
-            "um",
-            "her"
+            "ein"
+          ]
+        },
+        {
+          "clean": "Hase",
+          "syllables": [
+            "Ha",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Papa ruft nach Opa am Rad.",
+      "text": "Finja winkt fröhlich und teilt ihr Brot.",
       "words": [
         {
-          "clean": "Papa",
+          "clean": "Finja",
           "syllables": [
-            "Pa",
-            "pa"
+            "Fin",
+            "ja"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "winkt",
           "syllables": [
-            "ruft"
+            "winkt"
           ]
         },
         {
-          "clean": "nach",
+          "clean": "fröhlich",
           "syllables": [
-            "nach"
+            "fröh",
+            "lich"
           ]
         },
         {
-          "clean": "Opa",
+          "clean": "und",
           "syllables": [
-            "O",
-            "pa"
+            "und"
           ]
         },
         {
-          "clean": "am",
+          "clean": "teilt",
           "syllables": [
-            "am"
+            "teilt"
           ]
         },
         {
-          "clean": "Rad",
+          "clean": "ihr",
           "syllables": [
-            "Rad"
+            "ihr"
+          ]
+        },
+        {
+          "clean": "Brot",
+          "syllables": [
+            "Brot"
           ]
         }
       ]

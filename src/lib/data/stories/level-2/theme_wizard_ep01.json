@@ -2,16 +2,89 @@
   "themeId": "theme_wizard",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Papagei",
-  "title": "Das bunte Papagei",
+  "disturberWord": "Sprechhut",
+  "title": "Der kichernde Zauberhut",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Auf dem Tisch ruht ein alter Hut.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Auf",
           "syllables": [
-            "Ein"
+            "Auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        },
+        {
+          "clean": "ruht",
+          "syllables": [
+            "ruht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "alter",
+          "syllables": [
+            "al",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Nun kichert er wie ein kleiner Kobold.",
+      "words": [
+        {
+          "clean": "Nun",
+          "syllables": [
+            "Nun"
+          ]
+        },
+        {
+          "clean": "kichert",
+          "syllables": [
+            "ki",
+            "chert"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
           ]
         },
         {
@@ -22,91 +95,108 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Kobold",
           "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "umher",
-          "syllables": [
-            "um",
-            "her"
+            "Ko",
+            "bold"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt einen Papagei.",
+      "text": "Fröhlich hüpft er durch den Saal.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Fröhlich",
           "syllables": [
-            "Mit",
-            "ten"
+            "Fröh",
+            "lich"
           ]
         },
         {
-          "clean": "im",
+          "clean": "hüpft",
           "syllables": [
-            "im"
+            "hüpft"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "er",
           "syllables": [
-            "Gras"
+            "er"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "durch",
           "syllables": [
-            "liegt"
+            "durch"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "den",
           "syllables": [
-            "ei",
-            "nen"
+            "den"
           ]
         },
         {
-          "clean": "Papagei",
+          "clean": "Saal",
           "syllables": [
-            "Pa",
-            "pa",
-            "gei"
+            "Saal"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Er landet sanft auf dem Sofa.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Er",
           "syllables": [
-            "Das"
+            "Er"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "landet",
           "syllables": [
-            "lie",
-            "be"
+            "lan",
+            "det"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "sanft",
           "syllables": [
-            "Tier"
+            "sanft"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Darüber staunt nun ein kluger Rabe.",
+      "words": [
+        {
+          "clean": "Darüber",
+          "syllables": [
+            "Da",
+            "rü",
+            "ber"
           ]
         },
         {
@@ -116,47 +206,29 @@
           ]
         },
         {
-          "clean": "sehr",
+          "clean": "nun",
           "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "nun"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "ein",
           "syllables": [
-            "al",
-            "te"
+            "ein"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "kluger",
           "syllables": [
-            "Baum"
+            "klu",
+            "ger"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "Rabe",
           "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Ra",
+            "be"
           ]
         }
       ]

@@ -2,53 +2,98 @@
   "themeId": "theme_dino",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Keks",
-  "title": "Das lustige Keks",
+  "disturberWord": "Sofa",
+  "title": "Ein Sofa am Ufer",
   "sentences": [
     {
-      "text": "Der rote Keks liegt im Gras.",
+      "text": "Dicht am Ufer wächst grünes Moos.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dicht",
           "syllables": [
-            "Der"
+            "Dicht"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "am",
           "syllables": [
-            "ro",
-            "te"
+            "am"
           ]
         },
         {
-          "clean": "Keks",
+          "clean": "Ufer",
           "syllables": [
-            "Keks"
+            "U",
+            "fer"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "wächst",
           "syllables": [
-            "liegt"
+            "wächst"
           ]
         },
         {
-          "clean": "im",
+          "clean": "grünes",
           "syllables": [
-            "im"
+            "grü",
+            "nes"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Moos",
           "syllables": [
-            "Gras"
+            "Moos"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort steht bereit ein weiches Sofa.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "bereit",
+          "syllables": [
+            "be",
+            "reit"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "weiches",
+          "syllables": [
+            "wei",
+            "ches"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Dino macht hier eine Pause.",
       "words": [
         {
           "clean": "Ein",
@@ -57,109 +102,122 @@
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "Dino",
           "syllables": [
-            "klei",
-            "ner"
+            "Di",
+            "no"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "macht",
           "syllables": [
-            "Hund"
+            "macht"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "hier",
           "syllables": [
-            "sieht"
+            "hier"
           ]
         },
         {
-          "clean": "den",
+          "clean": "eine",
           "syllables": [
-            "den"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Pause",
           "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
+            "Pau",
             "se"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Sanft weht dazu ein leiser Wind.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sanft",
           "syllables": [
-            "Der"
+            "Sanft"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "weht",
           "syllables": [
-            "al",
-            "te"
+            "weht"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "dazu",
           "syllables": [
-            "Baum"
+            "da",
+            "zu"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "ein",
           "syllables": [
-            "spen",
-            "det"
+            "ein"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "leiser",
           "syllables": [
-            "Schat",
-            "ten"
+            "lei",
+            "ser"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leise schnarcht nun das müde Tier.",
+      "words": [
+        {
+          "clean": "Leise",
+          "syllables": [
+            "Lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "schnarcht",
+          "syllables": [
+            "schnarcht"
+          ]
+        },
+        {
+          "clean": "nun",
+          "syllables": [
+            "nun"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "müde",
+          "syllables": [
+            "mü",
+            "de"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
           ]
         }
       ]

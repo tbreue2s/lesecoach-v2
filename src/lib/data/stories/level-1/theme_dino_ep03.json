@@ -2,30 +2,189 @@
   "themeId": "theme_dino",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Regenschirm",
-  "title": "Regenschirm am Laden",
+  "disturberWord": "Sofa",
+  "title": "Das weiche Moos-Bett",
   "sentences": [
     {
-      "text": "Ein Regenschirm steht am Laden.",
+      "text": "Müde tapst der schläfrige Anton ans Ufer.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Müde",
           "syllables": [
-            "Ein"
+            "Mü",
+            "de"
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "tapst",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
+            "tapst"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "der",
           "syllables": [
-            "steht"
+            "der"
+          ]
+        },
+        {
+          "clean": "schläfrige",
+          "syllables": [
+            "schläf",
+            "ri",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Anton",
+          "syllables": [
+            "An",
+            "ton"
+          ]
+        },
+        {
+          "clean": "ans",
+          "syllables": [
+            "ans"
+          ]
+        },
+        {
+          "clean": "Ufer",
+          "syllables": [
+            "U",
+            "fer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort leuchtet ein Hügel aus dickem Moos.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "leuchtet",
+          "syllables": [
+            "leuch",
+            "tet"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Hügel",
+          "syllables": [
+            "Hü",
+            "gel"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "dickem",
+          "syllables": [
+            "di",
+            "ckem"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die weichen Farnblätter formen ein gemütliches Sofa.",
+      "words": [
+        {
+          "clean": "Die",
+          "syllables": [
+            "Die"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Farnblätter",
+          "syllables": [
+            "Far",
+            "nblät",
+            "ter"
+          ]
+        },
+        {
+          "clean": "formen",
+          "syllables": [
+            "for",
+            "men"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "gemütliches",
+          "syllables": [
+            "ge",
+            "müt",
+            "li",
+            "ches"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zufrieden schlummert Anton am glitzernden See.",
+      "words": [
+        {
+          "clean": "Zufrieden",
+          "syllables": [
+            "Zuf",
+            "rie",
+            "den"
+          ]
+        },
+        {
+          "clean": "schlummert",
+          "syllables": [
+            "schlum",
+            "mert"
+          ]
+        },
+        {
+          "clean": "Anton",
+          "syllables": [
+            "An",
+            "ton"
           ]
         },
         {
@@ -35,126 +194,17 @@
           ]
         },
         {
-          "clean": "Laden",
+          "clean": "glitzernden",
           "syllables": [
-            "La",
-            "den"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Faden ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "glit",
+            "zer",
+            "nden"
           ]
         },
         {
-          "clean": "Faden",
+          "clean": "See",
           "syllables": [
-            "Fa",
-            "den"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Hut eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Hut",
-          "syllables": [
-            "Hut"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Igel.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Igel",
-          "syllables": [
-            "I",
-            "gel"
+            "See"
           ]
         }
       ]

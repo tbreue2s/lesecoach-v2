@@ -2,36 +2,113 @@
   "themeId": "theme_ocean",
   "level": 8,
   "episode": 1,
-  "disturberWord": "Zauberhut",
-  "title": "Aufregung im weiten Meer",
+  "disturberWord": "Nixe",
+  "title": "Das Geschenk der Nixe",
   "sentences": [
     {
-      "text": "Was für ein herrlicher und sonniger Morgen!",
+      "text": "Leo ruderte gemächlich über das sonnige Wasser.",
       "words": [
         {
-          "clean": "Was",
+          "clean": "Leo",
           "syllables": [
-            "Was"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "für",
+          "clean": "ruderte",
           "syllables": [
-            "für"
+            "ru",
+            "der",
+            "te"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "gemächlich",
           "syllables": [
-            "ein"
+            "ge",
+            "mäch",
+            "lich"
           ]
         },
         {
-          "clean": "herrlicher",
+          "clean": "über",
           "syllables": [
-            "her",
-            "rli",
-            "cher"
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "sonnige",
+          "syllables": [
+            "son",
+            "ni",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Wasser",
+          "syllables": [
+            "Was",
+            "ser"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sanfte Wellen wiegten sein kleines Holzboot hin und her.",
+      "words": [
+        {
+          "clean": "Sanfte",
+          "syllables": [
+            "San",
+            "fte"
+          ]
+        },
+        {
+          "clean": "Wellen",
+          "syllables": [
+            "Wel",
+            "len"
+          ]
+        },
+        {
+          "clean": "wiegten",
+          "syllables": [
+            "wieg",
+            "ten"
+          ]
+        },
+        {
+          "clean": "sein",
+          "syllables": [
+            "sein"
+          ]
+        },
+        {
+          "clean": "kleines",
+          "syllables": [
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Holzboot",
+          "syllables": [
+            "Hol",
+            "zboot"
+          ]
+        },
+        {
+          "clean": "hin",
+          "syllables": [
+            "hin"
           ]
         },
         {
@@ -41,42 +118,371 @@
           ]
         },
         {
-          "clean": "sonniger",
+          "clean": "her",
           "syllables": [
-            "son",
-            "ni",
-            "ger"
-          ]
-        },
-        {
-          "clean": "Morgen",
-          "syllables": [
-            "Mor",
-            "gen"
+            "her"
           ]
         }
       ]
     },
     {
-      "text": "Der Wal spaziert vergnügt im weiten Meer.",
+      "text": "Da tauchte plötzlich eine fröhliche Nixe neben ihm auf!",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Da",
           "syllables": [
-            "Der"
+            "Da"
           ]
         },
         {
-          "clean": "Wal",
+          "clean": "tauchte",
           "syllables": [
-            "Wal"
+            "tauch",
+            "te"
           ]
         },
         {
-          "clean": "spaziert",
+          "clean": "plötzlich",
           "syllables": [
-            "spa",
-            "ziert"
+            "plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "fröhliche",
+          "syllables": [
+            "fröh",
+            "li",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "neben",
+          "syllables": [
+            "ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "ihm",
+          "syllables": [
+            "ihm"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leo rieb sich verwundert die Augen: „Träume ich etwa?“",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "rieb",
+          "syllables": [
+            "rieb"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "verwundert",
+          "syllables": [
+            "ver",
+            "wun",
+            "dert"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Augen",
+          "syllables": [
+            "Au",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Träume",
+          "syllables": [
+            "Träu",
+            "me"
+          ]
+        },
+        {
+          "clean": "ich",
+          "syllables": [
+            "ich"
+          ]
+        },
+        {
+          "clean": "etwa",
+          "syllables": [
+            "et",
+            "wa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die Nixe kicherte leise und öffnete ihre nasse Hand.",
+      "words": [
+        {
+          "clean": "Die",
+          "syllables": [
+            "Die"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "kicherte",
+          "syllables": [
+            "ki",
+            "cher",
+            "te"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "öffnete",
+          "syllables": [
+            "öf",
+            "fne",
+            "te"
+          ]
+        },
+        {
+          "clean": "ihre",
+          "syllables": [
+            "ih",
+            "re"
+          ]
+        },
+        {
+          "clean": "nasse",
+          "syllables": [
+            "nas",
+            "se"
+          ]
+        },
+        {
+          "clean": "Hand",
+          "syllables": [
+            "Hand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Darin schimmerte eine runde Perle wie pures Mondlicht.",
+      "words": [
+        {
+          "clean": "Darin",
+          "syllables": [
+            "Da",
+            "rin"
+          ]
+        },
+        {
+          "clean": "schimmerte",
+          "syllables": [
+            "schim",
+            "mer",
+            "te"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "runde",
+          "syllables": [
+            "run",
+            "de"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "pures",
+          "syllables": [
+            "pu",
+            "res"
+          ]
+        },
+        {
+          "clean": "Mondlicht",
+          "syllables": [
+            "Mond",
+            "licht"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "„Ein Geschenk für dich!“, rief sie mit heller Stimme.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Geschenk",
+          "syllables": [
+            "Ge",
+            "schenk"
+          ]
+        },
+        {
+          "clean": "für",
+          "syllables": [
+            "für"
+          ]
+        },
+        {
+          "clean": "dich",
+          "syllables": [
+            "dich"
+          ]
+        },
+        {
+          "clean": "rief",
+          "syllables": [
+            "rief"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "heller",
+          "syllables": [
+            "hel",
+            "ler"
+          ]
+        },
+        {
+          "clean": "Stimme",
+          "syllables": [
+            "Stim",
+            "me"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dankbar lächelte Leo und ruderte vergnügt nach Hause.",
+      "words": [
+        {
+          "clean": "Dankbar",
+          "syllables": [
+            "Dank",
+            "bar"
+          ]
+        },
+        {
+          "clean": "lächelte",
+          "syllables": [
+            "lä",
+            "chel",
+            "te"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "ruderte",
+          "syllables": [
+            "ru",
+            "der",
+            "te"
           ]
         },
         {
@@ -87,355 +493,16 @@
           ]
         },
         {
-          "clean": "im",
+          "clean": "nach",
           "syllables": [
-            "im"
+            "nach"
           ]
         },
         {
-          "clean": "weiten",
+          "clean": "Hause",
           "syllables": [
-            "wei",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Meer",
-          "syllables": [
-            "Me",
-            "er"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Doch was glitzert da drüben so hell im Sonnenlicht?",
-      "words": [
-        {
-          "clean": "Doch",
-          "syllables": [
-            "Doch"
-          ]
-        },
-        {
-          "clean": "was",
-          "syllables": [
-            "was"
-          ]
-        },
-        {
-          "clean": "glitzert",
-          "syllables": [
-            "glit",
-            "zert"
-          ]
-        },
-        {
-          "clean": "da",
-          "syllables": [
-            "da"
-          ]
-        },
-        {
-          "clean": "drüben",
-          "syllables": [
-            "drü",
-            "ben"
-          ]
-        },
-        {
-          "clean": "so",
-          "syllables": [
-            "so"
-          ]
-        },
-        {
-          "clean": "hell",
-          "syllables": [
-            "hell"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Sonnenlicht",
-          "syllables": [
-            "Son",
-            "nen",
-            "licht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Es ist Ein Zauberhut, das mitten auf dem Moos steht!",
-      "words": [
-        {
-          "clean": "Es",
-          "syllables": [
-            "Es"
-          ]
-        },
-        {
-          "clean": "ist",
-          "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Zauberhut",
-          "syllables": [
-            "Zau",
-            "ber",
-            "hut"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "mitten",
-          "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Mo",
-            "os"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.",
-      "words": [
-        {
-          "clean": "Komm",
-          "syllables": [
-            "Komm"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "her",
-          "syllables": [
-            "her"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "aufgeregt",
-          "syllables": [
-            "auf",
-            "ge",
-            "regt"
-          ]
-        },
-        {
-          "clean": "seinem",
-          "syllables": [
-            "sei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "besten",
-          "syllables": [
-            "bes",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Freund",
-          "syllables": [
-            "Freund"
-          ]
-        },
-        {
-          "clean": "zu",
-          "syllables": [
-            "zu"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
-          ]
-        },
-        {
-          "clean": "bewundern",
-          "syllables": [
-            "be",
-            "wun",
-            "dern"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "beiden",
-          "syllables": [
-            "bei",
-            "den"
-          ]
-        },
-        {
-          "clean": "Tiere",
-          "syllables": [
-            "Tie",
-            "re"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "sonderbare",
-          "syllables": [
-            "son",
-            "der",
-            "ba",
-            "re"
-          ]
-        },
-        {
-          "clean": "Schauspiel",
-          "syllables": [
-            "Schaus",
-            "piel"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "So einen aufregenden Tag werden sie sicher niemals vergessen!",
-      "words": [
-        {
-          "clean": "So",
-          "syllables": [
-            "So"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "aufregenden",
-          "syllables": [
-            "auf",
-            "re",
-            "gen",
-            "den"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "werden",
-          "syllables": [
-            "wer",
-            "den"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "sicher",
-          "syllables": [
-            "si",
-            "cher"
-          ]
-        },
-        {
-          "clean": "niemals",
-          "syllables": [
-            "nie",
-            "mals"
-          ]
-        },
-        {
-          "clean": "vergessen",
-          "syllables": [
-            "ver",
-            "ges",
-            "sen"
+            "Hau",
+            "se"
           ]
         }
       ]

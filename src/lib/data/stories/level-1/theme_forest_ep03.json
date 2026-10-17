@@ -2,30 +2,97 @@
   "themeId": "theme_forest",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Ananas",
-  "title": "Ananas beim Tor",
+  "disturberWord": "Waldfee",
+  "title": "Zauber am Waldsee",
   "sentences": [
     {
-      "text": "Ein Ananas steht am Tor.",
+      "text": "Kalle wandert leise an den verborgenen See.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Kalle",
           "syllables": [
-            "Ein"
+            "Kal",
+            "le"
           ]
         },
         {
-          "clean": "Ananas",
+          "clean": "wandert",
           "syllables": [
-            "A",
-            "na",
-            "nas"
+            "wan",
+            "dert"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "leise",
           "syllables": [
-            "steht"
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "verborgenen",
+          "syllables": [
+            "ver",
+            "bor",
+            "ge",
+            "nen"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort sitzt eine winzige Waldfee am Ufer.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "sitzt",
+          "syllables": [
+            "sitzt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "winzige",
+          "syllables": [
+            "win",
+            "zi",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Waldfee",
+          "syllables": [
+            "Wald",
+            "fee"
           ]
         },
         {
@@ -35,75 +102,130 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Ufer",
           "syllables": [
-            "Tor"
+            "U",
+            "fer"
           ]
         }
       ]
     },
     {
-      "text": "Die Nadel sieht froh zum Hut.",
+      "text": "Aus dem Wasser lugt ein neugieriger Biber.",
       "words": [
         {
-          "clean": "Die",
+          "clean": "Aus",
           "syllables": [
-            "Die"
+            "Aus"
           ]
         },
         {
-          "clean": "Nadel",
+          "clean": "dem",
           "syllables": [
-            "Na",
-            "del"
+            "dem"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "Wasser",
           "syllables": [
-            "sieht"
+            "Was",
+            "ser"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "lugt",
           "syllables": [
-            "froh"
+            "lugt"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "ein",
           "syllables": [
-            "zum"
+            "ein"
           ]
         },
         {
-          "clean": "Hut",
+          "clean": "neugieriger",
           "syllables": [
-            "Hut"
+            "neu",
+            "gie",
+            "ri",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Biber",
+          "syllables": [
+            "Bi",
+            "ber"
           ]
         }
       ]
     },
     {
-      "text": "Ein Dino eilt mit Boden umher.",
+      "text": "Sie schenkt den Tieren ein Licht im Nebel.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Sie",
           "syllables": [
-            "Ein"
+            "Sie"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "schenkt",
           "syllables": [
-            "Di",
-            "no"
+            "schenkt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "den",
           "syllables": [
-            "eilt"
+            "den"
+          ]
+        },
+        {
+          "clean": "Tieren",
+          "syllables": [
+            "Tie",
+            "ren"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Licht",
+          "syllables": [
+            "Licht"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Nebel",
+          "syllables": [
+            "Ne",
+            "bel"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zusammen mit Kalle singt ein kleiner Vogel.",
+      "words": [
+        {
+          "clean": "Zusammen",
+          "syllables": [
+            "Zu",
+            "sam",
+            "men"
           ]
         },
         {
@@ -113,60 +235,36 @@
           ]
         },
         {
-          "clean": "Boden",
+          "clean": "Kalle",
           "syllables": [
-            "Bo",
-            "den"
+            "Kal",
+            "le"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "singt",
           "syllables": [
-            "um",
-            "her"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Papa ruft nach Pirat am Rad.",
-      "words": [
-        {
-          "clean": "Papa",
-          "syllables": [
-            "Pa",
-            "pa"
+            "singt"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "ein",
           "syllables": [
-            "ruft"
+            "ein"
           ]
         },
         {
-          "clean": "nach",
+          "clean": "kleiner",
           "syllables": [
-            "nach"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "Vogel",
           "syllables": [
-            "Pi",
-            "rat"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Rad",
-          "syllables": [
-            "Rad"
+            "Vo",
+            "gel"
           ]
         }
       ]

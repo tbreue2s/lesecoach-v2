@@ -2,55 +2,99 @@
   "themeId": "theme_pirate",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Känguru",
-  "title": "Abenteuer auf dem großen Schiff",
+  "disturberWord": "Nixe",
+  "title": "Die Nixe im Nebel",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Pirat streift aufmerksam auf dem großen Schiff.",
+      "text": "Dichter Nebel umhüllt das große Piratenschiff.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dichter",
           "syllables": [
-            "Ein"
+            "Dich",
+            "ter"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "Nebel",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "umhüllt",
+          "syllables": [
+            "um",
+            "hüllt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "große",
+          "syllables": [
+            "gro",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Piratenschiff",
           "syllables": [
             "Pi",
-            "rat"
+            "ra",
+            "ten",
+            "schiff"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich taucht eine fröhliche Nixe aus dem Meer auf.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "taucht",
           "syllables": [
-            "streift"
+            "taucht"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "eine",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "fröhliche",
           "syllables": [
-            "auf"
+            "fröh",
+            "li",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
           ]
         },
         {
@@ -60,28 +104,38 @@
           ]
         },
         {
-          "clean": "großen",
+          "clean": "Meer",
           "syllables": [
-            "gro",
-            "ßen"
+            "Meer"
           ]
         },
         {
-          "clean": "Schiff",
+          "clean": "auf",
           "syllables": [
-            "Schiff"
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Känguru verborgen.",
+      "text": "Sie schwimmt mit einem Lächeln voraus durch das weiße Grau.",
       "words": [
         {
-          "clean": "Unter",
+          "clean": "Sie",
           "syllables": [
-            "Un",
-            "ter"
+            "Sie"
+          ]
+        },
+        {
+          "clean": "schwimmt",
+          "syllables": [
+            "schwimmt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
           ]
         },
         {
@@ -92,85 +146,23 @@
           ]
         },
         {
-          "clean": "dichten",
+          "clean": "Lächeln",
           "syllables": [
-            "dic",
-            "hten"
+            "Lä",
+            "cheln"
           ]
         },
         {
-          "clean": "Busch",
+          "clean": "voraus",
           "syllables": [
-            "Busch"
+            "vo",
+            "raus"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "durch",
           "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Känguru",
-          "syllables": [
-            "Kän",
-            "gu",
-            "ru"
-          ]
-        },
-        {
-          "clean": "verborgen",
-          "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
+            "durch"
           ]
         },
         {
@@ -180,62 +172,69 @@
           ]
         },
         {
-          "clean": "seltsame",
+          "clean": "weiße",
           "syllables": [
-            "selt",
-            "sa",
-            "me"
+            "wei",
+            "ße"
           ]
         },
         {
-          "clean": "Ding",
+          "clean": "Grau",
           "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
+            "Grau"
           ]
         }
       ]
     },
     {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
+      "text": "So finden die tapferen Seeräuber sicher in den Hafen.",
       "words": [
         {
-          "clean": "Voller",
+          "clean": "So",
           "syllables": [
-            "Vol",
-            "ler"
+            "So"
           ]
         },
         {
-          "clean": "Stolz",
+          "clean": "finden",
           "syllables": [
-            "Stolz"
+            "fin",
+            "den"
           ]
         },
         {
-          "clean": "präsentiert",
+          "clean": "die",
           "syllables": [
-            "prä",
-            "sen",
-            "tiert"
+            "die"
           ]
         },
         {
-          "clean": "er",
+          "clean": "tapferen",
           "syllables": [
-            "er"
+            "tap",
+            "fe",
+            "ren"
+          ]
+        },
+        {
+          "clean": "Seeräuber",
+          "syllables": [
+            "See",
+            "räu",
+            "ber"
+          ]
+        },
+        {
+          "clean": "sicher",
+          "syllables": [
+            "si",
+            "cher"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
           ]
         },
         {
@@ -245,33 +244,10 @@
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "Hafen",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        },
-        {
-          "clean": "allen",
-          "syllables": [
-            "al",
-            "len"
-          ]
-        },
-        {
-          "clean": "Freunden",
-          "syllables": [
-            "Freun",
-            "den"
+            "Ha",
+            "fen"
           ]
         }
       ]

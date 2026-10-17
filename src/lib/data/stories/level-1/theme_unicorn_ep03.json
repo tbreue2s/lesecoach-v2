@@ -2,146 +2,43 @@
   "themeId": "theme_unicorn",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Gitarre",
-  "title": "Gitarre am Auto",
+  "disturberWord": "Nixe",
+  "title": "Die kleine Zaubernixe",
   "sentences": [
     {
-      "text": "Ein Gitarre steht am Auto.",
+      "text": "Das weiße Einhorn Paul wandert zum See.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Das",
           "syllables": [
-            "Ein"
+            "Das"
           ]
         },
         {
-          "clean": "Gitarre",
+          "clean": "weiße",
           "syllables": [
-            "Gi",
-            "tar",
-            "re"
+            "wei",
+            "ße"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "Einhorn",
           "syllables": [
-            "steht"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "am",
+          "clean": "Paul",
           "syllables": [
-            "am"
+            "Paul"
           ]
         },
         {
-          "clean": "Auto",
+          "clean": "wandert",
           "syllables": [
-            "Au",
-            "to"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Tor ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Ufer eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Ufer",
-          "syllables": [
-            "U",
-            "fer"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Maler.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
+            "wan",
+            "dert"
           ]
         },
         {
@@ -151,10 +48,216 @@
           ]
         },
         {
-          "clean": "Maler",
+          "clean": "See",
           "syllables": [
-            "Ma",
-            "ler"
+            "See"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Eine kleine Nixe taucht an das Ufer.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "kleine",
+          "syllables": [
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "taucht",
+          "syllables": [
+            "taucht"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ufer",
+          "syllables": [
+            "U",
+            "fer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Paul reicht ihr freundlich eine bunte Blume.",
+      "words": [
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "reicht",
+          "syllables": [
+            "reicht"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "freundlich",
+          "syllables": [
+            "freund",
+            "lich"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Blume",
+          "syllables": [
+            "Blu",
+            "me"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dafür schenkt die Nixe eine schimmernde Perle.",
+      "words": [
+        {
+          "clean": "Dafür",
+          "syllables": [
+            "Da",
+            "für"
+          ]
+        },
+        {
+          "clean": "schenkt",
+          "syllables": [
+            "schenkt"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "schimmernde",
+          "syllables": [
+            "schim",
+            "mer",
+            "nde"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zufrieden betrachtet Paul seinen Schatz im Gras.",
+      "words": [
+        {
+          "clean": "Zufrieden",
+          "syllables": [
+            "Zuf",
+            "rie",
+            "den"
+          ]
+        },
+        {
+          "clean": "betrachtet",
+          "syllables": [
+            "be",
+            "trach",
+            "tet"
+          ]
+        },
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "seinen",
+          "syllables": [
+            "sei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Schatz",
+          "syllables": [
+            "Schatz"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
           ]
         }
       ]

@@ -2,169 +2,172 @@
   "themeId": "theme_space",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Ein Fund mitten im Weltall",
+  "disturberWord": "Sternenwal",
+  "title": "Besuch am Raketenfenster",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt mitten im Weltall.",
+      "text": "Die kleine Rakete saust.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Die",
           "syllables": [
-            "Ein"
+            "Die"
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "kleine",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "Rakete",
           "syllables": [
-            "Tag"
+            "Ra",
+            "ke",
+            "te"
           ]
         },
         {
-          "clean": "beginnt",
+          "clean": "saust",
           "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "mitten",
-          "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Weltall",
-          "syllables": [
-            "Wel",
-            "tall"
+            "saust"
           ]
         }
       ]
     },
     {
-      "text": "Der Pilot läuft über die Wiese.",
+      "text": "Sie fliegt an leuchtenden Sternen vorbei.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sie",
           "syllables": [
-            "Der"
+            "Sie"
           ]
         },
         {
-          "clean": "Pilot",
+          "clean": "fliegt",
           "syllables": [
-            "Pi",
-            "lot"
+            "fliegt"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "an",
           "syllables": [
-            "läuft"
+            "an"
           ]
         },
         {
-          "clean": "über",
+          "clean": "leuchtenden",
           "syllables": [
-            "ü",
-            "ber"
+            "leuch",
+            "ten",
+            "den"
           ]
         },
         {
-          "clean": "die",
+          "clean": "Sternen",
           "syllables": [
-            "die"
+            "Ster",
+            "nen"
           ]
         },
         {
-          "clean": "Wiese",
+          "clean": "vorbei",
           "syllables": [
-            "Wie",
-            "se"
+            "vor",
+            "bei"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Regenschirm auf dem Pfad auf.",
+      "text": "Mio blickt nach draußen.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Mio",
           "syllables": [
-            "Ganz"
+            "Mi",
+            "o"
+          ]
+        },
+        {
+          "clean": "blickt",
+          "syllables": [
+            "blickt"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "draußen",
+          "syllables": [
+            "drau",
+            "ßen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da gleitet plötzlich ein sanfter Sternenwal heran.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "gleitet",
+          "syllables": [
+            "glei",
+            "tet"
           ]
         },
         {
           "clean": "plötzlich",
           "syllables": [
-            "plöt",
-            "zlich"
+            "plötz",
+            "lich"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "ein",
           "syllables": [
-            "taucht"
+            "ein"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "sanfter",
           "syllables": [
-            "Ein"
+            "san",
+            "fter"
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "Sternenwal",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
+            "Ster",
+            "nen",
+            "wal"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "heran",
           "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
+            "he",
+            "ran"
           ]
         }
       ]
     },
     {
-      "text": "Er staunt über den Fund.",
+      "text": "Er zwinkert Mio zu.",
       "words": [
         {
           "clean": "Er",
@@ -173,81 +176,74 @@
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "zwinkert",
           "syllables": [
-            "staunt"
+            "zwin",
+            "kert"
           ]
         },
         {
-          "clean": "über",
+          "clean": "Mio",
           "syllables": [
-            "ü",
-            "ber"
+            "Mi",
+            "o"
           ]
         },
         {
-          "clean": "den",
+          "clean": "zu",
           "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
+            "zu"
           ]
         }
       ]
     },
     {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
+      "text": "Dann nascht er vergnügt an einer Sternschnuppe.",
       "words": [
         {
-          "clean": "Lachend",
+          "clean": "Dann",
           "syllables": [
-            "La",
-            "chend"
+            "Dann"
           ]
         },
         {
-          "clean": "nehmen",
+          "clean": "nascht",
           "syllables": [
-            "neh",
-            "men"
+            "nascht"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "er",
           "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "neue",
-          "syllables": [
-            "neu",
-            "e"
-          ]
-        },
-        {
-          "clean": "Abenteuer",
-          "syllables": [
-            "A",
-            "ben",
-            "teu",
             "er"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
           ]
         },
         {
           "clean": "an",
           "syllables": [
             "an"
+          ]
+        },
+        {
+          "clean": "einer",
+          "syllables": [
+            "ei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Sternschnuppe",
+          "syllables": [
+            "Ster",
+            "nschnup",
+            "pe"
           ]
         }
       ]

@@ -2,159 +2,228 @@
   "themeId": "theme_pirate",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Keks",
-  "title": "Das bunte Keks",
+  "disturberWord": "Nixe",
+  "title": "Das rote Boot",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Dort fährt mutig ein rotes Boot.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dort",
           "syllables": [
-            "Ein"
+            "Dort"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "fährt",
           "syllables": [
-            "klei",
-            "ner"
+            "fährt"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "mutig",
           "syllables": [
-            "Hund"
+            "mu",
+            "tig"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "ein",
           "syllables": [
-            "geht"
+            "ein"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "rotes",
           "syllables": [
-            "um",
-            "her"
+            "ro",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt einen Keks.",
+      "text": "Bald hüllt grauer Nebel alles dunkel ein.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Bald",
           "syllables": [
-            "Mit",
-            "ten"
+            "Bald"
           ]
         },
         {
-          "clean": "im",
+          "clean": "hüllt",
           "syllables": [
-            "im"
+            "hüllt"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "grauer",
           "syllables": [
-            "Gras"
+            "grau",
+            "er"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "Nebel",
           "syllables": [
-            "liegt"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "alles",
           "syllables": [
-            "ei",
+            "al",
+            "les"
+          ]
+        },
+        {
+          "clean": "dunkel",
+          "syllables": [
+            "dun",
+            "kel"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da taucht lächelnd die Nixe auf.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "taucht",
+          "syllables": [
+            "taucht"
+          ]
+        },
+        {
+          "clean": "lächelnd",
+          "syllables": [
+            "lä",
+            "chelnd"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie zeigt ihnen nun den Pfad.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "zeigt",
+          "syllables": [
+            "zeigt"
+          ]
+        },
+        {
+          "clean": "ihnen",
+          "syllables": [
+            "ih",
             "nen"
           ]
         },
         {
-          "clean": "Keks",
+          "clean": "nun",
           "syllables": [
-            "Keks"
+            "nun"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Froh fahren alle in den Hafen.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Froh",
           "syllables": [
-            "Das"
+            "Froh"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "fahren",
           "syllables": [
-            "lie",
-            "be"
+            "fah",
+            "ren"
           ]
         },
         {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "sehr",
-          "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
+          "clean": "alle",
           "syllables": [
             "al",
-            "te"
+            "le"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "in",
           "syllables": [
-            "Baum"
+            "in"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "den",
           "syllables": [
-            "spen",
-            "det"
+            "den"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "Hafen",
           "syllables": [
-            "Schat",
-            "ten"
+            "Ha",
+            "fen"
           ]
         }
       ]

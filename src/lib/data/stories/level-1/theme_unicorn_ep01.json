@@ -2,164 +2,262 @@
   "themeId": "theme_unicorn",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Kaktus",
-  "title": "Papa und der Kaktus",
+  "disturberWord": "Torte",
+  "title": "Die süße Überraschung",
   "sentences": [
     {
-      "text": "Ein Papa geht zum Tor.",
+      "text": "Das kleine Einhorn Lilly trabt durch das Tal.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Das",
           "syllables": [
-            "Ein"
+            "Das"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "kleine",
           "syllables": [
-            "Pa",
-            "pa"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "Einhorn",
           "syllables": [
-            "geht"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "Lilly",
           "syllables": [
-            "zum"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "trabt",
           "syllables": [
-            "Tor"
+            "trabt"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
           ]
         }
       ]
     },
     {
-      "text": "Der Papa sieht einen Kaktus.",
+      "text": "Am Himmel strahlt ein bunter, weiter Bogen.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Am",
           "syllables": [
-            "Der"
+            "Am"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "Himmel",
           "syllables": [
-            "Pa",
-            "pa"
+            "Him",
+            "mel"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "strahlt",
           "syllables": [
-            "sieht"
+            "strahlt"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "bunter",
+          "syllables": [
+            "bun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "weiter",
+          "syllables": [
+            "wei",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Bogen",
+          "syllables": [
+            "Bo",
+            "gen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich steht ein Tischchen im weichen Moos.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Tischchen",
+          "syllables": [
+            "Tisch",
+            "chen"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Darauf glitzert eine herrliche, süße Torte.",
+      "words": [
+        {
+          "clean": "Darauf",
+          "syllables": [
+            "Da",
+            "rauf"
+          ]
+        },
+        {
+          "clean": "glitzert",
+          "syllables": [
+            "glit",
+            "zert"
+          ]
+        },
+        {
+          "clean": "eine",
           "syllables": [
             "ei",
-            "nen"
+            "ne"
           ]
         },
         {
-          "clean": "Kaktus",
+          "clean": "herrliche",
           "syllables": [
-            "Kak",
-            "tus"
+            "her",
+            "rli",
+            "che"
+          ]
+        },
+        {
+          "clean": "süße",
+          "syllables": [
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
           ]
         }
       ]
     },
     {
-      "text": "Der Papa schaut den Kaktus an.",
+      "text": "Zufrieden leckt sich Lilly über die Nase.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Zufrieden",
           "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Papa",
-          "syllables": [
-            "Pa",
-            "pa"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
+            "Zuf",
+            "rie",
             "den"
           ]
         },
         {
-          "clean": "Kaktus",
+          "clean": "leckt",
           "syllables": [
-            "Kak",
-            "tus"
+            "leckt"
           ]
         },
         {
-          "clean": "an",
+          "clean": "sich",
           "syllables": [
-            "an"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Froh ruft der Papa am Tor.",
-      "words": [
-        {
-          "clean": "Froh",
-          "syllables": [
-            "Froh"
+            "sich"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Lilly",
           "syllables": [
-            "ruft"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "der",
+          "clean": "über",
           "syllables": [
-            "der"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "die",
           "syllables": [
-            "Pa",
-            "pa"
+            "die"
           ]
         },
         {
-          "clean": "am",
+          "clean": "Nase",
           "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "Na",
+            "se"
           ]
         }
       ]

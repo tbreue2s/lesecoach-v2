@@ -2,78 +2,72 @@
   "themeId": "theme_superhero",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Brille",
-  "title": "Das lustige Brille",
+  "disturberWord": "Eiswagen",
+  "title": "Das Fest im Park",
   "sentences": [
     {
-      "text": "Der rote Brille liegt im Gras.",
+      "text": "Sam hört plötzlich lauten Lärm.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sam",
           "syllables": [
-            "Der"
+            "Sam"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "hört",
           "syllables": [
-            "ro",
-            "te"
+            "hört"
           ]
         },
         {
-          "clean": "Brille",
+          "clean": "plötzlich",
           "syllables": [
-            "Bril",
-            "le"
+            "plötz",
+            "lich"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "lauten",
           "syllables": [
-            "liegt"
+            "lau",
+            "ten"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Lärm",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
+            "Lärm"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Er saust eilig durch den Park.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Er",
           "syllables": [
-            "Ein"
+            "Er"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "saust",
           "syllables": [
-            "klei",
-            "ner"
+            "saust"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "eilig",
           "syllables": [
-            "Hund"
+            "ei",
+            "lig"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "durch",
           "syllables": [
-            "sieht"
+            "durch"
           ]
         },
         {
@@ -83,84 +77,122 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Park",
           "syllables": [
-            "Fund"
+            "Park"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Dort hält ein bunter Wagen.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Dort",
           "syllables": [
-            "Das"
+            "Dort"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "hält",
           "syllables": [
-            "lie",
-            "be"
+            "hält"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "ein",
           "syllables": [
-            "Tier"
+            "ein"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "bunter",
           "syllables": [
-            "bellt"
+            "bun",
+            "ter"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "Wagen",
           "syllables": [
-            "lei",
-            "se"
+            "Wa",
+            "gen"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Er verteilt dort kühle Limo.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Er",
           "syllables": [
-            "Der"
+            "Er"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "verteilt",
           "syllables": [
-            "al",
+            "ver",
+            "teilt"
+          ]
+        },
+        {
+          "clean": "dort",
+          "syllables": [
+            "dort"
+          ]
+        },
+        {
+          "clean": "kühle",
+          "syllables": [
+            "küh",
+            "le"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sam probiert nun feine Torte.",
+      "words": [
+        {
+          "clean": "Sam",
+          "syllables": [
+            "Sam"
+          ]
+        },
+        {
+          "clean": "probiert",
+          "syllables": [
+            "pro",
+            "biert"
+          ]
+        },
+        {
+          "clean": "nun",
+          "syllables": [
+            "nun"
+          ]
+        },
+        {
+          "clean": "feine",
+          "syllables": [
+            "fei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
             "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
           ]
         }
       ]

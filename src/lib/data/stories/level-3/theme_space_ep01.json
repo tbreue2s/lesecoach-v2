@@ -2,164 +2,68 @@
   "themeId": "theme_space",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Dino",
-  "title": "Pilot und der Dino",
+  "disturberWord": "Sternenwal",
+  "title": "Besuch im Sternenmeer",
   "sentences": [
     {
-      "text": "Der Pilot läuft schnell zum Tor.",
+      "text": "Leo blickt ins All.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Leo",
           "syllables": [
-            "Der"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "Pilot",
+          "clean": "blickt",
           "syllables": [
-            "Pi",
-            "lot"
+            "blickt"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "ins",
           "syllables": [
-            "läuft"
+            "ins"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "All",
           "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "All"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich einen Dino.",
+      "text": "Viele bunte Sterne funkeln vor der Rakete.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Viele",
           "syllables": [
-            "Da"
-          ]
-        },
-        {
-          "clean": "entdeckt",
-          "syllables": [
-            "en",
-            "tdeckt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Dino",
-          "syllables": [
-            "Di",
-            "no"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier schaut genau hin.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam jubeln alle vor Freude.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
-          ]
-        },
-        {
-          "clean": "jubeln",
-          "syllables": [
-            "ju",
-            "beln"
-          ]
-        },
-        {
-          "clean": "alle",
-          "syllables": [
-            "al",
+            "Vie",
             "le"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Sterne",
+          "syllables": [
+            "Ster",
+            "ne"
+          ]
+        },
+        {
+          "clean": "funkeln",
+          "syllables": [
+            "fun",
+            "keln"
           ]
         },
         {
@@ -169,10 +73,182 @@
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "der",
           "syllables": [
-            "Freu",
-            "de"
+            "der"
+          ]
+        },
+        {
+          "clean": "Rakete",
+          "syllables": [
+            "Ra",
+            "ke",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Was schwimmt denn da?",
+      "words": [
+        {
+          "clean": "Was",
+          "syllables": [
+            "Was"
+          ]
+        },
+        {
+          "clean": "schwimmt",
+          "syllables": [
+            "schwimmt"
+          ]
+        },
+        {
+          "clean": "denn",
+          "syllables": [
+            "denn"
+          ]
+        },
+        {
+          "clean": "da",
+          "syllables": [
+            "da"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein leuchtender Sternenwal zieht durch das Sternenmeer.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "leuchtender",
+          "syllables": [
+            "leuch",
+            "ten",
+            "der"
+          ]
+        },
+        {
+          "clean": "Sternenwal",
+          "syllables": [
+            "Ster",
+            "nen",
+            "wal"
+          ]
+        },
+        {
+          "clean": "zieht",
+          "syllables": [
+            "zieht"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Sternenmeer",
+          "syllables": [
+            "Ster",
+            "nen",
+            "meer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Riese blinzelt lieb.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Riese",
+          "syllables": [
+            "Rie",
+            "se"
+          ]
+        },
+        {
+          "clean": "blinzelt",
+          "syllables": [
+            "blin",
+            "zelt"
+          ]
+        },
+        {
+          "clean": "lieb",
+          "syllables": [
+            "lieb"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leo schmunzelt und winkt im Schlafanzug zurück.",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "schmunzelt",
+          "syllables": [
+            "schmun",
+            "zelt"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "winkt",
+          "syllables": [
+            "winkt"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Schlafanzug",
+          "syllables": [
+            "Schla",
+            "fan",
+            "zug"
+          ]
+        },
+        {
+          "clean": "zurück",
+          "syllables": [
+            "zu",
+            "rück"
           ]
         }
       ]

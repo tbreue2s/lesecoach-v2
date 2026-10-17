@@ -2,11 +2,63 @@
   "themeId": "theme_wizard",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Zauberhut",
-  "title": "Zauberhut am Lied",
+  "disturberWord": "Riesentorte",
+  "title": "Die süße Zauberei",
   "sentences": [
     {
-      "text": "Ein Zauberhut steht am Lied.",
+      "text": "Lilly spricht einen Zauberspruch mit großem Mut.",
+      "words": [
+        {
+          "clean": "Lilly",
+          "syllables": [
+            "Lil",
+            "ly"
+          ]
+        },
+        {
+          "clean": "spricht",
+          "syllables": [
+            "spricht"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Zauberspruch",
+          "syllables": [
+            "Zau",
+            "ber",
+            "spruch"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "großem",
+          "syllables": [
+            "gro",
+            "ßem"
+          ]
+        },
+        {
+          "clean": "Mut",
+          "syllables": [
+            "Mut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein grauer Stein liegt neben dem Glas.",
       "words": [
         {
           "clean": "Ein",
@@ -15,35 +67,101 @@
           ]
         },
         {
-          "clean": "Zauberhut",
+          "clean": "grauer",
           "syllables": [
-            "Zau",
-            "ber",
-            "hut"
+            "grau",
+            "er"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "Stein",
           "syllables": [
-            "steht"
+            "Stein"
           ]
         },
         {
-          "clean": "am",
+          "clean": "liegt",
           "syllables": [
-            "am"
+            "liegt"
           ]
         },
         {
-          "clean": "Lied",
+          "clean": "neben",
           "syllables": [
-            "Lied"
+            "ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Glas",
+          "syllables": [
+            "Glas"
           ]
         }
       ]
     },
     {
-      "text": "Der Tafel ruft laut im Wind.",
+      "text": "Das verdrehte Wort erschafft eine duftende Torte.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "verdrehte",
+          "syllables": [
+            "ver",
+            "dreh",
+            "te"
+          ]
+        },
+        {
+          "clean": "Wort",
+          "syllables": [
+            "Wort"
+          ]
+        },
+        {
+          "clean": "erschafft",
+          "syllables": [
+            "er",
+            "schafft"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "duftende",
+          "syllables": [
+            "duf",
+            "ten",
+            "de"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der süße Beerenduft kitzelt ihre kleine Nase.",
       "words": [
         {
           "clean": "Der",
@@ -52,109 +170,99 @@
           ]
         },
         {
-          "clean": "Tafel",
+          "clean": "süße",
           "syllables": [
-            "Ta",
-            "fel"
+            "sü",
+            "ße"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Beerenduft",
           "syllables": [
-            "ruft"
+            "Bee",
+            "ren",
+            "duft"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "kitzelt",
           "syllables": [
-            "laut"
+            "kit",
+            "zelt"
           ]
         },
         {
-          "clean": "im",
+          "clean": "ihre",
           "syllables": [
-            "im"
+            "ih",
+            "re"
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "kleine",
           "syllables": [
-            "Wind"
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Ein Faden eilt schnell herbei.",
+      "text": "Dazu trinkt das fröhliche Mädchen frische Limo.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dazu",
           "syllables": [
-            "Ein"
+            "Da",
+            "zu"
           ]
         },
         {
-          "clean": "Faden",
+          "clean": "trinkt",
           "syllables": [
-            "Fa",
-            "den"
+            "trinkt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "das",
           "syllables": [
-            "eilt"
+            "das"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "fröhliche",
           "syllables": [
-            "schnell"
+            "fröh",
+            "li",
+            "che"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Mädchen",
           "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Boden.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
+            "Mäd",
+            "chen"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "frische",
           "syllables": [
-            "lau",
-            "fen"
+            "fri",
+            "sche"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "Limo",
           "syllables": [
-            "froh"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Boden",
-          "syllables": [
-            "Bo",
-            "den"
+            "Li",
+            "mo"
           ]
         }
       ]

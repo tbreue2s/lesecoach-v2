@@ -2,45 +2,54 @@
   "themeId": "theme_wizard",
   "level": 6,
   "episode": 1,
-  "disturberWord": "Ufo",
-  "title": "Kater und das Ufo",
+  "disturberWord": "Sprechhut",
+  "title": "Der kichernde Zauberhut",
   "sentences": [
     {
-      "text": "Ein mutiger Kater wandert fröhlich in der Zauberburg.",
+      "text": "Der junge Zauberschüler Felix rührte vorsichtig in einem dicken Kessel aus schwerem Kupfer.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Der",
           "syllables": [
-            "Ein"
+            "Der"
           ]
         },
         {
-          "clean": "mutiger",
+          "clean": "junge",
           "syllables": [
-            "mu",
-            "ti",
-            "ger"
+            "jun",
+            "ge"
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "Zauberschüler",
           "syllables": [
-            "Ka",
-            "ter"
+            "Zau",
+            "ber",
+            "schü",
+            "ler"
           ]
         },
         {
-          "clean": "wandert",
+          "clean": "Felix",
           "syllables": [
-            "wan",
-            "dert"
+            "Fe",
+            "lix"
           ]
         },
         {
-          "clean": "fröhlich",
+          "clean": "rührte",
           "syllables": [
-            "fröh",
-            "lich"
+            "rüh",
+            "rte"
+          ]
+        },
+        {
+          "clean": "vorsichtig",
+          "syllables": [
+            "vor",
+            "sich",
+            "tig"
           ]
         },
         {
@@ -50,42 +59,64 @@
           ]
         },
         {
-          "clean": "der",
+          "clean": "einem",
           "syllables": [
-            "der"
+            "ei",
+            "nem"
           ]
         },
         {
-          "clean": "Zauberburg",
+          "clean": "dicken",
           "syllables": [
-            "Zau",
-            "ber",
-            "burg"
+            "di",
+            "cken"
+          ]
+        },
+        {
+          "clean": "Kessel",
+          "syllables": [
+            "Kes",
+            "sel"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "schwerem",
+          "syllables": [
+            "schwe",
+            "rem"
+          ]
+        },
+        {
+          "clean": "Kupfer",
+          "syllables": [
+            "Kup",
+            "fer"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich entdeckt er ein Ufo am Wegesrand.",
+      "text": "Darin blubberte ein himmelblauer Trank, der wie lauter kleine Sterne im Mondlicht funkelte.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Darin",
           "syllables": [
-            "Plöt",
-            "zlich"
+            "Da",
+            "rin"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "blubberte",
           "syllables": [
-            "en",
-            "tdeckt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
+            "blub",
+            "ber",
+            "te"
           ]
         },
         {
@@ -95,110 +126,161 @@
           ]
         },
         {
-          "clean": "Ufo",
+          "clean": "himmelblauer",
           "syllables": [
-            "U",
-            "fo"
+            "him",
+            "mel",
+            "blau",
+            "er"
           ]
         },
         {
-          "clean": "am",
+          "clean": "Trank",
           "syllables": [
-            "am"
+            "Trank"
           ]
         },
         {
-          "clean": "Wegesrand",
+          "clean": "der",
           "syllables": [
-            "We",
-            "ges",
-            "rand"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Neugierig tippt das Tier auf den Gegenstand.",
-      "words": [
-        {
-          "clean": "Neugierig",
-          "syllables": [
-            "Neu",
-            "gie",
-            "rig"
+            "der"
           ]
         },
         {
-          "clean": "tippt",
+          "clean": "wie",
           "syllables": [
-            "tippt"
+            "wie"
           ]
         },
         {
-          "clean": "das",
+          "clean": "lauter",
           "syllables": [
-            "das"
+            "lau",
+            "ter"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "kleine",
           "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Gegenstand",
-          "syllables": [
-            "Ge",
-            "gen",
-            "stand"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Wunderbare Töne erklingen sanft in der Luft.",
-      "words": [
-        {
-          "clean": "Wunderbare",
-          "syllables": [
-            "Wun",
-            "der",
-            "ba",
-            "re"
-          ]
-        },
-        {
-          "clean": "Töne",
-          "syllables": [
-            "Tö",
+            "klei",
             "ne"
           ]
         },
         {
-          "clean": "erklingen",
+          "clean": "Sterne",
           "syllables": [
-            "erk",
-            "lin",
-            "gen"
+            "Ster",
+            "ne"
           ]
         },
         {
-          "clean": "sanft",
+          "clean": "im",
           "syllables": [
-            "sanft"
+            "im"
+          ]
+        },
+        {
+          "clean": "Mondlicht",
+          "syllables": [
+            "Mond",
+            "licht"
+          ]
+        },
+        {
+          "clean": "funkelte",
+          "syllables": [
+            "fun",
+            "kel",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mit seinem Zauberstab aus hellem Weidenholz zeichnete er geschwind einen goldenen Kreis in die Luft.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
+          ]
+        },
+        {
+          "clean": "seinem",
+          "syllables": [
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "Zauberstab",
+          "syllables": [
+            "Zau",
+            "ber",
+            "stab"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "hellem",
+          "syllables": [
+            "hel",
+            "lem"
+          ]
+        },
+        {
+          "clean": "Weidenholz",
+          "syllables": [
+            "Wei",
+            "den",
+            "holz"
+          ]
+        },
+        {
+          "clean": "zeichnete",
+          "syllables": [
+            "zeich",
+            "ne",
+            "te"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "geschwind",
+          "syllables": [
+            "ge",
+            "schwind"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "goldenen",
+          "syllables": [
+            "gol",
+            "de",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Kreis",
+          "syllables": [
+            "Kreis"
           ]
         },
         {
@@ -208,9 +290,9 @@
           ]
         },
         {
-          "clean": "der",
+          "clean": "die",
           "syllables": [
-            "der"
+            "die"
           ]
         },
         {
@@ -222,21 +304,812 @@
       ]
     },
     {
-      "text": "Begeistert tanzen alle Freunde im Kreis herum.",
+      "text": "Felix murmelte die Zauberworte, die er gestern mühsam aus dem uralten Zauberbuch gelernt hatte.",
       "words": [
         {
-          "clean": "Begeistert",
+          "clean": "Felix",
           "syllables": [
-            "Be",
-            "geis",
-            "tert"
+            "Fe",
+            "lix"
           ]
         },
         {
-          "clean": "tanzen",
+          "clean": "murmelte",
           "syllables": [
-            "tan",
+            "mur",
+            "mel",
+            "te"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Zauberworte",
+          "syllables": [
+            "Zau",
+            "ber",
+            "wor",
+            "te"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "gestern",
+          "syllables": [
+            "ge",
+            "stern"
+          ]
+        },
+        {
+          "clean": "mühsam",
+          "syllables": [
+            "müh",
+            "sam"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "uralten",
+          "syllables": [
+            "u",
+            "ral",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Zauberbuch",
+          "syllables": [
+            "Zau",
+            "ber",
+            "buch"
+          ]
+        },
+        {
+          "clean": "gelernt",
+          "syllables": [
+            "ge",
+            "lernt"
+          ]
+        },
+        {
+          "clean": "hatte",
+          "syllables": [
+            "hat",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Aber statt leiser Musik stieg plötzlich eine dichte Wolke aus zartem Rosenduft auf.",
+      "words": [
+        {
+          "clean": "Aber",
+          "syllables": [
+            "A",
+            "ber"
+          ]
+        },
+        {
+          "clean": "statt",
+          "syllables": [
+            "statt"
+          ]
+        },
+        {
+          "clean": "leiser",
+          "syllables": [
+            "lei",
+            "ser"
+          ]
+        },
+        {
+          "clean": "Musik",
+          "syllables": [
+            "Mu",
+            "sik"
+          ]
+        },
+        {
+          "clean": "stieg",
+          "syllables": [
+            "stieg"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "dichte",
+          "syllables": [
+            "dich",
+            "te"
+          ]
+        },
+        {
+          "clean": "Wolke",
+          "syllables": [
+            "Wol",
+            "ke"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "zartem",
+          "syllables": [
+            "zar",
+            "tem"
+          ]
+        },
+        {
+          "clean": "Rosenduft",
+          "syllables": [
+            "Ro",
+            "sen",
+            "duft"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mitten auf dem langen Eichentisch stand ein verstaubter, spitzer Zauberhut mit einer großen Schnalle.",
+      "words": [
+        {
+          "clean": "Mitten",
+          "syllables": [
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "langen",
+          "syllables": [
+            "lan",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Eichentisch",
+          "syllables": [
+            "Ei",
+            "chen",
+            "tisch"
+          ]
+        },
+        {
+          "clean": "stand",
+          "syllables": [
+            "stand"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "verstaubter",
+          "syllables": [
+            "ver",
+            "staub",
+            "ter"
+          ]
+        },
+        {
+          "clean": "spitzer",
+          "syllables": [
+            "spit",
+            "zer"
+          ]
+        },
+        {
+          "clean": "Zauberhut",
+          "syllables": [
+            "Zau",
+            "ber",
+            "hut"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "einer",
+          "syllables": [
+            "ei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "großen",
+          "syllables": [
+            "gro",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Schnalle",
+          "syllables": [
+            "Schnal",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Auf einmal begann die krempige Spitze des Hutes leise und vergnügt zu zittern.",
+      "words": [
+        {
+          "clean": "Auf",
+          "syllables": [
+            "Auf"
+          ]
+        },
+        {
+          "clean": "einmal",
+          "syllables": [
+            "ein",
+            "mal"
+          ]
+        },
+        {
+          "clean": "begann",
+          "syllables": [
+            "be",
+            "gann"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "krempige",
+          "syllables": [
+            "krem",
+            "pi",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Spitze",
+          "syllables": [
+            "Spit",
+            "ze"
+          ]
+        },
+        {
+          "clean": "des",
+          "syllables": [
+            "des"
+          ]
+        },
+        {
+          "clean": "Hutes",
+          "syllables": [
+            "Hu",
+            "tes"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        },
+        {
+          "clean": "zittern",
+          "syllables": [
+            "zit",
+            "tern"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein glucksendes Kichern drang aus dem dicken Samtstoff und hallte durch den ganzen Raum.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "glucksendes",
+          "syllables": [
+            "gluck",
+            "sen",
+            "des"
+          ]
+        },
+        {
+          "clean": "Kichern",
+          "syllables": [
+            "Ki",
+            "chern"
+          ]
+        },
+        {
+          "clean": "drang",
+          "syllables": [
+            "drang"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "dicken",
+          "syllables": [
+            "di",
+            "cken"
+          ]
+        },
+        {
+          "clean": "Samtstoff",
+          "syllables": [
+            "Sam",
+            "tstoff"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "hallte",
+          "syllables": [
+            "hal",
+            "lte"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "ganzen",
+          "syllables": [
+            "gan",
             "zen"
+          ]
+        },
+        {
+          "clean": "Raum",
+          "syllables": [
+            "Raum"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Es war der sagenhafte Sprechhut, der nach hundert Jahren endlich aus seinem langen Schlaf erwacht war.",
+      "words": [
+        {
+          "clean": "Es",
+          "syllables": [
+            "Es"
+          ]
+        },
+        {
+          "clean": "war",
+          "syllables": [
+            "war"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "sagenhafte",
+          "syllables": [
+            "sa",
+            "gen",
+            "haf",
+            "te"
+          ]
+        },
+        {
+          "clean": "Sprechhut",
+          "syllables": [
+            "Sprech",
+            "hut"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "hundert",
+          "syllables": [
+            "hun",
+            "dert"
+          ]
+        },
+        {
+          "clean": "Jahren",
+          "syllables": [
+            "Jah",
+            "ren"
+          ]
+        },
+        {
+          "clean": "endlich",
+          "syllables": [
+            "end",
+            "lich"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "seinem",
+          "syllables": [
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "langen",
+          "syllables": [
+            "lan",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Schlaf",
+          "syllables": [
+            "Schlaf"
+          ]
+        },
+        {
+          "clean": "erwacht",
+          "syllables": [
+            "er",
+            "wacht"
+          ]
+        },
+        {
+          "clean": "war",
+          "syllables": [
+            "war"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mit einem beherzten Satz sprang die Kopfbedeckung vom Tisch und hüpfte munter über die kalten Steinplatten.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "beherzten",
+          "syllables": [
+            "be",
+            "her",
+            "zten"
+          ]
+        },
+        {
+          "clean": "Satz",
+          "syllables": [
+            "Satz"
+          ]
+        },
+        {
+          "clean": "sprang",
+          "syllables": [
+            "sprang"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Kopfbedeckung",
+          "syllables": [
+            "Kop",
+            "fbe",
+            "de",
+            "ckung"
+          ]
+        },
+        {
+          "clean": "vom",
+          "syllables": [
+            "vom"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "hüpfte",
+          "syllables": [
+            "hüp",
+            "fte"
+          ]
+        },
+        {
+          "clean": "munter",
+          "syllables": [
+            "mun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "kalten",
+          "syllables": [
+            "kal",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Steinplatten",
+          "syllables": [
+            "Stein",
+            "plat",
+            "ten"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der kecke Hut sauste im Zickzack durch den großen Saal und rief lustige Reime in alle Ecken.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "kecke",
+          "syllables": [
+            "ke",
+            "cke"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        },
+        {
+          "clean": "sauste",
+          "syllables": [
+            "saus",
+            "te"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Zickzack",
+          "syllables": [
+            "Zick",
+            "zack"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "großen",
+          "syllables": [
+            "gro",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Saal",
+          "syllables": [
+            "Saal"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "rief",
+          "syllables": [
+            "rief"
+          ]
+        },
+        {
+          "clean": "lustige",
+          "syllables": [
+            "lus",
+            "ti",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Reime",
+          "syllables": [
+            "Rei",
+            "me"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
           ]
         },
         {
@@ -247,29 +1120,305 @@
           ]
         },
         {
-          "clean": "Freunde",
+          "clean": "Ecken",
           "syllables": [
-            "Freun",
-            "de"
+            "E",
+            "cken"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Felix staunte mit weiten Augen über diesen ungewollten Zaubertrick und musste laut auflachen.",
+      "words": [
+        {
+          "clean": "Felix",
+          "syllables": [
+            "Fe",
+            "lix"
           ]
         },
         {
-          "clean": "im",
+          "clean": "staunte",
           "syllables": [
-            "im"
+            "staun",
+            "te"
           ]
         },
         {
-          "clean": "Kreis",
+          "clean": "mit",
           "syllables": [
-            "Kreis"
+            "mit"
           ]
         },
         {
-          "clean": "herum",
+          "clean": "weiten",
           "syllables": [
-            "he",
-            "rum"
+            "wei",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Augen",
+          "syllables": [
+            "Au",
+            "gen"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "diesen",
+          "syllables": [
+            "die",
+            "sen"
+          ]
+        },
+        {
+          "clean": "ungewollten",
+          "syllables": [
+            "un",
+            "ge",
+            "wol",
+            "lten"
+          ]
+        },
+        {
+          "clean": "Zaubertrick",
+          "syllables": [
+            "Zau",
+            "bert",
+            "rick"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "musste",
+          "syllables": [
+            "mus",
+            "ste"
+          ]
+        },
+        {
+          "clean": "laut",
+          "syllables": [
+            "laut"
+          ]
+        },
+        {
+          "clean": "auflachen",
+          "syllables": [
+            "auf",
+            "la",
+            "chen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schließlich landete der freche Geselle zielsicher und sanft auf dem Kopf von Kater Murr.",
+      "words": [
+        {
+          "clean": "Schließlich",
+          "syllables": [
+            "Schließ",
+            "lich"
+          ]
+        },
+        {
+          "clean": "landete",
+          "syllables": [
+            "lan",
+            "de",
+            "te"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "freche",
+          "syllables": [
+            "fre",
+            "che"
+          ]
+        },
+        {
+          "clean": "Geselle",
+          "syllables": [
+            "Ge",
+            "sel",
+            "le"
+          ]
+        },
+        {
+          "clean": "zielsicher",
+          "syllables": [
+            "ziel",
+            "si",
+            "cher"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Kopf",
+          "syllables": [
+            "Kopf"
+          ]
+        },
+        {
+          "clean": "von",
+          "syllables": [
+            "von"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Murr",
+          "syllables": [
+            "Murr"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Kater schnurrte zufrieden, während der Hut nun leise Schlaflieder für alle Zauberer sang.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "schnurrte",
+          "syllables": [
+            "schnur",
+            "rte"
+          ]
+        },
+        {
+          "clean": "zufrieden",
+          "syllables": [
+            "zuf",
+            "rie",
+            "den"
+          ]
+        },
+        {
+          "clean": "während",
+          "syllables": [
+            "wäh",
+            "rend"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        },
+        {
+          "clean": "nun",
+          "syllables": [
+            "nun"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "Schlaflieder",
+          "syllables": [
+            "Schlaf",
+            "lie",
+            "der"
+          ]
+        },
+        {
+          "clean": "für",
+          "syllables": [
+            "für"
+          ]
+        },
+        {
+          "clean": "alle",
+          "syllables": [
+            "al",
+            "le"
+          ]
+        },
+        {
+          "clean": "Zauberer",
+          "syllables": [
+            "Zau",
+            "be",
+            "rer"
+          ]
+        },
+        {
+          "clean": "sang",
+          "syllables": [
+            "sang"
           ]
         }
       ]

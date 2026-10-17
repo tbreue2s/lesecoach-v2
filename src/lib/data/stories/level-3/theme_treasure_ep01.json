@@ -2,78 +2,24 @@
   "themeId": "theme_treasure",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Biber und der Regenschirm",
+  "disturberWord": "Schlafdrache",
+  "title": "Der geheime Schatz",
   "sentences": [
     {
-      "text": "Der Biber läuft schnell zum Tor.",
+      "text": "Leo findet einen Schlüssel.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Leo",
           "syllables": [
-            "Der"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "Biber",
+          "clean": "findet",
           "syllables": [
-            "Bi",
-            "ber"
-          ]
-        },
-        {
-          "clean": "läuft",
-          "syllables": [
-            "läuft"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Da entdeckt er plötzlich einen Regenschirm.",
-      "words": [
-        {
-          "clean": "Da",
-          "syllables": [
-            "Da"
-          ]
-        },
-        {
-          "clean": "entdeckt",
-          "syllables": [
-            "en",
-            "tdeckt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
+            "fin",
+            "det"
           ]
         },
         {
@@ -84,96 +30,219 @@
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "Schlüssel",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
+            "Schlüs",
+            "sel"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier schaut genau hin.",
+      "text": "Er passt in das alte Schloss.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Er",
           "syllables": [
-            "Das"
+            "Er"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "passt",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "passt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "in",
           "syllables": [
-            "Tier"
+            "in"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "das",
           "syllables": [
-            "schaut"
+            "das"
           ]
         },
         {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam jubeln alle vor Freude.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
-          ]
-        },
-        {
-          "clean": "jubeln",
-          "syllables": [
-            "ju",
-            "beln"
-          ]
-        },
-        {
-          "clean": "alle",
+          "clean": "alte",
           "syllables": [
             "al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Schloss",
+          "syllables": [
+            "Schloss"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der schwere Deckel springt auf.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "schwere",
+          "syllables": [
+            "schwe",
+            "re"
+          ]
+        },
+        {
+          "clean": "Deckel",
+          "syllables": [
+            "De",
+            "ckel"
+          ]
+        },
+        {
+          "clean": "springt",
+          "syllables": [
+            "springt"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neben einer Perle schläft ein winziger Babydrache.",
+      "words": [
+        {
+          "clean": "Neben",
+          "syllables": [
+            "Ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "einer",
+          "syllables": [
+            "ei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
             "le"
           ]
         },
         {
-          "clean": "vor",
+          "clean": "schläft",
           "syllables": [
-            "vor"
+            "schläft"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "ein",
           "syllables": [
-            "Freu",
-            "de"
+            "ein"
+          ]
+        },
+        {
+          "clean": "winziger",
+          "syllables": [
+            "win",
+            "zi",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Babydrache",
+          "syllables": [
+            "Ba",
+            "byd",
+            "ra",
+            "che"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er schnarcht ganz leise.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "schnarcht",
+          "syllables": [
+            "schnarcht"
+          ]
+        },
+        {
+          "clean": "ganz",
+          "syllables": [
+            "ganz"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zufrieden kuschelt er sich an Leo.",
+      "words": [
+        {
+          "clean": "Zufrieden",
+          "syllables": [
+            "Zuf",
+            "rie",
+            "den"
+          ]
+        },
+        {
+          "clean": "kuschelt",
+          "syllables": [
+            "ku",
+            "schelt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
           ]
         }
       ]

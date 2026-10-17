@@ -2,95 +2,29 @@
   "themeId": "theme_wizard",
   "level": 8,
   "episode": 1,
-  "disturberWord": "Känguru",
-  "title": "Aufregung in der Zauberburg",
+  "disturberWord": "Sprechhut",
+  "title": "Aufruhr im Zauberturm",
   "sentences": [
     {
-      "text": "Was für ein herrlicher und sonniger Morgen!",
+      "text": "Im Turm rührte der Zauberer Jakob in seinem Kessel.",
       "words": [
         {
-          "clean": "Was",
+          "clean": "Im",
           "syllables": [
-            "Was"
+            "Im"
           ]
         },
         {
-          "clean": "für",
+          "clean": "Turm",
           "syllables": [
-            "für"
+            "Turm"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "rührte",
           "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "herrlicher",
-          "syllables": [
-            "her",
-            "rli",
-            "cher"
-          ]
-        },
-        {
-          "clean": "und",
-          "syllables": [
-            "und"
-          ]
-        },
-        {
-          "clean": "sonniger",
-          "syllables": [
-            "son",
-            "ni",
-            "ger"
-          ]
-        },
-        {
-          "clean": "Morgen",
-          "syllables": [
-            "Mor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Kater spaziert vergnügt in der Zauberburg.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Kater",
-          "syllables": [
-            "Ka",
-            "ter"
-          ]
-        },
-        {
-          "clean": "spaziert",
-          "syllables": [
-            "spa",
-            "ziert"
-          ]
-        },
-        {
-          "clean": "vergnügt",
-          "syllables": [
-            "verg",
-            "nügt"
-          ]
-        },
-        {
-          "clean": "in",
-          "syllables": [
-            "in"
+            "rüh",
+            "rte"
           ]
         },
         {
@@ -100,186 +34,24 @@
           ]
         },
         {
-          "clean": "Zauberburg",
+          "clean": "Zauberer",
           "syllables": [
             "Zau",
-            "ber",
-            "burg"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Doch was glitzert da drüben so hell im Sonnenlicht?",
-      "words": [
-        {
-          "clean": "Doch",
-          "syllables": [
-            "Doch"
+            "be",
+            "rer"
           ]
         },
         {
-          "clean": "was",
+          "clean": "Jakob",
           "syllables": [
-            "was"
+            "Ja",
+            "kob"
           ]
         },
         {
-          "clean": "glitzert",
+          "clean": "in",
           "syllables": [
-            "glit",
-            "zert"
-          ]
-        },
-        {
-          "clean": "da",
-          "syllables": [
-            "da"
-          ]
-        },
-        {
-          "clean": "drüben",
-          "syllables": [
-            "drü",
-            "ben"
-          ]
-        },
-        {
-          "clean": "so",
-          "syllables": [
-            "so"
-          ]
-        },
-        {
-          "clean": "hell",
-          "syllables": [
-            "hell"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Sonnenlicht",
-          "syllables": [
-            "Son",
-            "nen",
-            "licht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Es ist Ein Känguru, das mitten auf dem Moos steht!",
-      "words": [
-        {
-          "clean": "Es",
-          "syllables": [
-            "Es"
-          ]
-        },
-        {
-          "clean": "ist",
-          "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Känguru",
-          "syllables": [
-            "Kän",
-            "gu",
-            "ru"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "mitten",
-          "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Mo",
-            "os"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.",
-      "words": [
-        {
-          "clean": "Komm",
-          "syllables": [
-            "Komm"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "her",
-          "syllables": [
-            "her"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "aufgeregt",
-          "syllables": [
-            "auf",
-            "ge",
-            "regt"
+            "in"
           ]
         },
         {
@@ -290,96 +62,113 @@
           ]
         },
         {
-          "clean": "besten",
+          "clean": "Kessel",
           "syllables": [
-            "bes",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Freund",
-          "syllables": [
-            "Freund"
-          ]
-        },
-        {
-          "clean": "zu",
-          "syllables": [
-            "zu"
+            "Kes",
+            "sel"
           ]
         }
       ]
     },
     {
-      "text": "Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.",
+      "text": "Ein funkelnder Zaubertrank dampfte darin blau und lila.",
       "words": [
         {
-          "clean": "Gemeinsam",
+          "clean": "Ein",
           "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "Ein"
           ]
         },
         {
-          "clean": "bewundern",
+          "clean": "funkelnder",
           "syllables": [
-            "be",
-            "wun",
-            "dern"
+            "fun",
+            "kel",
+            "nder"
           ]
         },
         {
-          "clean": "die",
+          "clean": "Zaubertrank",
           "syllables": [
-            "die"
+            "Zau",
+            "bert",
+            "rank"
           ]
         },
         {
-          "clean": "beiden",
+          "clean": "dampfte",
           "syllables": [
-            "bei",
-            "den"
+            "damp",
+            "fte"
           ]
         },
         {
-          "clean": "Tiere",
+          "clean": "darin",
           "syllables": [
-            "Tie",
-            "re"
+            "da",
+            "rin"
           ]
         },
         {
-          "clean": "das",
+          "clean": "blau",
           "syllables": [
-            "das"
+            "blau"
           ]
         },
         {
-          "clean": "sonderbare",
+          "clean": "und",
           "syllables": [
-            "son",
-            "der",
-            "ba",
-            "re"
+            "und"
           ]
         },
         {
-          "clean": "Schauspiel",
+          "clean": "lila",
           "syllables": [
-            "Schaus",
-            "piel"
+            "li",
+            "la"
           ]
         }
       ]
     },
     {
-      "text": "So einen aufregenden Tag werden sie sicher niemals vergessen!",
+      "text": "Jakob hob seinen Stab und sprach einen Spruch.",
       "words": [
         {
-          "clean": "So",
+          "clean": "Jakob",
           "syllables": [
-            "So"
+            "Ja",
+            "kob"
+          ]
+        },
+        {
+          "clean": "hob",
+          "syllables": [
+            "hob"
+          ]
+        },
+        {
+          "clean": "seinen",
+          "syllables": [
+            "sei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Stab",
+          "syllables": [
+            "Stab"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "sprach",
+          "syllables": [
+            "sprach"
           ]
         },
         {
@@ -390,53 +179,305 @@
           ]
         },
         {
-          "clean": "aufregenden",
+          "clean": "Spruch",
           "syllables": [
-            "auf",
-            "re",
-            "gen",
+            "Spruch"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da erklang vom Tisch ein Kichern: Was war denn das?",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "erklang",
+          "syllables": [
+            "erk",
+            "lang"
+          ]
+        },
+        {
+          "clean": "vom",
+          "syllables": [
+            "vom"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Kichern",
+          "syllables": [
+            "Ki",
+            "chern"
+          ]
+        },
+        {
+          "clean": "Was",
+          "syllables": [
+            "Was"
+          ]
+        },
+        {
+          "clean": "war",
+          "syllables": [
+            "war"
+          ]
+        },
+        {
+          "clean": "denn",
+          "syllables": [
+            "denn"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der alte Sprechhut hüpfte munter von der Platte!",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "alte",
+          "syllables": [
+            "al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Sprechhut",
+          "syllables": [
+            "Sprech",
+            "hut"
+          ]
+        },
+        {
+          "clean": "hüpfte",
+          "syllables": [
+            "hüp",
+            "fte"
+          ]
+        },
+        {
+          "clean": "munter",
+          "syllables": [
+            "mun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "von",
+          "syllables": [
+            "von"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Platte",
+          "syllables": [
+            "Plat",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Aufgeregt sauste er durch den großen Saal.",
+      "words": [
+        {
+          "clean": "Aufgeregt",
+          "syllables": [
+            "Auf",
+            "ge",
+            "regt"
+          ]
+        },
+        {
+          "clean": "sauste",
+          "syllables": [
+            "saus",
+            "te"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
             "den"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "großen",
           "syllables": [
-            "Tag"
+            "gro",
+            "ßen"
           ]
         },
         {
-          "clean": "werden",
+          "clean": "Saal",
           "syllables": [
-            "wer",
-            "den"
+            "Saal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "„Bleib doch stehen!“, rief Jakob lachend.",
+      "words": [
+        {
+          "clean": "Bleib",
+          "syllables": [
+            "Bleib"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "doch",
           "syllables": [
-            "sie"
+            "doch"
           ]
         },
         {
-          "clean": "sicher",
+          "clean": "stehen",
           "syllables": [
-            "si",
-            "cher"
+            "ste",
+            "hen"
           ]
         },
         {
-          "clean": "niemals",
+          "clean": "rief",
           "syllables": [
-            "nie",
-            "mals"
+            "rief"
           ]
         },
         {
-          "clean": "vergessen",
+          "clean": "Jakob",
           "syllables": [
-            "ver",
-            "ges",
-            "sen"
+            "Ja",
+            "kob"
+          ]
+        },
+        {
+          "clean": "lachend",
+          "syllables": [
+            "la",
+            "chend"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Doch der Hut kicherte nur und landete sanft auf seinem Kopf.",
+      "words": [
+        {
+          "clean": "Doch",
+          "syllables": [
+            "Doch"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        },
+        {
+          "clean": "kicherte",
+          "syllables": [
+            "ki",
+            "cher",
+            "te"
+          ]
+        },
+        {
+          "clean": "nur",
+          "syllables": [
+            "nur"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "landete",
+          "syllables": [
+            "lan",
+            "de",
+            "te"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "seinem",
+          "syllables": [
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "Kopf",
+          "syllables": [
+            "Kopf"
           ]
         }
       ]

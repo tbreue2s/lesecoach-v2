@@ -2,28 +2,23 @@
   "themeId": "theme_dino",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Drachen",
-  "title": "Abenteuer im tiefen Urwald",
+  "disturberWord": "Ufo",
+  "title": "Kleine und große Spuren",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Dino streift aufmerksam im tiefen Urwald.",
+      "text": "Der große Dino stapfte durch das grüne Urwaldtal.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Der",
           "syllables": [
-            "Ein"
+            "Der"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "große",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "gro",
+            "ße"
           ]
         },
         {
@@ -34,137 +29,16 @@
           ]
         },
         {
-          "clean": "streift",
+          "clean": "stapfte",
           "syllables": [
-            "streift"
+            "stap",
+            "fte"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "durch",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "tiefen",
-          "syllables": [
-            "tie",
-            "fen"
-          ]
-        },
-        {
-          "clean": "Urwald",
-          "syllables": [
-            "Ur",
-            "wald"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Drachen verborgen.",
-      "words": [
-        {
-          "clean": "Unter",
-          "syllables": [
-            "Un",
-            "ter"
-          ]
-        },
-        {
-          "clean": "einem",
-          "syllables": [
-            "ei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "dichten",
-          "syllables": [
-            "dic",
-            "hten"
-          ]
-        },
-        {
-          "clean": "Busch",
-          "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Drachen",
-          "syllables": [
-            "Dra",
-            "chen"
-          ]
-        },
-        {
-          "clean": "verborgen",
-          "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
+            "durch"
           ]
         },
         {
@@ -174,62 +48,173 @@
           ]
         },
         {
-          "clean": "seltsame",
+          "clean": "grüne",
           "syllables": [
-            "selt",
-            "sa",
-            "me"
+            "grü",
+            "ne"
           ]
         },
         {
-          "clean": "Ding",
+          "clean": "Urwaldtal",
           "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
+            "Ur",
+            "wald",
+            "tal"
           ]
         }
       ]
     },
     {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
+      "text": "Plötzlich landete ein winziges Ufo neben seinen Füßen.",
       "words": [
         {
-          "clean": "Voller",
+          "clean": "Plötzlich",
           "syllables": [
-            "Vol",
-            "ler"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Stolz",
+          "clean": "landete",
           "syllables": [
-            "Stolz"
+            "lan",
+            "de",
+            "te"
           ]
         },
         {
-          "clean": "präsentiert",
+          "clean": "ein",
           "syllables": [
-            "prä",
-            "sen",
-            "tiert"
+            "ein"
           ]
         },
         {
-          "clean": "er",
+          "clean": "winziges",
           "syllables": [
-            "er"
+            "win",
+            "zi",
+            "ges"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        },
+        {
+          "clean": "neben",
+          "syllables": [
+            "ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "seinen",
+          "syllables": [
+            "sei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Füßen",
+          "syllables": [
+            "Fü",
+            "ßen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neugierig verglichen die beiden ihre Spuren im Moos.",
+      "words": [
+        {
+          "clean": "Neugierig",
+          "syllables": [
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "verglichen",
+          "syllables": [
+            "verg",
+            "li",
+            "chen"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "beiden",
+          "syllables": [
+            "bei",
+            "den"
+          ]
+        },
+        {
+          "clean": "ihre",
+          "syllables": [
+            "ih",
+            "re"
+          ]
+        },
+        {
+          "clean": "Spuren",
+          "syllables": [
+            "Spu",
+            "ren"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie schmunzelten vergnügt über den drolligen Unterschied.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "schmunzelten",
+          "syllables": [
+            "schmun",
+            "zel",
+            "ten"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
           ]
         },
         {
@@ -239,33 +224,19 @@
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "drolligen",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
+            "drol",
+            "li",
+            "gen"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Unterschied",
           "syllables": [
-            "Fund"
-          ]
-        },
-        {
-          "clean": "allen",
-          "syllables": [
-            "al",
-            "len"
-          ]
-        },
-        {
-          "clean": "Freunden",
-          "syllables": [
-            "Freun",
-            "den"
+            "Un",
+            "ter",
+            "schied"
           ]
         }
       ]

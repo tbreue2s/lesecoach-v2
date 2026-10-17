@@ -3,22 +3,85 @@
   "level": 2,
   "episode": 2,
   "disturberWord": "Ufo",
-  "title": "Das lustige Ufo",
+  "title": "Besuch auf dem Dach",
   "sentences": [
     {
-      "text": "Der rote Ufo liegt im Gras.",
+      "text": "Mia steht oben auf dem Dach.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Mia",
           "syllables": [
-            "Der"
+            "Mi",
+            "a"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "steht",
           "syllables": [
-            "ro",
-            "te"
+            "steht"
+          ]
+        },
+        {
+          "clean": "oben",
+          "syllables": [
+            "o",
+            "ben"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Dach",
+          "syllables": [
+            "Dach"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da landet leise ein buntes Ufo.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "buntes",
+          "syllables": [
+            "bun",
+            "tes"
           ]
         },
         {
@@ -27,29 +90,11 @@
             "U",
             "fo"
           ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Ein kleiner Pilot verflog sich dort.",
       "words": [
         {
           "clean": "Ein",
@@ -65,102 +110,109 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Pilot",
           "syllables": [
-            "Hund"
+            "Pi",
+            "lot"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "verflog",
           "syllables": [
-            "sieht"
+            "ver",
+            "flog"
           ]
         },
         {
-          "clean": "den",
+          "clean": "sich",
           "syllables": [
-            "den"
+            "sich"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "dort",
           "syllables": [
-            "Fund"
+            "dort"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Mia liest für ihn die Karte.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Mia",
           "syllables": [
-            "Das"
+            "Mi",
+            "a"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "liest",
           "syllables": [
-            "lie",
-            "be"
+            "liest"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "für",
           "syllables": [
-            "Tier"
+            "für"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "ihn",
           "syllables": [
-            "bellt"
+            "ihn"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "die",
           "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "die"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "Karte",
           "syllables": [
-            "al",
+            "Kar",
             "te"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "text": "Dankbar winkt der fremde Gast.",
+      "words": [
         {
-          "clean": "Baum",
+          "clean": "Dankbar",
           "syllables": [
-            "Baum"
+            "Dank",
+            "bar"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "winkt",
           "syllables": [
-            "spen",
-            "det"
+            "winkt"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "der",
           "syllables": [
-            "Schat",
-            "ten"
+            "der"
+          ]
+        },
+        {
+          "clean": "fremde",
+          "syllables": [
+            "frem",
+            "de"
+          ]
+        },
+        {
+          "clean": "Gast",
+          "syllables": [
+            "Gast"
           ]
         }
       ]

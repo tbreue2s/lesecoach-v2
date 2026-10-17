@@ -2,65 +2,126 @@
   "themeId": "theme_ocean",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Ananas",
-  "title": "Papa und die Ananas",
+  "disturberWord": "Nixe",
+  "title": "Das Geheimnis im See",
   "sentences": [
     {
-      "text": "Ein Papa geht zum Tor.",
+      "text": "Lilly paddelt ruhig über den glitzernden See.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Lilly",
           "syllables": [
-            "Ein"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "paddelt",
           "syllables": [
-            "Pa",
-            "pa"
+            "pad",
+            "delt"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "ruhig",
           "syllables": [
-            "geht"
+            "ru",
+            "hig"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "über",
           "syllables": [
-            "zum"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "den",
           "syllables": [
-            "Tor"
+            "den"
+          ]
+        },
+        {
+          "clean": "glitzernden",
+          "syllables": [
+            "glit",
+            "zer",
+            "nden"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
           ]
         }
       ]
     },
     {
-      "text": "Der Papa sieht eine Ananas.",
+      "text": "Fest hält das Mädchen ihr langes Ruder.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Fest",
           "syllables": [
-            "Der"
+            "Fest"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "hält",
           "syllables": [
-            "Pa",
-            "pa"
+            "hält"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "das",
           "syllables": [
-            "sieht"
+            "das"
+          ]
+        },
+        {
+          "clean": "Mädchen",
+          "syllables": [
+            "Mäd",
+            "chen"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "langes",
+          "syllables": [
+            "lan",
+            "ges"
+          ]
+        },
+        {
+          "clean": "Ruder",
+          "syllables": [
+            "Ru",
+            "der"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich zeigt eine freundliche Nixe eine Perle.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "zeigt",
+          "syllables": [
+            "zeigt"
           ]
         },
         {
@@ -71,97 +132,136 @@
           ]
         },
         {
-          "clean": "Ananas",
+          "clean": "freundliche",
           "syllables": [
-            "A",
-            "na",
-            "nas"
+            "freund",
+            "li",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
           ]
         }
       ]
     },
     {
-      "text": "Der Papa schaut die Ananas an.",
+      "text": "Lilly betrachtet das Funkeln durch eine Lupe.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Lilly",
           "syllables": [
-            "Der"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "betrachtet",
           "syllables": [
-            "Pa",
-            "pa"
+            "be",
+            "trach",
+            "tet"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "das",
           "syllables": [
-            "schaut"
+            "das"
           ]
         },
         {
-          "clean": "die",
+          "clean": "Funkeln",
           "syllables": [
-            "die"
+            "Fun",
+            "keln"
           ]
         },
         {
-          "clean": "Ananas",
+          "clean": "durch",
           "syllables": [
-            "A",
-            "na",
-            "nas"
+            "durch"
           ]
         },
         {
-          "clean": "an",
+          "clean": "eine",
           "syllables": [
-            "an"
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Lupe",
+          "syllables": [
+            "Lu",
+            "pe"
           ]
         }
       ]
     },
     {
-      "text": "Froh ruft der Papa am Tor.",
+      "text": "Die Nixe kichert und stibitzt ihren Hut.",
       "words": [
         {
-          "clean": "Froh",
+          "clean": "Die",
           "syllables": [
-            "Froh"
+            "Die"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Nixe",
           "syllables": [
-            "ruft"
+            "Ni",
+            "xe"
           ]
         },
         {
-          "clean": "der",
+          "clean": "kichert",
           "syllables": [
-            "der"
+            "ki",
+            "chert"
           ]
         },
         {
-          "clean": "Papa",
+          "clean": "und",
           "syllables": [
-            "Pa",
-            "pa"
+            "und"
           ]
         },
         {
-          "clean": "am",
+          "clean": "stibitzt",
           "syllables": [
-            "am"
+            "sti",
+            "bitzt"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "ihren",
           "syllables": [
-            "Tor"
+            "ih",
+            "ren"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]

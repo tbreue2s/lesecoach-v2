@@ -2,68 +2,23 @@
   "themeId": "theme_dino",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Koffer",
-  "title": "Ein Fund im tiefen Urwald",
+  "disturberWord": "Ufo",
+  "title": "Besuch im Urwald",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt im tiefen Urwald.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "fröhlicher",
-          "syllables": [
-            "fröh",
-            "li",
-            "cher"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "beginnt",
-          "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "tiefen",
-          "syllables": [
-            "tie",
-            "fen"
-          ]
-        },
-        {
-          "clean": "Urwald",
-          "syllables": [
-            "Ur",
-            "wald"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Dino läuft über die Wiese.",
+      "text": "Der große Dino stapft los.",
       "words": [
         {
           "clean": "Der",
           "syllables": [
             "Der"
+          ]
+        },
+        {
+          "clean": "große",
+          "syllables": [
+            "gro",
+            "ße"
           ]
         },
         {
@@ -74,55 +29,73 @@
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "stapft",
           "syllables": [
-            "läuft"
+            "stapft"
           ]
         },
         {
-          "clean": "über",
+          "clean": "los",
           "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
-            "se"
+            "los"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Koffer auf dem Pfad auf.",
+      "text": "Da landet ein winziges Ufo im Moos.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Da",
           "syllables": [
-            "Ganz"
+            "Da"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "landet",
           "syllables": [
-            "plöt",
-            "zlich"
+            "lan",
+            "det"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "ein",
           "syllables": [
-            "taucht"
+            "ein"
           ]
         },
+        {
+          "clean": "winziges",
+          "syllables": [
+            "win",
+            "zi",
+            "ges"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Gast winkt.",
+      "words": [
         {
           "clean": "Ein",
           "syllables": [
@@ -130,123 +103,172 @@
           ]
         },
         {
-          "clean": "Koffer",
+          "clean": "kleiner",
           "syllables": [
-            "Kof",
-            "fer"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "Gast",
           "syllables": [
-            "auf"
+            "Gast"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "winkt",
           "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
+            "winkt"
           ]
         }
       ]
     },
     {
-      "text": "Er staunt über den Fund.",
+      "text": "Sie vergleichen neugierig ihre Abdrücke im weichen Sand.",
       "words": [
         {
-          "clean": "Er",
+          "clean": "Sie",
           "syllables": [
-            "Er"
+            "Sie"
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "vergleichen",
           "syllables": [
-            "staunt"
+            "verg",
+            "lei",
+            "chen"
           ]
         },
         {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "neue",
+          "clean": "neugierig",
           "syllables": [
             "neu",
-            "e"
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "Abenteuer",
+          "clean": "ihre",
           "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
+            "ih",
+            "re"
           ]
         },
         {
-          "clean": "an",
+          "clean": "Abdrücke",
           "syllables": [
-            "an"
+            "Ab",
+            "drü",
+            "cke"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Sand",
+          "syllables": [
+            "Sand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Riese kichert leise.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Riese",
+          "syllables": [
+            "Rie",
+            "se"
+          ]
+        },
+        {
+          "clean": "kichert",
+          "syllables": [
+            "ki",
+            "chert"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Winzige Sternenfüße passen genau in seine Riesenspur.",
+      "words": [
+        {
+          "clean": "Winzige",
+          "syllables": [
+            "Win",
+            "zi",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Sternenfüße",
+          "syllables": [
+            "Ster",
+            "nen",
+            "fü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "passen",
+          "syllables": [
+            "pas",
+            "sen"
+          ]
+        },
+        {
+          "clean": "genau",
+          "syllables": [
+            "ge",
+            "nau"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "seine",
+          "syllables": [
+            "sei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Riesenspur",
+          "syllables": [
+            "Rie",
+            "sen",
+            "spur"
           ]
         }
       ]

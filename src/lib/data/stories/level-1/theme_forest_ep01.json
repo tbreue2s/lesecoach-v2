@@ -2,104 +2,37 @@
   "themeId": "theme_forest",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Zauberhut",
-  "title": "Kater und der Zauberhut",
+  "disturberWord": "Klavier",
+  "title": "Konzert im Moos",
   "sentences": [
     {
-      "text": "Ein Kater geht zum Tor.",
+      "text": "Paul wandert leise über den feuchten Boden.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Paul",
           "syllables": [
-            "Ein"
+            "Paul"
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "wandert",
           "syllables": [
-            "Ka",
-            "ter"
+            "wan",
+            "dert"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "leise",
           "syllables": [
-            "geht"
+            "lei",
+            "se"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "über",
           "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Kater sieht einen Zauberhut.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Kater",
-          "syllables": [
-            "Ka",
-            "ter"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Zauberhut",
-          "syllables": [
-            "Zau",
-            "ber",
-            "hut"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Kater schaut den Zauberhut an.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Kater",
-          "syllables": [
-            "Ka",
-            "ter"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
+            "ü",
+            "ber"
           ]
         },
         {
@@ -109,34 +42,128 @@
           ]
         },
         {
-          "clean": "Zauberhut",
+          "clean": "feuchten",
           "syllables": [
-            "Zau",
-            "ber",
-            "hut"
+            "feuch",
+            "ten"
           ]
         },
         {
-          "clean": "an",
+          "clean": "Boden",
           "syllables": [
-            "an"
+            "Bo",
+            "den"
           ]
         }
       ]
     },
     {
-      "text": "Froh ruft der Kater am Tor.",
+      "text": "Plötzlich steht ein altes Klavier im Moos.",
       "words": [
         {
-          "clean": "Froh",
+          "clean": "Plötzlich",
           "syllables": [
-            "Froh"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "steht",
           "syllables": [
-            "ruft"
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "altes",
+          "syllables": [
+            "al",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Klavier",
+          "syllables": [
+            "Kla",
+            "vier"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Aus dem dichten Gebüsch tappt ein Igel.",
+      "words": [
+        {
+          "clean": "Aus",
+          "syllables": [
+            "Aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "dichten",
+          "syllables": [
+            "dich",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Gebüsch",
+          "syllables": [
+            "Ge",
+            "büsch"
+          ]
+        },
+        {
+          "clean": "tappt",
+          "syllables": [
+            "tappt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Igel",
+          "syllables": [
+            "I",
+            "gel"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mit der Pfote drückt er eine Note.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
           ]
         },
         {
@@ -146,22 +173,79 @@
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "Pfote",
           "syllables": [
-            "Ka",
-            "ter"
+            "Pfo",
+            "te"
           ]
         },
         {
-          "clean": "am",
+          "clean": "drückt",
           "syllables": [
-            "am"
+            "drückt"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "er",
           "syllables": [
-            "Tor"
+            "er"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Note",
+          "syllables": [
+            "No",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Glücklich lauscht Paul im dichten Klee.",
+      "words": [
+        {
+          "clean": "Glücklich",
+          "syllables": [
+            "Glück",
+            "lich"
+          ]
+        },
+        {
+          "clean": "lauscht",
+          "syllables": [
+            "lauscht"
+          ]
+        },
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "dichten",
+          "syllables": [
+            "dich",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
           ]
         }
       ]

@@ -2,11 +2,104 @@
   "themeId": "theme_forest",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Sofa",
-  "title": "Das bunte Sofa",
+  "disturberWord": "Klavier",
+  "title": "Musik im Moos",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Ein leiser Wind weht über den Pfad.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "leiser",
+          "syllables": [
+            "lei",
+            "ser"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        },
+        {
+          "clean": "weht",
+          "syllables": [
+            "weht"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort steht plötzlich ein altes Klavier.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "altes",
+          "syllables": [
+            "al",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Klavier",
+          "syllables": [
+            "Kla",
+            "vier"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Igel schleicht neugierig heran.",
       "words": [
         {
           "clean": "Ein",
@@ -22,139 +115,121 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Igel",
           "syllables": [
-            "Hund"
+            "I",
+            "gel"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "schleicht",
           "syllables": [
-            "geht"
+            "schleicht"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "neugierig",
           "syllables": [
-            "um",
-            "her"
+            "neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "heran",
+          "syllables": [
+            "he",
+            "ran"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt ein Sofa.",
+      "text": "Vorsichtig drückt er eine hohe Note.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Vorsichtig",
           "syllables": [
-            "Mit",
-            "ten"
+            "Vor",
+            "sich",
+            "tig"
           ]
         },
         {
-          "clean": "im",
+          "clean": "drückt",
           "syllables": [
-            "im"
+            "drückt"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "er",
           "syllables": [
-            "Gras"
+            "er"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "eine",
           "syllables": [
-            "liegt"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "hohe",
           "syllables": [
-            "ein"
+            "ho",
+            "he"
           ]
         },
         {
-          "clean": "Sofa",
+          "clean": "Note",
           "syllables": [
-            "So",
-            "fa"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier staunt sehr.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "sehr",
-          "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
+            "No",
             "te"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "text": "Ein bunter Vogel singt vergnügt mit.",
+      "words": [
         {
-          "clean": "Baum",
+          "clean": "Ein",
           "syllables": [
-            "Baum"
+            "Ein"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "bunter",
           "syllables": [
-            "spen",
-            "det"
+            "bun",
+            "ter"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "Vogel",
           "syllables": [
-            "Schat",
-            "ten"
+            "Vo",
+            "gel"
+          ]
+        },
+        {
+          "clean": "singt",
+          "syllables": [
+            "singt"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
           ]
         }
       ]

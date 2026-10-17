@@ -2,150 +2,146 @@
   "themeId": "theme_horse",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Keks",
-  "title": "Dino und der Keks",
+  "disturberWord": "Einhorn",
+  "title": "Besuch im Nebel",
   "sentences": [
     {
-      "text": "Ein Dino geht zum Tal.",
+      "text": "Fröhlich kaut das kleine Pony saftigen Klee.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Fröhlich",
           "syllables": [
-            "Ein"
+            "Fröh",
+            "lich"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "kaut",
           "syllables": [
-            "Di",
-            "no"
+            "kaut"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "das",
           "syllables": [
-            "geht"
+            "das"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "kleine",
           "syllables": [
-            "zum"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "Tal",
+          "clean": "Pony",
           "syllables": [
-            "Tal"
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "saftigen",
+          "syllables": [
+            "saf",
+            "ti",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
           ]
         }
       ]
     },
     {
-      "text": "Der Dino sieht einen Keks.",
+      "text": "Dichter Nebel schwebt über dem weiten Hof.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dichter",
           "syllables": [
-            "Der"
+            "Dich",
+            "ter"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "Nebel",
           "syllables": [
-            "Di",
-            "no"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "schwebt",
           "syllables": [
-            "sieht"
+            "schwebt"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "über",
           "syllables": [
-            "ei",
-            "nen"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Keks",
+          "clean": "dem",
           "syllables": [
-            "Keks"
+            "dem"
+          ]
+        },
+        {
+          "clean": "weiten",
+          "syllables": [
+            "wei",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Hof",
+          "syllables": [
+            "Hof"
           ]
         }
       ]
     },
     {
-      "text": "Der Dino schaut den Keks an.",
+      "text": "Plötzlich steht ein weißes Einhorn am Tor.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Plötzlich",
           "syllables": [
-            "Der"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "steht",
           "syllables": [
-            "Di",
-            "no"
+            "steht"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "ein",
           "syllables": [
-            "schaut"
+            "ein"
           ]
         },
         {
-          "clean": "den",
+          "clean": "weißes",
           "syllables": [
-            "den"
+            "wei",
+            "ßes"
           ]
         },
         {
-          "clean": "Keks",
+          "clean": "Einhorn",
           "syllables": [
-            "Keks"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Froh ruft der Dino am Tal.",
-      "words": [
-        {
-          "clean": "Froh",
-          "syllables": [
-            "Froh"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "Dino",
-          "syllables": [
-            "Di",
-            "no"
+            "Ein",
+            "horn"
           ]
         },
         {
@@ -155,9 +151,107 @@
           ]
         },
         {
-          "clean": "Tal",
+          "clean": "Tor",
           "syllables": [
-            "Tal"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Freundlich berührt Lilly seine sanfte Nase.",
+      "words": [
+        {
+          "clean": "Freundlich",
+          "syllables": [
+            "Freund",
+            "lich"
+          ]
+        },
+        {
+          "clean": "berührt",
+          "syllables": [
+            "be",
+            "rührt"
+          ]
+        },
+        {
+          "clean": "Lilly",
+          "syllables": [
+            "Lil",
+            "ly"
+          ]
+        },
+        {
+          "clean": "seine",
+          "syllables": [
+            "sei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "sanfte",
+          "syllables": [
+            "san",
+            "fte"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Glücklich traben beide in den neuen Tag.",
+      "words": [
+        {
+          "clean": "Glücklich",
+          "syllables": [
+            "Glück",
+            "lich"
+          ]
+        },
+        {
+          "clean": "traben",
+          "syllables": [
+            "tra",
+            "ben"
+          ]
+        },
+        {
+          "clean": "beide",
+          "syllables": [
+            "bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "neuen",
+          "syllables": [
+            "neu",
+            "en"
+          ]
+        },
+        {
+          "clean": "Tag",
+          "syllables": [
+            "Tag"
           ]
         }
       ]

@@ -2,59 +2,132 @@
   "themeId": "theme_horse",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Schlitten",
-  "title": "Das lustige Schlitten",
+  "disturberWord": "Ufo",
+  "title": "Der kleine Gast",
   "sentences": [
     {
-      "text": "Der rote Schlitten liegt im Gras.",
+      "text": "Sie toben über eine grüne Weide.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sie",
           "syllables": [
-            "Der"
+            "Sie"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "toben",
           "syllables": [
-            "ro",
-            "te"
+            "to",
+            "ben"
           ]
         },
         {
-          "clean": "Schlitten",
+          "clean": "über",
           "syllables": [
-            "Schlit",
-            "ten"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "eine",
           "syllables": [
-            "liegt"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "im",
+          "clean": "grüne",
           "syllables": [
-            "im"
+            "grü",
+            "ne"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Weide",
           "syllables": [
-            "Gras"
+            "Wei",
+            "de"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Nun landet sehr leise ein buntes Ufo.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Nun",
           "syllables": [
-            "Ein"
+            "Nun"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "sehr",
+          "syllables": [
+            "sehr"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "buntes",
+          "syllables": [
+            "bun",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Daraus steigt froh ein kleiner Gast.",
+      "words": [
+        {
+          "clean": "Daraus",
+          "syllables": [
+            "Da",
+            "raus"
+          ]
+        },
+        {
+          "clean": "steigt",
+          "syllables": [
+            "steigt"
+          ]
+        },
+        {
+          "clean": "froh",
+          "syllables": [
+            "froh"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
           ]
         },
         {
@@ -65,102 +138,104 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Gast",
           "syllables": [
-            "Hund"
+            "Gast"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er riecht so gerne an feinem Hafer.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "riecht",
           "syllables": [
-            "sieht"
+            "riecht"
           ]
         },
         {
-          "clean": "den",
+          "clean": "so",
           "syllables": [
+            "so"
+          ]
+        },
+        {
+          "clean": "gerne",
+          "syllables": [
+            "ger",
+            "ne"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "feinem",
+          "syllables": [
+            "fei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "Hafer",
+          "syllables": [
+            "Ha",
+            "fer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zufrieden startet nun ein leiser Flug.",
+      "words": [
+        {
+          "clean": "Zufrieden",
+          "syllables": [
+            "Zuf",
+            "rie",
             "den"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "startet",
           "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "star",
+            "tet"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "nun",
           "syllables": [
-            "lie",
-            "be"
+            "nun"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "ein",
           "syllables": [
-            "Tier"
+            "ein"
           ]
         },
         {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
+          "clean": "leiser",
           "syllables": [
             "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "ser"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "Flug",
           "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Flug"
           ]
         }
       ]

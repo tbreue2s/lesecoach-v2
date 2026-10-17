@@ -2,61 +2,179 @@
   "themeId": "theme_superhero",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Tuba",
-  "title": "Das Geheimnis auf dem hohen Turm",
+  "disturberWord": "Kater-Held",
+  "title": "Zwei Helden am Hafen",
   "sentences": [
     {
-      "text": "Die Sonne scheint warm über der Landschaft.",
+      "text": "Mein blauer Umhang flattert.",
       "words": [
         {
-          "clean": "Die",
+          "clean": "Mein",
           "syllables": [
-            "Die"
+            "Mein"
           ]
         },
         {
-          "clean": "Sonne",
+          "clean": "blauer",
           "syllables": [
-            "Son",
-            "ne"
+            "blau",
+            "er"
           ]
         },
         {
-          "clean": "scheint",
+          "clean": "Umhang",
           "syllables": [
-            "scheint"
+            "Um",
+            "hang"
           ]
         },
         {
-          "clean": "warm",
+          "clean": "flattert",
           "syllables": [
-            "warm"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "Landschaft",
-          "syllables": [
-            "Land",
-            "schaft"
+            "flat",
+            "tert"
           ]
         }
       ]
     },
     {
-      "text": "Der Tiger sucht einen Pfad.",
+      "text": "Ein kleines Boot treibt im Hafen davon.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "kleines",
+          "syllables": [
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        },
+        {
+          "clean": "treibt",
+          "syllables": [
+            "treibt"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        },
+        {
+          "clean": "davon",
+          "syllables": [
+            "da",
+            "von"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das Seil rutscht weg!",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "Seil",
+          "syllables": [
+            "Seil"
+          ]
+        },
+        {
+          "clean": "rutscht",
+          "syllables": [
+            "rutscht"
+          ]
+        },
+        {
+          "clean": "weg",
+          "syllables": [
+            "weg"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da springt ein Kater mit rotem Umhang herbei.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "springt",
+          "syllables": [
+            "springt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "rotem",
+          "syllables": [
+            "ro",
+            "tem"
+          ]
+        },
+        {
+          "clean": "Umhang",
+          "syllables": [
+            "Um",
+            "hang"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Kater-Held hält fest!",
       "words": [
         {
           "clean": "Der",
@@ -65,117 +183,29 @@
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "KaterHeld",
           "syllables": [
-            "Ti",
-            "ger"
+            "Ka",
+            "ter",
+            "Held"
           ]
         },
         {
-          "clean": "sucht",
+          "clean": "hält",
           "syllables": [
-            "sucht"
+            "hält"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "fest",
           "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
+            "fest"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich versperrt Ein Tuba den schmalen Weg.",
-      "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "versperrt",
-          "syllables": [
-            "ver",
-            "sperrt"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Tuba",
-          "syllables": [
-            "Tu",
-            "ba"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "schmalen",
-          "syllables": [
-            "schma",
-            "len"
-          ]
-        },
-        {
-          "clean": "Weg",
-          "syllables": [
-            "Weg"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mutig geht er heran.",
-      "words": [
-        {
-          "clean": "Mutig",
-          "syllables": [
-            "Mu",
-            "tig"
-          ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "heran",
-          "syllables": [
-            "he",
-            "ran"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
+      "text": "Zusammen retten wir es und er schnurrt stolz.",
       "words": [
         {
           "clean": "Zusammen",
@@ -186,75 +216,46 @@
           ]
         },
         {
-          "clean": "rollen",
+          "clean": "retten",
           "syllables": [
-            "rol",
-            "len"
+            "ret",
+            "ten"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "wir",
           "syllables": [
-            "sie"
+            "wir"
           ]
         },
         {
-          "clean": "den",
+          "clean": "es",
           "syllables": [
-            "den"
+            "es"
           ]
         },
         {
-          "clean": "Gegenstand",
+          "clean": "und",
           "syllables": [
-            "Ge",
-            "gen",
-            "stand"
+            "und"
           ]
         },
         {
-          "clean": "zur",
+          "clean": "er",
           "syllables": [
-            "zur"
+            "er"
           ]
         },
         {
-          "clean": "Seite",
+          "clean": "schnurrt",
           "syllables": [
-            "Sei",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle klatschen laut Beifall.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
+            "schnurrt"
           ]
         },
         {
-          "clean": "klatschen",
+          "clean": "stolz",
           "syllables": [
-            "klat",
-            "schen"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "Beifall",
-          "syllables": [
-            "Bei",
-            "fall"
+            "stolz"
           ]
         }
       ]

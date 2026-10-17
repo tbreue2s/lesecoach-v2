@@ -2,78 +2,91 @@
   "themeId": "theme_wizard",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Roller",
-  "title": "Das lustige Roller",
+  "disturberWord": "Flugbesen",
+  "title": "Der tanzende Zauberbesen",
   "sentences": [
     {
-      "text": "Der rote Roller liegt im Gras.",
+      "text": "An der Wand steht ein neuer Besen.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "An",
           "syllables": [
-            "Der"
+            "An"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "der",
           "syllables": [
-            "ro",
-            "te"
+            "der"
           ]
         },
         {
-          "clean": "Roller",
+          "clean": "Wand",
           "syllables": [
-            "Rol",
-            "ler"
+            "Wand"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "steht",
           "syllables": [
-            "liegt"
+            "steht"
           ]
         },
         {
-          "clean": "im",
+          "clean": "ein",
           "syllables": [
-            "im"
+            "ein"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "neuer",
           "syllables": [
-            "Gras"
+            "neu",
+            "er"
+          ]
+        },
+        {
+          "clean": "Besen",
+          "syllables": [
+            "Be",
+            "sen"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Er fegt heute nicht über den Boden.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Er",
           "syllables": [
-            "Ein"
+            "Er"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "fegt",
           "syllables": [
-            "klei",
-            "ner"
+            "fegt"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "heute",
           "syllables": [
-            "Hund"
+            "heu",
+            "te"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "nicht",
           "syllables": [
-            "sieht"
+            "nicht"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
           ]
         },
         {
@@ -83,84 +96,140 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Boden",
           "syllables": [
-            "Fund"
+            "Bo",
+            "den"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Fröhlich tanzt er mit dem Kater.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Fröhlich",
           "syllables": [
-            "Das"
+            "Fröh",
+            "lich"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "tanzt",
           "syllables": [
-            "lie",
-            "be"
+            "tanzt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "er",
           "syllables": [
-            "Tier"
+            "er"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "mit",
           "syllables": [
-            "bellt"
+            "mit"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "dem",
           "syllables": [
-            "lei",
-            "se"
+            "dem"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Beide drehen sich im frohen Takt.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Beide",
           "syllables": [
-            "Der"
+            "Bei",
+            "de"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "drehen",
           "syllables": [
-            "al",
-            "te"
+            "dre",
+            "hen"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "sich",
           "syllables": [
-            "Baum"
+            "sich"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "im",
           "syllables": [
-            "spen",
-            "det"
+            "im"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "frohen",
           "syllables": [
-            "Schat",
-            "ten"
+            "fro",
+            "hen"
+          ]
+        },
+        {
+          "clean": "Takt",
+          "syllables": [
+            "Takt"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lustig sausen sie durch den Raum.",
+      "words": [
+        {
+          "clean": "Lustig",
+          "syllables": [
+            "Lus",
+            "tig"
+          ]
+        },
+        {
+          "clean": "sausen",
+          "syllables": [
+            "sau",
+            "sen"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Raum",
+          "syllables": [
+            "Raum"
           ]
         }
       ]

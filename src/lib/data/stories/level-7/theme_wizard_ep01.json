@@ -2,49 +2,44 @@
   "themeId": "theme_wizard",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Zauberhut",
-  "title": "Abenteuer in der Zauberburg",
+  "disturberWord": "Sprechhut",
+  "title": "Der kichernde Hut",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Kater streift aufmerksam in der Zauberburg.",
+      "text": "Der kleine Zauberer rührt leise in seinem funkelnden Trank.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Der",
           "syllables": [
-            "Ein"
+            "Der"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "kleine",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "Zauberer",
           "syllables": [
-            "Ka",
-            "ter"
+            "Zau",
+            "be",
+            "rer"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "rührt",
           "syllables": [
-            "streift"
+            "rührt"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "leise",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "lei",
+            "se"
           ]
         },
         {
@@ -54,138 +49,110 @@
           ]
         },
         {
+          "clean": "seinem",
+          "syllables": [
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "funkelnden",
+          "syllables": [
+            "fun",
+            "kel",
+            "nden"
+          ]
+        },
+        {
+          "clean": "Trank",
+          "syllables": [
+            "Trank"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich fängt der alte Sprechhut auf dem Tisch an zu kichern.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "fängt",
+          "syllables": [
+            "fängt"
+          ]
+        },
+        {
           "clean": "der",
           "syllables": [
             "der"
           ]
         },
         {
-          "clean": "Zauberburg",
+          "clean": "alte",
           "syllables": [
-            "Zau",
-            "ber",
-            "burg"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Zauberhut verborgen.",
-      "words": [
-        {
-          "clean": "Unter",
-          "syllables": [
-            "Un",
-            "ter"
+            "al",
+            "te"
           ]
         },
         {
-          "clean": "einem",
+          "clean": "Sprechhut",
           "syllables": [
-            "ei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "dichten",
-          "syllables": [
-            "dic",
-            "hten"
-          ]
-        },
-        {
-          "clean": "Busch",
-          "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Zauberhut",
-          "syllables": [
-            "Zau",
-            "ber",
+            "Sprech",
             "hut"
           ]
         },
         {
-          "clean": "verborgen",
+          "clean": "auf",
           "syllables": [
-            "ver",
-            "bor",
-            "gen"
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        },
+        {
+          "clean": "kichern",
+          "syllables": [
+            "ki",
+            "chern"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
+      "text": "Von ganz allein hüpft er munter durch den großen Saal.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Von",
           "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "seltsame",
-          "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
+            "Von"
           ]
         },
         {
@@ -195,36 +162,16 @@
           ]
         },
         {
-          "clean": "genau",
+          "clean": "allein",
           "syllables": [
-            "ge",
-            "nau"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
-      "words": [
-        {
-          "clean": "Voller",
-          "syllables": [
-            "Vol",
-            "ler"
+            "al",
+            "lein"
           ]
         },
         {
-          "clean": "Stolz",
+          "clean": "hüpft",
           "syllables": [
-            "Stolz"
-          ]
-        },
-        {
-          "clean": "präsentiert",
-          "syllables": [
-            "prä",
-            "sen",
-            "tiert"
+            "hüpft"
           ]
         },
         {
@@ -234,39 +181,90 @@
           ]
         },
         {
+          "clean": "munter",
+          "syllables": [
+            "mun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
           "clean": "den",
           "syllables": [
             "den"
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "großen",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
+            "gro",
+            "ßen"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Saal",
           "syllables": [
-            "Fund"
+            "Saal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lächelnd schwingt der Zauberer seinen Zauberstab hinterher.",
+      "words": [
+        {
+          "clean": "Lächelnd",
+          "syllables": [
+            "Lä",
+            "chelnd"
           ]
         },
         {
-          "clean": "allen",
+          "clean": "schwingt",
           "syllables": [
-            "al",
-            "len"
+            "schwingt"
           ]
         },
         {
-          "clean": "Freunden",
+          "clean": "der",
           "syllables": [
-            "Freun",
-            "den"
+            "der"
+          ]
+        },
+        {
+          "clean": "Zauberer",
+          "syllables": [
+            "Zau",
+            "be",
+            "rer"
+          ]
+        },
+        {
+          "clean": "seinen",
+          "syllables": [
+            "sei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Zauberstab",
+          "syllables": [
+            "Zau",
+            "ber",
+            "stab"
+          ]
+        },
+        {
+          "clean": "hinterher",
+          "syllables": [
+            "hin",
+            "ter",
+            "her"
           ]
         }
       ]

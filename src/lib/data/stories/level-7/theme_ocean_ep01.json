@@ -2,168 +2,39 @@
   "themeId": "theme_ocean",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Pinguin",
-  "title": "Abenteuer im weiten Meer",
+  "disturberWord": "Nixe",
+  "title": "Glanz auf den Wellen",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Wal streift aufmerksam im weiten Meer.",
+      "text": "Leo rudert gemächlich über das glitzernde Wasser.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Leo",
           "syllables": [
-            "Ein"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "rudert",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "ru",
+            "dert"
           ]
         },
         {
-          "clean": "Wal",
+          "clean": "gemächlich",
           "syllables": [
-            "Wal"
+            "ge",
+            "mäch",
+            "lich"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "über",
           "syllables": [
-            "streift"
-          ]
-        },
-        {
-          "clean": "aufmerksam",
-          "syllables": [
-            "auf",
-            "merk",
-            "sam"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "weiten",
-          "syllables": [
-            "wei",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Meer",
-          "syllables": [
-            "Me",
-            "er"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Pinguin verborgen.",
-      "words": [
-        {
-          "clean": "Unter",
-          "syllables": [
-            "Un",
-            "ter"
-          ]
-        },
-        {
-          "clean": "einem",
-          "syllables": [
-            "ei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "dichten",
-          "syllables": [
-            "dic",
-            "hten"
-          ]
-        },
-        {
-          "clean": "Busch",
-          "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Pinguin",
-          "syllables": [
-            "Pin",
-            "guin"
-          ]
-        },
-        {
-          "clean": "verborgen",
-          "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
+            "ü",
+            "ber"
           ]
         },
         {
@@ -173,98 +44,194 @@
           ]
         },
         {
-          "clean": "seltsame",
+          "clean": "glitzernde",
           "syllables": [
-            "selt",
-            "sa",
-            "me"
+            "glit",
+            "zer",
+            "nde"
           ]
         },
         {
-          "clean": "Ding",
+          "clean": "Wasser",
           "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
+            "Was",
+            "ser"
           ]
         }
       ]
     },
     {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
+      "text": "Plötzlich taucht neben ihm eine freundliche Nixe auf.",
       "words": [
         {
-          "clean": "Voller",
+          "clean": "Plötzlich",
           "syllables": [
-            "Vol",
-            "ler"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Stolz",
+          "clean": "taucht",
           "syllables": [
-            "Stolz"
+            "taucht"
           ]
         },
         {
-          "clean": "präsentiert",
+          "clean": "neben",
           "syllables": [
-            "prä",
-            "sen",
-            "tiert"
+            "ne",
+            "ben"
           ]
         },
         {
-          "clean": "er",
+          "clean": "ihm",
           "syllables": [
-            "er"
+            "ihm"
           ]
         },
         {
-          "clean": "den",
+          "clean": "eine",
           "syllables": [
-            "den"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "freundliche",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
+            "freund",
+            "li",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie lächelt und zeigt eine schimmernde Perle.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "lächelt",
+          "syllables": [
             "lä",
-            "ren"
+            "chelt"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "und",
           "syllables": [
-            "Fund"
+            "und"
           ]
         },
         {
-          "clean": "allen",
+          "clean": "zeigt",
           "syllables": [
-            "al",
-            "len"
+            "zeigt"
           ]
         },
         {
-          "clean": "Freunden",
+          "clean": "eine",
           "syllables": [
-            "Freun",
-            "den"
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "schimmernde",
+          "syllables": [
+            "schim",
+            "mer",
+            "nde"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Verschmitzt zwinkert sie Leo zu, ehe sie wieder abtaucht.",
+      "words": [
+        {
+          "clean": "Verschmitzt",
+          "syllables": [
+            "Ver",
+            "schmitzt"
+          ]
+        },
+        {
+          "clean": "zwinkert",
+          "syllables": [
+            "zwin",
+            "kert"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        },
+        {
+          "clean": "ehe",
+          "syllables": [
+            "e",
+            "he"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "wieder",
+          "syllables": [
+            "wie",
+            "der"
+          ]
+        },
+        {
+          "clean": "abtaucht",
+          "syllables": [
+            "ab",
+            "taucht"
           ]
         }
       ]

@@ -2,50 +2,36 @@
   "themeId": "theme_unicorn",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Wecker",
-  "title": "Ein Fund am bunten Regenbogen",
+  "disturberWord": "Torte",
+  "title": "Das Fest im Moos",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt am bunten Regenbogen.",
+      "text": "Einhorn Lani folgt dem Regenbogen.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Einhorn",
           "syllables": [
-            "Ein"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "Lani",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
+            "La",
+            "ni"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "folgt",
           "syllables": [
-            "Tag"
+            "folgt"
           ]
         },
         {
-          "clean": "beginnt",
+          "clean": "dem",
           "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "bunten",
-          "syllables": [
-            "bun",
-            "ten"
+            "dem"
           ]
         },
         {
@@ -60,195 +46,223 @@
       ]
     },
     {
-      "text": "Der Lama läuft über die Wiese.",
+      "text": "Dahinter duftet es herrlich nach süßer Vanille.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dahinter",
           "syllables": [
-            "Der"
+            "Da",
+            "hin",
+            "ter"
           ]
         },
         {
-          "clean": "Lama",
+          "clean": "duftet",
+          "syllables": [
+            "duf",
+            "tet"
+          ]
+        },
+        {
+          "clean": "es",
+          "syllables": [
+            "es"
+          ]
+        },
+        {
+          "clean": "herrlich",
+          "syllables": [
+            "her",
+            "rlich"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "süßer",
+          "syllables": [
+            "sü",
+            "ßer"
+          ]
+        },
+        {
+          "clean": "Vanille",
+          "syllables": [
+            "Va",
+            "nil",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Im Moos steht ein Tisch.",
+      "words": [
+        {
+          "clean": "Im",
+          "syllables": [
+            "Im"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Darauf wartet eine glitzernde, süße Wolken-Torte.",
+      "words": [
+        {
+          "clean": "Darauf",
+          "syllables": [
+            "Da",
+            "rauf"
+          ]
+        },
+        {
+          "clean": "wartet",
+          "syllables": [
+            "war",
+            "tet"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "glitzernde",
+          "syllables": [
+            "glit",
+            "zer",
+            "nde"
+          ]
+        },
+        {
+          "clean": "süße",
+          "syllables": [
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "WolkenTorte",
+          "syllables": [
+            "Wol",
+            "ken",
+            "Tor",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lani nascht ganz glücklich.",
+      "words": [
+        {
+          "clean": "Lani",
           "syllables": [
             "La",
-            "ma"
+            "ni"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "nascht",
           "syllables": [
-            "läuft"
+            "nascht"
           ]
         },
         {
-          "clean": "über",
+          "clean": "ganz",
           "syllables": [
-            "ü",
-            "ber"
+            "ganz"
           ]
         },
         {
-          "clean": "die",
+          "clean": "glücklich",
           "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
-            "se"
+            "glück",
+            "lich"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Wecker auf dem Pfad auf.",
+      "text": "Nun kleben süße Krümel an ihrer Nase.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Nun",
           "syllables": [
-            "Ganz"
+            "Nun"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "kleben",
           "syllables": [
-            "plöt",
-            "zlich"
+            "kle",
+            "ben"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "süße",
           "syllables": [
-            "taucht"
+            "sü",
+            "ße"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "Krümel",
           "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Wecker",
-          "syllables": [
-            "We",
-            "cker"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Er staunt über den Fund.",
-      "words": [
-        {
-          "clean": "Er",
-          "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "neue",
-          "syllables": [
-            "neu",
-            "e"
-          ]
-        },
-        {
-          "clean": "Abenteuer",
-          "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
+            "Krü",
+            "mel"
           ]
         },
         {
           "clean": "an",
           "syllables": [
             "an"
+          ]
+        },
+        {
+          "clean": "ihrer",
+          "syllables": [
+            "ih",
+            "rer"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
           ]
         }
       ]

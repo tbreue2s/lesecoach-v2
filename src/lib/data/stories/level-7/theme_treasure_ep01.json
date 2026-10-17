@@ -2,107 +2,114 @@
   "themeId": "theme_treasure",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Koffer",
-  "title": "Abenteuer in der tiefen Höhle",
+  "disturberWord": "Schlafdrache",
+  "title": "Das Geheimnis der Truhe",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Biber streift aufmerksam in der tiefen Höhle.",
+      "text": "Mit dem rostigen Schlüssel öffnet Mia vorsichtig die alte Holztruhe.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Mit",
           "syllables": [
-            "Ein"
+            "Mit"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "dem",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
+            "dem"
+          ]
+        },
+        {
+          "clean": "rostigen",
+          "syllables": [
+            "ros",
             "ti",
-            "ger"
+            "gen"
           ]
         },
         {
-          "clean": "Biber",
+          "clean": "Schlüssel",
           "syllables": [
-            "Bi",
-            "ber"
+            "Schlüs",
+            "sel"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "öffnet",
           "syllables": [
-            "streift"
+            "öf",
+            "fnet"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "Mia",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "Mi",
+            "a"
           ]
         },
         {
-          "clean": "in",
+          "clean": "vorsichtig",
           "syllables": [
-            "in"
+            "vor",
+            "sich",
+            "tig"
           ]
         },
         {
-          "clean": "der",
+          "clean": "die",
           "syllables": [
-            "der"
+            "die"
           ]
         },
         {
-          "clean": "tiefen",
+          "clean": "alte",
           "syllables": [
-            "tie",
-            "fen"
+            "al",
+            "te"
           ]
         },
         {
-          "clean": "Höhle",
+          "clean": "Holztruhe",
           "syllables": [
-            "Höh",
-            "le"
+            "Hol",
+            "ztru",
+            "he"
           ]
         }
       ]
     },
     {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Koffer verborgen.",
+      "text": "Neben einer glänzenden Perle liegt aber kein Gold, sondern ein winziges Wesen.",
       "words": [
         {
-          "clean": "Unter",
+          "clean": "Neben",
           "syllables": [
-            "Un",
-            "ter"
+            "Ne",
+            "ben"
           ]
         },
         {
-          "clean": "einem",
+          "clean": "einer",
           "syllables": [
             "ei",
-            "nem"
+            "ner"
           ]
         },
         {
-          "clean": "dichten",
+          "clean": "glänzenden",
           "syllables": [
-            "dic",
-            "hten"
+            "glän",
+            "zen",
+            "den"
           ]
         },
         {
-          "clean": "Busch",
+          "clean": "Perle",
           "syllables": [
-            "Busch"
+            "Per",
+            "le"
           ]
         },
         {
@@ -112,12 +119,57 @@
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "aber",
           "syllables": [
-            "plöt",
-            "zlich"
+            "a",
+            "ber"
           ]
         },
+        {
+          "clean": "kein",
+          "syllables": [
+            "kein"
+          ]
+        },
+        {
+          "clean": "Gold",
+          "syllables": [
+            "Gold"
+          ]
+        },
+        {
+          "clean": "sondern",
+          "syllables": [
+            "son",
+            "dern"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "winziges",
+          "syllables": [
+            "win",
+            "zi",
+            "ges"
+          ]
+        },
+        {
+          "clean": "Wesen",
+          "syllables": [
+            "We",
+            "sen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Schlafdrache schnarcht dort gemütlich und bläst winzige Rauchwölkchen empor.",
+      "words": [
         {
           "clean": "Ein",
           "syllables": [
@@ -125,153 +177,73 @@
           ]
         },
         {
-          "clean": "Koffer",
+          "clean": "kleiner",
           "syllables": [
-            "Kof",
-            "fer"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "verborgen",
+          "clean": "Schlafdrache",
           "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "Schlaf",
+            "dra",
+            "che"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "schnarcht",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
+            "schnarcht"
+          ]
+        },
+        {
+          "clean": "dort",
+          "syllables": [
+            "dort"
+          ]
+        },
+        {
+          "clean": "gemütlich",
+          "syllables": [
+            "ge",
+            "müt",
+            "lich"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "bläst",
+          "syllables": [
+            "bläst"
+          ]
+        },
+        {
+          "clean": "winzige",
+          "syllables": [
+            "win",
+            "zi",
             "ge"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Rauchwölkchen",
           "syllables": [
-            "Tier"
+            "Rauch",
+            "wölk",
+            "chen"
           ]
         },
         {
-          "clean": "untersucht",
+          "clean": "empor",
           "syllables": [
-            "un",
-            "ter",
-            "sucht"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "seltsame",
-          "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
-      "words": [
-        {
-          "clean": "Voller",
-          "syllables": [
-            "Vol",
-            "ler"
-          ]
-        },
-        {
-          "clean": "Stolz",
-          "syllables": [
-            "Stolz"
-          ]
-        },
-        {
-          "clean": "präsentiert",
-          "syllables": [
-            "prä",
-            "sen",
-            "tiert"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "spektakulären",
-          "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        },
-        {
-          "clean": "allen",
-          "syllables": [
-            "al",
-            "len"
-          ]
-        },
-        {
-          "clean": "Freunden",
-          "syllables": [
-            "Freun",
-            "den"
+            "em",
+            "por"
           ]
         }
       ]

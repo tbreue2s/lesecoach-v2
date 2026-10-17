@@ -2,42 +2,75 @@
   "themeId": "theme_ocean",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Das Geheimnis im weiten Meer",
+  "disturberWord": "Nixe",
+  "title": "Das Geheimnis im See",
   "sentences": [
     {
-      "text": "Die Sonne scheint warm über der Landschaft.",
+      "text": "Das kleine Boot schaukelt.",
       "words": [
         {
-          "clean": "Die",
+          "clean": "Das",
           "syllables": [
-            "Die"
+            "Das"
           ]
         },
         {
-          "clean": "Sonne",
+          "clean": "kleine",
           "syllables": [
-            "Son",
+            "klei",
             "ne"
           ]
         },
         {
-          "clean": "scheint",
+          "clean": "Boot",
           "syllables": [
-            "scheint"
+            "Boot"
           ]
         },
         {
-          "clean": "warm",
+          "clean": "schaukelt",
           "syllables": [
-            "warm"
+            "schau",
+            "kelt"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sanfte Wellen glitzern golden in der Sonne.",
+      "words": [
+        {
+          "clean": "Sanfte",
+          "syllables": [
+            "San",
+            "fte"
           ]
         },
         {
-          "clean": "über",
+          "clean": "Wellen",
           "syllables": [
-            "ü",
-            "ber"
+            "Wel",
+            "len"
+          ]
+        },
+        {
+          "clean": "glitzern",
+          "syllables": [
+            "glit",
+            "zern"
+          ]
+        },
+        {
+          "clean": "golden",
+          "syllables": [
+            "gol",
+            "den"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
           ]
         },
         {
@@ -47,149 +80,144 @@
           ]
         },
         {
-          "clean": "Landschaft",
+          "clean": "Sonne",
           "syllables": [
-            "Land",
-            "schaft"
+            "Son",
+            "ne"
           ]
         }
       ]
     },
     {
-      "text": "Der Wal sucht einen Pfad.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Wal",
-          "syllables": [
-            "Wal"
-          ]
-        },
-        {
-          "clean": "sucht",
-          "syllables": [
-            "sucht"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Plötzlich versperrt Ein Regenschirm den schmalen Weg.",
+      "text": "Plötzlich winkt eine Nixe!",
       "words": [
         {
           "clean": "Plötzlich",
           "syllables": [
-            "Plöt",
-            "zlich"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "versperrt",
+          "clean": "winkt",
           "syllables": [
-            "ver",
-            "sperrt"
+            "winkt"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "eine",
           "syllables": [
-            "Ein"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "Regenschirm",
+          "clean": "Nixe",
           "syllables": [
-            "Re",
-            "gen",
-            "schirm"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "schmalen",
-          "syllables": [
-            "schma",
-            "len"
-          ]
-        },
-        {
-          "clean": "Weg",
-          "syllables": [
-            "Weg"
+            "Ni",
+            "xe"
           ]
         }
       ]
     },
     {
-      "text": "Mutig geht er heran.",
+      "text": "Sie zeigt stolz eine wunderschön glänzende Perle.",
       "words": [
         {
-          "clean": "Mutig",
+          "clean": "Sie",
           "syllables": [
-            "Mu",
-            "tig"
+            "Sie"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "zeigt",
           "syllables": [
-            "geht"
+            "zeigt"
           ]
         },
         {
-          "clean": "er",
+          "clean": "stolz",
           "syllables": [
-            "er"
+            "stolz"
           ]
         },
         {
-          "clean": "heran",
+          "clean": "eine",
           "syllables": [
-            "he",
-            "ran"
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "wunderschön",
+          "syllables": [
+            "wun",
+            "der",
+            "schön"
+          ]
+        },
+        {
+          "clean": "glänzende",
+          "syllables": [
+            "glän",
+            "zen",
+            "de"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
           ]
         }
       ]
     },
     {
-      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
+      "text": "Ich freue mich riesig.",
       "words": [
         {
-          "clean": "Zusammen",
+          "clean": "Ich",
           "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "Ich"
           ]
         },
         {
-          "clean": "rollen",
+          "clean": "freue",
           "syllables": [
-            "rol",
-            "len"
+            "freu",
+            "e"
+          ]
+        },
+        {
+          "clean": "mich",
+          "syllables": [
+            "mich"
+          ]
+        },
+        {
+          "clean": "riesig",
+          "syllables": [
+            "rie",
+            "sig"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zwinkernd taucht sie zurück in die Wellen.",
+      "words": [
+        {
+          "clean": "Zwinkernd",
+          "syllables": [
+            "Zwin",
+            "kernd"
+          ]
+        },
+        {
+          "clean": "taucht",
+          "syllables": [
+            "taucht"
           ]
         },
         {
@@ -199,62 +227,29 @@
           ]
         },
         {
-          "clean": "den",
+          "clean": "zurück",
           "syllables": [
-            "den"
+            "zu",
+            "rück"
           ]
         },
         {
-          "clean": "Gegenstand",
+          "clean": "in",
           "syllables": [
-            "Ge",
-            "gen",
-            "stand"
+            "in"
           ]
         },
         {
-          "clean": "zur",
+          "clean": "die",
           "syllables": [
-            "zur"
+            "die"
           ]
         },
         {
-          "clean": "Seite",
+          "clean": "Wellen",
           "syllables": [
-            "Sei",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle klatschen laut Beifall.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "klatschen",
-          "syllables": [
-            "klat",
-            "schen"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "Beifall",
-          "syllables": [
-            "Bei",
-            "fall"
+            "Wel",
+            "len"
           ]
         }
       ]

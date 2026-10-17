@@ -2,35 +2,153 @@
   "themeId": "theme_pirate",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Schlitten",
-  "title": "Pirat und der Schlitten",
+  "disturberWord": "Nixe",
+  "title": "Hilfe im Nebel",
   "sentences": [
     {
-      "text": "Der Pirat läuft schnell zum Tor.",
+      "text": "Dicker Nebel zieht auf.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dicker",
           "syllables": [
-            "Der"
+            "Di",
+            "cker"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "Nebel",
           "syllables": [
-            "Pi",
-            "rat"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "zieht",
           "syllables": [
-            "läuft"
+            "zieht"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "auf",
           "syllables": [
-            "schnell"
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Käpten Ben sieht das Ufer nicht mehr.",
+      "words": [
+        {
+          "clean": "Käpten",
+          "syllables": [
+            "Käp",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Ben",
+          "syllables": [
+            "Ben"
+          ]
+        },
+        {
+          "clean": "sieht",
+          "syllables": [
+            "sieht"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ufer",
+          "syllables": [
+            "U",
+            "fer"
+          ]
+        },
+        {
+          "clean": "nicht",
+          "syllables": [
+            "nicht"
+          ]
+        },
+        {
+          "clean": "mehr",
+          "syllables": [
+            "mehr"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da winkt eine Nixe!",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "winkt",
+          "syllables": [
+            "winkt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie zeigt den sicheren Weg zum Hafen.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "zeigt",
+          "syllables": [
+            "zeigt"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "sicheren",
+          "syllables": [
+            "si",
+            "che",
+            "ren"
+          ]
+        },
+        {
+          "clean": "Weg",
+          "syllables": [
+            "Weg"
           ]
         },
         {
@@ -40,112 +158,30 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Hafen",
           "syllables": [
-            "Tor"
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich einen Schlitten.",
+      "text": "Alle Piraten jubeln laut.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Alle",
           "syllables": [
-            "Da"
+            "Al",
+            "le"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "Piraten",
           "syllables": [
-            "en",
-            "tdeckt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Schlitten",
-          "syllables": [
-            "Schlit",
+            "Pi",
+            "ra",
             "ten"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier schaut genau hin.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam jubeln alle vor Freude.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
           ]
         },
         {
@@ -156,23 +192,54 @@
           ]
         },
         {
-          "clean": "alle",
+          "clean": "laut",
           "syllables": [
-            "al",
-            "le"
+            "laut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die Nixe bekommt dafür einen Keks.",
+      "words": [
+        {
+          "clean": "Die",
+          "syllables": [
+            "Die"
           ]
         },
         {
-          "clean": "vor",
+          "clean": "Nixe",
           "syllables": [
-            "vor"
+            "Ni",
+            "xe"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "bekommt",
           "syllables": [
-            "Freu",
-            "de"
+            "be",
+            "kommt"
+          ]
+        },
+        {
+          "clean": "dafür",
+          "syllables": [
+            "da",
+            "für"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Keks",
+          "syllables": [
+            "Keks"
           ]
         }
       ]

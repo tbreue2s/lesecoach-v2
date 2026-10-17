@@ -2,30 +2,12 @@
   "themeId": "theme_horse",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Trampolin",
-  "title": "Abenteuer auf der weiten Wiese",
+  "disturberWord": "Einhorn",
+  "title": "Besuch am Weidetor",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Pony streift aufmerksam auf der weiten Wiese.",
+      "text": "Pony Matti fraß gemütlich vom grünen Klee am Hof.",
       "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "abenteuerlustiger",
-          "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
-          ]
-        },
         {
           "clean": "Pony",
           "syllables": [
@@ -34,245 +16,207 @@
           ]
         },
         {
-          "clean": "streift",
+          "clean": "Matti",
           "syllables": [
-            "streift"
+            "Mat",
+            "ti"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "fraß",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "fraß"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "gemütlich",
           "syllables": [
-            "auf"
+            "ge",
+            "müt",
+            "lich"
           ]
         },
         {
-          "clean": "der",
+          "clean": "vom",
           "syllables": [
-            "der"
+            "vom"
           ]
         },
         {
-          "clean": "weiten",
+          "clean": "grünen",
+          "syllables": [
+            "grü",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Hof",
+          "syllables": [
+            "Hof"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich trat ein weißes Einhorn aus dem feinen Morgennebel ans Tor.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "trat",
+          "syllables": [
+            "trat"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "weißes",
           "syllables": [
             "wei",
+            "ßes"
+          ]
+        },
+        {
+          "clean": "Einhorn",
+          "syllables": [
+            "Ein",
+            "horn"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "feinen",
+          "syllables": [
+            "fei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Morgennebel",
+          "syllables": [
+            "Mor",
+            "gen",
+            "ne",
+            "bel"
+          ]
+        },
+        {
+          "clean": "ans",
+          "syllables": [
+            "ans"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Freudig teilten sich die beiden neuen Freunde einen knackigen Apfel.",
+      "words": [
+        {
+          "clean": "Freudig",
+          "syllables": [
+            "Freu",
+            "dig"
+          ]
+        },
+        {
+          "clean": "teilten",
+          "syllables": [
+            "teil",
             "ten"
           ]
         },
         {
-          "clean": "Wiese",
+          "clean": "sich",
           "syllables": [
-            "Wie",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Trampolin verborgen.",
-      "words": [
-        {
-          "clean": "Unter",
-          "syllables": [
-            "Un",
-            "ter"
+            "sich"
           ]
         },
         {
-          "clean": "einem",
+          "clean": "die",
           "syllables": [
-            "ei",
-            "nem"
+            "die"
           ]
         },
         {
-          "clean": "dichten",
+          "clean": "beiden",
           "syllables": [
-            "dic",
-            "hten"
+            "bei",
+            "den"
           ]
         },
         {
-          "clean": "Busch",
-          "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Trampolin",
-          "syllables": [
-            "Tram",
-            "po",
-            "lin"
-          ]
-        },
-        {
-          "clean": "verborgen",
-          "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
+          "clean": "neuen",
           "syllables": [
             "neu",
-            "gie",
-            "ri",
-            "ge"
+            "en"
           ]
         },
         {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "seltsame",
-          "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
-      "words": [
-        {
-          "clean": "Voller",
-          "syllables": [
-            "Vol",
-            "ler"
-          ]
-        },
-        {
-          "clean": "Stolz",
-          "syllables": [
-            "Stolz"
-          ]
-        },
-        {
-          "clean": "präsentiert",
-          "syllables": [
-            "prä",
-            "sen",
-            "tiert"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "spektakulären",
-          "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        },
-        {
-          "clean": "allen",
-          "syllables": [
-            "al",
-            "len"
-          ]
-        },
-        {
-          "clean": "Freunden",
+          "clean": "Freunde",
           "syllables": [
             "Freun",
-            "den"
+            "de"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "knackigen",
+          "syllables": [
+            "kna",
+            "cki",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Apfel",
+          "syllables": [
+            "Ap",
+            "fel"
           ]
         }
       ]

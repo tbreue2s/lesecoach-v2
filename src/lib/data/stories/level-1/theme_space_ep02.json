@@ -2,72 +2,67 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Pinguin",
-  "title": "Pinguin am Biber",
+  "disturberWord": "Mond-Sofa",
+  "title": "Besuch auf dem Mond-Sofa",
   "sentences": [
     {
-      "text": "Ein Pinguin steht am Biber.",
+      "text": "Vor Lilly dreht sich ein fremder Planet.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Vor",
           "syllables": [
-            "Ein"
+            "Vor"
           ]
         },
         {
-          "clean": "Pinguin",
+          "clean": "Lilly",
           "syllables": [
-            "Pin",
-            "guin"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "dreht",
           "syllables": [
-            "steht"
+            "dreht"
           ]
         },
         {
-          "clean": "am",
+          "clean": "sich",
           "syllables": [
-            "am"
+            "sich"
           ]
         },
         {
-          "clean": "Biber",
+          "clean": "ein",
           "syllables": [
-            "Bi",
-            "ber"
+            "ein"
+          ]
+        },
+        {
+          "clean": "fremder",
+          "syllables": [
+            "frem",
+            "der"
+          ]
+        },
+        {
+          "clean": "Planet",
+          "syllables": [
+            "Pla",
+            "net"
           ]
         }
       ]
     },
     {
-      "text": "Der Nadel ruft laut im Wind.",
+      "text": "Mitten im Mondstaub steht ein rotes Sofa.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Mitten",
           "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Nadel",
-          "syllables": [
-            "Na",
-            "del"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
+            "Mit",
+            "ten"
           ]
         },
         {
@@ -77,83 +72,173 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Mondstaub",
           "syllables": [
-            "Wind"
+            "Mond",
+            "staub"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "rotes",
+          "syllables": [
+            "ro",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
           ]
         }
       ]
     },
     {
-      "text": "Ein Bruder eilt schnell herbei.",
+      "text": "Darauf winkt ein kleiner grüner Bote.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Darauf",
           "syllables": [
-            "Ein"
+            "Da",
+            "rauf"
           ]
         },
         {
-          "clean": "Bruder",
+          "clean": "winkt",
           "syllables": [
-            "Bru",
-            "der"
+            "winkt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "ein",
           "syllables": [
-            "eilt"
+            "ein"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "kleiner",
           "syllables": [
-            "schnell"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "grüner",
+          "syllables": [
+            "grü",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Bote",
+          "syllables": [
+            "Bo",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Freundlich schenkt er Lilly frischen Tee.",
+      "words": [
+        {
+          "clean": "Freundlich",
+          "syllables": [
+            "Freund",
+            "lich"
+          ]
+        },
+        {
+          "clean": "schenkt",
+          "syllables": [
+            "schenkt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "Lilly",
+          "syllables": [
+            "Lil",
+            "ly"
+          ]
+        },
+        {
+          "clean": "frischen",
+          "syllables": [
+            "fri",
+            "schen"
+          ]
+        },
+        {
+          "clean": "Tee",
+          "syllables": [
+            "Tee"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zusammen verputzen sie herrlich süße Torte.",
+      "words": [
+        {
+          "clean": "Zusammen",
+          "syllables": [
+            "Zu",
+            "sam",
+            "men"
+          ]
+        },
+        {
+          "clean": "verputzen",
+          "syllables": [
+            "ver",
+            "put",
+            "zen"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "herrlich",
           "syllables": [
             "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Maus.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
+            "rlich"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "süße",
           "syllables": [
-            "lau",
-            "fen"
+            "sü",
+            "ße"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "Torte",
           "syllables": [
-            "froh"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Maus",
-          "syllables": [
-            "Maus"
+            "Tor",
+            "te"
           ]
         }
       ]

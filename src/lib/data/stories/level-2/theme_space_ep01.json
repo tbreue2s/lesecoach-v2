@@ -2,72 +2,162 @@
   "themeId": "theme_space",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Trompete",
-  "title": "Das bunte Trompete",
+  "disturberWord": "Sternenwal",
+  "title": "Der Sternenwal",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Leo steuert ruhig sein buntes Ufo.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Leo",
           "syllables": [
-            "Ein"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "steuert",
           "syllables": [
-            "klei",
-            "ner"
+            "steu",
+            "ert"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "ruhig",
           "syllables": [
-            "Hund"
+            "ru",
+            "hig"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "sein",
           "syllables": [
-            "geht"
+            "sein"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "buntes",
           "syllables": [
-            "um",
-            "her"
+            "bun",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt eine Trompete.",
+      "text": "Er blickt durch das weite Fenster.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Er",
           "syllables": [
-            "Mit",
-            "ten"
+            "Er"
           ]
         },
         {
-          "clean": "im",
+          "clean": "blickt",
           "syllables": [
-            "im"
+            "blickt"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "durch",
           "syllables": [
-            "Gras"
+            "durch"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "das",
           "syllables": [
-            "liegt"
+            "das"
+          ]
+        },
+        {
+          "clean": "weite",
+          "syllables": [
+            "wei",
+            "te"
+          ]
+        },
+        {
+          "clean": "Fenster",
+          "syllables": [
+            "Fen",
+            "ster"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort gleitet sanft ein blauer Wal.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "gleitet",
+          "syllables": [
+            "glei",
+            "tet"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "blauer",
+          "syllables": [
+            "blau",
+            "er"
+          ]
+        },
+        {
+          "clean": "Wal",
+          "syllables": [
+            "Wal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Riese pustet eine feine Wolke.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Riese",
+          "syllables": [
+            "Rie",
+            "se"
+          ]
+        },
+        {
+          "clean": "pustet",
+          "syllables": [
+            "pus",
+            "tet"
           ]
         },
         {
@@ -78,85 +168,59 @@
           ]
         },
         {
-          "clean": "Trompete",
+          "clean": "feine",
           "syllables": [
-            "Trom",
-            "pe",
-            "te"
+            "fei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Wolke",
+          "syllables": [
+            "Wol",
+            "ke"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Leo winkt froh in die Nacht.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Leo",
           "syllables": [
-            "Das"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "winkt",
           "syllables": [
-            "lie",
-            "be"
+            "winkt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "froh",
           "syllables": [
-            "Tier"
+            "froh"
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "in",
           "syllables": [
-            "staunt"
+            "in"
           ]
         },
         {
-          "clean": "sehr",
+          "clean": "die",
           "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "die"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "Nacht",
           "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Nacht"
           ]
         }
       ]

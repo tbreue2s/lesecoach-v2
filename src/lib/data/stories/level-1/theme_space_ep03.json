@@ -2,159 +2,243 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Trompete",
-  "title": "Trompete am Oma",
+  "disturberWord": "Kometen-Eis",
+  "title": "Das süße Kometen-Eis",
   "sentences": [
     {
-      "text": "Ein Trompete steht am Oma.",
+      "text": "Paul fliegt mit seinem schnellen Ufo.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Paul",
           "syllables": [
-            "Ein"
+            "Paul"
           ]
         },
         {
-          "clean": "Trompete",
+          "clean": "fliegt",
           "syllables": [
-            "Trom",
-            "pe",
-            "te"
+            "fliegt"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "mit",
           "syllables": [
-            "steht"
+            "mit"
           ]
         },
         {
-          "clean": "am",
+          "clean": "seinem",
           "syllables": [
-            "am"
+            "sei",
+            "nem"
           ]
         },
         {
-          "clean": "Oma",
+          "clean": "schnellen",
           "syllables": [
-            "O",
-            "ma"
+            "schnel",
+            "len"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
           ]
         }
       ]
     },
     {
-      "text": "Der Dieb ruft laut im Wind.",
+      "text": "Vorbei rauscht ein wunderschön funkelnder Komet.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Vorbei",
           "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Dieb",
-          "syllables": [
-            "Dieb"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Opa eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Opa",
-          "syllables": [
-            "O",
-            "pa"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
+            "Vor",
             "bei"
           ]
+        },
+        {
+          "clean": "rauscht",
+          "syllables": [
+            "rauscht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "wunderschön",
+          "syllables": [
+            "wun",
+            "der",
+            "schön"
+          ]
+        },
+        {
+          "clean": "funkelnder",
+          "syllables": [
+            "fun",
+            "kel",
+            "nder"
+          ]
+        },
+        {
+          "clean": "Komet",
+          "syllables": [
+            "Ko",
+            "met"
+          ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Kater.",
+      "text": "Paul betrachtet den Schweif durch eine Lupe.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Paul",
           "syllables": [
-            "Al",
-            "le"
+            "Paul"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "betrachtet",
           "syllables": [
-            "lau",
-            "fen"
+            "be",
+            "trach",
+            "tet"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "den",
           "syllables": [
-            "froh"
+            "den"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "Schweif",
           "syllables": [
-            "zum"
+            "Schweif"
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "durch",
           "syllables": [
-            "Ka",
-            "ter"
+            "durch"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Lupe",
+          "syllables": [
+            "Lu",
+            "pe"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Süßer Sternenstaub schmeckt wie Eis und Limo.",
+      "words": [
+        {
+          "clean": "Süßer",
+          "syllables": [
+            "Sü",
+            "ßer"
+          ]
+        },
+        {
+          "clean": "Sternenstaub",
+          "syllables": [
+            "Ster",
+            "nen",
+            "staub"
+          ]
+        },
+        {
+          "clean": "schmeckt",
+          "syllables": [
+            "schmeckt"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "Eis",
+          "syllables": [
+            "Eis"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Paul genießt diesen herrlich süßen Tag.",
+      "words": [
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "genießt",
+          "syllables": [
+            "ge",
+            "nießt"
+          ]
+        },
+        {
+          "clean": "diesen",
+          "syllables": [
+            "die",
+            "sen"
+          ]
+        },
+        {
+          "clean": "herrlich",
+          "syllables": [
+            "her",
+            "rlich"
+          ]
+        },
+        {
+          "clean": "süßen",
+          "syllables": [
+            "sü",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Tag",
+          "syllables": [
+            "Tag"
           ]
         }
       ]

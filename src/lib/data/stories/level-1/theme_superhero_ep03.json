@@ -2,156 +2,208 @@
   "themeId": "theme_superhero",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Koffer",
-  "title": "Koffer am Baum",
+  "disturberWord": "Eiswagen",
+  "title": "Der bunte Bus",
   "sentences": [
     {
-      "text": "Ein Koffer steht am Baum.",
+      "text": "Superheld Paul lauscht auf einen lauten Motor.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Superheld",
           "syllables": [
-            "Ein"
+            "Su",
+            "per",
+            "held"
           ]
         },
         {
-          "clean": "Koffer",
+          "clean": "Paul",
           "syllables": [
-            "Kof",
-            "fer"
+            "Paul"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "lauscht",
           "syllables": [
-            "steht"
+            "lauscht"
           ]
         },
         {
-          "clean": "am",
+          "clean": "auf",
           "syllables": [
-            "am"
+            "auf"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "einen",
           "syllables": [
-            "Baum"
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "lauten",
+          "syllables": [
+            "lau",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Motor",
+          "syllables": [
+            "Mo",
+            "tor"
           ]
         }
       ]
     },
     {
-      "text": "Der Lied ruft laut im Wind.",
+      "text": "Dort rollt aber nur ein bunter Bus.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dort",
           "syllables": [
-            "Der"
+            "Dort"
           ]
         },
         {
-          "clean": "Lied",
+          "clean": "rollt",
           "syllables": [
-            "Lied"
+            "rollt"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "aber",
           "syllables": [
-            "ruft"
+            "a",
+            "ber"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "nur",
           "syllables": [
-            "laut"
+            "nur"
           ]
         },
         {
-          "clean": "im",
+          "clean": "ein",
           "syllables": [
-            "im"
+            "ein"
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "bunter",
           "syllables": [
-            "Wind"
+            "bun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Bus",
+          "syllables": [
+            "Bus"
           ]
         }
       ]
     },
     {
-      "text": "Ein Kino eilt schnell herbei.",
+      "text": "Für alle durstigen Helden gibt es Limo.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Für",
           "syllables": [
-            "Ein"
+            "Für"
           ]
         },
         {
-          "clean": "Kino",
+          "clean": "alle",
           "syllables": [
-            "Ki",
-            "no"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Glas.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
+            "al",
             "le"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "durstigen",
           "syllables": [
-            "lau",
-            "fen"
+            "dur",
+            "sti",
+            "gen"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "Helden",
           "syllables": [
-            "froh"
+            "Hel",
+            "den"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "gibt",
           "syllables": [
-            "zum"
+            "gibt"
           ]
         },
         {
-          "clean": "Glas",
+          "clean": "es",
           "syllables": [
-            "Glas"
+            "es"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Paul nascht dazu ein Stück süße Torte.",
+      "words": [
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "nascht",
+          "syllables": [
+            "nascht"
+          ]
+        },
+        {
+          "clean": "dazu",
+          "syllables": [
+            "da",
+            "zu"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Stück",
+          "syllables": [
+            "Stück"
+          ]
+        },
+        {
+          "clean": "süße",
+          "syllables": [
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
           ]
         }
       ]

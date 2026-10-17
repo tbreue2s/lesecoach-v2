@@ -57,7 +57,7 @@ export function validateWordForLevel(
   if (level === 2) {
     if (
       /ß/i.test(clean) ||
-      /([a-zA-ZäöüÄÖÜ])\1/i.test(clean) ||
+      /([bcdfghjklmnpqrstvwxyz])\1/i.test(clean) ||
       /(ck|tz)/i.test(clean) ||
       syllables.length >= 3
     ) {
@@ -251,8 +251,17 @@ export function validateStoryForLevel(
     const tokenized = tokenizeStory(storyText, 2);
     tokenized.forEach((sent, idx) => {
       const childWords = sent.words.filter((w) => w.role === 'child');
-      if (childWords.length > 0 && childWords.length !== 2) {
+      if (childWords.length !== 2) {
         issues.push(`Satz ${idx + 1} enthält kein passendes Wortpaar (2 Wörter) für das Kind.`);
+      } else {
+        for (const token of childWords) {
+          const val = validateWordForLevel(token.cleanWord, token.syllables, 2);
+          if (!val.isValid) {
+            issues.push(
+              val.reason || `Ungültiges Kind-Zielwort in Satz ${idx + 1}: ${token.cleanWord}`
+            );
+          }
+        }
       }
     });
   } else if (level === 3) {

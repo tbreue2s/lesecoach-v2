@@ -2,157 +2,235 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Papagei",
-  "title": "Papagei am Tier",
+  "disturberWord": "Pinguin",
+  "title": "Besuch im hohen Ausguck",
   "sentences": [
     {
-      "text": "Ein Papagei steht am Tier.",
+      "text": "Lilly klettert flink an das Segel.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Lilly",
           "syllables": [
-            "Ein"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "Papagei",
+          "clean": "klettert",
           "syllables": [
-            "Pa",
-            "pa",
-            "gei"
+            "klet",
+            "tert"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "flink",
           "syllables": [
-            "steht"
+            "flink"
           ]
         },
         {
-          "clean": "am",
+          "clean": "an",
           "syllables": [
-            "am"
+            "an"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "das",
           "syllables": [
-            "Tier"
+            "das"
+          ]
+        },
+        {
+          "clean": "Segel",
+          "syllables": [
+            "Se",
+            "gel"
           ]
         }
       ]
     },
     {
-      "text": "Der Kamel ruft laut im Wind.",
+      "text": "Sie blickt neugierig durch die Lupe.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sie",
           "syllables": [
-            "Der"
+            "Sie"
           ]
         },
         {
-          "clean": "Kamel",
+          "clean": "blickt",
           "syllables": [
-            "Ka",
-            "mel"
+            "blickt"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "neugierig",
           "syllables": [
-            "ruft"
+            "neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "durch",
           "syllables": [
-            "laut"
+            "durch"
           ]
         },
         {
-          "clean": "im",
+          "clean": "die",
           "syllables": [
-            "im"
+            "die"
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Lupe",
           "syllables": [
-            "Wind"
+            "Lu",
+            "pe"
           ]
         }
       ]
     },
     {
-      "text": "Ein Tal eilt schnell herbei.",
+      "text": "Dort oben sitzt ein Pinguin mit Hut.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dort",
           "syllables": [
-            "Ein"
+            "Dort"
           ]
         },
         {
-          "clean": "Tal",
+          "clean": "oben",
           "syllables": [
-            "Tal"
+            "o",
+            "ben"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "sitzt",
           "syllables": [
-            "eilt"
+            "sitzt"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "ein",
           "syllables": [
-            "schnell"
+            "ein"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Pinguin",
           "syllables": [
-            "her",
-            "bei"
+            "Pin",
+            "guin"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Bein.",
+      "text": "Eine Eisscholle trug ihn über die See.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Eine",
           "syllables": [
-            "Al",
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Eisscholle",
+          "syllables": [
+            "Eis",
+            "schol",
             "le"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "trug",
           "syllables": [
-            "lau",
-            "fen"
+            "trug"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "ihn",
           "syllables": [
-            "froh"
+            "ihn"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "über",
           "syllables": [
-            "zum"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Bein",
+          "clean": "die",
           "syllables": [
-            "Bein"
+            "die"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lilly teilt mit ihm ihr Brot.",
+      "words": [
+        {
+          "clean": "Lilly",
+          "syllables": [
+            "Lil",
+            "ly"
+          ]
+        },
+        {
+          "clean": "teilt",
+          "syllables": [
+            "teilt"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "ihm",
+          "syllables": [
+            "ihm"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "Brot",
+          "syllables": [
+            "Brot"
           ]
         }
       ]

@@ -2,71 +2,42 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Tuba",
-  "title": "Tuba am Dieb",
+  "disturberWord": "Sofa",
+  "title": "Das gemütliche Sofa",
   "sentences": [
     {
-      "text": "Ein Tuba steht am Dieb.",
+      "text": "Krümel schleicht in die Höhle im Tal.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Krümel",
           "syllables": [
-            "Ein"
+            "Krü",
+            "mel"
           ]
         },
         {
-          "clean": "Tuba",
+          "clean": "schleicht",
           "syllables": [
-            "Tu",
-            "ba"
+            "schleicht"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "in",
           "syllables": [
-            "steht"
+            "in"
           ]
         },
         {
-          "clean": "am",
+          "clean": "die",
           "syllables": [
-            "am"
+            "die"
           ]
         },
         {
-          "clean": "Dieb",
+          "clean": "Höhle",
           "syllables": [
-            "Dieb"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Regen ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Regen",
-          "syllables": [
-            "Re",
-            "gen"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
+            "Höh",
+            "le"
           ]
         },
         {
@@ -76,84 +47,172 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Tal",
           "syllables": [
-            "Wind"
+            "Tal"
           ]
         }
       ]
     },
     {
-      "text": "Ein Limo eilt schnell herbei.",
+      "text": "An der Schatzwand funkelt eine goldene Krone.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "An",
           "syllables": [
-            "Ein"
+            "An"
           ]
         },
         {
-          "clean": "Limo",
+          "clean": "der",
           "syllables": [
-            "Li",
-            "mo"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
-          "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Feder.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
-          ]
-        },
-        {
-          "clean": "laufen",
-          "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Feder",
-          "syllables": [
-            "Fe",
             "der"
+          ]
+        },
+        {
+          "clean": "Schatzwand",
+          "syllables": [
+            "Schatz",
+            "wand"
+          ]
+        },
+        {
+          "clean": "funkelt",
+          "syllables": [
+            "fun",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "goldene",
+          "syllables": [
+            "gol",
+            "de",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Krone",
+          "syllables": [
+            "Kro",
+            "ne"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Davor steht ein gemütliches Sofa für den Kater.",
+      "words": [
+        {
+          "clean": "Davor",
+          "syllables": [
+            "Da",
+            "vor"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "gemütliches",
+          "syllables": [
+            "ge",
+            "müt",
+            "li",
+            "ches"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        },
+        {
+          "clean": "für",
+          "syllables": [
+            "für"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schnurrend träumt Krümel an diesem schönen Tag.",
+      "words": [
+        {
+          "clean": "Schnurrend",
+          "syllables": [
+            "Schnur",
+            "rend"
+          ]
+        },
+        {
+          "clean": "träumt",
+          "syllables": [
+            "träumt"
+          ]
+        },
+        {
+          "clean": "Krümel",
+          "syllables": [
+            "Krü",
+            "mel"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "diesem",
+          "syllables": [
+            "die",
+            "sem"
+          ]
+        },
+        {
+          "clean": "schönen",
+          "syllables": [
+            "schö",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Tag",
+          "syllables": [
+            "Tag"
           ]
         }
       ]

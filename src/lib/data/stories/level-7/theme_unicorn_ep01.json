@@ -2,55 +2,51 @@
   "themeId": "theme_unicorn",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Pinguin",
-  "title": "Abenteuer am bunten Regenbogen",
+  "disturberWord": "Torte",
+  "title": "Das Fest am Regenbogen",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Lama streift aufmerksam am bunten Regenbogen.",
+      "text": "Das Einhorn Mia folgte neugierig dem bunten Regenbogen.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Das",
           "syllables": [
-            "Ein"
+            "Das"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "Einhorn",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "Lama",
+          "clean": "Mia",
           "syllables": [
-            "La",
-            "ma"
+            "Mi",
+            "a"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "folgte",
           "syllables": [
-            "streift"
+            "fol",
+            "gte"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "neugierig",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "am",
+          "clean": "dem",
           "syllables": [
-            "am"
+            "dem"
           ]
         },
         {
@@ -72,166 +68,157 @@
       ]
     },
     {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Pinguin verborgen.",
+      "text": "Am Ende stand mitten im weichen Moos ein kleiner Tisch.",
       "words": [
         {
-          "clean": "Unter",
+          "clean": "Am",
           "syllables": [
-            "Un",
-            "ter"
+            "Am"
           ]
         },
         {
-          "clean": "einem",
+          "clean": "Ende",
+          "syllables": [
+            "En",
+            "de"
+          ]
+        },
+        {
+          "clean": "stand",
+          "syllables": [
+            "stand"
+          ]
+        },
+        {
+          "clean": "mitten",
+          "syllables": [
+            "mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Darauf funkelte eine glitzernde Torte aus süßen Wolken.",
+      "words": [
+        {
+          "clean": "Darauf",
+          "syllables": [
+            "Da",
+            "rauf"
+          ]
+        },
+        {
+          "clean": "funkelte",
+          "syllables": [
+            "fun",
+            "kel",
+            "te"
+          ]
+        },
+        {
+          "clean": "eine",
           "syllables": [
             "ei",
-            "nem"
+            "ne"
           ]
         },
         {
-          "clean": "dichten",
+          "clean": "glitzernde",
           "syllables": [
-            "dic",
-            "hten"
+            "glit",
+            "zer",
+            "nde"
           ]
         },
         {
-          "clean": "Busch",
+          "clean": "Torte",
           "syllables": [
-            "Busch"
+            "Tor",
+            "te"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "aus",
           "syllables": [
-            "liegt"
+            "aus"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "süßen",
           "syllables": [
-            "plöt",
-            "zlich"
+            "sü",
+            "ßen"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "Wolken",
           "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Pinguin",
-          "syllables": [
-            "Pin",
-            "guin"
-          ]
-        },
-        {
-          "clean": "verborgen",
-          "syllables": [
-            "ver",
-            "bor",
-            "gen"
+            "Wol",
+            "ken"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
+      "text": "Vergnügt nahm Mia den ersten Bissen.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Vergnügt",
           "syllables": [
-            "Das"
+            "Verg",
+            "nügt"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "nahm",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "nahm"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Mia",
           "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "seltsame",
-          "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
-      "words": [
-        {
-          "clean": "Voller",
-          "syllables": [
-            "Vol",
-            "ler"
-          ]
-        },
-        {
-          "clean": "Stolz",
-          "syllables": [
-            "Stolz"
-          ]
-        },
-        {
-          "clean": "präsentiert",
-          "syllables": [
-            "prä",
-            "sen",
-            "tiert"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
+            "Mi",
+            "a"
           ]
         },
         {
@@ -241,33 +228,17 @@
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "ersten",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
+            "er",
+            "sten"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Bissen",
           "syllables": [
-            "Fund"
-          ]
-        },
-        {
-          "clean": "allen",
-          "syllables": [
-            "al",
-            "len"
-          ]
-        },
-        {
-          "clean": "Freunden",
-          "syllables": [
-            "Freun",
-            "den"
+            "Bis",
+            "sen"
           ]
         }
       ]

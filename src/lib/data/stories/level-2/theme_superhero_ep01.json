@@ -2,129 +2,158 @@
   "themeId": "theme_superhero",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Ananas",
-  "title": "Das bunte Ananas",
+  "disturberWord": "Kater-Held",
+  "title": "Der Kater am Hafen",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Held Leo bewacht den Hafen.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Held",
           "syllables": [
-            "Ein"
+            "Held"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "Leo",
           "syllables": [
-            "klei",
-            "ner"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "bewacht",
           "syllables": [
-            "Hund"
+            "be",
+            "wacht"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "den",
           "syllables": [
-            "geht"
+            "den"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "Hafen",
           "syllables": [
-            "um",
-            "her"
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt eine Ananas.",
+      "text": "Er sucht dort den Pfad.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Er",
           "syllables": [
-            "Mit",
-            "ten"
+            "Er"
           ]
         },
         {
-          "clean": "im",
+          "clean": "sucht",
           "syllables": [
-            "im"
+            "sucht"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "dort",
           "syllables": [
-            "Gras"
+            "dort"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "den",
           "syllables": [
-            "liegt"
+            "den"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "Pfad",
           "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Ananas",
-          "syllables": [
-            "A",
-            "na",
-            "nas"
+            "Pfad"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Da springt hervor ein Kater.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Da",
           "syllables": [
-            "Das"
+            "Da"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "springt",
           "syllables": [
-            "lie",
-            "be"
+            "springt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "hervor",
           "syllables": [
-            "Tier"
+            "her",
+            "vor"
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "ein",
           "syllables": [
-            "staunt"
+            "ein"
           ]
         },
         {
-          "clean": "sehr",
+          "clean": "Kater",
           "syllables": [
-            "sehr"
+            "Ka",
+            "ter"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Sein roter Umhang weht weit.",
+      "words": [
+        {
+          "clean": "Sein",
+          "syllables": [
+            "Sein"
+          ]
+        },
+        {
+          "clean": "roter",
+          "syllables": [
+            "ro",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Umhang",
+          "syllables": [
+            "Um",
+            "hang"
+          ]
+        },
+        {
+          "clean": "weht",
+          "syllables": [
+            "weht"
+          ]
+        },
+        {
+          "clean": "weit",
+          "syllables": [
+            "weit"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der neue Freund hilft sofort.",
       "words": [
         {
           "clean": "Der",
@@ -133,30 +162,29 @@
           ]
         },
         {
-          "clean": "alte",
+          "clean": "neue",
           "syllables": [
-            "al",
-            "te"
+            "neu",
+            "e"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "Freund",
           "syllables": [
-            "Baum"
+            "Freund"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "hilft",
           "syllables": [
-            "spen",
-            "det"
+            "hilft"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "sofort",
           "syllables": [
-            "Schat",
-            "ten"
+            "so",
+            "fort"
           ]
         }
       ]

@@ -2,239 +2,199 @@
   "themeId": "theme_superhero",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Ufo",
-  "title": "Abenteuer auf dem hohen Turm",
+  "disturberWord": "Kater-Held",
+  "title": "Der Retter am Hafen",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Tiger streift aufmerksam auf dem hohen Turm.",
+      "text": "Leo hielt mit flatterndem Umhang am Hafen mutig Wache.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Leo",
           "syllables": [
-            "Ein"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "hielt",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "hielt"
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "mit",
           "syllables": [
-            "Ti",
-            "ger"
+            "mit"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "flatterndem",
           "syllables": [
-            "streift"
+            "flat",
+            "ter",
+            "ndem"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "Umhang",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "Um",
+            "hang"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "am",
           "syllables": [
-            "auf"
+            "am"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "Hafen",
           "syllables": [
-            "dem"
+            "Ha",
+            "fen"
           ]
         },
         {
-          "clean": "hohen",
+          "clean": "mutig",
           "syllables": [
-            "ho",
-            "hen"
+            "mu",
+            "tig"
           ]
         },
         {
-          "clean": "Turm",
+          "clean": "Wache",
           "syllables": [
-            "Turm"
+            "Wa",
+            "che"
           ]
         }
       ]
     },
     {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Ufo verborgen.",
+      "text": "Da sprang plötzlich ein kleiner Kater-Held mit rotem Cape herbei.",
       "words": [
         {
-          "clean": "Unter",
+          "clean": "Da",
           "syllables": [
-            "Un",
-            "ter"
+            "Da"
           ]
         },
         {
-          "clean": "einem",
+          "clean": "sprang",
           "syllables": [
-            "ei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "dichten",
-          "syllables": [
-            "dic",
-            "hten"
-          ]
-        },
-        {
-          "clean": "Busch",
-          "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
+            "sprang"
           ]
         },
         {
           "clean": "plötzlich",
           "syllables": [
-            "plöt",
-            "zlich"
+            "plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "ein",
           "syllables": [
-            "Ein"
+            "ein"
           ]
         },
         {
-          "clean": "Ufo",
+          "clean": "kleiner",
           "syllables": [
-            "U",
-            "fo"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "verborgen",
+          "clean": "KaterHeld",
+          "syllables": [
+            "Ka",
+            "ter",
+            "Held"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "rotem",
+          "syllables": [
+            "ro",
+            "tem"
+          ]
+        },
+        {
+          "clean": "Cape",
+          "syllables": [
+            "Ca",
+            "pe"
+          ]
+        },
+        {
+          "clean": "herbei",
+          "syllables": [
+            "her",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Gemeinsam retteten sie eine verlorene Mütze vor den Wellen.",
+      "words": [
+        {
+          "clean": "Gemeinsam",
+          "syllables": [
+            "Ge",
+            "mein",
+            "sam"
+          ]
+        },
+        {
+          "clean": "retteten",
+          "syllables": [
+            "ret",
+            "te",
+            "ten"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "verlorene",
           "syllables": [
             "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "lo",
+            "re",
+            "ne"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "Mütze",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "Müt",
+            "ze"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "vor",
           "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "seltsame",
-          "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
-      "words": [
-        {
-          "clean": "Voller",
-          "syllables": [
-            "Vol",
-            "ler"
-          ]
-        },
-        {
-          "clean": "Stolz",
-          "syllables": [
-            "Stolz"
-          ]
-        },
-        {
-          "clean": "präsentiert",
-          "syllables": [
-            "prä",
-            "sen",
-            "tiert"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
+            "vor"
           ]
         },
         {
@@ -244,33 +204,65 @@
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "Wellen",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        },
-        {
-          "clean": "allen",
-          "syllables": [
-            "al",
+            "Wel",
             "len"
           ]
+        }
+      ]
+    },
+    {
+      "text": "Zufrieden schnurrte der flauschige Partner im Abendwind.",
+      "words": [
+        {
+          "clean": "Zufrieden",
+          "syllables": [
+            "Zuf",
+            "rie",
+            "den"
+          ]
         },
         {
-          "clean": "Freunden",
+          "clean": "schnurrte",
           "syllables": [
-            "Freun",
-            "den"
+            "schnur",
+            "rte"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "flauschige",
+          "syllables": [
+            "flau",
+            "schi",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Partner",
+          "syllables": [
+            "Part",
+            "ner"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Abendwind",
+          "syllables": [
+            "A",
+            "bend",
+            "wind"
           ]
         }
       ]

@@ -2,28 +2,32 @@
   "themeId": "theme_dino",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Zelt",
-  "title": "Zelt am Paket",
+  "disturberWord": "Riesenblume",
+  "title": "Die zauberhafte Urwald-Blüte",
   "sentences": [
     {
-      "text": "Ein Zelt steht am Paket.",
+      "text": "Lilly schnuppert neugierig am feuchten Gras.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Lilly",
           "syllables": [
-            "Ein"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "Zelt",
+          "clean": "schnuppert",
           "syllables": [
-            "Zelt"
+            "schnup",
+            "pert"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "neugierig",
           "syllables": [
-            "steht"
+            "neu",
+            "gie",
+            "rig"
           ]
         },
         {
@@ -33,126 +37,168 @@
           ]
         },
         {
-          "clean": "Paket",
+          "clean": "feuchten",
           "syllables": [
-            "Pa",
-            "ket"
+            "feuch",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
           ]
         }
       ]
     },
     {
-      "text": "Der Igel ruft laut im Wind.",
+      "text": "Da öffnet sich eine riesige, bunte Blume.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Da",
           "syllables": [
-            "Der"
+            "Da"
           ]
         },
         {
-          "clean": "Igel",
+          "clean": "öffnet",
           "syllables": [
-            "I",
+            "öf",
+            "fnet"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "riesige",
+          "syllables": [
+            "rie",
+            "si",
+            "ge"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Blume",
+          "syllables": [
+            "Blu",
+            "me"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mitten darin sitzt ein kleiner, frecher Vogel.",
+      "words": [
+        {
+          "clean": "Mitten",
+          "syllables": [
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "darin",
+          "syllables": [
+            "da",
+            "rin"
+          ]
+        },
+        {
+          "clean": "sitzt",
+          "syllables": [
+            "sitzt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "frecher",
+          "syllables": [
+            "fre",
+            "cher"
+          ]
+        },
+        {
+          "clean": "Vogel",
+          "syllables": [
+            "Vo",
             "gel"
           ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
         }
       ]
     },
     {
-      "text": "Ein Glas eilt schnell herbei.",
+      "text": "Zärtlich kitzelt er ihre riesige Nase.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Zärtlich",
           "syllables": [
-            "Ein"
+            "Zärt",
+            "lich"
           ]
         },
         {
-          "clean": "Glas",
+          "clean": "kitzelt",
           "syllables": [
-            "Glas"
+            "kit",
+            "zelt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "er",
           "syllables": [
-            "eilt"
+            "er"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "ihre",
           "syllables": [
-            "schnell"
+            "ih",
+            "re"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "riesige",
           "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Falke.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
+            "rie",
+            "si",
+            "ge"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "Nase",
           "syllables": [
-            "lau",
-            "fen"
-          ]
-        },
-        {
-          "clean": "froh",
-          "syllables": [
-            "froh"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Falke",
-          "syllables": [
-            "Fal",
-            "ke"
+            "Na",
+            "se"
           ]
         }
       ]

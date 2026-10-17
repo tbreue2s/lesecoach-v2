@@ -2,55 +2,11 @@
   "themeId": "theme_forest",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Gitarre",
-  "title": "Das lustige Gitarre",
+  "disturberWord": "Ufo",
+  "title": "Besuch im Mondschein",
   "sentences": [
     {
-      "text": "Der rote Gitarre liegt im Gras.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "rote",
-          "syllables": [
-            "ro",
-            "te"
-          ]
-        },
-        {
-          "clean": "Gitarre",
-          "syllables": [
-            "Gi",
-            "tar",
-            "re"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Ein gelber Mond scheint über die Bäume.",
       "words": [
         {
           "clean": "Ein",
@@ -59,22 +15,161 @@
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "gelber",
           "syllables": [
-            "klei",
-            "ner"
+            "gel",
+            "ber"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Mond",
           "syllables": [
-            "Hund"
+            "Mond"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "scheint",
           "syllables": [
-            "sieht"
+            "scheint"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Bäume",
+          "syllables": [
+            "Bäu",
+            "me"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da landet leise ein rundes Ufo.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "rundes",
+          "syllables": [
+            "run",
+            "des"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Daraus steigt heiter ein lieber Gast.",
+      "words": [
+        {
+          "clean": "Daraus",
+          "syllables": [
+            "Da",
+            "raus"
+          ]
+        },
+        {
+          "clean": "steigt",
+          "syllables": [
+            "steigt"
+          ]
+        },
+        {
+          "clean": "heiter",
+          "syllables": [
+            "hei",
+            "ter"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "lieber",
+          "syllables": [
+            "lie",
+            "ber"
+          ]
+        },
+        {
+          "clean": "Gast",
+          "syllables": [
+            "Gast"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Freundlich winkt er in den tiefen Wald.",
+      "words": [
+        {
+          "clean": "Freundlich",
+          "syllables": [
+            "Freund",
+            "lich"
+          ]
+        },
+        {
+          "clean": "winkt",
+          "syllables": [
+            "winkt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
           ]
         },
         {
@@ -84,84 +179,59 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "tiefen",
           "syllables": [
-            "Fund"
+            "tie",
+            "fen"
+          ]
+        },
+        {
+          "clean": "Wald",
+          "syllables": [
+            "Wald"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Ein kluger Rabe freut sich sehr.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Ein",
           "syllables": [
-            "Das"
+            "Ein"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "kluger",
           "syllables": [
-            "lie",
+            "klu",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Rabe",
+          "syllables": [
+            "Ra",
             "be"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "freut",
           "syllables": [
-            "Tier"
+            "freut"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "sich",
           "syllables": [
-            "bellt"
+            "sich"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "sehr",
           "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "sehr"
           ]
         }
       ]

@@ -2,72 +2,50 @@
   "themeId": "theme_unicorn",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Dino",
-  "title": "Dino am Vase",
+  "disturberWord": "Klavier",
+  "title": "Das Zauberklavier",
   "sentences": [
     {
-      "text": "Ein Dino steht am Vase.",
+      "text": "Finn schaukelt auf einer rosa Wolke im Nebel.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Finn",
           "syllables": [
-            "Ein"
+            "Finn"
           ]
         },
         {
-          "clean": "Dino",
+          "clean": "schaukelt",
           "syllables": [
-            "Di",
-            "no"
+            "schau",
+            "kelt"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "auf",
           "syllables": [
-            "steht"
+            "auf"
           ]
         },
         {
-          "clean": "am",
+          "clean": "einer",
           "syllables": [
-            "am"
+            "ei",
+            "ner"
           ]
         },
         {
-          "clean": "Vase",
+          "clean": "rosa",
           "syllables": [
-            "Va",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Bogen ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "ro",
+            "sa"
           ]
         },
         {
-          "clean": "Bogen",
+          "clean": "Wolke",
           "syllables": [
-            "Bo",
-            "gen"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
+            "Wol",
+            "ke"
           ]
         },
         {
@@ -77,84 +55,216 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Nebel",
           "syllables": [
-            "Wind"
+            "Ne",
+            "bel"
           ]
         }
       ]
     },
     {
-      "text": "Ein Rabe eilt schnell herbei.",
+      "text": "Dort schwebt ein weißes Klavier wie eine Feder.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dort",
           "syllables": [
-            "Ein"
+            "Dort"
           ]
         },
         {
-          "clean": "Rabe",
+          "clean": "schwebt",
           "syllables": [
-            "Ra",
-            "be"
+            "schwebt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "ein",
           "syllables": [
-            "eilt"
+            "ein"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "weißes",
           "syllables": [
-            "schnell"
+            "wei",
+            "ßes"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Klavier",
           "syllables": [
-            "her",
-            "bei"
+            "Kla",
+            "vier"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Feder",
+          "syllables": [
+            "Fe",
+            "der"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Dose.",
+      "text": "Finn tippt mit dem Horn voller Mut.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Finn",
           "syllables": [
-            "Al",
-            "le"
+            "Finn"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "tippt",
           "syllables": [
-            "lau",
-            "fen"
+            "tippt"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "mit",
           "syllables": [
-            "froh"
+            "mit"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "dem",
           "syllables": [
-            "zum"
+            "dem"
           ]
         },
         {
-          "clean": "Dose",
+          "clean": "Horn",
           "syllables": [
-            "Do",
-            "se"
+            "Horn"
+          ]
+        },
+        {
+          "clean": "voller",
+          "syllables": [
+            "vol",
+            "ler"
+          ]
+        },
+        {
+          "clean": "Mut",
+          "syllables": [
+            "Mut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Bunte Sterne funkeln zu jeder neuen Note.",
+      "words": [
+        {
+          "clean": "Bunte",
+          "syllables": [
+            "Bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Sterne",
+          "syllables": [
+            "Ster",
+            "ne"
+          ]
+        },
+        {
+          "clean": "funkeln",
+          "syllables": [
+            "fun",
+            "keln"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        },
+        {
+          "clean": "jeder",
+          "syllables": [
+            "je",
+            "der"
+          ]
+        },
+        {
+          "clean": "neuen",
+          "syllables": [
+            "neu",
+            "en"
+          ]
+        },
+        {
+          "clean": "Note",
+          "syllables": [
+            "No",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Finn lauscht glücklich und wiegt sein Haar.",
+      "words": [
+        {
+          "clean": "Finn",
+          "syllables": [
+            "Finn"
+          ]
+        },
+        {
+          "clean": "lauscht",
+          "syllables": [
+            "lauscht"
+          ]
+        },
+        {
+          "clean": "glücklich",
+          "syllables": [
+            "glück",
+            "lich"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "wiegt",
+          "syllables": [
+            "wiegt"
+          ]
+        },
+        {
+          "clean": "sein",
+          "syllables": [
+            "sein"
+          ]
+        },
+        {
+          "clean": "Haar",
+          "syllables": [
+            "Haar"
           ]
         }
       ]

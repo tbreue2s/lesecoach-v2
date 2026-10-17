@@ -2,36 +2,49 @@
   "themeId": "theme_wizard",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Roboter",
-  "title": "Roboter am Besen",
+  "disturberWord": "Flugbesen",
+  "title": "Der tanzende Besen",
   "sentences": [
     {
-      "text": "Ein Roboter steht am Besen.",
+      "text": "Paul putzt die Zauberstube mit dem Besen.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Paul",
           "syllables": [
-            "Ein"
+            "Paul"
           ]
         },
         {
-          "clean": "Roboter",
+          "clean": "putzt",
           "syllables": [
-            "Ro",
-            "bo",
-            "ter"
+            "putzt"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "die",
           "syllables": [
-            "steht"
+            "die"
           ]
         },
         {
-          "clean": "am",
+          "clean": "Zauberstube",
           "syllables": [
-            "am"
+            "Zau",
+            "ber",
+            "stu",
+            "be"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
           ]
         },
         {
@@ -44,31 +57,20 @@
       ]
     },
     {
-      "text": "Der Regen ruft laut im Wind.",
+      "text": "Plötzlich erklingt im Zimmer eine feine Note.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Plötzlich",
           "syllables": [
-            "Der"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Regen",
+          "clean": "erklingt",
           "syllables": [
-            "Re",
-            "gen"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
+            "erk",
+            "lingt"
           ]
         },
         {
@@ -78,84 +80,181 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Zimmer",
           "syllables": [
-            "Wind"
+            "Zim",
+            "mer"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "feine",
+          "syllables": [
+            "fei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Note",
+          "syllables": [
+            "No",
+            "te"
           ]
         }
       ]
     },
     {
-      "text": "Ein Nadel eilt schnell herbei.",
+      "text": "Der Holzstock tanzt Walzer mit dem Kater.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Der",
           "syllables": [
-            "Ein"
+            "Der"
           ]
         },
         {
-          "clean": "Nadel",
+          "clean": "Holzstock",
           "syllables": [
-            "Na",
-            "del"
+            "Hol",
+            "zstock"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "tanzt",
           "syllables": [
-            "eilt"
+            "tanzt"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "Walzer",
           "syllables": [
-            "schnell"
+            "Wal",
+            "zer"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "mit",
           "syllables": [
-            "her",
-            "bei"
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Foto.",
+      "text": "Schwungvoll wirbeln die Partner um die Vase.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Schwungvoll",
           "syllables": [
-            "Al",
-            "le"
+            "Schwung",
+            "voll"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "wirbeln",
           "syllables": [
-            "lau",
-            "fen"
+            "wir",
+            "beln"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "die",
           "syllables": [
-            "froh"
+            "die"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "Partner",
           "syllables": [
-            "zum"
+            "Part",
+            "ner"
           ]
         },
         {
-          "clean": "Foto",
+          "clean": "um",
           "syllables": [
-            "Fo",
-            "to"
+            "um"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Vase",
+          "syllables": [
+            "Va",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Paul lacht und öffnet ihnen das Tor.",
+      "words": [
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "lacht",
+          "syllables": [
+            "lacht"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "öffnet",
+          "syllables": [
+            "öf",
+            "fnet"
+          ]
+        },
+        {
+          "clean": "ihnen",
+          "syllables": [
+            "ih",
+            "nen"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

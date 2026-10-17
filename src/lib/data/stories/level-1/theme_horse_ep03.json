@@ -2,28 +2,89 @@
   "themeId": "theme_horse",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Keks",
-  "title": "Keks am Tor",
+  "disturberWord": "Goldhuf",
+  "title": "Das Zaubereisen im Moos",
   "sentences": [
     {
-      "text": "Ein Keks steht am Tor.",
+      "text": "Finja reitet vorsichtig durch das tiefe Tal.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Finja",
           "syllables": [
-            "Ein"
+            "Fin",
+            "ja"
           ]
         },
         {
-          "clean": "Keks",
+          "clean": "reitet",
           "syllables": [
-            "Keks"
+            "rei",
+            "tet"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "vorsichtig",
           "syllables": [
-            "steht"
+            "vor",
+            "sich",
+            "tig"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "tiefe",
+          "syllables": [
+            "tie",
+            "fe"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ihr ängstliches Pony scheut am breiten Ufer.",
+      "words": [
+        {
+          "clean": "Ihr",
+          "syllables": [
+            "Ihr"
+          ]
+        },
+        {
+          "clean": "ängstliches",
+          "syllables": [
+            "äng",
+            "stli",
+            "ches"
+          ]
+        },
+        {
+          "clean": "Pony",
+          "syllables": [
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "scheut",
+          "syllables": [
+            "scheut"
           ]
         },
         {
@@ -33,39 +94,50 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "breiten",
           "syllables": [
-            "Tor"
+            "brei",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Ufer",
+          "syllables": [
+            "U",
+            "fer"
           ]
         }
       ]
     },
     {
-      "text": "Der Kamel ruft laut im Wind.",
+      "text": "Ein goldenes Hufeisen blitzt im weichen Moos.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Ein",
           "syllables": [
-            "Der"
+            "Ein"
           ]
         },
         {
-          "clean": "Kamel",
+          "clean": "goldenes",
           "syllables": [
-            "Ka",
-            "mel"
+            "gol",
+            "de",
+            "nes"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Hufeisen",
           "syllables": [
-            "ruft"
+            "Hu",
+            "fei",
+            "sen"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "blitzt",
           "syllables": [
-            "laut"
+            "blitzt"
           ]
         },
         {
@@ -75,83 +147,119 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "weichen",
           "syllables": [
-            "Wind"
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
           ]
         }
       ]
     },
     {
-      "text": "Ein Maus eilt schnell herbei.",
+      "text": "Der neue Goldhuf schenkt ihm riesigen Mut.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Der",
           "syllables": [
-            "Ein"
+            "Der"
           ]
         },
         {
-          "clean": "Maus",
+          "clean": "neue",
           "syllables": [
-            "Maus"
+            "neu",
+            "e"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "Goldhuf",
           "syllables": [
-            "eilt"
+            "Gold",
+            "huf"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "schenkt",
           "syllables": [
-            "schnell"
+            "schenkt"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "ihm",
           "syllables": [
-            "her",
-            "bei"
+            "ihm"
+          ]
+        },
+        {
+          "clean": "riesigen",
+          "syllables": [
+            "rie",
+            "si",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Mut",
+          "syllables": [
+            "Mut"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Rabe.",
+      "text": "Frech überholt das kleine Pferd jeden Vogel.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Frech",
           "syllables": [
-            "Al",
-            "le"
+            "Frech"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "überholt",
           "syllables": [
-            "lau",
-            "fen"
+            "ü",
+            "ber",
+            "holt"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "das",
           "syllables": [
-            "froh"
+            "das"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "kleine",
           "syllables": [
-            "zum"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "Rabe",
+          "clean": "Pferd",
           "syllables": [
-            "Ra",
-            "be"
+            "Pferd"
+          ]
+        },
+        {
+          "clean": "jeden",
+          "syllables": [
+            "je",
+            "den"
+          ]
+        },
+        {
+          "clean": "Vogel",
+          "syllables": [
+            "Vo",
+            "gel"
           ]
         }
       ]

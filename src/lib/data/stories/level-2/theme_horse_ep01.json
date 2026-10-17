@@ -2,29 +2,147 @@
   "themeId": "theme_horse",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Känguru",
-  "title": "Das bunte Känguru",
+  "disturberWord": "Einhorn",
+  "title": "Besuch am Tor",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Das Pony grast heute sehr ruhig.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Das",
           "syllables": [
-            "Ein"
+            "Das"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "Pony",
           "syllables": [
-            "klei",
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "grast",
+          "syllables": [
+            "grast"
+          ]
+        },
+        {
+          "clean": "heute",
+          "syllables": [
+            "heu",
+            "te"
+          ]
+        },
+        {
+          "clean": "sehr",
+          "syllables": [
+            "sehr"
+          ]
+        },
+        {
+          "clean": "ruhig",
+          "syllables": [
+            "ru",
+            "hig"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Nun zieht leise ein feiner Nebel.",
+      "words": [
+        {
+          "clean": "Nun",
+          "syllables": [
+            "Nun"
+          ]
+        },
+        {
+          "clean": "zieht",
+          "syllables": [
+            "zieht"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "feiner",
+          "syllables": [
+            "fei",
             "ner"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Nebel",
           "syllables": [
-            "Hund"
+            "Ne",
+            "bel"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort steht auf einmal ein Einhorn.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "einmal",
+          "syllables": [
+            "ein",
+            "mal"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Einhorn",
+          "syllables": [
+            "Ein",
+            "horn"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Es geht langsam an das Tor.",
+      "words": [
+        {
+          "clean": "Es",
+          "syllables": [
+            "Es"
           ]
         },
         {
@@ -34,129 +152,74 @@
           ]
         },
         {
-          "clean": "umher",
+          "clean": "langsam",
           "syllables": [
-            "um",
-            "her"
+            "lang",
+            "sam"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt einen Känguru.",
+      "text": "Gemeinsam kauen beide nun feines Heu.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Gemeinsam",
           "syllables": [
-            "Mit",
-            "ten"
+            "Ge",
+            "mein",
+            "sam"
           ]
         },
         {
-          "clean": "im",
+          "clean": "kauen",
           "syllables": [
-            "im"
+            "kau",
+            "en"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "beide",
           "syllables": [
-            "Gras"
+            "bei",
+            "de"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "nun",
           "syllables": [
-            "liegt"
+            "nun"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "feines",
           "syllables": [
-            "ei",
-            "nen"
+            "fei",
+            "nes"
           ]
         },
         {
-          "clean": "Känguru",
+          "clean": "Heu",
           "syllables": [
-            "Kän",
-            "gu",
-            "ru"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier staunt sehr.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "sehr",
-          "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Heu"
           ]
         }
       ]

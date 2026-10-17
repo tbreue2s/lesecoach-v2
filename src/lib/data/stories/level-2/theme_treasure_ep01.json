@@ -2,11 +2,11 @@
   "themeId": "theme_treasure",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Trompete",
-  "title": "Das bunte Trompete",
+  "disturberWord": "Schlafdrache",
+  "title": "Der kleine Schläfer",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Ein kluger Rabe zeigt den Weg.",
       "words": [
         {
           "clean": "Ein",
@@ -15,59 +15,59 @@
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "kluger",
           "syllables": [
-            "klei",
-            "ner"
+            "klu",
+            "ger"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Rabe",
           "syllables": [
-            "Hund"
+            "Ra",
+            "be"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "zeigt",
           "syllables": [
-            "geht"
+            "zeigt"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "den",
           "syllables": [
-            "um",
-            "her"
+            "den"
+          ]
+        },
+        {
+          "clean": "Weg",
+          "syllables": [
+            "Weg"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt eine Trompete.",
+      "text": "Vor ihnen steht eine alte Kiste.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Vor",
           "syllables": [
-            "Mit",
-            "ten"
+            "Vor"
           ]
         },
         {
-          "clean": "im",
+          "clean": "ihnen",
           "syllables": [
-            "im"
+            "ih",
+            "nen"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "steht",
           "syllables": [
-            "Gras"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
+            "steht"
           ]
         },
         {
@@ -78,17 +78,111 @@
           ]
         },
         {
-          "clean": "Trompete",
+          "clean": "alte",
           "syllables": [
-            "Trom",
-            "pe",
+            "al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Kiste",
+          "syllables": [
+            "Kis",
             "te"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Darin liegt sanft die feine Perle.",
+      "words": [
+        {
+          "clean": "Darin",
+          "syllables": [
+            "Da",
+            "rin"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "feine",
+          "syllables": [
+            "fei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neben ihr schläft ein kleiner Drache.",
+      "words": [
+        {
+          "clean": "Neben",
+          "syllables": [
+            "Ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "schläft",
+          "syllables": [
+            "schläft"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Drache",
+          "syllables": [
+            "Dra",
+            "che"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das müde Tier schnarcht ganz leise.",
       "words": [
         {
           "clean": "Das",
@@ -97,10 +191,10 @@
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "müde",
           "syllables": [
-            "lie",
-            "be"
+            "mü",
+            "de"
           ]
         },
         {
@@ -110,53 +204,22 @@
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "schnarcht",
           "syllables": [
-            "staunt"
+            "schnarcht"
           ]
         },
         {
-          "clean": "sehr",
+          "clean": "ganz",
           "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "ganz"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "leise",
           "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "lei",
+            "se"
           ]
         }
       ]

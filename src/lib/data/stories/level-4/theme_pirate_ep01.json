@@ -2,230 +2,31 @@
   "themeId": "theme_pirate",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Taschenlampe",
-  "title": "Ein Fund auf dem großen Schiff",
+  "disturberWord": "Nixe",
+  "title": "Hilfe mit Flosse",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt auf dem großen Schiff.",
+      "text": "Dichter Nebel umhüllt das Piratenschiff.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dichter",
           "syllables": [
-            "Ein"
+            "Dich",
+            "ter"
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "Nebel",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "umhüllt",
           "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "beginnt",
-          "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "großen",
-          "syllables": [
-            "gro",
-            "ßen"
-          ]
-        },
-        {
-          "clean": "Schiff",
-          "syllables": [
-            "Schiff"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Pirat läuft über die Wiese.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Pirat",
-          "syllables": [
-            "Pi",
-            "rat"
-          ]
-        },
-        {
-          "clean": "läuft",
-          "syllables": [
-            "läuft"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ganz plötzlich taucht Ein Taschenlampe auf dem Pfad auf.",
-      "words": [
-        {
-          "clean": "Ganz",
-          "syllables": [
-            "Ganz"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "taucht",
-          "syllables": [
-            "taucht"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Taschenlampe",
-          "syllables": [
-            "Ta",
-            "schen",
-            "lam",
-            "pe"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Er staunt über den Fund.",
-      "words": [
-        {
-          "clean": "Er",
-          "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
+            "um",
+            "hüllt"
           ]
         },
         {
@@ -235,25 +36,236 @@
           ]
         },
         {
-          "clean": "neue",
+          "clean": "Piratenschiff",
           "syllables": [
-            "neu",
-            "e"
+            "Pi",
+            "ra",
+            "ten",
+            "schiff"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Kapitän Finn sucht den Weg zum Hafen.",
+      "words": [
+        {
+          "clean": "Kapitän",
+          "syllables": [
+            "Ka",
+            "pi",
+            "tän"
           ]
         },
         {
-          "clean": "Abenteuer",
+          "clean": "Finn",
           "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
+            "Finn"
           ]
         },
         {
-          "clean": "an",
+          "clean": "sucht",
           "syllables": [
-            "an"
+            "sucht"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Weg",
+          "syllables": [
+            "Weg"
+          ]
+        },
+        {
+          "clean": "zum",
+          "syllables": [
+            "zum"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich taucht eine Nixe auf.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "taucht",
+          "syllables": [
+            "taucht"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie winkt freundlich und schwimmt sicher voraus.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "winkt",
+          "syllables": [
+            "winkt"
+          ]
+        },
+        {
+          "clean": "freundlich",
+          "syllables": [
+            "freund",
+            "lich"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "schwimmt",
+          "syllables": [
+            "schwimmt"
+          ]
+        },
+        {
+          "clean": "sicher",
+          "syllables": [
+            "si",
+            "cher"
+          ]
+        },
+        {
+          "clean": "voraus",
+          "syllables": [
+            "vo",
+            "raus"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das Boot erreicht den Hafen.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        },
+        {
+          "clean": "erreicht",
+          "syllables": [
+            "er",
+            "reicht"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zum Abschied spritzt sie Finn lachend nass.",
+      "words": [
+        {
+          "clean": "Zum",
+          "syllables": [
+            "Zum"
+          ]
+        },
+        {
+          "clean": "Abschied",
+          "syllables": [
+            "Ab",
+            "schied"
+          ]
+        },
+        {
+          "clean": "spritzt",
+          "syllables": [
+            "spritzt"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "Finn",
+          "syllables": [
+            "Finn"
+          ]
+        },
+        {
+          "clean": "lachend",
+          "syllables": [
+            "la",
+            "chend"
+          ]
+        },
+        {
+          "clean": "nass",
+          "syllables": [
+            "nass"
           ]
         }
       ]

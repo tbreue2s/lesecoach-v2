@@ -2,50 +2,222 @@
   "themeId": "theme_dino",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Fernseher",
-  "title": "Der Dino und der Fernseher",
+  "disturberWord": "Ufo",
+  "title": "Besuch aus dem All",
   "sentences": [
     {
-      "text": "Ein Dino stapft durch das Tal.",
+      "text": "Poldi spaziert heiter durch das grüne Tal.",
       "words": [
-        { "clean": "Ein", "syllables": ["Ein"] },
-        { "clean": "Dino", "syllables": ["Di", "no"] },
-        { "clean": "stapft", "syllables": ["stapft"] },
-        { "clean": "durch", "syllables": ["durch"] },
-        { "clean": "das", "syllables": ["das"] },
-        { "clean": "Tal", "syllables": ["Tal"] }
+        {
+          "clean": "Poldi",
+          "syllables": [
+            "Pol",
+            "di"
+          ]
+        },
+        {
+          "clean": "spaziert",
+          "syllables": [
+            "spa",
+            "ziert"
+          ]
+        },
+        {
+          "clean": "heiter",
+          "syllables": [
+            "hei",
+            "ter"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "grüne",
+          "syllables": [
+            "grü",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
+          ]
+        }
       ]
     },
     {
-      "text": "Im Gras flimmert ein Fernseher.",
+      "text": "Dicht neben ihm landet ein winziges Ufo.",
       "words": [
-        { "clean": "Im", "syllables": ["Im"] },
-        { "clean": "Gras", "syllables": ["Gras"] },
-        { "clean": "flimmert", "syllables": ["flim", "mert"] },
-        { "clean": "ein", "syllables": ["ein"] },
-        { "clean": "Fernseher", "syllables": ["Fern", "se", "her"] }
+        {
+          "clean": "Dicht",
+          "syllables": [
+            "Dicht"
+          ]
+        },
+        {
+          "clean": "neben",
+          "syllables": [
+            "ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "ihm",
+          "syllables": [
+            "ihm"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "winziges",
+          "syllables": [
+            "win",
+            "zi",
+            "ges"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
       ]
     },
     {
-      "text": "Der Dino drückt auf das Kabel.",
+      "text": "Neugierig vergleichen sie ihre Abdrücke im Boden.",
       "words": [
-        { "clean": "Der", "syllables": ["Der"] },
-        { "clean": "Dino", "syllables": ["Di", "no"] },
-        { "clean": "drückt", "syllables": ["drückt"] },
-        { "clean": "auf", "syllables": ["auf"] },
-        { "clean": "das", "syllables": ["das"] },
-        { "clean": "Kabel", "syllables": ["Ka", "bel"] }
+        {
+          "clean": "Neugierig",
+          "syllables": [
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "vergleichen",
+          "syllables": [
+            "verg",
+            "lei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "ihre",
+          "syllables": [
+            "ih",
+            "re"
+          ]
+        },
+        {
+          "clean": "Abdrücke",
+          "syllables": [
+            "Ab",
+            "drü",
+            "cke"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Boden",
+          "syllables": [
+            "Bo",
+            "den"
+          ]
+        }
       ]
     },
     {
-      "text": "Auf dem Glas tanzt eine Maus.",
+      "text": "Herzlich lacht der kleine Pilot mit dem Dino.",
       "words": [
-        { "clean": "Auf", "syllables": ["Auf"] },
-        { "clean": "dem", "syllables": ["dem"] },
-        { "clean": "Glas", "syllables": ["Glas"] },
-        { "clean": "tanzt", "syllables": ["tanzt"] },
-        { "clean": "eine", "syllables": ["ei", "ne"] },
-        { "clean": "Maus", "syllables": ["Maus"] }
+        {
+          "clean": "Herzlich",
+          "syllables": [
+            "Her",
+            "zlich"
+          ]
+        },
+        {
+          "clean": "lacht",
+          "syllables": [
+            "lacht"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "kleine",
+          "syllables": [
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        }
       ]
     }
   ]

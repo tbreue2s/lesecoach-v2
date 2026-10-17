@@ -2,11 +2,191 @@
   "themeId": "theme_forest",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Banane",
-  "title": "Ein Fund im grünen Wald",
+  "disturberWord": "Klavier",
+  "title": "Das Geheimnis im Moos",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt im grünen Wald.",
+      "text": "Im Moos rascheln goldene Blätter.",
+      "words": [
+        {
+          "clean": "Im",
+          "syllables": [
+            "Im"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        },
+        {
+          "clean": "rascheln",
+          "syllables": [
+            "ra",
+            "scheln"
+          ]
+        },
+        {
+          "clean": "goldene",
+          "syllables": [
+            "gol",
+            "de",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Blätter",
+          "syllables": [
+            "Blät",
+            "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zwei Kinder wandern leise über schmale Waldpfade.",
+      "words": [
+        {
+          "clean": "Zwei",
+          "syllables": [
+            "Zwei"
+          ]
+        },
+        {
+          "clean": "Kinder",
+          "syllables": [
+            "Kin",
+            "der"
+          ]
+        },
+        {
+          "clean": "wandern",
+          "syllables": [
+            "wan",
+            "dern"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "schmale",
+          "syllables": [
+            "schma",
+            "le"
+          ]
+        },
+        {
+          "clean": "Waldpfade",
+          "syllables": [
+            "Wald",
+            "pfa",
+            "de"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da steht ein altes Klavier!",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "altes",
+          "syllables": [
+            "al",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Klavier",
+          "syllables": [
+            "Kla",
+            "vier"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Es glänzt mitten auf der stillen Lichtung.",
+      "words": [
+        {
+          "clean": "Es",
+          "syllables": [
+            "Es"
+          ]
+        },
+        {
+          "clean": "glänzt",
+          "syllables": [
+            "glänzt"
+          ]
+        },
+        {
+          "clean": "mitten",
+          "syllables": [
+            "mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "stillen",
+          "syllables": [
+            "stil",
+            "len"
+          ]
+        },
+        {
+          "clean": "Lichtung",
+          "syllables": [
+            "Lich",
+            "tung"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Igel tippelt heran.",
       "words": [
         {
           "clean": "Ein",
@@ -15,54 +195,10 @@
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "kleiner",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "beginnt",
-          "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "grünen",
-          "syllables": [
-            "grü",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Wald",
-          "syllables": [
-            "Wald"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Igel läuft über die Wiese.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "klei",
+            "ner"
           ]
         },
         {
@@ -73,180 +209,71 @@
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "tippelt",
           "syllables": [
-            "läuft"
+            "tip",
+            "pelt"
           ]
         },
         {
-          "clean": "über",
+          "clean": "heran",
           "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
-            "se"
+            "he",
+            "ran"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Banane auf dem Pfad auf.",
+      "text": "Neugierig drückt seine Pfote eine helle Note.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Neugierig",
           "syllables": [
-            "Ganz"
+            "Neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "drückt",
           "syllables": [
-            "plöt",
-            "zlich"
+            "drückt"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "seine",
           "syllables": [
-            "taucht"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Banane",
-          "syllables": [
-            "Ba",
-            "na",
+            "sei",
             "ne"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "Pfote",
           "syllables": [
-            "auf"
+            "Pfo",
+            "te"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "eine",
           "syllables": [
-            "dem"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "Pfad",
+          "clean": "helle",
           "syllables": [
-            "Pfad"
+            "hel",
+            "le"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "Note",
           "syllables": [
-            "auf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Er staunt über den Fund.",
-      "words": [
-        {
-          "clean": "Er",
-          "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "neue",
-          "syllables": [
-            "neu",
-            "e"
-          ]
-        },
-        {
-          "clean": "Abenteuer",
-          "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
+            "No",
+            "te"
           ]
         }
       ]

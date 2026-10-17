@@ -2,139 +2,38 @@
   "themeId": "theme_pirate",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Zauberhut",
-  "title": "Das lustige Zauberhut",
+  "disturberWord": "Sofa",
+  "title": "Das Sofa im Meer",
   "sentences": [
     {
-      "text": "Der rote Zauberhut liegt im Gras.",
+      "text": "Niemand findet heute eine alte Kiste.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Niemand",
           "syllables": [
-            "Der"
+            "Nie",
+            "mand"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "findet",
           "syllables": [
-            "ro",
+            "fin",
+            "det"
+          ]
+        },
+        {
+          "clean": "heute",
+          "syllables": [
+            "heu",
             "te"
           ]
         },
         {
-          "clean": "Zauberhut",
+          "clean": "eine",
           "syllables": [
-            "Zau",
-            "ber",
-            "hut"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "kleiner",
-          "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Hund",
-          "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "ei",
+            "ne"
           ]
         },
         {
@@ -145,23 +44,178 @@
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "Kiste",
           "syllables": [
-            "Baum"
+            "Kis",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort schwimmt nun ein weiches Sofa.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "schwimmt",
           "syllables": [
-            "spen",
-            "det"
+            "schwimmt"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "nun",
           "syllables": [
-            "Schat",
-            "ten"
+            "nun"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "weiches",
+          "syllables": [
+            "wei",
+            "ches"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Es leuchtet wie eine rote Blume.",
+      "words": [
+        {
+          "clean": "Es",
+          "syllables": [
+            "Es"
+          ]
+        },
+        {
+          "clean": "leuchtet",
+          "syllables": [
+            "leuch",
+            "tet"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "rote",
+          "syllables": [
+            "ro",
+            "te"
+          ]
+        },
+        {
+          "clean": "Blume",
+          "syllables": [
+            "Blu",
+            "me"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fröhlich klettert hinauf der Kater.",
+      "words": [
+        {
+          "clean": "Fröhlich",
+          "syllables": [
+            "Fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "klettert",
+          "syllables": [
+            "klet",
+            "tert"
+          ]
+        },
+        {
+          "clean": "hinauf",
+          "syllables": [
+            "hi",
+            "nauf"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Für ihn ist das ein Thron.",
+      "words": [
+        {
+          "clean": "Für",
+          "syllables": [
+            "Für"
+          ]
+        },
+        {
+          "clean": "ihn",
+          "syllables": [
+            "ihn"
+          ]
+        },
+        {
+          "clean": "ist",
+          "syllables": [
+            "ist"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Thron",
+          "syllables": [
+            "Thron"
           ]
         }
       ]

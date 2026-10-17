@@ -2,49 +2,165 @@
   "themeId": "theme_ocean",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Papagei",
-  "title": "Papagei am Feder",
+  "disturberWord": "Krone",
+  "title": "Der Schatz am Ufer",
   "sentences": [
     {
-      "text": "Ein Papagei steht am Feder.",
+      "text": "Anton läuft fröhlich an dem weiten Ufer.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Anton",
           "syllables": [
-            "Ein"
+            "An",
+            "ton"
           ]
         },
         {
-          "clean": "Papagei",
+          "clean": "läuft",
           "syllables": [
-            "Pa",
-            "pa",
-            "gei"
+            "läuft"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "fröhlich",
           "syllables": [
-            "steht"
+            "fröh",
+            "lich"
           ]
         },
         {
-          "clean": "am",
+          "clean": "an",
           "syllables": [
-            "am"
+            "an"
           ]
         },
         {
-          "clean": "Feder",
+          "clean": "dem",
           "syllables": [
-            "Fe",
-            "der"
+            "dem"
+          ]
+        },
+        {
+          "clean": "weiten",
+          "syllables": [
+            "wei",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Ufer",
+          "syllables": [
+            "U",
+            "fer"
           ]
         }
       ]
     },
     {
-      "text": "Der Blume ruft laut im Wind.",
+      "text": "Eine sanfte Welle bringt eine goldene Krone.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "sanfte",
+          "syllables": [
+            "san",
+            "fte"
+          ]
+        },
+        {
+          "clean": "Welle",
+          "syllables": [
+            "Wel",
+            "le"
+          ]
+        },
+        {
+          "clean": "bringt",
+          "syllables": [
+            "bringt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "goldene",
+          "syllables": [
+            "gol",
+            "de",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Krone",
+          "syllables": [
+            "Kro",
+            "ne"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Bei der Suche hilft ein lieber Wal.",
+      "words": [
+        {
+          "clean": "Bei",
+          "syllables": [
+            "Bei"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Suche",
+          "syllables": [
+            "Su",
+            "che"
+          ]
+        },
+        {
+          "clean": "hilft",
+          "syllables": [
+            "hilft"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "lieber",
+          "syllables": [
+            "lie",
+            "ber"
+          ]
+        },
+        {
+          "clean": "Wal",
+          "syllables": [
+            "Wal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der König im Ozean ist eine Krake.",
       "words": [
         {
           "clean": "Der",
@@ -53,22 +169,10 @@
           ]
         },
         {
-          "clean": "Blume",
+          "clean": "König",
           "syllables": [
-            "Blu",
-            "me"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
+            "Kö",
+            "nig"
           ]
         },
         {
@@ -78,83 +182,85 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Ozean",
           "syllables": [
-            "Wind"
+            "O",
+            "ze",
+            "an"
+          ]
+        },
+        {
+          "clean": "ist",
+          "syllables": [
+            "ist"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Krake",
+          "syllables": [
+            "Kra",
+            "ke"
           ]
         }
       ]
     },
     {
-      "text": "Ein Bein eilt schnell herbei.",
+      "text": "Er setzt sie stolz auf für ein Foto.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Er",
           "syllables": [
-            "Ein"
+            "Er"
           ]
         },
         {
-          "clean": "Bein",
+          "clean": "setzt",
           "syllables": [
-            "Bein"
+            "setzt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "sie",
           "syllables": [
-            "eilt"
+            "sie"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "stolz",
           "syllables": [
-            "schnell"
+            "stolz"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "auf",
           "syllables": [
-            "her",
-            "bei"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle laufen froh zum Pilot.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
-            "le"
+            "auf"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "für",
           "syllables": [
-            "lau",
-            "fen"
+            "für"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "ein",
           "syllables": [
-            "froh"
+            "ein"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "Foto",
           "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Pilot",
-          "syllables": [
-            "Pi",
-            "lot"
+            "Fo",
+            "to"
           ]
         }
       ]

@@ -2,89 +2,30 @@
   "themeId": "theme_pirate",
   "level": 8,
   "episode": 1,
-  "disturberWord": "Rucksack",
-  "title": "Aufregung auf dem großen Schiff",
+  "disturberWord": "Nixe",
+  "title": "Die Nixe im Nebelmeer",
   "sentences": [
     {
-      "text": "Was für ein herrlicher und sonniger Morgen!",
+      "text": "Dichter Nebel liegt auf dem weiten Meer.",
       "words": [
         {
-          "clean": "Was",
+          "clean": "Dichter",
           "syllables": [
-            "Was"
+            "Dich",
+            "ter"
           ]
         },
         {
-          "clean": "für",
+          "clean": "Nebel",
           "syllables": [
-            "für"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "liegt",
           "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "herrlicher",
-          "syllables": [
-            "her",
-            "rli",
-            "cher"
-          ]
-        },
-        {
-          "clean": "und",
-          "syllables": [
-            "und"
-          ]
-        },
-        {
-          "clean": "sonniger",
-          "syllables": [
-            "son",
-            "ni",
-            "ger"
-          ]
-        },
-        {
-          "clean": "Morgen",
-          "syllables": [
-            "Mor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Pirat spaziert vergnügt auf dem großen Schiff.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Pirat",
-          "syllables": [
-            "Pi",
-            "rat"
-          ]
-        },
-        {
-          "clean": "spaziert",
-          "syllables": [
-            "spa",
-            "ziert"
-          ]
-        },
-        {
-          "clean": "vergnügt",
-          "syllables": [
-            "verg",
-            "nügt"
+            "liegt"
           ]
         },
         {
@@ -100,33 +41,234 @@
           ]
         },
         {
-          "clean": "großen",
+          "clean": "weiten",
           "syllables": [
-            "gro",
-            "ßen"
+            "wei",
+            "ten"
           ]
         },
         {
-          "clean": "Schiff",
+          "clean": "Meer",
           "syllables": [
-            "Schiff"
+            "Meer"
           ]
         }
       ]
     },
     {
-      "text": "Doch was glitzert da drüben so hell im Sonnenlicht?",
+      "text": "Das stolze Piratenschiff sucht den Weg nach Hause.",
       "words": [
         {
-          "clean": "Doch",
+          "clean": "Das",
           "syllables": [
-            "Doch"
+            "Das"
           ]
         },
         {
-          "clean": "was",
+          "clean": "stolze",
           "syllables": [
-            "was"
+            "stol",
+            "ze"
+          ]
+        },
+        {
+          "clean": "Piratenschiff",
+          "syllables": [
+            "Pi",
+            "ra",
+            "ten",
+            "schiff"
+          ]
+        },
+        {
+          "clean": "sucht",
+          "syllables": [
+            "sucht"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Weg",
+          "syllables": [
+            "Weg"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "Hause",
+          "syllables": [
+            "Hau",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "„Wo ist nur der Hafen versteckt?“, fragt Käpten Piet besorgt.",
+      "words": [
+        {
+          "clean": "Wo",
+          "syllables": [
+            "Wo"
+          ]
+        },
+        {
+          "clean": "ist",
+          "syllables": [
+            "ist"
+          ]
+        },
+        {
+          "clean": "nur",
+          "syllables": [
+            "nur"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        },
+        {
+          "clean": "versteckt",
+          "syllables": [
+            "ver",
+            "steckt"
+          ]
+        },
+        {
+          "clean": "fragt",
+          "syllables": [
+            "fragt"
+          ]
+        },
+        {
+          "clean": "Käpten",
+          "syllables": [
+            "Käp",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Piet",
+          "syllables": [
+            "Piet"
+          ]
+        },
+        {
+          "clean": "besorgt",
+          "syllables": [
+            "be",
+            "sorgt"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich taucht eine fröhliche Nixe aus den Wellen auf.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "taucht",
+          "syllables": [
+            "taucht"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "fröhliche",
+          "syllables": [
+            "fröh",
+            "li",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Wellen",
+          "syllables": [
+            "Wel",
+            "len"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ihre bunte Flosse glitzert im Abendlicht.",
+      "words": [
+        {
+          "clean": "Ihre",
+          "syllables": [
+            "Ih",
+            "re"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Flosse",
+          "syllables": [
+            "Flos",
+            "se"
           ]
         },
         {
@@ -137,133 +279,41 @@
           ]
         },
         {
-          "clean": "da",
-          "syllables": [
-            "da"
-          ]
-        },
-        {
-          "clean": "drüben",
-          "syllables": [
-            "drü",
-            "ben"
-          ]
-        },
-        {
-          "clean": "so",
-          "syllables": [
-            "so"
-          ]
-        },
-        {
-          "clean": "hell",
-          "syllables": [
-            "hell"
-          ]
-        },
-        {
           "clean": "im",
           "syllables": [
             "im"
           ]
         },
         {
-          "clean": "Sonnenlicht",
+          "clean": "Abendlicht",
           "syllables": [
-            "Son",
-            "nen",
+            "A",
+            "bend",
             "licht"
           ]
         }
       ]
     },
     {
-      "text": "Es ist Ein Rucksack, das mitten auf dem Moos steht!",
+      "text": "„Folgt mir geschwind!“, ruft sie den Seeräubern lachend zu.",
       "words": [
         {
-          "clean": "Es",
+          "clean": "Folgt",
           "syllables": [
-            "Es"
+            "Folgt"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "mir",
           "syllables": [
-            "ist"
+            "mir"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "geschwind",
           "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Rucksack",
-          "syllables": [
-            "Ruc",
-            "ksack"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "mitten",
-          "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Mo",
-            "os"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.",
-      "words": [
-        {
-          "clean": "Komm",
-          "syllables": [
-            "Komm"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "her",
-          "syllables": [
-            "her"
+            "ge",
+            "schwind"
           ]
         },
         {
@@ -273,37 +323,30 @@
           ]
         },
         {
-          "clean": "er",
+          "clean": "sie",
           "syllables": [
-            "er"
+            "sie"
           ]
         },
         {
-          "clean": "aufgeregt",
+          "clean": "den",
           "syllables": [
-            "auf",
-            "ge",
-            "regt"
+            "den"
           ]
         },
         {
-          "clean": "seinem",
+          "clean": "Seeräubern",
           "syllables": [
-            "sei",
-            "nem"
+            "See",
+            "räu",
+            "bern"
           ]
         },
         {
-          "clean": "besten",
+          "clean": "lachend",
           "syllables": [
-            "bes",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Freund",
-          "syllables": [
-            "Freund"
+            "la",
+            "chend"
           ]
         },
         {
@@ -315,42 +358,44 @@
       ]
     },
     {
-      "text": "Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.",
+      "text": "Die Nixe schwimmt voran und führt das Schiff sicher durch den Nebel.",
       "words": [
         {
-          "clean": "Gemeinsam",
+          "clean": "Die",
           "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "Die"
           ]
         },
         {
-          "clean": "bewundern",
+          "clean": "Nixe",
           "syllables": [
-            "be",
-            "wun",
-            "dern"
+            "Ni",
+            "xe"
           ]
         },
         {
-          "clean": "die",
+          "clean": "schwimmt",
           "syllables": [
-            "die"
+            "schwimmt"
           ]
         },
         {
-          "clean": "beiden",
+          "clean": "voran",
           "syllables": [
-            "bei",
-            "den"
+            "vo",
+            "ran"
           ]
         },
         {
-          "clean": "Tiere",
+          "clean": "und",
           "syllables": [
-            "Tie",
-            "re"
+            "und"
+          ]
+        },
+        {
+          "clean": "führt",
+          "syllables": [
+            "führt"
           ]
         },
         {
@@ -360,65 +405,9 @@
           ]
         },
         {
-          "clean": "sonderbare",
+          "clean": "Schiff",
           "syllables": [
-            "son",
-            "der",
-            "ba",
-            "re"
-          ]
-        },
-        {
-          "clean": "Schauspiel",
-          "syllables": [
-            "Schaus",
-            "piel"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "So einen aufregenden Tag werden sie sicher niemals vergessen!",
-      "words": [
-        {
-          "clean": "So",
-          "syllables": [
-            "So"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "aufregenden",
-          "syllables": [
-            "auf",
-            "re",
-            "gen",
-            "den"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "werden",
-          "syllables": [
-            "wer",
-            "den"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
+            "Schiff"
           ]
         },
         {
@@ -429,18 +418,99 @@
           ]
         },
         {
-          "clean": "niemals",
+          "clean": "durch",
           "syllables": [
-            "nie",
-            "mals"
+            "durch"
           ]
         },
         {
-          "clean": "vergessen",
+          "clean": "den",
           "syllables": [
-            "ver",
-            "ges",
-            "sen"
+            "den"
+          ]
+        },
+        {
+          "clean": "Nebel",
+          "syllables": [
+            "Ne",
+            "bel"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Endlich liegt das Boot am Steg und alle Piraten jubeln dankbar.",
+      "words": [
+        {
+          "clean": "Endlich",
+          "syllables": [
+            "End",
+            "lich"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Steg",
+          "syllables": [
+            "Steg"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "alle",
+          "syllables": [
+            "al",
+            "le"
+          ]
+        },
+        {
+          "clean": "Piraten",
+          "syllables": [
+            "Pi",
+            "ra",
+            "ten"
+          ]
+        },
+        {
+          "clean": "jubeln",
+          "syllables": [
+            "ju",
+            "beln"
+          ]
+        },
+        {
+          "clean": "dankbar",
+          "syllables": [
+            "dank",
+            "bar"
           ]
         }
       ]

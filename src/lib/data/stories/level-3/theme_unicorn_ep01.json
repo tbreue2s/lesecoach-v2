@@ -2,23 +2,104 @@
   "themeId": "theme_unicorn",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Pinguin",
-  "title": "Lama und der Pinguin",
+  "disturberWord": "Torte",
+  "title": "Das Fest am Regenbogen",
   "sentences": [
     {
-      "text": "Der Lama läuft schnell zum Tor.",
+      "text": "Einhorn Luna sucht Abenteuer.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Einhorn",
           "syllables": [
-            "Der"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "Lama",
+          "clean": "Luna",
           "syllables": [
-            "La",
-            "ma"
+            "Lu",
+            "na"
+          ]
+        },
+        {
+          "clean": "sucht",
+          "syllables": [
+            "sucht"
+          ]
+        },
+        {
+          "clean": "Abenteuer",
+          "syllables": [
+            "A",
+            "ben",
+            "teu",
+            "er"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein bunter Regenbogen funkelt über dem Wald.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "bunter",
+          "syllables": [
+            "bun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Regenbogen",
+          "syllables": [
+            "Re",
+            "gen",
+            "bo",
+            "gen"
+          ]
+        },
+        {
+          "clean": "funkelt",
+          "syllables": [
+            "fun",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Wald",
+          "syllables": [
+            "Wald"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Luna läuft neugierig los.",
+      "words": [
+        {
+          "clean": "Luna",
+          "syllables": [
+            "Lu",
+            "na"
           ]
         },
         {
@@ -28,72 +109,105 @@
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "neugierig",
           "syllables": [
-            "schnell"
+            "neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "los",
           "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "los"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich einen Pinguin.",
+      "text": "Im weichen Moos steht plötzlich ein Tisch.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Im",
           "syllables": [
-            "Da"
+            "Im"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "weichen",
           "syllables": [
-            "en",
-            "tdeckt"
+            "wei",
+            "chen"
           ]
         },
         {
-          "clean": "er",
+          "clean": "Moos",
           "syllables": [
-            "er"
+            "Moos"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
           ]
         },
         {
           "clean": "plötzlich",
           "syllables": [
-            "plöt",
-            "zlich"
+            "plötz",
+            "lich"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "ein",
           "syllables": [
-            "ei",
-            "nen"
+            "ein"
           ]
         },
         {
-          "clean": "Pinguin",
+          "clean": "Tisch",
           "syllables": [
-            "Pin",
-            "guin"
+            "Tisch"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier schaut genau hin.",
+      "text": "Darauf glitzert eine Torte!",
+      "words": [
+        {
+          "clean": "Darauf",
+          "syllables": [
+            "Da",
+            "rauf"
+          ]
+        },
+        {
+          "clean": "glitzert",
+          "syllables": [
+            "glit",
+            "zert"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das Einhorn nascht fröhlich von der Creme.",
       "words": [
         {
           "clean": "Das",
@@ -102,77 +216,42 @@
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "Einhorn",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "nascht",
           "syllables": [
-            "Tier"
+            "nascht"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "fröhlich",
           "syllables": [
-            "schaut"
+            "fröh",
+            "lich"
           ]
         },
         {
-          "clean": "genau",
+          "clean": "von",
           "syllables": [
-            "ge",
-            "nau"
+            "von"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "der",
           "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam jubeln alle vor Freude.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "der"
           ]
         },
         {
-          "clean": "jubeln",
+          "clean": "Creme",
           "syllables": [
-            "ju",
-            "beln"
-          ]
-        },
-        {
-          "clean": "alle",
-          "syllables": [
-            "al",
-            "le"
-          ]
-        },
-        {
-          "clean": "vor",
-          "syllables": [
-            "vor"
-          ]
-        },
-        {
-          "clean": "Freude",
-          "syllables": [
-            "Freu",
-            "de"
+            "Cre",
+            "me"
           ]
         }
       ]

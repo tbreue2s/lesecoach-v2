@@ -2,177 +2,277 @@
   "themeId": "theme_superhero",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Wecker",
-  "title": "Tiger und der Wecker",
+  "disturberWord": "Kater-Held",
+  "title": "Zwei Helden am Hafen",
   "sentences": [
     {
-      "text": "Der Tiger läuft schnell zum Tor.",
+      "text": "Mein Umhang weht im Wind.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Mein",
           "syllables": [
-            "Der"
+            "Mein"
           ]
         },
         {
-          "clean": "Tiger",
+          "clean": "Umhang",
           "syllables": [
-            "Ti",
-            "ger"
+            "Um",
+            "hang"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "weht",
           "syllables": [
-            "läuft"
+            "weht"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "im",
           "syllables": [
-            "schnell"
+            "im"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "Wind",
           "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "Wind"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich einen Wecker.",
+      "text": "Ein kleines Boot treibt ins tiefe Hafenbecken.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Ein",
           "syllables": [
-            "Da"
+            "Ein"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "kleines",
           "syllables": [
-            "en",
-            "tdeckt"
+            "klei",
+            "nes"
           ]
         },
         {
-          "clean": "er",
+          "clean": "Boot",
           "syllables": [
-            "er"
+            "Boot"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "treibt",
           "syllables": [
-            "plöt",
-            "zlich"
+            "treibt"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "ins",
           "syllables": [
-            "ei",
-            "nen"
+            "ins"
           ]
         },
         {
-          "clean": "Wecker",
+          "clean": "tiefe",
           "syllables": [
-            "We",
-            "cker"
+            "tie",
+            "fe"
+          ]
+        },
+        {
+          "clean": "Hafenbecken",
+          "syllables": [
+            "Ha",
+            "fen",
+            "be",
+            "cken"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier schaut genau hin.",
+      "text": "Meine Superkraft reicht nicht aus.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Meine",
           "syllables": [
-            "Das"
+            "Mei",
+            "ne"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "Superkraft",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "Su",
+            "perk",
+            "raft"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "reicht",
           "syllables": [
-            "Tier"
+            "reicht"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "nicht",
           "syllables": [
-            "schaut"
+            "nicht"
           ]
         },
         {
-          "clean": "genau",
+          "clean": "aus",
           "syllables": [
-            "ge",
-            "nau"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
+            "aus"
           ]
         }
       ]
     },
     {
-      "text": "Gemeinsam jubeln alle vor Freude.",
+      "text": "Plötzlich hilft ein Kater mit kleinem rotem Umhang.",
       "words": [
         {
-          "clean": "Gemeinsam",
+          "clean": "Plötzlich",
           "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "jubeln",
+          "clean": "hilft",
           "syllables": [
-            "ju",
-            "beln"
+            "hilft"
           ]
         },
         {
-          "clean": "alle",
+          "clean": "ein",
           "syllables": [
-            "al",
-            "le"
+            "ein"
           ]
         },
         {
-          "clean": "vor",
+          "clean": "Kater",
           "syllables": [
-            "vor"
+            "Ka",
+            "ter"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "mit",
           "syllables": [
-            "Freu",
-            "de"
+            "mit"
+          ]
+        },
+        {
+          "clean": "kleinem",
+          "syllables": [
+            "klei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "rotem",
+          "syllables": [
+            "ro",
+            "tem"
+          ]
+        },
+        {
+          "clean": "Umhang",
+          "syllables": [
+            "Um",
+            "hang"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er holt das Boot zurück!",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "holt",
+          "syllables": [
+            "holt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        },
+        {
+          "clean": "zurück",
+          "syllables": [
+            "zu",
+            "rück"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Als Belohnung fordert der Kater warme Milch.",
+      "words": [
+        {
+          "clean": "Als",
+          "syllables": [
+            "Als"
+          ]
+        },
+        {
+          "clean": "Belohnung",
+          "syllables": [
+            "Be",
+            "loh",
+            "nung"
+          ]
+        },
+        {
+          "clean": "fordert",
+          "syllables": [
+            "for",
+            "dert"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "warme",
+          "syllables": [
+            "war",
+            "me"
+          ]
+        },
+        {
+          "clean": "Milch",
+          "syllables": [
+            "Milch"
           ]
         }
       ]

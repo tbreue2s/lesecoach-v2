@@ -2,74 +2,23 @@
   "themeId": "theme_horse",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Tuba",
-  "title": "Ein Fund auf der weiten Wiese",
+  "disturberWord": "Einhorn",
+  "title": "Besuch am Koppel-Tor",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt auf der weiten Wiese.",
+      "text": "Das kleine Pony frisst Klee.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Das",
           "syllables": [
-            "Ein"
+            "Das"
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "kleine",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "beginnt",
-          "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "weiten",
-          "syllables": [
-            "wei",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Wiese",
-          "syllables": [
-            "Wie",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Pony läuft über die Wiese.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "klei",
+            "ne"
           ]
         },
         {
@@ -80,9 +29,46 @@
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "frisst",
           "syllables": [
-            "läuft"
+            "frisst"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dichter Nebel liegt still über der Koppel.",
+      "words": [
+        {
+          "clean": "Dichter",
+          "syllables": [
+            "Dich",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Nebel",
+          "syllables": [
+            "Ne",
+            "bel"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "still",
+          "syllables": [
+            "still"
           ]
         },
         {
@@ -93,42 +79,55 @@
           ]
         },
         {
-          "clean": "die",
+          "clean": "der",
           "syllables": [
-            "die"
+            "der"
           ]
         },
         {
-          "clean": "Wiese",
+          "clean": "Koppel",
           "syllables": [
-            "Wie",
+            "Kop",
+            "pel"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da wiehert jemand leise.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "wiehert",
+          "syllables": [
+            "wie",
+            "hert"
+          ]
+        },
+        {
+          "clean": "jemand",
+          "syllables": [
+            "je",
+            "mand"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
             "se"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Tuba auf dem Pfad auf.",
+      "text": "Ein weißes Einhorn tritt an das Tor.",
       "words": [
-        {
-          "clean": "Ganz",
-          "syllables": [
-            "Ganz"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "taucht",
-          "syllables": [
-            "taucht"
-          ]
-        },
         {
           "clean": "Ein",
           "syllables": [
@@ -136,95 +135,29 @@
           ]
         },
         {
-          "clean": "Tuba",
+          "clean": "weißes",
           "syllables": [
-            "Tu",
-            "ba"
+            "wei",
+            "ßes"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "Einhorn",
           "syllables": [
-            "auf"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "tritt",
           "syllables": [
-            "dem"
+            "tritt"
           ]
         },
         {
-          "clean": "Pfad",
+          "clean": "an",
           "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Er staunt über den Fund.",
-      "words": [
-        {
-          "clean": "Er",
-          "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
+            "an"
           ]
         },
         {
@@ -234,25 +167,95 @@
           ]
         },
         {
-          "clean": "neue",
+          "clean": "Tor",
           "syllables": [
-            "neu",
-            "e"
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Nun knabbern beide Klee.",
+      "words": [
+        {
+          "clean": "Nun",
+          "syllables": [
+            "Nun"
           ]
         },
         {
-          "clean": "Abenteuer",
+          "clean": "knabbern",
           "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
+            "knab",
+            "bern"
           ]
         },
         {
-          "clean": "an",
+          "clean": "beide",
           "syllables": [
-            "an"
+            "bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Auch Zauberwesen haben morgens immer großen Hunger.",
+      "words": [
+        {
+          "clean": "Auch",
+          "syllables": [
+            "Auch"
+          ]
+        },
+        {
+          "clean": "Zauberwesen",
+          "syllables": [
+            "Zau",
+            "ber",
+            "we",
+            "sen"
+          ]
+        },
+        {
+          "clean": "haben",
+          "syllables": [
+            "ha",
+            "ben"
+          ]
+        },
+        {
+          "clean": "morgens",
+          "syllables": [
+            "mor",
+            "gens"
+          ]
+        },
+        {
+          "clean": "immer",
+          "syllables": [
+            "im",
+            "mer"
+          ]
+        },
+        {
+          "clean": "großen",
+          "syllables": [
+            "gro",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Hunger",
+          "syllables": [
+            "Hun",
+            "ger"
           ]
         }
       ]

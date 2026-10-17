@@ -2,65 +2,139 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Gitarre",
-  "title": "Puma und die Gitarre",
+  "disturberWord": "Schlafdrache",
+  "title": "Der kleine Schlafdrache",
   "sentences": [
     {
-      "text": "Ein Puma geht zum Tor.",
+      "text": "Paul sucht das geheime Versteck mit der Lupe.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Paul",
           "syllables": [
-            "Ein"
+            "Paul"
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "sucht",
           "syllables": [
-            "Pu",
-            "ma"
+            "sucht"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "das",
           "syllables": [
-            "geht"
+            "das"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "geheime",
           "syllables": [
-            "zum"
+            "ge",
+            "hei",
+            "me"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Versteck",
           "syllables": [
-            "Tor"
+            "Ver",
+            "steck"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Lupe",
+          "syllables": [
+            "Lu",
+            "pe"
           ]
         }
       ]
     },
     {
-      "text": "Der Puma sieht eine Gitarre.",
+      "text": "Die uralte Truhe steht auf weichem Moos.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Die",
           "syllables": [
-            "Der"
+            "Die"
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "uralte",
           "syllables": [
-            "Pu",
-            "ma"
+            "u",
+            "ral",
+            "te"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "Truhe",
           "syllables": [
-            "sieht"
+            "Tru",
+            "he"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "weichem",
+          "syllables": [
+            "wei",
+            "chem"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Darin funkelt herrlich eine wunderschöne runde Perle.",
+      "words": [
+        {
+          "clean": "Darin",
+          "syllables": [
+            "Da",
+            "rin"
+          ]
+        },
+        {
+          "clean": "funkelt",
+          "syllables": [
+            "fun",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "herrlich",
+          "syllables": [
+            "her",
+            "rlich"
           ]
         },
         {
@@ -71,85 +145,74 @@
           ]
         },
         {
-          "clean": "Gitarre",
+          "clean": "wunderschöne",
           "syllables": [
-            "Gi",
-            "tar",
-            "re"
+            "wun",
+            "der",
+            "schö",
+            "ne"
+          ]
+        },
+        {
+          "clean": "runde",
+          "syllables": [
+            "run",
+            "de"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
           ]
         }
       ]
     },
     {
-      "text": "Der Puma schaut die Gitarre an.",
+      "text": "Daneben schnarcht freundlich ein winziger Schlafdrache am Boden.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Daneben",
           "syllables": [
-            "Der"
+            "Da",
+            "ne",
+            "ben"
           ]
         },
         {
-          "clean": "Puma",
+          "clean": "schnarcht",
           "syllables": [
-            "Pu",
-            "ma"
+            "schnarcht"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "freundlich",
           "syllables": [
-            "schaut"
+            "freund",
+            "lich"
           ]
         },
         {
-          "clean": "die",
+          "clean": "ein",
           "syllables": [
-            "die"
+            "ein"
           ]
         },
         {
-          "clean": "Gitarre",
+          "clean": "winziger",
           "syllables": [
-            "Gi",
-            "tar",
-            "re"
+            "win",
+            "zi",
+            "ger"
           ]
         },
         {
-          "clean": "an",
+          "clean": "Schlafdrache",
           "syllables": [
-            "an"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Froh ruft der Puma am Tor.",
-      "words": [
-        {
-          "clean": "Froh",
-          "syllables": [
-            "Froh"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "Puma",
-          "syllables": [
-            "Pu",
-            "ma"
+            "Schlaf",
+            "dra",
+            "che"
           ]
         },
         {
@@ -159,9 +222,10 @@
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Boden",
           "syllables": [
-            "Tor"
+            "Bo",
+            "den"
           ]
         }
       ]

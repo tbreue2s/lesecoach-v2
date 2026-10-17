@@ -2,11 +2,132 @@
   "themeId": "theme_treasure",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Luftballon",
-  "title": "Das Geheimnis in der tiefen Höhle",
+  "disturberWord": "Schlafdrache",
+  "title": "Die geheimnisvolle Truhe",
   "sentences": [
     {
-      "text": "Die Sonne scheint warm über der Landschaft.",
+      "text": "Mika findet eine Schatzkarte.",
+      "words": [
+        {
+          "clean": "Mika",
+          "syllables": [
+            "Mi",
+            "ka"
+          ]
+        },
+        {
+          "clean": "findet",
+          "syllables": [
+            "fin",
+            "det"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Schatzkarte",
+          "syllables": [
+            "Schatz",
+            "kar",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein alter Schlüssel liegt im weichen Sand.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "alter",
+          "syllables": [
+            "al",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Schlüssel",
+          "syllables": [
+            "Schlüs",
+            "sel"
+          ]
+        },
+        {
+          "clean": "liegt",
+          "syllables": [
+            "liegt"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Sand",
+          "syllables": [
+            "Sand"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mika dreht den Schlüssel um.",
+      "words": [
+        {
+          "clean": "Mika",
+          "syllables": [
+            "Mi",
+            "ka"
+          ]
+        },
+        {
+          "clean": "dreht",
+          "syllables": [
+            "dreht"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Schlüssel",
+          "syllables": [
+            "Schlüs",
+            "sel"
+          ]
+        },
+        {
+          "clean": "um",
+          "syllables": [
+            "um"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Die schwere Truhe springt leise knarrend auf.",
       "words": [
         {
           "clean": "Die",
@@ -15,247 +136,128 @@
           ]
         },
         {
-          "clean": "Sonne",
+          "clean": "schwere",
           "syllables": [
-            "Son",
-            "ne"
+            "schwe",
+            "re"
           ]
         },
         {
-          "clean": "scheint",
+          "clean": "Truhe",
           "syllables": [
-            "scheint"
+            "Tru",
+            "he"
           ]
         },
         {
-          "clean": "warm",
+          "clean": "springt",
           "syllables": [
-            "warm"
+            "springt"
           ]
         },
         {
-          "clean": "über",
+          "clean": "leise",
           "syllables": [
-            "ü",
-            "ber"
+            "lei",
+            "se"
           ]
         },
         {
-          "clean": "der",
+          "clean": "knarrend",
           "syllables": [
-            "der"
+            "knar",
+            "rend"
           ]
         },
         {
-          "clean": "Landschaft",
+          "clean": "auf",
           "syllables": [
-            "Land",
-            "schaft"
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Der Biber sucht einen Pfad.",
+      "text": "Dort schläft ein Babydrache!",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Dort",
           "syllables": [
-            "Der"
+            "Dort"
           ]
         },
         {
-          "clean": "Biber",
+          "clean": "schläft",
           "syllables": [
-            "Bi",
-            "ber"
+            "schläft"
           ]
         },
         {
-          "clean": "sucht",
+          "clean": "ein",
           "syllables": [
-            "sucht"
+            "ein"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "Babydrache",
+          "syllables": [
+            "Ba",
+            "byd",
+            "ra",
+            "che"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er schnarcht leise neben einer funkelnden Perle.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "schnarcht",
+          "syllables": [
+            "schnarcht"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "neben",
+          "syllables": [
+            "ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "einer",
           "syllables": [
             "ei",
-            "nen"
+            "ner"
           ]
         },
         {
-          "clean": "Pfad",
+          "clean": "funkelnden",
           "syllables": [
-            "Pfad"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Plötzlich versperrt Ein Luftballon den schmalen Weg.",
-      "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plöt",
-            "zlich"
+            "fun",
+            "kel",
+            "nden"
           ]
         },
         {
-          "clean": "versperrt",
+          "clean": "Perle",
           "syllables": [
-            "ver",
-            "sperrt"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Luftballon",
-          "syllables": [
-            "Luf",
-            "tbal",
-            "lon"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "schmalen",
-          "syllables": [
-            "schma",
-            "len"
-          ]
-        },
-        {
-          "clean": "Weg",
-          "syllables": [
-            "Weg"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mutig geht er heran.",
-      "words": [
-        {
-          "clean": "Mutig",
-          "syllables": [
-            "Mu",
-            "tig"
-          ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "heran",
-          "syllables": [
-            "he",
-            "ran"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
-          ]
-        },
-        {
-          "clean": "rollen",
-          "syllables": [
-            "rol",
-            "len"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Gegenstand",
-          "syllables": [
-            "Ge",
-            "gen",
-            "stand"
-          ]
-        },
-        {
-          "clean": "zur",
-          "syllables": [
-            "zur"
-          ]
-        },
-        {
-          "clean": "Seite",
-          "syllables": [
-            "Sei",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Alle klatschen laut Beifall.",
-      "words": [
-        {
-          "clean": "Alle",
-          "syllables": [
-            "Al",
+            "Per",
             "le"
-          ]
-        },
-        {
-          "clean": "klatschen",
-          "syllables": [
-            "klat",
-            "schen"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
-          ]
-        },
-        {
-          "clean": "Beifall",
-          "syllables": [
-            "Bei",
-            "fall"
           ]
         }
       ]

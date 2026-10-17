@@ -2,49 +2,37 @@
   "themeId": "theme_forest",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Trampolin",
-  "title": "Abenteuer im grünen Wald",
+  "disturberWord": "Klavier",
+  "title": "Musik im Moos",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Igel streift aufmerksam im grünen Wald.",
+      "text": "Leise rascheln die Blätter im stillen Wald.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Leise",
           "syllables": [
-            "Ein"
+            "Lei",
+            "se"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "rascheln",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "ra",
+            "scheln"
           ]
         },
         {
-          "clean": "Igel",
+          "clean": "die",
           "syllables": [
-            "I",
-            "gel"
+            "die"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "Blätter",
           "syllables": [
-            "streift"
-          ]
-        },
-        {
-          "clean": "aufmerksam",
-          "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "Blät",
+            "ter"
           ]
         },
         {
@@ -54,10 +42,10 @@
           ]
         },
         {
-          "clean": "grünen",
+          "clean": "stillen",
           "syllables": [
-            "grü",
-            "nen"
+            "stil",
+            "len"
           ]
         },
         {
@@ -69,48 +57,84 @@
       ]
     },
     {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Trampolin verborgen.",
+      "text": "Auf der Lichtung steht plötzlich ein altes Klavier im weichen Moos.",
       "words": [
         {
-          "clean": "Unter",
+          "clean": "Auf",
           "syllables": [
-            "Un",
-            "ter"
+            "Auf"
           ]
         },
         {
-          "clean": "einem",
+          "clean": "der",
           "syllables": [
-            "ei",
-            "nem"
+            "der"
           ]
         },
         {
-          "clean": "dichten",
+          "clean": "Lichtung",
           "syllables": [
-            "dic",
-            "hten"
+            "Lich",
+            "tung"
           ]
         },
         {
-          "clean": "Busch",
+          "clean": "steht",
           "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
+            "steht"
           ]
         },
         {
           "clean": "plötzlich",
           "syllables": [
-            "plöt",
-            "zlich"
+            "plötz",
+            "lich"
           ]
         },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "altes",
+          "syllables": [
+            "al",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Klavier",
+          "syllables": [
+            "Kla",
+            "vier"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Igel drückt neugierig eine helle Note.",
+      "words": [
         {
           "clean": "Ein",
           "syllables": [
@@ -118,154 +142,108 @@
           ]
         },
         {
-          "clean": "Trampolin",
+          "clean": "kleiner",
           "syllables": [
-            "Tram",
-            "po",
-            "lin"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "verborgen",
+          "clean": "Igel",
           "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "I",
+            "gel"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "drückt",
+          "syllables": [
+            "drückt"
+          ]
+        },
+        {
+          "clean": "neugierig",
           "syllables": [
             "neu",
             "gie",
-            "ri",
-            "ge"
+            "rig"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "eine",
           "syllables": [
-            "Tier"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "untersucht",
+          "clean": "helle",
           "syllables": [
-            "un",
-            "ter",
-            "sucht"
+            "hel",
+            "le"
           ]
         },
         {
-          "clean": "das",
+          "clean": "Note",
           "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "seltsame",
-          "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
+            "No",
+            "te"
           ]
         }
       ]
     },
     {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
+      "text": "Der zarte Klang bringt die Tiere zum Schmunzeln.",
       "words": [
         {
-          "clean": "Voller",
+          "clean": "Der",
           "syllables": [
-            "Vol",
-            "ler"
+            "Der"
           ]
         },
         {
-          "clean": "Stolz",
+          "clean": "zarte",
           "syllables": [
-            "Stolz"
+            "zar",
+            "te"
           ]
         },
         {
-          "clean": "präsentiert",
+          "clean": "Klang",
           "syllables": [
-            "prä",
-            "sen",
-            "tiert"
+            "Klang"
           ]
         },
         {
-          "clean": "er",
+          "clean": "bringt",
           "syllables": [
-            "er"
+            "bringt"
           ]
         },
         {
-          "clean": "den",
+          "clean": "die",
           "syllables": [
-            "den"
+            "die"
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "Tiere",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
+            "Tie",
+            "re"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "zum",
           "syllables": [
-            "Fund"
+            "zum"
           ]
         },
         {
-          "clean": "allen",
+          "clean": "Schmunzeln",
           "syllables": [
-            "al",
-            "len"
-          ]
-        },
-        {
-          "clean": "Freunden",
-          "syllables": [
-            "Freun",
-            "den"
+            "Schmun",
+            "zeln"
           ]
         }
       ]

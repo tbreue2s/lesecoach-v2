@@ -2,16 +2,38 @@
   "themeId": "theme_dino",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Rakete",
-  "title": "Das lustige Rakete",
+  "disturberWord": "Riesenblume",
+  "title": "Die bunte Riesenblume",
   "sentences": [
     {
-      "text": "Der rote Rakete liegt im Gras.",
+      "text": "Die Riesenblume zeigt eine rote Blüte.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Die",
           "syllables": [
-            "Der"
+            "Die"
+          ]
+        },
+        {
+          "clean": "Riesenblume",
+          "syllables": [
+            "Rie",
+            "sen",
+            "blu",
+            "me"
+          ]
+        },
+        {
+          "clean": "zeigt",
+          "syllables": [
+            "zeigt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
           ]
         },
         {
@@ -22,114 +44,61 @@
           ]
         },
         {
-          "clean": "Rakete",
+          "clean": "Blüte",
           "syllables": [
-            "Ra",
-            "ke",
+            "Blü",
             "te"
           ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Darin wohnt heimlich ein bunter Vogel.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Darin",
           "syllables": [
-            "Ein"
+            "Da",
+            "rin"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "wohnt",
           "syllables": [
-            "klei",
-            "ner"
+            "wohnt"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "heimlich",
           "syllables": [
-            "Hund"
+            "heim",
+            "lich"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "ein",
           "syllables": [
-            "sieht"
+            "ein"
           ]
         },
         {
-          "clean": "den",
+          "clean": "bunter",
           "syllables": [
-            "den"
+            "bun",
+            "ter"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Vogel",
           "syllables": [
-            "Fund"
+            "Vo",
+            "gel"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Der Riese beugt sich neugierig vor.",
       "words": [
         {
           "clean": "Der",
@@ -138,30 +107,126 @@
           ]
         },
         {
-          "clean": "alte",
+          "clean": "Riese",
           "syllables": [
-            "al",
-            "te"
+            "Rie",
+            "se"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "beugt",
           "syllables": [
-            "Baum"
+            "beugt"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "sich",
           "syllables": [
-            "spen",
-            "det"
+            "sich"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "neugierig",
           "syllables": [
-            "Schat",
-            "ten"
+            "neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "vor",
+          "syllables": [
+            "vor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Eine weiche Feder kitzelt die Nase.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "weiche",
+          "syllables": [
+            "wei",
+            "che"
+          ]
+        },
+        {
+          "clean": "Feder",
+          "syllables": [
+            "Fe",
+            "der"
+          ]
+        },
+        {
+          "clean": "kitzelt",
+          "syllables": [
+            "kit",
+            "zelt"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Froh ertönt nun ein lautes Lachen.",
+      "words": [
+        {
+          "clean": "Froh",
+          "syllables": [
+            "Froh"
+          ]
+        },
+        {
+          "clean": "ertönt",
+          "syllables": [
+            "er",
+            "tönt"
+          ]
+        },
+        {
+          "clean": "nun",
+          "syllables": [
+            "nun"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "lautes",
+          "syllables": [
+            "lau",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Lachen",
+          "syllables": [
+            "La",
+            "chen"
           ]
         }
       ]

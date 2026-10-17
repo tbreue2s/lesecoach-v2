@@ -2,60 +2,36 @@
   "themeId": "theme_space",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Rakete",
-  "title": "Das lustige Rakete",
+  "disturberWord": "Kometen-Eis",
+  "title": "Der bunte Komet",
   "sentences": [
     {
-      "text": "Der rote Rakete liegt im Gras.",
+      "text": "Lautlos saust vorbei ein kleiner Komet.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Lautlos",
           "syllables": [
-            "Der"
+            "Laut",
+            "los"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "saust",
           "syllables": [
-            "ro",
-            "te"
+            "saust"
           ]
         },
         {
-          "clean": "Rakete",
+          "clean": "vorbei",
           "syllables": [
-            "Ra",
-            "ke",
-            "te"
+            "vor",
+            "bei"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "ein",
           "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kleiner Hund sieht den Fund.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
+            "ein"
           ]
         },
         {
@@ -66,15 +42,172 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Komet",
           "syllables": [
-            "Hund"
+            "Ko",
+            "met"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hinter ihm leuchtet eine bunte Spur.",
+      "words": [
+        {
+          "clean": "Hinter",
+          "syllables": [
+            "Hin",
+            "ter"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "ihm",
           "syllables": [
-            "sieht"
+            "ihm"
+          ]
+        },
+        {
+          "clean": "leuchtet",
+          "syllables": [
+            "leuch",
+            "tet"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Spur",
+          "syllables": [
+            "Spur"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Daraus rieselt nun ganz feiner Staub.",
+      "words": [
+        {
+          "clean": "Daraus",
+          "syllables": [
+            "Da",
+            "raus"
+          ]
+        },
+        {
+          "clean": "rieselt",
+          "syllables": [
+            "rie",
+            "selt"
+          ]
+        },
+        {
+          "clean": "nun",
+          "syllables": [
+            "nun"
+          ]
+        },
+        {
+          "clean": "ganz",
+          "syllables": [
+            "ganz"
+          ]
+        },
+        {
+          "clean": "feiner",
+          "syllables": [
+            "fei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Staub",
+          "syllables": [
+            "Staub"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der Zauber schmeckt wie kühles Eis.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "Zauber",
+          "syllables": [
+            "Zau",
+            "ber"
+          ]
+        },
+        {
+          "clean": "schmeckt",
+          "syllables": [
+            "schmeckt"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "kühles",
+          "syllables": [
+            "küh",
+            "les"
+          ]
+        },
+        {
+          "clean": "Eis",
+          "syllables": [
+            "Eis"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fröhlich wischt sich Tom den Mund.",
+      "words": [
+        {
+          "clean": "Fröhlich",
+          "syllables": [
+            "Fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "wischt",
+          "syllables": [
+            "wischt"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "Tom",
+          "syllables": [
+            "Tom"
           ]
         },
         {
@@ -84,84 +217,9 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Mund",
           "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Mund"
           ]
         }
       ]

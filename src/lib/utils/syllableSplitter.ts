@@ -3,8 +3,8 @@
  * Accurately divides German words into syllables based on phonotactic rules and vowel nuclei.
  */
 
-// German diphthongs that form a single vowel nucleus
-const DIPHTHONGS = ['äu', 'ei', 'eu', 'au', 'ie', 'ai', 'ui'];
+// German diphthongs and long vowel digraphs that form a single vowel nucleus
+const DIPHTHONGS = ['äu', 'ei', 'eu', 'au', 'ie', 'ai', 'ui', 'aa', 'ee', 'oo'];
 const VOWELS = ['a', 'e', 'i', 'o', 'u', 'ä', 'ö', 'ü', 'y'];
 
 interface VowelGroup {
@@ -14,7 +14,7 @@ interface VowelGroup {
 }
 
 /**
- * Finds all vowel nuclei (monophthongs and diphthongs) in a word.
+ * Finds all vowel nuclei (monophthongs, diphthongs, and double vowels) in a word.
  */
 function findVowelNuclei(word: string): VowelGroup[] {
   const lower = word.toLowerCase();
@@ -22,7 +22,13 @@ function findVowelNuclei(word: string): VowelGroup[] {
   let i = 0;
 
   while (i < lower.length) {
-    // Check 2-letter diphthongs first
+    // 'qu' forms a consonant onset in German (e.g. Quelle, Quak)
+    if (lower[i] === 'q' && i + 1 < lower.length && lower[i + 1] === 'u') {
+      i += 2;
+      continue;
+    }
+
+    // Check 2-letter diphthongs and double vowels first
     if (i + 1 < lower.length) {
       const pair = lower.slice(i, i + 2);
       if (DIPHTHONGS.includes(pair)) {
@@ -85,13 +91,27 @@ export function splitSyllables(rawWord: string): string[] {
       splitIndices.push(consonantStart);
     } else {
       // 2 or more consonants between vowels
-      if (consonantsLower === 'ch' || consonantsLower === 'sch' || consonantsLower === 'ph' || consonantsLower === 'th') {
+      const prefixSlice = word.slice(0, currentNucleus.end).toLowerCase();
+      if (
+        k === 0 &&
+        (prefixSlice === 'be' || prefixSlice === 'ge') &&
+        /^(bl|br|dr|fl|fr|gl|gr|kl|kr|pl|pr|sch|sp|st|tr|zw)/i.test(consonantsLower)
+      ) {
+        // German prefixes Be- and Ge- before onset clusters (e.g. "Be-grü-ßung", "Ge-schich-te")
+        splitIndices.push(consonantStart);
+      } else if (consonantsLower === 'ch' || consonantsLower === 'sch' || consonantsLower === 'ph' || consonantsLower === 'th') {
         // Inseparable consonant digraphs/trigraphs go together to the next syllable
         splitIndices.push(consonantStart);
       } else if (consonantsLower.startsWith('sch') && consonantsLower.length > 3) {
-        splitIndices.push(consonantStart + 1);
+        splitIndices.push(consonantStart + 3);
+      } else if (
+        (consonantsLower.startsWith('ch') || consonantsLower.startsWith('tz') || consonantsLower.startsWith('ck')) &&
+        consonantsLower.length > 2
+      ) {
+        // e.g. "Lich-tung", "Plötz-lich", "glück-lich" -> keep digraph in first syllable
+        splitIndices.push(consonantStart + 2);
       } else if (consonantsLower.endsWith('sch')) {
-        // e.g. "fröh-lich", "himmlisch" -> split before 'sch'
+        // e.g. "himm-lisch" -> split before 'sch'
         splitIndices.push(consonantEnd - 3);
       } else if (consonantsLower.endsWith('ch')) {
         // e.g. "fröh-lich" -> split before 'ch'
@@ -100,7 +120,7 @@ export function splitSyllables(rawWord: string): string[] {
         // In modern German orthography, 'ck' goes to the next syllable
         splitIndices.push(consonantStart);
       } else if (consonantsLower === 'tz') {
-        // "Kat-ze", "Plätz-chen" -> split after 't'
+        // "Kat-ze" -> split after 't'
         splitIndices.push(consonantStart + 1);
       } else if (
         consonantCount >= 3 &&

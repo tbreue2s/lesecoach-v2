@@ -2,54 +2,103 @@
   "themeId": "theme_ocean",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Brille",
-  "title": "Das lustige Brille",
+  "disturberWord": "Krone",
+  "title": "Die kleine Krone",
   "sentences": [
     {
-      "text": "Der rote Brille liegt im Gras.",
+      "text": "Eine sanfte Welle erreicht das Ufer.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Eine",
           "syllables": [
-            "Der"
+            "Ei",
+            "ne"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "sanfte",
           "syllables": [
-            "ro",
-            "te"
+            "san",
+            "fte"
           ]
         },
         {
-          "clean": "Brille",
+          "clean": "Welle",
           "syllables": [
-            "Bril",
+            "Wel",
             "le"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "erreicht",
           "syllables": [
-            "liegt"
+            "er",
+            "reicht"
           ]
         },
         {
-          "clean": "im",
+          "clean": "das",
           "syllables": [
-            "im"
+            "das"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Ufer",
           "syllables": [
-            "Gras"
+            "U",
+            "fer"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort funkelt eine kleine Krone golden.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "funkelt",
+          "syllables": [
+            "fun",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "kleine",
+          "syllables": [
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Krone",
+          "syllables": [
+            "Kro",
+            "ne"
+          ]
+        },
+        {
+          "clean": "golden",
+          "syllables": [
+            "gol",
+            "den"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein lieber Wal hilft beim Suchen.",
       "words": [
         {
           "clean": "Ein",
@@ -58,82 +107,72 @@
           ]
         },
         {
-          "clean": "kleiner",
-          "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Hund",
-          "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
+          "clean": "lieber",
           "syllables": [
             "lie",
-            "be"
+            "ber"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Wal",
           "syllables": [
-            "Tier"
+            "Wal"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "hilft",
           "syllables": [
-            "bellt"
+            "hilft"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "beim",
           "syllables": [
-            "lei",
-            "se"
+            "beim"
+          ]
+        },
+        {
+          "clean": "Suchen",
+          "syllables": [
+            "Su",
+            "chen"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Ein winziger Fisch ist der alte König.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Ein",
           "syllables": [
-            "Der"
+            "Ein"
+          ]
+        },
+        {
+          "clean": "winziger",
+          "syllables": [
+            "win",
+            "zi",
+            "ger"
+          ]
+        },
+        {
+          "clean": "Fisch",
+          "syllables": [
+            "Fisch"
+          ]
+        },
+        {
+          "clean": "ist",
+          "syllables": [
+            "ist"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
           ]
         },
         {
@@ -144,23 +183,10 @@
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "König",
           "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Kö",
+            "nig"
           ]
         }
       ]

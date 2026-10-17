@@ -2,73 +2,63 @@
   "themeId": "theme_pirate",
   "level": 5,
   "episode": 1,
-  "disturberWord": "Pinguin",
-  "title": "Das Geheimnis auf dem großen Schiff",
+  "disturberWord": "Nixe",
+  "title": "Hilfe im Nebelmeer",
   "sentences": [
     {
-      "text": "Die Sonne scheint warm über der Landschaft.",
+      "text": "Dichter Nebel umhüllt das Schiff.",
       "words": [
         {
-          "clean": "Die",
+          "clean": "Dichter",
           "syllables": [
-            "Die"
+            "Dich",
+            "ter"
           ]
         },
         {
-          "clean": "Sonne",
+          "clean": "Nebel",
           "syllables": [
-            "Son",
-            "ne"
+            "Ne",
+            "bel"
           ]
         },
         {
-          "clean": "scheint",
+          "clean": "umhüllt",
           "syllables": [
-            "scheint"
+            "um",
+            "hüllt"
           ]
         },
         {
-          "clean": "warm",
+          "clean": "das",
           "syllables": [
-            "warm"
+            "das"
           ]
         },
         {
-          "clean": "über",
+          "clean": "Schiff",
           "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "Landschaft",
-          "syllables": [
-            "Land",
-            "schaft"
+            "Schiff"
           ]
         }
       ]
     },
     {
-      "text": "Der Pirat sucht einen Pfad.",
+      "text": "Kapitän Benno sucht vergeblich nach dem Hafen.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Kapitän",
           "syllables": [
-            "Der"
+            "Ka",
+            "pi",
+            "tän"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "Benno",
           "syllables": [
-            "Pi",
-            "rat"
+            "Ben",
+            "no"
           ]
         },
         {
@@ -78,118 +68,85 @@
           ]
         },
         {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Plötzlich versperrt Ein Pinguin den schmalen Weg.",
-      "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "versperrt",
+          "clean": "vergeblich",
           "syllables": [
             "ver",
-            "sperrt"
+            "geb",
+            "lich"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "nach",
           "syllables": [
-            "Ein"
+            "nach"
           ]
         },
         {
-          "clean": "Pinguin",
+          "clean": "dem",
           "syllables": [
-            "Pin",
-            "guin"
+            "dem"
           ]
         },
         {
-          "clean": "den",
+          "clean": "Hafen",
           "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "schmalen",
-          "syllables": [
-            "schma",
-            "len"
-          ]
-        },
-        {
-          "clean": "Weg",
-          "syllables": [
-            "Weg"
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Mutig geht er heran.",
+      "text": "Da taucht eine Nixe auf.",
       "words": [
         {
-          "clean": "Mutig",
+          "clean": "Da",
           "syllables": [
-            "Mu",
-            "tig"
+            "Da"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "taucht",
           "syllables": [
-            "geht"
+            "taucht"
           ]
         },
         {
-          "clean": "er",
+          "clean": "eine",
           "syllables": [
-            "er"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "heran",
+          "clean": "Nixe",
           "syllables": [
-            "he",
-            "ran"
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Zusammen rollen sie den Gegenstand zur Seite.",
+      "text": "Lächelnd weist sie ihnen den Weg zum Hafen.",
       "words": [
         {
-          "clean": "Zusammen",
+          "clean": "Lächelnd",
           "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "Lä",
+            "chelnd"
           ]
         },
         {
-          "clean": "rollen",
+          "clean": "weist",
           "syllables": [
-            "rol",
-            "len"
+            "weist"
           ]
         },
         {
@@ -199,36 +156,41 @@
           ]
         },
         {
+          "clean": "ihnen",
+          "syllables": [
+            "ih",
+            "nen"
+          ]
+        },
+        {
           "clean": "den",
           "syllables": [
             "den"
           ]
         },
         {
-          "clean": "Gegenstand",
+          "clean": "Weg",
           "syllables": [
-            "Ge",
-            "gen",
-            "stand"
+            "Weg"
           ]
         },
         {
-          "clean": "zur",
+          "clean": "zum",
           "syllables": [
-            "zur"
+            "zum"
           ]
         },
         {
-          "clean": "Seite",
+          "clean": "Hafen",
           "syllables": [
-            "Sei",
-            "te"
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Alle klatschen laut Beifall.",
+      "text": "Alle Piraten freuen sich riesig.",
       "words": [
         {
           "clean": "Alle",
@@ -238,23 +200,88 @@
           ]
         },
         {
-          "clean": "klatschen",
+          "clean": "Piraten",
           "syllables": [
-            "klat",
-            "schen"
+            "Pi",
+            "ra",
+            "ten"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "freuen",
           "syllables": [
-            "laut"
+            "freu",
+            "en"
           ]
         },
         {
-          "clean": "Beifall",
+          "clean": "sich",
           "syllables": [
-            "Bei",
-            "fall"
+            "sich"
+          ]
+        },
+        {
+          "clean": "riesig",
+          "syllables": [
+            "rie",
+            "sig"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Zum Dank werfen sie ihr süße Zimtkekse zu.",
+      "words": [
+        {
+          "clean": "Zum",
+          "syllables": [
+            "Zum"
+          ]
+        },
+        {
+          "clean": "Dank",
+          "syllables": [
+            "Dank"
+          ]
+        },
+        {
+          "clean": "werfen",
+          "syllables": [
+            "wer",
+            "fen"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "süße",
+          "syllables": [
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Zimtkekse",
+          "syllables": [
+            "Zim",
+            "tkek",
+            "se"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
           ]
         }
       ]

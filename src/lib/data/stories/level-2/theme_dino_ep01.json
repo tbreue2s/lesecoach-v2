@@ -3,10 +3,143 @@
   "level": 2,
   "episode": 1,
   "disturberWord": "Ufo",
-  "title": "Das bunte Ufo",
+  "title": "Besuch im Urwald-Tal",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Ein Dino geht durch das Tal.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "geht",
+          "syllables": [
+            "geht"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da landet leise ein buntes Ufo.",
+      "words": [
+        {
+          "clean": "Da",
+          "syllables": [
+            "Da"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "buntes",
+          "syllables": [
+            "bun",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neugierig prüfen beide die tiefe Spur.",
+      "words": [
+        {
+          "clean": "Neugierig",
+          "syllables": [
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "prüfen",
+          "syllables": [
+            "prü",
+            "fen"
+          ]
+        },
+        {
+          "clean": "beide",
+          "syllables": [
+            "bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "tiefe",
+          "syllables": [
+            "tie",
+            "fe"
+          ]
+        },
+        {
+          "clean": "Spur",
+          "syllables": [
+            "Spur"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Kreis liegt direkt daneben.",
       "words": [
         {
           "clean": "Ein",
@@ -22,46 +155,9 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Kreis",
           "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "umher",
-          "syllables": [
-            "um",
-            "her"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mitten im Gras liegt ein Ufo.",
-      "words": [
-        {
-          "clean": "Mitten",
-          "syllables": [
-            "Mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
+            "Kreis"
           ]
         },
         {
@@ -71,90 +167,64 @@
           ]
         },
         {
-          "clean": "ein",
+          "clean": "direkt",
           "syllables": [
-            "ein"
+            "di",
+            "rekt"
           ]
         },
         {
-          "clean": "Ufo",
+          "clean": "daneben",
           "syllables": [
-            "U",
-            "fo"
+            "da",
+            "ne",
+            "ben"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Beide lachen über das kleine Wunder.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Beide",
           "syllables": [
-            "Das"
+            "Bei",
+            "de"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "lachen",
           "syllables": [
-            "lie",
-            "be"
+            "la",
+            "chen"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "über",
           "syllables": [
-            "Tier"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "das",
           "syllables": [
-            "staunt"
+            "das"
           ]
         },
         {
-          "clean": "sehr",
+          "clean": "kleine",
           "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "Wunder",
           "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Wun",
+            "der"
           ]
         }
       ]

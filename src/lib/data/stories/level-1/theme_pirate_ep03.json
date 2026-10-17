@@ -2,72 +2,36 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Wecker",
-  "title": "Wecker am Vater",
+  "disturberWord": "Sofa",
+  "title": "Ein neuer Thron an Bord",
   "sentences": [
     {
-      "text": "Ein Wecker steht am Vater.",
+      "text": "Anton sucht Schätze tief im Meer.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Anton",
           "syllables": [
-            "Ein"
+            "An",
+            "ton"
           ]
         },
         {
-          "clean": "Wecker",
+          "clean": "sucht",
           "syllables": [
-            "We",
-            "cker"
+            "sucht"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "Schätze",
           "syllables": [
-            "steht"
+            "Schät",
+            "ze"
           ]
         },
         {
-          "clean": "am",
+          "clean": "tief",
           "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Vater",
-          "syllables": [
-            "Va",
-            "ter"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Faden ruft laut im Wind.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Faden",
-          "syllables": [
-            "Fa",
-            "den"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "laut",
-          "syllables": [
-            "laut"
+            "tief"
           ]
         },
         {
@@ -77,82 +41,183 @@
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "Meer",
           "syllables": [
-            "Wind"
+            "Meer"
           ]
         }
       ]
     },
     {
-      "text": "Ein Stein eilt schnell herbei.",
+      "text": "Doch sein Fang ist kein Paket.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Doch",
           "syllables": [
-            "Ein"
+            "Doch"
           ]
         },
         {
-          "clean": "Stein",
+          "clean": "sein",
           "syllables": [
-            "Stein"
+            "sein"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "Fang",
           "syllables": [
-            "eilt"
+            "Fang"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "ist",
           "syllables": [
-            "schnell"
+            "ist"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "kein",
           "syllables": [
-            "her",
-            "bei"
+            "kein"
+          ]
+        },
+        {
+          "clean": "Paket",
+          "syllables": [
+            "Pa",
+            "ket"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Tal.",
+      "text": "Er angelt sich ein rotes Sofa.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Er",
           "syllables": [
-            "Al",
-            "le"
+            "Er"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "angelt",
           "syllables": [
-            "lau",
-            "fen"
+            "an",
+            "gelt"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "sich",
           "syllables": [
-            "froh"
+            "sich"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "ein",
           "syllables": [
-            "zum"
+            "ein"
           ]
         },
         {
-          "clean": "Tal",
+          "clean": "rotes",
           "syllables": [
-            "Tal"
+            "ro",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sofort hüpft darauf der dicke Kater.",
+      "words": [
+        {
+          "clean": "Sofort",
+          "syllables": [
+            "So",
+            "fort"
+          ]
+        },
+        {
+          "clean": "hüpft",
+          "syllables": [
+            "hüpft"
+          ]
+        },
+        {
+          "clean": "darauf",
+          "syllables": [
+            "da",
+            "rauf"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "dicke",
+          "syllables": [
+            "di",
+            "cke"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ihm fehlt nur noch eine Krone.",
+      "words": [
+        {
+          "clean": "Ihm",
+          "syllables": [
+            "Ihm"
+          ]
+        },
+        {
+          "clean": "fehlt",
+          "syllables": [
+            "fehlt"
+          ]
+        },
+        {
+          "clean": "nur",
+          "syllables": [
+            "nur"
+          ]
+        },
+        {
+          "clean": "noch",
+          "syllables": [
+            "noch"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Krone",
+          "syllables": [
+            "Kro",
+            "ne"
           ]
         }
       ]

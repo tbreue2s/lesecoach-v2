@@ -2,55 +2,106 @@
   "themeId": "theme_ocean",
   "level": 2,
   "episode": 2,
-  "disturberWord": "Rakete",
-  "title": "Das lustige Rakete",
+  "disturberWord": "Eisboot",
+  "title": "Das bunte Eisboot",
   "sentences": [
     {
-      "text": "Der rote Rakete liegt im Gras.",
+      "text": "Sanfter Wind weht über das blaue Meer.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sanfter",
           "syllables": [
-            "Der"
+            "San",
+            "fter"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "Wind",
           "syllables": [
-            "ro",
-            "te"
+            "Wind"
           ]
         },
         {
-          "clean": "Rakete",
+          "clean": "weht",
           "syllables": [
-            "Ra",
-            "ke",
-            "te"
+            "weht"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "über",
           "syllables": [
-            "liegt"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "im",
+          "clean": "das",
           "syllables": [
-            "im"
+            "das"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "blaue",
           "syllables": [
-            "Gras"
+            "blau",
+            "e"
+          ]
+        },
+        {
+          "clean": "Meer",
+          "syllables": [
+            "Meer"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort schaukelt fröhlich ein buntes Eisboot.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "schaukelt",
+          "syllables": [
+            "schau",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "fröhlich",
+          "syllables": [
+            "fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "buntes",
+          "syllables": [
+            "bun",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Eisboot",
+          "syllables": [
+            "Eis",
+            "boot"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Pinguin bringt kühle Limo.",
       "words": [
         {
           "clean": "Ein",
@@ -66,70 +117,36 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Pinguin",
           "syllables": [
-            "Hund"
+            "Pin",
+            "guin"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "bringt",
           "syllables": [
-            "sieht"
+            "bringt"
           ]
         },
         {
-          "clean": "den",
+          "clean": "kühle",
           "syllables": [
-            "den"
+            "küh",
+            "le"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Limo",
           "syllables": [
-            "Fund"
+            "Li",
+            "mo"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "liebe",
-          "syllables": [
-            "lie",
-            "be"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Der lustige Vogel hebt sein feines Glas.",
       "words": [
         {
           "clean": "Der",
@@ -138,30 +155,43 @@
           ]
         },
         {
-          "clean": "alte",
+          "clean": "lustige",
           "syllables": [
-            "al",
-            "te"
+            "lus",
+            "ti",
+            "ge"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "Vogel",
           "syllables": [
-            "Baum"
+            "Vo",
+            "gel"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "hebt",
           "syllables": [
-            "spen",
-            "det"
+            "hebt"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "sein",
           "syllables": [
-            "Schat",
-            "ten"
+            "sein"
+          ]
+        },
+        {
+          "clean": "feines",
+          "syllables": [
+            "fei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Glas",
+          "syllables": [
+            "Glas"
           ]
         }
       ]

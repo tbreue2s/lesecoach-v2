@@ -2,16 +2,16 @@
   "themeId": "theme_horse",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Kaktus",
-  "title": "Pony und der Kaktus",
+  "disturberWord": "Einhorn",
+  "title": "Besuch im Morgennebel",
   "sentences": [
     {
-      "text": "Der Pony läuft schnell zum Tor.",
+      "text": "Das Pony frisst grünen Klee.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Das",
           "syllables": [
-            "Der"
+            "Das"
           ]
         },
         {
@@ -22,157 +22,258 @@
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "frisst",
           "syllables": [
-            "läuft"
+            "frisst"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "grünen",
           "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Da entdeckt er plötzlich einen Kaktus.",
-      "words": [
-        {
-          "clean": "Da",
-          "syllables": [
-            "Da"
-          ]
-        },
-        {
-          "clean": "entdeckt",
-          "syllables": [
-            "en",
-            "tdeckt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
+            "grü",
             "nen"
           ]
         },
         {
-          "clean": "Kaktus",
+          "clean": "Klee",
           "syllables": [
-            "Kak",
-            "tus"
+            "Klee"
           ]
         }
       ]
     },
     {
-      "text": "Das neugierige Tier schaut genau hin.",
+      "text": "Ein weißes Einhorn tritt aus dem Morgennebel.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Ein",
           "syllables": [
-            "Das"
+            "Ein"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "weißes",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
+            "wei",
+            "ßes"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Einhorn",
           "syllables": [
-            "Tier"
+            "Ein",
+            "horn"
           ]
         },
         {
-          "clean": "schaut",
+          "clean": "tritt",
           "syllables": [
-            "schaut"
+            "tritt"
           ]
         },
         {
-          "clean": "genau",
+          "clean": "aus",
           "syllables": [
-            "ge",
-            "nau"
+            "aus"
           ]
         },
         {
-          "clean": "hin",
+          "clean": "dem",
           "syllables": [
-            "hin"
+            "dem"
+          ]
+        },
+        {
+          "clean": "Morgennebel",
+          "syllables": [
+            "Mor",
+            "gen",
+            "ne",
+            "bel"
           ]
         }
       ]
     },
     {
-      "text": "Gemeinsam jubeln alle vor Freude.",
+      "text": "Es schnuppert sanft am Hoftor.",
       "words": [
         {
-          "clean": "Gemeinsam",
+          "clean": "Es",
           "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "Es"
           ]
         },
         {
-          "clean": "jubeln",
+          "clean": "schnuppert",
           "syllables": [
-            "ju",
-            "beln"
+            "schnup",
+            "pert"
           ]
         },
         {
-          "clean": "alle",
+          "clean": "sanft",
           "syllables": [
-            "al",
-            "le"
+            "sanft"
           ]
         },
         {
-          "clean": "vor",
+          "clean": "am",
           "syllables": [
-            "vor"
+            "am"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "Hoftor",
           "syllables": [
-            "Freu",
+            "Hof",
+            "tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beide galoppieren fröhlich über die weite Wiese.",
+      "words": [
+        {
+          "clean": "Beide",
+          "syllables": [
+            "Bei",
             "de"
+          ]
+        },
+        {
+          "clean": "galoppieren",
+          "syllables": [
+            "ga",
+            "lop",
+            "pie",
+            "ren"
+          ]
+        },
+        {
+          "clean": "fröhlich",
+          "syllables": [
+            "fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "weite",
+          "syllables": [
+            "wei",
+            "te"
+          ]
+        },
+        {
+          "clean": "Wiese",
+          "syllables": [
+            "Wie",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ihre Hufeisen funkeln im Gras.",
+      "words": [
+        {
+          "clean": "Ihre",
+          "syllables": [
+            "Ih",
+            "re"
+          ]
+        },
+        {
+          "clean": "Hufeisen",
+          "syllables": [
+            "Hu",
+            "fei",
+            "sen"
+          ]
+        },
+        {
+          "clean": "funkeln",
+          "syllables": [
+            "fun",
+            "keln"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schmatzend teilen beide die letzte süße Möhre.",
+      "words": [
+        {
+          "clean": "Schmatzend",
+          "syllables": [
+            "Schmat",
+            "zend"
+          ]
+        },
+        {
+          "clean": "teilen",
+          "syllables": [
+            "tei",
+            "len"
+          ]
+        },
+        {
+          "clean": "beide",
+          "syllables": [
+            "bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "letzte",
+          "syllables": [
+            "letz",
+            "te"
+          ]
+        },
+        {
+          "clean": "süße",
+          "syllables": [
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Möhre",
+          "syllables": [
+            "Möh",
+            "re"
           ]
         }
       ]

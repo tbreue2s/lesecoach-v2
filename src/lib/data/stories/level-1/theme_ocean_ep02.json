@@ -2,11 +2,60 @@
   "themeId": "theme_ocean",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Sofa",
-  "title": "Sofa am Opa",
+  "disturberWord": "Eisboot",
+  "title": "Ein Pinguin auf dem Meer",
   "sentences": [
     {
-      "text": "Ein Sofa steht am Opa.",
+      "text": "Paul blickt weit über das blaue Meer.",
+      "words": [
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "blickt",
+          "syllables": [
+            "blickt"
+          ]
+        },
+        {
+          "clean": "weit",
+          "syllables": [
+            "weit"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "blaue",
+          "syllables": [
+            "blau",
+            "e"
+          ]
+        },
+        {
+          "clean": "Meer",
+          "syllables": [
+            "Meer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein Pinguin steuert dort ein buntes Boot.",
       "words": [
         {
           "clean": "Ein",
@@ -15,145 +64,194 @@
           ]
         },
         {
-          "clean": "Sofa",
+          "clean": "Pinguin",
           "syllables": [
-            "So",
-            "fa"
+            "Pin",
+            "guin"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "steuert",
           "syllables": [
-            "steht"
+            "steu",
+            "ert"
           ]
         },
         {
-          "clean": "am",
+          "clean": "dort",
           "syllables": [
-            "am"
+            "dort"
           ]
         },
         {
-          "clean": "Opa",
+          "clean": "ein",
           "syllables": [
-            "O",
-            "pa"
+            "ein"
+          ]
+        },
+        {
+          "clean": "buntes",
+          "syllables": [
+            "bun",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Der Lama ruft laut im Wind.",
+      "text": "Sein tolles Eisboot bringt herrlich frische Limo.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sein",
           "syllables": [
-            "Der"
+            "Sein"
           ]
         },
         {
-          "clean": "Lama",
+          "clean": "tolles",
           "syllables": [
-            "La",
-            "ma"
+            "tol",
+            "les"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Eisboot",
           "syllables": [
-            "ruft"
+            "Eis",
+            "boot"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "bringt",
           "syllables": [
-            "laut"
+            "bringt"
           ]
         },
         {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Wind",
-          "syllables": [
-            "Wind"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein Tier eilt schnell herbei.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "eilt",
-          "syllables": [
-            "eilt"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "herbei",
+          "clean": "herrlich",
           "syllables": [
             "her",
-            "bei"
+            "rlich"
+          ]
+        },
+        {
+          "clean": "frische",
+          "syllables": [
+            "fri",
+            "sche"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Kater.",
+      "text": "Paul trinkt sie glücklich aus dem Glas.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Paul",
           "syllables": [
-            "Al",
-            "le"
+            "Paul"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "trinkt",
           "syllables": [
-            "lau",
+            "trinkt"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "glücklich",
+          "syllables": [
+            "glück",
+            "lich"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Glas",
+          "syllables": [
+            "Glas"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kalter Tropfen landet auf seiner Nase.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "kalter",
+          "syllables": [
+            "kal",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Tropfen",
+          "syllables": [
+            "Trop",
             "fen"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "landet",
           "syllables": [
-            "froh"
+            "lan",
+            "det"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "auf",
           "syllables": [
-            "zum"
+            "auf"
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "seiner",
           "syllables": [
-            "Ka",
-            "ter"
+            "sei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
           ]
         }
       ]

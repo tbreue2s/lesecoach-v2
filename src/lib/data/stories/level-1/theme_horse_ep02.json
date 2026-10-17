@@ -2,29 +2,94 @@
   "themeId": "theme_horse",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Schlitten",
-  "title": "Schlitten am Bote",
+  "disturberWord": "Ufo",
+  "title": "Der kleine Sternengast",
   "sentences": [
     {
-      "text": "Ein Schlitten steht am Bote.",
+      "text": "Poldi trabt vergnügt durch das frische Gras.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Poldi",
           "syllables": [
-            "Ein"
+            "Pol",
+            "di"
           ]
         },
         {
-          "clean": "Schlitten",
+          "clean": "trabt",
           "syllables": [
-            "Schlit",
-            "ten"
+            "trabt"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "vergnügt",
           "syllables": [
-            "steht"
+            "verg",
+            "nügt"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "frische",
+          "syllables": [
+            "fri",
+            "sche"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lautlos landet ein kleines Ufo am Boden.",
+      "words": [
+        {
+          "clean": "Lautlos",
+          "syllables": [
+            "Laut",
+            "los"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleines",
+          "syllables": [
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
           ]
         },
         {
@@ -34,16 +99,16 @@
           ]
         },
         {
-          "clean": "Bote",
+          "clean": "Boden",
           "syllables": [
             "Bo",
-            "te"
+            "den"
           ]
         }
       ]
     },
     {
-      "text": "Der Igel ruft laut im Wind.",
+      "text": "Der winzige Besucher schnuppert am frischen Hafer.",
       "words": [
         {
           "clean": "Der",
@@ -52,108 +117,148 @@
           ]
         },
         {
-          "clean": "Igel",
+          "clean": "winzige",
           "syllables": [
-            "I",
-            "gel"
+            "win",
+            "zi",
+            "ge"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "Besucher",
           "syllables": [
-            "ruft"
+            "Be",
+            "su",
+            "cher"
           ]
         },
         {
-          "clean": "laut",
+          "clean": "schnuppert",
           "syllables": [
-            "laut"
+            "schnup",
+            "pert"
           ]
         },
         {
-          "clean": "im",
+          "clean": "am",
           "syllables": [
-            "im"
+            "am"
           ]
         },
         {
-          "clean": "Wind",
+          "clean": "frischen",
           "syllables": [
-            "Wind"
+            "fri",
+            "schen"
+          ]
+        },
+        {
+          "clean": "Hafer",
+          "syllables": [
+            "Ha",
+            "fer"
           ]
         }
       ]
     },
     {
-      "text": "Ein Haus eilt schnell herbei.",
+      "text": "Dankbar schenkt er dem Pony eine Rose.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dankbar",
           "syllables": [
-            "Ein"
+            "Dank",
+            "bar"
           ]
         },
         {
-          "clean": "Haus",
+          "clean": "schenkt",
           "syllables": [
-            "Haus"
+            "schenkt"
           ]
         },
         {
-          "clean": "eilt",
+          "clean": "er",
           "syllables": [
-            "eilt"
+            "er"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "dem",
           "syllables": [
-            "schnell"
+            "dem"
           ]
         },
         {
-          "clean": "herbei",
+          "clean": "Pony",
           "syllables": [
-            "her",
-            "bei"
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Rose",
+          "syllables": [
+            "Ro",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Alle laufen froh zum Limo.",
+      "text": "Poldi wiehert und schüttelt sein langes Haar.",
       "words": [
         {
-          "clean": "Alle",
+          "clean": "Poldi",
           "syllables": [
-            "Al",
-            "le"
+            "Pol",
+            "di"
           ]
         },
         {
-          "clean": "laufen",
+          "clean": "wiehert",
           "syllables": [
-            "lau",
-            "fen"
+            "wie",
+            "hert"
           ]
         },
         {
-          "clean": "froh",
+          "clean": "und",
           "syllables": [
-            "froh"
+            "und"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "schüttelt",
           "syllables": [
-            "zum"
+            "schüt",
+            "telt"
           ]
         },
         {
-          "clean": "Limo",
+          "clean": "sein",
           "syllables": [
-            "Li",
-            "mo"
+            "sein"
+          ]
+        },
+        {
+          "clean": "langes",
+          "syllables": [
+            "lan",
+            "ges"
+          ]
+        },
+        {
+          "clean": "Haar",
+          "syllables": [
+            "Haar"
           ]
         }
       ]

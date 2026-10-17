@@ -2,11 +2,11 @@
   "themeId": "theme_wizard",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Taschenlampe",
-  "title": "Kater und die Taschenlampe",
+  "disturberWord": "Sprechhut",
+  "title": "Der kichernde Sprechhut",
   "sentences": [
     {
-      "text": "Der Kater läuft schnell zum Tor.",
+      "text": "Der bunte Zaubertrank funkelt.",
       "words": [
         {
           "clean": "Der",
@@ -15,40 +15,83 @@
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "bunte",
           "syllables": [
-            "Ka",
-            "ter"
+            "bun",
+            "te"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "Zaubertrank",
           "syllables": [
-            "läuft"
+            "Zau",
+            "bert",
+            "rank"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "funkelt",
           "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "fun",
+            "kelt"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich eine Taschenlampe.",
+      "text": "Mit dem Zauberstab flüstert Leo einen Spruch.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Zauberstab",
+          "syllables": [
+            "Zau",
+            "ber",
+            "stab"
+          ]
+        },
+        {
+          "clean": "flüstert",
+          "syllables": [
+            "flüs",
+            "tert"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Spruch",
+          "syllables": [
+            "Spruch"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Da kichert der alte Zauberhut.",
       "words": [
         {
           "clean": "Da",
@@ -57,10 +100,129 @@
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "kichert",
           "syllables": [
-            "en",
-            "tdeckt"
+            "ki",
+            "chert"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "alte",
+          "syllables": [
+            "al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Zauberhut",
+          "syllables": [
+            "Zau",
+            "ber",
+            "hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der freche Sprechhut springt munter vom Tisch.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
+          ]
+        },
+        {
+          "clean": "freche",
+          "syllables": [
+            "fre",
+            "che"
+          ]
+        },
+        {
+          "clean": "Sprechhut",
+          "syllables": [
+            "Sprech",
+            "hut"
+          ]
+        },
+        {
+          "clean": "springt",
+          "syllables": [
+            "springt"
+          ]
+        },
+        {
+          "clean": "munter",
+          "syllables": [
+            "mun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "vom",
+          "syllables": [
+            "vom"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er hüpft ganz allein.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "hüpft",
+          "syllables": [
+            "hüpft"
+          ]
+        },
+        {
+          "clean": "ganz",
+          "syllables": [
+            "ganz"
+          ]
+        },
+        {
+          "clean": "allein",
+          "syllables": [
+            "al",
+            "lein"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fröhlich saust er durch den großen Saal.",
+      "words": [
+        {
+          "clean": "Fröhlich",
+          "syllables": [
+            "Fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "saust",
+          "syllables": [
+            "saust"
           ]
         },
         {
@@ -70,111 +232,28 @@
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "durch",
           "syllables": [
-            "plöt",
-            "zlich"
+            "durch"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "den",
           "syllables": [
-            "ei",
-            "ne"
+            "den"
           ]
         },
         {
-          "clean": "Taschenlampe",
+          "clean": "großen",
           "syllables": [
-            "Ta",
-            "schen",
-            "lam",
-            "pe"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier schaut genau hin.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "gro",
+            "ßen"
           ]
         },
         {
-          "clean": "neugierige",
+          "clean": "Saal",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam jubeln alle vor Freude.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
-          ]
-        },
-        {
-          "clean": "jubeln",
-          "syllables": [
-            "ju",
-            "beln"
-          ]
-        },
-        {
-          "clean": "alle",
-          "syllables": [
-            "al",
-            "le"
-          ]
-        },
-        {
-          "clean": "vor",
-          "syllables": [
-            "vor"
-          ]
-        },
-        {
-          "clean": "Freude",
-          "syllables": [
-            "Freu",
-            "de"
+            "Saal"
           ]
         }
       ]

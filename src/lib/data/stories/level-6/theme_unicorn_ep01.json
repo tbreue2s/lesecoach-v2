@@ -2,58 +2,242 @@
   "themeId": "theme_unicorn",
   "level": 6,
   "episode": 1,
-  "disturberWord": "Taschenlampe",
-  "title": "Lama und die Taschenlampe",
+  "disturberWord": "Torte",
+  "title": "Das Geheimnis am Regenbogen",
   "sentences": [
     {
-      "text": "Ein mutiger Lama wandert fröhlich am bunten Regenbogen.",
+      "text": "Das kleine Einhorn Fina trabte mit leisen Hufen über die sonnige Waldlichtung.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Das",
           "syllables": [
-            "Ein"
+            "Das"
           ]
         },
         {
-          "clean": "mutiger",
+          "clean": "kleine",
           "syllables": [
-            "mu",
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Einhorn",
+          "syllables": [
+            "Ein",
+            "horn"
+          ]
+        },
+        {
+          "clean": "Fina",
+          "syllables": [
+            "Fi",
+            "na"
+          ]
+        },
+        {
+          "clean": "trabte",
+          "syllables": [
+            "trab",
+            "te"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "leisen",
+          "syllables": [
+            "lei",
+            "sen"
+          ]
+        },
+        {
+          "clean": "Hufen",
+          "syllables": [
+            "Hu",
+            "fen"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "sonnige",
+          "syllables": [
+            "son",
+            "ni",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Waldlichtung",
+          "syllables": [
+            "Wald",
+            "lich",
+            "tung"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Seine silbrige Mähne glänzte im warmen Licht, als ein feiner Sommerregen begann.",
+      "words": [
+        {
+          "clean": "Seine",
+          "syllables": [
+            "Sei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "silbrige",
+          "syllables": [
+            "sil",
+            "bri",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Mähne",
+          "syllables": [
+            "Mäh",
+            "ne"
+          ]
+        },
+        {
+          "clean": "glänzte",
+          "syllables": [
+            "glän",
+            "zte"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "warmen",
+          "syllables": [
+            "war",
+            "men"
+          ]
+        },
+        {
+          "clean": "Licht",
+          "syllables": [
+            "Licht"
+          ]
+        },
+        {
+          "clean": "als",
+          "syllables": [
+            "als"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "feiner",
+          "syllables": [
+            "fei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Sommerregen",
+          "syllables": [
+            "Som",
+            "mer",
+            "re",
+            "gen"
+          ]
+        },
+        {
+          "clean": "begann",
+          "syllables": [
+            "be",
+            "gann"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schon nach wenigen Augenblicken spannte sich ein prächtiger Regenbogen quer über den blauen Himmel.",
+      "words": [
+        {
+          "clean": "Schon",
+          "syllables": [
+            "Schon"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "wenigen",
+          "syllables": [
+            "we",
+            "ni",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Augenblicken",
+          "syllables": [
+            "Au",
+            "gen",
+            "bli",
+            "cken"
+          ]
+        },
+        {
+          "clean": "spannte",
+          "syllables": [
+            "span",
+            "nte"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "prächtiger",
+          "syllables": [
+            "präch",
             "ti",
             "ger"
-          ]
-        },
-        {
-          "clean": "Lama",
-          "syllables": [
-            "La",
-            "ma"
-          ]
-        },
-        {
-          "clean": "wandert",
-          "syllables": [
-            "wan",
-            "dert"
-          ]
-        },
-        {
-          "clean": "fröhlich",
-          "syllables": [
-            "fröh",
-            "lich"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "bunten",
-          "syllables": [
-            "bun",
-            "ten"
           ]
         },
         {
@@ -64,66 +248,150 @@
             "bo",
             "gen"
           ]
+        },
+        {
+          "clean": "quer",
+          "syllables": [
+            "quer"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "blauen",
+          "syllables": [
+            "blau",
+            "en"
+          ]
+        },
+        {
+          "clean": "Himmel",
+          "syllables": [
+            "Him",
+            "mel"
+          ]
         }
       ]
     },
     {
-      "text": "Plötzlich entdeckt er eine Taschenlampe am Wegesrand.",
+      "text": "Die bunten Farben leuchteten so hell, dass Fina vor Freude mit den samtigen Ohren wackelte.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Die",
           "syllables": [
-            "Plöt",
-            "zlich"
+            "Die"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "bunten",
           "syllables": [
-            "en",
-            "tdeckt"
+            "bun",
+            "ten"
           ]
         },
         {
-          "clean": "er",
+          "clean": "Farben",
           "syllables": [
-            "er"
+            "Far",
+            "ben"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "leuchteten",
           "syllables": [
-            "ei",
-            "ne"
+            "leuch",
+            "te",
+            "ten"
           ]
         },
         {
-          "clean": "Taschenlampe",
+          "clean": "so",
           "syllables": [
-            "Ta",
-            "schen",
-            "lam",
-            "pe"
+            "so"
           ]
         },
         {
-          "clean": "am",
+          "clean": "hell",
           "syllables": [
-            "am"
+            "hell"
           ]
         },
         {
-          "clean": "Wegesrand",
+          "clean": "dass",
           "syllables": [
-            "We",
-            "ges",
-            "rand"
+            "dass"
+          ]
+        },
+        {
+          "clean": "Fina",
+          "syllables": [
+            "Fi",
+            "na"
+          ]
+        },
+        {
+          "clean": "vor",
+          "syllables": [
+            "vor"
+          ]
+        },
+        {
+          "clean": "Freude",
+          "syllables": [
+            "Freu",
+            "de"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "samtigen",
+          "syllables": [
+            "sam",
+            "ti",
+            "gen"
+          ]
+        },
+        {
+          "clean": "Ohren",
+          "syllables": [
+            "Oh",
+            "ren"
+          ]
+        },
+        {
+          "clean": "wackelte",
+          "syllables": [
+            "wa",
+            "ckel",
+            "te"
           ]
         }
       ]
     },
     {
-      "text": "Neugierig tippt das Tier auf den Gegenstand.",
+      "text": "Neugierig beschloss das magische Fabelwesen, dem schimmernden Bogen bis zu seinem Ende zu folgen.",
       "words": [
         {
           "clean": "Neugierig",
@@ -134,9 +402,10 @@
           ]
         },
         {
-          "clean": "tippt",
+          "clean": "beschloss",
           "syllables": [
-            "tippt"
+            "be",
+            "schloss"
           ]
         },
         {
@@ -146,58 +415,358 @@
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "magische",
           "syllables": [
-            "Tier"
+            "ma",
+            "gi",
+            "sche"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "Fabelwesen",
           "syllables": [
-            "auf"
+            "Fa",
+            "bel",
+            "we",
+            "sen"
           ]
         },
         {
-          "clean": "den",
+          "clean": "dem",
           "syllables": [
-            "den"
+            "dem"
           ]
         },
         {
-          "clean": "Gegenstand",
+          "clean": "schimmernden",
           "syllables": [
-            "Ge",
-            "gen",
-            "stand"
+            "schim",
+            "mer",
+            "nden"
+          ]
+        },
+        {
+          "clean": "Bogen",
+          "syllables": [
+            "Bo",
+            "gen"
+          ]
+        },
+        {
+          "clean": "bis",
+          "syllables": [
+            "bis"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        },
+        {
+          "clean": "seinem",
+          "syllables": [
+            "sei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "Ende",
+          "syllables": [
+            "En",
+            "de"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
+          ]
+        },
+        {
+          "clean": "folgen",
+          "syllables": [
+            "fol",
+            "gen"
           ]
         }
       ]
     },
     {
-      "text": "Wunderbare Töne erklingen sanft in der Luft.",
+      "text": "Es galoppierte geschwind an alten Eichen vorbei und sprang geschmeidig über einen murmelnden Bach.",
       "words": [
         {
-          "clean": "Wunderbare",
+          "clean": "Es",
           "syllables": [
-            "Wun",
-            "der",
-            "ba",
-            "re"
+            "Es"
           ]
         },
         {
-          "clean": "Töne",
+          "clean": "galoppierte",
           "syllables": [
-            "Tö",
-            "ne"
+            "ga",
+            "lop",
+            "pier",
+            "te"
           ]
         },
         {
-          "clean": "erklingen",
+          "clean": "geschwind",
           "syllables": [
-            "erk",
-            "lin",
-            "gen"
+            "ge",
+            "schwind"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "alten",
+          "syllables": [
+            "al",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Eichen",
+          "syllables": [
+            "Ei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "vorbei",
+          "syllables": [
+            "vor",
+            "bei"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "sprang",
+          "syllables": [
+            "sprang"
+          ]
+        },
+        {
+          "clean": "geschmeidig",
+          "syllables": [
+            "ge",
+            "schmei",
+            "dig"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "murmelnden",
+          "syllables": [
+            "mur",
+            "mel",
+            "nden"
+          ]
+        },
+        {
+          "clean": "Bach",
+          "syllables": [
+            "Bach"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Je näher Fina ihrem Ziel kam, desto dichter tanzte funkelnder Sternenstaub durch die Waldluft.",
+      "words": [
+        {
+          "clean": "Je",
+          "syllables": [
+            "Je"
+          ]
+        },
+        {
+          "clean": "näher",
+          "syllables": [
+            "nä",
+            "her"
+          ]
+        },
+        {
+          "clean": "Fina",
+          "syllables": [
+            "Fi",
+            "na"
+          ]
+        },
+        {
+          "clean": "ihrem",
+          "syllables": [
+            "ih",
+            "rem"
+          ]
+        },
+        {
+          "clean": "Ziel",
+          "syllables": [
+            "Ziel"
+          ]
+        },
+        {
+          "clean": "kam",
+          "syllables": [
+            "kam"
+          ]
+        },
+        {
+          "clean": "desto",
+          "syllables": [
+            "des",
+            "to"
+          ]
+        },
+        {
+          "clean": "dichter",
+          "syllables": [
+            "dich",
+            "ter"
+          ]
+        },
+        {
+          "clean": "tanzte",
+          "syllables": [
+            "tan",
+            "zte"
+          ]
+        },
+        {
+          "clean": "funkelnder",
+          "syllables": [
+            "fun",
+            "kel",
+            "nder"
+          ]
+        },
+        {
+          "clean": "Sternenstaub",
+          "syllables": [
+            "Ster",
+            "nen",
+            "staub"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Waldluft",
+          "syllables": [
+            "Wald",
+            "luft"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schließlich erreichte sie einen verborgenen Hügel, wo das bunte Himmelslicht sanft den Boden berührte.",
+      "words": [
+        {
+          "clean": "Schließlich",
+          "syllables": [
+            "Schließ",
+            "lich"
+          ]
+        },
+        {
+          "clean": "erreichte",
+          "syllables": [
+            "er",
+            "reich",
+            "te"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "verborgenen",
+          "syllables": [
+            "ver",
+            "bor",
+            "ge",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Hügel",
+          "syllables": [
+            "Hü",
+            "gel"
+          ]
+        },
+        {
+          "clean": "wo",
+          "syllables": [
+            "wo"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Himmelslicht",
+          "syllables": [
+            "Him",
+            "mel",
+            "slicht"
           ]
         },
         {
@@ -207,55 +776,48 @@
           ]
         },
         {
-          "clean": "in",
+          "clean": "den",
           "syllables": [
-            "in"
+            "den"
           ]
         },
         {
-          "clean": "der",
+          "clean": "Boden",
           "syllables": [
-            "der"
+            "Bo",
+            "den"
           ]
         },
         {
-          "clean": "Luft",
+          "clean": "berührte",
           "syllables": [
-            "Luft"
+            "be",
+            "rüh",
+            "rte"
           ]
         }
       ]
     },
     {
-      "text": "Begeistert tanzen alle Freunde im Kreis herum.",
+      "text": "Dort stand mitten im weichen Moos plötzlich ein kleiner, festlich gedeckter Tisch aus Birkenholz.",
       "words": [
         {
-          "clean": "Begeistert",
+          "clean": "Dort",
           "syllables": [
-            "Be",
-            "geis",
-            "tert"
+            "Dort"
           ]
         },
         {
-          "clean": "tanzen",
+          "clean": "stand",
           "syllables": [
-            "tan",
-            "zen"
+            "stand"
           ]
         },
         {
-          "clean": "alle",
+          "clean": "mitten",
           "syllables": [
-            "al",
-            "le"
-          ]
-        },
-        {
-          "clean": "Freunde",
-          "syllables": [
-            "Freun",
-            "de"
+            "mit",
+            "ten"
           ]
         },
         {
@@ -265,16 +827,597 @@
           ]
         },
         {
-          "clean": "Kreis",
+          "clean": "weichen",
           "syllables": [
-            "Kreis"
+            "wei",
+            "chen"
           ]
         },
         {
-          "clean": "herum",
+          "clean": "Moos",
           "syllables": [
-            "he",
-            "rum"
+            "Moos"
+          ]
+        },
+        {
+          "clean": "plötzlich",
+          "syllables": [
+            "plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "festlich",
+          "syllables": [
+            "fest",
+            "lich"
+          ]
+        },
+        {
+          "clean": "gedeckter",
+          "syllables": [
+            "ge",
+            "deck",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "Birkenholz",
+          "syllables": [
+            "Bir",
+            "ken",
+            "holz"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Auf einer silbernen Platte thronte eine zart duftende Torte, die wie eine fluffige Wolke aussah.",
+      "words": [
+        {
+          "clean": "Auf",
+          "syllables": [
+            "Auf"
+          ]
+        },
+        {
+          "clean": "einer",
+          "syllables": [
+            "ei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "silbernen",
+          "syllables": [
+            "sil",
+            "ber",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Platte",
+          "syllables": [
+            "Plat",
+            "te"
+          ]
+        },
+        {
+          "clean": "thronte",
+          "syllables": [
+            "thron",
+            "te"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "zart",
+          "syllables": [
+            "zart"
+          ]
+        },
+        {
+          "clean": "duftende",
+          "syllables": [
+            "duf",
+            "ten",
+            "de"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "wie",
+          "syllables": [
+            "wie"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "fluffige",
+          "syllables": [
+            "fluf",
+            "fi",
+            "ge"
+          ]
+        },
+        {
+          "clean": "Wolke",
+          "syllables": [
+            "Wol",
+            "ke"
+          ]
+        },
+        {
+          "clean": "aussah",
+          "syllables": [
+            "aus",
+            "sah"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Bunte Zuckersterne funkelten auf der Glasur und verrieten, dass hier Zauberei im Spiel war.",
+      "words": [
+        {
+          "clean": "Bunte",
+          "syllables": [
+            "Bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Zuckersterne",
+          "syllables": [
+            "Zu",
+            "cker",
+            "ster",
+            "ne"
+          ]
+        },
+        {
+          "clean": "funkelten",
+          "syllables": [
+            "fun",
+            "kel",
+            "ten"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Glasur",
+          "syllables": [
+            "Gla",
+            "sur"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "verrieten",
+          "syllables": [
+            "ver",
+            "rie",
+            "ten"
+          ]
+        },
+        {
+          "clean": "dass",
+          "syllables": [
+            "dass"
+          ]
+        },
+        {
+          "clean": "hier",
+          "syllables": [
+            "hier"
+          ]
+        },
+        {
+          "clean": "Zauberei",
+          "syllables": [
+            "Zau",
+            "be",
+            "rei"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Spiel",
+          "syllables": [
+            "Spiel"
+          ]
+        },
+        {
+          "clean": "war",
+          "syllables": [
+            "war"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neben dem Teller lag eine kleine Karte mit den Worten: Für das liebste Einhorn im Zauberwald.",
+      "words": [
+        {
+          "clean": "Neben",
+          "syllables": [
+            "Ne",
+            "ben"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Teller",
+          "syllables": [
+            "Tel",
+            "ler"
+          ]
+        },
+        {
+          "clean": "lag",
+          "syllables": [
+            "lag"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "kleine",
+          "syllables": [
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Karte",
+          "syllables": [
+            "Kar",
+            "te"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Worten",
+          "syllables": [
+            "Wor",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Für",
+          "syllables": [
+            "Für"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "liebste",
+          "syllables": [
+            "lieb",
+            "ste"
+          ]
+        },
+        {
+          "clean": "Einhorn",
+          "syllables": [
+            "Ein",
+            "horn"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Zauberwald",
+          "syllables": [
+            "Zau",
+            "ber",
+            "wald"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fina schmunzelte vergnügt und probierte vorsichtig einen süßen Bissen von dem himmlischen Gebäck.",
+      "words": [
+        {
+          "clean": "Fina",
+          "syllables": [
+            "Fi",
+            "na"
+          ]
+        },
+        {
+          "clean": "schmunzelte",
+          "syllables": [
+            "schmun",
+            "zel",
+            "te"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "verg",
+            "nügt"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "probierte",
+          "syllables": [
+            "pro",
+            "bier",
+            "te"
+          ]
+        },
+        {
+          "clean": "vorsichtig",
+          "syllables": [
+            "vor",
+            "sich",
+            "tig"
+          ]
+        },
+        {
+          "clean": "einen",
+          "syllables": [
+            "ei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "süßen",
+          "syllables": [
+            "sü",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Bissen",
+          "syllables": [
+            "Bis",
+            "sen"
+          ]
+        },
+        {
+          "clean": "von",
+          "syllables": [
+            "von"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "himmlischen",
+          "syllables": [
+            "him",
+            "mli",
+            "schen"
+          ]
+        },
+        {
+          "clean": "Gebäck",
+          "syllables": [
+            "Ge",
+            "bäck"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mit puderzuckerweißer Nase und einem rundum glücklichen Bauch legte sie sich gemütlich ins grüne Moos.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
+          ]
+        },
+        {
+          "clean": "puderzuckerweißer",
+          "syllables": [
+            "pu",
+            "der",
+            "zu",
+            "cker",
+            "wei",
+            "ßer"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "rundum",
+          "syllables": [
+            "run",
+            "dum"
+          ]
+        },
+        {
+          "clean": "glücklichen",
+          "syllables": [
+            "glück",
+            "li",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Bauch",
+          "syllables": [
+            "Bauch"
+          ]
+        },
+        {
+          "clean": "legte",
+          "syllables": [
+            "leg",
+            "te"
+          ]
+        },
+        {
+          "clean": "sie",
+          "syllables": [
+            "sie"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "gemütlich",
+          "syllables": [
+            "ge",
+            "müt",
+            "lich"
+          ]
+        },
+        {
+          "clean": "ins",
+          "syllables": [
+            "ins"
+          ]
+        },
+        {
+          "clean": "grüne",
+          "syllables": [
+            "grü",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
           ]
         }
       ]

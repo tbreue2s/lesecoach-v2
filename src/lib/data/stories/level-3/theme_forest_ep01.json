@@ -2,16 +2,184 @@
   "themeId": "theme_forest",
   "level": 3,
   "episode": 1,
-  "disturberWord": "Regenschirm",
-  "title": "Igel und der Regenschirm",
+  "disturberWord": "Klavier",
+  "title": "Musik im Moos",
   "sentences": [
     {
-      "text": "Der Igel läuft schnell zum Tor.",
+      "text": "Der Pfad raschelt leise.",
       "words": [
         {
           "clean": "Der",
           "syllables": [
             "Der"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
+          ]
+        },
+        {
+          "clean": "raschelt",
+          "syllables": [
+            "ra",
+            "schelt"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Alte Bäume wiegen sich sanft im Wind.",
+      "words": [
+        {
+          "clean": "Alte",
+          "syllables": [
+            "Al",
+            "te"
+          ]
+        },
+        {
+          "clean": "Bäume",
+          "syllables": [
+            "Bäu",
+            "me"
+          ]
+        },
+        {
+          "clean": "wiegen",
+          "syllables": [
+            "wie",
+            "gen"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "sanft",
+          "syllables": [
+            "sanft"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort steht ein Klavier!",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Klavier",
+          "syllables": [
+            "Kla",
+            "vier"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Es ruht mitten im weichen, grünen Moos.",
+      "words": [
+        {
+          "clean": "Es",
+          "syllables": [
+            "Es"
+          ]
+        },
+        {
+          "clean": "ruht",
+          "syllables": [
+            "ruht"
+          ]
+        },
+        {
+          "clean": "mitten",
+          "syllables": [
+            "mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "grünen",
+          "syllables": [
+            "grü",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein kleiner Igel drückt mutig.",
+      "words": [
+        {
+          "clean": "Ein",
+          "syllables": [
+            "Ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
           ]
         },
         {
@@ -22,138 +190,47 @@
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "drückt",
           "syllables": [
-            "läuft"
+            "drückt"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "mutig",
           "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
+            "mu",
+            "tig"
           ]
         }
       ]
     },
     {
-      "text": "Da entdeckt er plötzlich einen Regenschirm.",
+      "text": "Der helle Ton kitzelt alle seine Stacheln.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Der",
           "syllables": [
-            "Da"
+            "Der"
           ]
         },
         {
-          "clean": "entdeckt",
+          "clean": "helle",
           "syllables": [
-            "en",
-            "tdeckt"
+            "hel",
+            "le"
           ]
         },
         {
-          "clean": "er",
+          "clean": "Ton",
           "syllables": [
-            "er"
+            "Ton"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "kitzelt",
           "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Regenschirm",
-          "syllables": [
-            "Re",
-            "gen",
-            "schirm"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier schaut genau hin.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
-          ]
-        },
-        {
-          "clean": "hin",
-          "syllables": [
-            "hin"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam jubeln alle vor Freude.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
-          ]
-        },
-        {
-          "clean": "jubeln",
-          "syllables": [
-            "ju",
-            "beln"
+            "kit",
+            "zelt"
           ]
         },
         {
@@ -164,16 +241,17 @@
           ]
         },
         {
-          "clean": "vor",
+          "clean": "seine",
           "syllables": [
-            "vor"
+            "sei",
+            "ne"
           ]
         },
         {
-          "clean": "Freude",
+          "clean": "Stacheln",
           "syllables": [
-            "Freu",
-            "de"
+            "Sta",
+            "cheln"
           ]
         }
       ]

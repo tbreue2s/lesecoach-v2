@@ -2,30 +2,60 @@
   "themeId": "theme_horse",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Kaktus",
-  "title": "Das lustige Kaktus",
+  "disturberWord": "Goldhuf",
+  "title": "Der Fund im Tal",
   "sentences": [
     {
-      "text": "Der rote Kaktus liegt im Gras.",
+      "text": "Sie reiten durch ein weites Tal.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sie",
           "syllables": [
-            "Der"
+            "Sie"
           ]
         },
         {
-          "clean": "rote",
+          "clean": "reiten",
           "syllables": [
-            "ro",
-            "te"
+            "rei",
+            "ten"
           ]
         },
         {
-          "clean": "Kaktus",
+          "clean": "durch",
           "syllables": [
-            "Kak",
-            "tus"
+            "durch"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "weites",
+          "syllables": [
+            "wei",
+            "tes"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Unten liegt nun sehr grünes Moos.",
+      "words": [
+        {
+          "clean": "Unten",
+          "syllables": [
+            "Un",
+            "ten"
           ]
         },
         {
@@ -35,26 +65,57 @@
           ]
         },
         {
-          "clean": "im",
+          "clean": "nun",
           "syllables": [
-            "im"
+            "nun"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "sehr",
           "syllables": [
-            "Gras"
+            "sehr"
+          ]
+        },
+        {
+          "clean": "grünes",
+          "syllables": [
+            "grü",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dort strahlt fein ein kleiner Goldhuf.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dort",
           "syllables": [
-            "Ein"
+            "Dort"
+          ]
+        },
+        {
+          "clean": "strahlt",
+          "syllables": [
+            "strahlt"
+          ]
+        },
+        {
+          "clean": "fein",
+          "syllables": [
+            "fein"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
           ]
         },
         {
@@ -65,33 +126,16 @@
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "Goldhuf",
           "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "sieht",
-          "syllables": [
-            "sieht"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
+            "Gold",
+            "huf"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Das gibt nun wieder neuen Mut.",
       "words": [
         {
           "clean": "Das",
@@ -100,67 +144,77 @@
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "gibt",
           "syllables": [
-            "lie",
-            "be"
+            "gibt"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "nun",
           "syllables": [
-            "Tier"
+            "nun"
           ]
         },
         {
-          "clean": "bellt",
+          "clean": "wieder",
           "syllables": [
-            "bellt"
+            "wie",
+            "der"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "neuen",
           "syllables": [
-            "lei",
-            "se"
+            "neu",
+            "en"
+          ]
+        },
+        {
+          "clean": "Mut",
+          "syllables": [
+            "Mut"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Fröhlich führt nun heim der Pfad.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Fröhlich",
           "syllables": [
-            "Der"
+            "Fröh",
+            "lich"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "führt",
           "syllables": [
-            "al",
-            "te"
+            "führt"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "nun",
           "syllables": [
-            "Baum"
+            "nun"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "heim",
           "syllables": [
-            "spen",
-            "det"
+            "heim"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "der",
           "syllables": [
-            "Schat",
-            "ten"
+            "der"
+          ]
+        },
+        {
+          "clean": "Pfad",
+          "syllables": [
+            "Pfad"
           ]
         }
       ]

@@ -2,37 +2,24 @@
   "themeId": "theme_ocean",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Rakete",
-  "title": "Ein Fund im weiten Meer",
+  "disturberWord": "Nixe",
+  "title": "Das glitzernde Geheimnis",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt im weiten Meer.",
+      "text": "Lina rudert im Boot.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Lina",
           "syllables": [
-            "Ein"
+            "Li",
+            "na"
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "rudert",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "beginnt",
-          "syllables": [
-            "be",
-            "ginnt"
+            "ru",
+            "dert"
           ]
         },
         {
@@ -42,78 +29,206 @@
           ]
         },
         {
-          "clean": "weiten",
+          "clean": "Boot",
           "syllables": [
-            "wei",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Meer",
-          "syllables": [
-            "Me",
-            "er"
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Der Wal läuft über die Wiese.",
+      "text": "Das klare Wasser glitzert hell in der Sonne.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Das",
           "syllables": [
-            "Der"
+            "Das"
           ]
         },
         {
-          "clean": "Wal",
+          "clean": "klare",
           "syllables": [
-            "Wal"
+            "kla",
+            "re"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "Wasser",
           "syllables": [
-            "läuft"
+            "Was",
+            "ser"
           ]
         },
         {
-          "clean": "über",
+          "clean": "glitzert",
           "syllables": [
-            "ü",
-            "ber"
+            "glit",
+            "zert"
           ]
         },
         {
-          "clean": "die",
+          "clean": "hell",
           "syllables": [
-            "die"
+            "hell"
           ]
         },
         {
-          "clean": "Wiese",
+          "clean": "in",
           "syllables": [
-            "Wie",
-            "se"
+            "in"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Sonne",
+          "syllables": [
+            "Son",
+            "ne"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Rakete auf dem Pfad auf.",
+      "text": "Plötzlich winkt eine Nixe.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Plötzlich",
           "syllables": [
-            "Ganz"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "winkt",
           "syllables": [
-            "plöt",
-            "zlich"
+            "winkt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sie zeigt stolz eine wunderschön schimmernde Perle.",
+      "words": [
+        {
+          "clean": "Sie",
+          "syllables": [
+            "Sie"
+          ]
+        },
+        {
+          "clean": "zeigt",
+          "syllables": [
+            "zeigt"
+          ]
+        },
+        {
+          "clean": "stolz",
+          "syllables": [
+            "stolz"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "wunderschön",
+          "syllables": [
+            "wun",
+            "der",
+            "schön"
+          ]
+        },
+        {
+          "clean": "schimmernde",
+          "syllables": [
+            "schim",
+            "mer",
+            "nde"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lina freut sich sehr.",
+      "words": [
+        {
+          "clean": "Lina",
+          "syllables": [
+            "Li",
+            "na"
+          ]
+        },
+        {
+          "clean": "freut",
+          "syllables": [
+            "freut"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "sehr",
+          "syllables": [
+            "sehr"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mit einem Lächeln taucht die Nixe ab.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "Lächeln",
+          "syllables": [
+            "Lä",
+            "cheln"
           ]
         },
         {
@@ -123,130 +238,22 @@
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "die",
           "syllables": [
-            "Ein"
+            "die"
           ]
         },
         {
-          "clean": "Rakete",
+          "clean": "Nixe",
           "syllables": [
-            "Ra",
-            "ke",
-            "te"
+            "Ni",
+            "xe"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "ab",
           "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Er staunt über den Fund.",
-      "words": [
-        {
-          "clean": "Er",
-          "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "über",
-          "syllables": [
-            "ü",
-            "ber"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Fund",
-          "syllables": [
-            "Fund"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
-      "words": [
-        {
-          "clean": "Lachend",
-          "syllables": [
-            "La",
-            "chend"
-          ]
-        },
-        {
-          "clean": "nehmen",
-          "syllables": [
-            "neh",
-            "men"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "neue",
-          "syllables": [
-            "neu",
-            "e"
-          ]
-        },
-        {
-          "clean": "Abenteuer",
-          "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
+            "ab"
           ]
         }
       ]

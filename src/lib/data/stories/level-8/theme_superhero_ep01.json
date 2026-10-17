@@ -2,196 +2,70 @@
   "themeId": "theme_superhero",
   "level": 8,
   "episode": 1,
-  "disturberWord": "Roller",
-  "title": "Aufregung auf dem hohen Turm",
+  "disturberWord": "Kater-Held",
+  "title": "Der geheimnisvolle Helfer",
   "sentences": [
     {
-      "text": "Was für ein herrlicher und sonniger Morgen!",
+      "text": "Leo trug seinen blauen Umhang stolz am Hafen.",
       "words": [
         {
-          "clean": "Was",
+          "clean": "Leo",
           "syllables": [
-            "Was"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "für",
+          "clean": "trug",
           "syllables": [
-            "für"
+            "trug"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "seinen",
           "syllables": [
-            "ein"
+            "sei",
+            "nen"
           ]
         },
         {
-          "clean": "herrlicher",
+          "clean": "blauen",
           "syllables": [
-            "her",
-            "rli",
-            "cher"
+            "blau",
+            "en"
           ]
         },
         {
-          "clean": "und",
+          "clean": "Umhang",
           "syllables": [
-            "und"
+            "Um",
+            "hang"
           ]
         },
         {
-          "clean": "sonniger",
+          "clean": "stolz",
           "syllables": [
-            "son",
-            "ni",
-            "ger"
+            "stolz"
           ]
         },
         {
-          "clean": "Morgen",
+          "clean": "am",
           "syllables": [
-            "Mor",
-            "gen"
+            "am"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
           ]
         }
       ]
     },
     {
-      "text": "Der Tiger spaziert vergnügt auf dem hohen Turm.",
+      "text": "Ein kleines Boot trieb auf das Wasser hinaus.",
       "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Tiger",
-          "syllables": [
-            "Ti",
-            "ger"
-          ]
-        },
-        {
-          "clean": "spaziert",
-          "syllables": [
-            "spa",
-            "ziert"
-          ]
-        },
-        {
-          "clean": "vergnügt",
-          "syllables": [
-            "verg",
-            "nügt"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "hohen",
-          "syllables": [
-            "ho",
-            "hen"
-          ]
-        },
-        {
-          "clean": "Turm",
-          "syllables": [
-            "Turm"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Doch was glitzert da drüben so hell im Sonnenlicht?",
-      "words": [
-        {
-          "clean": "Doch",
-          "syllables": [
-            "Doch"
-          ]
-        },
-        {
-          "clean": "was",
-          "syllables": [
-            "was"
-          ]
-        },
-        {
-          "clean": "glitzert",
-          "syllables": [
-            "glit",
-            "zert"
-          ]
-        },
-        {
-          "clean": "da",
-          "syllables": [
-            "da"
-          ]
-        },
-        {
-          "clean": "drüben",
-          "syllables": [
-            "drü",
-            "ben"
-          ]
-        },
-        {
-          "clean": "so",
-          "syllables": [
-            "so"
-          ]
-        },
-        {
-          "clean": "hell",
-          "syllables": [
-            "hell"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Sonnenlicht",
-          "syllables": [
-            "Son",
-            "nen",
-            "licht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Es ist Ein Roller, das mitten auf dem Moos steht!",
-      "words": [
-        {
-          "clean": "Es",
-          "syllables": [
-            "Es"
-          ]
-        },
-        {
-          "clean": "ist",
-          "syllables": [
-            "ist"
-          ]
-        },
         {
           "clean": "Ein",
           "syllables": [
@@ -199,10 +73,28 @@
           ]
         },
         {
-          "clean": "Roller",
+          "clean": "kleines",
           "syllables": [
-            "Rol",
-            "ler"
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        },
+        {
+          "clean": "trieb",
+          "syllables": [
+            "trieb"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
           ]
         },
         {
@@ -212,70 +104,66 @@
           ]
         },
         {
-          "clean": "mitten",
+          "clean": "Wasser",
           "syllables": [
-            "mit",
-            "ten"
+            "Was",
+            "ser"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "hinaus",
           "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Mo",
-            "os"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
+            "hi",
+            "naus"
           ]
         }
       ]
     },
     {
-      "text": "„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.",
+      "text": "„Wie rette ich das bloß?“, rief Leo aufgeregt.",
       "words": [
         {
-          "clean": "Komm",
+          "clean": "Wie",
           "syllables": [
-            "Komm"
+            "Wie"
           ]
         },
         {
-          "clean": "schnell",
+          "clean": "rette",
           "syllables": [
-            "schnell"
+            "ret",
+            "te"
           ]
         },
         {
-          "clean": "her",
+          "clean": "ich",
           "syllables": [
-            "her"
+            "ich"
           ]
         },
         {
-          "clean": "ruft",
+          "clean": "das",
           "syllables": [
-            "ruft"
+            "das"
           ]
         },
         {
-          "clean": "er",
+          "clean": "bloß",
           "syllables": [
-            "er"
+            "bloß"
+          ]
+        },
+        {
+          "clean": "rief",
+          "syllables": [
+            "rief"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
           ]
         },
         {
@@ -285,52 +173,47 @@
             "ge",
             "regt"
           ]
-        },
-        {
-          "clean": "seinem",
-          "syllables": [
-            "sei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "besten",
-          "syllables": [
-            "bes",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Freund",
-          "syllables": [
-            "Freund"
-          ]
-        },
-        {
-          "clean": "zu",
-          "syllables": [
-            "zu"
-          ]
         }
       ]
     },
     {
-      "text": "Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.",
+      "text": "Da sprang flink ein Kater auf die Kaimauer.",
       "words": [
         {
-          "clean": "Gemeinsam",
+          "clean": "Da",
           "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "Da"
           ]
         },
         {
-          "clean": "bewundern",
+          "clean": "sprang",
           "syllables": [
-            "be",
-            "wun",
-            "dern"
+            "sprang"
+          ]
+        },
+        {
+          "clean": "flink",
+          "syllables": [
+            "flink"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
           ]
         },
         {
@@ -340,17 +223,116 @@
           ]
         },
         {
-          "clean": "beiden",
+          "clean": "Kaimauer",
           "syllables": [
-            "bei",
-            "den"
+            "Kai",
+            "mau",
+            "er"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Um seinen Hals wehte ein kleiner roter Umhang!",
+      "words": [
+        {
+          "clean": "Um",
+          "syllables": [
+            "Um"
           ]
         },
         {
-          "clean": "Tiere",
+          "clean": "seinen",
           "syllables": [
-            "Tie",
-            "re"
+            "sei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Hals",
+          "syllables": [
+            "Hals"
+          ]
+        },
+        {
+          "clean": "wehte",
+          "syllables": [
+            "weh",
+            "te"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "roter",
+          "syllables": [
+            "ro",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Umhang",
+          "syllables": [
+            "Um",
+            "hang"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mit schneller Tatze angelte der Kater-Held das Boot heran.",
+      "words": [
+        {
+          "clean": "Mit",
+          "syllables": [
+            "Mit"
+          ]
+        },
+        {
+          "clean": "schneller",
+          "syllables": [
+            "schnel",
+            "ler"
+          ]
+        },
+        {
+          "clean": "Tatze",
+          "syllables": [
+            "Tat",
+            "ze"
+          ]
+        },
+        {
+          "clean": "angelte",
+          "syllables": [
+            "an",
+            "gel",
+            "te"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "KaterHeld",
+          "syllables": [
+            "Ka",
+            "ter",
+            "Held"
           ]
         },
         {
@@ -360,87 +342,146 @@
           ]
         },
         {
-          "clean": "sonderbare",
+          "clean": "Boot",
           "syllables": [
-            "son",
-            "der",
-            "ba",
-            "re"
+            "Boot"
           ]
         },
         {
-          "clean": "Schauspiel",
+          "clean": "heran",
           "syllables": [
-            "Schaus",
-            "piel"
+            "he",
+            "ran"
           ]
         }
       ]
     },
     {
-      "text": "So einen aufregenden Tag werden sie sicher niemals vergessen!",
+      "text": "„Bist du etwa auch ein Superheld?“, fragte Leo erstaunt.",
       "words": [
         {
-          "clean": "So",
+          "clean": "Bist",
           "syllables": [
-            "So"
+            "Bist"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "du",
           "syllables": [
-            "ei",
-            "nen"
+            "du"
           ]
         },
         {
-          "clean": "aufregenden",
+          "clean": "etwa",
           "syllables": [
-            "auf",
-            "re",
-            "gen",
-            "den"
+            "et",
+            "wa"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "auch",
           "syllables": [
-            "Tag"
+            "auch"
           ]
         },
         {
-          "clean": "werden",
+          "clean": "ein",
           "syllables": [
-            "wer",
-            "den"
+            "ein"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "Superheld",
           "syllables": [
-            "sie"
+            "Su",
+            "per",
+            "held"
           ]
         },
         {
-          "clean": "sicher",
+          "clean": "fragte",
           "syllables": [
-            "si",
-            "cher"
+            "frag",
+            "te"
           ]
         },
         {
-          "clean": "niemals",
+          "clean": "Leo",
           "syllables": [
-            "nie",
-            "mals"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "vergessen",
+          "clean": "erstaunt",
           "syllables": [
-            "ver",
-            "ges",
-            "sen"
+            "er",
+            "staunt"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das Kätzchen schnurrte leise und zwinkerte ihm fröhlich zu.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "Kätzchen",
+          "syllables": [
+            "Kätz",
+            "chen"
+          ]
+        },
+        {
+          "clean": "schnurrte",
+          "syllables": [
+            "schnur",
+            "rte"
+          ]
+        },
+        {
+          "clean": "leise",
+          "syllables": [
+            "lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "zwinkerte",
+          "syllables": [
+            "zwin",
+            "ker",
+            "te"
+          ]
+        },
+        {
+          "clean": "ihm",
+          "syllables": [
+            "ihm"
+          ]
+        },
+        {
+          "clean": "fröhlich",
+          "syllables": [
+            "fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "zu",
+          "syllables": [
+            "zu"
           ]
         }
       ]

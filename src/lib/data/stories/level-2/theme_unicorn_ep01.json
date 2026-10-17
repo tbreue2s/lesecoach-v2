@@ -2,11 +2,54 @@
   "themeId": "theme_unicorn",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Luftballon",
-  "title": "Das bunte Luftballon",
+  "disturberWord": "Torte",
+  "title": "Die Torte im Moos",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Mila läuft durch den tiefen Wald.",
+      "words": [
+        {
+          "clean": "Mila",
+          "syllables": [
+            "Mi",
+            "la"
+          ]
+        },
+        {
+          "clean": "läuft",
+          "syllables": [
+            "läuft"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "tiefen",
+          "syllables": [
+            "tie",
+            "fen"
+          ]
+        },
+        {
+          "clean": "Wald",
+          "syllables": [
+            "Wald"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ein hoher Bogen leuchtet sehr weit.",
       "words": [
         {
           "clean": "Ein",
@@ -15,85 +58,141 @@
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "hoher",
           "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Hund",
-          "syllables": [
-            "Hund"
-          ]
-        },
-        {
-          "clean": "geht",
-          "syllables": [
-            "geht"
-          ]
-        },
-        {
-          "clean": "umher",
-          "syllables": [
-            "um",
+            "ho",
             "her"
           ]
+        },
+        {
+          "clean": "Bogen",
+          "syllables": [
+            "Bo",
+            "gen"
+          ]
+        },
+        {
+          "clean": "leuchtet",
+          "syllables": [
+            "leuch",
+            "tet"
+          ]
+        },
+        {
+          "clean": "sehr",
+          "syllables": [
+            "sehr"
+          ]
+        },
+        {
+          "clean": "weit",
+          "syllables": [
+            "weit"
+          ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt einen Luftballon.",
+      "text": "Auf weichem Moos steht ein Tisch.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Auf",
           "syllables": [
-            "Mit",
-            "ten"
+            "Auf"
           ]
         },
         {
-          "clean": "im",
+          "clean": "weichem",
           "syllables": [
-            "im"
+            "wei",
+            "chem"
           ]
         },
         {
-          "clean": "Gras",
+          "clean": "Moos",
           "syllables": [
-            "Gras"
+            "Moos"
           ]
         },
         {
-          "clean": "liegt",
+          "clean": "steht",
           "syllables": [
-            "liegt"
+            "steht"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Tisch",
+          "syllables": [
+            "Tisch"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Dort glänzt eine feine Torte.",
+      "words": [
+        {
+          "clean": "Dort",
+          "syllables": [
+            "Dort"
+          ]
+        },
+        {
+          "clean": "glänzt",
+          "syllables": [
+            "glänzt"
+          ]
+        },
+        {
+          "clean": "eine",
           "syllables": [
             "ei",
-            "nen"
+            "ne"
           ]
         },
         {
-          "clean": "Luftballon",
+          "clean": "feine",
           "syllables": [
-            "Luf",
-            "tbal",
-            "lon"
+            "fei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier staunt sehr.",
+      "text": "Zufrieden nascht das liebe Tier.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Zufrieden",
           "syllables": [
-            "Das"
+            "Zuf",
+            "rie",
+            "den"
+          ]
+        },
+        {
+          "clean": "nascht",
+          "syllables": [
+            "nascht"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
           ]
         },
         {
@@ -107,56 +206,6 @@
           "clean": "Tier",
           "syllables": [
             "Tier"
-          ]
-        },
-        {
-          "clean": "staunt",
-          "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "sehr",
-          "syllables": [
-            "sehr"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
           ]
         }
       ]

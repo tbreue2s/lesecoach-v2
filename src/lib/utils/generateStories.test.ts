@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   DISTURBER_WORDS,
   LEVEL_1_NOUN_WHITELIST,
+  LEVEL_1_2_DISTURBER_WORDS,
   parseArgs,
   sampleRandom,
   buildDraftingPrompt,
@@ -55,31 +56,38 @@ describe('generateStories Pipeline (WP13 Evidence)', () => {
     expect(unique.size).toBe(5);
   });
 
-  it('constructs a creative Step 1 (Drafting) prompt with disturber collision', () => {
+  it('contains simple, funny disturber objects for early reader levels 1 and 2', () => {
+    expect(LEVEL_1_2_DISTURBER_WORDS.length).toBeGreaterThanOrEqual(10);
+    expect(LEVEL_1_2_DISTURBER_WORDS).toContain('Ufo');
+    expect(LEVEL_1_2_DISTURBER_WORDS).toContain('Sofa');
+    expect(LEVEL_1_2_DISTURBER_WORDS).toContain('Torte');
+    expect(LEVEL_1_2_DISTURBER_WORDS).toContain('Keks');
+  });
+
+  it('constructs a creative Step 1 (Drafting) prompt with disturber collision and Level 1 whitelist', () => {
     const prompt = buildDraftingPrompt(forestTheme, 'Ufo', 1);
     expect(prompt).toContain('Wald & Bäume');
-    expect(prompt).toContain('"Ufo"');
-    expect(prompt).toContain('Level 1');
-    expect(prompt).toContain('Genau 4 bis 6 Sätze');
+    expect(prompt).toContain('Ufo');
+    expect(prompt).toContain('4 bis 5 Sätze');
+    expect(prompt).toContain('Dino');
+    expect(prompt).toContain('WICHTIG (FÜR LEVEL 1)');
   });
 
   it('constructs Step 2 (Translation) prompt enforcing Level 1 whitelist nouns and JSON format', () => {
-    const selectedNouns = ['Dino', 'Tor', 'Oma', 'Vogel'];
     const prompt = buildTranslationPrompt(
       forestTheme,
       'Ufo',
       1,
       1,
-      'Das ist ein Test-Plot.',
-      selectedNouns
+      'Das ist ein Test-Plot.'
     );
 
-    expect(prompt).toContain('DIDAKTISCHE LEVEL-1-REGELN');
+    expect(prompt).toContain('REGELN FÜR LEVEL 1');
+    expect(prompt).toContain('4 bis 5 Sätze');
+    expect(prompt).toContain('5 bis 8 Wörter');
     expect(prompt).toContain('Dino');
     expect(prompt).toContain('Tor');
-    expect(prompt).toContain('Oma');
-    expect(prompt).toContain('Vogel');
-    expect(prompt).toContain('SILBENTRENNUNG');
+    expect(prompt).toContain('SILBENTRENNUNG & JSON-SCHEMA');
     expect(prompt).toContain('"themeId": "theme_forest"');
     expect(prompt).toContain('"disturberWord": "Ufo"');
   });
@@ -142,5 +150,35 @@ describe('generateStories Pipeline (WP13 Evidence)', () => {
     expect(story.sentences[0].words.find((w) => w.clean === 'Ufo')?.syllables).toEqual(['U', 'fo']);
     expect(story.sentences[0].words.find((w) => w.clean === 'landet')?.syllables).toEqual(['lan', 'det']);
     expect(story.sentences[1].words.find((w) => w.clean === 'Vogel')?.syllables).toEqual(['Vo', 'gel']);
+  });
+
+  it('verifies all THEME_LEVEL1_ANCHOR_WORDS have complexity score 0 and are eligible Level 1 nouns', async () => {
+    const { THEME_LEVEL1_ANCHOR_WORDS, THEME_SURPRISE_SEEDS } = await import('./promptTemplates');
+    const { calculateWordComplexity, isLevel1EligibleWord, tokenizeStory } = await import('./tokenizer');
+    const { splitSyllables } = await import('./syllableSplitter');
+
+    for (const theme of STORY_THEMES) {
+      const anchors = THEME_LEVEL1_ANCHOR_WORDS[theme.id];
+      expect(anchors.length).toBeGreaterThanOrEqual(25);
+      for (const word of anchors) {
+        const syllables = splitSyllables(word);
+        expect(calculateWordComplexity(word, syllables)).toBe(0);
+        expect(isLevel1EligibleWord(word)).toBe(true);
+      }
+
+      const seeds = THEME_SURPRISE_SEEDS[theme.id];
+      expect(seeds.length).toBe(10);
+    }
+
+    // Verify cross-sentence target word variety in Level 1
+    const sampleStory = [
+      'Lilly wandert fröhlich durch den grünen Wald zum See.',
+      'Am stillen See steht plötzlich ein Klavier im Moos.',
+      'Ein kleiner Igel tippt am Klavier auf eine helle Note.',
+      'Am Abend fliegt ein bunter Vogel über das Tal.',
+    ].join(' ');
+    const tokenized = tokenizeStory(sampleStory, 1);
+    const chosenWords = tokenized.map((s) => s.words.find((w) => w.role === 'child')?.cleanWord);
+    expect(chosenWords).toEqual(['See', 'Moos', 'Igel', 'Vogel']);
   });
 });

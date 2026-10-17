@@ -2,171 +2,50 @@
   "themeId": "theme_space",
   "level": 7,
   "episode": 1,
-  "disturberWord": "Taschenlampe",
-  "title": "Abenteuer mitten im Weltall",
+  "disturberWord": "Sternenwal",
+  "title": "Besuch im Sternenmeer",
   "sentences": [
     {
-      "text": "Ein abenteuerlustiger Pilot streift aufmerksam mitten im Weltall.",
+      "text": "Die kleine Rakete flog leise durch das Sternenmeer.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Die",
           "syllables": [
-            "Ein"
+            "Die"
           ]
         },
         {
-          "clean": "abenteuerlustiger",
+          "clean": "kleine",
           "syllables": [
-            "a",
-            "ben",
-            "teu",
-            "er",
-            "lus",
-            "ti",
-            "ger"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "Pilot",
+          "clean": "Rakete",
           "syllables": [
-            "Pi",
-            "lot"
+            "Ra",
+            "ke",
+            "te"
           ]
         },
         {
-          "clean": "streift",
+          "clean": "flog",
           "syllables": [
-            "streift"
+            "flog"
           ]
         },
         {
-          "clean": "aufmerksam",
+          "clean": "leise",
           "syllables": [
-            "auf",
-            "merk",
-            "sam"
+            "lei",
+            "se"
           ]
         },
         {
-          "clean": "mitten",
+          "clean": "durch",
           "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Weltall",
-          "syllables": [
-            "Wel",
-            "tall"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Unter einem dichten Busch liegt plötzlich Ein Taschenlampe verborgen.",
-      "words": [
-        {
-          "clean": "Unter",
-          "syllables": [
-            "Un",
-            "ter"
-          ]
-        },
-        {
-          "clean": "einem",
-          "syllables": [
-            "ei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "dichten",
-          "syllables": [
-            "dic",
-            "hten"
-          ]
-        },
-        {
-          "clean": "Busch",
-          "syllables": [
-            "Busch"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plöt",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Taschenlampe",
-          "syllables": [
-            "Ta",
-            "schen",
-            "lam",
-            "pe"
-          ]
-        },
-        {
-          "clean": "verborgen",
-          "syllables": [
-            "ver",
-            "bor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das neugierige Tier untersucht das seltsame Ding ganz genau.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "neugierige",
-          "syllables": [
-            "neu",
-            "gie",
-            "ri",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "untersucht",
-          "syllables": [
-            "un",
-            "ter",
-            "sucht"
+            "durch"
           ]
         },
         {
@@ -176,98 +55,213 @@
           ]
         },
         {
-          "clean": "seltsame",
+          "clean": "Sternenmeer",
           "syllables": [
-            "selt",
-            "sa",
-            "me"
-          ]
-        },
-        {
-          "clean": "Ding",
-          "syllables": [
-            "Ding"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "genau",
-          "syllables": [
-            "ge",
-            "nau"
+            "Ster",
+            "nen",
+            "meer"
           ]
         }
       ]
     },
     {
-      "text": "Voller Stolz präsentiert er den spektakulären Fund allen Freunden.",
+      "text": "Plötzlich glitt ein sanft leuchtender Sternenwal am Fenster vorbei.",
       "words": [
         {
-          "clean": "Voller",
+          "clean": "Plötzlich",
           "syllables": [
-            "Vol",
-            "ler"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Stolz",
+          "clean": "glitt",
           "syllables": [
-            "Stolz"
+            "glitt"
           ]
         },
         {
-          "clean": "präsentiert",
+          "clean": "ein",
           "syllables": [
-            "prä",
-            "sen",
-            "tiert"
+            "ein"
           ]
         },
         {
-          "clean": "er",
+          "clean": "sanft",
           "syllables": [
-            "er"
+            "sanft"
           ]
         },
         {
-          "clean": "den",
+          "clean": "leuchtender",
           "syllables": [
-            "den"
+            "leuch",
+            "ten",
+            "der"
           ]
         },
         {
-          "clean": "spektakulären",
+          "clean": "Sternenwal",
           "syllables": [
-            "spek",
-            "ta",
-            "ku",
-            "lä",
-            "ren"
+            "Ster",
+            "nen",
+            "wal"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "am",
           "syllables": [
-            "Fund"
+            "am"
           ]
         },
         {
-          "clean": "allen",
+          "clean": "Fenster",
           "syllables": [
-            "al",
-            "len"
+            "Fen",
+            "ster"
           ]
         },
         {
-          "clean": "Freunden",
+          "clean": "vorbei",
           "syllables": [
-            "Freun",
-            "den"
+            "vor",
+            "bei"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Er pustete eine Wolke aus glitzerndem Sternenstaub in die Nacht.",
+      "words": [
+        {
+          "clean": "Er",
+          "syllables": [
+            "Er"
+          ]
+        },
+        {
+          "clean": "pustete",
+          "syllables": [
+            "pus",
+            "te",
+            "te"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Wolke",
+          "syllables": [
+            "Wol",
+            "ke"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "glitzerndem",
+          "syllables": [
+            "glit",
+            "zer",
+            "ndem"
+          ]
+        },
+        {
+          "clean": "Sternenstaub",
+          "syllables": [
+            "Ster",
+            "nen",
+            "staub"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Nacht",
+          "syllables": [
+            "Nacht"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fröhlich winkten die Astronauten dem friedlichen Riesen hinterher.",
+      "words": [
+        {
+          "clean": "Fröhlich",
+          "syllables": [
+            "Fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "winkten",
+          "syllables": [
+            "wink",
+            "ten"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Astronauten",
+          "syllables": [
+            "Ast",
+            "ro",
+            "nau",
+            "ten"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "friedlichen",
+          "syllables": [
+            "fried",
+            "li",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Riesen",
+          "syllables": [
+            "Rie",
+            "sen"
+          ]
+        },
+        {
+          "clean": "hinterher",
+          "syllables": [
+            "hin",
+            "ter",
+            "her"
           ]
         }
       ]

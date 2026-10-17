@@ -2,331 +2,51 @@
   "themeId": "theme_space",
   "level": 8,
   "episode": 1,
-  "disturberWord": "Luftballon",
-  "title": "Aufregung mitten im Weltall",
+  "disturberWord": "Sternenwal",
+  "title": "Der sanfte Sternenwal",
   "sentences": [
     {
-      "text": "Was für ein herrlicher und sonniger Morgen!",
+      "text": "Die silberne Rakete flog leise durch die dunkle Nacht.",
       "words": [
         {
-          "clean": "Was",
+          "clean": "Die",
           "syllables": [
-            "Was"
+            "Die"
           ]
         },
         {
-          "clean": "für",
+          "clean": "silberne",
           "syllables": [
-            "für"
+            "sil",
+            "ber",
+            "ne"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Rakete",
           "syllables": [
-            "ein"
+            "Ra",
+            "ke",
+            "te"
           ]
         },
         {
-          "clean": "herrlicher",
+          "clean": "flog",
           "syllables": [
-            "her",
-            "rli",
-            "cher"
+            "flog"
           ]
         },
         {
-          "clean": "und",
+          "clean": "leise",
           "syllables": [
-            "und"
+            "lei",
+            "se"
           ]
         },
         {
-          "clean": "sonniger",
+          "clean": "durch",
           "syllables": [
-            "son",
-            "ni",
-            "ger"
-          ]
-        },
-        {
-          "clean": "Morgen",
-          "syllables": [
-            "Mor",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der Pilot spaziert vergnügt mitten im Weltall.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "Pilot",
-          "syllables": [
-            "Pi",
-            "lot"
-          ]
-        },
-        {
-          "clean": "spaziert",
-          "syllables": [
-            "spa",
-            "ziert"
-          ]
-        },
-        {
-          "clean": "vergnügt",
-          "syllables": [
-            "verg",
-            "nügt"
-          ]
-        },
-        {
-          "clean": "mitten",
-          "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Weltall",
-          "syllables": [
-            "Wel",
-            "tall"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Doch was glitzert da drüben so hell im Sonnenlicht?",
-      "words": [
-        {
-          "clean": "Doch",
-          "syllables": [
-            "Doch"
-          ]
-        },
-        {
-          "clean": "was",
-          "syllables": [
-            "was"
-          ]
-        },
-        {
-          "clean": "glitzert",
-          "syllables": [
-            "glit",
-            "zert"
-          ]
-        },
-        {
-          "clean": "da",
-          "syllables": [
-            "da"
-          ]
-        },
-        {
-          "clean": "drüben",
-          "syllables": [
-            "drü",
-            "ben"
-          ]
-        },
-        {
-          "clean": "so",
-          "syllables": [
-            "so"
-          ]
-        },
-        {
-          "clean": "hell",
-          "syllables": [
-            "hell"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Sonnenlicht",
-          "syllables": [
-            "Son",
-            "nen",
-            "licht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Es ist Ein Luftballon, das mitten auf dem Moos steht!",
-      "words": [
-        {
-          "clean": "Es",
-          "syllables": [
-            "Es"
-          ]
-        },
-        {
-          "clean": "ist",
-          "syllables": [
-            "ist"
-          ]
-        },
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Luftballon",
-          "syllables": [
-            "Luf",
-            "tbal",
-            "lon"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "mitten",
-          "syllables": [
-            "mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Mo",
-            "os"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "„Komm schnell her!“, ruft er aufgeregt seinem besten Freund zu.",
-      "words": [
-        {
-          "clean": "Komm",
-          "syllables": [
-            "Komm"
-          ]
-        },
-        {
-          "clean": "schnell",
-          "syllables": [
-            "schnell"
-          ]
-        },
-        {
-          "clean": "her",
-          "syllables": [
-            "her"
-          ]
-        },
-        {
-          "clean": "ruft",
-          "syllables": [
-            "ruft"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "aufgeregt",
-          "syllables": [
-            "auf",
-            "ge",
-            "regt"
-          ]
-        },
-        {
-          "clean": "seinem",
-          "syllables": [
-            "sei",
-            "nem"
-          ]
-        },
-        {
-          "clean": "besten",
-          "syllables": [
-            "bes",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Freund",
-          "syllables": [
-            "Freund"
-          ]
-        },
-        {
-          "clean": "zu",
-          "syllables": [
-            "zu"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam bewundern die beiden Tiere das sonderbare Schauspiel.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
-          ]
-        },
-        {
-          "clean": "bewundern",
-          "syllables": [
-            "be",
-            "wun",
-            "dern"
+            "durch"
           ]
         },
         {
@@ -336,107 +56,452 @@
           ]
         },
         {
-          "clean": "beiden",
+          "clean": "dunkle",
           "syllables": [
-            "bei",
-            "den"
+            "dunk",
+            "le"
           ]
         },
         {
-          "clean": "Tiere",
+          "clean": "Nacht",
           "syllables": [
-            "Tie",
-            "re"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "sonderbare",
-          "syllables": [
-            "son",
-            "der",
-            "ba",
-            "re"
-          ]
-        },
-        {
-          "clean": "Schauspiel",
-          "syllables": [
-            "Schaus",
-            "piel"
+            "Nacht"
           ]
         }
       ]
     },
     {
-      "text": "So einen aufregenden Tag werden sie sicher niemals vergessen!",
+      "text": "Leo blickte neugierig aus dem runden Fenster.",
       "words": [
         {
-          "clean": "So",
+          "clean": "Leo",
           "syllables": [
-            "So"
+            "Le",
+            "o"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "blickte",
           "syllables": [
-            "ei",
-            "nen"
+            "blick",
+            "te"
           ]
         },
         {
-          "clean": "aufregenden",
+          "clean": "neugierig",
+          "syllables": [
+            "neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "aus",
+          "syllables": [
+            "aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "runden",
+          "syllables": [
+            "run",
+            "den"
+          ]
+        },
+        {
+          "clean": "Fenster",
+          "syllables": [
+            "Fen",
+            "ster"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plötzlich sah er ein sanftes blaues Leuchten im Sternenmeer.",
+      "words": [
+        {
+          "clean": "Plötzlich",
+          "syllables": [
+            "Plötz",
+            "lich"
+          ]
+        },
+        {
+          "clean": "sah",
+          "syllables": [
+            "sah"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "sanftes",
+          "syllables": [
+            "san",
+            "ftes"
+          ]
+        },
+        {
+          "clean": "blaues",
+          "syllables": [
+            "blau",
+            "es"
+          ]
+        },
+        {
+          "clean": "Leuchten",
+          "syllables": [
+            "Leuch",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Sternenmeer",
+          "syllables": [
+            "Ster",
+            "nen",
+            "meer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Was schwamm denn da zwischen den glitzernden Kometen?",
+      "words": [
+        {
+          "clean": "Was",
+          "syllables": [
+            "Was"
+          ]
+        },
+        {
+          "clean": "schwamm",
+          "syllables": [
+            "schwamm"
+          ]
+        },
+        {
+          "clean": "denn",
+          "syllables": [
+            "denn"
+          ]
+        },
+        {
+          "clean": "da",
+          "syllables": [
+            "da"
+          ]
+        },
+        {
+          "clean": "zwischen",
+          "syllables": [
+            "zwi",
+            "schen"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "glitzernden",
+          "syllables": [
+            "glit",
+            "zer",
+            "nden"
+          ]
+        },
+        {
+          "clean": "Kometen",
+          "syllables": [
+            "Ko",
+            "me",
+            "ten"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "„Schau mal, ein echter Sternenwal!“, rief Leo aufgeregt.",
+      "words": [
+        {
+          "clean": "Schau",
+          "syllables": [
+            "Schau"
+          ]
+        },
+        {
+          "clean": "mal",
+          "syllables": [
+            "mal"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "echter",
+          "syllables": [
+            "ech",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Sternenwal",
+          "syllables": [
+            "Ster",
+            "nen",
+            "wal"
+          ]
+        },
+        {
+          "clean": "rief",
+          "syllables": [
+            "rief"
+          ]
+        },
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "aufgeregt",
           "syllables": [
             "auf",
-            "re",
-            "gen",
-            "den"
+            "ge",
+            "regt"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Der riesige Wal winkte langsam mit seiner Flosse.",
+      "words": [
+        {
+          "clean": "Der",
+          "syllables": [
+            "Der"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "riesige",
           "syllables": [
-            "Tag"
-          ]
-        },
-        {
-          "clean": "werden",
-          "syllables": [
-            "wer",
-            "den"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "sicher",
-          "syllables": [
+            "rie",
             "si",
-            "cher"
+            "ge"
           ]
         },
         {
-          "clean": "niemals",
+          "clean": "Wal",
           "syllables": [
-            "nie",
-            "mals"
+            "Wal"
           ]
         },
         {
-          "clean": "vergessen",
+          "clean": "winkte",
           "syllables": [
-            "ver",
-            "ges",
+            "wink",
+            "te"
+          ]
+        },
+        {
+          "clean": "langsam",
+          "syllables": [
+            "lang",
+            "sam"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "seiner",
+          "syllables": [
+            "sei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Flosse",
+          "syllables": [
+            "Flos",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Pustete er da etwa lauter funkelnde Sternschnuppen in die Höhe?",
+      "words": [
+        {
+          "clean": "Pustete",
+          "syllables": [
+            "Pus",
+            "te",
+            "te"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "da",
+          "syllables": [
+            "da"
+          ]
+        },
+        {
+          "clean": "etwa",
+          "syllables": [
+            "et",
+            "wa"
+          ]
+        },
+        {
+          "clean": "lauter",
+          "syllables": [
+            "lau",
+            "ter"
+          ]
+        },
+        {
+          "clean": "funkelnde",
+          "syllables": [
+            "fun",
+            "kel",
+            "nde"
+          ]
+        },
+        {
+          "clean": "Sternschnuppen",
+          "syllables": [
+            "Ster",
+            "nschnup",
+            "pen"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Höhe",
+          "syllables": [
+            "Hö",
+            "he"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leo lächelte glücklich und winkte dem friedlichen Riesen zurück.",
+      "words": [
+        {
+          "clean": "Leo",
+          "syllables": [
+            "Le",
+            "o"
+          ]
+        },
+        {
+          "clean": "lächelte",
+          "syllables": [
+            "lä",
+            "chel",
+            "te"
+          ]
+        },
+        {
+          "clean": "glücklich",
+          "syllables": [
+            "glück",
+            "lich"
+          ]
+        },
+        {
+          "clean": "und",
+          "syllables": [
+            "und"
+          ]
+        },
+        {
+          "clean": "winkte",
+          "syllables": [
+            "wink",
+            "te"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "friedlichen",
+          "syllables": [
+            "fried",
+            "li",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Riesen",
+          "syllables": [
+            "Rie",
             "sen"
+          ]
+        },
+        {
+          "clean": "zurück",
+          "syllables": [
+            "zu",
+            "rück"
           ]
         }
       ]

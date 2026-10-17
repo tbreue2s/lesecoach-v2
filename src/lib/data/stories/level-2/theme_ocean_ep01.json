@@ -2,72 +2,66 @@
   "themeId": "theme_ocean",
   "level": 2,
   "episode": 1,
-  "disturberWord": "Brille",
-  "title": "Das bunte Brille",
+  "disturberWord": "Nixe",
+  "title": "Die Perle der Nixe",
   "sentences": [
     {
-      "text": "Ein kleiner Hund geht umher.",
+      "text": "Wir rudern mit dem roten Boot.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Wir",
           "syllables": [
-            "Ein"
+            "Wir"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "rudern",
           "syllables": [
-            "klei",
-            "ner"
+            "ru",
+            "dern"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "mit",
           "syllables": [
-            "Hund"
+            "mit"
           ]
         },
         {
-          "clean": "geht",
+          "clean": "dem",
           "syllables": [
-            "geht"
+            "dem"
           ]
         },
         {
-          "clean": "umher",
+          "clean": "roten",
           "syllables": [
-            "um",
-            "her"
+            "ro",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Mitten im Gras liegt eine Brille.",
+      "text": "Plötzlich taucht eine liebe Nixe auf.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Plötzlich",
           "syllables": [
-            "Mit",
-            "ten"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "im",
+          "clean": "taucht",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
+            "taucht"
           ]
         },
         {
@@ -78,24 +72,6 @@
           ]
         },
         {
-          "clean": "Brille",
-          "syllables": [
-            "Bril",
-            "le"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das liebe Tier staunt sehr.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
           "clean": "liebe",
           "syllables": [
             "lie",
@@ -103,59 +79,104 @@
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Nixe",
           "syllables": [
-            "Tier"
+            "Ni",
+            "xe"
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "auf",
           "syllables": [
-            "staunt"
-          ]
-        },
-        {
-          "clean": "sehr",
-          "syllables": [
-            "sehr"
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Der alte Baum spendet Schatten.",
+      "text": "Sie zeigt uns eine feine Perle.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Sie",
           "syllables": [
-            "Der"
+            "Sie"
           ]
         },
         {
-          "clean": "alte",
+          "clean": "zeigt",
           "syllables": [
-            "al",
-            "te"
+            "zeigt"
           ]
         },
         {
-          "clean": "Baum",
+          "clean": "uns",
           "syllables": [
-            "Baum"
+            "uns"
           ]
         },
         {
-          "clean": "spendet",
+          "clean": "eine",
           "syllables": [
-            "spen",
-            "det"
+            "ei",
+            "ne"
           ]
         },
         {
-          "clean": "Schatten",
+          "clean": "feine",
           "syllables": [
-            "Schat",
-            "ten"
+            "fei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ihr Lächeln erwärmt den blauen See.",
+      "words": [
+        {
+          "clean": "Ihr",
+          "syllables": [
+            "Ihr"
+          ]
+        },
+        {
+          "clean": "Lächeln",
+          "syllables": [
+            "Lä",
+            "cheln"
+          ]
+        },
+        {
+          "clean": "erwärmt",
+          "syllables": [
+            "er",
+            "wärmt"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "blauen",
+          "syllables": [
+            "blau",
+            "en"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
           ]
         }
       ]

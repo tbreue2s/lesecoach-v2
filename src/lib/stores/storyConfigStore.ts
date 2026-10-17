@@ -19,6 +19,7 @@ const initialConfigState: StoryConfigState = {
 
 function createStoryConfigStore() {
   const { subscribe, set, update } = writable<StoryConfigState>(initialConfigState);
+  let episodeCounters: Record<string, number> = {};
 
   return {
     subscribe,
@@ -97,11 +98,15 @@ function createStoryConfigStore() {
           })()
         : payload;
 
+      const counterKey = `${freshPayload.theme.id}_L${freshPayload.level}`;
+      const nextEpisode = ((episodeCounters[counterKey] || 0) % 10) + 1;
+      episodeCounters[counterKey] = nextEpisode;
+
       const precomputed = loadPrecomputedStory(
         freshPayload.theme.id,
         freshPayload.level,
         freshPayload.theme,
-        1,
+        nextEpisode,
         freshPayload.childName
       );
       const story = precomputed || generateStoryFromConfig(freshPayload);
@@ -123,6 +128,7 @@ function createStoryConfigStore() {
     },
 
     reset: () => {
+      episodeCounters = {};
       set(initialConfigState);
     },
   };

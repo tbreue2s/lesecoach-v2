@@ -31,4 +31,13 @@ describe('syllableSplitter (WP06 Task 5 Evidence: German Syllable Division)', ()
     expect(splitSyllables('')).toEqual([]);
     expect(splitSyllables('   ')).toEqual([]);
   });
+
+  it('keeps German double vowels (aa, ee, oo) as single vowel nuclei', () => {
+    expect(splitSyllables('Boot')).toEqual(['Boot']);
+    expect(splitSyllables('Moos')).toEqual(['Moos']);
+    expect(splitSyllables('See')).toEqual(['See']);
+    expect(splitSyllables('Meer')).toEqual(['Meer']);
+    expect(splitSyllables('Haar')).toEqual(['Haar']);
+    expect(splitSyllables('Beere')).toEqual(['Bee', 're']);
+  });
 });

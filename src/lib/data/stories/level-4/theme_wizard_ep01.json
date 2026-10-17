@@ -2,63 +2,43 @@
   "themeId": "theme_wizard",
   "level": 4,
   "episode": 1,
-  "disturberWord": "Gitarre",
-  "title": "Ein Fund in der Zauberburg",
+  "disturberWord": "Sprechhut",
+  "title": "Der tanzende Zauberhut",
   "sentences": [
     {
-      "text": "Ein fröhlicher Tag beginnt in der Zauberburg.",
+      "text": "Leon rührt im Zaubertopf.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Leon",
           "syllables": [
-            "Ein"
+            "Le",
+            "on"
           ]
         },
         {
-          "clean": "fröhlicher",
+          "clean": "rührt",
           "syllables": [
-            "fröh",
-            "li",
-            "cher"
+            "rührt"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "im",
           "syllables": [
-            "Tag"
+            "im"
           ]
         },
         {
-          "clean": "beginnt",
-          "syllables": [
-            "be",
-            "ginnt"
-          ]
-        },
-        {
-          "clean": "in",
-          "syllables": [
-            "in"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "Zauberburg",
+          "clean": "Zaubertopf",
           "syllables": [
             "Zau",
             "ber",
-            "burg"
+            "topf"
           ]
         }
       ]
     },
     {
-      "text": "Der Kater läuft über die Wiese.",
+      "text": "Der grüne Trank wirft viele bunte Blasen.",
       "words": [
         {
           "clean": "Der",
@@ -67,104 +47,81 @@
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "grüne",
           "syllables": [
-            "Ka",
-            "ter"
+            "grü",
+            "ne"
           ]
         },
         {
-          "clean": "läuft",
+          "clean": "Trank",
           "syllables": [
-            "läuft"
+            "Trank"
           ]
         },
         {
-          "clean": "über",
+          "clean": "wirft",
           "syllables": [
-            "ü",
-            "ber"
+            "wirft"
           ]
         },
         {
-          "clean": "die",
+          "clean": "viele",
           "syllables": [
-            "die"
+            "vie",
+            "le"
           ]
         },
         {
-          "clean": "Wiese",
+          "clean": "bunte",
           "syllables": [
-            "Wie",
-            "se"
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Blasen",
+          "syllables": [
+            "Bla",
+            "sen"
           ]
         }
       ]
     },
     {
-      "text": "Ganz plötzlich taucht Ein Gitarre auf dem Pfad auf.",
+      "text": "Der alte Sprechhut kichert.",
       "words": [
         {
-          "clean": "Ganz",
+          "clean": "Der",
           "syllables": [
-            "Ganz"
+            "Der"
           ]
         },
         {
-          "clean": "plötzlich",
+          "clean": "alte",
           "syllables": [
-            "plöt",
-            "zlich"
+            "al",
+            "te"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "Sprechhut",
           "syllables": [
-            "taucht"
+            "Sprech",
+            "hut"
           ]
         },
         {
-          "clean": "Ein",
+          "clean": "kichert",
           "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "Gitarre",
-          "syllables": [
-            "Gi",
-            "tar",
-            "re"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Pfad",
-          "syllables": [
-            "Pfad"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
+            "ki",
+            "chert"
           ]
         }
       ]
     },
     {
-      "text": "Er staunt über den Fund.",
+      "text": "Er hüpft munter durch den großen Saal.",
       "words": [
         {
           "clean": "Er",
@@ -173,16 +130,22 @@
           ]
         },
         {
-          "clean": "staunt",
+          "clean": "hüpft",
           "syllables": [
-            "staunt"
+            "hüpft"
           ]
         },
         {
-          "clean": "über",
+          "clean": "munter",
           "syllables": [
-            "ü",
-            "ber"
+            "mun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
           ]
         },
         {
@@ -192,62 +155,97 @@
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "großen",
           "syllables": [
-            "Fund"
+            "gro",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Saal",
+          "syllables": [
+            "Saal"
           ]
         }
       ]
     },
     {
-      "text": "Lachend nehmen sie das neue Abenteuer an.",
+      "text": "Leon lacht sehr vergnügt.",
       "words": [
         {
-          "clean": "Lachend",
+          "clean": "Leon",
           "syllables": [
-            "La",
-            "chend"
+            "Le",
+            "on"
           ]
         },
         {
-          "clean": "nehmen",
+          "clean": "lacht",
           "syllables": [
-            "neh",
-            "men"
+            "lacht"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "sehr",
           "syllables": [
-            "sie"
+            "sehr"
           ]
         },
         {
-          "clean": "das",
+          "clean": "vergnügt",
           "syllables": [
-            "das"
+            "verg",
+            "nügt"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schnell fängt der kleine Zauberer den Hut.",
+      "words": [
+        {
+          "clean": "Schnell",
+          "syllables": [
+            "Schnell"
           ]
         },
         {
-          "clean": "neue",
+          "clean": "fängt",
           "syllables": [
-            "neu",
-            "e"
+            "fängt"
           ]
         },
         {
-          "clean": "Abenteuer",
+          "clean": "der",
           "syllables": [
-            "A",
-            "ben",
-            "teu",
-            "er"
+            "der"
           ]
         },
         {
-          "clean": "an",
+          "clean": "kleine",
           "syllables": [
-            "an"
+            "klei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Zauberer",
+          "syllables": [
+            "Zau",
+            "be",
+            "rer"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]

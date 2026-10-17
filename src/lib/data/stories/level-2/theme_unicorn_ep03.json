@@ -2,16 +2,123 @@
   "themeId": "theme_unicorn",
   "level": 2,
   "episode": 3,
-  "disturberWord": "Luftballon",
-  "title": "Das lustige Luftballon",
+  "disturberWord": "Nixe",
+  "title": "Das Geschenk am See",
   "sentences": [
     {
-      "text": "Der rote Luftballon liegt im Gras.",
+      "text": "Lumi geht an den blauen See.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Lumi",
           "syllables": [
-            "Der"
+            "Lu",
+            "mi"
+          ]
+        },
+        {
+          "clean": "geht",
+          "syllables": [
+            "geht"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "blauen",
+          "syllables": [
+            "blau",
+            "en"
+          ]
+        },
+        {
+          "clean": "See",
+          "syllables": [
+            "See"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Aus der Tiefe taucht eine Nixe.",
+      "words": [
+        {
+          "clean": "Aus",
+          "syllables": [
+            "Aus"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Tiefe",
+          "syllables": [
+            "Tie",
+            "fe"
+          ]
+        },
+        {
+          "clean": "taucht",
+          "syllables": [
+            "taucht"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lumi reicht ihr eine rote Blume.",
+      "words": [
+        {
+          "clean": "Lumi",
+          "syllables": [
+            "Lu",
+            "mi"
+          ]
+        },
+        {
+          "clean": "reicht",
+          "syllables": [
+            "reicht"
+          ]
+        },
+        {
+          "clean": "ihr",
+          "syllables": [
+            "ihr"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
           ]
         },
         {
@@ -22,146 +129,98 @@
           ]
         },
         {
-          "clean": "Luftballon",
+          "clean": "Blume",
           "syllables": [
-            "Luf",
-            "tbal",
-            "lon"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
+            "Blu",
+            "me"
           ]
         }
       ]
     },
     {
-      "text": "Ein kleiner Hund sieht den Fund.",
+      "text": "Dafür schenkt sie die feine Perle.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Dafür",
           "syllables": [
-            "Ein"
+            "Da",
+            "für"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "schenkt",
           "syllables": [
-            "klei",
-            "ner"
+            "schenkt"
           ]
         },
         {
-          "clean": "Hund",
+          "clean": "sie",
           "syllables": [
-            "Hund"
+            "sie"
           ]
         },
         {
-          "clean": "sieht",
+          "clean": "die",
           "syllables": [
-            "sieht"
+            "die"
           ]
         },
         {
-          "clean": "den",
+          "clean": "feine",
           "syllables": [
-            "den"
+            "fei",
+            "ne"
           ]
         },
         {
-          "clean": "Fund",
+          "clean": "Perle",
           "syllables": [
-            "Fund"
+            "Per",
+            "le"
           ]
         }
       ]
     },
     {
-      "text": "Das liebe Tier bellt leise.",
+      "text": "Über ihnen scheint der gelbe Mond.",
       "words": [
         {
-          "clean": "Das",
+          "clean": "Über",
           "syllables": [
-            "Das"
+            "Ü",
+            "ber"
           ]
         },
         {
-          "clean": "liebe",
+          "clean": "ihnen",
           "syllables": [
-            "lie",
+            "ih",
+            "nen"
+          ]
+        },
+        {
+          "clean": "scheint",
+          "syllables": [
+            "scheint"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "gelbe",
+          "syllables": [
+            "gel",
             "be"
           ]
         },
         {
-          "clean": "Tier",
+          "clean": "Mond",
           "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "bellt",
-          "syllables": [
-            "bellt"
-          ]
-        },
-        {
-          "clean": "leise",
-          "syllables": [
-            "lei",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der alte Baum spendet Schatten.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "alte",
-          "syllables": [
-            "al",
-            "te"
-          ]
-        },
-        {
-          "clean": "Baum",
-          "syllables": [
-            "Baum"
-          ]
-        },
-        {
-          "clean": "spendet",
-          "syllables": [
-            "spen",
-            "det"
-          ]
-        },
-        {
-          "clean": "Schatten",
-          "syllables": [
-            "Schat",
-            "ten"
+            "Mond"
           ]
         }
       ]
