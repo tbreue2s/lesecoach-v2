@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import type { Companion, ProfileState } from '../types/profile';
+import type { Companion, ProfileState, AudioEngineType } from '../types/profile';
 import { validateName } from '../utils/validation';
 
 export const STORAGE_KEY = 'lesecoach_profile_v2';
@@ -96,6 +96,10 @@ const initialState: ProfileState = {
   selectedCompanionId: 'dog',
   companions: DEFAULT_COMPANIONS,
   isConfigured: false,
+  preferredVoiceURI: undefined,
+  audioEngine: 'thorsten-pwa',
+  selectedPiperVoice: 'de_DE-thorsten-medium',
+  selectedStudioVoice: 'conrad',
 };
 
 function loadStoredProfile(): ProfileState {
@@ -114,11 +118,35 @@ function loadStoredProfile(): ProfileState {
       return match ? { ...def, customName: match.customName || def.defaultName } : def;
     });
 
+    const validEngines: AudioEngineType[] = ['thorsten-pwa', 'studio-audio', 'system-tts'];
+    const audioEngine: AudioEngineType = validEngines.includes(parsed.audioEngine)
+      ? parsed.audioEngine
+      : 'thorsten-pwa';
+
+    const validPiperVoices = [
+      'de_DE-thorsten-medium',
+      'de_DE-ramona-low',
+      'de_DE-eva_k-x_low',
+      'de_DE-kerstin-low',
+    ];
+    const selectedPiperVoice = validPiperVoices.includes(parsed.selectedPiperVoice)
+      ? parsed.selectedPiperVoice
+      : 'de_DE-thorsten-medium';
+
+    const validStudioVoices = ['conrad', 'katja', 'amala'];
+    const selectedStudioVoice = validStudioVoices.includes(parsed.selectedStudioVoice)
+      ? parsed.selectedStudioVoice
+      : 'conrad';
+
     return {
       childName: typeof parsed.childName === 'string' ? parsed.childName : '',
       selectedCompanionId: parsed.selectedCompanionId || 'dog',
       companions: mergedCompanions,
       isConfigured: Boolean(parsed.isConfigured),
+      preferredVoiceURI: typeof parsed.preferredVoiceURI === 'string' ? parsed.preferredVoiceURI : undefined,
+      audioEngine,
+      selectedPiperVoice,
+      selectedStudioVoice,
     };
   } catch (err) {
     console.error('Failed to load profile from localStorage:', err);
@@ -166,6 +194,34 @@ function createProfileStore() {
           return c;
         });
         const nextState = { ...state, companions: updatedCompanions };
+        persist(nextState);
+        return nextState;
+      });
+    },
+    setPreferredVoiceURI: (voiceURI: string | undefined) => {
+      update((state) => {
+        const nextState = { ...state, preferredVoiceURI: voiceURI };
+        persist(nextState);
+        return nextState;
+      });
+    },
+    setAudioEngine: (engine: AudioEngineType) => {
+      update((state) => {
+        const nextState = { ...state, audioEngine: engine };
+        persist(nextState);
+        return nextState;
+      });
+    },
+    setPiperVoice: (voiceId: import('../types/profile').PiperVoiceId) => {
+      update((state) => {
+        const nextState = { ...state, selectedPiperVoice: voiceId };
+        persist(nextState);
+        return nextState;
+      });
+    },
+    setStudioVoice: (voiceId: import('../types/profile').StudioVoiceId) => {
+      update((state) => {
+        const nextState = { ...state, selectedStudioVoice: voiceId };
         persist(nextState);
         return nextState;
       });

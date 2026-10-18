@@ -1,17 +1,92 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { readingSessionStore } from '../stores/readingSessionStore';
   import { levelStore } from '../stores/levelStore';
   import { profileStore } from '../stores/profileStore';
   import { routerStore } from '../stores/routerStore';
+  import { storyConfigStore } from '../stores/storyConfigStore';
   import { SAMPLE_STORIES } from '../data/sampleStories';
+  import { STORY_THEMES } from '../data/storyThemes';
+  import { loadPrecomputedStory } from '../services/precomputedStoryLoader';
+  import {
+    hasStudioAudio,
+    setAudioEngineOverride,
+    setPiperVoiceOverride,
+    setStudioVoiceOverride,
+    downloadThorstenVoice,
+    ensurePiperInitialized,
+    isThorstenStored,
+    thorstenStatusStore,
+    PIPER_VOICES,
+    STUDIO_VOICES,
+  } from '../services/audioEngineService';
+  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
 
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
   ) || $profileStore.companions[0];
 
   $: session = $readingSessionStore;
+  $: thorstenStatus = $thorstenStatusStore;
 
   let showDevTools = false;
+  let isThorstenDownloading = false;
+  let thorstenProgress = 0;
+  let isStored = false;
+
+  $: currentEngine = $profileStore.audioEngine || 'thorsten-pwa';
+  $: currentPiperVoice = $profileStore.selectedPiperVoice || 'de_DE-thorsten-medium';
+  $: currentStudioVoice = $profileStore.selectedStudioVoice || 'conrad';
+
+  function selectPiperVoice(voiceId: PiperVoiceId) {
+    profileStore.setPiperVoice(voiceId);
+    setPiperVoiceOverride(voiceId);
+    ensurePiperInitialized(voiceId).catch(() => {});
+  }
+
+  function selectStudioVoice(voiceId: StudioVoiceId) {
+    profileStore.setStudioVoice(voiceId);
+    setStudioVoiceOverride(voiceId);
+  }
+
+  function setEngine(engine: AudioEngineType) {
+    profileStore.setAudioEngine(engine);
+    setAudioEngineOverride(engine);
+
+    if (engine === 'thorsten-pwa') {
+      ensurePiperInitialized(currentPiperVoice).catch(() => {});
+    }
+
+    // If user selects Studio-Audio and is not yet on the reference story "Konzert im Moos", load it automatically
+    if (engine === 'studio-audio' && session.storyId !== 'story-theme_forest-lvl1-ep1') {
+      const forestTheme = STORY_THEMES.find((t) => t.id === 'theme_forest') || STORY_THEMES[0];
+      const refStory = loadPrecomputedStory('theme_forest', 1, forestTheme, 1, $profileStore.childName);
+      if (refStory) {
+        levelStore.setLevel(1);
+        readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
+      }
+    }
+  }
+
+  async function handleDownloadThorsten() {
+    isThorstenDownloading = true;
+    try {
+      await downloadThorstenVoice('de_DE-thorsten-medium', (pct) => {
+        thorstenProgress = pct;
+      });
+      isStored = true;
+    } finally {
+      isThorstenDownloading = false;
+    }
+  }
+
+  onMount(async () => {
+    isStored = await isThorstenStored(currentPiperVoice);
+    if (currentEngine === 'thorsten-pwa') {
+      ensurePiperInitialized(currentPiperVoice).catch(() => {});
+    }
+  });
+
 
   function handleStartAudio() {
     if (session.turnState === 'PAUSED') {
@@ -46,11 +121,17 @@
   }
 
   function handleRestartStory() {
-    const currentStory = SAMPLE_STORIES.find((s) => s.id === session.storyId) || SAMPLE_STORIES[0];
+    const activeConfigStory = $storyConfigStore.activeStory;
+    const currentStory =
+      (activeConfigStory && activeConfigStory.id === session.storyId ? activeConfigStory : null) ||
+      SAMPLE_STORIES.find((s) => s.id === session.storyId) ||
+      activeConfigStory ||
+      SAMPLE_STORIES[0];
     readingSessionStore.loadStory(
       currentStory,
       $levelStore,
-      activeCompanion.customName
+      activeCompanion.customName,
+      $profileStore.childName
     );
   }
 
@@ -84,8 +165,14 @@
       </div>
     {:else if session.turnState === 'APP_TURN'}
       <div class="status-message">
-        <span class="status-icon speaking-pulse" aria-hidden="true">🔊</span>
-        <span class="status-text"><strong>{activeCompanion.customName}</strong> liest vor...</span>
+        <span class="status-icon speaking-pulse" aria-hidden="true">{thorstenStatus.isLoading ? '⏳' : '🔊'}</span>
+        <span class="status-text">
+          {#if thorstenStatus.isLoading && thorstenStatus.statusMessage}
+            <strong>{thorstenStatus.statusMessage}</strong>
+          {:else}
+            <strong>{activeCompanion.customName}</strong> liest vor...
+          {/if}
+        </span>
       </div>
     {:else if session.turnState === 'REPEATED_READING'}
       <div class="status-message">
@@ -110,6 +197,81 @@
       </div>
     {/if}
   </div>
+
+  <!-- Ergonomic Audio Engine Selector Bar (Thorsten PWA / Studio Audio / System TTS) -->
+  <div class="audio-engine-bar" aria-label="Audio-Stimme wählen">
+    <button
+      type="button"
+      id="engine-thorsten-btn"
+      class="btn-engine-pill"
+      class:selected={currentEngine === 'thorsten-pwa'}
+      on:click={() => setEngine('thorsten-pwa')}
+      title="Thorsten (100% Offline in PWA, natürliche WASM-Stimme)"
+    >
+      <span class="engine-icon">👦</span>
+      <span class="engine-label">Thorsten (PWA)</span>
+    </button>
+
+    <button
+      type="button"
+      id="engine-studio-btn"
+      class="btn-engine-pill"
+      class:selected={currentEngine === 'studio-audio'}
+      class:has-studio={hasStudioAudio(session.storyId, session.activeSentenceIndex, 'app')}
+      on:click={() => setEngine('studio-audio')}
+      title="Studio-Audio (Voraufgenommen für Konzert im Moos)"
+    >
+      <span class="engine-icon">🎙️</span>
+      <span class="engine-label">Studio-Audio</span>
+      {#if hasStudioAudio(session.storyId, session.activeSentenceIndex, 'app')}
+        <span class="studio-badge" title="Studio-Audio für diesen Satz vorhanden!">Aktiv</span>
+      {/if}
+    </button>
+
+    <button
+      type="button"
+      id="engine-system-btn"
+      class="btn-engine-pill"
+      class:selected={currentEngine === 'system-tts'}
+      on:click={() => setEngine('system-tts')}
+      title="Geräte-Stimme (Android/Browser Standard-TTS)"
+    >
+      <span class="engine-icon">📱</span>
+      <span class="engine-label">System-TTS</span>
+    </button>
+  </div>
+
+  {#if currentEngine === 'thorsten-pwa'}
+    <div class="audio-voice-subrow" aria-label="Offline-Stimme wählen">
+      <span class="subrow-label">Stimme:</span>
+      {#each PIPER_VOICES as pv}
+        <button
+          type="button"
+          class="btn-subvoice-pill"
+          class:selected={currentPiperVoice === pv.id}
+          on:click={() => selectPiperVoice(pv.id)}
+          title="{pv.label}: {pv.desc} ({pv.size})"
+        >
+          <span>{pv.gender === 'female' ? '👧' : '👦'} {pv.label.split(' ')[0]}</span>
+        </button>
+      {/each}
+    </div>
+  {:else if currentEngine === 'studio-audio'}
+    <div class="audio-voice-subrow" aria-label="Studio-Sprecherin wählen">
+      <span class="subrow-label">Studio:</span>
+      {#each STUDIO_VOICES as sv}
+        <button
+          type="button"
+          class="btn-subvoice-pill"
+          class:selected={currentStudioVoice === sv.id}
+          on:click={() => selectStudioVoice(sv.id)}
+          title="{sv.label}: {sv.desc}"
+        >
+          <span>{sv.gender === 'female' ? '👧' : '👦'} {sv.label.split(' ')[0]}</span>
+        </button>
+      {/each}
+    </div>
+  {/if}
 
   <!-- Primary 3-Button Child Ergonomics Dock -->
   <div class="primary-buttons-dock">
@@ -261,6 +423,26 @@
         >
           ✨ Neues Thema
         </button>
+      {/if}
+    </div>
+
+    <!-- Active Audio Engine Status / Download in Dev Drawer -->
+    <div class="dev-thorsten-row">
+      <span class="thorsten-info-label">Audio-Status:</span>
+      {#if currentEngine === 'thorsten-pwa'}
+        {#if isThorstenDownloading}
+          <span class="thorsten-badge loading">⏳ Thorsten lädt: {thorstenProgress}%</span>
+        {:else if isStored}
+          <span class="thorsten-badge ready">✅ Thorsten Offline im Speicher bereit</span>
+        {:else}
+          <button type="button" class="btn-dev-item btn-download-thorsten" on:click={handleDownloadThorsten}>
+            📥 Thorsten-Modell vorab laden (~60 MB)
+          </button>
+        {/if}
+      {:else if currentEngine === 'studio-audio'}
+        <span class="thorsten-badge studio">🎙️ Studio-Audio ({hasStudioAudio(session.storyId, session.activeSentenceIndex, 'app') ? 'Verfügbar' : 'Fallback aktiv'})</span>
+      {:else}
+        <span class="thorsten-badge system">📱 Web Speech API ({$profileStore.preferredVoiceURI ? 'Ausgewählt' : 'System-Standard'})</span>
       {/if}
     </div>
   </div>
@@ -596,6 +778,145 @@
 
   .btn-dev-item:hover {
     background: #E2E8F0;
+  }
+
+  /* Audio Engine Selector Bar */
+  .audio-engine-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.15rem 0;
+  }
+
+  .btn-engine-pill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.38rem 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    background: var(--color-page-bg, #FBF9F5);
+    color: var(--color-text-main, #2D3748);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .btn-engine-pill:hover {
+    background: #EDE5D8;
+  }
+
+  .btn-engine-pill.selected {
+    background: var(--color-primary, #2B6CB0);
+    border-color: var(--color-primary, #2B6CB0);
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(43, 108, 176, 0.25);
+  }
+
+  .btn-engine-pill.has-studio:not(.selected) {
+    border-color: #38A169;
+    color: #22543D;
+    background: #F0FFF4;
+  }
+
+  .studio-badge {
+    background: #48BB78;
+    color: #FFFFFF;
+    font-size: 0.65rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 9999px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  .audio-voice-subrow {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.1rem 0.2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .audio-voice-subrow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subrow-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--color-text-muted, #718096);
+    flex-shrink: 0;
+  }
+
+  .btn-subvoice-pill {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 6px;
+    border: 1px solid var(--color-border, #E2D9CC);
+    background: var(--color-page-bg, #FBF9F5);
+    color: var(--color-text-main, #2D3748);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+  }
+
+  .btn-subvoice-pill:hover {
+    background: #EDE5D8;
+  }
+
+  .btn-subvoice-pill.selected {
+    background: #3182CE;
+    border-color: #3182CE;
+    color: #FFF;
+    font-weight: 800;
+  }
+
+  .dev-thorsten-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    background: #EDF2F7;
+    border-radius: 6px;
+    font-size: 0.75rem;
+  }
+
+  .thorsten-info-label {
+    font-weight: 800;
+    color: #4A5568;
+  }
+
+  .thorsten-badge {
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  .thorsten-badge.ready {
+    color: #22543D;
+  }
+
+  .thorsten-badge.loading {
+    color: #C05621;
+  }
+
+  .thorsten-badge.studio {
+    color: #2B6CB0;
+  }
+
+  .thorsten-badge.system {
+    color: #4A5568;
+  }
+
+  .btn-download-thorsten {
+    background: #EBF8FF;
+    border-color: #63B3ED;
+    color: #2B6CB0;
   }
 
   @keyframes waveBar {

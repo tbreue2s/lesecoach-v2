@@ -69,6 +69,7 @@ Wir entwickeln strikt nach dem **Trunk-Based Development**-Prinzip auf `main`/`m
 | **WP12** | Stufengerechte & Skalierende Geschichten | `merged` | Längere Geschichten je Stufe, Trennung Vorlese- vs. Kind-Wortschatz |
 | **WP13** | Hybride Content-Pipeline zur Massengenerierung | `merged` | 2-Schritt-Pipeline (LLM), 10 Störwörter pro Thema, JSON-Export |
 | **WP14** | Ergonomisches Kinder-UI & Lesefluss-Redesign | `merged` | 3-Screen-Konsolidierung, Sticky 3-Button-Dock, Teleprompter Auto-Scroll |
+| **WP15** | TTS Voice Quality & Natural Audio Pipeline | `in_review` | Thorsten (Piper WASM offline), Studio-Audio Referenz-Story, System-TTS Fallback |
 
 
 

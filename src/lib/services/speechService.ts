@@ -1,12 +1,17 @@
 /**
- * Audio-Engine Service for SpeechSynthesis with Chromium GC Protection & Karaoke Sync.
+ * Audio-Engine Service for SpeechSynthesis with Chromium GC Protection,
+ * Intelligent Natural Voice Ranking, Text Preprocessing, and Karaoke Sync.
  */
+
+import { stripEmojis } from '../utils/speech';
 
 export interface SpeakOptions {
   text: string;
   lang?: string;
   rate?: number;
   pitch?: number;
+  voiceURI?: string;
+  voice?: SpeechSynthesisVoice;
   onStart?: (event: SpeechSynthesisEvent) => void;
   onBoundary?: (event: SpeechSynthesisEvent) => void;
   onEnd?: (event: SpeechSynthesisEvent) => void;
@@ -31,7 +36,7 @@ if (typeof window !== 'undefined') {
         window.speechSynthesis.getVoices();
       };
     } catch {
-      // Ignore voice init errors
+      // Ignore voice init errors in non-browser/test environments
     }
   }
 }
@@ -44,29 +49,193 @@ export function isSpeechSupported(): boolean {
 }
 
 /**
- * Retrieves the best matching German voice available in the browser.
+ * Preprocesses German text to improve pronunciation, eliminate robotic pauses,
+ * expand abbreviations, and prevent voices from reading out quotation marks.
  */
-export function getGermanVoice(): SpeechSynthesisVoice | null {
+export function preprocessGermanText(text: string): string {
+  if (!text) return '';
+
+  return stripEmojis(text)
+    // Expand common abbreviations so TTS doesn't stumble or spell out letters
+    .replace(/\bz\.\s*B\./gi, 'zum Beispiel')
+    .replace(/\bd\.\s*h\./gi, 'das heißt')
+    .replace(/\bu\.\s*a\./gi, 'unter anderem')
+    .replace(/\busw\./gi, 'und so weiter')
+    .replace(/\bbzw\./gi, 'beziehungsweise')
+    .replace(/\bca\./gi, 'circa')
+    .replace(/\bevtl\./gi, 'eventuell')
+    // Remove dialogue quotation marks that some synthesizers pronounce aloud ("Gänsefüßchen", "Anführungszeichen")
+    .replace(/[„“"»«”]/g, '')
+    // Normalize ellipses to a single comma for smooth, human-like pauses
+    .replace(/\s*(?:\.{3,}|…)\s*/g, ', ')
+    // Normalize spaced hyphens/dashes to a gentle comma pause
+    .replace(/\s+[-–—]\s+/g, ', ')
+    // Clean up spaces before punctuation
+    .replace(/\s+([,;:.!?])/g, '$1')
+    // Normalize excessive whitespace
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+/**
+ * Rates the acoustic quality of a German voice.
+ * Prioritizes modern Neural/Natural, Enhanced, Google, and Apple storybook voices
+ * while penalizing low-bitrate mechanical synthesizers (e.g. eSpeak).
+ */
+export function rankGermanVoice(voice: SpeechSynthesisVoice): number {
+  if (!voice) return -1000;
+
+  const lang = (voice.lang || '').toLowerCase().replace('_', '-');
+  const name = (voice.name || '').toLowerCase();
+
+  // If not a German locale, disqualify
+  if (!lang.startsWith('de')) {
+    return -1000;
+  }
+
+  let score = 0;
+
+  // 1. Dialect matching
+  if (lang === 'de-de') {
+    score += 40;
+  } else if (lang === 'de-at' || lang === 'de-ch') {
+    score += 20;
+  } else {
+    score += 10;
+  }
+
+  // 2. High-quality neural / natural voice engines
+  if (name.includes('natural') || name.includes('online (natural)')) {
+    score += 180; // Microsoft Natural / Azure Neural
+  } else if (name.includes('enhanced')) {
+    score += 150; // Apple Enhanced (iOS / macOS)
+  } else if (name.includes('premium')) {
+    score += 140; // Apple Premium
+  } else if (name.includes('google')) {
+    score += 120; // Google Chrome natural voice
+  } else if (name.includes('neural')) {
+    score += 100;
+  }
+
+  // 3. Known warm, high-fidelity German narrator voices
+  if (
+    name.includes('katja') ||
+    name.includes('amala') ||
+    name.includes('klara') ||
+    name.includes('marlene') ||
+    name.includes('anna') ||
+    name.includes('petra')
+  ) {
+    score += 50;
+  } else if (
+    name.includes('conrad') ||
+    name.includes('markus') ||
+    name.includes('christoph') ||
+    name.includes('killian') ||
+    name.includes('vicki') ||
+    name.includes('hans')
+  ) {
+    score += 40;
+  }
+
+  // 4. Remote / cloud service voices in Chromium (higher sample rate)
+  if (voice.localService === false) {
+    score += 35;
+  }
+
+  // 5. Penalties for low-fidelity, robotic engines
+  if (name.includes('espeak')) {
+    score -= 300;
+  }
+  if (name.includes('speech-dispatcher')) {
+    score -= 250;
+  }
+  if (name.includes('festival') || name.includes('mbrola')) {
+    score -= 150;
+  }
+
+  return score;
+}
+
+/**
+ * Returns all available German voices sorted by acoustic quality ranking (highest score first).
+ */
+export function getAvailableGermanVoices(): SpeechSynthesisVoice[] {
+  if (!isSpeechSupported()) return [];
+
+  try {
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices || voices.length === 0) return [];
+
+    return voices
+      .filter((v) => (v.lang || '').toLowerCase().startsWith('de'))
+      .sort((a, b) => rankGermanVoice(b) - rankGermanVoice(a));
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Retrieves the best matching natural German voice available in the browser,
+ * taking optional user preferences into account.
+ */
+export function getGermanVoice(preferredVoiceURI?: string): SpeechSynthesisVoice | null {
   if (!isSpeechSupported()) return null;
 
   try {
     const voices = window.speechSynthesis.getVoices();
     if (!voices || voices.length === 0) return null;
 
-    // 1. Exact 'de-DE' or 'de_DE'
-    const deDE = voices.find(
-      (v) => v.lang === 'de-DE' || v.lang === 'de_DE'
-    );
-    if (deDE) return deDE;
+    // 1. Check explicitly passed preferredVoiceURI or persisted preference
+    let targetURI = preferredVoiceURI;
+    if (!targetURI && typeof window !== 'undefined' && window.localStorage) {
+      targetURI = localStorage.getItem('lesecoach_tts_preferred_voice') || undefined;
+    }
 
-    // 2. Any German locale ('de-*')
-    const anyGerman = voices.find((v) => v.lang.toLowerCase().startsWith('de'));
+    if (targetURI) {
+      const match = voices.find((v) => v.voiceURI === targetURI || v.name === targetURI);
+      if (match) return match;
+    }
+
+    // 2. Select the highest ranked German voice
+    const ranked = getAvailableGermanVoices();
+    if (ranked.length > 0 && rankGermanVoice(ranked[0]) > -500) {
+      return ranked[0];
+    }
+
+    // 3. Fallback: Any German locale
+    const anyGerman = voices.find((v) => (v.lang || '').toLowerCase().startsWith('de'));
     if (anyGerman) return anyGerman;
 
-    return null;
+    // 4. Ultimate fallback to first available system voice
+    return voices[0] || null;
   } catch {
     return null;
   }
+}
+
+/**
+ * Plays a short, cheerful test sample with the selected voice.
+ */
+export function testVoice(voiceOrURI?: SpeechSynthesisVoice | string | null, customText?: string): void {
+  const sample =
+    customText || 'Hallo! Ich bin dein Lese-Begleiter und freue mich darauf, mit dir tolle Geschichten zu lesen!';
+
+  let chosenVoice: SpeechSynthesisVoice | undefined;
+  if (typeof voiceOrURI === 'string') {
+    chosenVoice = getGermanVoice(voiceOrURI) || undefined;
+  } else if (voiceOrURI) {
+    chosenVoice = voiceOrURI;
+  } else {
+    chosenVoice = getGermanVoice() || undefined;
+  }
+
+  speakSentence({
+    text: sample,
+    rate: 0.90,
+    pitch: 1.04,
+    voice: chosenVoice,
+  });
 }
 
 /**
@@ -74,7 +243,7 @@ export function getGermanVoice(): SpeechSynthesisVoice | null {
  * Enforces:
  * - Single-sentence chunks to avoid Chromium 15s freeze bug.
  * - Module/window GC retention.
- * - Slower pace (rate = 0.78) for 1st/2nd grade early readers.
+ * - Gentle, warm, natural pace (rate = 0.90, pitch = 1.04) for optimal intonation.
  */
 export function speakSentence(options: SpeakOptions): boolean {
   if (!isSpeechSupported()) {
@@ -86,8 +255,10 @@ export function speakSentence(options: SpeakOptions): boolean {
   const {
     text,
     lang = 'de-DE',
-    rate = 0.78,
-    pitch = 1.0,
+    rate = 0.90,
+    pitch = 1.04,
+    voice,
+    voiceURI,
     onStart,
     onBoundary,
     onEnd,
@@ -99,19 +270,25 @@ export function speakSentence(options: SpeakOptions): boolean {
     return false;
   }
 
+  const cleanedText = preprocessGermanText(text);
+  if (!cleanedText) {
+    options.onEnd?.({} as SpeechSynthesisEvent);
+    return false;
+  }
+
   try {
     // 1. Cancel any active synthesis before launching new utterance
     stopSpeech();
 
-    // 2. Instantiate and configure new utterance
-    const utterance = new SpeechSynthesisUtterance(text);
+    // 2. Instantiate and configure new utterance with cleaned text
+    const utterance = new SpeechSynthesisUtterance(cleanedText);
     utterance.lang = lang;
     utterance.rate = rate;
     utterance.pitch = pitch;
 
-    const germanVoice = getGermanVoice();
-    if (germanVoice) {
-      utterance.voice = germanVoice;
+    const chosenVoice = voice || (voiceURI ? getGermanVoice(voiceURI) : getGermanVoice());
+    if (chosenVoice) {
+      utterance.voice = chosenVoice;
     }
 
     // 3. Attach event listeners

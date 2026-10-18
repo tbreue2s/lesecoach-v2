@@ -1,8 +1,16 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { profileStore } from '../stores/profileStore';
   import { routerStore } from '../stores/routerStore';
   import { validateName } from '../utils/validation';
+  import { getAvailableGermanVoices, testVoice } from '../services/speechService';
+  import {
+    testAudioEngineVoice,
+    ensurePiperInitialized,
+    PIPER_VOICES,
+    STUDIO_VOICES,
+  } from '../services/audioEngineService';
+  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
   import OtterFeedback from './OtterFeedback.svelte';
 
   export let showBackButton = false;
@@ -11,6 +19,8 @@
   let childError: string | null = null;
   let companionError: string | null = null;
   let isSavedSuccess = false;
+  let availableVoices: SpeechSynthesisVoice[] = [];
+  let selectedVoiceURI = $profileStore.preferredVoiceURI || '';
 
   let childDebounceTimer: ReturnType<typeof setTimeout> | null = null;
   let companionDebounceTimer: ReturnType<typeof setTimeout> | null = null;
@@ -146,6 +156,68 @@
     }
   }
 
+  function updateVoiceList() {
+    availableVoices = getAvailableGermanVoices();
+    if (!selectedVoiceURI && $profileStore.preferredVoiceURI) {
+      selectedVoiceURI = $profileStore.preferredVoiceURI;
+    }
+  }
+
+  onMount(() => {
+    updateVoiceList();
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        updateVoiceList();
+      };
+    }
+    if (($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa') {
+      ensurePiperInitialized($profileStore.selectedPiperVoice || 'de_DE-thorsten-medium').catch(() => {});
+    }
+  });
+
+  function handleSelectAudioEngine(engine: AudioEngineType) {
+    profileStore.setAudioEngine(engine);
+    if (engine === 'thorsten-pwa') {
+      ensurePiperInitialized($profileStore.selectedPiperVoice || 'de_DE-thorsten-medium').catch(() => {});
+    }
+  }
+
+  function handleSelectPiperVoice(voiceId: PiperVoiceId) {
+    profileStore.setPiperVoice(voiceId);
+    ensurePiperInitialized(voiceId).catch(() => {});
+  }
+
+  function handleVoiceChange(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    selectedVoiceURI = target.value;
+    profileStore.setPreferredVoiceURI(selectedVoiceURI || undefined);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      if (selectedVoiceURI) {
+        localStorage.setItem('lesecoach_tts_preferred_voice', selectedVoiceURI);
+      } else {
+        localStorage.removeItem('lesecoach_tts_preferred_voice');
+      }
+    }
+    handleTestVoice();
+  }
+
+  function handleTestVoice(engine?: AudioEngineType, voiceId?: string) {
+    const compName = activeCompanion ? activeCompanion.customName : 'dein Begleiter';
+    const childGreeting = rawChildName ? `Hallo ${rawChildName}!` : 'Hallo!';
+    const text = `${childGreeting} Ich bin ${compName}. Lass uns zusammen lesen!`;
+    const eng = engine || $profileStore.audioEngine || 'thorsten-pwa';
+    const activeVoice =
+      voiceId ||
+      (eng === 'thorsten-pwa'
+        ? $profileStore.selectedPiperVoice
+        : eng === 'studio-audio'
+          ? $profileStore.selectedStudioVoice
+          : selectedVoiceURI);
+
+    testAudioEngineVoice(eng, activeVoice, text);
+  }
+
+
   $: currentFeedbackMessage = childError || companionError;
   $: feedbackType = (currentFeedbackMessage ? 'error' : isSavedSuccess ? 'success' : 'idle') as 'success' | 'error' | 'idle';
 </script>
@@ -241,6 +313,164 @@
       </div>
     </section>
   {/if}
+
+  <!-- 4. Voice & Audio Engine Selection Section -->
+  <section class="section" aria-labelledby="voice-heading">
+    <div class="voice-header-row">
+      <h2 id="voice-heading" class="label">
+        4. Vorlese-Technologie & Stimme für {activeCompanion ? activeCompanion.customName : 'deinen Begleiter'}
+      </h2>
+      <button
+        type="button"
+        id="test-voice-btn"
+        class="btn-test-voice"
+        title="Aktive Stimme anhören"
+        on:click={() => handleTestVoice()}
+      >
+        🔊 Probe hören
+      </button>
+    </div>
+
+    <!-- 3-way Audio Engine Choice Cards -->
+    <div class="engine-choice-cards" role="radiogroup" aria-label="Vorlese-Technologie">
+      <button
+        type="button"
+        class="engine-card"
+        class:selected={($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa'}
+        on:click={() => handleSelectAudioEngine('thorsten-pwa')}
+        role="radio"
+        aria-checked={($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa'}
+      >
+        <span class="engine-card-icon">⚡</span>
+        <div class="engine-card-text">
+          <strong class="engine-card-title">PWA Offline-Stimmen (Piper WebAssembly)</strong>
+          <span class="engine-card-desc">100% Offline in PWA, 4 Stimmen (Thorsten, Eva K, Ramona, Kerstin)</span>
+        </div>
+      </button>
+
+      <button
+        type="button"
+        class="engine-card"
+        class:selected={$profileStore.audioEngine === 'studio-audio'}
+        on:click={() => handleSelectAudioEngine('studio-audio')}
+        role="radio"
+        aria-checked={$profileStore.audioEngine === 'studio-audio'}
+      >
+        <span class="engine-card-icon">🎙️</span>
+        <div class="engine-card-text">
+          <strong class="engine-card-title">Studio-Audio (Konzert im Moos)</strong>
+          <span class="engine-card-desc">Voraufgenommene Profi-Studio-Aufnahmen (Katja, Amala, Konrad)</span>
+        </div>
+      </button>
+
+      <button
+        type="button"
+        class="engine-card"
+        class:selected={$profileStore.audioEngine === 'system-tts'}
+        on:click={() => handleSelectAudioEngine('system-tts')}
+        role="radio"
+        aria-checked={$profileStore.audioEngine === 'system-tts'}
+      >
+        <span class="engine-card-icon">📱</span>
+        <div class="engine-card-text">
+          <strong class="engine-card-title">Geräte-Stimme (System-TTS)</strong>
+          <span class="engine-card-desc">Standard Web Speech API deines Smartphones oder Browsers</span>
+        </div>
+      </button>
+    </div>
+
+    {#if ($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa'}
+      <div class="voice-sub-selector">
+        <span class="sublabel">Wähle deine Offline-Stimme:</span>
+        <div class="voice-chips-grid">
+          {#each PIPER_VOICES as pv}
+            <div
+              class="voice-chip-card"
+              class:selected={($profileStore.selectedPiperVoice || 'de_DE-thorsten-medium') === pv.id}
+            >
+              <button
+                type="button"
+                class="btn-voice-chip"
+                on:click={() => handleSelectPiperVoice(pv.id)}
+              >
+                <span class="voice-chip-icon">{pv.gender === 'female' ? '👧' : '👦'}</span>
+                <div class="voice-chip-info">
+                  <div class="voice-chip-title-row">
+                    <strong>{pv.label}</strong>
+                    <span class="voice-chip-size-tag">{pv.size}</span>
+                  </div>
+                  <span class="voice-chip-desc">{pv.desc}</span>
+                </div>
+              </button>
+              <button
+                type="button"
+                class="btn-chip-sample"
+                title="{pv.label} probe hören"
+                on:click={() => handleTestVoice('thorsten-pwa', pv.id)}
+              >
+                🔊 Probe
+              </button>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {:else if $profileStore.audioEngine === 'studio-audio'}
+      <div class="voice-sub-selector">
+        <span class="sublabel">Wähle deine Studio-Sprecherin / Sprecher (Konzert im Moos):</span>
+        <div class="voice-chips-grid">
+          {#each STUDIO_VOICES as sv}
+            <div
+              class="voice-chip-card"
+              class:selected={($profileStore.selectedStudioVoice || 'conrad') === sv.id}
+            >
+              <button
+                type="button"
+                class="btn-voice-chip"
+                on:click={() => profileStore.setStudioVoice(sv.id)}
+              >
+                <span class="voice-chip-icon">{sv.gender === 'female' ? '👧' : '👦'}</span>
+                <div class="voice-chip-info">
+                  <strong>{sv.label}</strong>
+                  <span class="voice-chip-desc">{sv.desc}</span>
+                </div>
+              </button>
+              <button
+                type="button"
+                class="btn-chip-sample"
+                title="{sv.label} probe hören"
+                on:click={() => handleTestVoice('studio-audio', sv.id)}
+              >
+                🔊 Probe
+              </button>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {:else if $profileStore.audioEngine === 'system-tts'}
+      <div class="system-voice-picker-wrapper">
+        <label for="voice-select" class="sublabel">Wähle die Stimme deines Betriebssystems:</label>
+        {#if availableVoices.length > 0}
+          <div class="input-wrapper">
+            <select
+              id="voice-select"
+              class="voice-select"
+              value={selectedVoiceURI}
+              on:change={handleVoiceChange}
+            >
+              <option value="">✨ Automatisch beste natürliche Stimme (Empfohlen)</option>
+              {#each availableVoices as v}
+                <option value={v.voiceURI || v.name}>
+                  {v.name} {v.name.toLowerCase().includes('natural') || v.name.toLowerCase().includes('enhanced') || v.name.toLowerCase().includes('google') ? '⭐ (Empfohlen)' : ''}
+                </option>
+              {/each}
+            </select>
+          </div>
+        {:else}
+          <p class="voice-hint">✨ Die beste deutsche Vorlese-Stimme deines Geräts wird automatisch verwendet.</p>
+        {/if}
+      </div>
+    {/if}
+  </section>
 
   <!-- Action Button -->
   <footer class="action-footer">
@@ -418,6 +648,233 @@
     padding: 1.25rem;
     border-radius: var(--radius-md, 0.875rem);
     border: 1.5px dashed var(--color-border, #E2D9CC);
+  }
+
+  .voice-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-test-voice {
+    background: var(--color-primary-soft, #EBF2FA);
+    border: 1.5px solid var(--color-primary, #2B6CB0);
+    color: var(--color-primary, #2B6CB0);
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm, 0.5rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-test-voice:hover {
+    background: #D9EAFB;
+    transform: translateY(-1px);
+  }
+
+  .voice-select {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-md, 0.875rem);
+    outline: none;
+    background: var(--color-page-bg, #FBF9F5);
+    color: var(--color-text-main, #2D3748);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .voice-select:focus {
+    border-color: var(--color-primary, #2B6CB0);
+    box-shadow: 0 0 0 4px rgba(43, 108, 176, 0.15);
+  }
+
+  .voice-hint {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted, #4A5568);
+    font-style: italic;
+  }
+
+  /* Engine Choice Cards */
+  .engine-choice-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .engine-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-md, 0.875rem);
+    border: 2px solid var(--color-border, #E2D9CC);
+    background: var(--color-page-bg, #FBF9F5);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .engine-card:hover {
+    background: #F5EFE6;
+    border-color: #CBD5E0;
+    transform: translateY(-1px);
+  }
+
+  .engine-card.selected {
+    border-color: var(--color-primary, #2B6CB0);
+    background: #EBF8FF;
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.15);
+  }
+
+  .engine-card-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .engine-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .engine-card-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .engine-card-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #4A5568);
+    line-height: 1.35;
+  }
+
+  .system-voice-picker-wrapper {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .sublabel {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-main, #2D3748);
+  }
+
+  .voice-sub-selector {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .voice-chips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 520px) {
+    .voice-chips-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .voice-chip-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    background: var(--color-page-bg, #FBF9F5);
+    border: 1.5px solid var(--color-border, #E2D9CC);
+    border-radius: var(--radius-md, 0.75rem);
+    transition: all 0.2s ease;
+  }
+
+  .voice-chip-card.selected {
+    border-color: var(--color-primary, #2B6CB0);
+    background: #EBF8FF;
+    box-shadow: 0 2px 8px rgba(43, 108, 176, 0.15);
+  }
+
+  .btn-voice-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .voice-chip-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .voice-chip-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .voice-chip-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .voice-chip-size-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: #E2E8F0;
+    color: #4A5568;
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.3rem;
+  }
+
+  .voice-chip-desc {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #4A5568);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn-chip-sample {
+    flex-shrink: 0;
+    background: #FFF;
+    border: 1.5px solid var(--color-primary, #2B6CB0);
+    color: var(--color-primary, #2B6CB0);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radius-sm, 0.4rem);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .btn-chip-sample:hover {
+    background: var(--color-primary-soft, #EBF2FA);
+    transform: scale(1.03);
   }
 
   .action-footer {

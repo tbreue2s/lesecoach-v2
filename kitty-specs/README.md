@@ -27,6 +27,7 @@ Willkommen in der Spezifikations- und Aufgabensteuerung für das Projekt **Lese-
 | **WP12** | Stufengerechte & Skalierende Geschichten-Generierung | `merged` | [WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-didaktische-geschichten-skalierung-und-vokabular-differenzierung.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP12-tasks.md) |
 | **WP13** | Hybride Content-Pipeline zur Massengenerierung | `merged` | [WP13-Content-Pipeline.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP13-Content-Pipeline.md) |
 | **WP14** | Ergonomisches Kinder-UI & Lesefluss-Redesign | `merged` | [WP14-ergonomisches-kinder-ui-redesign.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP14-ergonomisches-kinder-ui-redesign.md) / [Tasks](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP14-tasks.md) |
+| **WP15** | TTS Voice Quality & Natural Audio Pipeline | `merged` | [WP15-tts-voice-quality.md](file:///home/thomas/projects/lesecoach-v2/kitty-specs/WP15-tts-voice-quality.md) |
 ---
 
 ## 🔄 Lifecycle-Phasen

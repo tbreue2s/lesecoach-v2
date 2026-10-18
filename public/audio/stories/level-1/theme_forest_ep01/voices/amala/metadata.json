@@ -1,0 +1,382 @@
+{
+  "sentence_0_full": {
+    "text": "Paul wandert leise über den feuchten Boden.",
+    "words": [
+      {
+        "word": "Paul",
+        "startMs": 105.5,
+        "endMs": 563.9
+      },
+      {
+        "word": "wandert",
+        "startMs": 577.8,
+        "endMs": 1063.9
+      },
+      {
+        "word": "leise",
+        "startMs": 1077.8,
+        "endMs": 1688.9
+      },
+      {
+        "word": "über",
+        "startMs": 1702.8,
+        "endMs": 1925.0
+      },
+      {
+        "word": "den",
+        "startMs": 1938.9,
+        "endMs": 2119.4
+      },
+      {
+        "word": "feuchten",
+        "startMs": 2133.3,
+        "endMs": 2661.1
+      },
+      {
+        "word": "Boden",
+        "startMs": 2675.0,
+        "endMs": 3216.7
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_0_full.mp3"
+  },
+  "sentence_0_app": {
+    "text": "Paul wandert leise über den feuchten",
+    "words": [
+      {
+        "word": "Paul",
+        "startMs": 105.5,
+        "endMs": 563.9
+      },
+      {
+        "word": "wandert",
+        "startMs": 577.8,
+        "endMs": 1063.9
+      },
+      {
+        "word": "leise",
+        "startMs": 1077.8,
+        "endMs": 1688.9
+      },
+      {
+        "word": "über",
+        "startMs": 1702.8,
+        "endMs": 1925.0
+      },
+      {
+        "word": "den",
+        "startMs": 1938.9,
+        "endMs": 2119.4
+      },
+      {
+        "word": "feuchten",
+        "startMs": 2133.3,
+        "endMs": 2750.0
+      }
+    ],
+    "cutMs": 2758.0,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_0_app.mp3"
+  },
+  "sentence_1_full": {
+    "text": "Plötzlich steht ein altes Klavier im Moos.",
+    "words": [
+      {
+        "word": "Plötzlich",
+        "startMs": 105.5,
+        "endMs": 772.2
+      },
+      {
+        "word": "steht",
+        "startMs": 786.1,
+        "endMs": 1077.8
+      },
+      {
+        "word": "ein",
+        "startMs": 1091.7,
+        "endMs": 1300.0
+      },
+      {
+        "word": "altes",
+        "startMs": 1313.9,
+        "endMs": 1702.8
+      },
+      {
+        "word": "Klavier",
+        "startMs": 1716.7,
+        "endMs": 2300.0
+      },
+      {
+        "word": "im",
+        "startMs": 2313.9,
+        "endMs": 2452.8
+      },
+      {
+        "word": "Moos",
+        "startMs": 2466.7,
+        "endMs": 2952.8
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_1_full.mp3"
+  },
+  "sentence_1_app": {
+    "text": "Plötzlich steht ein altes Klavier im",
+    "words": [
+      {
+        "word": "Plötzlich",
+        "startMs": 105.5,
+        "endMs": 772.2
+      },
+      {
+        "word": "steht",
+        "startMs": 786.1,
+        "endMs": 1077.8
+      },
+      {
+        "word": "ein",
+        "startMs": 1091.7,
+        "endMs": 1300.0
+      },
+      {
+        "word": "altes",
+        "startMs": 1313.9,
+        "endMs": 1702.8
+      },
+      {
+        "word": "Klavier",
+        "startMs": 1716.7,
+        "endMs": 2300.0
+      },
+      {
+        "word": "im",
+        "startMs": 2313.9,
+        "endMs": 2421.0
+      }
+    ],
+    "cutMs": 2429.0,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_1_app.mp3"
+  },
+  "sentence_2_full": {
+    "text": "Aus dem dichten Gebüsch tappt ein Igel.",
+    "words": [
+      {
+        "word": "Aus",
+        "startMs": 105.5,
+        "endMs": 397.2
+      },
+      {
+        "word": "dem",
+        "startMs": 411.1,
+        "endMs": 675.0
+      },
+      {
+        "word": "dichten",
+        "startMs": 688.9,
+        "endMs": 1105.5
+      },
+      {
+        "word": "Gebüsch",
+        "startMs": 1119.5,
+        "endMs": 1647.2
+      },
+      {
+        "word": "tappt",
+        "startMs": 1661.1,
+        "endMs": 2022.2
+      },
+      {
+        "word": "ein",
+        "startMs": 2036.1,
+        "endMs": 2244.5
+      },
+      {
+        "word": "Igel",
+        "startMs": 2258.3,
+        "endMs": 2772.2
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_2_full.mp3"
+  },
+  "sentence_2_app": {
+    "text": "Aus dem dichten Gebüsch tappt ein",
+    "words": [
+      {
+        "word": "Aus",
+        "startMs": 105.5,
+        "endMs": 397.2
+      },
+      {
+        "word": "dem",
+        "startMs": 411.1,
+        "endMs": 675.0
+      },
+      {
+        "word": "dichten",
+        "startMs": 688.9,
+        "endMs": 1105.5
+      },
+      {
+        "word": "Gebüsch",
+        "startMs": 1119.5,
+        "endMs": 1647.2
+      },
+      {
+        "word": "tappt",
+        "startMs": 1661.1,
+        "endMs": 2022.2
+      },
+      {
+        "word": "ein",
+        "startMs": 2036.1,
+        "endMs": 2318.0
+      }
+    ],
+    "cutMs": 2326.0,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_2_app.mp3"
+  },
+  "sentence_3_full": {
+    "text": "Mit der Pfote drückt er eine Note.",
+    "words": [
+      {
+        "word": "Mit",
+        "startMs": 105.5,
+        "endMs": 438.9
+      },
+      {
+        "word": "der",
+        "startMs": 452.8,
+        "endMs": 661.1
+      },
+      {
+        "word": "Pfote",
+        "startMs": 675.0,
+        "endMs": 1216.7
+      },
+      {
+        "word": "drückt",
+        "startMs": 1230.5,
+        "endMs": 1619.4
+      },
+      {
+        "word": "er",
+        "startMs": 1633.3,
+        "endMs": 1841.7
+      },
+      {
+        "word": "eine",
+        "startMs": 1855.5,
+        "endMs": 2105.5
+      },
+      {
+        "word": "Note",
+        "startMs": 2119.5,
+        "endMs": 2661.1
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_3_full.mp3"
+  },
+  "sentence_3_app": {
+    "text": "Mit der Pfote drückt er eine",
+    "words": [
+      {
+        "word": "Mit",
+        "startMs": 105.5,
+        "endMs": 438.9
+      },
+      {
+        "word": "der",
+        "startMs": 452.8,
+        "endMs": 661.1
+      },
+      {
+        "word": "Pfote",
+        "startMs": 675.0,
+        "endMs": 1216.7
+      },
+      {
+        "word": "drückt",
+        "startMs": 1230.5,
+        "endMs": 1619.4
+      },
+      {
+        "word": "er",
+        "startMs": 1633.3,
+        "endMs": 1841.7
+      },
+      {
+        "word": "eine",
+        "startMs": 1855.5,
+        "endMs": 2149.0
+      }
+    ],
+    "cutMs": 2157.0,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_3_app.mp3"
+  },
+  "sentence_4_full": {
+    "text": "Glücklich lauscht Paul im dichten Klee.",
+    "words": [
+      {
+        "word": "Glücklich",
+        "startMs": 105.5,
+        "endMs": 730.5
+      },
+      {
+        "word": "lauscht",
+        "startMs": 744.5,
+        "endMs": 1119.5
+      },
+      {
+        "word": "Paul",
+        "startMs": 1133.3,
+        "endMs": 1591.7
+      },
+      {
+        "word": "im",
+        "startMs": 1605.5,
+        "endMs": 1758.3
+      },
+      {
+        "word": "dichten",
+        "startMs": 1772.2,
+        "endMs": 2202.7
+      },
+      {
+        "word": "Klee",
+        "startMs": 2216.7,
+        "endMs": 2619.5
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_4_full.mp3"
+  },
+  "sentence_4_app": {
+    "text": "Glücklich lauscht Paul im dichten",
+    "words": [
+      {
+        "word": "Glücklich",
+        "startMs": 105.5,
+        "endMs": 730.5
+      },
+      {
+        "word": "lauscht",
+        "startMs": 744.5,
+        "endMs": 1119.5
+      },
+      {
+        "word": "Paul",
+        "startMs": 1133.3,
+        "endMs": 1591.7
+      },
+      {
+        "word": "im",
+        "startMs": 1605.5,
+        "endMs": 1758.3
+      },
+      {
+        "word": "dichten",
+        "startMs": 1772.2,
+        "endMs": 2291.0
+      }
+    ],
+    "cutMs": 2299.0,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_4_app.mp3"
+  }
+}

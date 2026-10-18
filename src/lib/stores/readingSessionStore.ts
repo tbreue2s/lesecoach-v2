@@ -22,13 +22,20 @@ import {
   resumeSpeech,
 } from '../services/speechService';
 import {
+  playAudioSegment,
+  pauseAudio as enginePauseAudio,
+  resumeAudio as engineResumeAudio,
+  stopAudio as engineStopAudio,
+} from '../services/audioEngineService';
+import {
   startListening,
   stopListening,
 } from '../services/speechRecognitionService';
 import { validateSpokenWord } from '../utils/spokenWordMatcher';
 import { playSuccessChime } from '../utils/soundEffects';
 
-const SPEECH_RATE = 0.78;
+// Natural, clear storytelling pace for children without metallic slow-motion artifacts
+const SPEECH_RATE = 0.90;
 
 const initialSessionState: ReadingSessionState = {
   storyId: '',
@@ -91,8 +98,7 @@ function createReadingSessionStore() {
     clearSyncTimer();
     stopListening(); // Mute mic immediately before TTS to prevent echo feedback
 
-    const { spokenText, spans } = buildSpokenSpans(tokensToSpeak);
-    const { estimates } = calculateTokenTimeEstimates(tokensToSpeak, SPEECH_RATE);
+    const { spokenText } = buildSpokenSpans(tokensToSpeak);
 
     update((state) => ({
       ...state,
@@ -100,66 +106,36 @@ function createReadingSessionStore() {
       isSpeaking: true,
       isListening: false,
       activeWordTokenId: null,
-      karaokeWordTokenId: null,
+      karaokeWordTokenId: tokensToSpeak[0]?.id || null,
     }));
 
-    let startTime = 0;
-    let started = false;
+    const curState = get(store);
+    const curSentence = curState.sentences[curState.activeSentenceIndex];
 
-    const startTimer = () => {
-      if (started) return;
-      started = true;
-      startTime = Date.now();
-
-      update((state) => ({
-        ...state,
-        karaokeWordTokenId: tokensToSpeak[0].id,
-      }));
-
-      syncTimerInterval = setInterval(() => {
-        const elapsedMs = Date.now() - startTime;
-        const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, estimates);
-        if (currentTokenId) {
-          update((s) => {
-            if (s.karaokeWordTokenId !== currentTokenId) {
-              return { ...s, karaokeWordTokenId: currentTokenId };
-            }
-            return s;
-          });
-        }
-      }, 20);
-    };
-
-    const startFallbackTimeout = setTimeout(() => {
-      startTimer();
-    }, 150);
-
-    speakSentence({
+    playAudioSegment({
       text: spokenText,
+      tokens: tokensToSpeak,
+      fullSentenceTokens: curSentence?.words ?? tokensToSpeak,
+      storyId: curState.storyId,
+      sentenceIndex: curState.activeSentenceIndex,
+      segmentType: 'app',
       rate: SPEECH_RATE,
       onStart: () => {
-        clearTimeout(startFallbackTimeout);
-        startTimer();
+        update((state) => ({
+          ...state,
+          isSpeaking: true,
+          karaokeWordTokenId: tokensToSpeak[0]?.id || null,
+        }));
       },
-      onBoundary: (event) => {
-        if (!started) {
-          clearTimeout(startFallbackTimeout);
-          startTimer();
-        }
-        const tokenId = mapCharIndexToTokenId(event.charIndex, spans);
-        if (tokenId) {
-          const matchingEst = estimates.find((e) => e.tokenId === tokenId);
-          if (matchingEst) {
-            startTime = Date.now() - matchingEst.startMs;
+      onWordHighlight: (tokenId) => {
+        update((s) => {
+          if (s.karaokeWordTokenId !== tokenId) {
+            return { ...s, karaokeWordTokenId: tokenId };
           }
-          update((state) => ({
-            ...state,
-            karaokeWordTokenId: tokenId,
-          }));
-        }
+          return s;
+        });
       },
       onEnd: () => {
-        clearTimeout(startFallbackTimeout);
         clearSyncTimer();
         update((state) => {
           const currentSentence = state.sentences[state.activeSentenceIndex];
@@ -180,7 +156,6 @@ function createReadingSessionStore() {
         onFinished();
       },
       onError: () => {
-        clearTimeout(startFallbackTimeout);
         clearSyncTimer();
         update((state) => {
           const currentSentence = state.sentences[state.activeSentenceIndex];
@@ -354,15 +329,14 @@ function createReadingSessionStore() {
    * Performs full-sentence fluent repeated reading (Phase B / Level 4-6).
    */
   function startRepeatedReading() {
-    const state = get(store);
-    const currentSentence = state.sentences[state.activeSentenceIndex];
+    const curState = get(store);
+    const currentSentence = curState.sentences[curState.activeSentenceIndex];
     if (!currentSentence) return;
 
     clearSyncTimer();
     stopListening(); // Mute mic prior to full sentence TTS
 
-    const { spokenText, spans } = buildSpokenSpans(currentSentence.words);
-    const { estimates } = calculateTokenTimeEstimates(currentSentence.words, SPEECH_RATE);
+    const { spokenText } = buildSpokenSpans(currentSentence.words);
 
     update((s) => ({
       ...s,
@@ -370,66 +344,32 @@ function createReadingSessionStore() {
       isSpeaking: true,
       isListening: false,
       activeWordTokenId: null,
-      karaokeWordTokenId: null,
+      karaokeWordTokenId: currentSentence.words[0]?.id || null,
     }));
 
-    let startTime = 0;
-    let started = false;
-
-    const startTimer = () => {
-      if (started) return;
-      started = true;
-      startTime = Date.now();
-
-      update((s) => ({
-        ...s,
-        karaokeWordTokenId: currentSentence.words[0]?.id || null,
-      }));
-
-      syncTimerInterval = setInterval(() => {
-        const elapsedMs = Date.now() - startTime;
-        const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, estimates);
-        if (currentTokenId) {
-          update((s) => {
-            if (s.karaokeWordTokenId !== currentTokenId) {
-              return { ...s, karaokeWordTokenId: currentTokenId };
-            }
-            return s;
-          });
-        }
-      }, 20);
-    };
-
-    const startFallbackTimeout = setTimeout(() => {
-      startTimer();
-    }, 150);
-
-    speakSentence({
+    playAudioSegment({
       text: spokenText,
+      tokens: currentSentence.words,
+      storyId: curState.storyId,
+      sentenceIndex: curState.activeSentenceIndex,
+      segmentType: 'full',
       rate: SPEECH_RATE,
       onStart: () => {
-        clearTimeout(startFallbackTimeout);
-        startTimer();
+        update((s) => ({
+          ...s,
+          isSpeaking: true,
+          karaokeWordTokenId: currentSentence.words[0]?.id || null,
+        }));
       },
-      onBoundary: (event) => {
-        if (!started) {
-          clearTimeout(startFallbackTimeout);
-          startTimer();
-        }
-        const tokenId = mapCharIndexToTokenId(event.charIndex, spans);
-        if (tokenId) {
-          const matchingEst = estimates.find((e) => e.tokenId === tokenId);
-          if (matchingEst) {
-            startTime = Date.now() - matchingEst.startMs;
+      onWordHighlight: (tokenId) => {
+        update((s) => {
+          if (s.karaokeWordTokenId !== tokenId) {
+            return { ...s, karaokeWordTokenId: tokenId };
           }
-          update((s) => ({
-            ...s,
-            karaokeWordTokenId: tokenId,
-          }));
-        }
+          return s;
+        });
       },
       onEnd: () => {
-        clearTimeout(startFallbackTimeout);
         clearSyncTimer();
         update((s) => ({
           ...s,
@@ -446,7 +386,6 @@ function createReadingSessionStore() {
         }
       },
       onError: () => {
-        clearTimeout(startFallbackTimeout);
         clearSyncTimer();
         update((s) => ({
           ...s,
@@ -515,7 +454,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
-      stopSpeech();
+      engineStopAudio();
       stopListening();
       const effectiveChildName = childName ?? get(profileStore)?.childName;
       const sentences = tokenizeStory(
@@ -554,7 +493,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
-      stopSpeech();
+      engineStopAudio();
       stopListening();
       update((state) => {
         const currentIndex = SAMPLE_STORIES.findIndex((s) => s.id === state.storyId);
@@ -635,7 +574,7 @@ function createReadingSessionStore() {
     completeCurrentSentence: () => {
       clearSyncTimer();
       clearAutoAdvance();
-      stopSpeech();
+      engineStopAudio();
       stopListening();
       finishSentence();
     },
@@ -643,21 +582,21 @@ function createReadingSessionStore() {
     pauseAudio: () => {
       clearSyncTimer();
       clearAutoAdvance();
-      pauseSpeech();
+      enginePauseAudio();
       stopListening();
       update((s) => ({ ...s, turnState: 'PAUSED', isSpeaking: false, isListening: false }));
     },
 
     resumeAudio: () => {
       clearAutoAdvance();
-      resumeSpeech();
+      engineResumeAudio();
       update((s) => ({ ...s, isSpeaking: true }));
     },
 
     stopAudio: () => {
       clearSyncTimer();
       clearAutoAdvance();
-      stopSpeech();
+      engineStopAudio();
       stopListening();
       update((s) => ({
         ...s,
@@ -688,7 +627,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
-      stopSpeech();
+      engineStopAudio();
       stopListening();
       set(initialSessionState);
     },

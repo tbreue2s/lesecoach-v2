@@ -66,4 +66,8 @@ export default defineConfig({
   server: {
     host: true,
   },
+  preview: {
+    host: true,
+  },
 });
+

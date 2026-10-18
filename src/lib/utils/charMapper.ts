@@ -32,7 +32,7 @@ export function buildSpokenSpans(tokens: WordToken[]): {
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
-    const wordText = token.word;
+    const wordText = token.word || token.cleanWord || token.raw || '';
     const startIndex = currentPos;
     const endIndex = startIndex + wordText.length;
 
@@ -93,20 +93,20 @@ export function mapCharIndexToTokenId(
 /**
  * Calculates time estimates for each token based on syllable/character length,
  * speech rate, and sentence punctuation pauses.
- * Calibrated for German SpeechSynthesis at rate ~0.78.
+ * Calibrated for German SpeechSynthesis at natural rate ~0.90.
  */
 export function calculateTokenTimeEstimates(
   tokens: WordToken[],
-  rate: number = 0.78
+  rate: number = 0.90
 ): { totalDurationMs: number; estimates: TokenTimeEstimate[] } {
   if (!tokens || tokens.length === 0) {
     return { totalDurationMs: 0, estimates: [] };
   }
 
   const effectiveRate = Math.max(0.5, Math.min(2.0, rate));
-  // Calibrated values: 54ms per character and 75ms base word envelope at rate 1.0
-  const msPerChar = 54 / effectiveRate;
-  const baseWordMs = 75 / effectiveRate;
+  // Calibrated values: 44ms per character and 56ms base word envelope at rate 1.0
+  const msPerChar = 44 / effectiveRate;
+  const baseWordMs = 56 / effectiveRate;
 
   let currentMs = 0;
   const estimates: TokenTimeEstimate[] = [];
@@ -148,14 +148,10 @@ export function mapElapsedTimeToTokenId(
 ): string | null {
   if (!estimates || estimates.length === 0 || elapsedMs < 0) return null;
 
-  for (const est of estimates) {
-    if (elapsedMs >= est.startMs && elapsedMs < est.endMs) {
-      return est.tokenId;
+  for (let i = estimates.length - 1; i >= 0; i--) {
+    if (elapsedMs >= estimates[i].startMs) {
+      return estimates[i].tokenId;
     }
-  }
-
-  if (elapsedMs >= estimates[estimates.length - 1].endMs) {
-    return estimates[estimates.length - 1].tokenId;
   }
 
   return estimates[0].tokenId;
