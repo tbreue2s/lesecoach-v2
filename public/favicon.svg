@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#FBF9F5"/>
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="#2B6CB0" fill-opacity="0.1" stroke="#2B6CB0" stroke-width="16"/>
+  <!-- Open Book Icon -->
+  <path d="M128 352C160 336 208 336 256 368C304 336 352 336 384 352V160C352 144 304 144 256 176C208 144 160 144 128 160V352Z" fill="#FBF9F5" stroke="#2B6CB0" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M256 176V368" stroke="#2B6CB0" stroke-width="24" stroke-linecap="round"/>
+  <!-- Otter emoji representation or star -->
+  <circle cx="256" cy="112" r="32" fill="#D69E2E"/>
+  <path d="M256 92L262 106L276 108L266 118L268 132L256 125L244 132L246 118L236 108L250 106Z" fill="#FBF9F5"/>
+</svg>
