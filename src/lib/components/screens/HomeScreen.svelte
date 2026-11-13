@@ -22,9 +22,6 @@
   }
 
   function handleStartAdventure() {
-    if ($profileStore.audioEngine === 'studio-audio' && $storyConfigStore.selectedThemeId === 'theme_forest') {
-      storyConfigStore.setLevel(1);
-    }
     storyConfigStore.buildPayload();
     storyConfigStore.startAdventure();
   }
@@ -113,9 +110,6 @@
         >
           <span class="theme-icon" aria-hidden="true">{theme.icon}</span>
           <span class="theme-name">{theme.label}</span>
-          {#if theme.id === 'theme_forest' && $profileStore.audioEngine === 'studio-audio'}
-            <span class="studio-badge" aria-label="Studio-Aufnahme">🎙️ Studio</span>
-          {/if}
           {#if $storyConfigStore.selectedThemeId === theme.id}
             <span class="selected-badge" aria-hidden="true">✓ Gewählt</span>
           {/if}
@@ -360,19 +354,6 @@
     font-weight: 700;
     color: var(--color-text-main, #2D3748);
     text-align: center;
-  }
-
-  .studio-badge {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    font-size: 0.65rem;
-    font-weight: 800;
-    background: #EBF8FF;
-    color: #2B6CB0;
-    border: 1px solid #BEE3F8;
-    padding: 1px 4px;
-    border-radius: 4px;
   }
 
   .selected-badge {

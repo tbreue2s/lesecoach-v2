@@ -2,11 +2,11 @@
   "themeId": "theme_forest",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Klavier",
-  "title": "Konzert im Moos",
+  "disturberWord": "Sofa",
+  "title": "Das Sofa im Moos",
   "sentences": [
     {
-      "text": "Paul wandert leise über den feuchten Boden.",
+      "text": "Paul wandert leise über das weiche Moos.",
       "words": [
         {
           "clean": "Paul",
@@ -36,35 +36,46 @@
           ]
         },
         {
-          "clean": "den",
+          "clean": "das",
           "syllables": [
-            "den"
+            "das"
           ]
         },
         {
-          "clean": "feuchten",
+          "clean": "weiche",
           "syllables": [
-            "feuch",
-            "ten"
+            "wei",
+            "che"
           ]
         },
         {
-          "clean": "Boden",
+          "clean": "Moos",
           "syllables": [
-            "Bo",
-            "den"
+            "Moos"
           ]
         }
       ]
     },
     {
-      "text": "Plötzlich steht ein altes Klavier im Moos.",
+      "text": "Mitten im Wald steht ein rotes Sofa.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Mitten",
           "syllables": [
-            "Plötz",
-            "lich"
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wald",
+          "syllables": [
+            "Wald"
           ]
         },
         {
@@ -80,72 +91,62 @@
           ]
         },
         {
-          "clean": "altes",
+          "clean": "rotes",
           "syllables": [
-            "al",
+            "ro",
             "tes"
           ]
         },
         {
-          "clean": "Klavier",
+          "clean": "Sofa",
           "syllables": [
-            "Kla",
-            "vier"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Moos"
+            "So",
+            "fa"
           ]
         }
       ]
     },
     {
-      "text": "Aus dem dichten Gebüsch tappt ein Igel.",
+      "text": "Darauf schläft friedlich ein kleiner dicker Igel.",
       "words": [
         {
-          "clean": "Aus",
+          "clean": "Darauf",
           "syllables": [
-            "Aus"
+            "Da",
+            "rauf"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "schläft",
           "syllables": [
-            "dem"
+            "schläft"
           ]
         },
         {
-          "clean": "dichten",
+          "clean": "friedlich",
           "syllables": [
-            "dich",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Gebüsch",
-          "syllables": [
-            "Ge",
-            "büsch"
-          ]
-        },
-        {
-          "clean": "tappt",
-          "syllables": [
-            "tappt"
+            "fried",
+            "lich"
           ]
         },
         {
           "clean": "ein",
           "syllables": [
             "ein"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "dicker",
+          "syllables": [
+            "di",
+            "cker"
           ]
         },
         {
@@ -158,12 +159,19 @@
       ]
     },
     {
-      "text": "Mit der Pfote drückt er eine Note.",
+      "text": "Kichernd rollt der Igel vom weichen Sofa.",
       "words": [
         {
-          "clean": "Mit",
+          "clean": "Kichernd",
           "syllables": [
-            "Mit"
+            "Ki",
+            "chernd"
+          ]
+        },
+        {
+          "clean": "rollt",
+          "syllables": [
+            "rollt"
           ]
         },
         {
@@ -173,79 +181,30 @@
           ]
         },
         {
-          "clean": "Pfote",
+          "clean": "Igel",
           "syllables": [
-            "Pfo",
-            "te"
+            "I",
+            "gel"
           ]
         },
         {
-          "clean": "drückt",
+          "clean": "vom",
           "syllables": [
-            "drückt"
+            "vom"
           ]
         },
         {
-          "clean": "er",
+          "clean": "weichen",
           "syllables": [
-            "er"
+            "wei",
+            "chen"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "Sofa",
           "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Note",
-          "syllables": [
-            "No",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Glücklich lauscht Paul im dichten Klee.",
-      "words": [
-        {
-          "clean": "Glücklich",
-          "syllables": [
-            "Glück",
-            "lich"
-          ]
-        },
-        {
-          "clean": "lauscht",
-          "syllables": [
-            "lauscht"
-          ]
-        },
-        {
-          "clean": "Paul",
-          "syllables": [
-            "Paul"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "dichten",
-          "syllables": [
-            "dich",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Klee",
-          "syllables": [
-            "Klee"
+            "So",
+            "fa"
           ]
         }
       ]

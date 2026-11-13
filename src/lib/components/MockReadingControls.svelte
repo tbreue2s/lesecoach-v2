@@ -6,10 +6,7 @@
   import { routerStore } from '../stores/routerStore';
   import { storyConfigStore } from '../stores/storyConfigStore';
   import { SAMPLE_STORIES } from '../data/sampleStories';
-  import { STORY_THEMES } from '../data/storyThemes';
-  import { loadPrecomputedStory } from '../services/precomputedStoryLoader';
   import {
-    hasStudioAudio,
     stopAudio,
     resetAudioOverrides,
     downloadThorstenVoice,
@@ -17,9 +14,8 @@
     isThorstenStored,
     thorstenStatusStore,
     PIPER_VOICES,
-    STUDIO_VOICES,
   } from '../services/audioEngineService';
-  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
+  import type { AudioEngineType, PiperVoiceId } from '../types/profile';
 
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
@@ -35,29 +31,11 @@
 
   $: currentEngine = $profileStore.audioEngine || 'thorsten-pwa';
   $: currentPiperVoice = $profileStore.selectedPiperVoice || 'de_DE-thorsten-medium';
-  $: currentStudioVoice = $profileStore.selectedStudioVoice || 'conrad';
-
   function selectPiperVoice(voiceId: PiperVoiceId) {
     profileStore.setPiperVoice(voiceId);
     resetAudioOverrides();
     ensurePiperInitialized(voiceId).catch(() => {});
     if (session.isSpeaking) {
-      stopAudio();
-      readingSessionStore.startSentenceReading();
-    }
-  }
-
-  function selectStudioVoice(voiceId: StudioVoiceId) {
-    profileStore.setStudioVoice(voiceId);
-    resetAudioOverrides();
-    if (session.storyId !== 'story-theme_forest-lvl1-ep1') {
-      const forestTheme = STORY_THEMES.find((t) => t.id === 'theme_forest') || STORY_THEMES[0];
-      const refStory = loadPrecomputedStory('theme_forest', 1, forestTheme, 1, $profileStore.childName);
-      if (refStory) {
-        levelStore.setLevel(1);
-        readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
-      }
-    } else if (session.isSpeaking) {
       stopAudio();
       readingSessionStore.startSentenceReading();
     }
@@ -71,15 +49,7 @@
       ensurePiperInitialized(currentPiperVoice).catch(() => {});
     }
 
-    // If user selects Studio-Audio and is not yet on the reference story "Konzert im Moos", load it automatically
-    if (engine === 'studio-audio' && session.storyId !== 'story-theme_forest-lvl1-ep1') {
-      const forestTheme = STORY_THEMES.find((t) => t.id === 'theme_forest') || STORY_THEMES[0];
-      const refStory = loadPrecomputedStory('theme_forest', 1, forestTheme, 1, $profileStore.childName);
-      if (refStory) {
-        levelStore.setLevel(1);
-        readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
-      }
-    } else if (session.isSpeaking) {
+    if (session.isSpeaking) {
       stopAudio();
       readingSessionStore.startSentenceReading();
     }
@@ -138,16 +108,6 @@
   }
 
   function handleRestartStory() {
-    const isStudio = $profileStore.audioEngine === 'studio-audio';
-    if (isStudio) {
-      const forestTheme = STORY_THEMES.find((t) => t.id === 'theme_forest') || STORY_THEMES[0];
-      const refStory = loadPrecomputedStory('theme_forest', 1, forestTheme, 1, $profileStore.childName);
-      if (refStory) {
-        levelStore.setLevel(1);
-        readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
-        return;
-      }
-    }
     const activeConfigStory = $storyConfigStore.activeStory;
     const currentStory =
       (activeConfigStory && activeConfigStory.id === session.storyId ? activeConfigStory : null) ||
@@ -235,24 +195,8 @@
       on:click={() => setEngine('thorsten-pwa')}
       title="Thorsten (100% Offline in PWA, natürliche WASM-Stimme)"
     >
-      <span class="engine-icon">👦</span>
-      <span class="engine-label">Thorsten (PWA)</span>
-    </button>
-
-    <button
-      type="button"
-      id="engine-studio-btn"
-      class="btn-engine-pill"
-      class:selected={currentEngine === 'studio-audio'}
-      class:has-studio={hasStudioAudio(session.storyId, session.activeSentenceIndex, 'app')}
-      on:click={() => setEngine('studio-audio')}
-      title="Studio-Audio (Voraufgenommen für Konzert im Moos)"
-    >
-      <span class="engine-icon">🎙️</span>
-      <span class="engine-label">Studio-Audio</span>
-      {#if hasStudioAudio(session.storyId, session.activeSentenceIndex, 'app')}
-        <span class="studio-badge" title="Studio-Audio für diesen Satz vorhanden!">Aktiv</span>
-      {/if}
+      <span class="engine-icon">⚡</span>
+      <span class="engine-label">PWA-Stimmen</span>
     </button>
 
     <button
@@ -280,21 +224,6 @@
           title="{pv.label}: {pv.desc} ({pv.size})"
         >
           <span>{pv.gender === 'female' ? '👧' : '👦'} {pv.label.split(' ')[0]}</span>
-        </button>
-      {/each}
-    </div>
-  {:else if currentEngine === 'studio-audio'}
-    <div class="audio-voice-subrow" aria-label="Studio-Sprecherin wählen">
-      <span class="subrow-label">Studio:</span>
-      {#each STUDIO_VOICES as sv}
-        <button
-          type="button"
-          class="btn-subvoice-pill"
-          class:selected={currentStudioVoice === sv.id}
-          on:click={() => selectStudioVoice(sv.id)}
-          title="{sv.label}: {sv.desc}"
-        >
-          <span>{sv.gender === 'female' ? '👧' : '👦'} {sv.label.split(' ')[0]}</span>
         </button>
       {/each}
     </div>
@@ -466,8 +395,6 @@
             📥 Thorsten-Modell vorab laden (~60 MB)
           </button>
         {/if}
-      {:else if currentEngine === 'studio-audio'}
-        <span class="thorsten-badge studio">🎙️ Studio-Audio ({hasStudioAudio(session.storyId, session.activeSentenceIndex, 'app') ? 'Verfügbar' : 'Fallback aktiv'})</span>
       {:else}
         <span class="thorsten-badge system">📱 Web Speech API ({$profileStore.preferredVoiceURI ? 'Ausgewählt' : 'System-Standard'})</span>
       {/if}

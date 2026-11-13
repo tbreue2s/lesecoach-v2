@@ -118,10 +118,8 @@ function loadStoredProfile(): ProfileState {
       return match ? { ...def, customName: match.customName || def.defaultName } : def;
     });
 
-    const validEngines: AudioEngineType[] = ['thorsten-pwa', 'studio-audio', 'system-tts'];
-    const audioEngine: AudioEngineType = validEngines.includes(parsed.audioEngine)
-      ? parsed.audioEngine
-      : 'thorsten-pwa';
+    const audioEngine: AudioEngineType =
+      parsed.audioEngine === 'system-tts' ? 'system-tts' : 'thorsten-pwa';
 
     const validPiperVoices = [
       'de_DE-thorsten-medium',

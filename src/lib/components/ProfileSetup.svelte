@@ -10,9 +10,8 @@
     ensurePiperInitialized,
     resetAudioOverrides,
     PIPER_VOICES,
-    STUDIO_VOICES,
   } from '../services/audioEngineService';
-  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
+  import type { AudioEngineType, PiperVoiceId } from '../types/profile';
   import OtterFeedback from './OtterFeedback.svelte';
 
   export let showBackButton = false;
@@ -199,14 +198,6 @@
     ensurePiperInitialized(voiceId).catch(() => {});
   }
 
-  function handleSelectStudioVoice(voiceId: StudioVoiceId) {
-    profileStore.setStudioVoice(voiceId);
-    profileStore.setAudioEngine('studio-audio');
-    resetAudioOverrides();
-    storyConfigStore.selectTheme('theme_forest');
-    storyConfigStore.setLevel(1);
-  }
-
   function handleVoiceChange(event: Event) {
     const target = event.target as HTMLSelectElement;
     selectedVoiceURI = target.value;
@@ -364,22 +355,7 @@
         <span class="engine-card-icon">⚡</span>
         <div class="engine-card-text">
           <strong class="engine-card-title">PWA Offline-Stimmen (Piper WebAssembly)</strong>
-          <span class="engine-card-desc">100% Offline in PWA, 2 Stimmen (Thorsten, Kerstin)</span>
-        </div>
-      </button>
-
-      <button
-        type="button"
-        class="engine-card"
-        class:selected={$profileStore.audioEngine === 'studio-audio'}
-        on:click={() => handleSelectAudioEngine('studio-audio')}
-        role="radio"
-        aria-checked={$profileStore.audioEngine === 'studio-audio'}
-      >
-        <span class="engine-card-icon">🎙️</span>
-        <div class="engine-card-text">
-          <strong class="engine-card-title">Studio-Audio (Konzert im Moos)</strong>
-          <span class="engine-card-desc">Voraufgenommene Profi-Studio-Aufnahmen (Katja, Amala, Konrad)</span>
+          <span class="engine-card-desc">100% Offline in PWA, natürliche Stimmen (Thorsten & Kerstin)</span>
         </div>
       </button>
 
@@ -427,38 +403,6 @@
                 class="btn-chip-sample"
                 title="{pv.label} probe hören"
                 on:click={() => handleTestVoice('thorsten-pwa', pv.id)}
-              >
-                🔊 Probe
-              </button>
-            </div>
-          {/each}
-        </div>
-      </div>
-    {:else if $profileStore.audioEngine === 'studio-audio'}
-      <div class="voice-sub-selector">
-        <span class="sublabel">Wähle deine Studio-Sprecherin / Sprecher (Konzert im Moos):</span>
-        <div class="voice-chips-grid">
-          {#each STUDIO_VOICES as sv}
-            <div
-              class="voice-chip-card"
-              class:selected={($profileStore.selectedStudioVoice || 'conrad') === sv.id}
-            >
-              <button
-                type="button"
-                class="btn-voice-chip"
-                on:click={() => handleSelectStudioVoice(sv.id)}
-              >
-                <span class="voice-chip-icon">{sv.gender === 'female' ? '👧' : '👦'}</span>
-                <div class="voice-chip-info">
-                  <strong>{sv.label}</strong>
-                  <span class="voice-chip-desc">{sv.desc}</span>
-                </div>
-              </button>
-              <button
-                type="button"
-                class="btn-chip-sample"
-                title="{sv.label} probe hören"
-                on:click={() => handleTestVoice('studio-audio', sv.id)}
               >
                 🔊 Probe
               </button>

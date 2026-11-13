@@ -66,9 +66,10 @@ describe('AudioEngineService (WP15 Evidence: Thorsten WASM, Studio Audio & Syste
     expect(invalidUrl).toBeNull();
   });
 
-  it('accurately detects whether studio audio and exact WordBoundary metadata exist for all 5 sentences', () => {
-    expect(hasStudioAudio('story-theme_forest-lvl1-ep1', 0, 'app')).toBe(true);
-    expect(hasStudioAudio('story-theme_forest-lvl1-ep1', 4, 'app')).toBe(true);
+  it('disables legacy studio audio in favor of PWA voices while retaining metadata access', () => {
+    // Studio audio is disabled so newly generated stories consistently use PWA voices
+    expect(hasStudioAudio('story-theme_forest-lvl1-ep1', 0, 'app')).toBe(false);
+    expect(hasStudioAudio('story-theme_forest-lvl1-ep1', 4, 'app')).toBe(false);
     expect(hasStudioAudio('story-theme_forest-lvl1-ep1', 5, 'app')).toBe(false);
     expect(hasStudioAudio('story-space-trip-lvl1-ep1', 0, 'app')).toBe(false);
 

@@ -340,18 +340,16 @@ export function getStudioAudioUrl(
 
 /**
  * Checks whether precomputed studio audio exists for the given story segment.
+ * Returns false so that all stories (including newly generated Level 1 stories)
+ * are read by natural PWA voices (Thorsten & Kerstin) or System TTS until new studio
+ * recordings are provided.
  */
 export function hasStudioAudio(
-  storyId?: string,
-  sentenceIndex?: number,
-  segmentType?: 'app' | 'full'
+  _storyId?: string,
+  _sentenceIndex?: number,
+  _segmentType?: 'app' | 'full'
 ): boolean {
-  if (!storyId || sentenceIndex === undefined || !segmentType) return false;
-  return (
-    storyId === 'story-theme_forest-lvl1-ep1' &&
-    sentenceIndex >= 0 &&
-    sentenceIndex <= 4
-  );
+  return false;
 }
 
 /**
