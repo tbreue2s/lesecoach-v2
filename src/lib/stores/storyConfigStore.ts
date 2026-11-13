@@ -23,7 +23,8 @@ function createStoryConfigStore() {
 
   function buildStoryPayload(state: StoryConfigState): StoryConfigPayload {
     const profile = get(profileStore);
-    const level = get(levelStore);
+    const isStudioTheme = profile.audioEngine === 'studio-audio' && state.selectedThemeId === 'theme_forest';
+    const level = isStudioTheme ? 1 : get(levelStore);
 
     const activeTheme: StoryTheme =
       STORY_THEMES.find((t) => t.id === state.selectedThemeId) || STORY_THEMES[0];
@@ -83,8 +84,9 @@ function createStoryConfigStore() {
       const freshPayload = get(profileStore).childName
         ? (() => {
             const profile = get(profileStore);
-            const level = get(levelStore);
             const s = get({ subscribe });
+            const isStudioTheme = profile.audioEngine === 'studio-audio' && s.selectedThemeId === 'theme_forest';
+            const level = isStudioTheme ? 1 : get(levelStore);
             const activeTheme = STORY_THEMES.find((t) => t.id === s.selectedThemeId) || STORY_THEMES[0];
             const activeCompanionObj = profile.companions.find((c) => c.id === profile.selectedCompanionId);
 
@@ -102,9 +104,10 @@ function createStoryConfigStore() {
           })()
         : payload;
 
+      const isStudio = get(profileStore).audioEngine === 'studio-audio' && freshPayload.theme.id === 'theme_forest';
       const activeEpisode = episode !== undefined
         ? episode
-        : (themeEpisodes[freshPayload.theme.id] || 1);
+        : (isStudio ? 1 : (themeEpisodes[freshPayload.theme.id] || 1));
       themeEpisodes[freshPayload.theme.id] = activeEpisode;
 
       const precomputed = loadPrecomputedStory(

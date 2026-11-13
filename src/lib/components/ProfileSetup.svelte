@@ -8,10 +8,11 @@
   import {
     testAudioEngineVoice,
     ensurePiperInitialized,
+    resetAudioOverrides,
     PIPER_VOICES,
     STUDIO_VOICES,
   } from '../services/audioEngineService';
-  import type { AudioEngineType, PiperVoiceId } from '../types/profile';
+  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
   import OtterFeedback from './OtterFeedback.svelte';
 
   export let showBackButton = false;
@@ -147,6 +148,7 @@
 
     const ok = profileStore.saveProfile();
     if (ok) {
+      resetAudioOverrides();
       if ($profileStore.audioEngine === 'studio-audio') {
         storyConfigStore.selectTheme('theme_forest');
         storyConfigStore.setLevel(1);
@@ -182,14 +184,27 @@
 
   function handleSelectAudioEngine(engine: AudioEngineType) {
     profileStore.setAudioEngine(engine);
-    if (engine === 'thorsten-pwa') {
+    resetAudioOverrides();
+    if (engine === 'studio-audio') {
+      storyConfigStore.selectTheme('theme_forest');
+      storyConfigStore.setLevel(1);
+    } else if (engine === 'thorsten-pwa') {
       ensurePiperInitialized($profileStore.selectedPiperVoice || 'de_DE-thorsten-medium').catch(() => {});
     }
   }
 
   function handleSelectPiperVoice(voiceId: PiperVoiceId) {
     profileStore.setPiperVoice(voiceId);
+    resetAudioOverrides();
     ensurePiperInitialized(voiceId).catch(() => {});
+  }
+
+  function handleSelectStudioVoice(voiceId: StudioVoiceId) {
+    profileStore.setStudioVoice(voiceId);
+    profileStore.setAudioEngine('studio-audio');
+    resetAudioOverrides();
+    storyConfigStore.selectTheme('theme_forest');
+    storyConfigStore.setLevel(1);
   }
 
   function handleVoiceChange(event: Event) {
@@ -431,7 +446,7 @@
               <button
                 type="button"
                 class="btn-voice-chip"
-                on:click={() => profileStore.setStudioVoice(sv.id)}
+                on:click={() => handleSelectStudioVoice(sv.id)}
               >
                 <span class="voice-chip-icon">{sv.gender === 'female' ? '👧' : '👦'}</span>
                 <div class="voice-chip-info">

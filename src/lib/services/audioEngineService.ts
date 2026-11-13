@@ -34,9 +34,14 @@ export function resolveAssetUrl(path: string): string {
     return path;
   }
   const clean = path.replace(/^\/+/, '');
-  if (typeof window !== 'undefined' && typeof document !== 'undefined' && document?.baseURI) {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     try {
-      const base = document.baseURI;
+      let base = document.baseURI || window.location.href;
+      const urlObj = new URL(base);
+      if (!urlObj.pathname.endsWith('/') && !urlObj.pathname.split('/').pop()?.includes('.')) {
+        urlObj.pathname += '/';
+        base = urlObj.href;
+      }
       return new URL(clean, base).href;
     } catch {
       // Fallback
@@ -138,7 +143,10 @@ export const thorstenStatusStore = writable<ThorstenStatusState>({
 
 // Cache synthesized Audio Blobs in memory to avoid re-synthesis
 const piperBlobCache = new Map<string, Blob>();
+// Cache decoded Studio Audio buffers in memory for zero-latency, instant playback
+const studioAudioBufferCache = new Map<string, AudioBuffer>();
 
+let activePlaybackId = 0;
 let currentAudio: HTMLAudioElement | null = null;
 let sharedAudioElement: HTMLAudioElement | null = null;
 let sharedAudioContext: AudioContext | null = null;
@@ -150,6 +158,16 @@ let currentPiperVoiceOverride: PiperVoiceId | null = null;
 let currentStudioVoiceOverride: StudioVoiceId | null = null;
 let isThorstenDownloading = false;
 let thorstenDownloadProgress = 0;
+
+/**
+ * Resets all temporary testing overrides so engine and voices cleanly
+ * synchronize with the user profile stored in profileStore.
+ */
+export function resetAudioOverrides(): void {
+  currentEngineOverride = null;
+  currentPiperVoiceOverride = null;
+  currentStudioVoiceOverride = null;
+}
 
 export interface ActivePiperSession {
   ort: any;
@@ -206,6 +224,7 @@ function clearSyncTimer() {
 
 function clearCurrentAudio() {
   clearSyncTimer();
+  activePlaybackId++;
   if (activeBufferSource) {
     try {
       activeBufferSource.onended = null;
@@ -1162,6 +1181,7 @@ function playHtmlAudioWithSync(
   }
 ) {
   clearCurrentAudio();
+  const playbackId = activePlaybackId;
 
   const resolvedSrc = resolveAssetUrl(audioSrc);
   const isJsdom = typeof navigator !== 'undefined' && navigator.userAgent?.includes('jsdom');
@@ -1190,6 +1210,73 @@ function playHtmlAudioWithSync(
       }
 
       if (sharedAudioContext) {
+        const playBuffer = (audioBuffer: AudioBuffer) => {
+          if (playbackId !== activePlaybackId) return;
+
+          // Clear any prior playing buffer source without bumping playbackId
+          if (activeBufferSource) {
+            try {
+              activeBufferSource.onended = null;
+              activeBufferSource.stop();
+              activeBufferSource.disconnect();
+            } catch {}
+            activeBufferSource = null;
+          }
+
+          const source = sharedAudioContext!.createBufferSource();
+          source.buffer = audioBuffer;
+          source.connect(sharedAudioContext!.destination);
+          activeBufferSource = source;
+
+          let finished = false;
+          const startCtxTime = sharedAudioContext!.currentTime;
+
+          const finishPlayback = () => {
+            if (finished) return;
+            finished = true;
+            clearSyncTimer();
+            if (activeBufferSource === source) {
+              activeBufferSource = null;
+            }
+            callbacks.onEnd?.();
+          };
+
+          callbacks.onStart?.();
+          if (tokens.length > 0) {
+            callbacks.onWordHighlight?.(tokens[0].id);
+          }
+
+          syncTimerInterval = setInterval(() => {
+            if (finished || !sharedAudioContext || playbackId !== activePlaybackId) return;
+            const elapsedMs = (sharedAudioContext.currentTime - startCtxTime) * 1000;
+            if (callbacks.stopAtMs !== undefined && elapsedMs >= callbacks.stopAtMs) {
+              finishPlayback();
+              return;
+            }
+            const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, activeEstimates);
+            if (currentTokenId) {
+              callbacks.onWordHighlight?.(currentTokenId);
+            }
+          }, 20);
+
+          source.onended = () => {
+            finishPlayback();
+          };
+
+          if (callbacks.stopAtMs !== undefined && callbacks.stopAtMs > 0) {
+            source.start(0);
+            source.stop(startCtxTime + callbacks.stopAtMs / 1000);
+          } else {
+            source.start(0);
+          }
+        };
+
+        const cached = studioAudioBufferCache.get(resolvedSrc);
+        if (cached) {
+          playBuffer(cached);
+          return;
+        }
+
         fetch(resolvedSrc)
           .then((res) => {
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -1197,53 +1284,11 @@ function playHtmlAudioWithSync(
           })
           .then((ab) => sharedAudioContext!.decodeAudioData(ab))
           .then((audioBuffer) => {
-            clearCurrentAudio();
-
-            const source = sharedAudioContext!.createBufferSource();
-            source.buffer = audioBuffer;
-            source.connect(sharedAudioContext!.destination);
-            activeBufferSource = source;
-
-            let finished = false;
-            const startCtxTime = sharedAudioContext!.currentTime;
-
-            const finishPlayback = () => {
-              if (finished) return;
-              finished = true;
-              clearCurrentAudio();
-              callbacks.onEnd?.();
-            };
-
-            callbacks.onStart?.();
-            if (tokens.length > 0) {
-              callbacks.onWordHighlight?.(tokens[0].id);
-            }
-
-            syncTimerInterval = setInterval(() => {
-              if (finished || !sharedAudioContext) return;
-              const elapsedMs = (sharedAudioContext.currentTime - startCtxTime) * 1000;
-              if (callbacks.stopAtMs !== undefined && elapsedMs >= callbacks.stopAtMs) {
-                finishPlayback();
-                return;
-              }
-              const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, activeEstimates);
-              if (currentTokenId) {
-                callbacks.onWordHighlight?.(currentTokenId);
-              }
-            }, 20);
-
-            source.onended = () => {
-              finishPlayback();
-            };
-
-            if (callbacks.stopAtMs !== undefined && callbacks.stopAtMs > 0) {
-              source.start(0);
-              source.stop(startCtxTime + callbacks.stopAtMs / 1000);
-            } else {
-              source.start(0);
-            }
+            studioAudioBufferCache.set(resolvedSrc, audioBuffer);
+            playBuffer(audioBuffer);
           })
           .catch((err) => {
+            if (playbackId !== activePlaybackId) return;
             console.warn('[AudioEngine] Web Audio playback failed, falling back to HTMLAudioElement:', err);
             playHtmlFallback(resolvedSrc);
           });
@@ -1525,25 +1570,31 @@ export function playAudioSegment(options: AudioSegmentOptions): void {
       fullTokens.length > options.tokens.length &&
       fullTokens[0]?.id === options.tokens[0]?.id;
 
+    const isFullSentence =
+      options.segmentType === 'full' ||
+      (options.segmentType === 'app' && options.tokens.length === fullTokens.length);
+
+    const effectiveSegmentType: 'app' | 'full' = isFullSentence ? 'full' : 'app';
+
     const isStudioSegmentSupported =
-      options.segmentType === 'full' || (options.segmentType === 'app' && isPrefix);
+      isFullSentence || (options.segmentType === 'app' && isPrefix);
 
     if (isStudioSegmentSupported) {
       const studioVoice = getActiveStudioVoice();
       const studioUrl = getStudioAudioUrl(
         options.storyId,
         options.sentenceIndex,
-        options.segmentType,
+        effectiveSegmentType,
         studioVoice
       );
       const studioMeta = getStudioSegmentMetadata(
         options.storyId,
         options.sentenceIndex,
-        options.segmentType,
+        effectiveSegmentType,
         studioVoice
       );
 
-      if (studioUrl && hasStudioAudio(options.storyId, options.sentenceIndex, options.segmentType) && typeof window !== 'undefined' && !isJsdom) {
+      if (studioUrl && hasStudioAudio(options.storyId, options.sentenceIndex, effectiveSegmentType) && typeof window !== 'undefined' && !isJsdom) {
         let exactEstimates: TokenTimeEstimate[] | undefined;
         let stopAtMs: number | undefined;
 

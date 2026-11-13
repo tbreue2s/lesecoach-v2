@@ -2,6 +2,9 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
   getActiveAudioEngine,
   setAudioEngineOverride,
+  getActivePiperVoice,
+  getActiveStudioVoice,
+  resetAudioOverrides,
   getStudioAudioUrl,
   getStudioSegmentMetadata,
   hasStudioAudio,
@@ -14,6 +17,7 @@ import {
   resolveAssetUrl,
   PIPER_VOICES,
 } from './audioEngineService';
+import { profileStore } from '../stores/profileStore';
 import * as speechService from './speechService';
 import type { WordToken } from '../types/reading';
 
@@ -236,6 +240,92 @@ describe('AudioEngineService (WP15 Evidence: Thorsten WASM, Studio Audio & Syste
     const spokenArg = speakSpy.mock.calls[0][0].text;
     expect(spokenArg).toContain('im dichten Wald');
     expect(spokenArg).not.toContain('Paul sieht');
+  });
+
+  it('normalizes document.baseURI without trailing slash so subdirectory assets never 404', () => {
+    const originalBaseURI = document.baseURI;
+    try {
+      Object.defineProperty(document, 'baseURI', {
+        value: 'https://tommy2105.github.io/lesecoach-v2',
+        configurable: true,
+      });
+
+      const resolved = resolveAssetUrl('/audio/stories/level-1/theme_forest_ep01/sentence_0_app.mp3');
+      expect(resolved).toBe(
+        'https://tommy2105.github.io/lesecoach-v2/audio/stories/level-1/theme_forest_ep01/sentence_0_app.mp3'
+      );
+      expect(resolved).not.toBe(
+        'https://tommy2105.github.io/audio/stories/level-1/theme_forest_ep01/sentence_0_app.mp3'
+      );
+    } finally {
+      Object.defineProperty(document, 'baseURI', {
+        value: originalBaseURI,
+        configurable: true,
+      });
+    }
+  });
+
+  it('seamlessly switches between all Studio and PWA voices during runtime without restart', () => {
+    // 1. Initial configuration: Studio Audio with Katja
+    profileStore.setAudioEngine('studio-audio');
+    profileStore.setStudioVoice('katja');
+    resetAudioOverrides();
+
+    expect(getActiveAudioEngine()).toBe('studio-audio');
+    expect(getActiveStudioVoice()).toBe('katja');
+
+    let studioUrl = getStudioAudioUrl('story-theme_forest-lvl1-ep1', 0, 'app');
+    expect(studioUrl).toBe('/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_0_app.mp3');
+    let studioMeta = getStudioSegmentMetadata('story-theme_forest-lvl1-ep1', 0, 'app');
+    expect(studioMeta).toBeTruthy();
+    expect(studioMeta?.words[0].word).toBe('Paul');
+
+    // 2. Seamless switch mid-session to Conrad
+    stopAudio();
+    profileStore.setStudioVoice('conrad');
+    resetAudioOverrides();
+
+    expect(getActiveStudioVoice()).toBe('conrad');
+    studioUrl = getStudioAudioUrl('story-theme_forest-lvl1-ep1', 0, 'app');
+    expect(studioUrl).toBe('/audio/stories/level-1/theme_forest_ep01/sentence_0_app.mp3');
+    studioMeta = getStudioSegmentMetadata('story-theme_forest-lvl1-ep1', 0, 'app');
+    expect(studioMeta?.words.length).toBe(6);
+
+    // 3. Seamless switch mid-session to Amala
+    stopAudio();
+    profileStore.setStudioVoice('amala');
+    resetAudioOverrides();
+
+    expect(getActiveStudioVoice()).toBe('amala');
+    studioUrl = getStudioAudioUrl('story-theme_forest-lvl1-ep1', 0, 'app');
+    expect(studioUrl).toBe('/audio/stories/level-1/theme_forest_ep01/voices/amala/sentence_0_app.mp3');
+
+    // 4. Seamless switch mid-session to PWA Kerstin
+    stopAudio();
+    profileStore.setAudioEngine('thorsten-pwa');
+    profileStore.setPiperVoice('de_DE-kerstin-low');
+    resetAudioOverrides();
+
+    expect(getActiveAudioEngine()).toBe('thorsten-pwa');
+    expect(getActivePiperVoice()).toBe('de_DE-kerstin-low');
+
+    // 5. Seamless switch mid-session to PWA Thorsten
+    stopAudio();
+    profileStore.setPiperVoice('de_DE-thorsten-medium');
+    resetAudioOverrides();
+
+    expect(getActivePiperVoice()).toBe('de_DE-thorsten-medium');
+
+    // 6. Seamless switch back to Studio Katja
+    stopAudio();
+    profileStore.setAudioEngine('studio-audio');
+    profileStore.setStudioVoice('katja');
+    resetAudioOverrides();
+
+    expect(getActiveAudioEngine()).toBe('studio-audio');
+    expect(getActiveStudioVoice()).toBe('katja');
+    studioUrl = getStudioAudioUrl('story-theme_forest-lvl1-ep1', 0, 'app');
+    expect(studioUrl).toBe('/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_0_app.mp3');
   });
 });
 

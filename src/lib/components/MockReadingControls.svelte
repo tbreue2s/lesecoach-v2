@@ -10,9 +10,8 @@
   import { loadPrecomputedStory } from '../services/precomputedStoryLoader';
   import {
     hasStudioAudio,
-    setAudioEngineOverride,
-    setPiperVoiceOverride,
-    setStudioVoiceOverride,
+    stopAudio,
+    resetAudioOverrides,
     downloadThorstenVoice,
     ensurePiperInitialized,
     isThorstenStored,
@@ -40,18 +39,33 @@
 
   function selectPiperVoice(voiceId: PiperVoiceId) {
     profileStore.setPiperVoice(voiceId);
-    setPiperVoiceOverride(voiceId);
+    resetAudioOverrides();
     ensurePiperInitialized(voiceId).catch(() => {});
+    if (session.isSpeaking) {
+      stopAudio();
+      readingSessionStore.startSentenceReading();
+    }
   }
 
   function selectStudioVoice(voiceId: StudioVoiceId) {
     profileStore.setStudioVoice(voiceId);
-    setStudioVoiceOverride(voiceId);
+    resetAudioOverrides();
+    if (session.storyId !== 'story-theme_forest-lvl1-ep1') {
+      const forestTheme = STORY_THEMES.find((t) => t.id === 'theme_forest') || STORY_THEMES[0];
+      const refStory = loadPrecomputedStory('theme_forest', 1, forestTheme, 1, $profileStore.childName);
+      if (refStory) {
+        levelStore.setLevel(1);
+        readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
+      }
+    } else if (session.isSpeaking) {
+      stopAudio();
+      readingSessionStore.startSentenceReading();
+    }
   }
 
   function setEngine(engine: AudioEngineType) {
     profileStore.setAudioEngine(engine);
-    setAudioEngineOverride(engine);
+    resetAudioOverrides();
 
     if (engine === 'thorsten-pwa') {
       ensurePiperInitialized(currentPiperVoice).catch(() => {});
@@ -65,6 +79,9 @@
         levelStore.setLevel(1);
         readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
       }
+    } else if (session.isSpeaking) {
+      stopAudio();
+      readingSessionStore.startSentenceReading();
     }
   }
 
@@ -121,6 +138,16 @@
   }
 
   function handleRestartStory() {
+    const isStudio = $profileStore.audioEngine === 'studio-audio';
+    if (isStudio) {
+      const forestTheme = STORY_THEMES.find((t) => t.id === 'theme_forest') || STORY_THEMES[0];
+      const refStory = loadPrecomputedStory('theme_forest', 1, forestTheme, 1, $profileStore.childName);
+      if (refStory) {
+        levelStore.setLevel(1);
+        readingSessionStore.loadStory(refStory, 1, activeCompanion.customName, $profileStore.childName);
+        return;
+      }
+    }
     const activeConfigStory = $storyConfigStore.activeStory;
     const currentStory =
       (activeConfigStory && activeConfigStory.id === session.storyId ? activeConfigStory : null) ||

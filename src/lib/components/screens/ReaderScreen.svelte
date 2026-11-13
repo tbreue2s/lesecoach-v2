@@ -17,10 +17,16 @@
   let showLevelSelector = false;
 
   function initStory(lvl = $levelStore) {
-    if ($readingSessionStore.sentences.length > 0 && $readingSessionStore.level === lvl) {
+    const isStudio = $profileStore.audioEngine === 'studio-audio';
+    const targetLevel = isStudio ? 1 : lvl;
+    if (
+      $readingSessionStore.sentences.length > 0 &&
+      $readingSessionStore.level === targetLevel &&
+      (!isStudio || $readingSessionStore.storyId === 'story-theme_forest-lvl1-ep1')
+    ) {
       return;
     }
-    storyConfigStore.setLevel(lvl as any);
+    storyConfigStore.setLevel(targetLevel as any);
     storyConfigStore.startAdventure();
   }
 

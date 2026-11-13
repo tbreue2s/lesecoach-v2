@@ -22,6 +22,9 @@
   }
 
   function handleStartAdventure() {
+    if ($profileStore.audioEngine === 'studio-audio' && $storyConfigStore.selectedThemeId === 'theme_forest') {
+      storyConfigStore.setLevel(1);
+    }
     storyConfigStore.buildPayload();
     storyConfigStore.startAdventure();
   }
