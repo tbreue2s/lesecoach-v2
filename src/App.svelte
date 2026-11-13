@@ -3,7 +3,6 @@
   import HomeScreen from './lib/components/screens/HomeScreen.svelte';
   import SettingsScreen from './lib/components/screens/SettingsScreen.svelte';
   import ReaderScreen from './lib/components/screens/ReaderScreen.svelte';
-  import StoryAdventureScreen from './lib/components/screens/StoryAdventureScreen.svelte';
 </script>
 
 <div class="app-viewport" class:reader-mode={$routerStore.currentScreen === 'reader'}>

@@ -11,6 +11,8 @@ import {
   stopAudio,
   sliceWavBlobForSegment,
   mapPhonemesToIds,
+  resolveAssetUrl,
+  PIPER_VOICES,
 } from './audioEngineService';
 import * as speechService from './speechService';
 import type { WordToken } from '../types/reading';
@@ -191,6 +193,49 @@ describe('AudioEngineService (WP15 Evidence: Thorsten WASM, Studio Audio & Syste
     const idsCut = mapPhonemesToIds(phonemes, mockModelConfig, 1);
     expect(idsCut).toContain(8); // comma pause
     expect(Math.max(...idsCut)).toBeLessThanOrEqual(15);
+  });
+
+  it('only offers Thorsten and Kerstin as Piper voices (Point 1)', () => {
+    expect(PIPER_VOICES.length).toBe(2);
+    expect(PIPER_VOICES.map((v) => v.id)).toEqual([
+      'de_DE-thorsten-medium',
+      'de_DE-kerstin-low',
+    ]);
+  });
+
+  it('resolves asset URLs cleanly for root and subdirectory deployments', () => {
+    const url = resolveAssetUrl('/audio/stories/sample.mp3');
+    expect(url).toContain('audio/stories/sample.mp3');
+    expect(url.startsWith('/audio')).toBe(false);
+  });
+
+  it('correctly speaks suffix tokens after the child word instead of repeating sentence prefix (Point 5)', () => {
+    setAudioEngineOverride('system-tts');
+    const speakSpy = vi.spyOn(speechService, 'speakSentence').mockReturnValue(true);
+
+    const fullTokens: WordToken[] = [
+      { id: 'w0', word: 'Paul', cleanWord: 'Paul', role: 'app', syllables: ['Paul'], status: 'success', sentenceIndex: 0, wordIndexInSentence: 0 },
+      { id: 'w1', word: 'sieht', cleanWord: 'sieht', role: 'app', syllables: ['sieht'], status: 'success', sentenceIndex: 0, wordIndexInSentence: 1 },
+      { id: 'w2', word: 'Moos', cleanWord: 'Moos', role: 'child', syllables: ['Moos'], status: 'success', sentenceIndex: 0, wordIndexInSentence: 2 },
+      { id: 'w3', word: 'im', cleanWord: 'im', role: 'app', syllables: ['im'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 3 },
+      { id: 'w4', word: 'dichten', cleanWord: 'dichten', role: 'app', syllables: ['dich', 'ten'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 4 },
+      { id: 'w5', word: 'Wald.', cleanWord: 'Wald', role: 'app', syllables: ['Wald'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 5 },
+    ];
+
+    // Suffix segment: tokens AFTER the child word (w3, w4, w5)
+    const suffixTokens = fullTokens.slice(3);
+
+    playAudioSegment({
+      text: 'im dichten Wald.',
+      tokens: suffixTokens,
+      fullSentenceTokens: fullTokens,
+      segmentType: 'app',
+    });
+
+    expect(speakSpy).toHaveBeenCalled();
+    const spokenArg = speakSpy.mock.calls[0][0].text;
+    expect(spokenArg).toContain('im dichten Wald');
+    expect(spokenArg).not.toContain('Paul sieht');
   });
 });
 

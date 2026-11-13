@@ -19,7 +19,35 @@ const initialConfigState: StoryConfigState = {
 
 function createStoryConfigStore() {
   const { subscribe, set, update } = writable<StoryConfigState>(initialConfigState);
-  let episodeCounters: Record<string, number> = {};
+  let themeEpisodes: Record<string, number> = {};
+
+  function buildStoryPayload(state: StoryConfigState): StoryConfigPayload {
+    const profile = get(profileStore);
+    const level = get(levelStore);
+
+    const activeTheme: StoryTheme =
+      STORY_THEMES.find((t) => t.id === state.selectedThemeId) || STORY_THEMES[0];
+
+    const activeCompanionObj = profile.companions.find(
+      (c) => c.id === profile.selectedCompanionId
+    );
+
+    const companionPayload = state.includeCompanion && activeCompanionObj
+      ? {
+          id: activeCompanionObj.id,
+          name: activeCompanionObj.customName || activeCompanionObj.defaultName,
+          type: activeCompanionObj.type,
+          icon: activeCompanionObj.icon,
+        }
+      : null;
+
+    return {
+      level: level,
+      childName: profile.childName || 'Lese-Held',
+      companion: companionPayload,
+      theme: activeTheme,
+    };
+  }
 
   return {
     subscribe,
@@ -43,51 +71,27 @@ function createStoryConfigStore() {
 
     buildPayload: (): StoryConfigPayload => {
       const state = get({ subscribe });
-      const profile = get(profileStore);
-      const level = get(levelStore);
-
-      const activeTheme: StoryTheme =
-        STORY_THEMES.find((t) => t.id === state.selectedThemeId) || STORY_THEMES[0];
-
-      const activeCompanionObj = profile.companions.find(
-        (c) => c.id === profile.selectedCompanionId
-      );
-
-      const companionPayload = state.includeCompanion && activeCompanionObj
-        ? {
-            id: activeCompanionObj.id,
-            name: activeCompanionObj.customName || activeCompanionObj.defaultName,
-            type: activeCompanionObj.type,
-            icon: activeCompanionObj.icon,
-          }
-        : null;
-
-      const payload: StoryConfigPayload = {
-        level: level,
-        childName: profile.childName || 'Lese-Held',
-        companion: companionPayload,
-        theme: activeTheme,
-      };
-
+      const payload = buildStoryPayload(state);
       update((s) => ({ ...s, generatedPayload: payload }));
       return payload;
     },
 
-    startAdventure: (): StoryData => {
-      const payload = get({ subscribe }).generatedPayload || (createStoryConfigStore().buildPayload());
+    startAdventure: (episode?: number): StoryData => {
+      const state = get({ subscribe });
+      const payload = state.generatedPayload || (buildStoryPayload(state));
       // Re-build fresh payload
       const freshPayload = get(profileStore).childName
         ? (() => {
             const profile = get(profileStore);
             const level = get(levelStore);
-            const state = get({ subscribe });
-            const activeTheme = STORY_THEMES.find((t) => t.id === state.selectedThemeId) || STORY_THEMES[0];
+            const s = get({ subscribe });
+            const activeTheme = STORY_THEMES.find((t) => t.id === s.selectedThemeId) || STORY_THEMES[0];
             const activeCompanionObj = profile.companions.find((c) => c.id === profile.selectedCompanionId);
 
             return {
               level,
               childName: profile.childName || 'Lese-Held',
-              companion: state.includeCompanion && activeCompanionObj ? {
+              companion: s.includeCompanion && activeCompanionObj ? {
                 id: activeCompanionObj.id,
                 name: activeCompanionObj.customName || activeCompanionObj.defaultName,
                 type: activeCompanionObj.type,
@@ -98,15 +102,16 @@ function createStoryConfigStore() {
           })()
         : payload;
 
-      const counterKey = `${freshPayload.theme.id}_L${freshPayload.level}`;
-      const nextEpisode = ((episodeCounters[counterKey] || 0) % 10) + 1;
-      episodeCounters[counterKey] = nextEpisode;
+      const activeEpisode = episode !== undefined
+        ? episode
+        : (themeEpisodes[freshPayload.theme.id] || 1);
+      themeEpisodes[freshPayload.theme.id] = activeEpisode;
 
       const precomputed = loadPrecomputedStory(
         freshPayload.theme.id,
         freshPayload.level,
         freshPayload.theme,
-        nextEpisode,
+        activeEpisode,
         freshPayload.childName
       );
       const story = precomputed || generateStoryFromConfig(freshPayload);
@@ -127,8 +132,17 @@ function createStoryConfigStore() {
       return story;
     },
 
+    nextEpisode: (): StoryData => {
+      const state = get({ subscribe });
+      const current = themeEpisodes[state.selectedThemeId] || 1;
+      const next = (current % 3) + 1;
+      themeEpisodes[state.selectedThemeId] = next;
+      const inst = storyConfigStore;
+      return inst.startAdventure(next);
+    },
+
     reset: () => {
-      episodeCounters = {};
+      themeEpisodes = {};
       set(initialConfigState);
     },
   };

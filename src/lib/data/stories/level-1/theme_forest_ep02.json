@@ -3,84 +3,37 @@
   "level": 1,
   "episode": 2,
   "disturberWord": "Ufo",
-  "title": "Besuch im Gras",
+  "title": "Der Hut auf dem Ufo",
   "sentences": [
     {
-      "text": "Finja sitzt ruhig im weichen Gras.",
+      "text": "Leise landet ein winziges silbernes Ufo.",
       "words": [
         {
-          "clean": "Finja",
+          "clean": "Leise",
           "syllables": [
-            "Fin",
-            "ja"
+            "Lei",
+            "se"
           ]
         },
         {
-          "clean": "sitzt",
+          "clean": "landet",
           "syllables": [
-            "sitzt"
-          ]
-        },
-        {
-          "clean": "ruhig",
-          "syllables": [
-            "ru",
-            "hig"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "weichen",
-          "syllables": [
-            "wei",
-            "chen"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Aus den Wolken sinkt ein silbernes Ufo.",
-      "words": [
-        {
-          "clean": "Aus",
-          "syllables": [
-            "Aus"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Wolken",
-          "syllables": [
-            "Wol",
-            "ken"
-          ]
-        },
-        {
-          "clean": "sinkt",
-          "syllables": [
-            "sinkt"
+            "lan",
+            "det"
           ]
         },
         {
           "clean": "ein",
           "syllables": [
             "ein"
+          ]
+        },
+        {
+          "clean": "winziges",
+          "syllables": [
+            "win",
+            "zi",
+            "ges"
           ]
         },
         {
@@ -101,90 +54,21 @@
       ]
     },
     {
-      "text": "Ein grünes Wesen schwenkt einen bunten Hut.",
+      "text": "Neugierig hoppelt ein kleiner brauner Hase heran.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Neugierig",
           "syllables": [
-            "Ein"
+            "Neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "grünes",
+          "clean": "hoppelt",
           "syllables": [
-            "grü",
-            "nes"
-          ]
-        },
-        {
-          "clean": "Wesen",
-          "syllables": [
-            "We",
-            "sen"
-          ]
-        },
-        {
-          "clean": "schwenkt",
-          "syllables": [
-            "schwenkt"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "bunten",
-          "syllables": [
-            "bun",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Hut",
-          "syllables": [
-            "Hut"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Verwundert schaut aus dem Gebüsch ein Hase.",
-      "words": [
-        {
-          "clean": "Verwundert",
-          "syllables": [
-            "Ver",
-            "wun",
-            "dert"
-          ]
-        },
-        {
-          "clean": "schaut",
-          "syllables": [
-            "schaut"
-          ]
-        },
-        {
-          "clean": "aus",
-          "syllables": [
-            "aus"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Gebüsch",
-          "syllables": [
-            "Ge",
-            "büsch"
+            "hop",
+            "pelt"
           ]
         },
         {
@@ -194,59 +78,137 @@
           ]
         },
         {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "brauner",
+          "syllables": [
+            "brau",
+            "ner"
+          ]
+        },
+        {
           "clean": "Hase",
           "syllables": [
             "Ha",
             "se"
           ]
+        },
+        {
+          "clean": "heran",
+          "syllables": [
+            "he",
+            "ran"
+          ]
         }
       ]
     },
     {
-      "text": "Finja winkt fröhlich und teilt ihr Brot.",
+      "text": "Frech setzt er seinen spitzen Hut darauf.",
       "words": [
         {
-          "clean": "Finja",
+          "clean": "Frech",
           "syllables": [
-            "Fin",
-            "ja"
+            "Frech"
           ]
         },
         {
-          "clean": "winkt",
+          "clean": "setzt",
           "syllables": [
-            "winkt"
+            "setzt"
           ]
         },
         {
-          "clean": "fröhlich",
+          "clean": "er",
           "syllables": [
-            "fröh",
-            "lich"
+            "er"
           ]
         },
         {
-          "clean": "und",
+          "clean": "seinen",
           "syllables": [
-            "und"
+            "sei",
+            "nen"
           ]
         },
         {
-          "clean": "teilt",
+          "clean": "spitzen",
           "syllables": [
-            "teilt"
+            "spit",
+            "zen"
           ]
         },
         {
-          "clean": "ihr",
+          "clean": "Hut",
           "syllables": [
-            "ihr"
+            "Hut"
           ]
         },
         {
-          "clean": "Brot",
+          "clean": "darauf",
           "syllables": [
-            "Brot"
+            "da",
+            "rauf"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Blinkend düst das Ufo mit dem Hut davon.",
+      "words": [
+        {
+          "clean": "Blinkend",
+          "syllables": [
+            "Blin",
+            "kend"
+          ]
+        },
+        {
+          "clean": "düst",
+          "syllables": [
+            "düst"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        },
+        {
+          "clean": "davon",
+          "syllables": [
+            "da",
+            "von"
           ]
         }
       ]

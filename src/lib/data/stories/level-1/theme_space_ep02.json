@@ -2,18 +2,12 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Mond-Sofa",
-  "title": "Besuch auf dem Mond-Sofa",
+  "disturberWord": "Sofa",
+  "title": "Das Sofa auf dem Mond",
   "sentences": [
     {
-      "text": "Vor Lilly dreht sich ein fremder Planet.",
+      "text": "Lilly landet sanft auf dem fremden Planet.",
       "words": [
-        {
-          "clean": "Vor",
-          "syllables": [
-            "Vor"
-          ]
-        },
         {
           "clean": "Lilly",
           "syllables": [
@@ -22,28 +16,35 @@
           ]
         },
         {
-          "clean": "dreht",
+          "clean": "landet",
           "syllables": [
-            "dreht"
+            "lan",
+            "det"
           ]
         },
         {
-          "clean": "sich",
+          "clean": "sanft",
           "syllables": [
-            "sich"
+            "sanft"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "auf",
           "syllables": [
-            "ein"
+            "auf"
           ]
         },
         {
-          "clean": "fremder",
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "fremden",
           "syllables": [
             "frem",
-            "der"
+            "den"
           ]
         },
         {
@@ -56,19 +57,12 @@
       ]
     },
     {
-      "text": "Mitten im Mondstaub steht ein rotes Sofa.",
+      "text": "Im Mondstaub steht ein bequemes rotes Sofa.",
       "words": [
         {
-          "clean": "Mitten",
+          "clean": "Im",
           "syllables": [
-            "Mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
+            "Im"
           ]
         },
         {
@@ -91,6 +85,14 @@
           ]
         },
         {
+          "clean": "bequemes",
+          "syllables": [
+            "beq",
+            "ue",
+            "mes"
+          ]
+        },
+        {
           "clean": "rotes",
           "syllables": [
             "ro",
@@ -107,138 +109,103 @@
       ]
     },
     {
-      "text": "Darauf winkt ein kleiner grüner Bote.",
+      "text": "Vergnügt hüpft der dicke Kater aufs Sofa.",
       "words": [
         {
-          "clean": "Darauf",
+          "clean": "Vergnügt",
           "syllables": [
-            "Da",
-            "rauf"
+            "Ver",
+            "gnügt"
           ]
         },
         {
-          "clean": "winkt",
+          "clean": "hüpft",
           "syllables": [
-            "winkt"
+            "hüpft"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "der",
           "syllables": [
-            "ein"
+            "der"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "dicke",
           "syllables": [
-            "klei",
-            "ner"
+            "di",
+            "cke"
           ]
         },
         {
-          "clean": "grüner",
+          "clean": "Kater",
           "syllables": [
-            "grü",
-            "ner"
+            "Ka",
+            "ter"
           ]
         },
         {
-          "clean": "Bote",
+          "clean": "aufs",
+          "syllables": [
+            "aufs"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Boing federt der Kater hoch vom Sofa.",
+      "words": [
+        {
+          "clean": "Boing",
           "syllables": [
             "Bo",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Freundlich schenkt er Lilly frischen Tee.",
-      "words": [
-        {
-          "clean": "Freundlich",
-          "syllables": [
-            "Freund",
-            "lich"
+            "ing"
           ]
         },
         {
-          "clean": "schenkt",
+          "clean": "federt",
           "syllables": [
-            "schenkt"
+            "fe",
+            "dert"
           ]
         },
         {
-          "clean": "er",
+          "clean": "der",
           "syllables": [
-            "er"
+            "der"
           ]
         },
         {
-          "clean": "Lilly",
+          "clean": "Kater",
           "syllables": [
-            "Lil",
-            "ly"
+            "Ka",
+            "ter"
           ]
         },
         {
-          "clean": "frischen",
+          "clean": "hoch",
           "syllables": [
-            "fri",
-            "schen"
+            "hoch"
           ]
         },
         {
-          "clean": "Tee",
+          "clean": "vom",
           "syllables": [
-            "Tee"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zusammen verputzen sie herrlich süße Torte.",
-      "words": [
-        {
-          "clean": "Zusammen",
-          "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "vom"
           ]
         },
         {
-          "clean": "verputzen",
+          "clean": "Sofa",
           "syllables": [
-            "ver",
-            "put",
-            "zen"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "herrlich",
-          "syllables": [
-            "her",
-            "rlich"
-          ]
-        },
-        {
-          "clean": "süße",
-          "syllables": [
-            "sü",
-            "ße"
-          ]
-        },
-        {
-          "clean": "Torte",
-          "syllables": [
-            "Tor",
-            "te"
+            "So",
+            "fa"
           ]
         }
       ]

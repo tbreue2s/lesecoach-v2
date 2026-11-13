@@ -2,50 +2,17 @@
   "themeId": "theme_unicorn",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Klavier",
-  "title": "Das Zauberklavier",
+  "disturberWord": "Sofa",
+  "title": "Das Einhorn auf dem Sofa",
   "sentences": [
     {
-      "text": "Finn schaukelt auf einer rosa Wolke im Nebel.",
+      "text": "Mitten im weichen Moos zaubert eine Fee.",
       "words": [
         {
-          "clean": "Finn",
+          "clean": "Mitten",
           "syllables": [
-            "Finn"
-          ]
-        },
-        {
-          "clean": "schaukelt",
-          "syllables": [
-            "schau",
-            "kelt"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "einer",
-          "syllables": [
-            "ei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "rosa",
-          "syllables": [
-            "ro",
-            "sa"
-          ]
-        },
-        {
-          "clean": "Wolke",
-          "syllables": [
-            "Wol",
-            "ke"
+            "Mit",
+            "ten"
           ]
         },
         {
@@ -55,53 +22,23 @@
           ]
         },
         {
-          "clean": "Nebel",
-          "syllables": [
-            "Ne",
-            "bel"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dort schwebt ein weißes Klavier wie eine Feder.",
-      "words": [
-        {
-          "clean": "Dort",
-          "syllables": [
-            "Dort"
-          ]
-        },
-        {
-          "clean": "schwebt",
-          "syllables": [
-            "schwebt"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "weißes",
+          "clean": "weichen",
           "syllables": [
             "wei",
-            "ßes"
+            "chen"
           ]
         },
         {
-          "clean": "Klavier",
+          "clean": "Moos",
           "syllables": [
-            "Kla",
-            "vier"
+            "Moos"
           ]
         },
         {
-          "clean": "wie",
+          "clean": "zaubert",
           "syllables": [
-            "wie"
+            "zau",
+            "bert"
           ]
         },
         {
@@ -112,159 +49,164 @@
           ]
         },
         {
-          "clean": "Feder",
+          "clean": "Fee",
           "syllables": [
-            "Fe",
-            "der"
+            "Fee"
           ]
         }
       ]
     },
     {
-      "text": "Finn tippt mit dem Horn voller Mut.",
+      "text": "Plötzlich steht dort ein himmelblaues kleines Sofa.",
       "words": [
         {
-          "clean": "Finn",
+          "clean": "Plötzlich",
           "syllables": [
-            "Finn"
-          ]
-        },
-        {
-          "clean": "tippt",
-          "syllables": [
-            "tippt"
-          ]
-        },
-        {
-          "clean": "mit",
-          "syllables": [
-            "mit"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Horn",
-          "syllables": [
-            "Horn"
-          ]
-        },
-        {
-          "clean": "voller",
-          "syllables": [
-            "vol",
-            "ler"
-          ]
-        },
-        {
-          "clean": "Mut",
-          "syllables": [
-            "Mut"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Bunte Sterne funkeln zu jeder neuen Note.",
-      "words": [
-        {
-          "clean": "Bunte",
-          "syllables": [
-            "Bun",
-            "te"
-          ]
-        },
-        {
-          "clean": "Sterne",
-          "syllables": [
-            "Ster",
-            "ne"
-          ]
-        },
-        {
-          "clean": "funkeln",
-          "syllables": [
-            "fun",
-            "keln"
-          ]
-        },
-        {
-          "clean": "zu",
-          "syllables": [
-            "zu"
-          ]
-        },
-        {
-          "clean": "jeder",
-          "syllables": [
-            "je",
-            "der"
-          ]
-        },
-        {
-          "clean": "neuen",
-          "syllables": [
-            "neu",
-            "en"
-          ]
-        },
-        {
-          "clean": "Note",
-          "syllables": [
-            "No",
-            "te"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Finn lauscht glücklich und wiegt sein Haar.",
-      "words": [
-        {
-          "clean": "Finn",
-          "syllables": [
-            "Finn"
-          ]
-        },
-        {
-          "clean": "lauscht",
-          "syllables": [
-            "lauscht"
-          ]
-        },
-        {
-          "clean": "glücklich",
-          "syllables": [
-            "glück",
+            "Plötz",
             "lich"
           ]
         },
         {
-          "clean": "und",
+          "clean": "steht",
           "syllables": [
-            "und"
+            "steht"
           ]
         },
         {
-          "clean": "wiegt",
+          "clean": "dort",
           "syllables": [
-            "wiegt"
+            "dort"
           ]
         },
         {
-          "clean": "sein",
+          "clean": "ein",
           "syllables": [
-            "sein"
+            "ein"
           ]
         },
         {
-          "clean": "Haar",
+          "clean": "himmelblaues",
           "syllables": [
-            "Haar"
+            "him",
+            "mel",
+            "blau",
+            "es"
+          ]
+        },
+        {
+          "clean": "kleines",
+          "syllables": [
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Das müde Einhorn klettert auf das Sofa.",
+      "words": [
+        {
+          "clean": "Das",
+          "syllables": [
+            "Das"
+          ]
+        },
+        {
+          "clean": "müde",
+          "syllables": [
+            "mü",
+            "de"
+          ]
+        },
+        {
+          "clean": "Einhorn",
+          "syllables": [
+            "Ein",
+            "horn"
+          ]
+        },
+        {
+          "clean": "klettert",
+          "syllables": [
+            "klet",
+            "tert"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lachend kitzelt die Fee seine vier Beine.",
+      "words": [
+        {
+          "clean": "Lachend",
+          "syllables": [
+            "La",
+            "chend"
+          ]
+        },
+        {
+          "clean": "kitzelt",
+          "syllables": [
+            "kit",
+            "zelt"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Fee",
+          "syllables": [
+            "Fee"
+          ]
+        },
+        {
+          "clean": "seine",
+          "syllables": [
+            "sei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "vier",
+          "syllables": [
+            "vier"
+          ]
+        },
+        {
+          "clean": "Beine",
+          "syllables": [
+            "Bei",
+            "ne"
           ]
         }
       ]

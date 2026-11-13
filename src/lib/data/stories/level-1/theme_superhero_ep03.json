@@ -2,20 +2,12 @@
   "themeId": "theme_superhero",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Eiswagen",
-  "title": "Der bunte Bus",
+  "disturberWord": "Hose",
+  "title": "Der Flug über das Tor",
   "sentences": [
     {
-      "text": "Superheld Paul lauscht auf einen lauten Motor.",
+      "text": "Paul springt mutig über das hohe Tor.",
       "words": [
-        {
-          "clean": "Superheld",
-          "syllables": [
-            "Su",
-            "per",
-            "held"
-          ]
-        },
         {
           "clean": "Paul",
           "syllables": [
@@ -23,161 +15,160 @@
           ]
         },
         {
-          "clean": "lauscht",
+          "clean": "springt",
           "syllables": [
-            "lauscht"
+            "springt"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "mutig",
           "syllables": [
-            "auf"
+            "mu",
+            "tig"
           ]
         },
         {
-          "clean": "einen",
+          "clean": "über",
           "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "lauten",
-          "syllables": [
-            "lau",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Motor",
-          "syllables": [
-            "Mo",
-            "tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dort rollt aber nur ein bunter Bus.",
-      "words": [
-        {
-          "clean": "Dort",
-          "syllables": [
-            "Dort"
-          ]
-        },
-        {
-          "clean": "rollt",
-          "syllables": [
-            "rollt"
-          ]
-        },
-        {
-          "clean": "aber",
-          "syllables": [
-            "a",
+            "ü",
             "ber"
           ]
         },
         {
-          "clean": "nur",
+          "clean": "das",
           "syllables": [
-            "nur"
+            "das"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "hohe",
           "syllables": [
-            "ein"
+            "ho",
+            "he"
           ]
         },
         {
-          "clean": "bunter",
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Doch der Haken packt seine bunte Hose.",
+      "words": [
+        {
+          "clean": "Doch",
+          "syllables": [
+            "Doch"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Haken",
+          "syllables": [
+            "Ha",
+            "ken"
+          ]
+        },
+        {
+          "clean": "packt",
+          "syllables": [
+            "packt"
+          ]
+        },
+        {
+          "clean": "seine",
+          "syllables": [
+            "sei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "bunte",
           "syllables": [
             "bun",
-            "ter"
+            "te"
           ]
         },
         {
-          "clean": "Bus",
+          "clean": "Hose",
           "syllables": [
-            "Bus"
+            "Ho",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Für alle durstigen Helden gibt es Limo.",
+      "text": "Nun baumelt der kleine Held am Tor.",
       "words": [
         {
-          "clean": "Für",
+          "clean": "Nun",
           "syllables": [
-            "Für"
+            "Nun"
           ]
         },
         {
-          "clean": "alle",
+          "clean": "baumelt",
           "syllables": [
-            "al",
-            "le"
+            "bau",
+            "melt"
           ]
         },
         {
-          "clean": "durstigen",
+          "clean": "der",
           "syllables": [
-            "dur",
-            "sti",
-            "gen"
+            "der"
           ]
         },
         {
-          "clean": "Helden",
+          "clean": "kleine",
           "syllables": [
-            "Hel",
-            "den"
+            "klei",
+            "ne"
           ]
         },
         {
-          "clean": "gibt",
+          "clean": "Held",
           "syllables": [
-            "gibt"
+            "Held"
           ]
         },
         {
-          "clean": "es",
+          "clean": "am",
           "syllables": [
-            "es"
+            "am"
           ]
         },
         {
-          "clean": "Limo",
+          "clean": "Tor",
           "syllables": [
-            "Li",
-            "mo"
+            "Tor"
           ]
         }
       ]
     },
     {
-      "text": "Paul nascht dazu ein Stück süße Torte.",
+      "text": "Unten bellt ein kleiner Hund vor dem Tor.",
       "words": [
         {
-          "clean": "Paul",
+          "clean": "Unten",
           "syllables": [
-            "Paul"
+            "Un",
+            "ten"
           ]
         },
         {
-          "clean": "nascht",
+          "clean": "bellt",
           "syllables": [
-            "nascht"
-          ]
-        },
-        {
-          "clean": "dazu",
-          "syllables": [
-            "da",
-            "zu"
+            "bellt"
           ]
         },
         {
@@ -187,23 +178,34 @@
           ]
         },
         {
-          "clean": "Stück",
+          "clean": "kleiner",
           "syllables": [
-            "Stück"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "süße",
+          "clean": "Hund",
           "syllables": [
-            "sü",
-            "ße"
+            "Hund"
           ]
         },
         {
-          "clean": "Torte",
+          "clean": "vor",
           "syllables": [
-            "Tor",
-            "te"
+            "vor"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
           ]
         }
       ]

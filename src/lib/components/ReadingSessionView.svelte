@@ -1,11 +1,9 @@
 <script lang="ts">
   import { readingSessionStore } from '../stores/readingSessionStore';
   import { levelStore } from '../stores/levelStore';
-  import { READING_LEVEL_INFOS } from '../data/readingLevels';
   import type { WordToken } from '../types/reading';
 
   $: session = $readingSessionStore;
-  $: levelInfo = READING_LEVEL_INFOS[session.level || $levelStore];
 
   // Phase A has default syllable coloring enabled for child words
   $: isPhaseA = (session.level || $levelStore) <= 3;
@@ -70,6 +68,7 @@
       <section
         id={`sentence-row-${sIndex}`}
         class="sentence-row"
+        class:is-phase-a={isPhaseA}
         class:current-sentence={sIndex === session.activeSentenceIndex && !session.isSessionComplete}
         class:completed-sentence={sIndex < session.activeSentenceIndex || sentence.isCompleted}
         class:upcoming-sentence={sIndex > session.activeSentenceIndex && !session.isSessionComplete}
@@ -272,40 +271,45 @@
     cursor: default;
   }
 
-  /* Role Child Token: Highlighted dashed badge style */
+  /* Role Child Token: Default readable book text (Schiefergrau) */
   .word-token.role-child {
-    background: var(--color-surface-soft, #EDE5D8);
-    border: 2px dashed var(--color-accent-gold, #C05621);
     color: var(--color-text-main, #2D3748);
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
   }
 
-  /* Connected Word Pair (Level 2 Box) */
-  .word-token.role-child.is-pair-start {
+  /* Phase A (L1-L3): Highlighted dashed badge style for target child words */
+  .sentence-row.is-phase-a .word-token.role-child {
+    background: var(--color-surface-soft, #EDE5D8);
+    border: 2px dashed var(--color-accent-gold, #C05621);
+    font-weight: 700;
+  }
+
+  /* Connected Word Pair in Phase A (Level 2 Shared Seamless Box) */
+  .sentence-row.is-phase-a .word-token.role-child.is-pair-start {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: none;
-    margin-right: 0;
-    padding-right: 0.2rem;
+    margin-right: -0.3rem;
+    padding-right: 0.35rem;
   }
 
-  .word-token.role-child.is-pair-end {
+  .sentence-row.is-phase-a .word-token.role-child.is-pair-end {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: none;
     margin-left: 0;
-    padding-left: 0.2rem;
+    padding-left: 0.35rem;
   }
 
-  .word-token.role-child.is-pair-middle {
+  .sentence-row.is-phase-a .word-token.role-child.is-pair-middle {
     border-radius: 0;
     border-left: none;
     border-right: none;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -0.3rem;
     padding-left: 0.2rem;
-    padding-right: 0.2rem;
+    padding-right: 0.35rem;
   }
 
   /* Active Child Word Token: Soft warm pulsing glow */

@@ -2,11 +2,11 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Pinguin",
-  "title": "Besuch im hohen Ausguck",
+  "disturberWord": "Hut",
+  "title": "Der Papagei mit dem Hut",
   "sentences": [
     {
-      "text": "Lilly klettert flink an das Segel.",
+      "text": "Lilly steht stolz auf ihrem kleinen Boot.",
       "words": [
         {
           "clean": "Lilly",
@@ -16,103 +16,71 @@
           ]
         },
         {
-          "clean": "klettert",
+          "clean": "steht",
           "syllables": [
-            "klet",
-            "tert"
+            "steht"
           ]
         },
         {
-          "clean": "flink",
+          "clean": "stolz",
           "syllables": [
-            "flink"
+            "stolz"
           ]
         },
         {
-          "clean": "an",
+          "clean": "auf",
           "syllables": [
-            "an"
+            "auf"
           ]
         },
         {
-          "clean": "das",
+          "clean": "ihrem",
           "syllables": [
-            "das"
+            "ih",
+            "rem"
           ]
         },
         {
-          "clean": "Segel",
+          "clean": "kleinen",
           "syllables": [
-            "Se",
-            "gel"
+            "klei",
+            "nen"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Sie blickt neugierig durch die Lupe.",
+      "text": "Auf dem Kopf wackelt ein riesiger Hut.",
       "words": [
         {
-          "clean": "Sie",
+          "clean": "Auf",
           "syllables": [
-            "Sie"
+            "Auf"
           ]
         },
         {
-          "clean": "blickt",
+          "clean": "dem",
           "syllables": [
-            "blickt"
+            "dem"
           ]
         },
         {
-          "clean": "neugierig",
+          "clean": "Kopf",
           "syllables": [
-            "neu",
-            "gie",
-            "rig"
+            "Kopf"
           ]
         },
         {
-          "clean": "durch",
+          "clean": "wackelt",
           "syllables": [
-            "durch"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Lupe",
-          "syllables": [
-            "Lu",
-            "pe"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dort oben sitzt ein Pinguin mit Hut.",
-      "words": [
-        {
-          "clean": "Dort",
-          "syllables": [
-            "Dort"
-          ]
-        },
-        {
-          "clean": "oben",
-          "syllables": [
-            "o",
-            "ben"
-          ]
-        },
-        {
-          "clean": "sitzt",
-          "syllables": [
-            "sitzt"
+            "wa",
+            "ckelt"
           ]
         },
         {
@@ -122,16 +90,11 @@
           ]
         },
         {
-          "clean": "Pinguin",
+          "clean": "riesiger",
           "syllables": [
-            "Pin",
-            "guin"
-          ]
-        },
-        {
-          "clean": "mit",
-          "syllables": [
-            "mit"
+            "rie",
+            "si",
+            "ger"
           ]
         },
         {
@@ -143,33 +106,86 @@
       ]
     },
     {
-      "text": "Eine Eisscholle trug ihn über die See.",
+      "text": "Frech landet ein bunter Vogel auf dem Hut.",
       "words": [
         {
-          "clean": "Eine",
+          "clean": "Frech",
           "syllables": [
-            "Ei",
-            "ne"
+            "Frech"
           ]
         },
         {
-          "clean": "Eisscholle",
+          "clean": "landet",
           "syllables": [
-            "Eis",
-            "schol",
-            "le"
+            "lan",
+            "det"
           ]
         },
         {
-          "clean": "trug",
+          "clean": "ein",
           "syllables": [
-            "trug"
+            "ein"
           ]
         },
         {
-          "clean": "ihn",
+          "clean": "bunter",
           "syllables": [
-            "ihn"
+            "bun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Vogel",
+          "syllables": [
+            "Vo",
+            "gel"
+          ]
+        },
+        {
+          "clean": "auf",
+          "syllables": [
+            "auf"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Puff rutscht der Hut über beide Augen.",
+      "words": [
+        {
+          "clean": "Puff",
+          "syllables": [
+            "Puff"
+          ]
+        },
+        {
+          "clean": "rutscht",
+          "syllables": [
+            "rutscht"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         },
         {
@@ -180,57 +196,17 @@
           ]
         },
         {
-          "clean": "die",
+          "clean": "beide",
           "syllables": [
-            "die"
+            "bei",
+            "de"
           ]
         },
         {
-          "clean": "See",
+          "clean": "Augen",
           "syllables": [
-            "See"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lilly teilt mit ihm ihr Brot.",
-      "words": [
-        {
-          "clean": "Lilly",
-          "syllables": [
-            "Lil",
-            "ly"
-          ]
-        },
-        {
-          "clean": "teilt",
-          "syllables": [
-            "teilt"
-          ]
-        },
-        {
-          "clean": "mit",
-          "syllables": [
-            "mit"
-          ]
-        },
-        {
-          "clean": "ihm",
-          "syllables": [
-            "ihm"
-          ]
-        },
-        {
-          "clean": "ihr",
-          "syllables": [
-            "ihr"
-          ]
-        },
-        {
-          "clean": "Brot",
-          "syllables": [
-            "Brot"
+            "Au",
+            "gen"
           ]
         }
       ]

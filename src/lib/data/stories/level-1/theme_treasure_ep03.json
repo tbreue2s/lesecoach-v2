@@ -2,11 +2,11 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Krake",
-  "title": "Der hilfsbereite Krake",
+  "disturberWord": "Boot",
+  "title": "Der Schatz am Ufer",
   "sentences": [
     {
-      "text": "Lilly paddelt mit Finn zur einsamen Insel.",
+      "text": "Lilly lenkt ihr kleines Holz-Boot ans Ufer.",
       "words": [
         {
           "clean": "Lilly",
@@ -16,187 +16,35 @@
           ]
         },
         {
-          "clean": "paddelt",
+          "clean": "lenkt",
           "syllables": [
-            "pad",
-            "delt"
+            "lenkt"
           ]
         },
         {
-          "clean": "mit",
+          "clean": "ihr",
           "syllables": [
-            "mit"
+            "ihr"
           ]
         },
         {
-          "clean": "Finn",
+          "clean": "kleines",
           "syllables": [
-            "Finn"
+            "klei",
+            "nes"
           ]
         },
         {
-          "clean": "zur",
+          "clean": "HolzBoot",
           "syllables": [
-            "zur"
+            "Hol",
+            "zBoot"
           ]
         },
         {
-          "clean": "einsamen",
+          "clean": "ans",
           "syllables": [
-            "ein",
-            "sa",
-            "men"
-          ]
-        },
-        {
-          "clean": "Insel",
-          "syllables": [
-            "In",
-            "sel"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der rostige Schlüssel versank tief im See.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "rostige",
-          "syllables": [
-            "ros",
-            "ti",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Schlüssel",
-          "syllables": [
-            "Schlüs",
-            "sel"
-          ]
-        },
-        {
-          "clean": "versank",
-          "syllables": [
-            "ver",
-            "sank"
-          ]
-        },
-        {
-          "clean": "tief",
-          "syllables": [
-            "tief"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "See",
-          "syllables": [
-            "See"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein hilfsbereiter Krake reicht ihn ins Boot.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "hilfsbereiter",
-          "syllables": [
-            "hil",
-            "fsbe",
-            "rei",
-            "ter"
-          ]
-        },
-        {
-          "clean": "Krake",
-          "syllables": [
-            "Kra",
-            "ke"
-          ]
-        },
-        {
-          "clean": "reicht",
-          "syllables": [
-            "reicht"
-          ]
-        },
-        {
-          "clean": "ihn",
-          "syllables": [
-            "ihn"
-          ]
-        },
-        {
-          "clean": "ins",
-          "syllables": [
-            "ins"
-          ]
-        },
-        {
-          "clean": "Boot",
-          "syllables": [
-            "Boot"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mit acht Armen winkt er zum Ufer.",
-      "words": [
-        {
-          "clean": "Mit",
-          "syllables": [
-            "Mit"
-          ]
-        },
-        {
-          "clean": "acht",
-          "syllables": [
-            "acht"
-          ]
-        },
-        {
-          "clean": "Armen",
-          "syllables": [
-            "Ar",
-            "men"
-          ]
-        },
-        {
-          "clean": "winkt",
-          "syllables": [
-            "winkt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
+            "ans"
           ]
         },
         {
@@ -204,6 +52,159 @@
           "syllables": [
             "U",
             "fer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Im nassen Sand funkelt eine weiße Perle.",
+      "words": [
+        {
+          "clean": "Im",
+          "syllables": [
+            "Im"
+          ]
+        },
+        {
+          "clean": "nassen",
+          "syllables": [
+            "nas",
+            "sen"
+          ]
+        },
+        {
+          "clean": "Sand",
+          "syllables": [
+            "Sand"
+          ]
+        },
+        {
+          "clean": "funkelt",
+          "syllables": [
+            "fun",
+            "kelt"
+          ]
+        },
+        {
+          "clean": "eine",
+          "syllables": [
+            "ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "weiße",
+          "syllables": [
+            "wei",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Freudig hebt das Mädchen die runde Perle.",
+      "words": [
+        {
+          "clean": "Freudig",
+          "syllables": [
+            "Freu",
+            "dig"
+          ]
+        },
+        {
+          "clean": "hebt",
+          "syllables": [
+            "hebt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Mädchen",
+          "syllables": [
+            "Mäd",
+            "chen"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "runde",
+          "syllables": [
+            "run",
+            "de"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Kichernd hüpft Lilly zurück in das Boot.",
+      "words": [
+        {
+          "clean": "Kichernd",
+          "syllables": [
+            "Ki",
+            "chernd"
+          ]
+        },
+        {
+          "clean": "hüpft",
+          "syllables": [
+            "hüpft"
+          ]
+        },
+        {
+          "clean": "Lilly",
+          "syllables": [
+            "Lil",
+            "ly"
+          ]
+        },
+        {
+          "clean": "zurück",
+          "syllables": [
+            "zu",
+            "rück"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
           ]
         }
       ]

@@ -32,7 +32,7 @@ export function buildSpokenSpans(tokens: WordToken[]): {
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
-    const wordText = token.word || token.cleanWord || token.raw || '';
+    const wordText = token.word || token.cleanWord || '';
     const startIndex = currentPos;
     const endIndex = startIndex + wordText.length;
 

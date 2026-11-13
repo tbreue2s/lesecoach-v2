@@ -2,11 +2,11 @@
   "themeId": "theme_unicorn",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Nixe",
-  "title": "Die kleine Zaubernixe",
+  "disturberWord": "Blume",
+  "title": "Der Frosch am See",
   "sentences": [
     {
-      "text": "Das weiße Einhorn Paul wandert zum See.",
+      "text": "Das weiße Einhorn spaziert an den See.",
       "words": [
         {
           "clean": "Das",
@@ -29,22 +29,22 @@
           ]
         },
         {
-          "clean": "Paul",
+          "clean": "spaziert",
           "syllables": [
-            "Paul"
+            "spa",
+            "ziert"
           ]
         },
         {
-          "clean": "wandert",
+          "clean": "an",
           "syllables": [
-            "wan",
-            "dert"
+            "an"
           ]
         },
         {
-          "clean": "zum",
+          "clean": "den",
           "syllables": [
-            "zum"
+            "den"
           ]
         },
         {
@@ -56,45 +56,43 @@
       ]
     },
     {
-      "text": "Eine kleine Nixe taucht an das Ufer.",
+      "text": "Durstig senkt es den Kopf am Ufer.",
       "words": [
         {
-          "clean": "Eine",
+          "clean": "Durstig",
           "syllables": [
-            "Ei",
-            "ne"
+            "Dur",
+            "stig"
           ]
         },
         {
-          "clean": "kleine",
+          "clean": "senkt",
           "syllables": [
-            "klei",
-            "ne"
+            "senkt"
           ]
         },
         {
-          "clean": "Nixe",
+          "clean": "es",
           "syllables": [
-            "Ni",
-            "xe"
+            "es"
           ]
         },
         {
-          "clean": "taucht",
+          "clean": "den",
           "syllables": [
-            "taucht"
+            "den"
           ]
         },
         {
-          "clean": "an",
+          "clean": "Kopf",
           "syllables": [
-            "an"
+            "Kopf"
           ]
         },
         {
-          "clean": "das",
+          "clean": "am",
           "syllables": [
-            "das"
+            "am"
           ]
         },
         {
@@ -107,31 +105,32 @@
       ]
     },
     {
-      "text": "Paul reicht ihr freundlich eine bunte Blume.",
+      "text": "Auf einem Blatt duftet eine bunte Blume.",
       "words": [
         {
-          "clean": "Paul",
+          "clean": "Auf",
           "syllables": [
-            "Paul"
+            "Auf"
           ]
         },
         {
-          "clean": "reicht",
+          "clean": "einem",
           "syllables": [
-            "reicht"
+            "ei",
+            "nem"
           ]
         },
         {
-          "clean": "ihr",
+          "clean": "Blatt",
           "syllables": [
-            "ihr"
+            "Blatt"
           ]
         },
         {
-          "clean": "freundlich",
+          "clean": "duftet",
           "syllables": [
-            "freund",
-            "lich"
+            "duf",
+            "tet"
           ]
         },
         {
@@ -158,106 +157,51 @@
       ]
     },
     {
-      "text": "Dafür schenkt die Nixe eine schimmernde Perle.",
+      "text": "Ein kleiner Frosch hüpft vom Ufer darauf.",
       "words": [
         {
-          "clean": "Dafür",
+          "clean": "Ein",
           "syllables": [
-            "Da",
-            "für"
+            "Ein"
           ]
         },
         {
-          "clean": "schenkt",
+          "clean": "kleiner",
           "syllables": [
-            "schenkt"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "die",
+          "clean": "Frosch",
           "syllables": [
-            "die"
+            "Frosch"
           ]
         },
         {
-          "clean": "Nixe",
+          "clean": "hüpft",
           "syllables": [
-            "Ni",
-            "xe"
+            "hüpft"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "vom",
           "syllables": [
-            "ei",
-            "ne"
+            "vom"
           ]
         },
         {
-          "clean": "schimmernde",
+          "clean": "Ufer",
           "syllables": [
-            "schim",
-            "mer",
-            "nde"
+            "U",
+            "fer"
           ]
         },
         {
-          "clean": "Perle",
+          "clean": "darauf",
           "syllables": [
-            "Per",
-            "le"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Zufrieden betrachtet Paul seinen Schatz im Gras.",
-      "words": [
-        {
-          "clean": "Zufrieden",
-          "syllables": [
-            "Zuf",
-            "rie",
-            "den"
-          ]
-        },
-        {
-          "clean": "betrachtet",
-          "syllables": [
-            "be",
-            "trach",
-            "tet"
-          ]
-        },
-        {
-          "clean": "Paul",
-          "syllables": [
-            "Paul"
-          ]
-        },
-        {
-          "clean": "seinen",
-          "syllables": [
-            "sei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Schatz",
-          "syllables": [
-            "Schatz"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
+            "da",
+            "rauf"
           ]
         }
       ]

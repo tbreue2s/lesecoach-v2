@@ -2,23 +2,66 @@
   "themeId": "theme_superhero",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Ufo",
-  "title": "Das winzige Ufo",
+  "disturberWord": "Bus",
+  "title": "Das Eis im Bus",
   "sentences": [
     {
-      "text": "Oben auf dem Dach landet ein Ufo.",
+      "text": "Laut quietschend stoppt ein großer bunter Bus.",
       "words": [
         {
-          "clean": "Oben",
+          "clean": "Laut",
           "syllables": [
-            "O",
-            "ben"
+            "Laut"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "quietschend",
           "syllables": [
-            "auf"
+            "quiet",
+            "schend"
+          ]
+        },
+        {
+          "clean": "stoppt",
+          "syllables": [
+            "stoppt"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "großer",
+          "syllables": [
+            "gro",
+            "ßer"
+          ]
+        },
+        {
+          "clean": "bunter",
+          "syllables": [
+            "bun",
+            "ter"
+          ]
+        },
+        {
+          "clean": "Bus",
+          "syllables": [
+            "Bus"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Aus dem Fenster spritzt herrlich kühle Limo.",
+      "words": [
+        {
+          "clean": "Aus",
+          "syllables": [
+            "Aus"
           ]
         },
         {
@@ -28,86 +71,43 @@
           ]
         },
         {
-          "clean": "Dach",
+          "clean": "Fenster",
           "syllables": [
-            "Dach"
+            "Fen",
+            "ster"
           ]
         },
         {
-          "clean": "landet",
+          "clean": "spritzt",
           "syllables": [
-            "lan",
-            "det"
+            "spritzt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "herrlich",
           "syllables": [
-            "ein"
+            "her",
+            "rlich"
           ]
         },
         {
-          "clean": "Ufo",
+          "clean": "kühle",
           "syllables": [
-            "U",
-            "fo"
+            "küh",
+            "le"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
           ]
         }
       ]
     },
     {
-      "text": "Daraus winkt freundlich ein ganz kleiner Pilot.",
-      "words": [
-        {
-          "clean": "Daraus",
-          "syllables": [
-            "Da",
-            "raus"
-          ]
-        },
-        {
-          "clean": "winkt",
-          "syllables": [
-            "winkt"
-          ]
-        },
-        {
-          "clean": "freundlich",
-          "syllables": [
-            "freund",
-            "lich"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "ganz",
-          "syllables": [
-            "ganz"
-          ]
-        },
-        {
-          "clean": "kleiner",
-          "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "Pilot",
-          "syllables": [
-            "Pi",
-            "lot"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lilly erklärt ihm den Weg mit einer Lupe.",
+      "text": "Lilly hält schmunzelnd ihren breiten Hut unter.",
       "words": [
         {
           "clean": "Lilly",
@@ -117,28 +117,54 @@
           ]
         },
         {
-          "clean": "erklärt",
+          "clean": "hält",
           "syllables": [
-            "erk",
-            "lärt"
+            "hält"
           ]
         },
         {
-          "clean": "ihm",
+          "clean": "schmunzelnd",
           "syllables": [
-            "ihm"
+            "schmun",
+            "zelnd"
           ]
         },
         {
-          "clean": "den",
+          "clean": "ihren",
           "syllables": [
-            "den"
+            "ih",
+            "ren"
           ]
         },
         {
-          "clean": "Weg",
+          "clean": "breiten",
           "syllables": [
-            "Weg"
+            "brei",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        },
+        {
+          "clean": "unter",
+          "syllables": [
+            "un",
+            "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Voll mit Limo schwappt nun der Hut.",
+      "words": [
+        {
+          "clean": "Voll",
+          "syllables": [
+            "Voll"
           ]
         },
         {
@@ -148,70 +174,34 @@
           ]
         },
         {
-          "clean": "einer",
+          "clean": "Limo",
           "syllables": [
-            "ei",
-            "ner"
+            "Li",
+            "mo"
           ]
         },
         {
-          "clean": "Lupe",
+          "clean": "schwappt",
           "syllables": [
-            "Lu",
-            "pe"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Gemeinsam knipsen beide Helden noch ein Foto.",
-      "words": [
-        {
-          "clean": "Gemeinsam",
-          "syllables": [
-            "Ge",
-            "mein",
-            "sam"
+            "schwappt"
           ]
         },
         {
-          "clean": "knipsen",
+          "clean": "nun",
           "syllables": [
-            "knip",
-            "sen"
+            "nun"
           ]
         },
         {
-          "clean": "beide",
+          "clean": "der",
           "syllables": [
-            "bei",
-            "de"
+            "der"
           ]
         },
         {
-          "clean": "Helden",
+          "clean": "Hut",
           "syllables": [
-            "Hel",
-            "den"
-          ]
-        },
-        {
-          "clean": "noch",
-          "syllables": [
-            "noch"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Foto",
-          "syllables": [
-            "Fo",
-            "to"
+            "Hut"
           ]
         }
       ]

@@ -62,4 +62,24 @@ describe('Story Config Store (WP04)', () => {
     const router = get(routerStore);
     expect(router.currentScreen).toBe('reader');
   });
+
+  it('keeps the same story episode when switching from level 1 to level 2 and back to level 1', () => {
+    profileStore.setChildName('Ben');
+    profileStore.saveProfile();
+
+    storyConfigStore.selectTheme('theme_forest');
+    storyConfigStore.setLevel(1);
+    const story1 = storyConfigStore.startAdventure();
+    expect(story1.id).toBe('story-theme_forest-lvl1-ep1');
+
+    // Switch to Level 2
+    storyConfigStore.setLevel(2);
+    const story2 = storyConfigStore.startAdventure();
+    expect(story2.id).toBe('story-theme_forest-lvl2-ep1');
+
+    // Switch back to Level 1 - must stay on episode 1, not jump to episode 2!
+    storyConfigStore.setLevel(1);
+    const story1Again = storyConfigStore.startAdventure();
+    expect(story1Again.id).toBe('story-theme_forest-lvl1-ep1');
+  });
 });

@@ -2,82 +2,30 @@
   "themeId": "theme_horse",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Einhorn",
-  "title": "Besuch im Nebel",
+  "disturberWord": "Hut",
+  "title": "Das Pony frisst den Hut",
   "sentences": [
     {
-      "text": "Fröhlich kaut das kleine Pony saftigen Klee.",
+      "text": "Lilly fegt vergnügt über den weiten Hof.",
       "words": [
         {
-          "clean": "Fröhlich",
+          "clean": "Lilly",
           "syllables": [
-            "Fröh",
-            "lich"
+            "Lil",
+            "ly"
           ]
         },
         {
-          "clean": "kaut",
+          "clean": "fegt",
           "syllables": [
-            "kaut"
+            "fegt"
           ]
         },
         {
-          "clean": "das",
+          "clean": "vergnügt",
           "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "kleine",
-          "syllables": [
-            "klei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Pony",
-          "syllables": [
-            "Po",
-            "ny"
-          ]
-        },
-        {
-          "clean": "saftigen",
-          "syllables": [
-            "saf",
-            "ti",
-            "gen"
-          ]
-        },
-        {
-          "clean": "Klee",
-          "syllables": [
-            "Klee"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dichter Nebel schwebt über dem weiten Hof.",
-      "words": [
-        {
-          "clean": "Dichter",
-          "syllables": [
-            "Dich",
-            "ter"
-          ]
-        },
-        {
-          "clean": "Nebel",
-          "syllables": [
-            "Ne",
-            "bel"
-          ]
-        },
-        {
-          "clean": "schwebt",
-          "syllables": [
-            "schwebt"
+            "ver",
+            "gnügt"
           ]
         },
         {
@@ -88,9 +36,9 @@
           ]
         },
         {
-          "clean": "dem",
+          "clean": "den",
           "syllables": [
-            "dem"
+            "den"
           ]
         },
         {
@@ -109,136 +57,38 @@
       ]
     },
     {
-      "text": "Plötzlich steht ein weißes Einhorn am Tor.",
+      "text": "Stolz trägt das Mädchen einen neuen Hut.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Stolz",
           "syllables": [
-            "Plötz",
-            "lich"
+            "Stolz"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "trägt",
           "syllables": [
-            "steht"
+            "trägt"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "das",
           "syllables": [
-            "ein"
+            "das"
           ]
         },
         {
-          "clean": "weißes",
+          "clean": "Mädchen",
           "syllables": [
-            "wei",
-            "ßes"
+            "Mäd",
+            "chen"
           ]
         },
         {
-          "clean": "Einhorn",
+          "clean": "einen",
           "syllables": [
-            "Ein",
-            "horn"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Tor",
-          "syllables": [
-            "Tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Freundlich berührt Lilly seine sanfte Nase.",
-      "words": [
-        {
-          "clean": "Freundlich",
-          "syllables": [
-            "Freund",
-            "lich"
-          ]
-        },
-        {
-          "clean": "berührt",
-          "syllables": [
-            "be",
-            "rührt"
-          ]
-        },
-        {
-          "clean": "Lilly",
-          "syllables": [
-            "Lil",
-            "ly"
-          ]
-        },
-        {
-          "clean": "seine",
-          "syllables": [
-            "sei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "sanfte",
-          "syllables": [
-            "san",
-            "fte"
-          ]
-        },
-        {
-          "clean": "Nase",
-          "syllables": [
-            "Na",
-            "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Glücklich traben beide in den neuen Tag.",
-      "words": [
-        {
-          "clean": "Glücklich",
-          "syllables": [
-            "Glück",
-            "lich"
-          ]
-        },
-        {
-          "clean": "traben",
-          "syllables": [
-            "tra",
-            "ben"
-          ]
-        },
-        {
-          "clean": "beide",
-          "syllables": [
-            "bei",
-            "de"
-          ]
-        },
-        {
-          "clean": "in",
-          "syllables": [
-            "in"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
+            "ei",
+            "nen"
           ]
         },
         {
@@ -249,9 +99,115 @@
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "Hut",
           "syllables": [
-            "Tag"
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Leise schleicht ein kleines Pony über den Hof.",
+      "words": [
+        {
+          "clean": "Leise",
+          "syllables": [
+            "Lei",
+            "se"
+          ]
+        },
+        {
+          "clean": "schleicht",
+          "syllables": [
+            "schleicht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "kleines",
+          "syllables": [
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Pony",
+          "syllables": [
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Hof",
+          "syllables": [
+            "Hof"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mampfend kaut das Pony an dem Hut.",
+      "words": [
+        {
+          "clean": "Mampfend",
+          "syllables": [
+            "Mamp",
+            "fend"
+          ]
+        },
+        {
+          "clean": "kaut",
+          "syllables": [
+            "kaut"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Pony",
+          "syllables": [
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]

@@ -2,11 +2,11 @@
   "themeId": "theme_ocean",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Eisboot",
-  "title": "Ein Pinguin auf dem Meer",
+  "disturberWord": "Wal",
+  "title": "Die Fontäne vom Wal",
   "sentences": [
     {
-      "text": "Paul blickt weit über das blaue Meer.",
+      "text": "Paul fährt mit dem Boot aufs Meer.",
       "words": [
         {
           "clean": "Paul",
@@ -15,35 +15,33 @@
           ]
         },
         {
-          "clean": "blickt",
+          "clean": "fährt",
           "syllables": [
-            "blickt"
+            "fährt"
           ]
         },
         {
-          "clean": "weit",
+          "clean": "mit",
           "syllables": [
-            "weit"
+            "mit"
           ]
         },
         {
-          "clean": "über",
+          "clean": "dem",
           "syllables": [
-            "ü",
-            "ber"
+            "dem"
           ]
         },
         {
-          "clean": "das",
+          "clean": "Boot",
           "syllables": [
-            "das"
+            "Boot"
           ]
         },
         {
-          "clean": "blaue",
+          "clean": "aufs",
           "syllables": [
-            "blau",
-            "e"
+            "aufs"
           ]
         },
         {
@@ -55,32 +53,25 @@
       ]
     },
     {
-      "text": "Ein Pinguin steuert dort ein buntes Boot.",
+      "text": "Neben ihm taucht ein riesiger sanfter Wal.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Neben",
           "syllables": [
-            "Ein"
+            "Ne",
+            "ben"
           ]
         },
         {
-          "clean": "Pinguin",
+          "clean": "ihm",
           "syllables": [
-            "Pin",
-            "guin"
+            "ihm"
           ]
         },
         {
-          "clean": "steuert",
+          "clean": "taucht",
           "syllables": [
-            "steu",
-            "ert"
-          ]
-        },
-        {
-          "clean": "dort",
-          "syllables": [
-            "dort"
+            "taucht"
           ]
         },
         {
@@ -90,168 +81,126 @@
           ]
         },
         {
-          "clean": "buntes",
+          "clean": "riesiger",
           "syllables": [
-            "bun",
-            "tes"
+            "rie",
+            "si",
+            "ger"
           ]
         },
         {
-          "clean": "Boot",
+          "clean": "sanfter",
           "syllables": [
-            "Boot"
+            "san",
+            "fter"
+          ]
+        },
+        {
+          "clean": "Wal",
+          "syllables": [
+            "Wal"
           ]
         }
       ]
     },
     {
-      "text": "Sein tolles Eisboot bringt herrlich frische Limo.",
+      "text": "Eine feuchte Fontäne pustet seinen bunten Hut.",
       "words": [
         {
-          "clean": "Sein",
+          "clean": "Eine",
           "syllables": [
-            "Sein"
+            "Ei",
+            "ne"
           ]
         },
         {
-          "clean": "tolles",
+          "clean": "feuchte",
           "syllables": [
-            "tol",
-            "les"
+            "feuch",
+            "te"
           ]
         },
         {
-          "clean": "Eisboot",
+          "clean": "Fontäne",
           "syllables": [
-            "Eis",
-            "boot"
+            "Fon",
+            "tä",
+            "ne"
           ]
         },
         {
-          "clean": "bringt",
+          "clean": "pustet",
           "syllables": [
-            "bringt"
+            "pus",
+            "tet"
           ]
         },
         {
-          "clean": "herrlich",
-          "syllables": [
-            "her",
-            "rlich"
-          ]
-        },
-        {
-          "clean": "frische",
-          "syllables": [
-            "fri",
-            "sche"
-          ]
-        },
-        {
-          "clean": "Limo",
-          "syllables": [
-            "Li",
-            "mo"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Paul trinkt sie glücklich aus dem Glas.",
-      "words": [
-        {
-          "clean": "Paul",
-          "syllables": [
-            "Paul"
-          ]
-        },
-        {
-          "clean": "trinkt",
-          "syllables": [
-            "trinkt"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "glücklich",
-          "syllables": [
-            "glück",
-            "lich"
-          ]
-        },
-        {
-          "clean": "aus",
-          "syllables": [
-            "aus"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Glas",
-          "syllables": [
-            "Glas"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein kalter Tropfen landet auf seiner Nase.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "kalter",
-          "syllables": [
-            "kal",
-            "ter"
-          ]
-        },
-        {
-          "clean": "Tropfen",
-          "syllables": [
-            "Trop",
-            "fen"
-          ]
-        },
-        {
-          "clean": "landet",
-          "syllables": [
-            "lan",
-            "det"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "seiner",
+          "clean": "seinen",
           "syllables": [
             "sei",
-            "ner"
+            "nen"
           ]
         },
         {
-          "clean": "Nase",
+          "clean": "bunten",
           "syllables": [
-            "Na",
-            "se"
+            "bun",
+            "ten"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hoch oben im Wind kreist der Hut.",
+      "words": [
+        {
+          "clean": "Hoch",
+          "syllables": [
+            "Hoch"
+          ]
+        },
+        {
+          "clean": "oben",
+          "syllables": [
+            "o",
+            "ben"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Wind",
+          "syllables": [
+            "Wind"
+          ]
+        },
+        {
+          "clean": "kreist",
+          "syllables": [
+            "kreist"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]

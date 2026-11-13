@@ -2,32 +2,37 @@
   "themeId": "theme_dino",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Riesenblume",
-  "title": "Die zauberhafte Urwald-Blüte",
+  "disturberWord": "Dino",
+  "title": "Der Riesen-Nieser im Gras",
   "sentences": [
     {
-      "text": "Lilly schnuppert neugierig am feuchten Gras.",
+      "text": "Der hungrige Dino kaut am frischen Gras.",
       "words": [
         {
-          "clean": "Lilly",
+          "clean": "Der",
           "syllables": [
-            "Lil",
-            "ly"
+            "Der"
           ]
         },
         {
-          "clean": "schnuppert",
+          "clean": "hungrige",
           "syllables": [
-            "schnup",
-            "pert"
+            "hung",
+            "ri",
+            "ge"
           ]
         },
         {
-          "clean": "neugierig",
+          "clean": "Dino",
           "syllables": [
-            "neu",
-            "gie",
-            "rig"
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "kaut",
+          "syllables": [
+            "kaut"
           ]
         },
         {
@@ -37,10 +42,10 @@
           ]
         },
         {
-          "clean": "feuchten",
+          "clean": "frischen",
           "syllables": [
-            "feuch",
-            "ten"
+            "fri",
+            "schen"
           ]
         },
         {
@@ -52,118 +57,34 @@
       ]
     },
     {
-      "text": "Da öffnet sich eine riesige, bunte Blume.",
+      "text": "Eine freche kleine Fliege kitzelt seine Nase.",
       "words": [
         {
-          "clean": "Da",
+          "clean": "Eine",
           "syllables": [
-            "Da"
-          ]
-        },
-        {
-          "clean": "öffnet",
-          "syllables": [
-            "öf",
-            "fnet"
-          ]
-        },
-        {
-          "clean": "sich",
-          "syllables": [
-            "sich"
-          ]
-        },
-        {
-          "clean": "eine",
-          "syllables": [
-            "ei",
+            "Ei",
             "ne"
           ]
         },
         {
-          "clean": "riesige",
-          "syllables": [
-            "rie",
-            "si",
-            "ge"
-          ]
-        },
-        {
-          "clean": "bunte",
-          "syllables": [
-            "bun",
-            "te"
-          ]
-        },
-        {
-          "clean": "Blume",
-          "syllables": [
-            "Blu",
-            "me"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mitten darin sitzt ein kleiner, frecher Vogel.",
-      "words": [
-        {
-          "clean": "Mitten",
-          "syllables": [
-            "Mit",
-            "ten"
-          ]
-        },
-        {
-          "clean": "darin",
-          "syllables": [
-            "da",
-            "rin"
-          ]
-        },
-        {
-          "clean": "sitzt",
-          "syllables": [
-            "sitzt"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "kleiner",
-          "syllables": [
-            "klei",
-            "ner"
-          ]
-        },
-        {
-          "clean": "frecher",
+          "clean": "freche",
           "syllables": [
             "fre",
-            "cher"
+            "che"
           ]
         },
         {
-          "clean": "Vogel",
+          "clean": "kleine",
           "syllables": [
-            "Vo",
-            "gel"
+            "klei",
+            "ne"
           ]
-        }
-      ]
-    },
-    {
-      "text": "Zärtlich kitzelt er ihre riesige Nase.",
-      "words": [
+        },
         {
-          "clean": "Zärtlich",
+          "clean": "Fliege",
           "syllables": [
-            "Zärt",
-            "lich"
+            "Flie",
+            "ge"
           ]
         },
         {
@@ -174,24 +95,10 @@
           ]
         },
         {
-          "clean": "er",
+          "clean": "seine",
           "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "ihre",
-          "syllables": [
-            "ih",
-            "re"
-          ]
-        },
-        {
-          "clean": "riesige",
-          "syllables": [
-            "rie",
-            "si",
-            "ge"
+            "sei",
+            "ne"
           ]
         },
         {
@@ -199,6 +106,105 @@
           "syllables": [
             "Na",
             "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Laut schnaubt der Dino durch die Nase.",
+      "words": [
+        {
+          "clean": "Laut",
+          "syllables": [
+            "Laut"
+          ]
+        },
+        {
+          "clean": "schnaubt",
+          "syllables": [
+            "schnaubt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hatschi wirbelt der Dino durch das Gras.",
+      "words": [
+        {
+          "clean": "Hatschi",
+          "syllables": [
+            "Hat",
+            "schi"
+          ]
+        },
+        {
+          "clean": "wirbelt",
+          "syllables": [
+            "wir",
+            "belt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Gras",
+          "syllables": [
+            "Gras"
           ]
         }
       ]

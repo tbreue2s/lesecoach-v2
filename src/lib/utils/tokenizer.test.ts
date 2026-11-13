@@ -359,7 +359,7 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
     });
 
     describe('2.2 Level 1 & Level 2 Scoring Selection', () => {
-      it('Level 1: selects candidate with score === 0 and skips sentence if lowestScore >= 1', () => {
+      it('Level 1: selects candidate with score <= 1 and skips sentence if lowestScore >= 2', () => {
         // "Hut" has score 0 -> selected
         const sentence = 'Ein schöner Hut liegt im Park.';
         const tokenized = tokenizeStory(sentence, 1, 'Bello');
@@ -367,12 +367,12 @@ describe('Story Tokenizer & Didactic 9-Level Matrix (WP03)', () => {
         expect(childTokens.length).toBe(1);
         expect(childTokens[0].cleanWord).toBe('Hut');
 
-        // "Baum" has score 1 (diphthong) -> skipped under strict score = 0 rule
+        // "Baum" has score 1 (diphthong) -> selected under score <= 1 rule
         const sentenceScore1 = 'Ein schöner Baum steht im Park.';
         const tokenizedScore1 = tokenizeStory(sentenceScore1, 1, 'Bello');
         const childTokens1 = tokenizedScore1[0].words.filter((w) => w.role === 'child');
-        expect(childTokens1.length).toBe(0);
-        expect(tokenizedScore1[0].role).toBe('app');
+        expect(childTokens1.length).toBe(1);
+        expect(childTokens1[0].cleanWord).toBe('Baum');
 
         // When all candidate words have score >= 2: sentence is completely skipped (app role)
         const hardSentence = 'Auf dem weißen Pfad galoppiert ein Pferd vor der Sandburg.';

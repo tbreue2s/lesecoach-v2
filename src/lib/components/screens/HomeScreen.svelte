@@ -4,8 +4,7 @@
   import { levelStore } from '../../stores/levelStore';
   import { routerStore } from '../../stores/routerStore';
   import { STORY_THEMES } from '../../data/storyThemes';
-  import { READING_LEVEL_INFOS } from '../../data/readingLevels';
-  import { speakText } from '../../utils/speech';
+  import { speakUiText } from '../../services/uiSpeechService';
   import LevelSelector from '../LevelSelector.svelte';
 
   $: childName = $profileStore.childName || 'kleiner Lese-Held';
@@ -15,7 +14,6 @@
 
   $: welcomeMessage = `Hallo ${childName}! Dein Lese-Begleiter ${activeCompanion.icon} ${activeCompanion.customName} ist bereit!`;
   $: currentTheme = STORY_THEMES.find((t) => t.id === $storyConfigStore.selectedThemeId) || STORY_THEMES[0];
-  $: levelInfo = READING_LEVEL_INFOS[$levelStore];
 
   let showLevelSelector = false;
 
@@ -29,8 +27,12 @@
   }
 
   function playGreeting() {
-    speakText(welcomeMessage);
+    speakUiText(welcomeMessage, {
+      childName: $profileStore.childName,
+      companionId: activeCompanion.id,
+    });
   }
+
 </script>
 
 <div class="home-screen-container">
@@ -108,6 +110,9 @@
         >
           <span class="theme-icon" aria-hidden="true">{theme.icon}</span>
           <span class="theme-name">{theme.label}</span>
+          {#if theme.id === 'theme_forest' && $profileStore.audioEngine === 'studio-audio'}
+            <span class="studio-badge" aria-label="Studio-Aufnahme">🎙️ Studio</span>
+          {/if}
           {#if $storyConfigStore.selectedThemeId === theme.id}
             <span class="selected-badge" aria-hidden="true">✓ Gewählt</span>
           {/if}
@@ -352,6 +357,19 @@
     font-weight: 700;
     color: var(--color-text-main, #2D3748);
     text-align: center;
+  }
+
+  .studio-badge {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    background: #EBF8FF;
+    color: #2B6CB0;
+    border: 1px solid #BEE3F8;
+    padding: 1px 4px;
+    border-radius: 4px;
   }
 
   .selected-badge {

@@ -3,30 +3,35 @@
   "level": 1,
   "episode": 1,
   "disturberWord": "Ufo",
-  "title": "Besuch aus dem All",
+  "title": "Dino und das Mini-Ufo",
   "sentences": [
     {
-      "text": "Poldi spaziert heiter durch das grüne Tal.",
+      "text": "Ein großer Dino stapft durch das Tal.",
       "words": [
         {
-          "clean": "Poldi",
+          "clean": "Ein",
           "syllables": [
-            "Pol",
-            "di"
+            "Ein"
           ]
         },
         {
-          "clean": "spaziert",
+          "clean": "großer",
           "syllables": [
-            "spa",
-            "ziert"
+            "gro",
+            "ßer"
           ]
         },
         {
-          "clean": "heiter",
+          "clean": "Dino",
           "syllables": [
-            "hei",
-            "ter"
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "stapft",
+          "syllables": [
+            "stapft"
           ]
         },
         {
@@ -42,13 +47,6 @@
           ]
         },
         {
-          "clean": "grüne",
-          "syllables": [
-            "grü",
-            "ne"
-          ]
-        },
-        {
           "clean": "Tal",
           "syllables": [
             "Tal"
@@ -57,25 +55,26 @@
       ]
     },
     {
-      "text": "Dicht neben ihm landet ein winziges Ufo.",
+      "text": "Vor seinen Füßen landet ein winziges Ufo.",
       "words": [
         {
-          "clean": "Dicht",
+          "clean": "Vor",
           "syllables": [
-            "Dicht"
+            "Vor"
           ]
         },
         {
-          "clean": "neben",
+          "clean": "seinen",
           "syllables": [
-            "ne",
-            "ben"
+            "sei",
+            "nen"
           ]
         },
         {
-          "clean": "ihm",
+          "clean": "Füßen",
           "syllables": [
-            "ihm"
+            "Fü",
+            "ßen"
           ]
         },
         {
@@ -109,7 +108,7 @@
       ]
     },
     {
-      "text": "Neugierig vergleichen sie ihre Abdrücke im Boden.",
+      "text": "Neugierig stupst der Dino an das Ufo.",
       "words": [
         {
           "clean": "Neugierig",
@@ -120,63 +119,9 @@
           ]
         },
         {
-          "clean": "vergleichen",
+          "clean": "stupst",
           "syllables": [
-            "verg",
-            "lei",
-            "chen"
-          ]
-        },
-        {
-          "clean": "sie",
-          "syllables": [
-            "sie"
-          ]
-        },
-        {
-          "clean": "ihre",
-          "syllables": [
-            "ih",
-            "re"
-          ]
-        },
-        {
-          "clean": "Abdrücke",
-          "syllables": [
-            "Ab",
-            "drü",
-            "cke"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Boden",
-          "syllables": [
-            "Bo",
-            "den"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Herzlich lacht der kleine Pilot mit dem Dino.",
-      "words": [
-        {
-          "clean": "Herzlich",
-          "syllables": [
-            "Her",
-            "zlich"
-          ]
-        },
-        {
-          "clean": "lacht",
-          "syllables": [
-            "lacht"
+            "stupst"
           ]
         },
         {
@@ -186,36 +131,78 @@
           ]
         },
         {
-          "clean": "kleine",
-          "syllables": [
-            "klei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Pilot",
-          "syllables": [
-            "Pi",
-            "lot"
-          ]
-        },
-        {
-          "clean": "mit",
-          "syllables": [
-            "mit"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
           "clean": "Dino",
           "syllables": [
             "Di",
             "no"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Blinkend dreht sich das Ufo im Tal.",
+      "words": [
+        {
+          "clean": "Blinkend",
+          "syllables": [
+            "Blin",
+            "kend"
+          ]
+        },
+        {
+          "clean": "dreht",
+          "syllables": [
+            "dreht"
+          ]
+        },
+        {
+          "clean": "sich",
+          "syllables": [
+            "sich"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Tal",
+          "syllables": [
+            "Tal"
           ]
         }
       ]

@@ -2,8 +2,8 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Sofa",
-  "title": "Das gemütliche Sofa",
+  "disturberWord": "Krone",
+  "title": "Die Krone auf dem Sofa",
   "sentences": [
     {
       "text": "Krümel schleicht in die Höhle im Tal.",
@@ -55,12 +55,12 @@
       ]
     },
     {
-      "text": "An der Schatzwand funkelt eine goldene Krone.",
+      "text": "In der Kiste glänzt eine goldene Krone.",
       "words": [
         {
-          "clean": "An",
+          "clean": "In",
           "syllables": [
-            "An"
+            "In"
           ]
         },
         {
@@ -70,17 +70,16 @@
           ]
         },
         {
-          "clean": "Schatzwand",
+          "clean": "Kiste",
           "syllables": [
-            "Schatz",
-            "wand"
+            "Kis",
+            "te"
           ]
         },
         {
-          "clean": "funkelt",
+          "clean": "glänzt",
           "syllables": [
-            "fun",
-            "kelt"
+            "glänzt"
           ]
         },
         {
@@ -108,53 +107,33 @@
       ]
     },
     {
-      "text": "Davor steht ein gemütliches Sofa für den Kater.",
+      "text": "Neugierig tapst der dicke Kater heran.",
       "words": [
         {
-          "clean": "Davor",
+          "clean": "Neugierig",
           "syllables": [
-            "Da",
-            "vor"
+            "Neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "steht",
+          "clean": "tapst",
           "syllables": [
-            "steht"
+            "tapst"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "der",
           "syllables": [
-            "ein"
+            "der"
           ]
         },
         {
-          "clean": "gemütliches",
+          "clean": "dicke",
           "syllables": [
-            "ge",
-            "müt",
-            "li",
-            "ches"
-          ]
-        },
-        {
-          "clean": "Sofa",
-          "syllables": [
-            "So",
-            "fa"
-          ]
-        },
-        {
-          "clean": "für",
-          "syllables": [
-            "für"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
+            "di",
+            "cke"
           ]
         },
         {
@@ -163,56 +142,70 @@
             "Ka",
             "ter"
           ]
+        },
+        {
+          "clean": "heran",
+          "syllables": [
+            "he",
+            "ran"
+          ]
         }
       ]
     },
     {
-      "text": "Schnurrend träumt Krümel an diesem schönen Tag.",
+      "text": "Die Krone rutscht dem Kater über beide Ohren.",
       "words": [
         {
-          "clean": "Schnurrend",
+          "clean": "Die",
           "syllables": [
-            "Schnur",
-            "rend"
+            "Die"
           ]
         },
         {
-          "clean": "träumt",
+          "clean": "Krone",
           "syllables": [
-            "träumt"
+            "Kro",
+            "ne"
           ]
         },
         {
-          "clean": "Krümel",
+          "clean": "rutscht",
           "syllables": [
-            "Krü",
-            "mel"
+            "rutscht"
           ]
         },
         {
-          "clean": "an",
+          "clean": "dem",
           "syllables": [
-            "an"
+            "dem"
           ]
         },
         {
-          "clean": "diesem",
+          "clean": "Kater",
           "syllables": [
-            "die",
-            "sem"
+            "Ka",
+            "ter"
           ]
         },
         {
-          "clean": "schönen",
+          "clean": "über",
           "syllables": [
-            "schö",
-            "nen"
+            "ü",
+            "ber"
           ]
         },
         {
-          "clean": "Tag",
+          "clean": "beide",
           "syllables": [
-            "Tag"
+            "bei",
+            "de"
+          ]
+        },
+        {
+          "clean": "Ohren",
+          "syllables": [
+            "Oh",
+            "ren"
           ]
         }
       ]

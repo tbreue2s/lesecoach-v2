@@ -11,7 +11,6 @@ import {
   calculateWordComplexity,
   tokenizeStory,
 } from './tokenizer';
-import { splitSyllables } from './syllableSplitter';
 
 export { hasComplexClusters, calculateWordComplexity };
 

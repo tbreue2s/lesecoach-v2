@@ -2,159 +2,118 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Sofa",
-  "title": "Ein neuer Thron an Bord",
+  "disturberWord": "Limo",
+  "title": "Die Limo auf der Insel",
   "sentences": [
     {
-      "text": "Anton sucht Schätze tief im Meer.",
+      "text": "Finn rudert mit dem Boot zur Insel.",
       "words": [
         {
-          "clean": "Anton",
+          "clean": "Finn",
           "syllables": [
-            "An",
-            "ton"
+            "Finn"
           ]
         },
         {
-          "clean": "sucht",
+          "clean": "rudert",
           "syllables": [
-            "sucht"
+            "ru",
+            "dert"
           ]
         },
         {
-          "clean": "Schätze",
+          "clean": "mit",
           "syllables": [
-            "Schät",
-            "ze"
+            "mit"
           ]
         },
         {
-          "clean": "tief",
+          "clean": "dem",
           "syllables": [
-            "tief"
+            "dem"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Boot",
           "syllables": [
-            "im"
+            "Boot"
           ]
         },
         {
-          "clean": "Meer",
+          "clean": "zur",
           "syllables": [
-            "Meer"
+            "zur"
+          ]
+        },
+        {
+          "clean": "Insel",
+          "syllables": [
+            "In",
+            "sel"
           ]
         }
       ]
     },
     {
-      "text": "Doch sein Fang ist kein Paket.",
+      "text": "Im Sand vergraben liegt keine goldene Perle.",
       "words": [
         {
-          "clean": "Doch",
+          "clean": "Im",
           "syllables": [
-            "Doch"
+            "Im"
           ]
         },
         {
-          "clean": "sein",
+          "clean": "Sand",
           "syllables": [
-            "sein"
+            "Sand"
           ]
         },
         {
-          "clean": "Fang",
+          "clean": "vergraben",
           "syllables": [
-            "Fang"
+            "ver",
+            "gra",
+            "ben"
           ]
         },
         {
-          "clean": "ist",
+          "clean": "liegt",
           "syllables": [
-            "ist"
+            "liegt"
           ]
         },
         {
-          "clean": "kein",
+          "clean": "keine",
           "syllables": [
-            "kein"
+            "kei",
+            "ne"
           ]
         },
         {
-          "clean": "Paket",
+          "clean": "goldene",
           "syllables": [
-            "Pa",
-            "ket"
+            "gol",
+            "de",
+            "ne"
+          ]
+        },
+        {
+          "clean": "Perle",
+          "syllables": [
+            "Per",
+            "le"
           ]
         }
       ]
     },
     {
-      "text": "Er angelt sich ein rotes Sofa.",
+      "text": "In der Kiste sprudelt kühle rote Limo.",
       "words": [
         {
-          "clean": "Er",
+          "clean": "In",
           "syllables": [
-            "Er"
-          ]
-        },
-        {
-          "clean": "angelt",
-          "syllables": [
-            "an",
-            "gelt"
-          ]
-        },
-        {
-          "clean": "sich",
-          "syllables": [
-            "sich"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "rotes",
-          "syllables": [
-            "ro",
-            "tes"
-          ]
-        },
-        {
-          "clean": "Sofa",
-          "syllables": [
-            "So",
-            "fa"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Sofort hüpft darauf der dicke Kater.",
-      "words": [
-        {
-          "clean": "Sofort",
-          "syllables": [
-            "So",
-            "fort"
-          ]
-        },
-        {
-          "clean": "hüpft",
-          "syllables": [
-            "hüpft"
-          ]
-        },
-        {
-          "clean": "darauf",
-          "syllables": [
-            "da",
-            "rauf"
+            "In"
           ]
         },
         {
@@ -164,60 +123,91 @@
           ]
         },
         {
-          "clean": "dicke",
+          "clean": "Kiste",
           "syllables": [
-            "di",
-            "cke"
+            "Kis",
+            "te"
           ]
         },
         {
-          "clean": "Kater",
+          "clean": "sprudelt",
           "syllables": [
-            "Ka",
-            "ter"
+            "spru",
+            "delt"
+          ]
+        },
+        {
+          "clean": "kühle",
+          "syllables": [
+            "küh",
+            "le"
+          ]
+        },
+        {
+          "clean": "rote",
+          "syllables": [
+            "ro",
+            "te"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
           ]
         }
       ]
     },
     {
-      "text": "Ihm fehlt nur noch eine Krone.",
+      "text": "Fröhlich schlürfen die Piraten nun süße Limo.",
       "words": [
         {
-          "clean": "Ihm",
+          "clean": "Fröhlich",
           "syllables": [
-            "Ihm"
+            "Fröh",
+            "lich"
           ]
         },
         {
-          "clean": "fehlt",
+          "clean": "schlürfen",
           "syllables": [
-            "fehlt"
+            "schlür",
+            "fen"
           ]
         },
         {
-          "clean": "nur",
+          "clean": "die",
           "syllables": [
-            "nur"
+            "die"
           ]
         },
         {
-          "clean": "noch",
+          "clean": "Piraten",
           "syllables": [
-            "noch"
+            "Pi",
+            "ra",
+            "ten"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "nun",
           "syllables": [
-            "ei",
-            "ne"
+            "nun"
           ]
         },
         {
-          "clean": "Krone",
+          "clean": "süße",
           "syllables": [
-            "Kro",
-            "ne"
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
           ]
         }
       ]

@@ -2,11 +2,11 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Kometen-Eis",
-  "title": "Das süße Kometen-Eis",
+  "disturberWord": "Limo",
+  "title": "Die Limo-Panne im Ufo",
   "sentences": [
     {
-      "text": "Paul fliegt mit seinem schnellen Ufo.",
+      "text": "Paul fliegt vergnügt mit seinem runden Ufo.",
       "words": [
         {
           "clean": "Paul",
@@ -18,6 +18,13 @@
           "clean": "fliegt",
           "syllables": [
             "fliegt"
+          ]
+        },
+        {
+          "clean": "vergnügt",
+          "syllables": [
+            "ver",
+            "gnügt"
           ]
         },
         {
@@ -34,10 +41,10 @@
           ]
         },
         {
-          "clean": "schnellen",
+          "clean": "runden",
           "syllables": [
-            "schnel",
-            "len"
+            "run",
+            "den"
           ]
         },
         {
@@ -50,143 +57,45 @@
       ]
     },
     {
-      "text": "Vorbei rauscht ein wunderschön funkelnder Komet.",
+      "text": "Aus der Flasche perlt sprudelnd süße Limo.",
       "words": [
         {
-          "clean": "Vorbei",
+          "clean": "Aus",
           "syllables": [
-            "Vor",
-            "bei"
+            "Aus"
           ]
         },
         {
-          "clean": "rauscht",
+          "clean": "der",
           "syllables": [
-            "rauscht"
+            "der"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Flasche",
           "syllables": [
-            "ein"
+            "Fla",
+            "sche"
           ]
         },
         {
-          "clean": "wunderschön",
+          "clean": "perlt",
           "syllables": [
-            "wun",
-            "der",
-            "schön"
+            "perlt"
           ]
         },
         {
-          "clean": "funkelnder",
+          "clean": "sprudelnd",
           "syllables": [
-            "fun",
-            "kel",
-            "nder"
+            "spru",
+            "delnd"
           ]
         },
         {
-          "clean": "Komet",
+          "clean": "süße",
           "syllables": [
-            "Ko",
-            "met"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Paul betrachtet den Schweif durch eine Lupe.",
-      "words": [
-        {
-          "clean": "Paul",
-          "syllables": [
-            "Paul"
-          ]
-        },
-        {
-          "clean": "betrachtet",
-          "syllables": [
-            "be",
-            "trach",
-            "tet"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Schweif",
-          "syllables": [
-            "Schweif"
-          ]
-        },
-        {
-          "clean": "durch",
-          "syllables": [
-            "durch"
-          ]
-        },
-        {
-          "clean": "eine",
-          "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Lupe",
-          "syllables": [
-            "Lu",
-            "pe"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Süßer Sternenstaub schmeckt wie Eis und Limo.",
-      "words": [
-        {
-          "clean": "Süßer",
-          "syllables": [
-            "Sü",
-            "ßer"
-          ]
-        },
-        {
-          "clean": "Sternenstaub",
-          "syllables": [
-            "Ster",
-            "nen",
-            "staub"
-          ]
-        },
-        {
-          "clean": "schmeckt",
-          "syllables": [
-            "schmeckt"
-          ]
-        },
-        {
-          "clean": "wie",
-          "syllables": [
-            "wie"
-          ]
-        },
-        {
-          "clean": "Eis",
-          "syllables": [
-            "Eis"
-          ]
-        },
-        {
-          "clean": "und",
-          "syllables": [
-            "und"
+            "sü",
+            "ße"
           ]
         },
         {
@@ -199,8 +108,68 @@
       ]
     },
     {
-      "text": "Paul genießt diesen herrlich süßen Tag.",
+      "text": "Bunte Blubberblasen tanzen durch das Ufo.",
       "words": [
+        {
+          "clean": "Bunte",
+          "syllables": [
+            "Bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Blubberblasen",
+          "syllables": [
+            "Blub",
+            "ber",
+            "bla",
+            "sen"
+          ]
+        },
+        {
+          "clean": "tanzen",
+          "syllables": [
+            "tan",
+            "zen"
+          ]
+        },
+        {
+          "clean": "durch",
+          "syllables": [
+            "durch"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Ufo",
+          "syllables": [
+            "U",
+            "fo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schlürfend fängt Paul jeden Tropfen Limo.",
+      "words": [
+        {
+          "clean": "Schlürfend",
+          "syllables": [
+            "Schlür",
+            "fend"
+          ]
+        },
+        {
+          "clean": "fängt",
+          "syllables": [
+            "fängt"
+          ]
+        },
         {
           "clean": "Paul",
           "syllables": [
@@ -208,37 +177,24 @@
           ]
         },
         {
-          "clean": "genießt",
+          "clean": "jeden",
           "syllables": [
-            "ge",
-            "nießt"
+            "je",
+            "den"
           ]
         },
         {
-          "clean": "diesen",
+          "clean": "Tropfen",
           "syllables": [
-            "die",
-            "sen"
+            "Trop",
+            "fen"
           ]
         },
         {
-          "clean": "herrlich",
+          "clean": "Limo",
           "syllables": [
-            "her",
-            "rlich"
-          ]
-        },
-        {
-          "clean": "süßen",
-          "syllables": [
-            "sü",
-            "ßen"
-          ]
-        },
-        {
-          "clean": "Tag",
-          "syllables": [
-            "Tag"
+            "Li",
+            "mo"
           ]
         }
       ]

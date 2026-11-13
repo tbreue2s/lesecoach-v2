@@ -6,7 +6,7 @@ import { promisify } from 'node:util';
 import { STORY_THEMES } from '../src/lib/data/storyThemes';
 import type { StoryTheme } from '../src/lib/types/storyConfig';
 import type { ReadingLevelNumber } from '../src/lib/types/reading';
-import { cleanPunctuation, tokenizeStory } from '../src/lib/utils/tokenizer';
+import { cleanPunctuation } from '../src/lib/utils/tokenizer';
 import { splitSyllables } from '../src/lib/utils/syllableSplitter';
 import { validateStoryForLevel } from '../src/lib/utils/levelValidator';
 import {
@@ -256,18 +256,18 @@ function getNomIndefinite(noun: string): string {
   return `Ein ${noun}`;
 }
 
-function getNomDefinite(noun: string): string {
+export function getNomDefinite(noun: string): string {
   if (FEMININE_NOUNS.has(noun)) return `Die ${noun}`;
   if (NEUTER_NOUNS.has(noun)) return `Das ${noun}`;
   return `Der ${noun}`;
 }
 
-function getBeiPhrase(noun: string): string {
+export function getBeiPhrase(noun: string): string {
   if (FEMININE_NOUNS.has(noun)) return `bei der ${noun}`;
   return `beim ${noun}`;
 }
 
-function getZuPhrase(noun: string): string {
+export function getZuPhrase(noun: string): string {
   if (FEMININE_NOUNS.has(noun)) return `zur ${noun}`;
   return `zum ${noun}`;
 }
@@ -286,7 +286,7 @@ function getAccIndefinite(word: string): string {
   return `einen ${word}`;
 }
 
-function getAccDefinite(word: string): string {
+export function getAccDefinite(word: string): string {
   if (FEMININE_DISTURBERS.has(word) || FEMININE_NOUNS.has(word)) return `die ${word}`;
   if (NEUTER_DISTURBERS.has(word) || NEUTER_NOUNS.has(word)) return `das ${word}`;
   return `den ${word}`;

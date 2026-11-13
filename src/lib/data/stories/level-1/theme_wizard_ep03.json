@@ -2,11 +2,11 @@
   "themeId": "theme_wizard",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Flugbesen",
-  "title": "Der tanzende Besen",
+  "disturberWord": "Limo",
+  "title": "Der Zaubertrank im Glas",
   "sentences": [
     {
-      "text": "Paul putzt die Zauberstube mit dem Besen.",
+      "text": "Paul rührt den Zaubertrank im bunten Glas.",
       "words": [
         {
           "clean": "Paul",
@@ -15,62 +15,23 @@
           ]
         },
         {
-          "clean": "putzt",
+          "clean": "rührt",
           "syllables": [
-            "putzt"
+            "rührt"
           ]
         },
         {
-          "clean": "die",
+          "clean": "den",
           "syllables": [
-            "die"
+            "den"
           ]
         },
         {
-          "clean": "Zauberstube",
+          "clean": "Zaubertrank",
           "syllables": [
             "Zau",
-            "ber",
-            "stu",
-            "be"
-          ]
-        },
-        {
-          "clean": "mit",
-          "syllables": [
-            "mit"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
-          ]
-        },
-        {
-          "clean": "Besen",
-          "syllables": [
-            "Be",
-            "sen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Plötzlich erklingt im Zimmer eine feine Note.",
-      "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plötz",
-            "lich"
-          ]
-        },
-        {
-          "clean": "erklingt",
-          "syllables": [
-            "erk",
-            "lingt"
+            "bert",
+            "rank"
           ]
         },
         {
@@ -80,74 +41,101 @@
           ]
         },
         {
-          "clean": "Zimmer",
+          "clean": "bunten",
           "syllables": [
-            "Zim",
-            "mer"
+            "bun",
+            "ten"
           ]
         },
         {
-          "clean": "eine",
+          "clean": "Glas",
           "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "feine",
-          "syllables": [
-            "fei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Note",
-          "syllables": [
-            "No",
-            "te"
+            "Glas"
           ]
         }
       ]
     },
     {
-      "text": "Der Holzstock tanzt Walzer mit dem Kater.",
+      "text": "Daraus perlt plötzlich herrlich frische blaue Limo.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Daraus",
           "syllables": [
-            "Der"
+            "Da",
+            "raus"
           ]
         },
         {
-          "clean": "Holzstock",
+          "clean": "perlt",
           "syllables": [
-            "Hol",
-            "zstock"
+            "perlt"
           ]
         },
         {
-          "clean": "tanzt",
+          "clean": "plötzlich",
           "syllables": [
-            "tanzt"
+            "plötz",
+            "lich"
           ]
         },
         {
-          "clean": "Walzer",
+          "clean": "herrlich",
           "syllables": [
-            "Wal",
-            "zer"
+            "her",
+            "rlich"
           ]
         },
         {
-          "clean": "mit",
+          "clean": "frische",
           "syllables": [
-            "mit"
+            "fri",
+            "sche"
           ]
         },
         {
-          "clean": "dem",
+          "clean": "blaue",
           "syllables": [
-            "dem"
+            "blau",
+            "e"
+          ]
+        },
+        {
+          "clean": "Limo",
+          "syllables": [
+            "Li",
+            "mo"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neugierig schleckt der dicke Kater am Glas.",
+      "words": [
+        {
+          "clean": "Neugierig",
+          "syllables": [
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "schleckt",
+          "syllables": [
+            "schleckt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "dicke",
+          "syllables": [
+            "di",
+            "cke"
           ]
         },
         {
@@ -156,105 +144,68 @@
             "Ka",
             "ter"
           ]
-        }
-      ]
-    },
-    {
-      "text": "Schwungvoll wirbeln die Partner um die Vase.",
-      "words": [
+        },
         {
-          "clean": "Schwungvoll",
+          "clean": "am",
           "syllables": [
-            "Schwung",
-            "voll"
+            "am"
           ]
         },
         {
-          "clean": "wirbeln",
+          "clean": "Glas",
           "syllables": [
-            "wir",
-            "beln"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Partner",
-          "syllables": [
-            "Part",
-            "ner"
-          ]
-        },
-        {
-          "clean": "um",
-          "syllables": [
-            "um"
-          ]
-        },
-        {
-          "clean": "die",
-          "syllables": [
-            "die"
-          ]
-        },
-        {
-          "clean": "Vase",
-          "syllables": [
-            "Va",
-            "se"
+            "Glas"
           ]
         }
       ]
     },
     {
-      "text": "Paul lacht und öffnet ihnen das Tor.",
+      "text": "Glucksend rülpst der Kater nun blaue Limo.",
       "words": [
         {
-          "clean": "Paul",
+          "clean": "Glucksend",
           "syllables": [
-            "Paul"
+            "Gluck",
+            "send"
           ]
         },
         {
-          "clean": "lacht",
+          "clean": "rülpst",
           "syllables": [
-            "lacht"
+            "rülpst"
           ]
         },
         {
-          "clean": "und",
+          "clean": "der",
           "syllables": [
-            "und"
+            "der"
           ]
         },
         {
-          "clean": "öffnet",
+          "clean": "Kater",
           "syllables": [
-            "öf",
-            "fnet"
+            "Ka",
+            "ter"
           ]
         },
         {
-          "clean": "ihnen",
+          "clean": "nun",
           "syllables": [
-            "ih",
-            "nen"
+            "nun"
           ]
         },
         {
-          "clean": "das",
+          "clean": "blaue",
           "syllables": [
-            "das"
+            "blau",
+            "e"
           ]
         },
         {
-          "clean": "Tor",
+          "clean": "Limo",
           "syllables": [
-            "Tor"
+            "Li",
+            "mo"
           ]
         }
       ]

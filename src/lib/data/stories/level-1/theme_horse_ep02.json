@@ -2,191 +2,23 @@
   "themeId": "theme_horse",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Ufo",
-  "title": "Der kleine Sternengast",
+  "disturberWord": "Klee",
+  "title": "Das Rennen im Klee",
   "sentences": [
     {
-      "text": "Poldi trabt vergnügt durch das frische Gras.",
+      "text": "Das freche Pony trabt durch den Klee.",
       "words": [
         {
-          "clean": "Poldi",
+          "clean": "Das",
           "syllables": [
-            "Pol",
-            "di"
+            "Das"
           ]
         },
         {
-          "clean": "trabt",
+          "clean": "freche",
           "syllables": [
-            "trabt"
-          ]
-        },
-        {
-          "clean": "vergnügt",
-          "syllables": [
-            "verg",
-            "nügt"
-          ]
-        },
-        {
-          "clean": "durch",
-          "syllables": [
-            "durch"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "frische",
-          "syllables": [
-            "fri",
-            "sche"
-          ]
-        },
-        {
-          "clean": "Gras",
-          "syllables": [
-            "Gras"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lautlos landet ein kleines Ufo am Boden.",
-      "words": [
-        {
-          "clean": "Lautlos",
-          "syllables": [
-            "Laut",
-            "los"
-          ]
-        },
-        {
-          "clean": "landet",
-          "syllables": [
-            "lan",
-            "det"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "kleines",
-          "syllables": [
-            "klei",
-            "nes"
-          ]
-        },
-        {
-          "clean": "Ufo",
-          "syllables": [
-            "U",
-            "fo"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Boden",
-          "syllables": [
-            "Bo",
-            "den"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der winzige Besucher schnuppert am frischen Hafer.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "winzige",
-          "syllables": [
-            "win",
-            "zi",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Besucher",
-          "syllables": [
-            "Be",
-            "su",
-            "cher"
-          ]
-        },
-        {
-          "clean": "schnuppert",
-          "syllables": [
-            "schnup",
-            "pert"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "frischen",
-          "syllables": [
-            "fri",
-            "schen"
-          ]
-        },
-        {
-          "clean": "Hafer",
-          "syllables": [
-            "Ha",
-            "fer"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dankbar schenkt er dem Pony eine Rose.",
-      "words": [
-        {
-          "clean": "Dankbar",
-          "syllables": [
-            "Dank",
-            "bar"
-          ]
-        },
-        {
-          "clean": "schenkt",
-          "syllables": [
-            "schenkt"
-          ]
-        },
-        {
-          "clean": "er",
-          "syllables": [
-            "er"
-          ]
-        },
-        {
-          "clean": "dem",
-          "syllables": [
-            "dem"
+            "fre",
+            "che"
           ]
         },
         {
@@ -197,68 +29,177 @@
           ]
         },
         {
-          "clean": "eine",
+          "clean": "trabt",
           "syllables": [
-            "ei",
-            "ne"
+            "trabt"
           ]
         },
         {
-          "clean": "Rose",
+          "clean": "durch",
           "syllables": [
-            "Ro",
+            "durch"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Am Zaun wartet ein schneller kleiner Hase.",
+      "words": [
+        {
+          "clean": "Am",
+          "syllables": [
+            "Am"
+          ]
+        },
+        {
+          "clean": "Zaun",
+          "syllables": [
+            "Zaun"
+          ]
+        },
+        {
+          "clean": "wartet",
+          "syllables": [
+            "war",
+            "tet"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "schneller",
+          "syllables": [
+            "schnel",
+            "ler"
+          ]
+        },
+        {
+          "clean": "kleiner",
+          "syllables": [
+            "klei",
+            "ner"
+          ]
+        },
+        {
+          "clean": "Hase",
+          "syllables": [
+            "Ha",
             "se"
           ]
         }
       ]
     },
     {
-      "text": "Poldi wiehert und schüttelt sein langes Haar.",
+      "text": "Gemeinsam sausen die Tiere um den Hof.",
       "words": [
         {
-          "clean": "Poldi",
+          "clean": "Gemeinsam",
           "syllables": [
-            "Pol",
-            "di"
+            "Ge",
+            "mein",
+            "sam"
           ]
         },
         {
-          "clean": "wiehert",
+          "clean": "sausen",
           "syllables": [
-            "wie",
-            "hert"
+            "sau",
+            "sen"
           ]
         },
         {
-          "clean": "und",
+          "clean": "die",
           "syllables": [
-            "und"
+            "die"
           ]
         },
         {
-          "clean": "schüttelt",
+          "clean": "Tiere",
           "syllables": [
-            "schüt",
-            "telt"
+            "Tie",
+            "re"
           ]
         },
         {
-          "clean": "sein",
+          "clean": "um",
           "syllables": [
-            "sein"
+            "um"
           ]
         },
         {
-          "clean": "langes",
+          "clean": "den",
           "syllables": [
-            "lan",
-            "ges"
+            "den"
           ]
         },
         {
-          "clean": "Haar",
+          "clean": "Hof",
           "syllables": [
-            "Haar"
+            "Hof"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plumps rutscht das Pony in den Klee.",
+      "words": [
+        {
+          "clean": "Plumps",
+          "syllables": [
+            "Plumps"
+          ]
+        },
+        {
+          "clean": "rutscht",
+          "syllables": [
+            "rutscht"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Pony",
+          "syllables": [
+            "Po",
+            "ny"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Klee",
+          "syllables": [
+            "Klee"
           ]
         }
       ]

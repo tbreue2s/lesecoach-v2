@@ -9,18 +9,8 @@ import { tokenizeStory, isProtectedName, calculateWordComplexity } from '../util
 export { isProtectedName, calculateWordComplexity };
 import { profileStore } from './profileStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
-import {
-  buildSpokenSpans,
-  mapCharIndexToTokenId,
-  calculateTokenTimeEstimates,
-  mapElapsedTimeToTokenId,
-} from '../utils/charMapper';
-import {
-  speakSentence,
-  stopSpeech,
-  pauseSpeech,
-  resumeSpeech,
-} from '../services/speechService';
+import { buildSpokenSpans } from '../utils/charMapper';
+import { stopSpeech } from '../services/speechService';
 import {
   playAudioSegment,
   pauseAudio as enginePauseAudio,
@@ -500,7 +490,13 @@ function createReadingSessionStore() {
         const nextIndex = (currentIndex + 1) % SAMPLE_STORIES.length;
         const nextStory = SAMPLE_STORIES[nextIndex >= 0 ? nextIndex : 0];
         const effectiveChildName = childName ?? get(profileStore)?.childName;
-        const sentences = tokenizeStory(nextStory.text, level, companionName, effectiveChildName);
+        const sentences = tokenizeStory(
+          nextStory.text,
+          level,
+          companionName,
+          effectiveChildName,
+          nextStory.structuredOutput
+        );
 
         return {
           storyId: nextStory.id,

@@ -2,11 +2,11 @@
   "themeId": "theme_treasure",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Schlafdrache",
-  "title": "Der kleine Schlafdrache",
+  "disturberWord": "Dose",
+  "title": "Die Kiste im Moos",
   "sentences": [
     {
-      "text": "Paul sucht das geheime Versteck mit der Lupe.",
+      "text": "Paul sucht im Wald mit der Lupe.",
       "words": [
         {
           "clean": "Paul",
@@ -21,24 +21,15 @@
           ]
         },
         {
-          "clean": "das",
+          "clean": "im",
           "syllables": [
-            "das"
+            "im"
           ]
         },
         {
-          "clean": "geheime",
+          "clean": "Wald",
           "syllables": [
-            "ge",
-            "hei",
-            "me"
-          ]
-        },
-        {
-          "clean": "Versteck",
-          "syllables": [
-            "Ver",
-            "steck"
+            "Wald"
           ]
         },
         {
@@ -63,46 +54,25 @@
       ]
     },
     {
-      "text": "Die uralte Truhe steht auf weichem Moos.",
+      "text": "Tief im weichen Moos liegt eine Dose.",
       "words": [
         {
-          "clean": "Die",
+          "clean": "Tief",
           "syllables": [
-            "Die"
+            "Tief"
           ]
         },
         {
-          "clean": "uralte",
+          "clean": "im",
           "syllables": [
-            "u",
-            "ral",
-            "te"
+            "im"
           ]
         },
         {
-          "clean": "Truhe",
-          "syllables": [
-            "Tru",
-            "he"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "auf",
-          "syllables": [
-            "auf"
-          ]
-        },
-        {
-          "clean": "weichem",
+          "clean": "weichen",
           "syllables": [
             "wei",
-            "chem"
+            "chen"
           ]
         },
         {
@@ -110,31 +80,11 @@
           "syllables": [
             "Moos"
           ]
-        }
-      ]
-    },
-    {
-      "text": "Darin funkelt herrlich eine wunderschöne runde Perle.",
-      "words": [
-        {
-          "clean": "Darin",
-          "syllables": [
-            "Da",
-            "rin"
-          ]
         },
         {
-          "clean": "funkelt",
+          "clean": "liegt",
           "syllables": [
-            "fun",
-            "kelt"
-          ]
-        },
-        {
-          "clean": "herrlich",
-          "syllables": [
-            "her",
-            "rlich"
+            "liegt"
           ]
         },
         {
@@ -145,12 +95,49 @@
           ]
         },
         {
-          "clean": "wunderschöne",
+          "clean": "Dose",
           "syllables": [
-            "wun",
-            "der",
-            "schö",
-            "ne"
+            "Do",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Neugierig öffnet Paul die alte runde Dose.",
+      "words": [
+        {
+          "clean": "Neugierig",
+          "syllables": [
+            "Neu",
+            "gie",
+            "rig"
+          ]
+        },
+        {
+          "clean": "öffnet",
+          "syllables": [
+            "öf",
+            "fnet"
+          ]
+        },
+        {
+          "clean": "Paul",
+          "syllables": [
+            "Paul"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "alte",
+          "syllables": [
+            "al",
+            "te"
           ]
         },
         {
@@ -161,36 +148,34 @@
           ]
         },
         {
-          "clean": "Perle",
+          "clean": "Dose",
           "syllables": [
-            "Per",
-            "le"
+            "Do",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Daneben schnarcht freundlich ein winziger Schlafdrache am Boden.",
+      "text": "Daraus hüpft frech ein kleiner grüner Frosch.",
       "words": [
         {
-          "clean": "Daneben",
+          "clean": "Daraus",
           "syllables": [
             "Da",
-            "ne",
-            "ben"
+            "raus"
           ]
         },
         {
-          "clean": "schnarcht",
+          "clean": "hüpft",
           "syllables": [
-            "schnarcht"
+            "hüpft"
           ]
         },
         {
-          "clean": "freundlich",
+          "clean": "frech",
           "syllables": [
-            "freund",
-            "lich"
+            "frech"
           ]
         },
         {
@@ -200,32 +185,23 @@
           ]
         },
         {
-          "clean": "winziger",
+          "clean": "kleiner",
           "syllables": [
-            "win",
-            "zi",
-            "ger"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "Schlafdrache",
+          "clean": "grüner",
           "syllables": [
-            "Schlaf",
-            "dra",
-            "che"
+            "grü",
+            "ner"
           ]
         },
         {
-          "clean": "am",
+          "clean": "Frosch",
           "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Boden",
-          "syllables": [
-            "Bo",
-            "den"
+            "Frosch"
           ]
         }
       ]

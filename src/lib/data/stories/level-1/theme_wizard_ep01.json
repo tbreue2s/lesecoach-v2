@@ -2,20 +2,12 @@
   "themeId": "theme_wizard",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Sprechhut",
-  "title": "Der kichernde Zauberhut",
+  "disturberWord": "Zauberhut",
+  "title": "Der freche Zauberhut",
   "sentences": [
     {
-      "text": "Zauberer Anton greift nach seinem spitzen Hut.",
+      "text": "Anton setzt seinen spitzen Hut auf.",
       "words": [
-        {
-          "clean": "Zauberer",
-          "syllables": [
-            "Zau",
-            "be",
-            "rer"
-          ]
-        },
         {
           "clean": "Anton",
           "syllables": [
@@ -24,22 +16,16 @@
           ]
         },
         {
-          "clean": "greift",
+          "clean": "setzt",
           "syllables": [
-            "greift"
+            "setzt"
           ]
         },
         {
-          "clean": "nach",
-          "syllables": [
-            "nach"
-          ]
-        },
-        {
-          "clean": "seinem",
+          "clean": "seinen",
           "syllables": [
             "sei",
-            "nem"
+            "nen"
           ]
         },
         {
@@ -54,67 +40,23 @@
           "syllables": [
             "Hut"
           ]
-        }
-      ]
-    },
-    {
-      "text": "Der Stoff kichert bei jedem lauten Ruf.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
         },
         {
-          "clean": "Stoff",
+          "clean": "auf",
           "syllables": [
-            "Stoff"
-          ]
-        },
-        {
-          "clean": "kichert",
-          "syllables": [
-            "ki",
-            "chert"
-          ]
-        },
-        {
-          "clean": "bei",
-          "syllables": [
-            "bei"
-          ]
-        },
-        {
-          "clean": "jedem",
-          "syllables": [
-            "je",
-            "dem"
-          ]
-        },
-        {
-          "clean": "lauten",
-          "syllables": [
-            "lau",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Ruf",
-          "syllables": [
-            "Ruf"
+            "auf"
           ]
         }
       ]
     },
     {
-      "text": "Eilig hüpft der Ausreißer durch den Saal.",
+      "text": "Plötzlich hüpft der Hut auf den Kater.",
       "words": [
         {
-          "clean": "Eilig",
+          "clean": "Plötzlich",
           "syllables": [
-            "Ei",
-            "lig"
+            "Plötz",
+            "lich"
           ]
         },
         {
@@ -130,62 +72,9 @@
           ]
         },
         {
-          "clean": "Ausreißer",
+          "clean": "Hut",
           "syllables": [
-            "Aus",
-            "rei",
-            "ßer"
-          ]
-        },
-        {
-          "clean": "durch",
-          "syllables": [
-            "durch"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "Saal",
-          "syllables": [
-            "Saal"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Erschöpft landet das Zauberstück auf dem Sofa.",
-      "words": [
-        {
-          "clean": "Erschöpft",
-          "syllables": [
-            "Er",
-            "schöpft"
-          ]
-        },
-        {
-          "clean": "landet",
-          "syllables": [
-            "lan",
-            "det"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "Zauberstück",
-          "syllables": [
-            "Zau",
-            "ber",
-            "stück"
+            "Hut"
           ]
         },
         {
@@ -195,9 +84,60 @@
           ]
         },
         {
-          "clean": "dem",
+          "clean": "den",
           "syllables": [
-            "dem"
+            "den"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Erschrocken flitzt das Tier unter das Sofa.",
+      "words": [
+        {
+          "clean": "Erschrocken",
+          "syllables": [
+            "Er",
+            "schro",
+            "cken"
+          ]
+        },
+        {
+          "clean": "flitzt",
+          "syllables": [
+            "flitzt"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Tier",
+          "syllables": [
+            "Tier"
+          ]
+        },
+        {
+          "clean": "unter",
+          "syllables": [
+            "un",
+            "ter"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
           ]
         },
         {
@@ -205,6 +145,55 @@
           "syllables": [
             "So",
             "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Nun wedelt der Kater mit dem Hut.",
+      "words": [
+        {
+          "clean": "Nun",
+          "syllables": [
+            "Nun"
+          ]
+        },
+        {
+          "clean": "wedelt",
+          "syllables": [
+            "we",
+            "delt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Hut",
+          "syllables": [
+            "Hut"
           ]
         }
       ]

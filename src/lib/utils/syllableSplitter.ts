@@ -92,6 +92,23 @@ export function splitSyllables(rawWord: string): string[] {
     } else {
       // 2 or more consonants between vowels
       const prefixSlice = word.slice(0, currentNucleus.end).toLowerCase();
+
+      // German inseparable prefixes: ver-, zer-, ent-, er-
+      if (k === 0) {
+        if ((prefixSlice === 've' || prefixSlice === 'ze') && consonantsLower.startsWith('r')) {
+          splitIndices.push(consonantStart + 1); // e.g. "ver-gnügt", "ver-glei-chen", "zer-drückt"
+          continue;
+        }
+        if (prefixSlice === 'e' && consonantsLower.startsWith('nt')) {
+          splitIndices.push(consonantStart + 2); // e.g. "ent-deckt", "ent-fernt"
+          continue;
+        }
+        if (prefixSlice === 'e' && consonantsLower.startsWith('r') && consonantCount >= 2) {
+          splitIndices.push(consonantStart + 1); // e.g. "er-scheint", "er-klingt"
+          continue;
+        }
+      }
+
       if (
         k === 0 &&
         (prefixSlice === 'be' || prefixSlice === 'ge') &&

@@ -2,94 +2,16 @@
   "themeId": "theme_wizard",
   "level": 1,
   "episode": 2,
-  "disturberWord": "Riesentorte",
-  "title": "Die süße Zauberei",
+  "disturberWord": "Torte",
+  "title": "Die tanzende Torte",
   "sentences": [
     {
-      "text": "Lilly spricht einen Zauberspruch mit großem Mut.",
+      "text": "Auf dem Tisch steht eine dicke Torte.",
       "words": [
         {
-          "clean": "Lilly",
+          "clean": "Auf",
           "syllables": [
-            "Lil",
-            "ly"
-          ]
-        },
-        {
-          "clean": "spricht",
-          "syllables": [
-            "spricht"
-          ]
-        },
-        {
-          "clean": "einen",
-          "syllables": [
-            "ei",
-            "nen"
-          ]
-        },
-        {
-          "clean": "Zauberspruch",
-          "syllables": [
-            "Zau",
-            "ber",
-            "spruch"
-          ]
-        },
-        {
-          "clean": "mit",
-          "syllables": [
-            "mit"
-          ]
-        },
-        {
-          "clean": "großem",
-          "syllables": [
-            "gro",
-            "ßem"
-          ]
-        },
-        {
-          "clean": "Mut",
-          "syllables": [
-            "Mut"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ein grauer Stein liegt neben dem Glas.",
-      "words": [
-        {
-          "clean": "Ein",
-          "syllables": [
-            "Ein"
-          ]
-        },
-        {
-          "clean": "grauer",
-          "syllables": [
-            "grau",
-            "er"
-          ]
-        },
-        {
-          "clean": "Stein",
-          "syllables": [
-            "Stein"
-          ]
-        },
-        {
-          "clean": "liegt",
-          "syllables": [
-            "liegt"
-          ]
-        },
-        {
-          "clean": "neben",
-          "syllables": [
-            "ne",
-            "ben"
+            "Auf"
           ]
         },
         {
@@ -99,41 +21,15 @@
           ]
         },
         {
-          "clean": "Glas",
+          "clean": "Tisch",
           "syllables": [
-            "Glas"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das verdrehte Wort erschafft eine duftende Torte.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
+            "Tisch"
           ]
         },
         {
-          "clean": "verdrehte",
+          "clean": "steht",
           "syllables": [
-            "ver",
-            "dreh",
-            "te"
-          ]
-        },
-        {
-          "clean": "Wort",
-          "syllables": [
-            "Wort"
-          ]
-        },
-        {
-          "clean": "erschafft",
-          "syllables": [
-            "er",
-            "schafft"
+            "steht"
           ]
         },
         {
@@ -144,11 +40,10 @@
           ]
         },
         {
-          "clean": "duftende",
+          "clean": "dicke",
           "syllables": [
-            "duf",
-            "ten",
-            "de"
+            "di",
+            "cke"
           ]
         },
         {
@@ -161,12 +56,120 @@
       ]
     },
     {
-      "text": "Der süße Beerenduft kitzelt ihre kleine Nase.",
+      "text": "Fröhlich tanzt die Torte um den Besen.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Fröhlich",
           "syllables": [
-            "Der"
+            "Fröh",
+            "lich"
+          ]
+        },
+        {
+          "clean": "tanzt",
+          "syllables": [
+            "tanzt"
+          ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        },
+        {
+          "clean": "um",
+          "syllables": [
+            "um"
+          ]
+        },
+        {
+          "clean": "den",
+          "syllables": [
+            "den"
+          ]
+        },
+        {
+          "clean": "Besen",
+          "syllables": [
+            "Be",
+            "sen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lilly schnappt eilig nach der süßen Torte.",
+      "words": [
+        {
+          "clean": "Lilly",
+          "syllables": [
+            "Lil",
+            "ly"
+          ]
+        },
+        {
+          "clean": "schnappt",
+          "syllables": [
+            "schnappt"
+          ]
+        },
+        {
+          "clean": "eilig",
+          "syllables": [
+            "ei",
+            "lig"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "süßen",
+          "syllables": [
+            "sü",
+            "ßen"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Platsch landet süße Sahne auf ihrer Nase.",
+      "words": [
+        {
+          "clean": "Platsch",
+          "syllables": [
+            "Platsch"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
           ]
         },
         {
@@ -177,32 +180,23 @@
           ]
         },
         {
-          "clean": "Beerenduft",
+          "clean": "Sahne",
           "syllables": [
-            "Bee",
-            "ren",
-            "duft"
+            "Sah",
+            "ne"
           ]
         },
         {
-          "clean": "kitzelt",
+          "clean": "auf",
           "syllables": [
-            "kit",
-            "zelt"
+            "auf"
           ]
         },
         {
-          "clean": "ihre",
+          "clean": "ihrer",
           "syllables": [
             "ih",
-            "re"
-          ]
-        },
-        {
-          "clean": "kleine",
-          "syllables": [
-            "klei",
-            "ne"
+            "rer"
           ]
         },
         {
@@ -210,59 +204,6 @@
           "syllables": [
             "Na",
             "se"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dazu trinkt das fröhliche Mädchen frische Limo.",
-      "words": [
-        {
-          "clean": "Dazu",
-          "syllables": [
-            "Da",
-            "zu"
-          ]
-        },
-        {
-          "clean": "trinkt",
-          "syllables": [
-            "trinkt"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "fröhliche",
-          "syllables": [
-            "fröh",
-            "li",
-            "che"
-          ]
-        },
-        {
-          "clean": "Mädchen",
-          "syllables": [
-            "Mäd",
-            "chen"
-          ]
-        },
-        {
-          "clean": "frische",
-          "syllables": [
-            "fri",
-            "sche"
-          ]
-        },
-        {
-          "clean": "Limo",
-          "syllables": [
-            "Li",
-            "mo"
           ]
         }
       ]

@@ -2,15 +2,16 @@
   import { onMount, onDestroy } from 'svelte';
   import { profileStore } from '../stores/profileStore';
   import { routerStore } from '../stores/routerStore';
+  import { storyConfigStore } from '../stores/storyConfigStore';
   import { validateName } from '../utils/validation';
-  import { getAvailableGermanVoices, testVoice } from '../services/speechService';
+  import { getAvailableGermanVoices } from '../services/speechService';
   import {
     testAudioEngineVoice,
     ensurePiperInitialized,
     PIPER_VOICES,
     STUDIO_VOICES,
   } from '../services/audioEngineService';
-  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
+  import type { AudioEngineType, PiperVoiceId } from '../types/profile';
   import OtterFeedback from './OtterFeedback.svelte';
 
   export let showBackButton = false;
@@ -146,6 +147,10 @@
 
     const ok = profileStore.saveProfile();
     if (ok) {
+      if ($profileStore.audioEngine === 'studio-audio') {
+        storyConfigStore.selectTheme('theme_forest');
+        storyConfigStore.setLevel(1);
+      }
       isSavedSuccess = true;
       childError = null;
       companionError = null;
@@ -344,7 +349,7 @@
         <span class="engine-card-icon">⚡</span>
         <div class="engine-card-text">
           <strong class="engine-card-title">PWA Offline-Stimmen (Piper WebAssembly)</strong>
-          <span class="engine-card-desc">100% Offline in PWA, 4 Stimmen (Thorsten, Eva K, Ramona, Kerstin)</span>
+          <span class="engine-card-desc">100% Offline in PWA, 2 Stimmen (Thorsten, Kerstin)</span>
         </div>
       </button>
 

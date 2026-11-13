@@ -125,8 +125,6 @@ function loadStoredProfile(): ProfileState {
 
     const validPiperVoices = [
       'de_DE-thorsten-medium',
-      'de_DE-ramona-low',
-      'de_DE-eva_k-x_low',
       'de_DE-kerstin-low',
     ];
     const selectedPiperVoice = validPiperVoices.includes(parsed.selectedPiperVoice)

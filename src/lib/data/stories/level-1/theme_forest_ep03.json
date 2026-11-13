@@ -2,11 +2,11 @@
   "themeId": "theme_forest",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Waldfee",
-  "title": "Zauber am Waldsee",
+  "disturberWord": "Biber",
+  "title": "Der Biber am See",
   "sentences": [
     {
-      "text": "Kalle wandert leise an den verborgenen See.",
+      "text": "Kalle sitzt gemütlich am ruhigen blauen See.",
       "words": [
         {
           "clean": "Kalle",
@@ -16,38 +16,38 @@
           ]
         },
         {
-          "clean": "wandert",
+          "clean": "sitzt",
           "syllables": [
-            "wan",
-            "dert"
+            "sitzt"
           ]
         },
         {
-          "clean": "leise",
+          "clean": "gemütlich",
           "syllables": [
-            "lei",
-            "se"
-          ]
-        },
-        {
-          "clean": "an",
-          "syllables": [
-            "an"
-          ]
-        },
-        {
-          "clean": "den",
-          "syllables": [
-            "den"
-          ]
-        },
-        {
-          "clean": "verborgenen",
-          "syllables": [
-            "ver",
-            "bor",
             "ge",
-            "nen"
+            "müt",
+            "lich"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "ruhigen",
+          "syllables": [
+            "ru",
+            "hi",
+            "gen"
+          ]
+        },
+        {
+          "clean": "blauen",
+          "syllables": [
+            "blau",
+            "en"
           ]
         },
         {
@@ -59,59 +59,7 @@
       ]
     },
     {
-      "text": "Dort sitzt eine winzige Waldfee am Ufer.",
-      "words": [
-        {
-          "clean": "Dort",
-          "syllables": [
-            "Dort"
-          ]
-        },
-        {
-          "clean": "sitzt",
-          "syllables": [
-            "sitzt"
-          ]
-        },
-        {
-          "clean": "eine",
-          "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "winzige",
-          "syllables": [
-            "win",
-            "zi",
-            "ge"
-          ]
-        },
-        {
-          "clean": "Waldfee",
-          "syllables": [
-            "Wald",
-            "fee"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Ufer",
-          "syllables": [
-            "U",
-            "fer"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Aus dem Wasser lugt ein neugieriger Biber.",
+      "text": "Aus dem Wasser lugt ein fleißiger Biber.",
       "words": [
         {
           "clean": "Aus",
@@ -145,11 +93,10 @@
           ]
         },
         {
-          "clean": "neugieriger",
+          "clean": "fleißiger",
           "syllables": [
-            "neu",
-            "gie",
-            "ri",
+            "flei",
+            "ßi",
             "ger"
           ]
         },
@@ -163,31 +110,30 @@
       ]
     },
     {
-      "text": "Sie schenkt den Tieren ein Licht im Nebel.",
+      "text": "Flink schnappt das Tier ein kleines Boot.",
       "words": [
         {
-          "clean": "Sie",
+          "clean": "Flink",
           "syllables": [
-            "Sie"
+            "Flink"
           ]
         },
         {
-          "clean": "schenkt",
+          "clean": "schnappt",
           "syllables": [
-            "schenkt"
+            "schnappt"
           ]
         },
         {
-          "clean": "den",
+          "clean": "das",
           "syllables": [
-            "den"
+            "das"
           ]
         },
         {
-          "clean": "Tieren",
+          "clean": "Tier",
           "syllables": [
-            "Tie",
-            "ren"
+            "Tier"
           ]
         },
         {
@@ -197,74 +143,71 @@
           ]
         },
         {
-          "clean": "Licht",
+          "clean": "kleines",
           "syllables": [
-            "Licht"
+            "klei",
+            "nes"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Boot",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Nebel",
-          "syllables": [
-            "Ne",
-            "bel"
+            "Boot"
           ]
         }
       ]
     },
     {
-      "text": "Zusammen mit Kalle singt ein kleiner Vogel.",
+      "text": "Stolz schiebt der Biber das Boot ans Ufer.",
       "words": [
         {
-          "clean": "Zusammen",
+          "clean": "Stolz",
           "syllables": [
-            "Zu",
-            "sam",
-            "men"
+            "Stolz"
           ]
         },
         {
-          "clean": "mit",
+          "clean": "schiebt",
           "syllables": [
-            "mit"
+            "schiebt"
           ]
         },
         {
-          "clean": "Kalle",
+          "clean": "der",
           "syllables": [
-            "Kal",
-            "le"
+            "der"
           ]
         },
         {
-          "clean": "singt",
+          "clean": "Biber",
           "syllables": [
-            "singt"
+            "Bi",
+            "ber"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "das",
           "syllables": [
-            "ein"
+            "das"
           ]
         },
         {
-          "clean": "kleiner",
+          "clean": "Boot",
           "syllables": [
-            "klei",
-            "ner"
+            "Boot"
           ]
         },
         {
-          "clean": "Vogel",
+          "clean": "ans",
           "syllables": [
-            "Vo",
-            "gel"
+            "ans"
+          ]
+        },
+        {
+          "clean": "Ufer",
+          "syllables": [
+            "U",
+            "fer"
           ]
         }
       ]

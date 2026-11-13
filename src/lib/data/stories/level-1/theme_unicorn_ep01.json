@@ -3,10 +3,10 @@
   "level": 1,
   "episode": 1,
   "disturberWord": "Torte",
-  "title": "Die süße Überraschung",
+  "title": "Das Horn in der Torte",
   "sentences": [
     {
-      "text": "Das kleine Einhorn Lilly trabt durch das Tal.",
+      "text": "Das kleine Einhorn trabt durch das Tal.",
       "words": [
         {
           "clean": "Das",
@@ -26,13 +26,6 @@
           "syllables": [
             "Ein",
             "horn"
-          ]
-        },
-        {
-          "clean": "Lilly",
-          "syllables": [
-            "Lil",
-            "ly"
           ]
         },
         {
@@ -62,7 +55,7 @@
       ]
     },
     {
-      "text": "Am Himmel strahlt ein bunter, weiter Bogen.",
+      "text": "Am Wegesrand duftet eine riesige rosa Torte.",
       "words": [
         {
           "clean": "Am",
@@ -71,112 +64,18 @@
           ]
         },
         {
-          "clean": "Himmel",
+          "clean": "Wegesrand",
           "syllables": [
-            "Him",
-            "mel"
+            "We",
+            "ges",
+            "rand"
           ]
         },
         {
-          "clean": "strahlt",
+          "clean": "duftet",
           "syllables": [
-            "strahlt"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "bunter",
-          "syllables": [
-            "bun",
-            "ter"
-          ]
-        },
-        {
-          "clean": "weiter",
-          "syllables": [
-            "wei",
-            "ter"
-          ]
-        },
-        {
-          "clean": "Bogen",
-          "syllables": [
-            "Bo",
-            "gen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Plötzlich steht ein Tischchen im weichen Moos.",
-      "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plötz",
-            "lich"
-          ]
-        },
-        {
-          "clean": "steht",
-          "syllables": [
-            "steht"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Tischchen",
-          "syllables": [
-            "Tisch",
-            "chen"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "weichen",
-          "syllables": [
-            "wei",
-            "chen"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Moos"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Darauf glitzert eine herrliche, süße Torte.",
-      "words": [
-        {
-          "clean": "Darauf",
-          "syllables": [
-            "Da",
-            "rauf"
-          ]
-        },
-        {
-          "clean": "glitzert",
-          "syllables": [
-            "glit",
-            "zert"
+            "duf",
+            "tet"
           ]
         },
         {
@@ -187,18 +86,18 @@
           ]
         },
         {
-          "clean": "herrliche",
+          "clean": "riesige",
           "syllables": [
-            "her",
-            "rli",
-            "che"
+            "rie",
+            "si",
+            "ge"
           ]
         },
         {
-          "clean": "süße",
+          "clean": "rosa",
           "syllables": [
-            "sü",
-            "ße"
+            "ro",
+            "sa"
           ]
         },
         {
@@ -211,46 +110,95 @@
       ]
     },
     {
-      "text": "Zufrieden leckt sich Lilly über die Nase.",
+      "text": "Neugierig piekst das Tier in die Torte.",
       "words": [
         {
-          "clean": "Zufrieden",
+          "clean": "Neugierig",
           "syllables": [
-            "Zuf",
-            "rie",
-            "den"
+            "Neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "leckt",
+          "clean": "piekst",
           "syllables": [
-            "leckt"
+            "piekst"
           ]
         },
         {
-          "clean": "sich",
+          "clean": "das",
           "syllables": [
-            "sich"
+            "das"
           ]
         },
         {
-          "clean": "Lilly",
+          "clean": "Tier",
           "syllables": [
-            "Lil",
-            "ly"
+            "Tier"
           ]
         },
         {
-          "clean": "über",
+          "clean": "in",
           "syllables": [
-            "ü",
-            "ber"
+            "in"
           ]
         },
         {
           "clean": "die",
           "syllables": [
             "die"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Puff klebt bunte Creme an seiner Nase.",
+      "words": [
+        {
+          "clean": "Puff",
+          "syllables": [
+            "Puff"
+          ]
+        },
+        {
+          "clean": "klebt",
+          "syllables": [
+            "klebt"
+          ]
+        },
+        {
+          "clean": "bunte",
+          "syllables": [
+            "bun",
+            "te"
+          ]
+        },
+        {
+          "clean": "Creme",
+          "syllables": [
+            "Cre",
+            "me"
+          ]
+        },
+        {
+          "clean": "an",
+          "syllables": [
+            "an"
+          ]
+        },
+        {
+          "clean": "seiner",
+          "syllables": [
+            "sei",
+            "ner"
           ]
         },
         {

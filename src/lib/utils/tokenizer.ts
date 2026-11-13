@@ -332,12 +332,12 @@ export function selectPhaseAChildIndices(
       if (!isLevel1EligibleWord(w.cleanWord)) continue;
 
       const baseScore = calculateWordComplexity(w.cleanWord, w.syllables);
-      if (baseScore > 0) continue;
+      if (baseScore > 1) continue;
 
       const lower = cleanPunctuation(w.cleanWord).toLowerCase();
       let selectionScore = baseScore + calculatePhonemeTiebreaker(w.cleanWord);
 
-      // Prefer nouns over lowercase verbs when both have baseScore 0
+      // Prefer nouns over lowercase verbs when both have baseScore <= 1
       if (!isNoun(w.cleanWord)) {
         selectionScore += 0.5;
       }
@@ -358,8 +358,8 @@ export function selectPhaseAChildIndices(
       }
     }
 
-    // HARTER CUTOFF: Level 1 darf maximal baseScore 0 haben und keine disqualifizierten Eigennamen
-    if (bestIndex !== null && bestBaseScore === 0 && lowestSelectionScore < 50) {
+    // HARTER CUTOFF: Level 1 darf maximal baseScore <= 1 haben und keine disqualifizierten Eigennamen
+    if (bestIndex !== null && bestBaseScore <= 1 && lowestSelectionScore < 100) {
       selected.add(bestIndex);
     }
     return selected;
@@ -398,11 +398,17 @@ export function selectPhaseAChildIndices(
       if (LEVEL2_FORBIDDEN.test(w1.cleanWord)) score1 += 25;
       if (LEVEL2_FORBIDDEN.test(w2.cleanWord)) score2 += 25;
 
-      if (isProtectedName(w1.cleanWord, companionName, childName)) score1 += 50;
-      if (isProtectedName(w2.cleanWord, companionName, childName)) score2 += 50;
+      const lower1 = cleanPunctuation(w1.cleanWord).toLowerCase();
+      const lower2 = cleanPunctuation(w2.cleanWord).toLowerCase();
 
-      const lowerNoun = cleanPunctuation(w2.cleanWord).toLowerCase();
-      const repeatPenalty = usedChildWords?.has(lowerNoun) ? 5 : 0;
+      if (isProtectedName(w1.cleanWord, companionName, childName)) {
+        score1 += usedChildNames?.has(lower1) ? 100 : 50;
+      }
+      if (isProtectedName(w2.cleanWord, companionName, childName)) {
+        score2 += usedChildNames?.has(lower2) ? 100 : 50;
+      }
+
+      const repeatPenalty = usedChildWords?.has(lower2) ? 5 : 0;
 
       const tiebreaker = calculatePhonemeTiebreaker(w1.cleanWord) + calculatePhonemeTiebreaker(w2.cleanWord);
       const totalScore = score1 + score2 + tiebreaker + repeatPenalty + adjBonus;
@@ -510,7 +516,16 @@ export function tokenizeStory(
 
     const wordMetas: WordMeta[] = rawWords.map((word, wordIndex) => {
       const clean = cleanPunctuation(word);
-      const preStructuredWord = structuredOutput?.sentences?.[sentenceIndex]?.words?.[wordIndex];
+      const structSent = structuredOutput?.sentences?.[sentenceIndex];
+      let preStructuredWord = structSent?.words?.[wordIndex];
+      if (preStructuredWord && clean && preStructuredWord.clean.toLowerCase() !== clean.toLowerCase()) {
+        const matchingWord = structSent?.words?.find(
+          (w) => w.clean.toLowerCase() === clean.toLowerCase()
+        );
+        if (matchingWord) {
+          preStructuredWord = matchingWord;
+        }
+      }
       const syllables =
         preStructuredWord?.syllables && preStructuredWord.syllables.length > 0
           ? preStructuredWord.syllables

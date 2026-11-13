@@ -2,89 +2,43 @@
   "themeId": "theme_horse",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Goldhuf",
-  "title": "Das Zaubereisen im Moos",
+  "disturberWord": "Esel",
+  "title": "Der Apfel auf der Nase",
   "sentences": [
     {
-      "text": "Finja reitet vorsichtig durch das tiefe Tal.",
+      "text": "Kalle steht mit einem Apfel am Tor.",
       "words": [
         {
-          "clean": "Finja",
+          "clean": "Kalle",
           "syllables": [
-            "Fin",
-            "ja"
+            "Kal",
+            "le"
           ]
         },
         {
-          "clean": "reitet",
+          "clean": "steht",
           "syllables": [
-            "rei",
-            "tet"
+            "steht"
           ]
         },
         {
-          "clean": "vorsichtig",
+          "clean": "mit",
           "syllables": [
-            "vor",
-            "sich",
-            "tig"
+            "mit"
           ]
         },
         {
-          "clean": "durch",
+          "clean": "einem",
           "syllables": [
-            "durch"
+            "ei",
+            "nem"
           ]
         },
         {
-          "clean": "das",
+          "clean": "Apfel",
           "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "tiefe",
-          "syllables": [
-            "tie",
-            "fe"
-          ]
-        },
-        {
-          "clean": "Tal",
-          "syllables": [
-            "Tal"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Ihr ängstliches Pony scheut am breiten Ufer.",
-      "words": [
-        {
-          "clean": "Ihr",
-          "syllables": [
-            "Ihr"
-          ]
-        },
-        {
-          "clean": "ängstliches",
-          "syllables": [
-            "äng",
-            "stli",
-            "ches"
-          ]
-        },
-        {
-          "clean": "Pony",
-          "syllables": [
-            "Po",
-            "ny"
-          ]
-        },
-        {
-          "clean": "scheut",
-          "syllables": [
-            "scheut"
+            "Ap",
+            "fel"
           ]
         },
         {
@@ -94,139 +48,82 @@
           ]
         },
         {
-          "clean": "breiten",
+          "clean": "Tor",
           "syllables": [
-            "brei",
-            "ten"
-          ]
-        },
-        {
-          "clean": "Ufer",
-          "syllables": [
-            "U",
-            "fer"
+            "Tor"
           ]
         }
       ]
     },
     {
-      "text": "Ein goldenes Hufeisen blitzt im weichen Moos.",
+      "text": "Neugierig streckt ein kleiner Esel seine Nase.",
       "words": [
         {
-          "clean": "Ein",
+          "clean": "Neugierig",
           "syllables": [
-            "Ein"
+            "Neu",
+            "gie",
+            "rig"
           ]
         },
         {
-          "clean": "goldenes",
+          "clean": "streckt",
           "syllables": [
-            "gol",
-            "de",
-            "nes"
+            "streckt"
           ]
         },
         {
-          "clean": "Hufeisen",
+          "clean": "ein",
           "syllables": [
-            "Hu",
-            "fei",
-            "sen"
+            "ein"
           ]
         },
         {
-          "clean": "blitzt",
+          "clean": "kleiner",
           "syllables": [
-            "blitzt"
+            "klei",
+            "ner"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Esel",
           "syllables": [
-            "im"
+            "E",
+            "sel"
           ]
         },
         {
-          "clean": "weichen",
+          "clean": "seine",
           "syllables": [
-            "wei",
-            "chen"
+            "sei",
+            "ne"
           ]
         },
         {
-          "clean": "Moos",
+          "clean": "Nase",
           "syllables": [
-            "Moos"
+            "Na",
+            "se"
           ]
         }
       ]
     },
     {
-      "text": "Der neue Goldhuf schenkt ihm riesigen Mut.",
+      "text": "Geschickt balanciert das Tier den Apfel am Tor.",
       "words": [
         {
-          "clean": "Der",
+          "clean": "Geschickt",
           "syllables": [
-            "Der"
+            "Ge",
+            "schickt"
           ]
         },
         {
-          "clean": "neue",
+          "clean": "balanciert",
           "syllables": [
-            "neu",
-            "e"
-          ]
-        },
-        {
-          "clean": "Goldhuf",
-          "syllables": [
-            "Gold",
-            "huf"
-          ]
-        },
-        {
-          "clean": "schenkt",
-          "syllables": [
-            "schenkt"
-          ]
-        },
-        {
-          "clean": "ihm",
-          "syllables": [
-            "ihm"
-          ]
-        },
-        {
-          "clean": "riesigen",
-          "syllables": [
-            "rie",
-            "si",
-            "gen"
-          ]
-        },
-        {
-          "clean": "Mut",
-          "syllables": [
-            "Mut"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Frech überholt das kleine Pferd jeden Vogel.",
-      "words": [
-        {
-          "clean": "Frech",
-          "syllables": [
-            "Frech"
-          ]
-        },
-        {
-          "clean": "überholt",
-          "syllables": [
-            "ü",
-            "ber",
-            "holt"
+            "ba",
+            "lan",
+            "ciert"
           ]
         },
         {
@@ -236,30 +133,90 @@
           ]
         },
         {
-          "clean": "kleine",
+          "clean": "Tier",
           "syllables": [
-            "klei",
-            "ne"
+            "Tier"
           ]
         },
         {
-          "clean": "Pferd",
+          "clean": "den",
           "syllables": [
-            "Pferd"
-          ]
-        },
-        {
-          "clean": "jeden",
-          "syllables": [
-            "je",
             "den"
           ]
         },
         {
-          "clean": "Vogel",
+          "clean": "Apfel",
           "syllables": [
-            "Vo",
-            "gel"
+            "Ap",
+            "fel"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Tor",
+          "syllables": [
+            "Tor"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Schmatzend schnappt der Esel ihn mit der Nase.",
+      "words": [
+        {
+          "clean": "Schmatzend",
+          "syllables": [
+            "Schmat",
+            "zend"
+          ]
+        },
+        {
+          "clean": "schnappt",
+          "syllables": [
+            "schnappt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Esel",
+          "syllables": [
+            "E",
+            "sel"
+          ]
+        },
+        {
+          "clean": "ihn",
+          "syllables": [
+            "ihn"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Nase",
+          "syllables": [
+            "Na",
+            "se"
           ]
         }
       ]

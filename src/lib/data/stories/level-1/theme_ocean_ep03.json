@@ -2,11 +2,11 @@
   "themeId": "theme_ocean",
   "level": 1,
   "episode": 3,
-  "disturberWord": "Krone",
-  "title": "Der Schatz am Ufer",
+  "disturberWord": "Krake",
+  "title": "Die Krake mit der Krone",
   "sentences": [
     {
-      "text": "Anton läuft fröhlich an dem weiten Ufer.",
+      "text": "Anton läuft barfuß an dem sonnigen Ufer.",
       "words": [
         {
           "clean": "Anton",
@@ -22,10 +22,10 @@
           ]
         },
         {
-          "clean": "fröhlich",
+          "clean": "barfuß",
           "syllables": [
-            "fröh",
-            "lich"
+            "bar",
+            "fuß"
           ]
         },
         {
@@ -41,10 +41,11 @@
           ]
         },
         {
-          "clean": "weiten",
+          "clean": "sonnigen",
           "syllables": [
-            "wei",
-            "ten"
+            "son",
+            "ni",
+            "gen"
           ]
         },
         {
@@ -57,33 +58,33 @@
       ]
     },
     {
-      "text": "Eine sanfte Welle bringt eine goldene Krone.",
+      "text": "Im seichten Wasser funkelt eine goldene Krone.",
       "words": [
         {
-          "clean": "Eine",
+          "clean": "Im",
           "syllables": [
-            "Ei",
-            "ne"
+            "Im"
           ]
         },
         {
-          "clean": "sanfte",
+          "clean": "seichten",
           "syllables": [
-            "san",
-            "fte"
+            "seich",
+            "ten"
           ]
         },
         {
-          "clean": "Welle",
+          "clean": "Wasser",
           "syllables": [
-            "Wel",
-            "le"
+            "Was",
+            "ser"
           ]
         },
         {
-          "clean": "bringt",
+          "clean": "funkelt",
           "syllables": [
-            "bringt"
+            "fun",
+            "kelt"
           ]
         },
         {
@@ -111,88 +112,18 @@
       ]
     },
     {
-      "text": "Bei der Suche hilft ein lieber Wal.",
+      "text": "Flink schnappt eine fröhliche Krake die Krone.",
       "words": [
         {
-          "clean": "Bei",
+          "clean": "Flink",
           "syllables": [
-            "Bei"
+            "Flink"
           ]
         },
         {
-          "clean": "der",
+          "clean": "schnappt",
           "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "Suche",
-          "syllables": [
-            "Su",
-            "che"
-          ]
-        },
-        {
-          "clean": "hilft",
-          "syllables": [
-            "hilft"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "lieber",
-          "syllables": [
-            "lie",
-            "ber"
-          ]
-        },
-        {
-          "clean": "Wal",
-          "syllables": [
-            "Wal"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Der König im Ozean ist eine Krake.",
-      "words": [
-        {
-          "clean": "Der",
-          "syllables": [
-            "Der"
-          ]
-        },
-        {
-          "clean": "König",
-          "syllables": [
-            "Kö",
-            "nig"
-          ]
-        },
-        {
-          "clean": "im",
-          "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Ozean",
-          "syllables": [
-            "O",
-            "ze",
-            "an"
-          ]
-        },
-        {
-          "clean": "ist",
-          "syllables": [
-            "ist"
+            "schnappt"
           ]
         },
         {
@@ -203,64 +134,81 @@
           ]
         },
         {
+          "clean": "fröhliche",
+          "syllables": [
+            "fröh",
+            "li",
+            "che"
+          ]
+        },
+        {
           "clean": "Krake",
           "syllables": [
             "Kra",
             "ke"
           ]
+        },
+        {
+          "clean": "die",
+          "syllables": [
+            "die"
+          ]
+        },
+        {
+          "clean": "Krone",
+          "syllables": [
+            "Kro",
+            "ne"
+          ]
         }
       ]
     },
     {
-      "text": "Er setzt sie stolz auf für ein Foto.",
+      "text": "Mit acht Armen tanzt die bunte Krake.",
       "words": [
         {
-          "clean": "Er",
+          "clean": "Mit",
           "syllables": [
-            "Er"
+            "Mit"
           ]
         },
         {
-          "clean": "setzt",
+          "clean": "acht",
           "syllables": [
-            "setzt"
+            "acht"
           ]
         },
         {
-          "clean": "sie",
+          "clean": "Armen",
           "syllables": [
-            "sie"
+            "Ar",
+            "men"
           ]
         },
         {
-          "clean": "stolz",
+          "clean": "tanzt",
           "syllables": [
-            "stolz"
+            "tanzt"
           ]
         },
         {
-          "clean": "auf",
+          "clean": "die",
           "syllables": [
-            "auf"
+            "die"
           ]
         },
         {
-          "clean": "für",
+          "clean": "bunte",
           "syllables": [
-            "für"
+            "bun",
+            "te"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "Krake",
           "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Foto",
-          "syllables": [
-            "Fo",
-            "to"
+            "Kra",
+            "ke"
           ]
         }
       ]

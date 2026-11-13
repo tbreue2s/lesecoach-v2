@@ -2,11 +2,11 @@
   "themeId": "theme_space",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Sternenwal",
-  "title": "Der sanfte Sternenwal",
+  "disturberWord": "Torte",
+  "title": "Die schwebende Torte im All",
   "sentences": [
     {
-      "text": "Anton steuert die silberne Rakete als Pilot.",
+      "text": "Anton steuert sein schnelles Ufo als Pilot.",
       "words": [
         {
           "clean": "Anton",
@@ -23,25 +23,23 @@
           ]
         },
         {
-          "clean": "die",
+          "clean": "sein",
           "syllables": [
-            "die"
+            "sein"
           ]
         },
         {
-          "clean": "silberne",
+          "clean": "schnelles",
           "syllables": [
-            "sil",
-            "ber",
-            "ne"
+            "schnel",
+            "les"
           ]
         },
         {
-          "clean": "Rakete",
+          "clean": "Ufo",
           "syllables": [
-            "Ra",
-            "ke",
-            "te"
+            "U",
+            "fo"
           ]
         },
         {
@@ -60,140 +58,30 @@
       ]
     },
     {
-      "text": "Leise brummt im Heck der warme Motor.",
+      "text": "Auf dem Tisch schwebt eine süße Torte.",
       "words": [
         {
-          "clean": "Leise",
+          "clean": "Auf",
           "syllables": [
-            "Lei",
-            "se"
+            "Auf"
           ]
         },
         {
-          "clean": "brummt",
+          "clean": "dem",
           "syllables": [
-            "brummt"
+            "dem"
           ]
         },
         {
-          "clean": "im",
+          "clean": "Tisch",
           "syllables": [
-            "im"
-          ]
-        },
-        {
-          "clean": "Heck",
-          "syllables": [
-            "Heck"
-          ]
-        },
-        {
-          "clean": "der",
-          "syllables": [
-            "der"
-          ]
-        },
-        {
-          "clean": "warme",
-          "syllables": [
-            "war",
-            "me"
-          ]
-        },
-        {
-          "clean": "Motor",
-          "syllables": [
-            "Mo",
-            "tor"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Plötzlich schwebt ein riesiger Sternenwal am Glas.",
-      "words": [
-        {
-          "clean": "Plötzlich",
-          "syllables": [
-            "Plötz",
-            "lich"
+            "Tisch"
           ]
         },
         {
           "clean": "schwebt",
           "syllables": [
             "schwebt"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "riesiger",
-          "syllables": [
-            "rie",
-            "si",
-            "ger"
-          ]
-        },
-        {
-          "clean": "Sternenwal",
-          "syllables": [
-            "Ster",
-            "nen",
-            "wal"
-          ]
-        },
-        {
-          "clean": "am",
-          "syllables": [
-            "am"
-          ]
-        },
-        {
-          "clean": "Glas",
-          "syllables": [
-            "Glas"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Das sanfte Tier leuchtet wie eine Kugel.",
-      "words": [
-        {
-          "clean": "Das",
-          "syllables": [
-            "Das"
-          ]
-        },
-        {
-          "clean": "sanfte",
-          "syllables": [
-            "san",
-            "fte"
-          ]
-        },
-        {
-          "clean": "Tier",
-          "syllables": [
-            "Tier"
-          ]
-        },
-        {
-          "clean": "leuchtet",
-          "syllables": [
-            "leuch",
-            "tet"
-          ]
-        },
-        {
-          "clean": "wie",
-          "syllables": [
-            "wie"
           ]
         },
         {
@@ -204,55 +92,117 @@
           ]
         },
         {
-          "clean": "Kugel",
+          "clean": "süße",
           "syllables": [
-            "Ku",
-            "gel"
+            "sü",
+            "ße"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
           ]
         }
       ]
     },
     {
-      "text": "Glücklich knipst Anton davon ein Foto.",
+      "text": "Schwerelos tanzt die Torte um den Pilot.",
       "words": [
         {
-          "clean": "Glücklich",
+          "clean": "Schwerelos",
           "syllables": [
-            "Glück",
-            "lich"
+            "Schwe",
+            "re",
+            "los"
           ]
         },
         {
-          "clean": "knipst",
+          "clean": "tanzt",
           "syllables": [
-            "knipst"
+            "tanzt"
           ]
         },
         {
-          "clean": "Anton",
+          "clean": "die",
           "syllables": [
-            "An",
-            "ton"
+            "die"
           ]
         },
         {
-          "clean": "davon",
+          "clean": "Torte",
           "syllables": [
-            "da",
-            "von"
+            "Tor",
+            "te"
           ]
         },
         {
-          "clean": "ein",
+          "clean": "um",
           "syllables": [
-            "ein"
+            "um"
           ]
         },
         {
-          "clean": "Foto",
+          "clean": "den",
           "syllables": [
-            "Fo",
-            "to"
+            "den"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mampf schnappt der Pilot nach der Torte.",
+      "words": [
+        {
+          "clean": "Mampf",
+          "syllables": [
+            "Mampf"
+          ]
+        },
+        {
+          "clean": "schnappt",
+          "syllables": [
+            "schnappt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Pilot",
+          "syllables": [
+            "Pi",
+            "lot"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Torte",
+          "syllables": [
+            "Tor",
+            "te"
           ]
         }
       ]

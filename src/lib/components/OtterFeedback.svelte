@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount, afterUpdate } from 'svelte';
-  import { speakText } from '../utils/speech';
+  import { speakUiText } from '../services/uiSpeechService';
 
   export let message: string | null = null;
   export let type: 'error' | 'success' | 'idle' = 'idle';
@@ -16,7 +16,7 @@
 
   function playAudioManual() {
     // Clicking the speaker icon always reads out the current text on demand
-    speakText(currentDisplayText);
+    speakUiText(currentDisplayText);
   }
 
   function autoSpeakOnce(text: string) {
@@ -24,8 +24,9 @@
       return;
     }
     autoSpokenTexts.add(text);
-    speakText(text);
+    speakUiText(text);
   }
+
 
   onMount(() => {
     autoSpeakOnce(currentDisplayText);
@@ -40,7 +41,7 @@
 
 <div
   class="otter-container"
-  class:shake={type === 'error'}
+  class:error={type === 'error'}
   class:success={type === 'success'}
 >
   <div class="otter-avatar" aria-hidden="true">
@@ -147,28 +148,27 @@
     line-height: 1.4;
   }
 
-  /* Error state with head shaking animation */
-  .otter-container.shake {
+  /* Error/Notice state: calm, patient otter without jarring shake animation */
+  .otter-container.error {
     border-color: var(--color-accent-red, #9B2C2C);
     background: #FFF5F5;
-    animation: headShake 0.6s ease-in-out;
   }
 
-  .otter-container.shake .speaker-btn {
+  .otter-container.error .speaker-btn {
     border-color: #FEB2B2;
     background: #FED7D7;
   }
 
-  .otter-container.shake .speech-bubble {
+  .otter-container.error .speech-bubble {
     background: #FED7D7;
     border-color: #FEB2B2;
   }
 
-  .otter-container.shake .speech-bubble::before {
+  .otter-container.error .speech-bubble::before {
     border-right-color: #FEB2B2;
   }
 
-  .otter-container.shake .bubble-text {
+  .otter-container.error .bubble-text {
     color: #9B2C2C;
   }
 
@@ -194,29 +194,5 @@
 
   .otter-container.success .bubble-text {
     color: #22543D;
-  }
-
-  @keyframes headShake {
-    0% {
-      transform: translateX(0);
-    }
-    15% {
-      transform: translateX(-8px) rotate(-4deg);
-    }
-    30% {
-      transform: translateX(8px) rotate(4deg);
-    }
-    45% {
-      transform: translateX(-6px) rotate(-2deg);
-    }
-    60% {
-      transform: translateX(6px) rotate(2deg);
-    }
-    75% {
-      transform: translateX(-3px) rotate(-1deg);
-    }
-    100% {
-      transform: translateX(0);
-    }
   }
 </style>

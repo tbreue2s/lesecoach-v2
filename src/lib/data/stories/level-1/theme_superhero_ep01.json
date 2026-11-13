@@ -2,11 +2,11 @@
   "themeId": "theme_superhero",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Kater-Held",
-  "title": "Hilfe am Hafen",
+  "disturberWord": "Kater",
+  "title": "Der Kater im Umhang",
   "sentences": [
     {
-      "text": "Finn fliegt mit flatterndem Umhang zum Hafen.",
+      "text": "Finn saust mit rotem Umhang zum Hafen.",
       "words": [
         {
           "clean": "Finn",
@@ -15,9 +15,9 @@
           ]
         },
         {
-          "clean": "fliegt",
+          "clean": "saust",
           "syllables": [
-            "fliegt"
+            "saust"
           ]
         },
         {
@@ -27,11 +27,10 @@
           ]
         },
         {
-          "clean": "flatterndem",
+          "clean": "rotem",
           "syllables": [
-            "flat",
-            "ter",
-            "ndem"
+            "ro",
+            "tem"
           ]
         },
         {
@@ -57,7 +56,7 @@
       ]
     },
     {
-      "text": "Dort drüben ertönt plötzlich ein lauter Ruf.",
+      "text": "Dort übt ein mutiger kleiner dicker Kater.",
       "words": [
         {
           "clean": "Dort",
@@ -66,24 +65,9 @@
           ]
         },
         {
-          "clean": "drüben",
+          "clean": "übt",
           "syllables": [
-            "drü",
-            "ben"
-          ]
-        },
-        {
-          "clean": "ertönt",
-          "syllables": [
-            "er",
-            "tönt"
-          ]
-        },
-        {
-          "clean": "plötzlich",
-          "syllables": [
-            "plötz",
-            "lich"
+            "übt"
           ]
         },
         {
@@ -93,60 +77,25 @@
           ]
         },
         {
-          "clean": "lauter",
+          "clean": "mutiger",
           "syllables": [
-            "lau",
-            "ter"
+            "mu",
+            "ti",
+            "ger"
           ]
         },
         {
-          "clean": "Ruf",
-          "syllables": [
-            "Ruf"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Mit kleinem rotem Umhang hilft ein Kater.",
-      "words": [
-        {
-          "clean": "Mit",
-          "syllables": [
-            "Mit"
-          ]
-        },
-        {
-          "clean": "kleinem",
+          "clean": "kleiner",
           "syllables": [
             "klei",
-            "nem"
+            "ner"
           ]
         },
         {
-          "clean": "rotem",
+          "clean": "dicker",
           "syllables": [
-            "ro",
-            "tem"
-          ]
-        },
-        {
-          "clean": "Umhang",
-          "syllables": [
-            "Um",
-            "hang"
-          ]
-        },
-        {
-          "clean": "hilft",
-          "syllables": [
-            "hilft"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
+            "di",
+            "cker"
           ]
         },
         {
@@ -159,54 +108,101 @@
       ]
     },
     {
-      "text": "Beide Helden beweisen heute richtig viel Mut.",
+      "text": "Mit großem Mut springt er am Hafen.",
       "words": [
         {
-          "clean": "Beide",
+          "clean": "Mit",
           "syllables": [
-            "Bei",
-            "de"
+            "Mit"
           ]
         },
         {
-          "clean": "Helden",
+          "clean": "großem",
           "syllables": [
-            "Hel",
-            "den"
-          ]
-        },
-        {
-          "clean": "beweisen",
-          "syllables": [
-            "be",
-            "wei",
-            "sen"
-          ]
-        },
-        {
-          "clean": "heute",
-          "syllables": [
-            "heu",
-            "te"
-          ]
-        },
-        {
-          "clean": "richtig",
-          "syllables": [
-            "rich",
-            "tig"
-          ]
-        },
-        {
-          "clean": "viel",
-          "syllables": [
-            "viel"
+            "gro",
+            "ßem"
           ]
         },
         {
           "clean": "Mut",
           "syllables": [
             "Mut"
+          ]
+        },
+        {
+          "clean": "springt",
+          "syllables": [
+            "springt"
+          ]
+        },
+        {
+          "clean": "er",
+          "syllables": [
+            "er"
+          ]
+        },
+        {
+          "clean": "am",
+          "syllables": [
+            "am"
+          ]
+        },
+        {
+          "clean": "Hafen",
+          "syllables": [
+            "Ha",
+            "fen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Plumps landet der Kater in einem Karton.",
+      "words": [
+        {
+          "clean": "Plumps",
+          "syllables": [
+            "Plumps"
+          ]
+        },
+        {
+          "clean": "landet",
+          "syllables": [
+            "lan",
+            "det"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "in",
+          "syllables": [
+            "in"
+          ]
+        },
+        {
+          "clean": "einem",
+          "syllables": [
+            "ei",
+            "nem"
+          ]
+        },
+        {
+          "clean": "Karton",
+          "syllables": [
+            "Kar",
+            "ton"
           ]
         }
       ]

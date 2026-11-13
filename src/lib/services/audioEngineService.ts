@@ -25,6 +25,27 @@ import studioAmalaMetadata from '../../../public/audio/stories/level-1/theme_for
 export type { PiperVoiceId, StudioVoiceId };
 export type ThorstenVoiceId = PiperVoiceId;
 
+/**
+ * Resolves an asset URL (such as /wasm/... or /audio/...) against document.baseURI
+ * or Vite's BASE_URL, ensuring it loads correctly in subdirectory deployments (e.g. GitHub Pages).
+ */
+export function resolveAssetUrl(path: string): string {
+  if (!path || path.startsWith('blob:') || path.startsWith('data:') || path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  const clean = path.replace(/^\/+/, '');
+  if (typeof window !== 'undefined' && typeof document !== 'undefined' && document?.baseURI) {
+    try {
+      const base = document.baseURI;
+      return new URL(clean, base).href;
+    } catch {
+      // Fallback
+    }
+  }
+  const base = (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL) || './';
+  return base.endsWith('/') ? `${base}${clean}` : `${base}/${clean}`;
+}
+
 export interface AudioSegmentOptions {
   text: string;
   tokens: WordToken[];
@@ -72,20 +93,6 @@ export const PIPER_VOICES: {
     gender: 'male',
     size: '61 MB',
     desc: 'Warme, tiefe Erzählerstimme',
-  },
-  {
-    id: 'de_DE-eva_k-x_low',
-    label: 'Eva K (Frau)',
-    gender: 'female',
-    size: '20 MB',
-    desc: 'Super schnell (nur 20 MB!), freundlich & klar',
-  },
-  {
-    id: 'de_DE-ramona-low',
-    label: 'Ramona (Frau)',
-    gender: 'female',
-    size: '61 MB',
-    desc: 'Natürliche, lebendige Vorlesestimme',
   },
   {
     id: 'de_DE-kerstin-low',
@@ -409,9 +416,9 @@ export async function ensureSharedWasmAssets(): Promise<SharedWasmAssets> {
       await Promise.all([
         import('onnxruntime-web/wasm'),
         import('./piperPhonemize.js'),
-        fetchOrCache('/wasm/ort-wasm-simd-threaded.wasm'),
-        fetchOrCache('/wasm/piper_phonemize.wasm'),
-        fetchOrCache('/wasm/piper_phonemize.data'),
+        fetchOrCache(resolveAssetUrl('/wasm/ort-wasm-simd-threaded.wasm')),
+        fetchOrCache(resolveAssetUrl('/wasm/piper_phonemize.wasm')),
+        fetchOrCache(resolveAssetUrl('/wasm/piper_phonemize.data')),
       ]);
 
     const ort = (ortModule as any).default || ortModule;
@@ -454,7 +461,7 @@ export async function isThorstenStored(
   if ('caches' in window) {
     try {
       const cache = await caches.open(CACHE_NAME_MODELS);
-      const match = await cache.match(`/wasm/${voiceId}.onnx`);
+      const match = await cache.match(resolveAssetUrl(`/wasm/${voiceId}.onnx`));
       if (match) return true;
     } catch {}
   }
@@ -510,8 +517,6 @@ async function fetchBufferWithProgress(
 
 const PIPER_HF_PATHS: Record<PiperVoiceId, string> = {
   'de_DE-thorsten-medium': 'de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx',
-  'de_DE-ramona-low': 'de/de_DE/ramona/low/de_DE-ramona-low.onnx',
-  'de_DE-eva_k-x_low': 'de/de_DE/eva_k/x_low/de_DE-eva_k-x_low.onnx',
   'de_DE-kerstin-low': 'de/de_DE/kerstin/low/de_DE-kerstin-low.onnx',
 };
 
@@ -519,7 +524,7 @@ async function loadPiperModelBuffer(
   voiceId: PiperVoiceId,
   onProgress?: (pct: number) => void
 ): Promise<ArrayBuffer> {
-  const modelUrl = `/wasm/${voiceId}.onnx`;
+  const modelUrl = resolveAssetUrl(`/wasm/${voiceId}.onnx`);
 
   // 1. Check browser CacheStorage first (lightning fast flash storage, persists across sessions)
   const cachedFromStorage = await getCachedBuffer(CACHE_NAME_MODELS, modelUrl);
@@ -604,7 +609,7 @@ export async function ensurePiperInitialized(
       // 1. Load shared runtime and phonemizer + voice model in parallel
       const [{ ort, phonemizeModule }, modelConfigRes, modelBuffer] = await Promise.all([
         ensureSharedWasmAssets(),
-        fetch(`/wasm/${voiceId}.onnx.json`).then((r) => {
+        fetch(resolveAssetUrl(`/wasm/${voiceId}.onnx.json`)).then((r) => {
           if (!r.ok) throw new Error(`HTTP ${r.status} loading ${voiceId}.onnx.json`);
           return r.json();
         }),
@@ -1140,8 +1145,8 @@ async function playWavBlobWithAudioContext(
 }
 
 /**
- * Plays an HTMLAudioElement with synchronized word highlighting (Karaoke).
- * Reuses a persistent HTMLAudioElement when available for mobile autoplay compatibility.
+ * Plays an HTMLAudioElement or Web Audio buffer with synchronized word highlighting (Karaoke).
+ * Reuses a persistent shared AudioContext / HTMLAudioElement for mobile autoplay compatibility.
  */
 function playHtmlAudioWithSync(
   audioSrc: string,
@@ -1158,111 +1163,196 @@ function playHtmlAudioWithSync(
 ) {
   clearCurrentAudio();
 
+  const resolvedSrc = resolveAssetUrl(audioSrc);
+  const isJsdom = typeof navigator !== 'undefined' && navigator.userAgent?.includes('jsdom');
+
   const { estimates: fallbackEstimates } = calculateTokenTimeEstimates(tokens, rate);
   const totalEstimatedDuration =
     fallbackEstimates[fallbackEstimates.length - 1]?.endMs || 1000;
 
-  let activeEstimates: TokenTimeEstimate[] =
+  const activeEstimates: TokenTimeEstimate[] =
     callbacks.exactEstimates && callbacks.exactEstimates.length > 0
       ? callbacks.exactEstimates
       : fallbackEstimates;
 
-  const hasExactEstimates = Boolean(
-    callbacks.exactEstimates && callbacks.exactEstimates.length > 0
-  );
+  // On real browsers (especially mobile Chrome/Safari), prefer Web Audio API (sharedAudioContext)
+  // because it plays instantly and is never rejected by mobile autoplay restrictions.
+  if (typeof window !== 'undefined' && !isJsdom) {
+    const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+    if (AudioCtx) {
+      if (!sharedAudioContext) {
+        try {
+          sharedAudioContext = new AudioCtx();
+        } catch {}
+      }
+      if (sharedAudioContext && sharedAudioContext.state === 'suspended') {
+        sharedAudioContext.resume().catch(() => {});
+      }
 
-  const audio = sharedAudioElement || new Audio();
-  audio.src = audioSrc;
-  currentAudio = audio;
+      if (sharedAudioContext) {
+        fetch(resolvedSrc)
+          .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.arrayBuffer();
+          })
+          .then((ab) => sharedAudioContext!.decodeAudioData(ab))
+          .then((audioBuffer) => {
+            clearCurrentAudio();
 
-  let started = false;
-  let finished = false;
+            const source = sharedAudioContext!.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(sharedAudioContext!.destination);
+            activeBufferSource = source;
 
-  const finishPlayback = () => {
-    if (finished) return;
-    finished = true;
-    clearCurrentAudio();
-    callbacks.onEnd?.();
-  };
+            let finished = false;
+            const startCtxTime = sharedAudioContext!.currentTime;
 
-  const updateHighlightFromCurrentTime = () => {
-    if (!currentAudio || finished) return;
-    const elapsedMs = currentAudio.currentTime * 1000;
+            const finishPlayback = () => {
+              if (finished) return;
+              finished = true;
+              clearCurrentAudio();
+              callbacks.onEnd?.();
+            };
 
-    if (callbacks.stopAtMs !== undefined && elapsedMs >= callbacks.stopAtMs) {
+            callbacks.onStart?.();
+            if (tokens.length > 0) {
+              callbacks.onWordHighlight?.(tokens[0].id);
+            }
+
+            syncTimerInterval = setInterval(() => {
+              if (finished || !sharedAudioContext) return;
+              const elapsedMs = (sharedAudioContext.currentTime - startCtxTime) * 1000;
+              if (callbacks.stopAtMs !== undefined && elapsedMs >= callbacks.stopAtMs) {
+                finishPlayback();
+                return;
+              }
+              const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, activeEstimates);
+              if (currentTokenId) {
+                callbacks.onWordHighlight?.(currentTokenId);
+              }
+            }, 20);
+
+            source.onended = () => {
+              finishPlayback();
+            };
+
+            if (callbacks.stopAtMs !== undefined && callbacks.stopAtMs > 0) {
+              source.start(0);
+              source.stop(startCtxTime + callbacks.stopAtMs / 1000);
+            } else {
+              source.start(0);
+            }
+          })
+          .catch((err) => {
+            console.warn('[AudioEngine] Web Audio playback failed, falling back to HTMLAudioElement:', err);
+            playHtmlFallback(resolvedSrc);
+          });
+        return;
+      }
+    }
+  }
+
+  playHtmlFallback(resolvedSrc);
+
+  function playHtmlFallback(src: string) {
+    const hasExactEstimates = Boolean(
+      callbacks.exactEstimates && callbacks.exactEstimates.length > 0
+    );
+
+    let currentFallbackEstimates = activeEstimates;
+    const audio = sharedAudioElement || new Audio();
+    audio.src = src;
+    currentAudio = audio;
+
+    let started = false;
+    let finished = false;
+
+    const finishPlayback = () => {
+      if (finished) return;
+      finished = true;
+      clearCurrentAudio();
+      callbacks.onEnd?.();
+    };
+
+    const updateHighlightFromCurrentTime = () => {
+      if (!currentAudio || finished) return;
+      const elapsedMs = currentAudio.currentTime * 1000;
+
+      if (callbacks.stopAtMs !== undefined && elapsedMs >= callbacks.stopAtMs) {
+        finishPlayback();
+        return;
+      }
+
+      const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, currentFallbackEstimates);
+      if (currentTokenId) {
+        callbacks.onWordHighlight?.(currentTokenId);
+      }
+    };
+
+    const ensureSyncRunning = () => {
+      if (!started) {
+        started = true;
+        callbacks.onStart?.();
+        if (tokens.length > 0) {
+          callbacks.onWordHighlight?.(tokens[0].id);
+        }
+      }
+
+      if (syncTimerInterval === null) {
+        syncTimerInterval = setInterval(() => {
+          if (!currentAudio || currentAudio.paused || finished) return;
+          updateHighlightFromCurrentTime();
+        }, 20);
+      }
+    };
+
+    audio.onloadedmetadata = () => {
+      if (!hasExactEstimates && audio.duration && Number.isFinite(audio.duration)) {
+        const durationMs = audio.duration * 1000;
+        if (durationMs > 0 && totalEstimatedDuration > 0) {
+          const scale = durationMs / totalEstimatedDuration;
+          currentFallbackEstimates = fallbackEstimates.map((e) => ({
+            ...e,
+            startMs: e.startMs * scale,
+            endMs: e.endMs * scale,
+          }));
+        }
+      }
+    };
+
+    audio.onplay = () => {
+      ensureSyncRunning();
+    };
+
+    audio.ontimeupdate = () => {
+      ensureSyncRunning();
+      updateHighlightFromCurrentTime();
+    };
+
+    audio.onended = () => {
       finishPlayback();
-      return;
+    };
+
+    audio.onerror = (e) => {
+      if (finished) return;
+      finished = true;
+      clearCurrentAudio();
+      callbacks.onError?.(e);
+    };
+
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          ensureSyncRunning();
+        })
+        .catch((err) => {
+          if (finished) return;
+          finished = true;
+          clearCurrentAudio();
+          callbacks.onError?.(err);
+        });
     }
-
-    const currentTokenId = mapElapsedTimeToTokenId(elapsedMs, activeEstimates);
-    if (currentTokenId) {
-      callbacks.onWordHighlight?.(currentTokenId);
-    }
-  };
-
-  const ensureSyncRunning = () => {
-    if (!started) {
-      started = true;
-      callbacks.onStart?.();
-      if (tokens.length > 0) {
-        callbacks.onWordHighlight?.(tokens[0].id);
-      }
-    }
-
-    if (syncTimerInterval === null) {
-      syncTimerInterval = setInterval(() => {
-        if (!currentAudio || currentAudio.paused || finished) return;
-        updateHighlightFromCurrentTime();
-      }, 20);
-    }
-  };
-
-  audio.onloadedmetadata = () => {
-    if (!hasExactEstimates && audio.duration && Number.isFinite(audio.duration)) {
-      const durationMs = audio.duration * 1000;
-      if (durationMs > 0 && totalEstimatedDuration > 0) {
-        const scale = durationMs / totalEstimatedDuration;
-        activeEstimates = fallbackEstimates.map((e) => ({
-          ...e,
-          startMs: e.startMs * scale,
-          endMs: e.endMs * scale,
-        }));
-      }
-    }
-  };
-
-  audio.onplay = () => {
-    ensureSyncRunning();
-  };
-
-  audio.ontimeupdate = () => {
-    ensureSyncRunning();
-    updateHighlightFromCurrentTime();
-  };
-
-  audio.onended = () => {
-    finishPlayback();
-  };
-
-  audio.onerror = (e) => {
-    if (finished) return;
-    finished = true;
-    clearCurrentAudio();
-    callbacks.onError?.(e);
-  };
-
-  const playPromise = audio.play();
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        ensureSyncRunning();
-      })
-      .catch((err) => {
-        if (finished) return;
-        finished = true;
-        clearCurrentAudio();
-        callbacks.onError?.(err);
-      });
   }
 }
 
@@ -1429,67 +1519,79 @@ export function playAudioSegment(options: AudioSegmentOptions): void {
 
   // 1. Studio Audio Mode
   if (engine === 'studio-audio') {
-    const studioVoice = getActiveStudioVoice();
-    const studioUrl = getStudioAudioUrl(
-      options.storyId,
-      options.sentenceIndex,
-      options.segmentType,
-      studioVoice
-    );
-    const studioMeta = getStudioSegmentMetadata(
-      options.storyId,
-      options.sentenceIndex,
-      options.segmentType,
-      studioVoice
-    );
+    const fullTokens = options.fullSentenceTokens || options.tokens;
+    const isPrefix =
+      options.tokens.length > 0 &&
+      fullTokens.length > options.tokens.length &&
+      fullTokens[0]?.id === options.tokens[0]?.id;
 
-    if (studioUrl && hasStudioAudio(options.storyId, options.sentenceIndex, options.segmentType) && typeof window !== 'undefined' && !isJsdom) {
-      let exactEstimates: TokenTimeEstimate[] | undefined;
-      let stopAtMs: number | undefined;
+    const isStudioSegmentSupported =
+      options.segmentType === 'full' || (options.segmentType === 'app' && isPrefix);
 
-      if (studioMeta && studioMeta.words.length > 0) {
-        exactEstimates = options.tokens.map((token, idx) => {
-          const wIdx = token.wordIndexInSentence ?? idx;
-          const sw = studioMeta.words[wIdx] || studioMeta.words[idx];
-          return {
-            tokenId: token.id,
-            word: token.word,
-            startMs: idx === 0 ? 0 : sw?.startMs ?? idx * 350,
-            endMs: sw?.endMs ?? (idx + 1) * 350,
-          };
-        });
+    if (isStudioSegmentSupported) {
+      const studioVoice = getActiveStudioVoice();
+      const studioUrl = getStudioAudioUrl(
+        options.storyId,
+        options.sentenceIndex,
+        options.segmentType,
+        studioVoice
+      );
+      const studioMeta = getStudioSegmentMetadata(
+        options.storyId,
+        options.sentenceIndex,
+        options.segmentType,
+        studioVoice
+      );
 
-        // If playing a shorter prefix (e.g. Level 2/3 where child reads 2-3 words),
-        // stop playback right after the last spoken app word
-        if (options.tokens.length < studioMeta.words.length) {
-          const lastSpokenWordMeta = studioMeta.words[options.tokens.length - 1];
-          const nextWordMeta = studioMeta.words[options.tokens.length];
-          if (lastSpokenWordMeta && nextWordMeta) {
-            stopAtMs = (lastSpokenWordMeta.endMs + nextWordMeta.startMs) / 2;
-          } else if (lastSpokenWordMeta) {
-            stopAtMs = lastSpokenWordMeta.endMs + 25;
+      if (studioUrl && hasStudioAudio(options.storyId, options.sentenceIndex, options.segmentType) && typeof window !== 'undefined' && !isJsdom) {
+        let exactEstimates: TokenTimeEstimate[] | undefined;
+        let stopAtMs: number | undefined;
+
+        if (studioMeta && studioMeta.words.length > 0) {
+          exactEstimates = options.tokens.map((token, idx) => {
+            const wIdx = token.wordIndexInSentence ?? idx;
+            const sw = studioMeta.words[wIdx] || studioMeta.words[idx];
+            return {
+              tokenId: token.id,
+              word: token.word,
+              startMs: idx === 0 ? 0 : sw?.startMs ?? idx * 350,
+              endMs: sw?.endMs ?? (idx + 1) * 350,
+            };
+          });
+
+          // If playing a shorter prefix (e.g. Level 2/3 where child reads 2-3 words),
+          // stop playback right after the last spoken app word
+          if (options.tokens.length < studioMeta.words.length) {
+            const lastSpokenWordMeta = studioMeta.words[options.tokens.length - 1];
+            const nextWordMeta = studioMeta.words[options.tokens.length];
+            if (lastSpokenWordMeta && nextWordMeta) {
+              stopAtMs = (lastSpokenWordMeta.endMs + nextWordMeta.startMs) / 2;
+            } else if (lastSpokenWordMeta) {
+              stopAtMs = lastSpokenWordMeta.endMs + 25;
+            }
           }
         }
-      }
 
-      try {
-        playHtmlAudioWithSync(studioUrl, options.tokens, speechRate, {
-          exactEstimates,
-          stopAtMs,
-          onStart: options.onStart,
-          onWordHighlight: options.onWordHighlight,
-          onEnd: options.onEnd,
-          onError: (err) => {
-            console.warn('[AudioEngine] Studio audio failed to play, falling back:', err);
-            playThorstenOrFallback({ ...options, rate: speechRate });
-          },
-        });
-        return;
-      } catch (err) {
-        console.warn('[AudioEngine] Studio audio error, falling back:', err);
+        try {
+          playHtmlAudioWithSync(studioUrl, options.tokens, speechRate, {
+            exactEstimates,
+            stopAtMs,
+            onStart: options.onStart,
+            onWordHighlight: options.onWordHighlight,
+            onEnd: options.onEnd,
+            onError: (err) => {
+              console.warn('[AudioEngine] Studio audio failed to play, falling back:', err);
+              playThorstenOrFallback({ ...options, rate: speechRate });
+            },
+          });
+          return;
+        } catch (err) {
+          console.warn('[AudioEngine] Studio audio error, falling back:', err);
+        }
       }
     }
-    // If no studio audio exists for this story, seamlessly fall back
+    // If no studio audio exists for this story, or if this segment is a suffix after a child's word,
+    // seamlessly fall back to Piper WASM or system TTS
     playThorstenOrFallback({ ...options, rate: speechRate });
     return;
   }
@@ -1506,7 +1608,7 @@ export function playAudioSegment(options: AudioSegmentOptions): void {
 }
 
 /**
- * Plays via Piper WASM (Thorsten, Ramona, Eva K, Kerstin) using full-sentence synthesis and WAV prosody slicing;
+ * Plays via Piper WASM (Thorsten, Kerstin) using full-sentence synthesis and WAV prosody slicing;
  * if environment or download fails, falls back to System TTS.
  */
 async function playThorstenOrFallback(
@@ -1527,22 +1629,47 @@ async function playThorstenOrFallback(
         : options.tokens;
 
     const isAppPrefix =
-      options.tokens.length > 0 && options.tokens.length < fullTokens.length;
+      options.tokens.length > 0 &&
+      fullTokens.length > options.tokens.length &&
+      fullTokens[0]?.id === options.tokens[0]?.id;
 
     const { spokenText: fullSpokenText } = buildSpokenSpans(fullTokens);
-    const fullWavBlob = await synthesizeThorsten(
-      fullSpokenText || options.text,
-      piperVoice,
-      isAppPrefix ? options.tokens.length : undefined
-    );
+    const { spokenText: appSpokenText } = buildSpokenSpans(options.tokens);
 
-    const { blob: segmentBlob, estimates: exactEstimates } =
-      await sliceWavBlobForSegment(
+    let segmentBlob: Blob;
+    let exactEstimates: TokenTimeEstimate[];
+
+    if (isAppPrefix) {
+      const fullWavBlob = await synthesizeThorsten(
+        fullSpokenText || options.text,
+        piperVoice,
+        options.tokens.length
+      );
+
+      const sliced = await sliceWavBlobForSegment(
         fullWavBlob,
         options.tokens,
         fullTokens,
         options.rate ?? 0.9
       );
+      segmentBlob = sliced.blob;
+      exactEstimates = sliced.estimates;
+    } else {
+      // Suffix words (words coming AFTER the child's word) or full sentence:
+      // Synthesize ONLY the segment's actual words, not the sentence prefix!
+      const wavBlob = await synthesizeThorsten(
+        options.text || appSpokenText,
+        piperVoice
+      );
+      const sliced = await sliceWavBlobForSegment(
+        wavBlob,
+        options.tokens,
+        options.tokens,
+        options.rate ?? 0.9
+      );
+      segmentBlob = sliced.blob;
+      exactEstimates = sliced.estimates;
+    }
 
     // Prefer Web Audio API (AudioContext) for synthesized WAV blobs so mobile browsers
     // never block playback after async WASM synthesis
@@ -1598,11 +1725,11 @@ export async function testAudioEngineVoice(
   sampleText: string = 'Hallo! Lass uns zusammen lesen!'
 ): Promise<void> {
   const dummyTokens: WordToken[] = [
-    { id: 't0', word: 'Hallo!', cleanWord: 'Hallo', role: 'app', syllables: ['Hal', 'lo'], status: 'pending' },
-    { id: 't1', word: 'Lass', cleanWord: 'Lass', role: 'app', syllables: ['Lass'], status: 'pending' },
-    { id: 't2', word: 'uns', cleanWord: 'uns', role: 'app', syllables: ['uns'], status: 'pending' },
-    { id: 't3', word: 'zusammen', cleanWord: 'zusammen', role: 'app', syllables: ['zu', 'sam', 'men'], status: 'pending' },
-    { id: 't4', word: 'lesen!', cleanWord: 'lesen', role: 'app', syllables: ['le', 'sen'], status: 'pending' },
+    { id: 't0', word: 'Hallo!', cleanWord: 'Hallo', role: 'app', syllables: ['Hal', 'lo'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 0 },
+    { id: 't1', word: 'Lass', cleanWord: 'Lass', role: 'app', syllables: ['Lass'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 1 },
+    { id: 't2', word: 'uns', cleanWord: 'uns', role: 'app', syllables: ['uns'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 2 },
+    { id: 't3', word: 'zusammen', cleanWord: 'zusammen', role: 'app', syllables: ['zu', 'sam', 'men'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 3 },
+    { id: 't4', word: 'lesen!', cleanWord: 'lesen', role: 'app', syllables: ['le', 'sen'], status: 'pending', sentenceIndex: 0, wordIndexInSentence: 4 },
   ];
 
   if (engine === 'studio-audio') {

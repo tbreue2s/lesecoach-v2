@@ -3,10 +3,60 @@
   "level": 1,
   "episode": 3,
   "disturberWord": "Sofa",
-  "title": "Das weiche Moos-Bett",
+  "title": "Der Dino auf dem Sofa",
   "sentences": [
     {
-      "text": "Müde tapst der schläfrige Anton ans Ufer.",
+      "text": "Mitten im weichen Moos steht ein Sofa.",
+      "words": [
+        {
+          "clean": "Mitten",
+          "syllables": [
+            "Mit",
+            "ten"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "weichen",
+          "syllables": [
+            "wei",
+            "chen"
+          ]
+        },
+        {
+          "clean": "Moos",
+          "syllables": [
+            "Moos"
+          ]
+        },
+        {
+          "clean": "steht",
+          "syllables": [
+            "steht"
+          ]
+        },
+        {
+          "clean": "ein",
+          "syllables": [
+            "ein"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Müde tapst der schwere Dino ans Sofa.",
       "words": [
         {
           "clean": "Müde",
@@ -28,129 +78,23 @@
           ]
         },
         {
-          "clean": "schläfrige",
+          "clean": "schwere",
           "syllables": [
-            "schläf",
-            "ri",
-            "ge"
+            "schwe",
+            "re"
           ]
         },
         {
-          "clean": "Anton",
+          "clean": "Dino",
           "syllables": [
-            "An",
-            "ton"
+            "Di",
+            "no"
           ]
         },
         {
           "clean": "ans",
           "syllables": [
             "ans"
-          ]
-        },
-        {
-          "clean": "Ufer",
-          "syllables": [
-            "U",
-            "fer"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dort leuchtet ein Hügel aus dickem Moos.",
-      "words": [
-        {
-          "clean": "Dort",
-          "syllables": [
-            "Dort"
-          ]
-        },
-        {
-          "clean": "leuchtet",
-          "syllables": [
-            "leuch",
-            "tet"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "Hügel",
-          "syllables": [
-            "Hü",
-            "gel"
-          ]
-        },
-        {
-          "clean": "aus",
-          "syllables": [
-            "aus"
-          ]
-        },
-        {
-          "clean": "dickem",
-          "syllables": [
-            "di",
-            "ckem"
-          ]
-        },
-        {
-          "clean": "Moos",
-          "syllables": [
-            "Moos"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Die weichen Farnblätter formen ein gemütliches Sofa.",
-      "words": [
-        {
-          "clean": "Die",
-          "syllables": [
-            "Die"
-          ]
-        },
-        {
-          "clean": "weichen",
-          "syllables": [
-            "wei",
-            "chen"
-          ]
-        },
-        {
-          "clean": "Farnblätter",
-          "syllables": [
-            "Far",
-            "nblät",
-            "ter"
-          ]
-        },
-        {
-          "clean": "formen",
-          "syllables": [
-            "for",
-            "men"
-          ]
-        },
-        {
-          "clean": "ein",
-          "syllables": [
-            "ein"
-          ]
-        },
-        {
-          "clean": "gemütliches",
-          "syllables": [
-            "ge",
-            "müt",
-            "li",
-            "ches"
           ]
         },
         {
@@ -163,48 +107,100 @@
       ]
     },
     {
-      "text": "Zufrieden schlummert Anton am glitzernden See.",
+      "text": "Mit Schwung plumpst der Dino aufs Sofa.",
       "words": [
         {
-          "clean": "Zufrieden",
+          "clean": "Mit",
           "syllables": [
-            "Zuf",
-            "rie",
-            "den"
+            "Mit"
           ]
         },
         {
-          "clean": "schlummert",
+          "clean": "Schwung",
           "syllables": [
-            "schlum",
-            "mert"
+            "Schwung"
           ]
         },
         {
-          "clean": "Anton",
+          "clean": "plumpst",
           "syllables": [
-            "An",
-            "ton"
+            "plumpst"
           ]
         },
         {
-          "clean": "am",
+          "clean": "der",
           "syllables": [
-            "am"
+            "der"
           ]
         },
         {
-          "clean": "glitzernden",
+          "clean": "Dino",
           "syllables": [
-            "glit",
-            "zer",
-            "nden"
+            "Di",
+            "no"
           ]
         },
         {
-          "clean": "See",
+          "clean": "aufs",
           "syllables": [
-            "See"
+            "aufs"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fest steckt der dicke Dino im Sofa.",
+      "words": [
+        {
+          "clean": "Fest",
+          "syllables": [
+            "Fest"
+          ]
+        },
+        {
+          "clean": "steckt",
+          "syllables": [
+            "steckt"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "dicke",
+          "syllables": [
+            "di",
+            "cke"
+          ]
+        },
+        {
+          "clean": "Dino",
+          "syllables": [
+            "Di",
+            "no"
+          ]
+        },
+        {
+          "clean": "im",
+          "syllables": [
+            "im"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
           ]
         }
       ]

@@ -40,4 +40,11 @@ describe('syllableSplitter (WP06 Task 5 Evidence: German Syllable Division)', ()
     expect(splitSyllables('Haar')).toEqual(['Haar']);
     expect(splitSyllables('Beere')).toEqual(['Bee', 're']);
   });
+
+  it('splits words with prefixes (ver-, zer-, ent-, be-, ge-) correctly', () => {
+    expect(splitSyllables('vergnügt')).toEqual(['ver', 'gnügt']);
+    expect(splitSyllables('vergleichen')).toEqual(['ver', 'glei', 'chen']);
+    expect(splitSyllables('entdeckt')).toEqual(['ent', 'deckt']);
+    expect(splitSyllables('Begrüßung')).toEqual(['Be', 'grü', 'ßung']);
+  });
 });

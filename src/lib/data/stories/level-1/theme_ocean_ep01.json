@@ -3,10 +3,10 @@
   "level": 1,
   "episode": 1,
   "disturberWord": "Nixe",
-  "title": "Das Geheimnis im See",
+  "title": "Die Nixe klaut das Ruder",
   "sentences": [
     {
-      "text": "Lilly paddelt ruhig über den glitzernden See.",
+      "text": "Lilly rudert gemütlich über den weiten See.",
       "words": [
         {
           "clean": "Lilly",
@@ -16,17 +16,18 @@
           ]
         },
         {
-          "clean": "paddelt",
+          "clean": "rudert",
           "syllables": [
-            "pad",
-            "delt"
+            "ru",
+            "dert"
           ]
         },
         {
-          "clean": "ruhig",
+          "clean": "gemütlich",
           "syllables": [
-            "ru",
-            "hig"
+            "ge",
+            "müt",
+            "lich"
           ]
         },
         {
@@ -43,11 +44,10 @@
           ]
         },
         {
-          "clean": "glitzernden",
+          "clean": "weiten",
           "syllables": [
-            "glit",
-            "zer",
-            "nden"
+            "wei",
+            "ten"
           ]
         },
         {
@@ -59,31 +59,20 @@
       ]
     },
     {
-      "text": "Fest hält das Mädchen ihr langes Ruder.",
+      "text": "Plötzlich wackelt ihr kleines hölzernes Boot.",
       "words": [
         {
-          "clean": "Fest",
+          "clean": "Plötzlich",
           "syllables": [
-            "Fest"
+            "Plötz",
+            "lich"
           ]
         },
         {
-          "clean": "hält",
+          "clean": "wackelt",
           "syllables": [
-            "hält"
-          ]
-        },
-        {
-          "clean": "das",
-          "syllables": [
-            "das"
-          ]
-        },
-        {
-          "clean": "Mädchen",
-          "syllables": [
-            "Mäd",
-            "chen"
+            "wa",
+            "ckelt"
           ]
         },
         {
@@ -93,10 +82,68 @@
           ]
         },
         {
-          "clean": "langes",
+          "clean": "kleines",
           "syllables": [
-            "lan",
-            "ges"
+            "klei",
+            "nes"
+          ]
+        },
+        {
+          "clean": "hölzernes",
+          "syllables": [
+            "höl",
+            "zer",
+            "nes"
+          ]
+        },
+        {
+          "clean": "Boot",
+          "syllables": [
+            "Boot"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Eine freche Nixe schnappt nach dem Ruder.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
+            "ne"
+          ]
+        },
+        {
+          "clean": "freche",
+          "syllables": [
+            "fre",
+            "che"
+          ]
+        },
+        {
+          "clean": "Nixe",
+          "syllables": [
+            "Ni",
+            "xe"
+          ]
+        },
+        {
+          "clean": "schnappt",
+          "syllables": [
+            "schnappt"
+          ]
+        },
+        {
+          "clean": "nach",
+          "syllables": [
+            "nach"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
           ]
         },
         {
@@ -109,62 +156,21 @@
       ]
     },
     {
-      "text": "Plötzlich zeigt eine freundliche Nixe eine Perle.",
+      "text": "Lachend kreist Lilly nun auf dem See.",
       "words": [
         {
-          "clean": "Plötzlich",
+          "clean": "Lachend",
           "syllables": [
-            "Plötz",
-            "lich"
+            "La",
+            "chend"
           ]
         },
         {
-          "clean": "zeigt",
+          "clean": "kreist",
           "syllables": [
-            "zeigt"
+            "kreist"
           ]
         },
-        {
-          "clean": "eine",
-          "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "freundliche",
-          "syllables": [
-            "freund",
-            "li",
-            "che"
-          ]
-        },
-        {
-          "clean": "Nixe",
-          "syllables": [
-            "Ni",
-            "xe"
-          ]
-        },
-        {
-          "clean": "eine",
-          "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Perle",
-          "syllables": [
-            "Per",
-            "le"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Lilly betrachtet das Funkeln durch eine Lupe.",
-      "words": [
         {
           "clean": "Lilly",
           "syllables": [
@@ -173,95 +179,27 @@
           ]
         },
         {
-          "clean": "betrachtet",
+          "clean": "nun",
           "syllables": [
-            "be",
-            "trach",
-            "tet"
+            "nun"
           ]
         },
         {
-          "clean": "das",
+          "clean": "auf",
           "syllables": [
-            "das"
+            "auf"
           ]
         },
         {
-          "clean": "Funkeln",
+          "clean": "dem",
           "syllables": [
-            "Fun",
-            "keln"
+            "dem"
           ]
         },
         {
-          "clean": "durch",
+          "clean": "See",
           "syllables": [
-            "durch"
-          ]
-        },
-        {
-          "clean": "eine",
-          "syllables": [
-            "ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "Lupe",
-          "syllables": [
-            "Lu",
-            "pe"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Die Nixe kichert und stibitzt ihren Hut.",
-      "words": [
-        {
-          "clean": "Die",
-          "syllables": [
-            "Die"
-          ]
-        },
-        {
-          "clean": "Nixe",
-          "syllables": [
-            "Ni",
-            "xe"
-          ]
-        },
-        {
-          "clean": "kichert",
-          "syllables": [
-            "ki",
-            "chert"
-          ]
-        },
-        {
-          "clean": "und",
-          "syllables": [
-            "und"
-          ]
-        },
-        {
-          "clean": "stibitzt",
-          "syllables": [
-            "sti",
-            "bitzt"
-          ]
-        },
-        {
-          "clean": "ihren",
-          "syllables": [
-            "ih",
-            "ren"
-          ]
-        },
-        {
-          "clean": "Hut",
-          "syllables": [
-            "Hut"
+            "See"
           ]
         }
       ]

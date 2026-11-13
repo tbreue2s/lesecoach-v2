@@ -2,196 +2,79 @@
   "themeId": "theme_pirate",
   "level": 1,
   "episode": 1,
-  "disturberWord": "Nixe",
-  "title": "Der Weg durch den Nebel",
+  "disturberWord": "Sofa",
+  "title": "Das Sofa auf dem Piraten-Schiff",
   "sentences": [
     {
-      "text": "Finn hält ganz fest das Ruder.",
+      "text": "Anton fischt ein rotes Sofa aus dem Meer.",
       "words": [
         {
-          "clean": "Finn",
+          "clean": "Anton",
           "syllables": [
-            "Finn"
+            "An",
+            "ton"
           ]
         },
         {
-          "clean": "hält",
+          "clean": "fischt",
           "syllables": [
-            "hält"
+            "fischt"
           ]
         },
         {
-          "clean": "ganz",
+          "clean": "ein",
           "syllables": [
-            "ganz"
+            "ein"
           ]
         },
         {
-          "clean": "fest",
+          "clean": "rotes",
           "syllables": [
-            "fest"
+            "ro",
+            "tes"
           ]
         },
         {
-          "clean": "das",
+          "clean": "Sofa",
           "syllables": [
-            "das"
+            "So",
+            "fa"
           ]
         },
         {
-          "clean": "Ruder",
+          "clean": "aus",
           "syllables": [
-            "Ru",
-            "der"
+            "aus"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Meer",
+          "syllables": [
+            "Meer"
           ]
         }
       ]
     },
     {
-      "text": "Dichter Nebel umgibt sein kleines Boot.",
+      "text": "Sofort hüpft der dicke Kater aufs Sofa.",
       "words": [
         {
-          "clean": "Dichter",
+          "clean": "Sofort",
           "syllables": [
-            "Dich",
-            "ter"
+            "So",
+            "fort"
           ]
         },
         {
-          "clean": "Nebel",
+          "clean": "hüpft",
           "syllables": [
-            "Ne",
-            "bel"
-          ]
-        },
-        {
-          "clean": "umgibt",
-          "syllables": [
-            "um",
-            "gibt"
-          ]
-        },
-        {
-          "clean": "sein",
-          "syllables": [
-            "sein"
-          ]
-        },
-        {
-          "clean": "kleines",
-          "syllables": [
-            "klei",
-            "nes"
-          ]
-        },
-        {
-          "clean": "Boot",
-          "syllables": [
-            "Boot"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Eine fröhliche Nixe schenkt ihm Mut.",
-      "words": [
-        {
-          "clean": "Eine",
-          "syllables": [
-            "Ei",
-            "ne"
-          ]
-        },
-        {
-          "clean": "fröhliche",
-          "syllables": [
-            "fröh",
-            "li",
-            "che"
-          ]
-        },
-        {
-          "clean": "Nixe",
-          "syllables": [
-            "Ni",
-            "xe"
-          ]
-        },
-        {
-          "clean": "schenkt",
-          "syllables": [
-            "schenkt"
-          ]
-        },
-        {
-          "clean": "ihm",
-          "syllables": [
-            "ihm"
-          ]
-        },
-        {
-          "clean": "Mut",
-          "syllables": [
-            "Mut"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Sie führt sein Schiff zum Hafen.",
-      "words": [
-        {
-          "clean": "Sie",
-          "syllables": [
-            "Sie"
-          ]
-        },
-        {
-          "clean": "führt",
-          "syllables": [
-            "führt"
-          ]
-        },
-        {
-          "clean": "sein",
-          "syllables": [
-            "sein"
-          ]
-        },
-        {
-          "clean": "Schiff",
-          "syllables": [
-            "Schiff"
-          ]
-        },
-        {
-          "clean": "zum",
-          "syllables": [
-            "zum"
-          ]
-        },
-        {
-          "clean": "Hafen",
-          "syllables": [
-            "Ha",
-            "fen"
-          ]
-        }
-      ]
-    },
-    {
-      "text": "Dort lacht der stolze kleine Pirat.",
-      "words": [
-        {
-          "clean": "Dort",
-          "syllables": [
-            "Dort"
-          ]
-        },
-        {
-          "clean": "lacht",
-          "syllables": [
-            "lacht"
+            "hüpft"
           ]
         },
         {
@@ -201,24 +84,132 @@
           ]
         },
         {
-          "clean": "stolze",
+          "clean": "dicke",
           "syllables": [
-            "stol",
-            "ze"
+            "di",
+            "cke"
           ]
         },
         {
-          "clean": "kleine",
+          "clean": "Kater",
           "syllables": [
-            "klei",
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "aufs",
+          "syllables": [
+            "aufs"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Eine schaukelnde Welle rollt über das Meer.",
+      "words": [
+        {
+          "clean": "Eine",
+          "syllables": [
+            "Ei",
             "ne"
           ]
         },
         {
-          "clean": "Pirat",
+          "clean": "schaukelnde",
           "syllables": [
-            "Pi",
-            "rat"
+            "schau",
+            "kel",
+            "nde"
+          ]
+        },
+        {
+          "clean": "Welle",
+          "syllables": [
+            "Wel",
+            "le"
+          ]
+        },
+        {
+          "clean": "rollt",
+          "syllables": [
+            "rollt"
+          ]
+        },
+        {
+          "clean": "über",
+          "syllables": [
+            "ü",
+            "ber"
+          ]
+        },
+        {
+          "clean": "das",
+          "syllables": [
+            "das"
+          ]
+        },
+        {
+          "clean": "Meer",
+          "syllables": [
+            "Meer"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Rutschig saust der Kater mit dem Sofa.",
+      "words": [
+        {
+          "clean": "Rutschig",
+          "syllables": [
+            "Rut",
+            "schig"
+          ]
+        },
+        {
+          "clean": "saust",
+          "syllables": [
+            "saust"
+          ]
+        },
+        {
+          "clean": "der",
+          "syllables": [
+            "der"
+          ]
+        },
+        {
+          "clean": "Kater",
+          "syllables": [
+            "Ka",
+            "ter"
+          ]
+        },
+        {
+          "clean": "mit",
+          "syllables": [
+            "mit"
+          ]
+        },
+        {
+          "clean": "dem",
+          "syllables": [
+            "dem"
+          ]
+        },
+        {
+          "clean": "Sofa",
+          "syllables": [
+            "So",
+            "fa"
           ]
         }
       ]
