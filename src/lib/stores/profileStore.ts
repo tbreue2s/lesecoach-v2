@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import type { Companion, ProfileState, AudioEngineType } from '../types/profile';
+import type { Companion, ProfileState, AudioEngineType, StudioVoiceId } from '../types/profile';
 import { validateName } from '../utils/validation';
 
 export const STORAGE_KEY = 'lesecoach_profile_v2';
@@ -97,9 +97,9 @@ const initialState: ProfileState = {
   companions: DEFAULT_COMPANIONS,
   isConfigured: false,
   preferredVoiceURI: undefined,
-  audioEngine: 'thorsten-pwa',
+  audioEngine: 'studio-audio',
   selectedPiperVoice: 'de_DE-thorsten-medium',
-  selectedStudioVoice: 'conrad',
+  selectedStudioVoice: 'katja',
 };
 
 function loadStoredProfile(): ProfileState {
@@ -119,7 +119,7 @@ function loadStoredProfile(): ProfileState {
     });
 
     const audioEngine: AudioEngineType =
-      parsed.audioEngine === 'system-tts' ? 'system-tts' : 'thorsten-pwa';
+      parsed.audioEngine === 'thorsten-pwa' ? 'thorsten-pwa' : 'studio-audio';
 
     const validPiperVoices = [
       'de_DE-thorsten-medium',
@@ -129,10 +129,10 @@ function loadStoredProfile(): ProfileState {
       ? parsed.selectedPiperVoice
       : 'de_DE-thorsten-medium';
 
-    const validStudioVoices = ['conrad', 'katja', 'amala'];
+    const validStudioVoices: StudioVoiceId[] = ['conrad', 'katja'];
     const selectedStudioVoice = validStudioVoices.includes(parsed.selectedStudioVoice)
       ? parsed.selectedStudioVoice
-      : 'conrad';
+      : 'katja';
 
     return {
       childName: typeof parsed.childName === 'string' ? parsed.childName : '',

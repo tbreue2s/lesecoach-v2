@@ -1,148 +1,53 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import {
-  rankGermanVoice,
   preprocessGermanText,
-  getGermanVoice,
-  getAvailableGermanVoices,
-  speakSentence,
+  isSpeechSupported,
   stopSpeech,
+  pauseSpeech,
+  resumeSpeech,
+  isSpeaking,
+  isPaused,
 } from './speechService';
 
-describe('SpeechService Voice Quality & Ranking', () => {
-  const mockVoices: SpeechSynthesisVoice[] = [
-    {
-      voiceURI: 'espeak-de',
-      name: 'German (espeak)',
-      lang: 'de-DE',
-      localService: true,
-      default: false,
-    },
-    {
-      voiceURI: 'google-deutsch',
-      name: 'Google Deutsch',
-      lang: 'de-DE',
-      localService: false,
-      default: false,
-    },
-    {
-      voiceURI: 'ms-katja-natural',
-      name: 'Microsoft Katja Online (Natural) - German (Germany)',
-      lang: 'de-DE',
-      localService: false,
-      default: false,
-    },
-    {
-      voiceURI: 'apple-anna-enhanced',
-      name: 'Anna (Enhanced)',
-      lang: 'de-DE',
-      localService: true,
-      default: true,
-    },
-    {
-      voiceURI: 'generic-de',
-      name: 'Marlene',
-      lang: 'de-DE',
-      localService: true,
-      default: false,
-    },
-    {
-      voiceURI: 'en-us-voice',
-      name: 'Google US English',
-      lang: 'en-US',
-      localService: false,
-      default: false,
-    },
-  ];
-
-  beforeEach(() => {
-    (window as any).speechSynthesis = {
-      getVoices: vi.fn().mockReturnValue(mockVoices),
-      speak: vi.fn(),
-      cancel: vi.fn(),
-      pause: vi.fn(),
-      resume: vi.fn(),
-      speaking: false,
-      paused: false,
-      onvoiceschanged: null,
-    };
-    (window as any).SpeechSynthesisUtterance = vi.fn().mockImplementation((text) => ({
-      text,
-      lang: '',
-      rate: 1,
-      pitch: 1,
-      voice: null,
-      onstart: null,
-      onboundary: null,
-      onend: null,
-      onerror: null,
-    }));
+describe('SpeechService (HD Audio Architecture)', () => {
+  it('disables system speech in favor of pre-generated HD audio', () => {
+    expect(isSpeechSupported()).toBe(false);
   });
 
-  afterEach(() => {
-    stopSpeech();
-    vi.restoreAllMocks();
-  });
-
-  it('ranks Natural/Neural/Enhanced voices dramatically higher than generic or espeak voices', () => {
-    const naturalVoice = mockVoices.find((v) => v.name.includes('Natural'))!;
-    const enhancedVoice = mockVoices.find((v) => v.name.includes('Enhanced'))!;
-    const googleVoice = mockVoices.find((v) => v.name.includes('Google Deutsch'))!;
-    const espeakVoice = mockVoices.find((v) => v.name.includes('espeak'))!;
-    const englishVoice = mockVoices.find((v) => v.lang === 'en-US')!;
-
-    expect(rankGermanVoice(naturalVoice)).toBeGreaterThan(rankGermanVoice(googleVoice));
-    expect(rankGermanVoice(enhancedVoice)).toBeGreaterThan(rankGermanVoice(espeakVoice));
-    expect(rankGermanVoice(googleVoice)).toBeGreaterThan(rankGermanVoice(espeakVoice));
-    expect(rankGermanVoice(englishVoice)).toBeLessThan(0);
-    expect(rankGermanVoice(espeakVoice)).toBeLessThan(0);
-  });
-
-  it('filters and sorts available German voices with getAvailableGermanVoices', () => {
-    const voices = getAvailableGermanVoices();
-    expect(voices.length).toBe(5); // 5 German voices out of 6
-    // Top voice must be Microsoft Natural or Apple Enhanced
-    expect(voices[0].name).toContain('Natural');
-    // Lowest ranked voice must be espeak
-    expect(voices[voices.length - 1].name).toContain('espeak');
-  });
-
-  it('selects the highest ranked natural voice by default with getGermanVoice', () => {
-    const bestVoice = getGermanVoice();
-    expect(bestVoice).not.toBeNull();
-    expect(bestVoice?.name).toContain('Natural');
-  });
-
-  it('respects an explicit preferred voice URI', () => {
-    const selected = getGermanVoice('google-deutsch');
-    expect(selected?.voiceURI).toBe('google-deutsch');
-  });
-
-  it('preprocesses German text smoothly (stripping emojis, expanding abbreviations, cleaning quotes)', () => {
-    const raw = '🦦 „Schau mal, z. B. der kleine Dino ... Er läuft schnell!“ 🦕';
+  it('preprocesses German abbreviations cleanly for smooth audio narration', () => {
+    const raw = 'Paul liest z. B. ein Buch, d. h. er übt fleißig u. a. mit Ben usw.';
     const cleaned = preprocessGermanText(raw);
+    expect(cleaned).toContain('zum Beispiel');
+    expect(cleaned).toContain('das heißt');
+    expect(cleaned).toContain('unter anderem');
+    expect(cleaned).toContain('und so weiter');
+  });
 
-    expect(cleaned).not.toContain('🦦');
-    expect(cleaned).not.toContain('🦕');
+  it('removes dialogue quotation marks that some synthesizers pronounce aloud', () => {
+    const raw = '„Hallo Paul!“, rief Bello. »Komm mit!«';
+    const cleaned = preprocessGermanText(raw);
     expect(cleaned).not.toContain('„');
     expect(cleaned).not.toContain('“');
-    expect(cleaned).toContain('zum Beispiel');
-    expect(cleaned).not.toContain('...');
-    expect(cleaned).toContain('der kleine Dino, Er läuft schnell!');
+    expect(cleaned).not.toContain('»');
+    expect(cleaned).not.toContain('«');
+    expect(cleaned).toBe('Hallo Paul!, rief Bello. Komm mit!');
   });
 
-  it('speaks sentences at warm natural rate 0.90 and pitch 1.04 by default', () => {
-    let capturedUtterance: any = null;
-    (window as any).speechSynthesis.speak = vi.fn().mockImplementation((u) => {
-      capturedUtterance = u;
-    });
+  it('normalizes ellipses and dashes to gentle pauses', () => {
+    const raw = 'Der Igel schläft... ganz leise – im Wald.';
+    const cleaned = preprocessGermanText(raw);
+    expect(cleaned).toBe('Der Igel schläft, ganz leise, im Wald.');
+  });
 
-    speakSentence({
-      text: 'Der Zauberer schwingt den Stab.',
-    });
+  it('handles playback state transitions correctly', () => {
+    stopSpeech();
+    expect(isSpeaking()).toBe(false);
+    expect(isPaused()).toBe(false);
 
-    expect(capturedUtterance).not.toBeNull();
-    expect(capturedUtterance.rate).toBe(0.90);
-    expect(capturedUtterance.pitch).toBe(1.04);
-    expect(capturedUtterance.voice?.name).toContain('Natural');
+    pauseSpeech();
+    expect(isPaused()).toBe(true);
+
+    resumeSpeech();
+    expect(isPaused()).toBe(false);
   });
 });

@@ -84,3 +84,28 @@ files generated
   dist/sw.js
   dist/workbox-835c8c05.js
 ```
+
+---
+
+## 4. Addendum: Gemini Studio Audio Pipeline & Acoustic Alignment (Levels 1–4)
+
+1. **Gemini Studio Voices (Kore & Puck):**
+   - Implemented natural Studio Audio generation with Gemini TTS for **Klara** (`Kore`) and **Konrad** (`Puck`).
+   - Covered **Levels 1, 2, 3, and 4** for `theme_forest_ep01`.
+   - Audio assets generated: `sentence_X_full.mp3`, `sentence_X_app.mp3`, `sentence_X_child.mp3`, and `sentence_X_suffix.mp3`.
+   - Assets are stored under `public/audio/stories/level-[1-4]/theme_forest_ep01/voices/{katja,conrad}/` and mirrored directly to the story roots for seamless backwards compatibility.
+
+2. **Automated Acoustic Calibration Algorithm:**
+   - Addressed coarticulation cut bleed (e.g. initial consonant bleed like *M-* from *Moos* into the preceding word *weiche*).
+   - Created dynamic 10-step acoustic calibration (`scripts/generate-gemini-studio-stories.ts` and `scripts/calibrate-cuts.ts`) ensuring 100% complete prior syllables and 0% bleed into subsequent words.
+   - Preserved verified Level 1 Sentence 0 take from `gemini-3.8-flash-tts` cut cleanly at 2.56s.
+
+3. **Audio Engine & Preloading:**
+   - Integrated full support for levels 1–4, prefix, child target word, and suffix clips in `audioEngineService.ts`.
+   - Preloaded `AudioBuffer` directly via Web Audio API (`preloadStoryAudioBuffers`) for instant 0ms playback on target words.
+
+4. **Verification:**
+   - 313 unit tests passed (`vitest run`).
+   - `svelte-check`: 0 errors, 0 warnings.
+   - Production build verified with Vite and `vite-plugin-pwa`.
+

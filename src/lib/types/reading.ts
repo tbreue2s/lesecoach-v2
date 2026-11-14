@@ -70,6 +70,7 @@ export interface SentenceToken {
 export interface GeneratedWord {
   clean: string;
   syllables: string[];
+  role?: TokenRole;
 }
 
 export interface GeneratedSentence {

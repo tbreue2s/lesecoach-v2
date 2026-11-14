@@ -49,6 +49,7 @@ function convertJsonToStoryData(json: any, theme: StoryTheme, childName?: string
         words: s.words?.map((w: any) => ({
           clean: w.clean,
           syllables: w.syllables,
+          role: w.role,
         })) || [],
       })) || [],
     },

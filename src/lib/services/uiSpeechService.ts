@@ -1,4 +1,4 @@
-import { speakText, stripEmojis } from '../utils/speech';
+import { stripEmojis } from '../utils/speech';
 import { resolveAssetUrl } from './audioEngineService';
 
 const UI_AUDIO_MAP: Record<string, string> = {
@@ -27,11 +27,6 @@ export function stopUiSpeech(): void {
       currentUiAudio.currentTime = 0;
     } catch {}
     currentUiAudio = null;
-  }
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    try {
-      window.speechSynthesis.cancel();
-    } catch {}
   }
 }
 
@@ -125,10 +120,6 @@ export async function speakUiText(
 
   // 4. Fallback to generic Studio greeting if it's a greeting phrase
   if (clean.includes('Bereit') || clean.includes('Hallo') || clean.includes('Lese-Begleiter')) {
-    const success = await playAudioUrl('/audio/ui/katja/greeting_generic.mp3');
-    if (success) return;
+    await playAudioUrl('/audio/ui/katja/greeting_generic.mp3');
   }
-
-  // 5. Ultimate fallback to device TTS
-  speakText(clean);
 }

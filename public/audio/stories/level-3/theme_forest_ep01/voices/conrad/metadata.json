@@ -1,0 +1,390 @@
+{
+  "sentence_0_full": {
+    "text": "Der Pfad raschelt leise.",
+    "words": [
+      {
+        "word": "Der",
+        "startMs": 80,
+        "endMs": 260
+      },
+      {
+        "word": "Pfad",
+        "startMs": 260,
+        "endMs": 760
+      },
+      {
+        "word": "raschelt",
+        "startMs": 880,
+        "endMs": 1460
+      },
+      {
+        "word": "leise.",
+        "startMs": 1540,
+        "endMs": 2140
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_0_full.mp3"
+  },
+  "sentence_1_full": {
+    "text": "Alte Bäume wiegen sich sanft im Wind.",
+    "words": [
+      {
+        "word": "Alte",
+        "startMs": 100,
+        "endMs": 460
+      },
+      {
+        "word": "Bäume",
+        "startMs": 460,
+        "endMs": 1050
+      },
+      {
+        "word": "wiegen",
+        "startMs": 1150,
+        "endMs": 1680
+      },
+      {
+        "word": "sich",
+        "startMs": 1680,
+        "endMs": 2050
+      },
+      {
+        "word": "sanft",
+        "startMs": 2080,
+        "endMs": 2660
+      },
+      {
+        "word": "im",
+        "startMs": 2720,
+        "endMs": 2920
+      },
+      {
+        "word": "Wind.",
+        "startMs": 2920,
+        "endMs": 3460
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_1_full.mp3"
+  },
+  "sentence_1_app": {
+    "text": "Alte Bäume wiegen",
+    "words": [
+      {
+        "word": "Alte",
+        "startMs": 100,
+        "endMs": 460
+      },
+      {
+        "word": "Bäume",
+        "startMs": 460,
+        "endMs": 1050
+      },
+      {
+        "word": "wiegen",
+        "startMs": 1150,
+        "endMs": 1680
+      }
+    ],
+    "cutMs": 1775,
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_1_app.mp3"
+  },
+  "sentence_1_child": {
+    "text": "sich sanft im Wind",
+    "words": [
+      {
+        "word": "sich",
+        "startMs": 1680,
+        "endMs": 2050
+      },
+      {
+        "word": "sanft",
+        "startMs": 2080,
+        "endMs": 2660
+      },
+      {
+        "word": "im",
+        "startMs": 2720,
+        "endMs": 2920
+      },
+      {
+        "word": "Wind.",
+        "startMs": 2920,
+        "endMs": 3460
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_1_child.mp3"
+  },
+  "sentence_2_full": {
+    "text": "Dort steht ein Klavier!",
+    "words": [
+      {
+        "word": "Dort",
+        "startMs": 80,
+        "endMs": 380
+      },
+      {
+        "word": "steht",
+        "startMs": 380,
+        "endMs": 740
+      },
+      {
+        "word": "ein",
+        "startMs": 740,
+        "endMs": 900
+      },
+      {
+        "word": "Klavier!",
+        "startMs": 900,
+        "endMs": 1580
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_2_full.mp3"
+  },
+  "sentence_3_full": {
+    "text": "Es ruht mitten im weichen, grünen Moos.",
+    "words": [
+      {
+        "word": "Es",
+        "startMs": 120,
+        "endMs": 300
+      },
+      {
+        "word": "ruht",
+        "startMs": 300,
+        "endMs": 840
+      },
+      {
+        "word": "mitten",
+        "startMs": 900,
+        "endMs": 1280
+      },
+      {
+        "word": "im",
+        "startMs": 1280,
+        "endMs": 1450
+      },
+      {
+        "word": "weichen,",
+        "startMs": 1450,
+        "endMs": 2060
+      },
+      {
+        "word": "grünen",
+        "startMs": 2140,
+        "endMs": 2740
+      },
+      {
+        "word": "Moos.",
+        "startMs": 2820,
+        "endMs": 3460
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_3_full.mp3"
+  },
+  "sentence_3_app": {
+    "text": "Es ruht mitten",
+    "words": [
+      {
+        "word": "Es",
+        "startMs": 120,
+        "endMs": 300
+      },
+      {
+        "word": "ruht",
+        "startMs": 300,
+        "endMs": 840
+      },
+      {
+        "word": "mitten",
+        "startMs": 900,
+        "endMs": 1280
+      }
+    ],
+    "cutMs": 1200,
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_3_app.mp3"
+  },
+  "sentence_3_child": {
+    "text": "im weichen grünen Moos",
+    "words": [
+      {
+        "word": "im",
+        "startMs": 1280,
+        "endMs": 1450
+      },
+      {
+        "word": "weichen,",
+        "startMs": 1450,
+        "endMs": 2060
+      },
+      {
+        "word": "grünen",
+        "startMs": 2140,
+        "endMs": 2740
+      },
+      {
+        "word": "Moos.",
+        "startMs": 2820,
+        "endMs": 3460
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_3_child.mp3"
+  },
+  "sentence_4_full": {
+    "text": "Ein kleiner Igel drückt mutig.",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 40,
+        "endMs": 260
+      },
+      {
+        "word": "kleiner",
+        "startMs": 280,
+        "endMs": 720
+      },
+      {
+        "word": "Igel",
+        "startMs": 760,
+        "endMs": 1160
+      },
+      {
+        "word": "drückt",
+        "startMs": 1200,
+        "endMs": 1660
+      },
+      {
+        "word": "mutig",
+        "startMs": 1680,
+        "endMs": 2320
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_4_full.mp3"
+  },
+  "sentence_4_app": {
+    "text": "Ein",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 40,
+        "endMs": 260
+      }
+    ],
+    "cutMs": 190,
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_4_app.mp3"
+  },
+  "sentence_4_child": {
+    "text": "kleiner Igel drückt mutig",
+    "words": [
+      {
+        "word": "kleiner",
+        "startMs": 280,
+        "endMs": 720
+      },
+      {
+        "word": "Igel",
+        "startMs": 760,
+        "endMs": 1160
+      },
+      {
+        "word": "drückt",
+        "startMs": 1200,
+        "endMs": 1660
+      },
+      {
+        "word": "mutig",
+        "startMs": 1680,
+        "endMs": 2320
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_4_child.mp3"
+  },
+  "sentence_5_full": {
+    "text": "Der helle Ton kitzelt alle seine Stacheln.",
+    "words": [
+      {
+        "word": "Der",
+        "startMs": 180,
+        "endMs": 400
+      },
+      {
+        "word": "helle",
+        "startMs": 400,
+        "endMs": 760
+      },
+      {
+        "word": "Ton",
+        "startMs": 800,
+        "endMs": 1300
+      },
+      {
+        "word": "kitzelt",
+        "startMs": 1520,
+        "endMs": 2060
+      },
+      {
+        "word": "alle",
+        "startMs": 2120,
+        "endMs": 2400
+      },
+      {
+        "word": "seine",
+        "startMs": 2440,
+        "endMs": 2800
+      },
+      {
+        "word": "Stacheln.",
+        "startMs": 2840,
+        "endMs": 3520
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_5_full.mp3"
+  },
+  "sentence_5_app": {
+    "text": "Der helle",
+    "words": [
+      {
+        "word": "Der",
+        "startMs": 180,
+        "endMs": 400
+      },
+      {
+        "word": "helle",
+        "startMs": 400,
+        "endMs": 760
+      }
+    ],
+    "cutMs": 770,
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_5_app.mp3"
+  },
+  "sentence_5_child": {
+    "text": "Ton kitzelt alle seine Stacheln",
+    "words": [
+      {
+        "word": "Ton",
+        "startMs": 800,
+        "endMs": 1300
+      },
+      {
+        "word": "kitzelt",
+        "startMs": 1520,
+        "endMs": 2060
+      },
+      {
+        "word": "alle",
+        "startMs": 2120,
+        "endMs": 2400
+      },
+      {
+        "word": "seine",
+        "startMs": 2440,
+        "endMs": 2800
+      },
+      {
+        "word": "Stacheln.",
+        "startMs": 2840,
+        "endMs": 3520
+      }
+    ],
+    "file": "/audio/stories/level-3/theme_forest_ep01/voices/conrad/sentence_5_child.mp3"
+  }
+}

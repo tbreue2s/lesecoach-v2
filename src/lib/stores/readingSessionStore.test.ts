@@ -2,7 +2,6 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { readingSessionStore, calculateWordComplexity } from './readingSessionStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
-import * as speechService from '../services/speechService';
 import * as speechRecognitionService from '../services/speechRecognitionService';
 import type { ReadingSessionState, StoryData } from '../types/reading';
 
@@ -47,21 +46,9 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
     const startListeningSpy = vi.spyOn(speechRecognitionService, 'startListening').mockReturnValue(true);
 
     readingSessionStore.loadStory(testStoryL1, 1, 'Bello');
-
-    let capturedOptions: speechService.SpeakOptions | null = null;
-    vi.spyOn(speechService, 'speakSentence').mockImplementation((options: speechService.SpeakOptions) => {
-      capturedOptions = options;
-      options.onStart?.({} as SpeechSynthesisEvent);
-      options.onBoundary?.({ charIndex: 0 } as SpeechSynthesisEvent);
-      options.onEnd?.({} as SpeechSynthesisEvent);
-      return true;
-    });
-
     readingSessionStore.startSentenceReading();
 
     const state: ReadingSessionState = get(readingSessionStore);
-    expect(speechService.speakSentence).toHaveBeenCalled();
-    expect((capturedOptions as speechService.SpeakOptions | null)?.text).toBeTruthy();
     expect(state.turnState).toBe('CHILD_TURN');
     expect(state.activeWordTokenId).toBeTruthy();
     expect(state.isListening).toBe(true);
@@ -78,12 +65,6 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
     vi.spyOn(speechRecognitionService, 'startListening').mockReturnValue(true);
 
     readingSessionStore.loadStory(testStoryL1, 1, 'Bello');
-
-    vi.spyOn(speechService, 'speakSentence').mockImplementation((options: speechService.SpeakOptions) => {
-      options.onEnd?.({} as SpeechSynthesisEvent);
-      return true;
-    });
-
     readingSessionStore.startSentenceReading();
 
     let state = get(readingSessionStore);
@@ -107,29 +88,14 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
 
   it('resumes TTS after child finishes word and triggers Repeated Reading for Level 4', () => {
     readingSessionStore.loadStory(SAMPLE_STORIES[0], 4, 'Bello');
-
-    let speakCount = 0;
-    vi.spyOn(speechService, 'speakSentence').mockImplementation((options: speechService.SpeakOptions) => {
-      speakCount++;
-      options.onEnd?.({} as SpeechSynthesisEvent);
-      return true;
-    });
-
     readingSessionStore.startSentenceReading();
 
     const state = get(readingSessionStore);
     expect(state.level).toBe(4);
-    expect(speakCount).toBeGreaterThan(0);
   });
 
   it('allows manual click on active word to advance with success chime as accessibility fallback', () => {
     readingSessionStore.loadStory(testStoryL1, 1, 'Bello');
-
-    vi.spyOn(speechService, 'speakSentence').mockImplementation((options: speechService.SpeakOptions) => {
-      options.onEnd?.({} as SpeechSynthesisEvent);
-      return true;
-    });
-
     readingSessionStore.startSentenceReading();
 
     const stateBefore = get(readingSessionStore);
@@ -144,14 +110,82 @@ describe('Reading Session Store & Tandem Engine (WP06 Evidence)', () => {
     expect(stateAfter.starsEarned).toBeGreaterThan(0);
   });
 
+  it('supports word-by-word reading in Level 2 without muting mic until all child words complete', () => {
+    const stopListeningSpy = vi.spyOn(speechRecognitionService, 'stopListening');
+    vi.spyOn(speechRecognitionService, 'startListening').mockReturnValue(true);
+
+    const testStoryL2: StoryData = {
+      id: 'test-story-l2',
+      title: 'Level 2 Test',
+      coverEmoji: '🌲',
+      levelSuitability: [2],
+      text: 'Ein leiser Wind weht leise.',
+    };
+
+    readingSessionStore.loadStory(testStoryL2, 2, 'Bello');
+    readingSessionStore.startSentenceReading();
+
+    let state = get(readingSessionStore);
+    expect(state.turnState).toBe('CHILD_TURN');
+    stopListeningSpy.mockClear();
+
+    const childWords = state.sentences[0].words.filter((w) => w.role === 'child');
+    expect(childWords.length).toBe(2);
+
+    // 1. Read first child word ("leiser")
+    readingSessionStore.simulateSpokenWord(childWords[0].cleanWord);
+
+    // Microphone remains OPEN!
+    expect(stopListeningSpy).not.toHaveBeenCalled();
+    state = get(readingSessionStore);
+    expect(state.isListening).toBe(true);
+    expect(childWords[0].status).toBe('success');
+    expect(childWords[1].status).toBe('pending');
+    expect(state.activeWordTokenId).toBe(childWords[1].id);
+
+    // 2. Read second child word ("Wind")
+    readingSessionStore.simulateSpokenWord(childWords[1].cleanWord);
+
+    // Now all child words of this sentence are done: mic is muted!
+    expect(stopListeningSpy).toHaveBeenCalled();
+    state = get(readingSessionStore);
+    expect(childWords[1].status).toBe('success');
+  });
+
+  it('supports reading consecutive child words in one single breath', () => {
+    const stopListeningSpy = vi.spyOn(speechRecognitionService, 'stopListening');
+    vi.spyOn(speechRecognitionService, 'startListening').mockReturnValue(true);
+
+    const testStoryL2: StoryData = {
+      id: 'test-story-l2-fluent',
+      title: 'Level 2 Fluent Test',
+      coverEmoji: '🌲',
+      levelSuitability: [2],
+      text: 'Ein leiser Wind weht leise.',
+    };
+
+    readingSessionStore.loadStory(testStoryL2, 2, 'Bello');
+    readingSessionStore.startSentenceReading();
+
+    let state = get(readingSessionStore);
+    expect(state.turnState).toBe('CHILD_TURN');
+    stopListeningSpy.mockClear();
+
+    const childWords = state.sentences[0].words.filter((w) => w.role === 'child');
+    expect(childWords.length).toBe(2);
+
+    // Read both words in one breath ("leiser Wind")
+    readingSessionStore.simulateSpokenWord(`${childWords[0].cleanWord} ${childWords[1].cleanWord}`);
+
+    // Completed all child words at once!
+    expect(stopListeningSpy).toHaveBeenCalled();
+    state = get(readingSessionStore);
+    expect(childWords[0].status).toBe('success');
+    expect(childWords[1].status).toBe('success');
+  });
+
   it('activates intervention flag on active token when triggerIntervention is called', () => {
     readingSessionStore.loadStory(testStoryL1, 1, 'Bello');
-
-    vi.spyOn(speechService, 'speakSentence').mockImplementation((options: speechService.SpeakOptions) => {
-      options.onEnd?.({} as SpeechSynthesisEvent);
-      return true;
-    });
-
     readingSessionStore.startSentenceReading();
 
     const state = get(readingSessionStore);

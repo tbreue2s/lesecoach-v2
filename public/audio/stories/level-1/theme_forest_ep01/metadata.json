@@ -1,382 +1,358 @@
 {
   "sentence_0_full": {
-    "text": "Paul wandert leise über den feuchten Boden.",
+    "text": "Paul wandert leise über das weiche Moos.",
     "words": [
       {
         "word": "Paul",
-        "startMs": 102.6,
-        "endMs": 392.1
+        "startMs": 0,
+        "endMs": 460
       },
       {
         "word": "wandert",
-        "startMs": 405.2,
-        "endMs": 773.6
+        "startMs": 460,
+        "endMs": 980
       },
       {
         "word": "leise",
-        "startMs": 813.2,
-        "endMs": 1155.3
+        "startMs": 980,
+        "endMs": 1540
       },
       {
         "word": "über",
-        "startMs": 1234.2,
-        "endMs": 1379.0
+        "startMs": 1540,
+        "endMs": 1950
       },
       {
-        "word": "den",
-        "startMs": 1418.4,
-        "endMs": 1550.0
+        "word": "das",
+        "startMs": 1950,
+        "endMs": 2220
       },
       {
-        "word": "feuchten",
-        "startMs": 1576.3,
-        "endMs": 2120.0
+        "word": "weiche",
+        "startMs": 2220,
+        "endMs": 2560
       },
       {
-        "word": "Boden",
-        "startMs": 2136.0,
-        "endMs": 2418.4
+        "word": "Moos.",
+        "startMs": 2560,
+        "endMs": 3440
       }
     ],
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_0_full.mp3"
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_0_full.mp3"
   },
   "sentence_0_app": {
-    "text": "Paul wandert leise über den feuchten",
+    "text": "Paul wandert leise über das weiche",
     "words": [
       {
         "word": "Paul",
-        "startMs": 102.6,
-        "endMs": 445.2
+        "startMs": 0,
+        "endMs": 460
       },
       {
         "word": "wandert",
-        "startMs": 405.2,
-        "endMs": 833.6
+        "startMs": 460,
+        "endMs": 980
       },
       {
         "word": "leise",
-        "startMs": 813.2,
-        "endMs": 1215.3
+        "startMs": 980,
+        "endMs": 1540
       },
       {
         "word": "über",
-        "startMs": 1234.2,
-        "endMs": 1439.0
+        "startMs": 1540,
+        "endMs": 1950
       },
       {
-        "word": "den",
-        "startMs": 1418.4,
-        "endMs": 1610.0
+        "word": "das",
+        "startMs": 1950,
+        "endMs": 2220
       },
       {
-        "word": "feuchten",
-        "startMs": 1576.3,
-        "endMs": 2120.0
+        "word": "weiche",
+        "startMs": 2220,
+        "endMs": 2560
       }
     ],
-    "cutMs": 2128.0,
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_0_app.mp3"
+    "cutMs": 2560,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_0_app.mp3"
+  },
+  "sentence_0_child": {
+    "text": "Moos",
+    "words": [
+      {
+        "word": "Moos.",
+        "startMs": 2560,
+        "endMs": 3440
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_0_child.mp3"
   },
   "sentence_1_full": {
-    "text": "Plötzlich steht ein altes Klavier im Moos.",
+    "text": "Mitten im Wald steht ein rotes Sofa.",
     "words": [
       {
-        "word": "Plötzlich",
-        "startMs": 102.6,
-        "endMs": 628.9
-      },
-      {
-        "word": "steht",
-        "startMs": 681.6,
-        "endMs": 905.3
-      },
-      {
-        "word": "ein",
-        "startMs": 971.0,
-        "endMs": 1115.8
-      },
-      {
-        "word": "altes",
-        "startMs": 1181.6,
-        "endMs": 1497.4
-      },
-      {
-        "word": "Klavier",
-        "startMs": 1563.2,
-        "endMs": 1918.4
+        "word": "Mitten",
+        "startMs": 80,
+        "endMs": 440
       },
       {
         "word": "im",
-        "startMs": 1984.2,
-        "endMs": 2117.0
+        "startMs": 440,
+        "endMs": 580
       },
       {
-        "word": "Moos",
-        "startMs": 2133.0,
-        "endMs": 2431.6
+        "word": "Wald",
+        "startMs": 580,
+        "endMs": 1140
+      },
+      {
+        "word": "steht",
+        "startMs": 1380,
+        "endMs": 1820
+      },
+      {
+        "word": "ein",
+        "startMs": 1820,
+        "endMs": 2040
+      },
+      {
+        "word": "rotes",
+        "startMs": 2040,
+        "endMs": 2510
+      },
+      {
+        "word": "Sofa.",
+        "startMs": 2510,
+        "endMs": 3200
       }
     ],
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_1_full.mp3"
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_1_full.mp3"
   },
   "sentence_1_app": {
-    "text": "Plötzlich steht ein altes Klavier im",
+    "text": "Mitten im Wald steht ein rotes",
     "words": [
       {
-        "word": "Plötzlich",
-        "startMs": 102.6,
-        "endMs": 688.9
-      },
-      {
-        "word": "steht",
-        "startMs": 681.6,
-        "endMs": 965.3
-      },
-      {
-        "word": "ein",
-        "startMs": 971.0,
-        "endMs": 1175.8
-      },
-      {
-        "word": "altes",
-        "startMs": 1181.6,
-        "endMs": 1557.4
-      },
-      {
-        "word": "Klavier",
-        "startMs": 1563.2,
-        "endMs": 1978.4
+        "word": "Mitten",
+        "startMs": 80,
+        "endMs": 440
       },
       {
         "word": "im",
-        "startMs": 1984.2,
-        "endMs": 2117.0
-      }
-    ],
-    "cutMs": 2125.0,
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_1_app.mp3"
-  },
-  "sentence_2_full": {
-    "text": "Aus dem dichten Gebüsch tappt ein Igel.",
-    "words": [
-      {
-        "word": "Aus",
-        "startMs": 102.6,
-        "endMs": 352.6
+        "startMs": 440,
+        "endMs": 580
       },
       {
-        "word": "dem",
-        "startMs": 392.1,
-        "endMs": 563.1
+        "word": "Wald",
+        "startMs": 580,
+        "endMs": 1140
       },
       {
-        "word": "dichten",
-        "startMs": 589.5,
-        "endMs": 918.5
-      },
-      {
-        "word": "Gebüsch",
-        "startMs": 957.9,
-        "endMs": 1286.9
-      },
-      {
-        "word": "tappt",
-        "startMs": 1339.5,
-        "endMs": 1563.2
+        "word": "steht",
+        "startMs": 1380,
+        "endMs": 1820
       },
       {
         "word": "ein",
-        "startMs": 1629.0,
-        "endMs": 1864.0
+        "startMs": 1820,
+        "endMs": 2040
+      },
+      {
+        "word": "rotes",
+        "startMs": 2040,
+        "endMs": 2510
+      }
+    ],
+    "cutMs": 2780,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_1_app.mp3"
+  },
+  "sentence_1_child": {
+    "text": "Sofa",
+    "words": [
+      {
+        "word": "Sofa.",
+        "startMs": 2510,
+        "endMs": 3200
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_1_child.mp3"
+  },
+  "sentence_2_full": {
+    "text": "Darauf schläft friedlich ein kleiner dicker Igel.",
+    "words": [
+      {
+        "word": "Darauf",
+        "startMs": 80,
+        "endMs": 680
+      },
+      {
+        "word": "schläft",
+        "startMs": 740,
+        "endMs": 1280
+      },
+      {
+        "word": "friedlich",
+        "startMs": 1400,
+        "endMs": 2120
+      },
+      {
+        "word": "ein",
+        "startMs": 2200,
+        "endMs": 2360
+      },
+      {
+        "word": "kleiner",
+        "startMs": 2360,
+        "endMs": 2850
+      },
+      {
+        "word": "dicker",
+        "startMs": 2920,
+        "endMs": 3400
+      },
+      {
+        "word": "Igel.",
+        "startMs": 3480,
+        "endMs": 4100
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_2_full.mp3"
+  },
+  "sentence_2_app": {
+    "text": "Darauf schläft friedlich ein kleiner dicker",
+    "words": [
+      {
+        "word": "Darauf",
+        "startMs": 80,
+        "endMs": 680
+      },
+      {
+        "word": "schläft",
+        "startMs": 740,
+        "endMs": 1280
+      },
+      {
+        "word": "friedlich",
+        "startMs": 1400,
+        "endMs": 2120
+      },
+      {
+        "word": "ein",
+        "startMs": 2200,
+        "endMs": 2360
+      },
+      {
+        "word": "kleiner",
+        "startMs": 2360,
+        "endMs": 2850
+      },
+      {
+        "word": "dicker",
+        "startMs": 2920,
+        "endMs": 3400
+      }
+    ],
+    "cutMs": 3465,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_2_app.mp3"
+  },
+  "sentence_2_child": {
+    "text": "Igel",
+    "words": [
+      {
+        "word": "Igel.",
+        "startMs": 3480,
+        "endMs": 4100
+      }
+    ],
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_2_child.mp3"
+  },
+  "sentence_3_full": {
+    "text": "Kichernd rollt der Igel vom weichen Sofa.",
+    "words": [
+      {
+        "word": "Kichernd",
+        "startMs": 80,
+        "endMs": 780
+      },
+      {
+        "word": "rollt",
+        "startMs": 800,
+        "endMs": 1160
+      },
+      {
+        "word": "der",
+        "startMs": 1160,
+        "endMs": 1330
       },
       {
         "word": "Igel",
-        "startMs": 1880.0,
-        "endMs": 2155.3
+        "startMs": 1330,
+        "endMs": 1760
+      },
+      {
+        "word": "vom",
+        "startMs": 1780,
+        "endMs": 2010
+      },
+      {
+        "word": "weichen",
+        "startMs": 2010,
+        "endMs": 2420
+      },
+      {
+        "word": "Sofa.",
+        "startMs": 2440,
+        "endMs": 2960
       }
     ],
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_2_full.mp3"
-  },
-  "sentence_2_app": {
-    "text": "Aus dem dichten Gebüsch tappt ein",
-    "words": [
-      {
-        "word": "Aus",
-        "startMs": 102.6,
-        "endMs": 412.6
-      },
-      {
-        "word": "dem",
-        "startMs": 392.1,
-        "endMs": 623.1
-      },
-      {
-        "word": "dichten",
-        "startMs": 589.5,
-        "endMs": 978.5
-      },
-      {
-        "word": "Gebüsch",
-        "startMs": 957.9,
-        "endMs": 1346.9
-      },
-      {
-        "word": "tappt",
-        "startMs": 1339.5,
-        "endMs": 1623.2
-      },
-      {
-        "word": "ein",
-        "startMs": 1629.0,
-        "endMs": 1864.0
-      }
-    ],
-    "cutMs": 1872.0,
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_2_app.mp3"
-  },
-  "sentence_3_full": {
-    "text": "Mit der Pfote drückt er eine Note.",
-    "words": [
-      {
-        "word": "Mit",
-        "startMs": 102.6,
-        "endMs": 286.8
-      },
-      {
-        "word": "der",
-        "startMs": 300.0,
-        "endMs": 431.6
-      },
-      {
-        "word": "Pfote",
-        "startMs": 484.2,
-        "endMs": 813.2
-      },
-      {
-        "word": "drückt",
-        "startMs": 865.8,
-        "endMs": 1142.1
-      },
-      {
-        "word": "er",
-        "startMs": 1221.0,
-        "endMs": 1326.2
-      },
-      {
-        "word": "eine",
-        "startMs": 1392.1,
-        "endMs": 1704.0
-      },
-      {
-        "word": "Note",
-        "startMs": 1720.0,
-        "endMs": 2036.8
-      }
-    ],
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_3_full.mp3"
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_3_full.mp3"
   },
   "sentence_3_app": {
-    "text": "Mit der Pfote drückt er eine",
+    "text": "Kichernd rollt der Igel vom weichen",
     "words": [
       {
-        "word": "Mit",
-        "startMs": 102.6,
-        "endMs": 340.0
+        "word": "Kichernd",
+        "startMs": 80,
+        "endMs": 780
+      },
+      {
+        "word": "rollt",
+        "startMs": 800,
+        "endMs": 1160
       },
       {
         "word": "der",
-        "startMs": 300.0,
-        "endMs": 491.6
+        "startMs": 1160,
+        "endMs": 1330
       },
       {
-        "word": "Pfote",
-        "startMs": 484.2,
-        "endMs": 873.2
+        "word": "Igel",
+        "startMs": 1330,
+        "endMs": 1760
       },
       {
-        "word": "drückt",
-        "startMs": 865.8,
-        "endMs": 1202.1
+        "word": "vom",
+        "startMs": 1780,
+        "endMs": 2010
       },
       {
-        "word": "er",
-        "startMs": 1221.0,
-        "endMs": 1386.2
-      },
-      {
-        "word": "eine",
-        "startMs": 1392.1,
-        "endMs": 1704.0
+        "word": "weichen",
+        "startMs": 2010,
+        "endMs": 2420
       }
     ],
-    "cutMs": 1712.0,
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_3_app.mp3"
+    "cutMs": 2455,
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_3_app.mp3"
   },
-  "sentence_4_full": {
-    "text": "Glücklich lauscht Paul im dichten Klee.",
+  "sentence_3_child": {
+    "text": "Sofa",
     "words": [
       {
-        "word": "Glücklich",
-        "startMs": 102.6,
-        "endMs": 576.3
-      },
-      {
-        "word": "lauscht",
-        "startMs": 615.8,
-        "endMs": 918.4
-      },
-      {
-        "word": "Paul",
-        "startMs": 1010.5,
-        "endMs": 1247.3
-      },
-      {
-        "word": "im",
-        "startMs": 1300.0,
-        "endMs": 1431.6
-      },
-      {
-        "word": "dichten",
-        "startMs": 1457.9,
-        "endMs": 1882.0
-      },
-      {
-        "word": "Klee",
-        "startMs": 1898.0,
-        "endMs": 2102.7
+        "word": "Sofa.",
+        "startMs": 2440,
+        "endMs": 2960
       }
     ],
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_4_full.mp3"
-  },
-  "sentence_4_app": {
-    "text": "Glücklich lauscht Paul im dichten",
-    "words": [
-      {
-        "word": "Glücklich",
-        "startMs": 102.6,
-        "endMs": 636.3
-      },
-      {
-        "word": "lauscht",
-        "startMs": 615.8,
-        "endMs": 978.4
-      },
-      {
-        "word": "Paul",
-        "startMs": 1010.5,
-        "endMs": 1307.3
-      },
-      {
-        "word": "im",
-        "startMs": 1300.0,
-        "endMs": 1491.6
-      },
-      {
-        "word": "dichten",
-        "startMs": 1457.9,
-        "endMs": 1882.0
-      }
-    ],
-    "cutMs": 1890.0,
-    "file": "/audio/stories/level-1/theme_forest_ep01/sentence_4_app.mp3"
+    "file": "/audio/stories/level-1/theme_forest_ep01/voices/katja/sentence_3_child.mp3"
   }
 }

@@ -94,7 +94,7 @@
               class:is-pair-end={token.role === 'child' && wIndex > 0 && sentence.words[wIndex - 1].role === 'child' && (wIndex === sentence.words.length - 1 || sentence.words[wIndex + 1].role !== 'child')}
               class:is-pair-middle={token.role === 'child' && wIndex > 0 && sentence.words[wIndex - 1].role === 'child' && wIndex < sentence.words.length - 1 && sentence.words[wIndex + 1].role === 'child'}
               class:status-active={token.id === session.activeWordTokenId && session.turnState === 'CHILD_TURN'}
-              class:flash-success={token.id === session.isSuccessFlashingTokenId}
+              class:flash-success={Boolean(session.isSuccessFlashingTokenId && session.isSuccessFlashingTokenId.split(',').includes(token.id))}
               class:karaoke-active={token.id === session.karaokeWordTokenId}
               class:status-success={token.role === 'child' && token.status === 'success'}
               class:has-syllables={shouldShowSyllables(token)}

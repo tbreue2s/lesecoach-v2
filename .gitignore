@@ -26,3 +26,9 @@ dist-ssr
 # Large local ONNX voice models
 public/wasm/*.onnx
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
+

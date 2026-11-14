@@ -12,27 +12,31 @@
           "clean": "Der",
           "syllables": [
             "Der"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Pfad",
           "syllables": [
             "Pfad"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "raschelt",
           "syllables": [
             "ra",
             "schelt"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "leise",
           "syllables": [
             "lei",
             "se"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -44,45 +48,52 @@
           "syllables": [
             "Al",
             "te"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Bäume",
           "syllables": [
             "Bäu",
             "me"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "wiegen",
           "syllables": [
             "wie",
             "gen"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "sich",
           "syllables": [
             "sich"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "sanft",
           "syllables": [
             "sanft"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "im",
           "syllables": [
             "im"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Wind",
           "syllables": [
             "Wind"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -93,26 +104,30 @@
           "clean": "Dort",
           "syllables": [
             "Dort"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "steht",
           "syllables": [
             "steht"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "ein",
           "syllables": [
             "ein"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Klavier",
           "syllables": [
             "Kla",
             "vier"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -123,46 +138,53 @@
           "clean": "Es",
           "syllables": [
             "Es"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "ruht",
           "syllables": [
             "ruht"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "mitten",
           "syllables": [
             "mit",
             "ten"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "im",
           "syllables": [
             "im"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "weichen",
           "syllables": [
             "wei",
             "chen"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "grünen",
           "syllables": [
             "grü",
             "nen"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Moos",
           "syllables": [
             "Moos"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -173,34 +195,39 @@
           "clean": "Ein",
           "syllables": [
             "Ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "kleiner",
           "syllables": [
             "klei",
             "ner"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Igel",
           "syllables": [
             "I",
             "gel"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "drückt",
           "syllables": [
             "drückt"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "mutig",
           "syllables": [
             "mu",
             "tig"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -211,48 +238,55 @@
           "clean": "Der",
           "syllables": [
             "Der"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "helle",
           "syllables": [
             "hel",
             "le"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Ton",
           "syllables": [
             "Ton"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "kitzelt",
           "syllables": [
             "kit",
             "zelt"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "alle",
           "syllables": [
             "al",
             "le"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "seine",
           "syllables": [
             "sei",
             "ne"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Stacheln",
           "syllables": [
             "Sta",
             "cheln"
-          ]
+          ],
+          "role": "child"
         }
       ]
     }

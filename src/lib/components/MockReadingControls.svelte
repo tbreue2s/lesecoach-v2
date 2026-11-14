@@ -14,8 +14,9 @@
     isThorstenStored,
     thorstenStatusStore,
     PIPER_VOICES,
+    STUDIO_VOICES,
   } from '../services/audioEngineService';
-  import type { AudioEngineType, PiperVoiceId } from '../types/profile';
+  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
 
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
@@ -29,8 +30,19 @@
   let thorstenProgress = 0;
   let isStored = false;
 
-  $: currentEngine = $profileStore.audioEngine || 'thorsten-pwa';
+  $: currentEngine = $profileStore.audioEngine || 'studio-audio';
   $: currentPiperVoice = $profileStore.selectedPiperVoice || 'de_DE-thorsten-medium';
+  $: currentStudioVoice = $profileStore.selectedStudioVoice || 'katja';
+
+  function selectStudioVoice(voiceId: StudioVoiceId) {
+    profileStore.setStudioVoice(voiceId);
+    resetAudioOverrides();
+    if (session.isSpeaking) {
+      stopAudio();
+      readingSessionStore.startSentenceReading();
+    }
+  }
+
   function selectPiperVoice(voiceId: PiperVoiceId) {
     profileStore.setPiperVoice(voiceId);
     resetAudioOverrides();
@@ -185,34 +197,49 @@
     {/if}
   </div>
 
-  <!-- Ergonomic Audio Engine Selector Bar (Thorsten PWA / Studio Audio / System TTS) -->
+  <!-- Ergonomic Audio Engine Selector Bar (Studio Audio HD / Thorsten PWA) -->
   <div class="audio-engine-bar" aria-label="Audio-Stimme wählen">
+    <button
+      type="button"
+      id="engine-studio-btn"
+      class="btn-engine-pill"
+      class:selected={currentEngine === 'studio-audio'}
+      on:click={() => setEngine('studio-audio')}
+      title="Studio-Audio HD (Echte Hörbuch-Aufnahmen mit natürlichen Stimmen)"
+    >
+      <span class="engine-icon">🎧</span>
+      <span class="engine-label">Studio-Audio HD</span>
+    </button>
+
     <button
       type="button"
       id="engine-thorsten-btn"
       class="btn-engine-pill"
       class:selected={currentEngine === 'thorsten-pwa'}
       on:click={() => setEngine('thorsten-pwa')}
-      title="Thorsten (100% Offline in PWA, natürliche WASM-Stimme)"
+      title="PWA-Stimmen (100% Offline im Browser, natürliche WASM-Stimmen)"
     >
       <span class="engine-icon">⚡</span>
       <span class="engine-label">PWA-Stimmen</span>
     </button>
-
-    <button
-      type="button"
-      id="engine-system-btn"
-      class="btn-engine-pill"
-      class:selected={currentEngine === 'system-tts'}
-      on:click={() => setEngine('system-tts')}
-      title="Geräte-Stimme (Android/Browser Standard-TTS)"
-    >
-      <span class="engine-icon">📱</span>
-      <span class="engine-label">System-TTS</span>
-    </button>
   </div>
 
-  {#if currentEngine === 'thorsten-pwa'}
+  {#if currentEngine === 'studio-audio'}
+    <div class="audio-voice-subrow" aria-label="Hörbuch-Stimme wählen">
+      <span class="subrow-label">Stimme:</span>
+      {#each STUDIO_VOICES as sv}
+        <button
+          type="button"
+          class="btn-subvoice-pill"
+          class:selected={currentStudioVoice === sv.id}
+          on:click={() => selectStudioVoice(sv.id)}
+          title="{sv.label}: {sv.desc}"
+        >
+          <span>{sv.gender === 'female' ? '👩' : '👨'} {sv.label.split(':')[0]}</span>
+        </button>
+      {/each}
+    </div>
+  {:else if currentEngine === 'thorsten-pwa'}
     <div class="audio-voice-subrow" aria-label="Offline-Stimme wählen">
       <span class="subrow-label">Stimme:</span>
       {#each PIPER_VOICES as pv}

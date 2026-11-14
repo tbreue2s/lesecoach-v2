@@ -52,7 +52,7 @@ export function buildSpokenSpans(tokens: WordToken[]): {
 }
 
 /**
- * Maps a SpeechSynthesisUtterance `onboundary` event `charIndex` to the matching WordToken ID.
+ * Maps a character index boundary event `charIndex` to the matching WordToken ID.
  * Supports exact boundary hits, mid-word indices, and graceful fallback for browser timing quirks.
  */
 export function mapCharIndexToTokenId(
@@ -93,7 +93,7 @@ export function mapCharIndexToTokenId(
 /**
  * Calculates time estimates for each token based on syllable/character length,
  * speech rate, and sentence punctuation pauses.
- * Calibrated for German SpeechSynthesis at natural rate ~0.90.
+ * Calibrated for German speech cadence at natural rate ~0.90.
  */
 export function calculateTokenTimeEstimates(
   tokens: WordToken[],

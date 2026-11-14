@@ -12,47 +12,54 @@
           "clean": "Paul",
           "syllables": [
             "Paul"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "wandert",
           "syllables": [
             "wan",
             "dert"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "leise",
           "syllables": [
             "lei",
             "se"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "über",
           "syllables": [
             "ü",
             "ber"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "das",
           "syllables": [
             "das"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "weiche",
           "syllables": [
             "wei",
             "che"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Moos",
           "syllables": [
             "Moos"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -64,45 +71,52 @@
           "syllables": [
             "Mit",
             "ten"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "im",
           "syllables": [
             "im"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Wald",
           "syllables": [
             "Wald"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "steht",
           "syllables": [
             "steht"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "ein",
           "syllables": [
             "ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "rotes",
           "syllables": [
             "ro",
             "tes"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Sofa",
           "syllables": [
             "So",
             "fa"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -114,47 +128,54 @@
           "syllables": [
             "Da",
             "rauf"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "schläft",
           "syllables": [
             "schläft"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "friedlich",
           "syllables": [
             "fried",
             "lich"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "ein",
           "syllables": [
             "ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "kleiner",
           "syllables": [
             "klei",
             "ner"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "dicker",
           "syllables": [
             "di",
             "cker"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Igel",
           "syllables": [
             "I",
             "gel"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -166,46 +187,53 @@
           "syllables": [
             "Ki",
             "chernd"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "rollt",
           "syllables": [
             "rollt"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "der",
           "syllables": [
             "der"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Igel",
           "syllables": [
             "I",
             "gel"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "vom",
           "syllables": [
             "vom"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "weichen",
           "syllables": [
             "wei",
             "chen"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Sofa",
           "syllables": [
             "So",
             "fa"
-          ]
+          ],
+          "role": "child"
         }
       ]
     }

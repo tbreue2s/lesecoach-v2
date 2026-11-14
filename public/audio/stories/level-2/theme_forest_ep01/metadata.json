@@ -1,0 +1,425 @@
+{
+  "sentence_0_full": {
+    "text": "Ein leiser Wind weht über den Pfad.",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 320,
+        "endMs": 580
+      },
+      {
+        "word": "leiser",
+        "startMs": 580,
+        "endMs": 1180
+      },
+      {
+        "word": "Wind",
+        "startMs": 1180,
+        "endMs": 1720
+      },
+      {
+        "word": "weht",
+        "startMs": 1720,
+        "endMs": 2140
+      },
+      {
+        "word": "über",
+        "startMs": 2140,
+        "endMs": 2520
+      },
+      {
+        "word": "den",
+        "startMs": 2520,
+        "endMs": 2740
+      },
+      {
+        "word": "Pfad.",
+        "startMs": 2740,
+        "endMs": 3480
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_full.mp3"
+  },
+  "sentence_0_app": {
+    "text": "Ein",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 320,
+        "endMs": 580
+      }
+    ],
+    "cutMs": 500,
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_app.mp3"
+  },
+  "sentence_0_child": {
+    "text": "leiser Wind",
+    "words": [
+      {
+        "word": "leiser",
+        "startMs": 580,
+        "endMs": 1180
+      },
+      {
+        "word": "Wind",
+        "startMs": 1180,
+        "endMs": 1720
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_child.mp3"
+  },
+  "sentence_0_suffix": {
+    "text": "weht über den Pfad",
+    "words": [
+      {
+        "word": "weht",
+        "startMs": 1720,
+        "endMs": 2140
+      },
+      {
+        "word": "über",
+        "startMs": 2140,
+        "endMs": 2520
+      },
+      {
+        "word": "den",
+        "startMs": 2520,
+        "endMs": 2740
+      },
+      {
+        "word": "Pfad.",
+        "startMs": 2740,
+        "endMs": 3480
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_suffix.mp3"
+  },
+  "sentence_1_full": {
+    "text": "Dort steht plötzlich ein altes Klavier.",
+    "words": [
+      {
+        "word": "Dort",
+        "startMs": 200,
+        "endMs": 530
+      },
+      {
+        "word": "steht",
+        "startMs": 540,
+        "endMs": 960
+      },
+      {
+        "word": "plötzlich",
+        "startMs": 1020,
+        "endMs": 1580
+      },
+      {
+        "word": "ein",
+        "startMs": 1630,
+        "endMs": 1840
+      },
+      {
+        "word": "altes",
+        "startMs": 1860,
+        "endMs": 2300
+      },
+      {
+        "word": "Klavier",
+        "startMs": 2320,
+        "endMs": 3050
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_1_full.mp3"
+  },
+  "sentence_1_app": {
+    "text": "Dort steht plötzlich ein",
+    "words": [
+      {
+        "word": "Dort",
+        "startMs": 200,
+        "endMs": 530
+      },
+      {
+        "word": "steht",
+        "startMs": 540,
+        "endMs": 960
+      },
+      {
+        "word": "plötzlich",
+        "startMs": 1020,
+        "endMs": 1580
+      },
+      {
+        "word": "ein",
+        "startMs": 1630,
+        "endMs": 1840
+      }
+    ],
+    "cutMs": 1910,
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_1_app.mp3"
+  },
+  "sentence_1_child": {
+    "text": "altes Klavier",
+    "words": [
+      {
+        "word": "altes",
+        "startMs": 1860,
+        "endMs": 2300
+      },
+      {
+        "word": "Klavier",
+        "startMs": 2320,
+        "endMs": 3050
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_1_child.mp3"
+  },
+  "sentence_2_full": {
+    "text": "Ein kleiner Igel schleicht neugierig heran.",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 210,
+        "endMs": 440
+      },
+      {
+        "word": "kleiner",
+        "startMs": 440,
+        "endMs": 940
+      },
+      {
+        "word": "Igel",
+        "startMs": 940,
+        "endMs": 1440
+      },
+      {
+        "word": "schleicht",
+        "startMs": 1470,
+        "endMs": 2120
+      },
+      {
+        "word": "neugierig",
+        "startMs": 2140,
+        "endMs": 2870
+      },
+      {
+        "word": "heran.",
+        "startMs": 2870,
+        "endMs": 3480
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_full.mp3"
+  },
+  "sentence_2_app": {
+    "text": "Ein",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 210,
+        "endMs": 440
+      }
+    ],
+    "cutMs": 360,
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_app.mp3"
+  },
+  "sentence_2_child": {
+    "text": "kleiner Igel",
+    "words": [
+      {
+        "word": "kleiner",
+        "startMs": 440,
+        "endMs": 940
+      },
+      {
+        "word": "Igel",
+        "startMs": 940,
+        "endMs": 1440
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_child.mp3"
+  },
+  "sentence_2_suffix": {
+    "text": "schleicht neugierig heran",
+    "words": [
+      {
+        "word": "schleicht",
+        "startMs": 1470,
+        "endMs": 2120
+      },
+      {
+        "word": "neugierig",
+        "startMs": 2140,
+        "endMs": 2870
+      },
+      {
+        "word": "heran.",
+        "startMs": 2870,
+        "endMs": 3480
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_suffix.mp3"
+  },
+  "sentence_3_full": {
+    "text": "Vorsichtig drückt er eine hohe Note.",
+    "words": [
+      {
+        "word": "Vorsichtig",
+        "startMs": 240,
+        "endMs": 1060
+      },
+      {
+        "word": "drückt",
+        "startMs": 1120,
+        "endMs": 1540
+      },
+      {
+        "word": "er",
+        "startMs": 1540,
+        "endMs": 1720
+      },
+      {
+        "word": "eine",
+        "startMs": 1720,
+        "endMs": 1980
+      },
+      {
+        "word": "hohe",
+        "startMs": 1980,
+        "endMs": 2420
+      },
+      {
+        "word": "Note.",
+        "startMs": 2420,
+        "endMs": 2980
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_3_full.mp3"
+  },
+  "sentence_3_app": {
+    "text": "Vorsichtig drückt er eine",
+    "words": [
+      {
+        "word": "Vorsichtig",
+        "startMs": 240,
+        "endMs": 1060
+      },
+      {
+        "word": "drückt",
+        "startMs": 1120,
+        "endMs": 1540
+      },
+      {
+        "word": "er",
+        "startMs": 1540,
+        "endMs": 1720
+      },
+      {
+        "word": "eine",
+        "startMs": 1720,
+        "endMs": 1980
+      }
+    ],
+    "cutMs": 1935,
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_3_app.mp3"
+  },
+  "sentence_3_child": {
+    "text": "hohe Note",
+    "words": [
+      {
+        "word": "hohe",
+        "startMs": 1980,
+        "endMs": 2420
+      },
+      {
+        "word": "Note.",
+        "startMs": 2420,
+        "endMs": 2980
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_3_child.mp3"
+  },
+  "sentence_4_full": {
+    "text": "Ein bunter Vogel singt vergnügt mit.",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 220,
+        "endMs": 450
+      },
+      {
+        "word": "bunter",
+        "startMs": 450,
+        "endMs": 870
+      },
+      {
+        "word": "Vogel",
+        "startMs": 870,
+        "endMs": 1380
+      },
+      {
+        "word": "singt",
+        "startMs": 1380,
+        "endMs": 1860
+      },
+      {
+        "word": "vergnügt",
+        "startMs": 1860,
+        "endMs": 2480
+      },
+      {
+        "word": "mit.",
+        "startMs": 2480,
+        "endMs": 2840
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_full.mp3"
+  },
+  "sentence_4_app": {
+    "text": "Ein",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 220,
+        "endMs": 450
+      }
+    ],
+    "cutMs": 335,
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_app.mp3"
+  },
+  "sentence_4_child": {
+    "text": "bunter Vogel",
+    "words": [
+      {
+        "word": "bunter",
+        "startMs": 450,
+        "endMs": 870
+      },
+      {
+        "word": "Vogel",
+        "startMs": 870,
+        "endMs": 1380
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_child.mp3"
+  },
+  "sentence_4_suffix": {
+    "text": "singt vergnügt mit",
+    "words": [
+      {
+        "word": "singt",
+        "startMs": 1380,
+        "endMs": 1860
+      },
+      {
+        "word": "vergnügt",
+        "startMs": 1860,
+        "endMs": 2480
+      },
+      {
+        "word": "mit.",
+        "startMs": 2480,
+        "endMs": 2840
+      }
+    ],
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_suffix.mp3"
+  }
+}

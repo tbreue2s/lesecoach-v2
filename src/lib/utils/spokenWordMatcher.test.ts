@@ -3,6 +3,7 @@ import {
   normalizeText,
   calculateLevenshteinDistance,
   validateSpokenWord,
+  matchConsecutiveWords,
 } from './spokenWordMatcher';
 
 describe('normalizeText', () => {
@@ -113,5 +114,44 @@ describe('validateSpokenWord (WP06 Evidence: Tolerante Lückentext-Validierung)'
   it('handles empty input cleanly', () => {
     expect(validateSpokenWord('', 'Hund').isValid).toBe(false);
     expect(validateSpokenWord('Hund', '').isValid).toBe(false);
+  });
+});
+
+describe('matchConsecutiveWords (Level 2 Multi-Word Reading)', () => {
+  it('matches all consecutive words spoken together: "alter Hut"', () => {
+    const res = matchConsecutiveWords('alter Hut', ['alter', 'Hut']);
+    expect(res.isValid).toBe(true);
+    expect(res.matchedCount).toBe(2);
+    expect(res.matchedWords).toEqual(['alter', 'hut']);
+  });
+
+  it('matches all consecutive words with punctuation and casing: "kleiner Kobold!"', () => {
+    const res = matchConsecutiveWords('kleiner Kobold!', ['kleiner', 'Kobold']);
+    expect(res.isValid).toBe(true);
+    expect(res.matchedCount).toBe(2);
+  });
+
+  it('matches only the first word if spoken individually: "alter" vs ["alter", "Hut"]', () => {
+    const res = matchConsecutiveWords('alter', ['alter', 'Hut']);
+    expect(res.isValid).toBe(true);
+    expect(res.matchedCount).toBe(1);
+    expect(res.matchedWords).toEqual(['alter']);
+  });
+
+  it('does not match second word if first word was not spoken: "Hut" vs ["alter", "Hut"]', () => {
+    const res = matchConsecutiveWords('Hut', ['alter', 'Hut']);
+    expect(res.isValid).toBe(false);
+    expect(res.matchedCount).toBe(0);
+  });
+
+  it('matches consecutive words inside a longer sentence with fuzzy matching', () => {
+    const res = matchConsecutiveWords('ich sehe einen alten Hut im Wald', ['alter', 'Hut']);
+    expect(res.isValid).toBe(true);
+    expect(res.matchedCount).toBe(2);
+  });
+
+  it('handles empty inputs', () => {
+    expect(matchConsecutiveWords('', ['alter', 'Hut']).isValid).toBe(false);
+    expect(matchConsecutiveWords('alter Hut', []).isValid).toBe(false);
   });
 });

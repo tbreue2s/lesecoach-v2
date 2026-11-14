@@ -4,14 +4,14 @@
   import { routerStore } from '../stores/routerStore';
   import { storyConfigStore } from '../stores/storyConfigStore';
   import { validateName } from '../utils/validation';
-  import { getAvailableGermanVoices } from '../services/speechService';
   import {
     testAudioEngineVoice,
     ensurePiperInitialized,
     resetAudioOverrides,
     PIPER_VOICES,
+    STUDIO_VOICES,
   } from '../services/audioEngineService';
-  import type { AudioEngineType, PiperVoiceId } from '../types/profile';
+  import type { AudioEngineType, PiperVoiceId, StudioVoiceId } from '../types/profile';
   import OtterFeedback from './OtterFeedback.svelte';
 
   export let showBackButton = false;
@@ -20,8 +20,6 @@
   let childError: string | null = null;
   let companionError: string | null = null;
   let isSavedSuccess = false;
-  let availableVoices: SpeechSynthesisVoice[] = [];
-  let selectedVoiceURI = $profileStore.preferredVoiceURI || '';
 
   let childDebounceTimer: ReturnType<typeof setTimeout> | null = null;
   let companionDebounceTimer: ReturnType<typeof setTimeout> | null = null;
@@ -162,21 +160,8 @@
     }
   }
 
-  function updateVoiceList() {
-    availableVoices = getAvailableGermanVoices();
-    if (!selectedVoiceURI && $profileStore.preferredVoiceURI) {
-      selectedVoiceURI = $profileStore.preferredVoiceURI;
-    }
-  }
-
   onMount(() => {
-    updateVoiceList();
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = () => {
-        updateVoiceList();
-      };
-    }
-    if (($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa') {
+    if (($profileStore.audioEngine || 'studio-audio') === 'thorsten-pwa') {
       ensurePiperInitialized($profileStore.selectedPiperVoice || 'de_DE-thorsten-medium').catch(() => {});
     }
   });
@@ -198,32 +183,21 @@
     ensurePiperInitialized(voiceId).catch(() => {});
   }
 
-  function handleVoiceChange(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    selectedVoiceURI = target.value;
-    profileStore.setPreferredVoiceURI(selectedVoiceURI || undefined);
-    if (typeof window !== 'undefined' && window.localStorage) {
-      if (selectedVoiceURI) {
-        localStorage.setItem('lesecoach_tts_preferred_voice', selectedVoiceURI);
-      } else {
-        localStorage.removeItem('lesecoach_tts_preferred_voice');
-      }
-    }
-    handleTestVoice();
+  function handleSelectStudioVoice(voiceId: StudioVoiceId) {
+    profileStore.setStudioVoice(voiceId);
+    resetAudioOverrides();
   }
 
   function handleTestVoice(engine?: AudioEngineType, voiceId?: string) {
     const compName = activeCompanion ? activeCompanion.customName : 'dein Begleiter';
     const childGreeting = rawChildName ? `Hallo ${rawChildName}!` : 'Hallo!';
     const text = `${childGreeting} Ich bin ${compName}. Lass uns zusammen lesen!`;
-    const eng = engine || $profileStore.audioEngine || 'thorsten-pwa';
+    const eng = engine || $profileStore.audioEngine || 'studio-audio';
     const activeVoice =
       voiceId ||
       (eng === 'thorsten-pwa'
         ? $profileStore.selectedPiperVoice
-        : eng === 'studio-audio'
-          ? $profileStore.selectedStudioVoice
-          : selectedVoiceURI);
+        : $profileStore.selectedStudioVoice || 'katja');
 
     testAudioEngineVoice(eng, activeVoice, text);
   }
@@ -342,15 +316,30 @@
       </button>
     </div>
 
-    <!-- 3-way Audio Engine Choice Cards -->
+    <!-- 2-way Audio Engine Choice Cards: Studio HD Audio vs PWA Offline -->
     <div class="engine-choice-cards" role="radiogroup" aria-label="Vorlese-Technologie">
       <button
         type="button"
         class="engine-card"
-        class:selected={($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa'}
+        class:selected={($profileStore.audioEngine || 'studio-audio') === 'studio-audio'}
+        on:click={() => handleSelectAudioEngine('studio-audio')}
+        role="radio"
+        aria-checked={($profileStore.audioEngine || 'studio-audio') === 'studio-audio'}
+      >
+        <span class="engine-card-icon">🎙️</span>
+        <div class="engine-card-text">
+          <strong class="engine-card-title">Studio-Audio & HD-Stimmen (Empfohlen)</strong>
+          <span class="engine-card-desc">Kristallklare Hörbuch-Qualität mit warmen Märchen-Erzählern</span>
+        </div>
+      </button>
+
+      <button
+        type="button"
+        class="engine-card"
+        class:selected={$profileStore.audioEngine === 'thorsten-pwa'}
         on:click={() => handleSelectAudioEngine('thorsten-pwa')}
         role="radio"
-        aria-checked={($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa'}
+        aria-checked={$profileStore.audioEngine === 'thorsten-pwa'}
       >
         <span class="engine-card-icon">⚡</span>
         <div class="engine-card-text">
@@ -358,24 +347,43 @@
           <span class="engine-card-desc">100% Offline in PWA, natürliche Stimmen (Thorsten & Kerstin)</span>
         </div>
       </button>
-
-      <button
-        type="button"
-        class="engine-card"
-        class:selected={$profileStore.audioEngine === 'system-tts'}
-        on:click={() => handleSelectAudioEngine('system-tts')}
-        role="radio"
-        aria-checked={$profileStore.audioEngine === 'system-tts'}
-      >
-        <span class="engine-card-icon">📱</span>
-        <div class="engine-card-text">
-          <strong class="engine-card-title">Geräte-Stimme (System-TTS)</strong>
-          <span class="engine-card-desc">Standard Web Speech API deines Smartphones oder Browsers</span>
-        </div>
-      </button>
     </div>
 
-    {#if ($profileStore.audioEngine || 'thorsten-pwa') === 'thorsten-pwa'}
+    {#if ($profileStore.audioEngine || 'studio-audio') === 'studio-audio'}
+      <div class="voice-sub-selector">
+        <span class="sublabel">Wähle deine Hörbuch-Stimme (Proben für Stufe 1 „Wald & Bäume“):</span>
+        <div class="voice-chips-grid">
+          {#each STUDIO_VOICES as sv}
+            <div
+              class="voice-chip-card"
+              class:selected={($profileStore.selectedStudioVoice || 'katja') === sv.id}
+            >
+              <button
+                type="button"
+                class="btn-voice-chip"
+                on:click={() => handleSelectStudioVoice(sv.id)}
+              >
+                <span class="voice-chip-icon">{sv.gender === 'female' ? '👩' : '👨'}</span>
+                <div class="voice-chip-info">
+                  <div class="voice-chip-title-row">
+                    <strong>{sv.label}</strong>
+                  </div>
+                  <span class="voice-chip-desc">{sv.desc}</span>
+                </div>
+              </button>
+              <button
+                type="button"
+                class="btn-chip-sample"
+                title="{sv.label} probe hören"
+                on:click={() => handleTestVoice('studio-audio', sv.id)}
+              >
+                🔊 Probe
+              </button>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {:else if $profileStore.audioEngine === 'thorsten-pwa'}
       <div class="voice-sub-selector">
         <span class="sublabel">Wähle deine Offline-Stimme:</span>
         <div class="voice-chips-grid">
@@ -409,29 +417,6 @@
             </div>
           {/each}
         </div>
-      </div>
-    {:else if $profileStore.audioEngine === 'system-tts'}
-      <div class="system-voice-picker-wrapper">
-        <label for="voice-select" class="sublabel">Wähle die Stimme deines Betriebssystems:</label>
-        {#if availableVoices.length > 0}
-          <div class="input-wrapper">
-            <select
-              id="voice-select"
-              class="voice-select"
-              value={selectedVoiceURI}
-              on:change={handleVoiceChange}
-            >
-              <option value="">✨ Automatisch beste natürliche Stimme (Empfohlen)</option>
-              {#each availableVoices as v}
-                <option value={v.voiceURI || v.name}>
-                  {v.name} {v.name.toLowerCase().includes('natural') || v.name.toLowerCase().includes('enhanced') || v.name.toLowerCase().includes('google') ? '⭐ (Empfohlen)' : ''}
-                </option>
-              {/each}
-            </select>
-          </div>
-        {:else}
-          <p class="voice-hint">✨ Die beste deutsche Vorlese-Stimme deines Geräts wird automatisch verwendet.</p>
-        {/if}
       </div>
     {/if}
   </section>
@@ -640,33 +625,6 @@
     transform: translateY(-1px);
   }
 
-  .voice-select {
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1.05rem;
-    font-weight: 600;
-    padding: 0.8rem 1rem;
-    border: 2px solid var(--color-border, #E2D9CC);
-    border-radius: var(--radius-md, 0.875rem);
-    outline: none;
-    background: var(--color-page-bg, #FBF9F5);
-    color: var(--color-text-main, #2D3748);
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .voice-select:focus {
-    border-color: var(--color-primary, #2B6CB0);
-    box-shadow: 0 0 0 4px rgba(43, 108, 176, 0.15);
-  }
-
-  .voice-hint {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--color-text-muted, #4A5568);
-    font-style: italic;
-  }
-
   /* Engine Choice Cards */
   .engine-choice-cards {
     display: flex;
@@ -723,13 +681,6 @@
     font-size: 0.85rem;
     color: var(--color-text-muted, #4A5568);
     line-height: 1.35;
-  }
-
-  .system-voice-picker-wrapper {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
   }
 
   .sublabel {

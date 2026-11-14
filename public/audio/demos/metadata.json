@@ -1,0 +1,114 @@
+{
+  "probe1": {
+    "text": "Willkommen im Zauberwald! Lass uns gemeinsam ein spannendes Abenteuer lesen.",
+    "words": [
+      {
+        "word": "Willkommen",
+        "startMs": 0,
+        "endMs": 600
+      },
+      {
+        "word": "im",
+        "startMs": 600,
+        "endMs": 800
+      },
+      {
+        "word": "Zauberwald.",
+        "startMs": 800,
+        "endMs": 1940
+      },
+      {
+        "word": "Lass",
+        "startMs": 2220,
+        "endMs": 2380
+      },
+      {
+        "word": "uns",
+        "startMs": 2380,
+        "endMs": 2580
+      },
+      {
+        "word": "gemeinsam",
+        "startMs": 2580,
+        "endMs": 3120
+      },
+      {
+        "word": "ein",
+        "startMs": 3120,
+        "endMs": 3320
+      },
+      {
+        "word": "spannendes",
+        "startMs": 3320,
+        "endMs": 3960
+      },
+      {
+        "word": "Abenteuer",
+        "startMs": 3960,
+        "endMs": 4640
+      },
+      {
+        "word": "lesen.",
+        "startMs": 4640,
+        "endMs": 5100
+      }
+    ],
+    "file": "/audio/demos/demo_probe1.mp3"
+  },
+  "probe2": {
+    "text": "Willkommen im Zauberwald! Lass uns gemeinsam ein spannendes Abenteuer lesen.",
+    "words": [
+      {
+        "word": "Willkommen",
+        "startMs": 40,
+        "endMs": 760
+      },
+      {
+        "word": "im",
+        "startMs": 760,
+        "endMs": 940
+      },
+      {
+        "word": "Zauberwald.",
+        "startMs": 940,
+        "endMs": 1960
+      },
+      {
+        "word": "Lass",
+        "startMs": 2140,
+        "endMs": 2420
+      },
+      {
+        "word": "uns",
+        "startMs": 2420,
+        "endMs": 2580
+      },
+      {
+        "word": "gemeinsam",
+        "startMs": 2580,
+        "endMs": 3200
+      },
+      {
+        "word": "ein",
+        "startMs": 3200,
+        "endMs": 3400
+      },
+      {
+        "word": "spannendes",
+        "startMs": 3400,
+        "endMs": 4020
+      },
+      {
+        "word": "Abenteuer",
+        "startMs": 4020,
+        "endMs": 4700
+      },
+      {
+        "word": "lesen.",
+        "startMs": 4700,
+        "endMs": 5240
+      }
+    ],
+    "file": "/audio/demos/demo_probe2.mp3"
+  }
+}

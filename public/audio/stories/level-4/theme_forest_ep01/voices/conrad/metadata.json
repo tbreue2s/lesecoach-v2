@@ -1,0 +1,218 @@
+{
+  "sentence_0_full": {
+    "text": "Im Moos rascheln goldene Blätter.",
+    "words": [
+      {
+        "word": "Im",
+        "startMs": 100,
+        "endMs": 290
+      },
+      {
+        "word": "Moos",
+        "startMs": 290,
+        "endMs": 960
+      },
+      {
+        "word": "rascheln",
+        "startMs": 1250,
+        "endMs": 1760
+      },
+      {
+        "word": "goldene",
+        "startMs": 1760,
+        "endMs": 2200
+      },
+      {
+        "word": "Blätter.",
+        "startMs": 2200,
+        "endMs": 2840
+      }
+    ],
+    "file": "/audio/stories/level-4/theme_forest_ep01/voices/conrad/sentence_0_full.mp3"
+  },
+  "sentence_1_full": {
+    "text": "Zwei Kinder wandern leise über schmale Waldpfade.",
+    "words": [
+      {
+        "word": "Zwei",
+        "startMs": 440,
+        "endMs": 760
+      },
+      {
+        "word": "Kinder",
+        "startMs": 760,
+        "endMs": 1140
+      },
+      {
+        "word": "wandern",
+        "startMs": 1480,
+        "endMs": 1940
+      },
+      {
+        "word": "leise",
+        "startMs": 1940,
+        "endMs": 2440
+      },
+      {
+        "word": "über",
+        "startMs": 2480,
+        "endMs": 2760
+      },
+      {
+        "word": "schmale",
+        "startMs": 2760,
+        "endMs": 3300
+      },
+      {
+        "word": "Waldpfade.",
+        "startMs": 3300,
+        "endMs": 4140
+      }
+    ],
+    "file": "/audio/stories/level-4/theme_forest_ep01/voices/conrad/sentence_1_full.mp3"
+  },
+  "sentence_2_full": {
+    "text": "Da steht ein altes Klavier!",
+    "words": [
+      {
+        "word": "Da",
+        "startMs": 80,
+        "endMs": 290
+      },
+      {
+        "word": "steht",
+        "startMs": 290,
+        "endMs": 650
+      },
+      {
+        "word": "ein",
+        "startMs": 650,
+        "endMs": 790
+      },
+      {
+        "word": "altes",
+        "startMs": 790,
+        "endMs": 1240
+      },
+      {
+        "word": "Klavier!",
+        "startMs": 1240,
+        "endMs": 1860
+      }
+    ],
+    "file": "/audio/stories/level-4/theme_forest_ep01/voices/conrad/sentence_2_full.mp3"
+  },
+  "sentence_3_full": {
+    "text": "Es glänzt mitten auf der stillen Lichtung.",
+    "words": [
+      {
+        "word": "Es",
+        "startMs": 220,
+        "endMs": 420
+      },
+      {
+        "word": "glänzt",
+        "startMs": 420,
+        "endMs": 1160
+      },
+      {
+        "word": "mitten",
+        "startMs": 1160,
+        "endMs": 1630
+      },
+      {
+        "word": "auf",
+        "startMs": 1630,
+        "endMs": 1870
+      },
+      {
+        "word": "der",
+        "startMs": 1870,
+        "endMs": 2030
+      },
+      {
+        "word": "stillen",
+        "startMs": 2030,
+        "endMs": 2570
+      },
+      {
+        "word": "Lichtung.",
+        "startMs": 2570,
+        "endMs": 3300
+      }
+    ],
+    "file": "/audio/stories/level-4/theme_forest_ep01/voices/conrad/sentence_3_full.mp3"
+  },
+  "sentence_4_full": {
+    "text": "Ein kleiner Igel tippelt heran.",
+    "words": [
+      {
+        "word": "Ein",
+        "startMs": 160,
+        "endMs": 380
+      },
+      {
+        "word": "kleiner",
+        "startMs": 380,
+        "endMs": 840
+      },
+      {
+        "word": "Igel",
+        "startMs": 890,
+        "endMs": 1260
+      },
+      {
+        "word": "tippelt",
+        "startMs": 1300,
+        "endMs": 1720
+      },
+      {
+        "word": "heran.",
+        "startMs": 1770,
+        "endMs": 2220
+      }
+    ],
+    "file": "/audio/stories/level-4/theme_forest_ep01/voices/conrad/sentence_4_full.mp3"
+  },
+  "sentence_5_full": {
+    "text": "Neugierig drückt seine Pfote eine helle Note.",
+    "words": [
+      {
+        "word": "Neugierig",
+        "startMs": 240,
+        "endMs": 920
+      },
+      {
+        "word": "drückt",
+        "startMs": 950,
+        "endMs": 1340
+      },
+      {
+        "word": "seine",
+        "startMs": 1370,
+        "endMs": 1740
+      },
+      {
+        "word": "Pfote",
+        "startMs": 1780,
+        "endMs": 2260
+      },
+      {
+        "word": "eine",
+        "startMs": 2380,
+        "endMs": 2640
+      },
+      {
+        "word": "helle",
+        "startMs": 2680,
+        "endMs": 3060
+      },
+      {
+        "word": "Note.",
+        "startMs": 3080,
+        "endMs": 3620
+      }
+    ],
+    "file": "/audio/stories/level-4/theme_forest_ep01/voices/conrad/sentence_5_full.mp3"
+  }
+}

@@ -10,9 +10,10 @@ export { isProtectedName, calculateWordComplexity };
 import { profileStore } from './profileStore';
 import { SAMPLE_STORIES } from '../data/sampleStories';
 import { buildSpokenSpans } from '../utils/charMapper';
-import { stopSpeech } from '../services/speechService';
 import {
   playAudioSegment,
+  playChildWordReinforcement,
+  preloadStoryAudioBuffers,
   pauseAudio as enginePauseAudio,
   resumeAudio as engineResumeAudio,
   stopAudio as engineStopAudio,
@@ -21,7 +22,7 @@ import {
   startListening,
   stopListening,
 } from '../services/speechRecognitionService';
-import { validateSpokenWord } from '../utils/spokenWordMatcher';
+import { validateSpokenWord, matchConsecutiveWords } from '../utils/spokenWordMatcher';
 import { playSuccessChime } from '../utils/soundEffects';
 
 // Natural, clear storytelling pace for children without metallic slow-motion artifacts
@@ -49,6 +50,7 @@ const initialSessionState: ReadingSessionState = {
 let syncTimerInterval: ReturnType<typeof setInterval> | null = null;
 let autoAdvanceTimeout: ReturnType<typeof setTimeout> | null = null;
 let flashSuccessTimeout: ReturnType<typeof setTimeout> | null = null;
+let pendingChildWordTimeout: ReturnType<typeof setTimeout> | null = null;
 
 function clearSyncTimer() {
   if (syncTimerInterval !== null) {
@@ -68,6 +70,13 @@ function clearFlashSuccessTimeout() {
   if (flashSuccessTimeout !== null) {
     clearTimeout(flashSuccessTimeout);
     flashSuccessTimeout = null;
+  }
+}
+
+function clearPendingChildWordTimeout() {
+  if (pendingChildWordTimeout !== null) {
+    clearTimeout(pendingChildWordTimeout);
+    pendingChildWordTimeout = null;
   }
 }
 
@@ -170,8 +179,11 @@ function createReadingSessionStore() {
 
   /**
    * Starts Speech-to-Text listening for the child with microphone hygiene & error handling.
+   * Supports both individual word reading (e.g. "alter", then "Hut") and continuous fluent reading ("alter Hut").
    */
-  function startListeningForChild(childToken: WordToken) {
+  function startListeningForChild(_childToken?: WordToken) {
+    clearPendingChildWordTimeout();
+
     startListening({
       lang: 'de-DE',
       interimResults: true,
@@ -179,11 +191,25 @@ function createReadingSessionStore() {
         update((s) => ({ ...s, isListening: true, micError: null }));
       },
       onResult: (transcript: string) => {
-        const validation = validateSpokenWord(transcript, childToken.cleanWord);
         update((s) => ({ ...s, lastSpokenTranscript: transcript }));
 
-        if (validation.isValid) {
-          handleChildWordSuccess(childToken);
+        const curState = get(store);
+        const curSentence = curState.sentences[curState.activeSentenceIndex];
+        if (!curSentence) return;
+
+        // Current unread child tokens in this sentence
+        const unreadChildTokens = curSentence.words.filter(
+          (w) => w.role === 'child' && w.status !== 'success'
+        );
+
+        if (unreadChildTokens.length === 0) return;
+
+        const consecutiveTargetWords = unreadChildTokens.map((t) => t.cleanWord);
+        const match = matchConsecutiveWords(transcript, consecutiveTargetWords);
+
+        if (match.matchedCount > 0) {
+          const matched = unreadChildTokens.slice(0, match.matchedCount);
+          handleChildWordsSuccess(matched);
         }
       },
       onError: (errorCode) => {
@@ -215,7 +241,7 @@ function createReadingSessionStore() {
    * Activates child turn listening during CHILD_TURN.
    */
   function startChildTurnListening(childToken: WordToken) {
-    stopSpeech();
+    engineStopAudio();
 
     update((s) => ({
       ...s,
@@ -234,38 +260,113 @@ function createReadingSessionStore() {
   }
 
   /**
-   * Handles successful word recognition or manual dev click:
-   * - Mutes microphone immediately (microphone hygiene).
-   * - Plays friendly chime sound.
-   * - Flashes word green.
-   * - Advances state and continues tandem reading.
+   * Handles successful word recognition for one or multiple child words:
+   * - Immediately marks matched words as success and awards stars.
+   * - If more child words remain in the sentence: keeps microphone listening without audio interruption.
+   * - When all child words of the sentence are complete: mutes microphone and triggers sentence repetition or reinforcement.
    */
-  function handleChildWordSuccess(childToken: WordToken) {
-    stopListening(); // Mute microphone immediately
-
+  function handleChildWordsSuccess(matchedTokens: WordToken[]) {
+    clearPendingChildWordTimeout();
     playSuccessChime();
 
-    // Trigger visual green flash
-    update((s) => ({
-      ...s,
-      isListening: false,
-      isSuccessFlashingTokenId: childToken.id,
-    }));
+    const curState = get(store);
+    const curSentence = curState.sentences[curState.activeSentenceIndex];
+    if (!curSentence) return;
+
+    // Remaining unread child tokens in the sentence AFTER this match
+    const remainingChildTokens = curSentence.words.filter(
+      (w) =>
+        w.role === 'child' &&
+        w.status !== 'success' &&
+        !matchedTokens.some((m) => m.id === w.id)
+    );
+
+    const isTurnComplete = remainingChildTokens.length === 0;
+
+    if (isTurnComplete) {
+      stopListening(); // Mute mic immediately when child has finished all words
+    }
+
+    const flashId = matchedTokens.map((t) => t.id).join(',');
+
+    // Mark matched tokens as success immediately and update UI
+    update((s) => {
+      const sentence = s.sentences[s.activeSentenceIndex];
+      if (sentence) {
+        matchedTokens.forEach((t) => {
+          const wordObj = sentence.words.find((w) => w.id === t.id);
+          if (wordObj) {
+            wordObj.status = 'success';
+          }
+        });
+      }
+      return {
+        ...s,
+        starsEarned: s.starsEarned + matchedTokens.length,
+        isListening: !isTurnComplete,
+        isSuccessFlashingTokenId: flashId,
+        activeWordTokenId: isTurnComplete ? null : remainingChildTokens[0]?.id || null,
+      };
+    });
 
     clearFlashSuccessTimeout();
     flashSuccessTimeout = setTimeout(() => {
-      update((s) => {
-        childToken.status = 'success';
-        return {
-          ...s,
-          starsEarned: s.starsEarned + 1,
-          activeWordTokenId: null,
-          isSuccessFlashingTokenId: null,
-        };
-      });
+      update((s) => ({
+        ...s,
+        isSuccessFlashingTokenId: null,
+      }));
 
-      stepTandemEngine();
+      if (!isTurnComplete) {
+        // Child still has words to read in this sentence!
+        // Keep microphone listening without any audio interruption.
+        return;
+      }
+
+      // Child has finished ALL child words of this sentence
+      const updatedState = get(store);
+      const updatedSentence = updatedState.sentences[updatedState.activeSentenceIndex];
+      if (!updatedSentence) return;
+
+      const hasUnreadAppWords = updatedSentence.words.some(
+        (w) => w.role === 'app' && w.status !== 'success'
+      );
+
+      // In Level 3 & Level 4: Full-sentence repeated reading once all words are completed
+      if (updatedState.level >= 3 && !hasUnreadAppWords) {
+        startRepeatedReading();
+      } else if (updatedState.level >= 3 && hasUnreadAppWords) {
+        stepTandemEngine();
+      } else {
+        // Level 1 & Level 2: Narrator speaks child word reinforcement
+        const allChildTokens = updatedSentence.words.filter((w) => w.role === 'child');
+        const phraseText = allChildTokens.map((t) => t.cleanWord).join(' ');
+
+        update((s) => ({
+          ...s,
+          isSpeaking: true,
+          karaokeWordTokenId: allChildTokens[0]?.id || null,
+        }));
+
+        playChildWordReinforcement(
+          updatedState.storyId,
+          updatedState.activeSentenceIndex,
+          phraseText,
+          () => {
+            update((s) => ({
+              ...s,
+              isSpeaking: false,
+              karaokeWordTokenId: null,
+              activeWordTokenId: null,
+            }));
+            stepTandemEngine();
+          }
+        );
+      }
     }, 280);
+  }
+
+  function handleChildWordSuccess(childToken: WordToken) {
+    handleChildWordsSuccess([childToken]);
   }
 
   /**
@@ -282,7 +383,11 @@ function createReadingSessionStore() {
     const unreadTokens = currentSentence.words.filter((w) => w.status !== 'success');
 
     if (unreadTokens.length === 0) {
-      if (currentSentence.requiresRepeatedReading && !currentSentence.isCompleted) {
+      const hasChildWords = currentSentence.words.some((w) => w.role === 'child');
+      if (
+        (currentSentence.requiresRepeatedReading || (state.level >= 3 && hasChildWords)) &&
+        !currentSentence.isCompleted
+      ) {
         startRepeatedReading();
       } else {
         finishSentence();
@@ -444,6 +549,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
+      clearPendingChildWordTimeout();
       engineStopAudio();
       stopListening();
       const effectiveChildName = childName ?? get(profileStore)?.childName;
@@ -454,6 +560,8 @@ function createReadingSessionStore() {
         effectiveChildName,
         story.structuredOutput
       );
+
+      preloadStoryAudioBuffers(story.id);
 
       set({
         storyId: story.id,
@@ -483,6 +591,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
+      clearPendingChildWordTimeout();
       engineStopAudio();
       stopListening();
       update((state) => {
@@ -549,16 +658,28 @@ function createReadingSessionStore() {
       const currentSentence = state.sentences[state.activeSentenceIndex];
       if (!currentSentence) return;
 
-      const activeWord = currentSentence.words.find((w) => w.id === state.activeWordTokenId);
-      if (!activeWord) return;
+      const unreadChildTokens = currentSentence.words.filter(
+        (w) => w.role === 'child' && w.status !== 'success'
+      );
+      if (unreadChildTokens.length === 0) return;
 
-      const textToValidate = spokenWord ?? activeWord.cleanWord;
-      const result = validateSpokenWord(textToValidate, activeWord.cleanWord);
-
+      const textToValidate = spokenWord ?? unreadChildTokens[0]?.cleanWord;
       update((s) => ({ ...s, lastSpokenTranscript: textToValidate }));
 
-      if (result.isValid) {
-        handleChildWordSuccess(activeWord);
+      const consecutiveTargetWords = unreadChildTokens.map((t) => t.cleanWord);
+      const match = matchConsecutiveWords(textToValidate, consecutiveTargetWords);
+
+      if (match.matchedCount > 0) {
+        const matched = unreadChildTokens.slice(0, match.matchedCount);
+        handleChildWordsSuccess(matched);
+      } else {
+        const activeWord = currentSentence.words.find((w) => w.id === state.activeWordTokenId);
+        if (activeWord) {
+          const result = validateSpokenWord(textToValidate, activeWord.cleanWord);
+          if (result.isValid) {
+            handleChildWordSuccess(activeWord);
+          }
+        }
       }
     },
 
@@ -623,6 +744,7 @@ function createReadingSessionStore() {
       clearSyncTimer();
       clearAutoAdvance();
       clearFlashSuccessTimeout();
+      clearPendingChildWordTimeout();
       engineStopAudio();
       stopListening();
       set(initialSessionState);

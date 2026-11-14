@@ -20,13 +20,13 @@ export interface Companion {
   customName: string;
 }
 
-export type AudioEngineType = 'thorsten-pwa' | 'studio-audio' | 'system-tts';
+export type AudioEngineType = 'studio-audio' | 'thorsten-pwa';
 
 export type PiperVoiceId =
   | 'de_DE-thorsten-medium'
   | 'de_DE-kerstin-low';
 
-export type StudioVoiceId = 'conrad' | 'katja' | 'amala';
+export type StudioVoiceId = 'conrad' | 'katja';
 
 export interface ProfileState {
   childName: string;

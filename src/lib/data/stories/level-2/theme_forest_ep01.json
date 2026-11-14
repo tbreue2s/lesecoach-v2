@@ -12,45 +12,52 @@
           "clean": "Ein",
           "syllables": [
             "Ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "leiser",
           "syllables": [
             "lei",
             "ser"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Wind",
           "syllables": [
             "Wind"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "weht",
           "syllables": [
             "weht"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "über",
           "syllables": [
             "ü",
             "ber"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "den",
           "syllables": [
             "den"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "Pfad",
           "syllables": [
             "Pfad"
-          ]
+          ],
+          "role": "app"
         }
       ]
     },
@@ -61,40 +68,46 @@
           "clean": "Dort",
           "syllables": [
             "Dort"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "steht",
           "syllables": [
             "steht"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "plötzlich",
           "syllables": [
             "plötz",
             "lich"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "ein",
           "syllables": [
             "ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "altes",
           "syllables": [
             "al",
             "tes"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Klavier",
           "syllables": [
             "Kla",
             "vier"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -105,27 +118,31 @@
           "clean": "Ein",
           "syllables": [
             "Ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "kleiner",
           "syllables": [
             "klei",
             "ner"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Igel",
           "syllables": [
             "I",
             "gel"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "schleicht",
           "syllables": [
             "schleicht"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "neugierig",
@@ -133,14 +150,16 @@
             "neu",
             "gie",
             "rig"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "heran",
           "syllables": [
             "he",
             "ran"
-          ]
+          ],
+          "role": "app"
         }
       ]
     },
@@ -153,40 +172,46 @@
             "Vor",
             "sich",
             "tig"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "drückt",
           "syllables": [
             "drückt"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "er",
           "syllables": [
             "er"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "eine",
           "syllables": [
             "ei",
             "ne"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "hohe",
           "syllables": [
             "ho",
             "he"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Note",
           "syllables": [
             "No",
             "te"
-          ]
+          ],
+          "role": "child"
         }
       ]
     },
@@ -197,40 +222,46 @@
           "clean": "Ein",
           "syllables": [
             "Ein"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "bunter",
           "syllables": [
             "bun",
             "ter"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "Vogel",
           "syllables": [
             "Vo",
             "gel"
-          ]
+          ],
+          "role": "child"
         },
         {
           "clean": "singt",
           "syllables": [
             "singt"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "vergnügt",
           "syllables": [
             "verg",
             "nügt"
-          ]
+          ],
+          "role": "app"
         },
         {
           "clean": "mit",
           "syllables": [
             "mit"
-          ]
+          ],
+          "role": "app"
         }
       ]
     }

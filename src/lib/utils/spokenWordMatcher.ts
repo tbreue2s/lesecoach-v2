@@ -161,3 +161,84 @@ export function validateSpokenWord(
     matchType: 'none',
   };
 }
+
+export interface ConsecutiveMatchResult {
+  matchedCount: number;
+  isValid: boolean;
+  matchedWords: string[];
+}
+
+/**
+ * Matches a spoken transcript against an ordered list of consecutive target words (e.g. ["alter", "Hut"]).
+ * Returns how many consecutive target words matched in sequential order starting from index 0.
+ */
+export function matchConsecutiveWords(
+  spokenText: string,
+  targetWords: string[]
+): ConsecutiveMatchResult {
+  if (!spokenText || targetWords.length === 0) {
+    return { matchedCount: 0, isValid: false, matchedWords: [] };
+  }
+
+  const cleanSpoken = normalizeText(spokenText);
+  const cleanTargets = targetWords.map((w) => normalizeText(w)).filter((w) => w.length > 0);
+
+  if (cleanTargets.length === 0 || !cleanSpoken) {
+    return { matchedCount: 0, isValid: false, matchedWords: [] };
+  }
+
+  // 1. Direct joined phrase match (e.g. "alter hut" === "alter hut")
+  const joinedTarget = cleanTargets.join(' ');
+  if (cleanSpoken === joinedTarget) {
+    return {
+      matchedCount: cleanTargets.length,
+      isValid: true,
+      matchedWords: cleanTargets,
+    };
+  }
+
+  const tokens = cleanSpoken.split(' ').filter((t) => t.length > 0);
+  let matchedCount = 0;
+  let currentTokenIndex = 0;
+  const matchedWords: string[] = [];
+
+  for (let targetIdx = 0; targetIdx < cleanTargets.length; targetIdx++) {
+    const target = cleanTargets[targetIdx];
+    let foundMatch = false;
+
+    for (let i = currentTokenIndex; i < tokens.length; i++) {
+      const token = tokens[i];
+      let matches = false;
+
+      // Exact match
+      if (token === target) {
+        matches = true;
+      } else if (target.length >= 4) {
+        // Levenshtein fuzzy match <= 1 for >= 4 char words
+        const dist = calculateLevenshteinDistance(token, target);
+        if (dist <= 1) {
+          matches = true;
+        }
+      }
+
+      if (matches) {
+        matchedCount++;
+        matchedWords.push(token);
+        currentTokenIndex = i + 1; // subsequent target words must appear after this token
+        foundMatch = true;
+        break;
+      }
+    }
+
+    if (!foundMatch) {
+      // Must match consecutive words starting from index 0
+      break;
+    }
+  }
+
+  return {
+    matchedCount,
+    isValid: matchedCount > 0,
+    matchedWords,
+  };
+}

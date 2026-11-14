@@ -297,6 +297,7 @@ export interface WordMeta {
   word: string;
   cleanWord: string;
   syllables: string[];
+  role?: TokenRole;
 }
 
 /**
@@ -535,6 +536,7 @@ export function tokenizeStory(
         word,
         cleanWord: clean,
         syllables: syllables.length > 0 ? syllables : [clean],
+        role: preStructuredWord?.role,
       };
     });
 
@@ -550,8 +552,10 @@ export function tokenizeStory(
       sentenceRole = 'mixed';
     }
 
+    const hasExplicitWordRoles = wordMetas.some((m) => m.role !== undefined);
+
     const phaseAChildIndices =
-      sentenceRole === 'mixed' && (level === 1 || level === 2 || level === 3)
+      !hasExplicitWordRoles && sentenceRole === 'mixed' && (level === 1 || level === 2 || level === 3)
         ? selectPhaseAChildIndices(
             wordMetas,
             level,
@@ -567,7 +571,9 @@ export function tokenizeStory(
 
       let role: TokenRole = 'app';
 
-      if (sentenceRole === 'child') {
+      if (meta.role) {
+        role = meta.role;
+      } else if (sentenceRole === 'child') {
         role = 'child';
       } else if (sentenceRole === 'app') {
         role = 'app';

@@ -9,12 +9,27 @@
   import LevelSelector from '../LevelSelector.svelte';
   import ReadingSessionView from '../ReadingSessionView.svelte';
   import MockReadingControls from '../MockReadingControls.svelte';
+  import {
+    STUDIO_VOICES,
+    stopAudio,
+    resetAudioOverrides,
+  } from '../../services/audioEngineService';
+  import type { StudioVoiceId } from '../../types/profile';
 
   $: activeCompanion = $profileStore.companions.find(
     (c) => c.id === $profileStore.selectedCompanionId
   ) || $profileStore.companions[0];
 
   let showLevelSelector = false;
+
+  function selectProbeVoice(voiceId: StudioVoiceId) {
+    profileStore.setStudioVoice(voiceId);
+    resetAudioOverrides();
+    if ($readingSessionStore.isSpeaking) {
+      stopAudio();
+      readingSessionStore.startSentenceReading();
+    }
+  }
 
   function initStory(lvl = $levelStore) {
     if ($readingSessionStore.sentences.length > 0 && $readingSessionStore.level === lvl) {
@@ -117,6 +132,24 @@
     <div class="book-page">
       <div class="story-meta">
         <h1 class="story-title">🐾 {$readingSessionStore.storyTitle || SAMPLE_STORIES[0].title}</h1>
+        {#if $profileStore.audioEngine === 'studio-audio'}
+          <div class="voice-probe-switcher" role="group" aria-label="Hörbuch-Stimme wählen">
+            <span class="probe-title">🎙️ Hörbuch-Stimme:</span>
+            <div class="probe-buttons">
+              {#each STUDIO_VOICES as voice}
+                <button
+                  type="button"
+                  class="btn-probe-pill"
+                  class:active={$profileStore.selectedStudioVoice === voice.id}
+                  on:click={() => selectProbeVoice(voice.id)}
+                  title="{voice.label}: {voice.desc}"
+                >
+                  {voice.label.split(':')[0]}
+                </button>
+              {/each}
+            </div>
+          </div>
+        {/if}
       </div>
 
       <!-- Tokenized Reading Session View -->
@@ -296,6 +329,52 @@
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--color-text-main, #2D3748);
+  }
+
+  .voice-probe-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0.25rem;
+    background: #FFFFFF;
+    padding: 0.3rem 0.65rem;
+    border-radius: 9999px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--color-border, #E2D9CC);
+  }
+
+  .probe-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted, #718096);
+  }
+
+  .probe-buttons {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .btn-probe-pill {
+    background: var(--color-page-bg, #F7FAFC);
+    border: 1px solid var(--color-border, #CBD5E0);
+    border-radius: 9999px;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-main, #2D3748);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .btn-probe-pill:hover {
+    background: #EDF2F7;
+  }
+
+  .btn-probe-pill.active {
+    background: var(--color-primary, #2B6CB0);
+    border-color: var(--color-primary, #2B6CB0);
+    color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(43, 108, 176, 0.25);
   }
 
   /* Bottom Control Dock */
