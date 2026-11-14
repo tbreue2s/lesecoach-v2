@@ -49,7 +49,7 @@
         "endMs": 580
       }
     ],
-    "cutMs": 500,
+    "cutMs": 413,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_app.mp3"
   },
   "sentence_0_child": {
@@ -92,7 +92,8 @@
         "endMs": 3480
       }
     ],
-    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_suffix.mp3"
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_0_suffix.mp3",
+    "cutMs": 1599
   },
   "sentence_1_full": {
     "text": "Dort steht plötzlich ein altes Klavier.",
@@ -154,7 +155,7 @@
         "endMs": 1840
       }
     ],
-    "cutMs": 1910,
+    "cutMs": 2215,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_1_app.mp3"
   },
   "sentence_1_child": {
@@ -218,7 +219,7 @@
         "endMs": 440
       }
     ],
-    "cutMs": 360,
+    "cutMs": 560,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_app.mp3"
   },
   "sentence_2_child": {
@@ -256,7 +257,8 @@
         "endMs": 3480
       }
     ],
-    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_suffix.mp3"
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_2_suffix.mp3",
+    "cutMs": 1651
   },
   "sentence_3_full": {
     "text": "Vorsichtig drückt er eine hohe Note.",
@@ -318,7 +320,7 @@
         "endMs": 1980
       }
     ],
-    "cutMs": 1935,
+    "cutMs": 2297,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_3_app.mp3"
   },
   "sentence_3_child": {
@@ -382,7 +384,7 @@
         "endMs": 450
       }
     ],
-    "cutMs": 335,
+    "cutMs": 567,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_app.mp3"
   },
   "sentence_4_child": {
@@ -420,6 +422,7 @@
         "endMs": 2840
       }
     ],
-    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_suffix.mp3"
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/katja/sentence_4_suffix.mp3",
+    "cutMs": 1535
   }
 }

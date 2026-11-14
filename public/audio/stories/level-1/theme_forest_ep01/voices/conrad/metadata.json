@@ -74,7 +74,7 @@
         "endMs": 2860
       }
     ],
-    "cutMs": 2825,
+    "cutMs": 2762,
     "file": "/audio/stories/level-1/theme_forest_ep01/voices/conrad/sentence_0_app.mp3"
   },
   "sentence_0_child": {
@@ -163,7 +163,7 @@
         "endMs": 2660
       }
     ],
-    "cutMs": 2615,
+    "cutMs": 2626,
     "file": "/audio/stories/level-1/theme_forest_ep01/voices/conrad/sentence_1_app.mp3"
   },
   "sentence_1_child": {
@@ -252,7 +252,7 @@
         "endMs": 3120
       }
     ],
-    "cutMs": 3060,
+    "cutMs": 3344,
     "file": "/audio/stories/level-1/theme_forest_ep01/voices/conrad/sentence_2_app.mp3"
   },
   "sentence_2_child": {
@@ -341,7 +341,7 @@
         "endMs": 2260
       }
     ],
-    "cutMs": 2425,
+    "cutMs": 2500,
     "file": "/audio/stories/level-1/theme_forest_ep01/voices/conrad/sentence_3_app.mp3"
   },
   "sentence_3_child": {

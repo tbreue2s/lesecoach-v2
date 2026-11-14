@@ -85,7 +85,7 @@
         "endMs": 1580
       }
     ],
-    "cutMs": 1640,
+    "cutMs": 1735,
     "file": "/audio/stories/level-3/theme_forest_ep01/voices/katja/sentence_1_app.mp3"
   },
   "sentence_1_child": {
@@ -200,7 +200,7 @@
         "endMs": 1620
       }
     ],
-    "cutMs": 1540,
+    "cutMs": 1657,
     "file": "/audio/stories/level-3/theme_forest_ep01/voices/katja/sentence_3_app.mp3"
   },
   "sentence_3_child": {
@@ -269,7 +269,7 @@
         "endMs": 520
       }
     ],
-    "cutMs": 450,
+    "cutMs": 548,
     "file": "/audio/stories/level-3/theme_forest_ep01/voices/katja/sentence_4_app.mp3"
   },
   "sentence_4_child": {
@@ -353,7 +353,7 @@
         "endMs": 720
       }
     ],
-    "cutMs": 800,
+    "cutMs": 984,
     "file": "/audio/stories/level-3/theme_forest_ep01/voices/katja/sentence_5_app.mp3"
   },
   "sentence_5_child": {

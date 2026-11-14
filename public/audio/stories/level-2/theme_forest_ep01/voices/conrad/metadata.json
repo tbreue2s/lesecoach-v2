@@ -49,7 +49,7 @@
         "endMs": 380
       }
     ],
-    "cutMs": 310,
+    "cutMs": 584,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_0_app.mp3"
   },
   "sentence_0_child": {
@@ -92,7 +92,8 @@
         "endMs": 3500
       }
     ],
-    "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_0_suffix.mp3"
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_0_suffix.mp3",
+    "cutMs": 2091
   },
   "sentence_1_full": {
     "text": "Dort steht plötzlich ein altes Klavier.",
@@ -154,7 +155,7 @@
         "endMs": 1820
       }
     ],
-    "cutMs": 1750,
+    "cutMs": 1917,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_1_app.mp3"
   },
   "sentence_1_child": {
@@ -218,7 +219,7 @@
         "endMs": 420
       }
     ],
-    "cutMs": 340,
+    "cutMs": 557,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_2_app.mp3"
   },
   "sentence_2_child": {
@@ -256,7 +257,8 @@
         "endMs": 4100
       }
     ],
-    "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_2_suffix.mp3"
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_2_suffix.mp3",
+    "cutMs": 1781
   },
   "sentence_3_full": {
     "text": "Vorsichtig drückt er eine hohe Note.",
@@ -318,7 +320,7 @@
         "endMs": 2040
       }
     ],
-    "cutMs": 1960,
+    "cutMs": 2145,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_3_app.mp3"
   },
   "sentence_3_child": {
@@ -382,7 +384,7 @@
         "endMs": 380
       }
     ],
-    "cutMs": 310,
+    "cutMs": 541,
     "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_4_app.mp3"
   },
   "sentence_4_child": {
@@ -420,6 +422,7 @@
         "endMs": 2820
       }
     ],
-    "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_4_suffix.mp3"
+    "file": "/audio/stories/level-2/theme_forest_ep01/voices/conrad/sentence_4_suffix.mp3",
+    "cutMs": 1465
   }
 }
